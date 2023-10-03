@@ -14,7 +14,7 @@ render(() => {
     const { colorScheme: parentColorScheme } = useColorSchemeContext();
 
     return (
-        <ThemeProvider theme={ShareGateTheme} colorScheme={parentColorScheme}>
+        <ThemeProvider colorScheme={parentColorScheme}>
             <Div backgroundColor="alias-surface" padding={2}>
                 <ColorSchemeToggle />
             </Div>

@@ -1,4 +1,4 @@
-import { ShareGateTheme, ThemeProvider } from "@components/styling";
+import { ThemeProvider } from "@components/styling";
 import { arrayOf, func, shape, string } from "prop-types";
 
 import { Div, Span } from "@components/html";
@@ -36,7 +36,7 @@ export function TokenTable({ colors }) {
 
     return (
         // eslint-disable-next-line react/destructuring-assignment
-        <ThemeProvider theme={ShareGateTheme} colorScheme={docsContext.globals.colorScheme}>
+        <ThemeProvider colorScheme={docsContext.globals.colorScheme}>
             <Table
                 className="token-table"
                 columns={[

@@ -15,7 +15,7 @@ Orbiter supports by default a *light* and a *dark* color scheme for all componen
 A color scheme can either be enforced by providing a specific `light` or `dark` value to a [theme provider](?path=/story/theme-provider--default-story):
 
 ```jsx
-<ThemeProvider theme={ShareGateTheme} colorScheme="dark">
+<ThemeProvider colorScheme="dark">
     <Button variant="secondary">Cutoff</Button>
 </ThemeProvider>
 ```
@@ -23,7 +23,7 @@ A color scheme can either be enforced by providing a specific `light` or `dark` 
 or be selected according to the [user's operating system setting](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) by providing the `system` value:
 
 ```jsx
-<ThemeProvider theme={ShareGateTheme} colorScheme="system" defaultColorScheme="light">
+<ThemeProvider colorScheme="system" defaultColorScheme="light">
     <Button variant="secondary">Cutoff</Button>
 </ThemeProvider>
 ```

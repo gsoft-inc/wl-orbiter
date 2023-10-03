@@ -7,7 +7,6 @@ import {
     FontWeightMapping,
     IconColorMapping,
     LineHeightMapping,
-    ShareGateTheme,
     SizingMapping,
     SpacingMapping,
     ThemeProvider
@@ -51,7 +50,7 @@ export const BackgroundColor: ShareGateStory = {
             <Inline gap={0} wrap>
                 {Object.keys(BackgroundColorMapping).map(x => <SmallSquare backgroundColor={x} key={x} />)}
             </Inline>
-            <ThemeProvider theme={ShareGateTheme} colorScheme="dark">
+            <ThemeProvider colorScheme="dark">
                 <Inline gap={0} wrap>
                     {Object.keys(BackgroundColorMapping).map(x => <SmallSquare backgroundColor={x} key={x} />)}
                 </Inline>
@@ -67,7 +66,7 @@ export const Border: ShareGateStory = {
             <Inline gap={1} wrap>
                 {Object.keys(BorderMapping).map(x => <SmallSquare border={x} key={x} />)}
             </Inline>
-            <ThemeProvider theme={ShareGateTheme} colorScheme="dark">
+            <ThemeProvider colorScheme="dark">
                 <Inline gap={1} wrap>
                     {Object.keys(BorderMapping).map(x => <SmallSquare border={x} key={x} />)}
                 </Inline>
@@ -92,7 +91,7 @@ export const Color: ShareGateStory = {
             <Inline gap={0} wrap>
                 {Object.keys(ColorMapping).map(x => <SmallSquare color={x} key={x}>T</SmallSquare>)}
             </Inline>
-            <ThemeProvider theme={ShareGateTheme} colorScheme="dark">
+            <ThemeProvider colorScheme="dark">
                 <Inline gap={0} wrap>
                     {Object.keys(ColorMapping).map(x => <SmallSquare color={x} key={x}>T</SmallSquare>)}
                 </Inline>
@@ -108,7 +107,7 @@ export const IconColors: ShareGateStory = {
             <Inline gap={0} wrap>
                 {Object.keys(IconColorMapping).map(x => <FileMajorIcon fill={x} key={x} />)}
             </Inline>
-            <ThemeProvider theme={ShareGateTheme} colorScheme="dark">
+            <ThemeProvider colorScheme="dark">
                 <Inline gap={0} wrap>
                     {Object.keys(IconColorMapping).map(x => <FileMajorIcon fill={x} key={x} />)}
                 </Inline>

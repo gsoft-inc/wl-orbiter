@@ -1,6 +1,6 @@
 import { Box, BoxProps } from "@components/box";
 import { Overlay } from "@components/overlay";
-import { ShareGateTheme, ThemeProvider } from "@components/styling";
+import { ThemeProvider } from "@components/styling";
 import { augmentElement, mergeProps, useMergedRefs } from "@components/shared";
 import { forwardRef, ReactElement, useState } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
@@ -61,7 +61,7 @@ ref) => {
 export const InheritTheme: OverlayStory = {
     storyName: "inherit theme",
     render: () => (
-        <ThemeProvider theme={ShareGateTheme} colorScheme="light">
+        <ThemeProvider colorScheme="light">
             <Boundary>
                 <Overlay show>
                     <PrimaryBox />

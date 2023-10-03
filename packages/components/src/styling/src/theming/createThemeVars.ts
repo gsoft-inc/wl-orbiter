@@ -1,7 +1,6 @@
 import { ColorScheme } from "../useColorScheme";
-import { ColorSchemeSection, OrbiterTheme } from "./orbiterTheme";
 import { Entry, JsonObject, JsonValue } from "type-fest";
-import { isArray, isBrowser, isNil, isNumber, isString } from "../../../shared";
+import { isArray, isNil, isNumber, isString } from "../../../shared";
 
 type VarsBucket = string[];
 
@@ -77,42 +76,6 @@ function appendJsonObject(values: JsonObject, prefix: string, bucket: VarsBucket
     });
 }
 
-function appendColorScheme(values: Array | JsonObject, prefix: string, bucket: VarsBucket) {
-    if (isArray(values)) {
-        appendArray(values as Array, prefix, bucket);
-    } else {
-        appendJsonObject(values as JsonObject, prefix, bucket);
-    }
-}
-
-function appendColorSchemes<C, L, D>(
-    values: C | L | D | ColorSchemeSection<C, L, D>,
-    prefix: string,
-    { common, dark, light }: { common?: VarsBucket; dark: VarsBucket; light: VarsBucket }
-) {
-    const colorSchemes = values as ColorSchemeSection<C, L, D>;
-
-    if (!isNil(colorSchemes.common) || !isNil(colorSchemes.light) || !isNil(colorSchemes.dark)) {
-        if (!isNil(colorSchemes.common)) {
-            appendColorScheme(colorSchemes.common, prefix, common);
-        }
-
-        appendColorScheme(colorSchemes.light, prefix, light);
-        appendColorScheme(colorSchemes.dark, prefix, dark);
-    }
-}
-
-function renderBucket(scope: string, bucket: VarsBucket) {
-    if (!isBrowser) { return; }
-
-    const element = document.createElement("style");
-
-    element.setAttribute("id", scope);
-    element.innerText = `.o-ui.${scope} { ${bucket.join(" ")} }`;
-
-    document.head.appendChild(element);
-}
-
 export const SpacePrefix = "sp";
 export const SizingPrefix = "sz";
 export const FontSizePrefix = "fs";
@@ -121,24 +84,3 @@ export const LineHeightPrefix = "lh";
 export const BorderRadiusPrefix = "br";
 export const BoxShadowPrefix = "bs";
 export const ColorPrefix = null;
-
-export function createThemeVars(themes: OrbiterTheme[]) {
-    themes.forEach(theme => {
-        const common: VarsBucket = [];
-        const light: VarsBucket = [];
-        const dark: VarsBucket = [];
-
-        appendArray(theme.space, SpacePrefix, common);
-        appendArray(theme.sizing, SizingPrefix, common);
-        appendJsonObject((theme.fontSizes as unknown) as JsonObject, FontSizePrefix, common);
-        appendArray(theme.fontWeights, FontWeightPrefix, common);
-        appendArray(theme.lineHeights, LineHeightPrefix, common);
-        appendJsonObject((theme.borderRadii as unknown) as JsonObject, BorderRadiusPrefix, common);
-        appendColorSchemes(theme.boxShadows, BoxShadowPrefix, { common, dark, light });
-        appendColorSchemes(theme.colors, ColorPrefix, { common, dark, light });
-
-        renderBucket(getThemeClassName(theme.name), common);
-        renderBucket(getColorSchemeClassName(theme.name, "light"), light);
-        renderBucket(getColorSchemeClassName(theme.name, "dark"), dark);
-    });
-}
