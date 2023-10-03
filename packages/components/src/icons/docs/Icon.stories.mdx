@@ -19,7 +19,7 @@ import IndexFileUsage from "./IndexFileUsage.mdx";
     githubPath="/packages/components/src/icons/src"
 />
 
-If you are looking for Orbit official icons, please have a look at the [icons page](?path=/docs/icon-gallery#gallery) in the materials section.
+If you are looking for Orbiter official icons, please have a look at the [icons page](?path=/docs/icon-gallery#gallery) in the materials section.
 
 ## Guidelines
 
@@ -43,7 +43,7 @@ import { ReactComponent as AzureIcon } from "./icon-azure.svg";
 Then you can wrap your icon with an `<Icon />` component:
 
 ```jsx
-import { Icon } from "@sharegate/orbit-ui";
+import { Icon } from "@workleap/orbiter-ui";
 import { ReactComponent as Azure } from "./icon-azure.svg";
 
 <Icon src={Azure} />
@@ -52,7 +52,7 @@ import { ReactComponent as Azure } from "./icon-azure.svg";
 Or export your icon as an HOC and render it at a later time:
 
 ```jsx
-import { createIcon } from "@sharegate/orbit-ui";
+import { createIcon } from "@workleap/orbiter-ui";
 import { ReactComponent as Azure } from "./icon-azure.svg";
 
 export const AzureIcon = createIcon(Azure);

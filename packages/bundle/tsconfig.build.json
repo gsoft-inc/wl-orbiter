@@ -3,7 +3,11 @@
     "compilerOptions": {
         "composite": true,
         "rootDir": "./src",
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "baseUrl": ".",
+        "paths": {
+            "@orbit-ui/transition-components": ["../components/src"],
+        }
     },
     "include": [
         "src/**/*",
@@ -13,5 +17,5 @@
         {
             "path": "../components/tsconfig.build.json"
         }
-    ]
+    ],
 }

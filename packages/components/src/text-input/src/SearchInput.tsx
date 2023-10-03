@@ -129,7 +129,7 @@ export function InnerSearchInput(props: InnerSearchInputProps) {
 InnerSearchInput.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/text-input--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/text-input--default-story)
 */
 export const SearchInput = forwardRef<HTMLInputElement, OmitInternalProps<InnerSearchInputProps>>((props, ref) => (
     <InnerSearchInput {...props} forwardedRef={ref} />

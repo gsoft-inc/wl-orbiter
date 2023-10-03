@@ -79,7 +79,7 @@ export function InnerSvgImage({
 }
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/image--shape  )
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/image--shape  )
 */
 export const SvgImage = slot("image", forwardRef<any, OmitInternalProps<InnerSvgImageProps>>((props, ref) => (
     <InnerSvgImage {...props} forwardedRef={ref} />

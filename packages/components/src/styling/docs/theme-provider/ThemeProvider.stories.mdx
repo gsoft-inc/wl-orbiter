@@ -12,13 +12,13 @@ import { ThemeProvider, InnerThemeProvider } from "@components/styling"
 <Tagline>Container used to define the theme and color scheme to use.</Tagline>
 
 <ComponentInfo
-    usage={"import { ThemeProvider, ThemeContext, useThemeContext, ColorSchemeContext, useColorSchemeContext } from \"@sharegate/orbit-ui\";"}
+    usage={"import { ThemeProvider, ThemeContext, useThemeContext, ColorSchemeContext, useColorSchemeContext } from \"@workleap/orbiter-ui\";"}
     githubPath="/packages/components/src/styling/src"
 />
 
 ## Usage
 
-Orbit components rely on the `ThemeProvider` to define the [theme](?path=/docs/theming--page) and [color scheme](?path=/docs/color-schemes--page) they need to render accurately. We recommended you declare a theme provider at the root of your application but if you prefer, you can declare them as needed instead.
+Orbiter components rely on the `ThemeProvider` to define the [theme](?path=/docs/theming--page) and [color scheme](?path=/docs/color-schemes--page) they need to render accurately. We recommended you declare a theme provider at the root of your application but if you prefer, you can declare them as needed instead.
 
 ```jsx
 <ThemeProvider theme={ShareGateTheme} colorScheme="system" defaultColorScheme="light">
@@ -31,7 +31,7 @@ Orbit components rely on the `ThemeProvider` to define the [theme](?path=/docs/t
 ### ThemeProvider
 
 <ComponentInfo
-    usage={"import { ThemeProvider } from \"@sharegate/orbit-ui\";"}
+    usage={"import { ThemeProvider } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerThemeProvider.defaultElement, "styled-component"]}
     compact
 />

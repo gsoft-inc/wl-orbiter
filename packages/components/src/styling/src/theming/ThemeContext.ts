@@ -1,10 +1,10 @@
 import { createContext, useContext } from "react";
 
-import { OrbitTheme } from "./orbitTheme";
+import { OrbiterTheme } from "./orbiterTheme";
 import { ThemeAccessor } from "./themeAccessor";
 
 export interface ThemeContextType {
-    theme?: OrbitTheme;
+    theme?: OrbiterTheme;
 }
 
 export const ThemeContext = createContext<ThemeContextType>({});

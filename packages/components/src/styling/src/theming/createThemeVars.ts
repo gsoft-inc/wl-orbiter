@@ -1,5 +1,5 @@
 import { ColorScheme } from "../useColorScheme";
-import { ColorSchemeSection, OrbitTheme } from "./orbitTheme";
+import { ColorSchemeSection, OrbiterTheme } from "./orbiterTheme";
 import { Entry, JsonObject, JsonValue } from "type-fest";
 import { isArray, isBrowser, isNil, isNumber, isString } from "../../../shared";
 
@@ -122,7 +122,7 @@ export const BorderRadiusPrefix = "br";
 export const BoxShadowPrefix = "bs";
 export const ColorPrefix = null;
 
-export function createThemeVars(themes: OrbitTheme[]) {
+export function createThemeVars(themes: OrbiterTheme[]) {
     themes.forEach(theme => {
         const common: VarsBucket = [];
         const light: VarsBucket = [];

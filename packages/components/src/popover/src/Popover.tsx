@@ -207,7 +207,7 @@ InnerPopover.defaultElement = DefaultElement;
 /**
  * A Popover can be used to display some content on top of another.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/popover--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/popover--default-story)
 */
 export const Popover = forwardRef<any, OmitInternalProps<InnerPopoverProps>>((props, ref) => (
     <InnerPopover {...props} forwardedRef={ref} />

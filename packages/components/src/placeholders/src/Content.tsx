@@ -33,7 +33,7 @@ InnerContent.defaultElement = DefaultElement;
 /**
  * A placeholder for a content section.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/content--example)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/content--example)
 */
 export const Content = slot("content", forwardRef<any, OmitInternalProps<InnerContentProps>>((props, ref) => (
     <InnerContent {...props} forwardedRef={ref} />

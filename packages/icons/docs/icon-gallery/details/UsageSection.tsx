@@ -59,7 +59,7 @@ function IconComponent({ componentType }: IconComponentProps) {
         <DisclosableSection name="Use as a component" defaultOpen>
             <>
                 <H4>Import</H4>
-                <Snippet language="javascript" code={`import { ${componentType} } from "@sharegate/orbit-ui"`} />
+                <Snippet language="javascript" code={`import { ${componentType} } from "@workleap/orbiter-ui"`} />
                 <H4>Usage</H4>
                 <Snippet language="jsx" code={`<${componentType} />`} />
                 <LearnUsageLink className="o-ui-sb-gallery-item-variant-usage" />
@@ -79,7 +79,7 @@ function ImageSource({ componentType, iconFileName, iconDisplayName }: ImageSour
         <DisclosableSection name="As an image source">
             <>
                 <H4>Import</H4>
-                <Snippet language="javascript" code={`import ${componentType} from "@orbit-ui/icons/${iconFileName}";`} />
+                <Snippet language="javascript" code={`import ${componentType} from "@orbit-ui/transition-icons/${iconFileName}";`} />
                 <H4>Usage</H4>
                 <Snippet language="jsx" code={`<img src={${componentType}} alt="${iconDisplayName}" />`} />
                 <LearnUsageLink className="o-ui-sb-gallery-item-variant-usage" />

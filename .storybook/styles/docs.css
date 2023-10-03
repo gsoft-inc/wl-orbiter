@@ -1,6 +1,6 @@
 :root {
     /* Use this var only when the element is not affected by the font-family specified in Storybook docs theme */
-    --orbit-font-family: "TT Interphases Variable", Arial, Helvetica, sans-serif;
+    --orbiter-font-family: "TT Interphases Variable", Arial, Helvetica, sans-serif;
 }
 
 /* LAYOUT */
@@ -96,7 +96,7 @@
 
 .docblock-argstable-body button {
     color: var(--o-ui-accent-6) !important;
-    font-family: var(--orbit-font-family) !important;
+    font-family: var(--orbiter-font-family) !important;
     font-size: var(--o-ui-fs-2) !important;
     padding-left: 2px !important;
 }

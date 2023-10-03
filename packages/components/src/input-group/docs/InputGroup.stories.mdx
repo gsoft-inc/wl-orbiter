@@ -22,13 +22,13 @@ import { TextInput } from "@components/text-input";
 <Tagline>An input group combines an input component with addons.</Tagline>
 
 <ComponentInfo
-    usage={"import { InputGroup, TextAddon, InputGroupContext, useInputGroupProps, useInputGroupAddonProps } from \"@sharegate/orbit-ui\";"}
+    usage={"import { InputGroup, TextAddon, InputGroupContext, useInputGroupProps, useInputGroupAddonProps } from \"@workleap/orbiter-ui\";"}
     githubPath="/packages/components/src/input-group/src"
 />
 
 ## Usage
 
-An input group can combine an input with a *start* addon, an *end* addon or *both*. All Orbit's input can be combined, you can even make it work with a [custom input](#custom-input).
+An input group can combine an input with a *start* addon, an *end* addon or *both*. All Orbiter's input can be combined, you can even make it work with a [custom input](#custom-input).
 
 ### Default
 
@@ -45,7 +45,7 @@ A default input group.
 
 ### Inputs
 
-An input group can use any Orbit's input component.
+An input group can use any Orbiter's input component.
 
 <Preview>
     <Story name="inputs">
@@ -185,7 +185,7 @@ Any addon implementing the `InputGroupContext` can integrate with an input group
 ### InputGroup
 
 <ComponentInfo
-    usage={"import { InputGroup } from \"@sharegate/orbit-ui\";"}
+    usage={"import { InputGroup } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerInputGroup.defaultElement, "styled-component"]}
     compact
 />
@@ -195,7 +195,7 @@ Any addon implementing the `InputGroupContext` can integrate with an input group
 ### TextAddon
 
 <ComponentInfo
-    usage={"import { TextAddon } from \"@sharegate/orbit-ui\";"}
+    usage={"import { TextAddon } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerTextAddon.defaultElement, "styled-component"]}
     compact
 />

@@ -10,15 +10,15 @@ import { GithubLink } from "@stories/components";
 
 # Theming
 
-Orbit styled system is powered by the values of a *theme object* provided by the application. The Orbit theme object specification have been inspired by the [Styled System Theme Specification](https://styled-system.com/theme-specification).
+Orbiter styled system is powered by the values of a *theme object* provided by the application. The Orbiter theme object specification have been inspired by the [Styled System Theme Specification](https://styled-system.com/theme-specification).
 
 ## Theme object
 
 A theme object is a combination of *design values* and *design scales* ([spacing](?path=/story/tokens--page#spacings), [sizing](?path=/story/tokens--page#sizings), [colors](?path=/story/tokens--page#text-colors), etc..).
 
-Some scales are defined in Orbit as arrays for ordinal values like `space` or as plain objects for named values like `colors`. Some are even a mix of both, such as `fontSizes`.
+Some scales are defined in Orbiter as arrays for ordinal values like `space` or as plain objects for named values like `colors`. Some are even a mix of both, such as `fontSizes`.
 
-An Orbit theme object is composed of the following *8 keys*:
+An Orbiter theme object is composed of the following *8 keys*:
 
 <ThemeSpecificationTable
     rows={[
@@ -64,7 +64,7 @@ When rendered with the `createThemeVars` function, the following CSS variables w
 
 ## Apply a theme
 
-Orbit components and Orbit [style props](?path=/docs/style-props--page) doesn't render any styles until a theme is applied.
+Orbiter components and Orbiter [style props](?path=/docs/style-props--page) doesn't render any styles until a theme is applied.
 
 To apply a theme:
 
@@ -73,7 +73,7 @@ To apply a theme:
 3. [Define a `<ThemeProvider>` component with the theme object](?path=/docs/theme-provider--page)
 
 ```jsx
-import { createThemeVars, ThemeProvider } from "@sharegate/orbit-ui";
+import { createThemeVars, ThemeProvider } from "@workleap/orbiter-ui";
 
 createThemeVars([theme]);
 
@@ -84,16 +84,16 @@ createThemeVars([theme]);
 
 ### Select a theme object
 
-Any object can be used as an Orbit theme object as long as it extends the <GithubLink path="/packages/components/src/styling/src/theming/orbitTheme.ts">`OrbitTheme`</GithubLink> TypeScript type. A few options are available.
+Any object can be used as an Orbiter theme object as long as it extends the <GithubLink path="/packages/components/src/styling/src/theming/orbiterTheme.ts">`OrbiterTheme`</GithubLink> TypeScript type. A few options are available.
 
 #### Option 1: Define your own theme from scratch
 
-Make sure you provide the right definition by extending the <GithubLink path="/packages/components/src/styling/src/theming/orbitTheme.ts">`OrbitTheme`</GithubLink> type.
+Make sure you provide the right definition by extending the <GithubLink path="/packages/components/src/styling/src/theming/orbiterTheme.ts">`OrbiterTheme`</GithubLink> type.
 
 ```jsx
-import { OrbitTheme, createThemeVars, ThemeProvider } from "@sharegate/orbit-ui";
+import { OrbiterTheme, createThemeVars, ThemeProvider } from "@workleap/orbiter-ui";
 
-const SpaceTheme: OrbitTheme = {
+const SpaceTheme: OrbiterTheme = {
     name: "space-theme",
     space: [],
     sizing: [],
@@ -108,12 +108,12 @@ createThemeVars([theme]);
 </ThemeProvider>
 ```
 
-#### Option 2: Create a new theme from Orbit defaults
+#### Option 2: Create a new theme from Orbiter defaults
 
-With `createTheme`, you only have to provide a subset of <GithubLink path="/packages/components/src/styling/src/theming/orbitTheme.ts">`OrbitTheme`</GithubLink> values. The remaining values will fallback to Orbit defaults.
+With `createTheme`, you only have to provide a subset of <GithubLink path="/packages/components/src/styling/src/theming/orbiterTheme.ts">`OrbiterTheme`</GithubLink> values. The remaining values will fallback to Orbiter defaults.
 
 ```jsx
-import { createTheme, createThemeVars, ThemeProvider } from "@sharegate/orbit-ui";
+import { createTheme, createThemeVars, ThemeProvider } from "@workleap/orbiter-ui";
 
 const SpaceTheme = createTheme({
     name: "space-theme",
@@ -144,12 +144,12 @@ createThemeVars([theme]);
 </ThemeProvider>
 ```
 
-#### Option 3: Retrieve a pre-constructed theme from Orbit
+#### Option 3: Retrieve a pre-constructed theme from Orbiter
 
 The only theme available at the moment is <GithubLink path="/packages/components/src/styling/src/theming/sharegateTheme.ts">`ShareGateTheme`</GithubLink>.
 
 ```jsx
-import { ShareGateTheme, createThemeVars, ThemeProvider } from "@sharegate/orbit-ui";
+import { ShareGateTheme, createThemeVars, ThemeProvider } from "@workleap/orbiter-ui";
 
 createThemeVars([ShareGateTheme]);
 
@@ -160,7 +160,7 @@ createThemeVars([ShareGateTheme]);
 
 ## Use a theme object in code
 
-Theme objects are primarily used to boostrap Orbit styled system but they can also be used directly in JavaScript code when you need to fetch a value.
+Theme objects are primarily used to boostrap Orbiter styled system but they can also be used directly in JavaScript code when you need to fetch a value.
 
 If you have access to the theme object, use the object directly.
 
@@ -173,7 +173,7 @@ If you have access to the theme object, use the object directly.
 If you don't have access to the theme object, retrieve a `ThemeAccessor` instance from the `ThemeContext` by using the `useThemeContext` hook and access the theme values from the instance.
 
 ```jsx
-import { useThemeContext } from "sharegate/orbit-ui";
+import { useThemeContext } from "sharegate/orbiter-ui";
 
 const { themeAccessor } = useThemeContext();
 

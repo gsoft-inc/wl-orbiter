@@ -1,6 +1,6 @@
-# @orbit-ui/css
+# @orbit-ui/transition-css
 
-Full documentation available at: https://orbit.sharegate.design
+Full documentation available at: https://wl-orbiter-website.netlify.app/
 
 ## License
 

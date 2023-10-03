@@ -57,7 +57,7 @@ export const InnerIcon = ((props: InnerIconProps) => {
 /**
  * An icon component allow you to render a custom icon.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/icon--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/icon--default-story)
 */
 export const Icon = slot("icon", forwardRef<SVGSVGElement, OmitInternalProps<InnerIconProps>>((props, ref) => (
     <InnerIcon {...props} forwardedRef={ref} />)

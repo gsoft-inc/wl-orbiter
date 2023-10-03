@@ -129,7 +129,7 @@ InnerCard.defaultElement = DefaultElement;
 /**
  * A card group information into a container to let users browse a group of related items and actions.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/card--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/card--default-story)
 */
 export const Card = slot("card", forwardRef<any, OmitInternalProps<InnerCardProps>>((props, ref) => (
     <InnerCard {...props} forwardedRef={ref} />

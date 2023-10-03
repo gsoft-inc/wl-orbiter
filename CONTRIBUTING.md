@@ -17,7 +17,7 @@ The following documentation is only for the maintainers of this repository.
 
 ## Monorepo setup
 
-This repository is managed as a monorepo that is composed of many npm packages. 
+This repository is managed as a monorepo that is composed of many npm packages.
 
 For more information on monorepo:
 
@@ -27,7 +27,7 @@ For more information on monorepo:
 
 ### Lerna
 
-[Lerna](https://github.com/lerna/lerna) is used to manage this monorepo. The packages of the monorepo can be found in the [packages](/packages) directory. 
+[Lerna](https://github.com/lerna/lerna) is used to manage this monorepo. The packages of the monorepo can be found in the [packages](/packages) directory.
 
 Since Yarn workspace feature offer native mono-repo capabilities and a seemless integration with Lerna this is our goto package manager for this project.
 
@@ -35,7 +35,7 @@ When Lerna is configured to use Yarn, the installation of the npm dependencies a
 
 So why do we use Lerna if Yarn workspace take care of everything?
 
-Lerna workflow greatly facilitate the release of the packages of a monorepo. 
+Lerna workflow greatly facilitate the release of the packages of a monorepo.
 
 For more information, read the following Lerna commands documentation:
 
@@ -58,7 +58,7 @@ This project use Yarn workspace. Therefore, you must install Yarn:
 
 ```
 choco install yarn
-``` 
+```
 
 For more options to install Yarn, view https://yarnpkg.com/lang/en/docs/install/#windows-stable.
 
@@ -78,7 +78,7 @@ The following documentation is a brief overview of the tools and processes invol
 
 ### Adding or modifying an icon
 
-When adding a new icon in @orbit-ui/icons, you want to make sure that the @orbit-ui/components package is updated accordingly. You will need to generate
+When adding a new icon in @orbit-ui/transition-icons, you want to make sure that the @orbit-ui/transition-components package is updated accordingly. You will need to generate
 a new react component for that icon using the `yarn generate-icons-components` command.
 
 ### Storybook
@@ -117,10 +117,10 @@ Any updates to the packages or Storybook's stories will automatically re-compile
 
 When you are ready to release the packages, you must follow the following steps:
 1. Run `yarn new-version` to bump the version of the packages that have been updated since the previous release. You will be prompted to select the type of release (major, minor or patch) for each package and to enter release notes. If you prefer writing the release notes in a text editor, enter a placeholder line in the command line, and the you can modify the file generated before committing it.
-2. Commit the newly generated file in your branch and submit a new Pull Request(PR). Changesets will automatically detect the changes and post a message in your pull request telling you that once the PR closes, the versions will be released. 
+2. Commit the newly generated file in your branch and submit a new Pull Request(PR). Changesets will automatically detect the changes and post a message in your pull request telling you that once the PR closes, the versions will be released.
 3. Merge the Pull request into master. A Github action will automatically trigger and update the version of the packages and publish them to npm.
 4. Create a new Github release associated to the tag created previously
-5. Optionally deploy Storybook and the document Website 
+5. Optionally deploy Storybook and the document Website
 
 ### Alpha release
 
@@ -162,9 +162,9 @@ By default, packages compilation output will be in their respective *dist* direc
 
 ## Release docs
 
-Orbit documentation is host on Netlify. 2 sites are available, a currated site for the official documentation (https://orbit.sharegate.design) and a raw site containing every Storybook stories (https://sg-storybook.netlify.com). 
+Orbiter documentation is host on Netlify. 2 sites are available, a currated site for the official documentation (https://wl-orbiter-website.netlify.app/) and a raw site containing every Storybook stories (https://sg-storybook.netlify.com).
 
-Login to [Netlify](https://app.netlify.com) and make sure you have access to the **sg-orbit** and **sg-storybook** sites of the GSoft team.
+Login to [Netlify](https://app.netlify.com) and make sure you have access to the **sg-orbiter** and **sg-storybook** sites of the GSoft team.
 
 Netlify is configured to automatically deploy (unpublished) both sites everytime **a new commit is done in an opened PR** or **a PR is merged back into master**.
 
@@ -238,11 +238,11 @@ yarn reset
 If you encounter the following error:
 
 ```bash
-C:\Dev\20_gsoft\sg-orbit\node_modules\rimraf\bin.js:47
+C:\Dev\20_gsoft\sg-orbiter\node_modules\rimraf\bin.js:47
       throw er
       ^
 
-[Error: EPERM: operation not permitted, unlink 'XXX\sg-orbit\node_modules\@types'] {
+[Error: EPERM: operation not permitted, unlink 'XXX\sg-orbiter\node_modules\@types'] {
 ```
 
 Close & re-open VSCode and delete manually the *node_modules* folder at the root of the workspace.
@@ -297,11 +297,11 @@ Visual testing assert on what visually appears on the screen instead of assertin
 
 This is a more *black box* and *robust* testing approach since it shouldn't requires to modify the tests if the code refactor haven't change anything visually.
 
-This approach is usually strictly use to assert that the visual of a component do not regress. Since it's easy and very efficient to write a robust test with this approach, we also use it to test the specifications of a component that are related to the behaviors and states. 
+This approach is usually strictly use to assert that the visual of a component do not regress. Since it's easy and very efficient to write a robust test with this approach, we also use it to test the specifications of a component that are related to the behaviors and states.
 
 Therefore, prefer this approach to [interactions](#interaction-testing) and [api testing](#api-testing) when possible.
 
-Setting all the tools to perform automated visual tests involve a lot of time and knowledge. Therefore, we bought a license of [Chromatic QA](https://www.chromaticqa.com). This is the perfect tool for us since it perfectly integrate with Storybook. 
+Setting all the tools to perform automated visual tests involve a lot of time and knowledge. Therefore, we bought a license of [Chromatic QA](https://www.chromaticqa.com). This is the perfect tool for us since it perfectly integrate with Storybook.
 
 For access to our Chromatic QA environment, ask to join the [gsoft-inc](https://github.com/gsoft-inc) organization on Github.
 
@@ -532,7 +532,7 @@ For more information on the topic view the issue [https://github.com/testing-lib
 
 ### Netlify CI setup
 
-To enable deploy previews on PR, Netlify sg-orbit and sg-storybook sites have been linked to the sg-orbit Github repository. Netlify will deploy a preview on every commits for any branches, even for master (which is Netlify production). This beging said, since the sites have been configured with "Auto Publish" disabled, even if a deploy is compiled for production IT IS NOT DEPLOY, it's only available for preview and must be deployed manually.
+To enable deploy previews on PR, Netlify sg-orbiter and sg-storybook sites have been linked to the sg-orbiter Github repository. Netlify will deploy a preview on every commits for any branches, even for master (which is Netlify production). This beging said, since the sites have been configured with "Auto Publish" disabled, even if a deploy is compiled for production IT IS NOT DEPLOY, it's only available for preview and must be deployed manually.
 
 Having disabled "Auto Publish" is also the reason why our script that publish our sites to production "doesn't work anymore". It still works, the reason why the site doesn't update is because the script will create a new production build but WILL NOT PUBLISH IT, since it's auto publishing is disabled. It must be published manually throught Netlify web interface.
 
@@ -542,15 +542,15 @@ The Storybook props tables somewhow doesn't play well if our types comes from an
 
 ### Updating Jest Snapshots
 
-It's straightforward to spot when a snapshot test fails after a bug has been introduced. When that happens, go ahead and fix the issue and make sure your snapshot tests are passing again. 
+It's straightforward to spot when a snapshot test fails after a bug has been introduced. When that happens, go ahead and fix the issue and make sure your snapshot tests are passing again.
 
-You can run the command 
+You can run the command
 
 ```bash
 yarn jest --updateSnapshot -u FILENAME
 ```
 
-So if you want to update the useStyledSystem.test.tsx file 
+So if you want to update the useStyledSystem.test.tsx file
 
 ```bash
 yarn jest --updateSnapshot -u useStyledSystem.test.tsx

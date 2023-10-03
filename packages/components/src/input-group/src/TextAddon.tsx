@@ -44,7 +44,7 @@ export function InnerTextAddon(props: InnerTextAddonProps) {
 InnerTextAddon.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/input-group--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/input-group--default-story)
 */
 export const TextAddon = forwardRef<any, OmitInternalProps<InnerTextAddonProps>>((props, ref) => (
     <InnerTextAddon {...props} forwardedRef={ref} />

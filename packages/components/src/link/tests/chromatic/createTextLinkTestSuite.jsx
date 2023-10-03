@@ -21,7 +21,7 @@ export function createTextLinkTestSuite(element, stories) {
                 </Div>
                 <Div width="400px">
                     <TextLink href="#" element={element}>
-                        NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbit and the surface of the Moon as part of NASA’s Artemis program.
+                        NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbiter and the surface of the Moon as part of NASA’s Artemis program.
                     </TextLink>
                 </Div>
             </Stack>
@@ -40,7 +40,7 @@ export function createTextLinkTestSuite(element, stories) {
                 </Inline>
                 <Div width="400px">
                     <TextLink href="#" element={element}>
-                        <Text>NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbit and the surface of the Moon as part of NASA’s Artemis program.</Text>
+                        <Text>NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbiter and the surface of the Moon as part of NASA’s Artemis program.</Text>
                         <ArrowMajorIcon />
                     </TextLink>
                 </Div>
@@ -61,7 +61,7 @@ export function createTextLinkTestSuite(element, stories) {
                 <Div width="400px">
                     <TextLink href="#" element={element}>
                         <InfoCircleMajorIcon slot="start-icon" />
-                        <Text>NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbit and the surface of the Moon as part of NASA’s Artemis program.</Text>
+                        <Text>NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbiter and the surface of the Moon as part of NASA’s Artemis program.</Text>
                     </TextLink>
                 </Div>
             </Stack>
@@ -142,7 +142,7 @@ export function createTextLinkTestSuite(element, stories) {
                 </Inline>
                 <Div width="400px">
                     <TextLink external href="#" element={element}>
-                        NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbit and the surface of the Moon as part of NASA’s Artemis program.
+                        NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbiter and the surface of the Moon as part of NASA’s Artemis program.
                     </TextLink>
                 </Div>
             </Stack>

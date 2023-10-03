@@ -47,7 +47,7 @@ module.exports = {
             files: ["*.ts", "*.tsx"],
             rules: {
                 "react/no-unused-prop-types": "off", // Issue with typescript
-                "@typescript-eslint/no-explicit-any": "off", // we use any a lot in orbit
+                "@typescript-eslint/no-explicit-any": "off", // we use any a lot in orbiter
                 "@typescript-eslint/ban-ts-comment": "off"
             }
         },

@@ -20,7 +20,7 @@ export function InnerAlertTrigger({
 InnerAlertTrigger.defaultElement = InnerDialogTrigger.defaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/alert--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/alert--default-story)
 */
 export const AlertTrigger = forwardRef<any, OmitInternalProps<InnerAlertTriggerProps>>((props, ref) => (
     <InnerAlertTrigger {...props} forwardedRef={ref} />

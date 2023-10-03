@@ -120,7 +120,7 @@ export function InnerTextLink(props: InnerTextLinkProps) {
 InnerTextLink.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/link--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/link--default-story)
 */
 export const TextLink = forwardRef<any, OmitInternalProps<InnerTextLinkProps>>((props, ref) => (
     <InnerTextLink {...props} forwardedRef={ref} />
@@ -130,7 +130,7 @@ export type TextLinkProps = ComponentProps<typeof TextLink>;
 
 /////////
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/link--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/link--default-story)
 */
 export const TextLinkAsButton = as(TextLink, "button");
 export type TextLinkAsButtonProps = ComponentProps<typeof TextLinkAsButton>;

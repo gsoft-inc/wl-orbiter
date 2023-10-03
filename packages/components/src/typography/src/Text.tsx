@@ -50,9 +50,9 @@ export function InnerText(props: InnerTextProps) {
 InnerText.defaultElement = DefaultElement;
 
 /**
- * A primitive text component matching Orbit typography type scale.
+ * A primitive text component matching Orbiter typography type scale.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/text--size)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/text--size)
 */
 export const Text = slot("text", forwardRef<any, OmitInternalProps<InnerTextProps>>((props, ref) => (
     <InnerText {...props} forwardedRef={ref} />

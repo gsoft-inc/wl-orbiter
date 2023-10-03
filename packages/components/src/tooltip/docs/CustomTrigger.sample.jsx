@@ -16,6 +16,6 @@ const CustomTrigger = forwardRef((props, ref) => {
 render(
     <TooltipTrigger>
         <CustomTrigger />
-        <Tooltip>Send an email to the orbital space station.</Tooltip>
+        <Tooltip>Send an email to the orbiteral space station.</Tooltip>
     </TooltipTrigger>
 );

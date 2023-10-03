@@ -1,8 +1,8 @@
 {
-  "name": "sg-orbit",
+  "name": "sg-orbiter",
   "version": "0.0.0",
   "private": true,
-  "repository": "https://github.com/gsoft-inc/sg-orbit.git",
+  "repository": "https://github.com/gsoft-inc/wl-orbiter.git",
   "license": "Apache-2.0",
   "workspaces": {
     "packages": [

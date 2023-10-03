@@ -166,7 +166,7 @@ export interface ColorAliases {
 
 export type ColorColorSchemes = ColorSchemeSection<ColorPaletteSection, ColorAliases, ColorAliases>;
 
-export interface OrbitTheme {
+export interface OrbiterTheme {
     name: string;
     sizing: SizingValues;
     space: SpaceValues;

@@ -104,7 +104,7 @@ InnerLozenge.defaultElement = DefaultElement;
 /**
  * Lozenges are used to highlight an item's status, for quick recognition or to give additional information such as highlighting a new item.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/lozenge--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/lozenge--default-story)
 */
 export const Lozenge = slot("lozenge", forwardRef<any, OmitInternalProps<InnerLozengeProps>>((props, ref) => (
     <InnerLozenge {...props} forwardedRef={ref} />

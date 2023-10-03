@@ -15,7 +15,7 @@ import { InnerPopover, InnerPopoverTrigger, Popover, PopoverTrigger } from "@com
 <Tagline>A Popover can be used to display some content on top of another.</Tagline>
 
 <ComponentInfo
-    usage={"import { PopoverTrigger, Popover, Heading, Content, Footer, usePopoverTriggerContext } from \"@sharegate/orbit-ui\";"}
+    usage={"import { PopoverTrigger, Popover, Heading, Content, Footer, usePopoverTriggerContext } from \"@workleap/orbiter-ui\";"}
     githubPath="/packages/components/src/popover/src"
 />
 
@@ -27,7 +27,7 @@ import { InnerPopover, InnerPopoverTrigger, Popover, PopoverTrigger } from "@com
 
 ### Popover vs Tooltip
 
-- A popover is not meant to be used as a [tooltip](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) element. If you need a component which behave like one use Orbit's [tooltip](?path=/docs/tooltip--default-story) component instead.
+- A popover is not meant to be used as a [tooltip](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) element. If you need a component which behave like one use Orbiter's [tooltip](?path=/docs/tooltip--default-story) component instead.
 
 ## Usage
 
@@ -161,7 +161,7 @@ A popover `open` state can be handled in controlled mode.
 ### PopoverTrigger
 
 <ComponentInfo
-    usage={"import { PopoverTrigger } from \"@sharegate/orbit-ui\";"}
+    usage={"import { PopoverTrigger } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerPopoverTrigger.defaultElement, "styled-component"]}
     compact
 />
@@ -171,7 +171,7 @@ A popover `open` state can be handled in controlled mode.
 ### Popover
 
 <ComponentInfo
-    usage={"import { Popover } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Popover } from \"@workleap/orbiter-ui\";"}
     slots={["heading", "content", "button", "button-group", "footer"]}
     inherits={[InnerPopover.defaultElement, "styled-component"]}
     compact
@@ -182,7 +182,7 @@ A popover `open` state can be handled in controlled mode.
 ### Heading
 
 <ComponentInfo
-    usage={"import { Heading } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Heading } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerHeading.defaultElement, "styled-component"]}
     compact
 />
@@ -192,7 +192,7 @@ A popover `open` state can be handled in controlled mode.
 ### Content
 
 <ComponentInfo
-    usage={"import { Content } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerContent.defaultElement, "styled-component"]}
     compact
 />
