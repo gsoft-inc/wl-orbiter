@@ -10,8 +10,7 @@ if (includeDocs) {
         // TODO simplify imports for any pkgs /docs/**/*.stories.mdx
         "../docs/**/*.stories.mdx",
         "../packages/icons/docs/**/*.stories.mdx",
-        "../packages/components/src/**/docs/**/*.stories.mdx",
-        "../packages/experimental/src/**/docs/**/*.stories.mdx"
+        "../packages/components/src/**/docs/**/*.stories.mdx"
     ];
 }
 
@@ -20,9 +19,7 @@ if (includeChromatic) {
         ...stories,
         // TODO remove chroma and simplify imports
         "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
-        "../packages/components/**/tests/chromatic/**/*.stories.tsx",
-        "../packages/experimental/**/tests/chromatic/**/*.chroma.tsx",
-        "../packages/experimental/**/tests/chromatic/**/*.stories.tsx"
+        "../packages/components/**/tests/chromatic/**/*.stories.tsx"
     ];
 }
 

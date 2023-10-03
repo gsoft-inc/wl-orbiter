@@ -83,7 +83,7 @@ InnerCounter.defaultElement = DefaultElement;
 /**
  * A counter indicate a running tally.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/counter--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/counter--default-story)
 */
 export const Counter = slot("counter", forwardRef<any, OmitInternalProps<InnerCounterProps>>((props, ref) => (
     <InnerCounter {...props} forwardedRef={ref} />

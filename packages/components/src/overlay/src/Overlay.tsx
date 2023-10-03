@@ -90,7 +90,7 @@ InnerOverlay.defaultElement = DefaultElement;
 /**
  * Container for overlays such as dialogs, popups, and menus.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/overlay--page)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/overlay--page)
 */
 export const Overlay = forwardRef<any, OmitInternalProps<InnerOverlayProps>>((props, ref) => (
     <InnerOverlay {...props} forwardedRef={ref} />

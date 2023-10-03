@@ -1,4 +1,4 @@
-import { BoxShadowColorSchemes, ColorAliases, ColorPalette, ColorPaletteSection, OrbitTheme } from "./orbitTheme";
+import { BoxShadowColorSchemes, ColorAliases, ColorPalette, ColorPaletteSection, OrbiterTheme } from "./orbiterTheme";
 
 export interface CreateThemeProps {
     name: string;
@@ -100,7 +100,7 @@ const ShareGateColors: Partial<ColorPaletteSection> = {
     ]
 };
 
-const ThemeBase: Omit<OrbitTheme, "name" | "colors" | "boxShadows"> = {
+const ThemeBase: Omit<OrbiterTheme, "name" | "colors" | "boxShadows"> = {
     sizing: [".75rem", "1rem", "1.25rem", "1.5rem", "2rem", "2.5rem", "3rem", "3.5rem", "4rem", "4.5rem", "5rem", "6rem", "8rem", "12rem", "16rem", "20rem", "24rem", "30rem"],
     space: [".25rem", ".5rem", ".75rem", "1rem", "1.25rem", "1.5rem", "2rem", "2.5rem", "3rem", "3.5rem", "4rem", "4.5rem", "5rem"],
     fontSizes: {
@@ -139,7 +139,7 @@ export function createTheme({
         dark
     },
     boxShadows
-}: CreateThemeProps): OrbitTheme {
+}: CreateThemeProps): OrbiterTheme {
     return {
         ...ThemeBase,
         name,

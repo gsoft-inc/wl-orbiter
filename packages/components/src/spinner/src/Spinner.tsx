@@ -66,7 +66,7 @@ InnerSpinner.defaultElement = DefaultElement;
 /**
 * A spinner indicates that a part of the product is currently performing a task, and the duration of this process is unknown.
 *
-* [Documentation](https://orbit.sharegate.design/?path=/docs/spinner--default-story)
+* [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/spinner--default-story)
 */
 export const Spinner = forwardRef<any, OmitInternalProps<InnerSpinnerProps>>((props, ref) => (
     <InnerSpinner {...props} forwardedRef={ref} />

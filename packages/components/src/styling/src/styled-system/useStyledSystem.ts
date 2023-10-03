@@ -87,7 +87,7 @@ const SpacingScale = [
     13
 ] as const;
 
-const OrbitColors = [
+const OrbiterColors = [
     "white",
     "black",
     "gray",
@@ -353,7 +353,7 @@ export const SpacingMapping = createValuesMapping(SpacingScale, createPrefixedVa
 
 export const SizingMapping = createValuesMapping(SizingScale, createPrefixedValueTemplate(SizingPrefix));
 
-export const ColorMapping = createValuesMapping(OrbitColors, createPrefixedValueTemplate(ColorPrefix));
+export const ColorMapping = createValuesMapping(OrbiterColors, createPrefixedValueTemplate(ColorPrefix));
 
 export const BackgroundColorMapping = {
     ...createValuesMapping(BackgroundColorAliases, createPrefixedValueTemplate(composePrefixes(ColorPrefix, "bg"))),
@@ -362,7 +362,7 @@ export const BackgroundColorMapping = {
 
 export const BorderMapping = {
     ...createValuesMapping(BorderColorAliases, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, composePrefixes(ColorPrefix, "b"))})`),
-    ...createValuesMapping(OrbitColors, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, ColorPrefix)})`)
+    ...createValuesMapping(OrbiterColors, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, ColorPrefix)})`)
 };
 
 export const BorderRadiusMapping = createValuesMapping(BorderRadiusScale, createPrefixedValueTemplate(BorderRadiusPrefix));

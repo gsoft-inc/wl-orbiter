@@ -1,6 +1,6 @@
-# @orbit-ui/icons
+# @orbit-ui/transition-icons
 
-Full documentation available at: https://orbit.sharegate.design
+Full documentation available at: https://wl-orbiter-website.netlify.app/
 
 ## Maintainers
 
@@ -8,9 +8,9 @@ The following documentation is only for the maintainers of this repository.
 
 ### Icons Guidelines
 
-In order to be included in Orbit an icon must satisfy the following guidelines
+In order to be included in Orbiter an icon must satisfy the following guidelines
 
-- It should not be specific to an app, e.g. Azure specific icons. <img src="https://raw.githubusercontent.com/gsoft-inc/sg-orbit/master/packages/icons/assets/app-specific-icon.png" width="27">
+- It should not be specific to an app, e.g. Azure specific icons. <img src="https://raw.githubusercontent.com/gsoft-inc/wl-orbiter/master/packages/icons/assets/app-specific-icon.png" width="27">
 
 - It must be used as part of an interface, illustrations and product icons shouldn't be submitted to this library.
 
@@ -26,7 +26,7 @@ In order to be included in Orbit an icon must satisfy the following guidelines
 
 - If an icon represents a specific state add it to the file name (e.g. trash-_empty_-32x32.svg)
 
-- Although not ideal when an svg has to be coloured add the colour name (refer to sg-orbit colour names) after it's name and before it's size (e.g. trash-empty-_accent-4_-24x24.svg)
+- Although not ideal when an svg has to be coloured add the colour name (refer to sg-orbiter colour names) after it's name and before it's size (e.g. trash-empty-_accent-4_-24x24.svg)
 
 ## License
 

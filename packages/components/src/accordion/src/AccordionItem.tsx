@@ -88,7 +88,7 @@ export function InnerAccordionItem({
 InnerAccordionItem.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/accordion--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/accordion--default-story)
 */
 export const AccordionItem = forwardRef<any, OmitInternalProps<InnerAccordionItemProps>>((props, ref) => (
     <InnerAccordionItem {...props} forwardedRef={ref} />

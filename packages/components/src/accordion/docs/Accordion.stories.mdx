@@ -16,7 +16,7 @@ import { InnerItem, Item } from "@components/collection";
 <Tagline>Accordions are commonly used to reduce the need to scroll when presenting multiple sections of content on a single page.</Tagline>
 
 <ComponentInfo
-    usage={"import { Accordion, Item, Header, Content, AccordionContext, useAccordionContext } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Accordion, Item, Header, Content, AccordionContext, useAccordionContext } from \"@workleap/orbiter-ui\";"}
     ariaPath="accordion"
     githubPath="/packages/components/src/accordion/src"
 />
@@ -26,7 +26,7 @@ import { InnerItem, Item } from "@components/collection";
 ### Accessibility
 
 - The accordion header that shows and hides the content must be an [heading element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements).
-- The heading element should have a level that is appropriate for the information architecture of the page. You can choose the appropriate level by selecting one of Orbit [heading](?path=/docs/heading--default-story) accordingly.
+- The heading element should have a level that is appropriate for the information architecture of the page. You can choose the appropriate level by selecting one of Orbiter [heading](?path=/docs/heading--default-story) accordingly.
 
 ## Usage
 
@@ -195,7 +195,7 @@ The `expandedKeys` state can be handled in controlled mode.
 ### Accordion
 
 <ComponentInfo
-    usage={"import { Accordion } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Accordion } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerAccordion.defaultElement, "styled-component"]}
     compact
 />
@@ -205,7 +205,7 @@ The `expandedKeys` state can be handled in controlled mode.
 ### Item
 
 <ComponentInfo
-    usage={"import { Item } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
     compact
 />
 
@@ -214,7 +214,7 @@ The `expandedKeys` state can be handled in controlled mode.
 ### Content
 
 <ComponentInfo
-    usage={"import { Content } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerContent.defaultElement, "styled-component"]}
     compact
 />
@@ -224,7 +224,7 @@ The `expandedKeys` state can be handled in controlled mode.
 ### AccordionHeader
 
 <ComponentInfo
-    usage={"import { AccordionHeader } from \"@sharegate/orbit-ui\";"}
+    usage={"import { AccordionHeader } from \"@workleap/orbiter-ui\";"}
     slots={["icon", "text"]}
     inherits={[InnerAccordionHeader.defaultElement, "styled-component"]}
     compact
@@ -235,7 +235,7 @@ The `expandedKeys` state can be handled in controlled mode.
 ### AccordionPanel
 
 <ComponentInfo
-    usage={"import { AccordionPanel } from \"@sharegate/orbit-ui\";"}
+    usage={"import { AccordionPanel } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerAccordionPanel.defaultElement, "styled-component"]}
     compact
 />

@@ -9,49 +9,39 @@ import { Message } from "@components/message";
 
 # Installation
 
-Multiple [NPM packages](https://www.npmjs.com/settings/orbit-ui/packages) compose Orbit. By creating a bundle package named [@sharegate/orbit-ui](https://www.npmjs.com/package/@sharegate/orbit-ui), we simplify the installation process and allow you to install Orbit with just a single package.
+Multiple [NPM packages](https://www.npmjs.com/settings/orbiter-ui/packages) compose Orbiter. By creating a bundle package named [@workleap/orbiter-ui](https://www.npmjs.com/package/@workleap/orbiter-ui), we simplify the installation process and allow you to install Orbiter with just a single package.
 
 > We assume you've already set up [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom). Otherwise, you'll get a warning at installation.
 
 ## Install packages
 
-To install Orbit, open a terminal at the root of your project workspace and run the following command:
+To install Orbiter, open a terminal at the root of your project workspace and run the following command:
 
 <PackageInstallationSnippet packageName="bundle" />
 
-To install Orbit's experimental components, open a terminal at the root of your project workspace and run the following command:
-
-<PackageInstallationSnippet packageName="experimental" />
-
 ## Import styles
 
-Orbit styles include the ShareGate font, a [CSS bootstrap](https://github.com/gsoft-inc/sg-orbit/tree/master/packages/css/src) and of course the component's styles.
+Orbiter styles include the ShareGate font, a [CSS bootstrap](https://github.com/gsoft-inc/wl-orbiter/tree/master/packages/css/src) and of course the component's styles.
 
-To import Orbit styles, add the following import declaration to your root stylesheet:
-
-```css
-/* index.css */
-
-@import "@sharegate/orbit-ui/index.css";
-```
-
-To import Orbit experimental components styles, also add the following import declaration to your root stylesheet:
+To import Orbiter styles, add the following import declaration to your root stylesheet:
 
 ```css
 /* index.css */
 
-@import "@orbit-ui/experimental/index.css";
+@import "@workleap/orbiter-ui/index.css";
 ```
 
 ## Set up your tooling environment
 
-Orbit offer an ESLint plugin to see in-context help in your IDE. This includes accessibility pointers, deprecation notices, and other helpful tips.
+Orbiter offer an ESLint plugin to see in-context help in your IDE. This includes accessibility pointers, deprecation notices, and other helpful tips.
 
 > This config is designed to complement the [suggested Workleap ESLint Configuration](https://github.com/gsoft-inc/wl-web-configs).
 
 First, add the ESlint plugin to your dependencies:
 
-<PackageInstallationSnippet workspaceFolder="tooling" packageName="eslint-plugin" />
+```
+npm install @orbit-ui/eslint-plugin eslint
+```
 
 Then, add the plugin to your ESlint config. For example, your `.eslintrc.json` file may look like this:
 
@@ -69,12 +59,12 @@ More about [ESlint configuration](https://eslint.org/docs/latest/use/configure/c
 
 ## Configure your application
 
-Below is an example of how to configure an application with a [pre-constructed](?path=/story/theming--page#option-3-retrieve-a-pre-constructed-theme-from-orbit) ShareGate theme object:
+Below is an example of how to configure an application with a [pre-constructed](?path=/story/theming--page#option-3-retrieve-a-pre-constructed-theme-from-orbiter) ShareGate theme object:
 
 ```tsx
 // index.ts
 
-import { createThemeVars, ShareGateTheme, ThemeProvider } from "@sharegate/orbit-ui";
+import { createThemeVars, ShareGateTheme, ThemeProvider } from "@workleap/orbiter-ui";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
@@ -88,16 +78,16 @@ root.render(
 );
 ```
 
-Instead of harcoding the foundation values in Orbit, we choose to implement a [theming system](?path=/docs/theming--page) allowing applications to supply their core values to Orbit.
+Instead of harcoding the foundation values in Orbiter, we choose to implement a [theming system](?path=/docs/theming--page) allowing applications to supply their core values to Orbiter.
 
-The theming system introduced a concept of theme object. To configure Orbit, you'll need to build your own theme object or import a [pre-constructed](?path=/story/theming--page#option-3-retrieve-a-pre-constructed-theme-from-orbit) one from Orbit. The theme object will be used to render the foundation variables with the `createThemeVars` function and define a [theme provider](?path=/docs/theme-provider--default-story) at the root of your application.
+The theming system introduced a concept of theme object. To configure Orbiter, you'll need to build your own theme object or import a [pre-constructed](?path=/story/theming--page#option-3-retrieve-a-pre-constructed-theme-from-orbiter) one from Orbiter. The theme object will be used to render the foundation variables with the `createThemeVars` function and define a [theme provider](?path=/docs/theme-provider--default-story) at the root of your application.
 
 ### Start creating components
 
-You're all set! You can start creating your application with Orbit:
+You're all set! You can start creating your application with Orbiter:
 
 ```jsx
-import { Div, Text } from "@sharegate/orbit-ui";
+import { Div, Text } from "@workleap/orbiter-ui";
 
 export const App = () => (
   <Div backgroundColor="alias-warning">

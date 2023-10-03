@@ -10,9 +10,8 @@ function addWebpackAliases(config) {
         "@root": path.resolve(__dirname, ".."),
         "@css": path.resolve(__dirname, "../packages/css/src"),
         "@components": path.resolve(__dirname, "../packages/components/src"),
-        "@orbit-ui/components": path.resolve(__dirname, "../packages/components/src"),
-        "@sharegate/orbit-ui": path.resolve(__dirname, "../packages/bundle/src"),
-        "@experimental": path.resolve(__dirname, "../packages/experimental/src"),
+        "@orbit-ui/transition-components": path.resolve(__dirname, "../packages/components/src"),
+        "@workleap/orbiter-ui": path.resolve(__dirname, "../packages/bundle/src"),
         "@stories/components": path.resolve(__dirname, "./components"),
         "@stories/mdx": path.resolve(__dirname, "./mdx"),
         "@stories/utils": path.resolve(__dirname, "./utils")

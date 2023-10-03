@@ -44,7 +44,7 @@ export function InnerAccordionPanel(props: InnerAccordionPanelProps) {
 InnerAccordionPanel.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/accordion--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/accordion--default-story)
 */
 export const AccordionPanel = forwardRef<any, OmitInternalProps<InnerAccordionPanelProps>>((props, ref) => (
     <InnerAccordionPanel {...props} forwardedRef={ref} />

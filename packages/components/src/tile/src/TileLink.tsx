@@ -62,7 +62,7 @@ export function InnerTileLink({
 InnerTileLink.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/tile--tile)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/tile--tile)
 */
 export const TileLink = forwardRef<any, OmitInternalProps<InnerTileLinkProps>>((props, ref) => (
     <InnerTileLink {...props} forwardedRef={ref} />

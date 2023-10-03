@@ -6,7 +6,7 @@ import { getColorSchemeClassName, getThemeClassName } from "./createThemeVars";
 import { Box } from "../../../box";
 import { BreakpointProvider } from "../BreakpointProvider";
 import { ColorSchemeContext } from "../ColorSchemeContext";
-import { OrbitTheme } from "./orbitTheme";
+import { OrbiterTheme } from "./orbiterTheme";
 import { ThemeContext } from "./ThemeContext";
 
 const DefaultElement = "div";
@@ -27,7 +27,7 @@ export interface InnerThemeProviderProps extends InternalProps, StyledComponentP
     /**
      * The theme to use.
      */
-    theme: OrbitTheme;
+    theme: OrbiterTheme;
 }
 
 export function InnerThemeProvider({
@@ -84,7 +84,7 @@ InnerThemeProvider.defaultElement = DefaultElement;
 /**
  * Container used to define the theme and color scheme to use.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/theme-provider--page)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/theme-provider--page)
 */
 export const ThemeProvider = forwardRef<any, OmitInternalProps<InnerThemeProviderProps>>((props, ref) => (
     <InnerThemeProvider {...props} forwardedRef={ref} />

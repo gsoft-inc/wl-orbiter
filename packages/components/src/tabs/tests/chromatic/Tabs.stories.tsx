@@ -393,7 +393,7 @@ export const Overflow: TabsStory = {
                         <Text>Uranus</Text>
                         <NotificationMajorIcon />
                     </Header>
-                    <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.</Content>
+                    <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbiter. This unique tilt makes Uranus appear to spin on its side.</Content>
                 </Item>
                 <Item key="neptune">
                     <Header>
@@ -401,7 +401,7 @@ export const Overflow: TabsStory = {
                         <Text>Neptune</Text>
                         <Lozenge>New</Lozenge>
                     </Header>
-                    <Content>Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
+                    <Content>Neptune—the eighth and most distant major planet orbitering our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
                 </Item>
             </Tabs>
         </Div>
@@ -438,11 +438,11 @@ export const OverflowFluid: TabsStory = {
                 </Item>
                 <Item key="uranus">
                     <Header>Uranus</Header>
-                    <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.</Content>
+                    <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbiter. This unique tilt makes Uranus appear to spin on its side.</Content>
                 </Item>
                 <Item key="neptune">
                     <Header>Neptune</Header>
-                    <Content>Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
+                    <Content>Neptune—the eighth and most distant major planet orbitering our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
                 </Item>
             </Tabs>
         </Div>
@@ -479,11 +479,11 @@ export const OverflowNotCollapsible: TabsStory = {
                 </Item>
                 <Item key="uranus">
                     <Header>Uranus</Header>
-                    <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.</Content>
+                    <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbiter. This unique tilt makes Uranus appear to spin on its side.</Content>
                 </Item>
                 <Item key="neptune">
                     <Header>Neptune</Header>
-                    <Content>Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
+                    <Content>Neptune—the eighth and most distant major planet orbitering our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
                 </Item>
             </Tabs>
         </Div>

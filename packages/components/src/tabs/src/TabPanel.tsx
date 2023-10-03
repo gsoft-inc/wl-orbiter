@@ -49,7 +49,7 @@ export function InnerTabPanel({
 InnerTabPanel.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/tabs--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/tabs--default-story)
 */
 export const TabPanel = forwardRef<any, OmitInternalProps<InnerTabPanelProps>>((props, ref) => (
     <InnerTabPanel {...props} forwardedRef={ref} />

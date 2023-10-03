@@ -1,6 +1,6 @@
-# @orbit-ui/components
+# @orbit-ui/transition-components
 
-Full documentation available at: https://orbit.sharegate.design
+Full documentation available at: https://wl-orbiter-website.netlify.app/
 
 ## Add a new component
 
@@ -61,7 +61,7 @@ The stories must be located in a `docs` folder next to the `src` folder of your 
 
 #### Tests
 
-Before reading the following sections, please read [our introduction to Orbit testing practices](../../CONTRIBUTING.md#testing).
+Before reading the following sections, please read [our introduction to Orbiter testing practices](../../CONTRIBUTING.md#testing).
 
 ##### Visual testing
 
@@ -151,15 +151,15 @@ Usually, interaction tests are split into 4 distinct regions: *Behaviors*, *Aria
 
 ## Component guidelines
 
-Every Orbit custom components must share a consistent API and a similar design. Please read carefully the following guidelines before you develop a new component or update an existing one.
+Every Orbiter custom components must share a consistent API and a similar design. Please read carefully the following guidelines before you develop a new component or update an existing one.
 
 ### Common functionnalities
 
 All components should:
-- Use Orbit's [tokens](https://orbit.sharegate.design/?path=/docs/tokens--page)
-- Support Orbit's [color schemes](https://orbit.sharegate.design/?path=/docs/color-schemes--page) and [theming](https://orbit.sharegate.design/?path=/docs/theming--page)
-- Implement Orbit's [style props](https://orbit.sharegate.design/?path=/docs/style-props--page)
-- Support Orbit's [responsive styles](https://orbit.sharegate.design/?path=/docs/responsive-styles--page)
+- Use Orbiter's [tokens](https://wl-orbiter-website.netlify.app//?path=/docs/tokens--page)
+- Support Orbiter's [color schemes](https://wl-orbiter-website.netlify.app//?path=/docs/color-schemes--page) and [theming](https://wl-orbiter-website.netlify.app//?path=/docs/theming--page)
+- Implement Orbiter's [style props](https://wl-orbiter-website.netlify.app//?path=/docs/style-props--page)
+- Support Orbiter's [responsive styles](https://wl-orbiter-website.netlify.app//?path=/docs/responsive-styles--page)
 
 ### Design
 
@@ -173,13 +173,13 @@ All components should leverage React hooks.
 
 #### Styling
 
-An Orbit component shouldn't use any CSS in JS properties.
+An Orbiter component shouldn't use any CSS in JS properties.
 
 All styling should be done with native CSS and use our foundation CSS variables when possible
 
 #### Controlled & Auto-controlled
 
-A component should always be develop to offer a [controlled](https://reactjs.org/docs/forms.html) and [auto-controlled](https://reactjs.org/docs/uncontrolled-components.html) usage. 
+A component should always be develop to offer a [controlled](https://reactjs.org/docs/forms.html) and [auto-controlled](https://reactjs.org/docs/uncontrolled-components.html) usage.
 
 A *controlled* component gives a lot of flexibility to the consumer and is well fit for a lot of use cases but also involve additional code. We believe a component should be flexible but also painless to use. That's why a component should also offer an *auto-controlled* mode for basic use cases who don't requires controlling the props.
 

@@ -14,7 +14,7 @@ import { ShareGateTheme } from "../../styling";
 <Tagline>A layout container using grid.</Tagline>
 
 <ComponentInfo
-    usage={"import { Grid, repeat, minmax, fitContent } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Grid, repeat, minmax, fitContent } from \"@workleap/orbiter-ui\";"}
     githubPath="/packages/components/src/layout/src"
 />
 
@@ -42,7 +42,7 @@ A grid can define explicit sections with areas.
 
 ### Template columns
 
-A grid can define explicit columns (and rows). A value can be a grid length value or an Orbit spacing scale value.
+A grid can define explicit columns (and rows). A value can be a grid length value or an Orbiter spacing scale value.
 
 <Preview>
     <Story name="template columns">
@@ -60,7 +60,7 @@ A grid can define explicit columns (and rows). A value can be a grid length valu
 
 ### Auto columns
 
-A grid can define the size of implicitly created columns. A value can be a grid length value or an Orbit spacing scale value.
+A grid can define the size of implicitly created columns. A value can be a grid length value or an Orbiter spacing scale value.
 
 <Preview>
     <Story name="auto columns">
@@ -138,7 +138,7 @@ Grids can be nested.
 
 ### Repeat
 
-A custom `repeat` function is available to support Orbit spacing scale values. However, if you prefer, you can use the [native CSS repeat function](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat())
+A custom `repeat` function is available to support Orbiter spacing scale values. However, if you prefer, you can use the [native CSS repeat function](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat())
 
 <Preview scope={{ ShareGateTheme }}>
     <Story name="repeat function">
@@ -156,7 +156,7 @@ A custom `repeat` function is available to support Orbit spacing scale values. H
 
 ### Minmax
 
-A custom `minmax` function is available to support Orbit spacing scalue values. However, if you prefer, you can use the [native CSS minmax function](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax())
+A custom `minmax` function is available to support Orbiter spacing scalue values. However, if you prefer, you can use the [native CSS minmax function](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax())
 
 <Preview>
     <Story name="minmax function">
@@ -194,7 +194,7 @@ A custom `minmax` function is available to support Orbit spacing scalue values. 
 ### Grid
 
 <ComponentInfo
-    usage={"import { Grid } from \"@sharegate/orbit-ui\";"}
+    usage={"import { Grid } from \"@workleap/orbiter-ui\";"}
     inherits={[InnerGrid.defaultElement, "styled-component"]}
     compact
 />

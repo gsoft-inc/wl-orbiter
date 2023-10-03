@@ -54,7 +54,7 @@ export function InnerFieldset({
 InnerFieldset.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/form--vertical-layout)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/form--vertical-layout)
 */
 export const Fieldset = forwardRef<any, OmitInternalProps<InnerFieldsetProps>>((props, ref) => (
     <InnerFieldset {...props} forwardedRef={ref} />

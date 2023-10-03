@@ -1,10 +1,10 @@
-import { BoxShadowColorSchemes, ColorColorSchemes, ColorSchemeSection, FontSizeValues, OrbitTheme } from "./orbitTheme";
+import { BoxShadowColorSchemes, ColorColorSchemes, ColorSchemeSection, FontSizeValues, OrbiterTheme } from "./orbiterTheme";
 import { isNil } from "../../../shared";
 
 export class ThemeAccessor {
     private theme;
 
-    constructor(theme: OrbitTheme) {
+    constructor(theme: OrbiterTheme) {
         this.theme = theme;
     }
 

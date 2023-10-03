@@ -156,7 +156,7 @@ export function InnerIconButton(props: InnerIconButtonProps) {
 InnerIconButton.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/button--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/button--default-story)
 */
 export const IconButton = slot("button", forwardRef<HTMLButtonElement, OmitInternalProps<InnerIconButtonProps>>((props, ref) => (
     <InnerIconButton {...props} forwardedRef={ref} />
@@ -174,7 +174,7 @@ export const embedIconButton = createEmbeddableAdapter({
 ///////////
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/button--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/button--default-story)
 */
 export const IconButtonAsLink = slot("button", as(IconButton, "a"));
 export type IconButtonAsLinkProps = ComponentProps<typeof IconButtonAsLink>;

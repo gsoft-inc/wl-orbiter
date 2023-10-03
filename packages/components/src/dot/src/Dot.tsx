@@ -71,7 +71,7 @@ export function InnerDot(props: InnerDotProps) {
 InnerDot.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://orbit.sharegate.design/?path=/docs/dot--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/dot--default-story)
 */
 export const Dot = slot("dot", forwardRef<any, OmitInternalProps<InnerDotProps>>((props, ref) => (
     <InnerDot {...props} forwardedRef={ref} />

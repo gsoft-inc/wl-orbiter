@@ -1,4 +1,4 @@
-import { AbstractImageProps, Image as OrbitImage } from "./Image";
+import { AbstractImageProps, Image as OrbiterImage } from "./Image";
 import { ComponentProps, ReactElement, ReactNode, forwardRef, useEffect, useState } from "react";
 import { OmitInternalProps, isNil, mergeProps, slot, useRefState } from "../../shared";
 import { useResponsiveValue } from "../../styling";
@@ -103,7 +103,7 @@ function InnerAsyncImage({
 
     if (isLoaded) {
         return (
-            <OrbitImage
+            <OrbiterImage
                 {...mergeProps(
                     rest,
                     {

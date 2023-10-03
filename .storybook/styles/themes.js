@@ -3,9 +3,9 @@ import { create } from "@storybook/theming";
 export const Themes = {
     manager: create({
         base: "light",
-        brandTitle: "ShareGate Orbit",
+        brandTitle: "ShareGate Orbiter",
         brandUrl: "https://sharegate.com",
-        brandImage: "https://raw.githubusercontent.com/gsoft-inc/sg-orbit/master/assets/orbit-full.svg?sanitize=true"
+        brandImage: "https://raw.githubusercontent.com/gsoft-inc/wl-orbiter/master/assets/orbiter-full.svg?sanitize=true"
     }),
     docs: create({
         base: "light",

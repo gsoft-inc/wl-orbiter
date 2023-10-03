@@ -147,7 +147,7 @@ InnerMessage.defaultElement = DefaultElement;
 /**
  * A message is an element that displays a brief, important message in a way that attracts the user's attention without interrupting the user's task.
  *
- * [Documentation](https://orbit.sharegate.design/?path=/docs/message--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/message--default-story)
 */
 export const Message = forwardRef<any, OmitInternalProps<InnerMessageProps>>((props, ref) => (
     <InnerMessage {...props} forwardedRef={ref} />

@@ -9,7 +9,7 @@ import { Preview } from "@stories/components";
 
 # Responsive styles
 
-Orbit [style props](?path=/docs/style-props--page) accepts a specialized syntax to support responsive breakpoints.
+Orbiter [style props](?path=/docs/style-props--page) accepts a specialized syntax to support responsive breakpoints.
 
 ## Usage
 
@@ -33,17 +33,17 @@ Not all breakpoints must be explicitly defined. In the following example, `base`
 
 ## useResponsiveValue
 
-To resolve a responsive value within a React component, Orbit provides the `useResponsiveValue` hook.
+To resolve a responsive value within a React component, Orbiter provides the `useResponsiveValue` hook.
 
 ```jsx
-import { useResponsiveValue } from "@sharegate/orbit-ui";
+import { useResponsiveValue } from "@workleap/orbiter-ui";
 
 const fluidValue = useResponsiveValue({ base: true, lg: false });
 ```
 
 ## Breakpoints
 
-The following responsive breakpoints are supported by Orbit [style props](?path=/docs/style-props--page) and acts as their [CSS media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) counterparts:
+The following responsive breakpoints are supported by Orbiter [style props](?path=/docs/style-props--page) and acts as their [CSS media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) counterparts:
 
 <Table
     columns={[
