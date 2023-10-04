@@ -15,7 +15,7 @@
 
 /* STORY */
 .docs-story div + div > button {
-    font-variation-settings: "wght" 500;
+    font-weight: 550;
     font-size: var(--o-ui-fs-2);
 }
 
@@ -32,8 +32,7 @@
 }
 
 .docblock-argstable-head tr th {
-    font-variation-settings: "wght" 500 !important;
-    font-weight: 400;
+    font-weight: 550 !important;
     color: var(--o-ui-text-alias-primary) !important;
 }
 
@@ -57,13 +56,11 @@
 
 /* ARGS TABLE | BODY  */
 .docblock-argstable-body td > span {
-    font-variation-settings: "wght" 500 !important;
-    font-weight: 400;
+    font-weight: 550 !important;
 }
 
 .docblock-argstable-body td > label > span {
-    font-variation-settings: "wght" 500 !important;
-    font-weight: 400;
+    font-weight: 550 !important;
 }
 
 .docblock-argstable-body td label input[type=radio] {
@@ -154,8 +151,7 @@
 .sbdocs.sbdocs-h4,
 .sbdocs.sbdocs-h5,
 .sbdocs.sbdocs-h6 {
-    font-variation-settings: "wght" 500;
-    font-weight: 400;
+    font-weight: 550;
     /* fixing the default position relative on all titles in shared.tsx */
     position: initial;
 }
@@ -167,7 +163,7 @@
 
 .sbdocs.sbdocs-h1,
 .sbdocs .sbdocs-title {
-    font-variation-settings: "wght" 500;
+    font-weight: 550;
 }
 
 .sbdocs.sbdocs-h2 {
@@ -266,8 +262,7 @@
 }
 
 .sbdocs.sbdocs-table tr th {
-    font-weight: 400;
-    font-variation-settings: "wght" 600;
+    font-weight: 600;
     font-size: var(--o-ui-fs-4);
 }
 
@@ -303,7 +298,6 @@
 
 .sbdocs.sbdocs-table b,
 .sbdocs.sbdocs-table strong {
-    font-variation-settings: "wght" 600;
     font-weight: 400;
 }
 
@@ -354,7 +348,6 @@
 
 /* ELEMENTS | STRONG */
 .sbdocs strong {
-    font-variation-settings: "wght" 500;
     font-weight: 400;
 }
 

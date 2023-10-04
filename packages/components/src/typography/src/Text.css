@@ -1,47 +1,44 @@
 /* SIZE */
 :where(.o-ui-text-xs) {
-    font-size: var(--o-ui-fs-1);
-    line-height: var(--o-ui-lh-2);
+    font-size: var(--hop-body-xs-font-size);
+    font-family: var(--hop-body-xs-font-family);
+    font-weight: var(--hop-body-xs-font-weight);
+    line-height: var(--hop-body-xs-line-height);
 }
 
 :where(.o-ui-text-sm) {
-    font-size: var(--o-ui-fs-2);
-    line-height: var(--o-ui-lh-4);
+    font-size: var(--hop-body-sm-font-size);
+    font-family: var(--hop-body-sm-font-family);
+    font-weight: var(--hop-body-sm-font-weight);
+    line-height: var(--hop-body-sm-line-height);
 }
 
 :where(.o-ui-text-md) {
-    font-size: var(--o-ui-fs-3);
-    line-height: var(--o-ui-lh-5);
+    font-size: var(--hop-body-md-font-size);
+    font-family: var(--hop-body-md-font-family);
+    font-weight: var(--hop-body-md-font-weight);
+    line-height: var(--hop-body-md-line-height);
 }
 
 :where(.o-ui-text-lg) {
-    font-size: var(--o-ui-fs-4);
-    line-height: var(--o-ui-lh-6);
+    font-size: var(--hop-body-lg-font-size);
+    font-family: var(--hop-body-lg-font-family);
+    font-weight: var(--hop-body-lg-font-weight);
+    line-height: var(--hop-body-lg-line-height);
 }
 
 :where(.o-ui-text-xl) {
-    font-size: var(--o-ui-fs-5);
-    line-height: var(--o-ui-lh-4);
+    font-size: var(--hop-body-xl-font-size);
+    font-family: var(--hop-body-xl-font-family);
+    font-weight: var(--hop-body-xl-font-weight);
+    line-height: var(--hop-body-xl-line-height);
 }
 
 :where(.o-ui-text-2xl) {
-    font-size: var(--o-ui-fs-6);
-    line-height: var(--o-ui-lh-5);
-}
-
-:where(.o-ui-text-3xl) {
-    font-size: var(--o-ui-fs-7);
-    line-height: var(--o-ui-lh-5);
-}
-
-:where(.o-ui-text-4xl) {
-    font-size: var(--o-ui-fs-8);
-    line-height: var(--o-ui-lh-3);
-}
-
-:where(.o-ui-text-5xl) {
-    font-size: var(--o-ui-fs-9);
-    line-height: var(--o-ui-lh-2);
+    font-size: var(--hop-body-2xl-font-size);
+    font-family: var(--hop-body-2xl-font-family);
+    font-weight: var(--hop-body-2xl-font-weight);
+    line-height: var(--hop-body-2xl-line-height);
 }
 
 :where(.o-ui-text-inherit-size) {

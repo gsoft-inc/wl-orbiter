@@ -1,44 +1,64 @@
 :where(.o-ui-heading) {
     margin: 0;
     font-size: inherit;
-    font-weight: 400;
-    font-variation-settings: "wght" 600;
+    font-weight: 680;
+    font-family: var(--hop-font-family-primary);
     overflow-wrap: break-word;
 }
 
 /* SIZE */
-:where(.o-ui-heading-2xs) {
-    font-size: var(--o-ui-fs-4);
-    line-height: var(--o-ui-lh-3);
-    margin-bottom: calc(var(--o-ui-fs-4) * .5);
-}
-
 :where(.o-ui-heading-xs) {
-    font-size: var(--o-ui-fs-5);
-    line-height: var(--o-ui-lh-4);
+    font-size: var(--hop-heading-xs-font-size);
+    font-family: var(--hop-heading-xs-font-family);
+    font-weight: var(--hop-heading-xs-font-weight);
+    line-height: var(--hop-heading-xs-line-height);
     margin-bottom: calc(var(--o-ui-fs-5) * .5);
 }
 
 :where(.o-ui-heading-sm) {
-    font-size: var(--o-ui-fs-6);
-    line-height: var(--o-ui-lh-5);
+    font-size: var(--hop-heading-sm-font-size);
+    font-family: var(--hop-heading-sm-font-family);
+    font-weight: var(--hop-heading-sm-font-weight);
+    line-height: var(--hop-heading-sm-line-height);
     margin-bottom: calc(var(--o-ui-fs-6) * .5);
 }
 
 :where(.o-ui-heading-md) {
-    font-size: var(--o-ui-fs-7);
-    line-height: var(--o-ui-lh-5);
+    font-size: var(--hop-heading-md-font-size);
+    font-family: var(--hop-heading-md-font-family);
+    font-weight: var(--hop-heading-md-font-weight);
+    line-height: var(--hop-heading-md-line-height);
     margin-bottom: calc(var(--o-ui-fs-7) * .5);
 }
 
 :where(.o-ui-heading-lg) {
-    font-size: var(--o-ui-fs-8);
-    line-height: var(--o-ui-lh-6);
+    font-size: var(--hop-heading-lg-font-size);
+    font-family: var(--hop-heading-lg-font-family);
+    font-weight: var(--hop-heading-lg-font-weight);
+    line-height: var(--hop-heading-lg-line-height);
     margin-bottom: calc(var(--o-ui-fs-8) * .5);
 }
 
 :where(.o-ui-heading-xl) {
-    font-size: var(--o-ui-fs-9);
-    line-height: var(--o-ui-lh-2);
+    font-size: var(--hop-heading-xl-font-size);
+    font-family: var(--hop-heading-xl-font-family);
+    font-weight: var(--hop-heading-xl-font-weight);
+    line-height: var(--hop-heading-xl-line-height);
     margin-bottom: calc(var(--o-ui-fs-9) * .5);
+}
+
+:where(.o-ui-heading-2xl) {
+    font-size: var(--hop-heading-2xl-font-size);
+    font-family: var(--hop-heading-2xl-font-family);
+    font-weight: var(--hop-heading-2xl-font-weight);
+    line-height: var(--hop-heading-2xl-line-height);
+    margin-bottom: calc(var(--o-ui-fs-4) * .5);
+}
+
+:where(.o-ui-heading-3xl) {
+    font-size: var(--hop-heading-3xl-font-size);
+    font-family: var(--hop-heading-3xl-font-family);
+    font-weight: var(--hop-heading-3xl-font-weight);
+    line-height: var(--hop-heading-3xl-line-height);
+    margin-bottom: calc(var(--o-ui-fs-4) * .5);
 }
