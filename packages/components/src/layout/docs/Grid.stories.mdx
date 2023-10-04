@@ -2,7 +2,6 @@ import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
 import { ComponentInfo, Preview, Tagline } from "@stories/components";
 import { Div } from "@components/html";
 import { Grid, InnerGrid, fitContent, minmax, repeat } from "@components/layout";
-import { ShareGateTheme } from "../../styling";
 
 <Meta
     title="Components/Grid"
@@ -140,16 +139,43 @@ Grids can be nested.
 
 A custom `repeat` function is available to support Orbiter spacing scale values. However, if you prefer, you can use the [native CSS repeat function](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat())
 
-<Preview scope={{ ShareGateTheme }}>
+<Preview>
     <Story name="repeat function">
         <Grid
             templateColumns={repeat("auto-fit", 7)}
             autoRows={7}
             gap={2}
         >
-            {ShareGateTheme.colors.common.purple.map(x => <Div backgroundColor={x} key={x} />)}
-            {ShareGateTheme.colors.common.alert.map(x => <Div backgroundColor={x} key={x} />)}
-            {ShareGateTheme.colors.common.green.map(x => <Div backgroundColor={x} key={x} />)}
+            <Div backgroundColor={"#eef3fd"} width={6} height={6} />
+            <Div backgroundColor={"#dbe6fd"} width={6} height={6} />
+            <Div backgroundColor={"#b6c2ef"} width={6} height={6} />
+            <Div backgroundColor={"#95a9f5"} width={6} height={6} />
+            <Div backgroundColor={"#7689fd"} width={6} height={6} />
+            <Div backgroundColor={"#5D65f6"} width={6} height={6} />
+            <Div backgroundColor={"#4B11fd"} width={6} height={6} />
+            <Div backgroundColor={"#362aae"} width={6} height={6} />
+            <Div backgroundColor={"#1f2151"} width={6} height={6} />
+            <Div backgroundColor={"#0d0f1f"} width={6} height={6} />
+            <Div backgroundColor={"#fbf1f1"} width={6} height={6} />
+            <Div backgroundColor={"#fadfdf"} width={6} height={6} />
+            <Div backgroundColor={"#fdb0af"} width={6} height={6} />
+            <Div backgroundColor={"#f88f8d"} width={6} height={6} />
+            <Div backgroundColor={"#eb6a64"} width={6} height={6} />
+            <Div backgroundColor={"#d93c37"} width={6} height={6} />
+            <Div backgroundColor={"#a91414"} width={6} height={6} />
+            <Div backgroundColor={"#811b15"} width={6} height={6} />
+            <Div backgroundColor={"#461812"} width={6} height={6} />
+            <Div backgroundColor={"#1d0b09"} width={6} height={6} />
+            <Div backgroundColor={"#dbfbea"} width={6} height={6} />
+            <Div backgroundColor={"#cbeedb"} width={6} height={6} />
+            <Div backgroundColor={"#a5cdb8"} width={6} height={6} />
+            <Div backgroundColor={"#78ba9b"} width={6} height={6} />
+            <Div backgroundColor={"#27a57a"} width={6} height={6} />
+            <Div backgroundColor={"#268563"} width={6} height={6} />
+            <Div backgroundColor={"#2b5e48"} width={6} height={6} />
+            <Div backgroundColor={"#27493a"} width={6} height={6} />
+            <Div backgroundColor={"#1a2a23"} width={6} height={6} />
+            <Div backgroundColor={"#0c110e"} width={6} height={6} />
         </Grid>
     </Story>
 </Preview>

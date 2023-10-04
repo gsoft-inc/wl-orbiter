@@ -59,28 +59,22 @@ More about [ESlint configuration](https://eslint.org/docs/latest/use/configure/c
 
 ## Configure your application
 
-Below is an example of how to configure an application with a [pre-constructed](?path=/story/theming--page#option-3-retrieve-a-pre-constructed-theme-from-orbiter) ShareGate theme object:
+Below is an example of how to configure an application:
 
 ```tsx
 // index.ts
 
-import { createThemeVars, ShareGateTheme, ThemeProvider } from "@workleap/orbiter-ui";
+import { ThemeProvider } from "@workleap/orbiter-ui";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
-createThemeVars([ShareGateTheme]);
-
 const root = createRoot(document.getElementById("root")!);
 root.render(
-    <ThemeProvider theme={ShareGateTheme} colorScheme="light">
+    <ThemeProvider colorScheme="light">
         <App />
     </ThemeProvider>
 );
 ```
-
-Instead of harcoding the foundation values in Orbiter, we choose to implement a [theming system](?path=/docs/theming--page) allowing applications to supply their core values to Orbiter.
-
-The theming system introduced a concept of theme object. To configure Orbiter, you'll need to build your own theme object or import a [pre-constructed](?path=/story/theming--page#option-3-retrieve-a-pre-constructed-theme-from-orbiter) one from Orbiter. The theme object will be used to render the foundation variables with the `createThemeVars` function and define a [theme provider](?path=/docs/theme-provider--default-story) at the root of your application.
 
 ### Start creating components
 
