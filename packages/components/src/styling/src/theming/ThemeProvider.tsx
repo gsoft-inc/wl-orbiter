@@ -1,13 +1,10 @@
 import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme";
 import { InternalProps, StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps } from "../../../shared";
 import { ComponentProps, forwardRef, ReactNode, useCallback, useState } from "react";
-import { getColorSchemeClassName, getThemeClassName } from "./createThemeVars";
 
 import { Box } from "../../../box";
 import { BreakpointProvider } from "../BreakpointProvider";
 import { ColorSchemeContext } from "../ColorSchemeContext";
-import { OrbiterTheme } from "./orbiterTheme";
-import { ThemeContext } from "./ThemeContext";
 
 const DefaultElement = "div";
 
@@ -24,10 +21,6 @@ export interface InnerThemeProviderProps extends InternalProps, StyledComponentP
      * Default color scheme to use when a user preferred color scheme (system) is not available.
      */
     defaultColorScheme?: ColorScheme;
-    /**
-     * The theme to use.
-     */
-    theme: OrbiterTheme;
 }
 
 export function InnerThemeProvider({
@@ -35,7 +28,6 @@ export function InnerThemeProvider({
     children,
     colorScheme,
     defaultColorScheme,
-    theme,
     forwardedRef,
     ...rest
 }: InnerThemeProviderProps) {
@@ -48,34 +40,32 @@ export function InnerThemeProvider({
     }, [setRemoteColorScheme]);
 
     return (
-        <ThemeContext.Provider value={{ theme }}>
-            <ColorSchemeContext.Provider
-                value={{
-                    colorScheme: computedColorScheme,
-                    setColorScheme
-                }}
-            >
-                <BreakpointProvider>
-                    <Box
-                        {...mergeProps(
-                            rest,
-                            {
-                                as,
-                                ref: forwardedRef,
-                                className: mergeClasses(
-                                    "o-ui",
-                                    `o-ui-${computedColorScheme}`,
-                                    getThemeClassName(theme.name),
-                                    getColorSchemeClassName(theme.name, computedColorScheme)
-                                )
-                            }
-                        )}
-                    >
-                        {children}
-                    </Box>
-                </BreakpointProvider>
-            </ColorSchemeContext.Provider>
-        </ThemeContext.Provider>
+        <ColorSchemeContext.Provider
+            value={{
+                colorScheme: computedColorScheme,
+                setColorScheme
+            }}
+        >
+            <BreakpointProvider>
+                <Box
+                    {...mergeProps(
+                        rest,
+                        {
+                            as,
+                            ref: forwardedRef,
+                            className: mergeClasses(
+                                "o-ui",
+                                `o-ui-${computedColorScheme}`,
+                                "o-ui-orbiter",
+                                `o-ui-orbiter-${computedColorScheme}`,
+                            )
+                        }
+                    )}
+                >
+                    {children}
+                </Box>
+            </BreakpointProvider>
+        </ColorSchemeContext.Provider>
     );
 }
 

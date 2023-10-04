@@ -1,4 +1,4 @@
-import { ShareGateTheme, ThemeProvider, ColorScheme } from "@components/styling";
+import { ThemeProvider, ColorScheme } from "@components/styling";
 import { ReactElement, ReactNode } from "react";
 import { RenderHookOptions, renderHook, render, RenderOptions } from "@testing-library/react";
 
@@ -9,7 +9,7 @@ export interface ThemeProviderWrapperOptions {
 function createThemeProviderWrapper({ colorScheme = "light" }: ThemeProviderWrapperOptions = {}) {
     return ({ children }: { children?: ReactNode }) => {
         return (
-            <ThemeProvider theme={ShareGateTheme} colorScheme={colorScheme}>
+            <ThemeProvider colorScheme={colorScheme}>
                 {children}
             </ThemeProvider>
         );

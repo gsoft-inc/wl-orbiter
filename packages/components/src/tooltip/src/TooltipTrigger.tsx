@@ -14,7 +14,7 @@ import {
     useFocusScope
 } from "../../shared";
 import { Overlay, OverlayArrow, OverlayPositionProp, isTargetParent, useOverlayPosition, useOverlayTrigger, useOverlayLightDismiss } from "../../overlay";
-import { useResponsiveValue, useThemeContext } from "../../styling";
+import { useResponsiveValue } from "../../styling";
 
 import { Div } from "../../html";
 import { TooltipTriggerContext } from "./TooltipTriggerContext";
@@ -93,8 +93,6 @@ export function InnerTooltipTrigger({
     ...rest
 }: InnerTooltipTriggerProps) {
     const positionValue = useResponsiveValue(positionProp);
-
-    const { themeAccessor } = useThemeContext();
 
     const [isOpen, setIsOpen] = useControllableState(open, defaultOpen, false);
 
@@ -194,7 +192,7 @@ export function InnerTooltipTrigger({
                     rest,
                     {
                         as,
-                        borderOffset: themeAccessor.getSpace(3),
+                        borderOffset: "12px",
                         ref: overlayRef,
                         show: isOpen,
                         zIndex

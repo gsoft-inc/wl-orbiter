@@ -9,7 +9,7 @@ import {
     resolveChildren
 } from "../../shared";
 import { Overlay, OverlayArrow, PopupPositionProp, PopupProps, usePopup } from "../../overlay";
-import { useResponsiveValue, useThemeContext } from "../../styling";
+import { useResponsiveValue } from "../../styling";
 
 import { PopoverTriggerContext } from "./PopoverTriggerContext";
 
@@ -54,8 +54,6 @@ export function InnerPopoverTrigger({
     ...rest
 }: InnerPopoverTriggerProps) {
     const positionValue = useResponsiveValue(positionProp);
-
-    const { themeAccessor } = useThemeContext();
 
     const [trigger, popover] = Children.toArray(resolveChildren(children)) as [ReactElement, ReactElement];
 
@@ -105,7 +103,7 @@ export function InnerPopoverTrigger({
                     rest,
                     {
                         as,
-                        borderOffset: themeAccessor.getSpace(3),
+                        borderOffset: "12px",
                         ref: forwardedRef,
                         show: isOpen,
                         zIndex

@@ -1,4 +1,4 @@
-import { ShareGateTheme, ThemeProvider, useColorSchemeContext } from "@components/styling";
+import { ThemeProvider, useColorSchemeContext } from "@components/styling";
 
 import { Box } from "@components/box";
 import { Inline } from "@components/layout";
@@ -37,7 +37,7 @@ function PrimaryColors() {
 export const Sharegate: ThemeProviderStory = {
     storyName: "sharegate",
     render: () => (
-        <ThemeProvider theme={ShareGateTheme} colorScheme="light">
+        <ThemeProvider colorScheme="light">
             <PrimaryColors />
         </ThemeProvider>
     )
@@ -46,7 +46,7 @@ export const Sharegate: ThemeProviderStory = {
 export const Light: ThemeProviderStory = {
     storyName: "light",
     render: () => (
-        <ThemeProvider theme={ShareGateTheme} colorScheme="light">
+        <ThemeProvider colorScheme="light">
             <Box padding={4} backgroundColor="alias-mid-break" />
         </ThemeProvider>
     )
@@ -55,7 +55,7 @@ export const Light: ThemeProviderStory = {
 export const Dark: ThemeProviderStory = {
     storyName: "dark",
     render: () => (
-        <ThemeProvider theme={ShareGateTheme} colorScheme="dark">
+        <ThemeProvider colorScheme="dark">
             <Box padding={4} backgroundColor="alias-mid-break" />
         </ThemeProvider>
     )
@@ -74,7 +74,7 @@ const SwitchColorScheme = () => {
 export const SetColorSchemeWithApi: ThemeProviderStory = {
     storyName: "set color scheme with api",
     render: () => (
-        <ThemeProvider theme={ShareGateTheme} colorScheme="light">
+        <ThemeProvider colorScheme="light">
             <SwitchColorScheme />
             <Box padding={4} backgroundColor="alias-mid-break" />
         </ThemeProvider>
