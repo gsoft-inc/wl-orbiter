@@ -151,7 +151,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 /* SECTION */
 .o-ui-listbox-section {
     display: flex;
-    font-variation-settings: "wght" 500;
+    font-weight: 500;
     padding-left: var(--o-ui-sp-3);
     cursor: default;
     line-height: var(--o-ui-lh-1);

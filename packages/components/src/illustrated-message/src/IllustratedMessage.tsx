@@ -38,7 +38,7 @@ export function InnerIllustratedMessage({
         heading: {
             as: "h3",
             className: "o-ui-illustrated-message-heading",
-            size: "sm"
+            size: "md"
         },
         image: {
             className: "o-ui-illustrated-message-image"

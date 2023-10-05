@@ -87,7 +87,7 @@ export function useInputGroupButtonAddonProps(): [UseInputGroupButtonAddonPropsR
     const [{ disabled }, isInInputGroup] = useInputGroupContext();
 
     const props = isInInputGroup && {
-        className: "o-ui-input-group-addon  o-ui-input-group-button-addon",
+        className: "o-ui-input-group-addon o-ui-input-group-button-addon",
         disabled
     };
 

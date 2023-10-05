@@ -55,7 +55,8 @@ export function InnerCard({
         },
         content: {
             as: Text,
-            className: "o-ui-card-content"
+            className: "o-ui-card-content",
+            size: "sm"
         },
         header: {
             className: "o-ui-card-header"
@@ -63,7 +64,7 @@ export function InnerCard({
         heading: {
             as: "span",
             className: "o-ui-card-heading",
-            size: "xs"
+            size: "sm"
         },
         illustration: {
             className: "o-ui-card-illustration",
@@ -73,7 +74,7 @@ export function InnerCard({
     }), [orientationValue]));
 
     const headerMarkup = isString(header?.props?.children)
-        ? cloneElement(header, { children: <Text>{header?.props?.children}</Text> })
+        ? cloneElement(header, { children: <Text size="sm">{header?.props?.children}</Text> })
         : header;
 
     const imageMarkup = image && (

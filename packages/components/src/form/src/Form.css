@@ -17,8 +17,7 @@
 .o-ui-fieldset-label {
     display: inline-block;
     font-size: var(--o-ui-fs-4);
-    font-weight: 400;
-    font-variation-settings: "wght" 600;
+    font-weight: 600;
     color: var(--o-ui-text-alias-primary);
     margin-bottom: var(--o-ui-sp-3);
 }

@@ -31,7 +31,7 @@ export function useTile({
         heading: {
             as: "span",
             className: "o-ui-tile-heading",
-            size: "xs"
+            size: "sm"
         },
         illustration: {
             className: "o-ui-tile-illustration",
