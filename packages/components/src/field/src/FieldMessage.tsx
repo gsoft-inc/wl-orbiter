@@ -57,7 +57,8 @@ export const FieldMessage = forwardRef<any, InnerFieldMessageProps>(({
                         variant,
                         fluidValue && "fluid"
                     ),
-                    ref
+                    ref,
+                    size: "sm" as const
                 }
             )}
         >

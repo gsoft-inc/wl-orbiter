@@ -127,7 +127,8 @@ export function InnerListboxOption({
         },
         text: {
             className: "o-ui-listbox-option-label",
-            id: `${id}-label`
+            id: `${id}-label`,
+            size: "sm"
         }
     }), [id]));
 

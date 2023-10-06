@@ -227,7 +227,8 @@ export function InnerDialog({
         content: {
             as: Text,
             className: "o-ui-dialog-content",
-            id: `${dialogId}-content`
+            id: `${dialogId}-content`,
+            size: "sm"
         },
         footer: {
             as: "footer",
@@ -241,7 +242,7 @@ export function InnerDialog({
             as: "h3",
             className: "o-ui-dialog-heading",
             id: `${dialogId}-heading`,
-            size: "sm"
+            size: "lg"
         },
         illustration: {
             className: "o-ui-dialog-illustration",

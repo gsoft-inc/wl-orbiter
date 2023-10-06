@@ -27,7 +27,7 @@ export function InnerDivider({
     const orientationValue = useResponsiveValue(orientation);
 
     const labelMarkup = children && (
-        <Text className="o-ui-divider-label">
+        <Text className="o-ui-divider-label" size="sm">
             {children}
         </Text>
     );

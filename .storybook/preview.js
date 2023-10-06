@@ -11,6 +11,8 @@ import { Themes } from "./styles/themes";
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
     import("@css/font/index.css");
+} else {
+    import("./styles/chromatic.css");
 }
 
 export const parameters = {

@@ -1,14 +1,75 @@
-/* FONT */
 @font-face {
-    src: url("https://assets.sharegate.com/shared/brand/fonts/interphases/TT-Interphases-Var-Roman.woff2") format("woff2-variations");
-    font-family: "TT Interphases Variable";
+    font-family: "Inter";
     font-style: normal;
-    font-display: swap;
+    font-weight: 410;
+    src: url("./assets/inter/Inter-Regular.otf") format("opentype");
+    font-display: fallback;
 }
 
 @font-face {
-    src: url("https://assets.sharegate.com/shared/brand/fonts/interphases/TT-Interphases-Var-Italic.woff2") format("woff2-variations");
-    font-family: "TT Interphases Variable";
-    font-style: italic;
-    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 505;
+    src: url("./assets/inter/Inter-Medium.otf") format("opentype");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 590;
+    src: url("./assets/inter/Inter-SemiBold.otf") format("opentype");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 690;
+    src: url("./assets/inter/Inter-Bold.otf") format("opentype");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "ABC Favorit Mono";
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url("./assets/abc-favorit-mono/ABCFavoritMono-Regular.otf") format("opentype"),
+        url("./assets/abc-favorit-mono/ABCFavoritMono-Regular.woff") format("woff"),
+        url("./assets/abc-favorit-mono/ABCFavoritMono-Regular.woff2") format("woff2");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "ABC Favorit";
+    font-style: normal;
+    font-weight: 410;
+    src:
+        url("./assets/abc-favorit/ABCFavorit-Regular.otf") format("opentype"),
+        url("./assets/abc-favorit/ABCFavorit-Regular.woff") format("woff"),
+        url("./assets/abc-favorit/ABCFavorit-Regular.woff2") format("woff2");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "ABC Favorit";
+    font-style: normal;
+    font-weight: 580;
+    src:
+        url("./assets/abc-favorit/ABCFavorit-Medium.otf") format("opentype"),
+        url("./assets/abc-favorit/ABCFavorit-Medium.woff") format("woff"),
+        url("./assets/abc-favorit/ABCFavorit-Medium.woff2") format("woff2");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "ABC Favorit";
+    font-style: normal;
+    font-weight: 680;
+    src:
+        url("./assets/abc-favorit/ABCFavorit-Bold.otf") format("opentype"),
+        url("./assets/abc-favorit/ABCFavorit-Bold.woff") format("woff"),
+        url("./assets/abc-favorit/ABCFavorit-Bold.woff2") format("woff2");
+    font-display: fallback;
 }

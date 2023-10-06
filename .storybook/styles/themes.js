@@ -9,7 +9,7 @@ export const Themes = {
     }),
     docs: create({
         base: "light",
-        fontBase: "TT Interphases Variable, Arial, Helvetica, sans-serif",
+        fontBase: "Inter, Arial, Helvetica, sans-serif",
         textColor: "#04091A"
     })
 };
