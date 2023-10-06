@@ -1,8 +1,6 @@
 :where(.o-ui-heading) {
     margin: 0;
     font-size: inherit;
-    font-weight: 680;
-    font-family: var(--hop-font-family-primary);
     overflow-wrap: break-word;
 }
 

@@ -9,5 +9,8 @@
     "style": "src/index.css",
     "publishConfig": {
         "access": "public"
+    },
+    "dependencies": {
+        "@hopper-ui/tokens": "^0.3.0"
     }
 }
