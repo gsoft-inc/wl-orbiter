@@ -1,4 +1,4 @@
-import { BorderRadiusPrefix, BorderRadiusSemanticPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, FontSizePrefix, FontWeightPrefix, LineHeightPrefix, normalizeVariable } from "./theme-vars-utils";
+import { BorderRadiusPrefix, BorderRadiusSemanticPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, FontSizePrefix, FontSizeSemanticSuffix, FontWeightPrefix, FontWeightSemanticSuffix, LineHeightPrefix, LineHeightSemanticSuffix, normalizeVariable } from "./theme-vars-utils";
 import { Breakpoint } from "../BreakpointProvider";
 import { Globals, Property } from "csstype";
 import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue";
@@ -467,7 +467,43 @@ const FontSizeScale = [
     120
 ] as const;
 
-const FontWeightScale = [ // TODO: Make sure we are not setting font weight variation. This comment should not be in a PR
+const FontSizeAliases = [
+    "accent-sm",
+    "accent-lg",
+    "body-xs-underline",
+    "body-xs-bold",
+    "body-xs-semibold",
+    "body-xs-medium",
+    "body-xs",
+    "body-sm-underline",
+    "body-sm-bold",
+    "body-sm-semibold",
+    "body-sm-medium",
+    "body-sm",
+    "body-md-underline",
+    "body-md-bold",
+    "body-md-semibold",
+    "body-md-medium",
+    "body-md",
+    "body-lg-underline",
+    "body-lg-bold",
+    "body-lg-semibold",
+    "body-lg-medium",
+    "body-lg",
+    "body-xl",
+    "body-2xl",
+    "overline",
+    "heading-xs-medium",
+    "heading-xs",
+    "heading-sm",
+    "heading-md",
+    "heading-lg",
+    "heading-xl",
+    "heading-2xl",
+    "heading-3xl"
+] as const;
+
+const FontWeightScale = [
     690,
     680,
     590,
@@ -475,6 +511,42 @@ const FontWeightScale = [ // TODO: Make sure we are not setting font weight vari
     505,
     410,
     400
+] as const;
+
+const FontWeightAliases = [
+    "accent-sm",
+    "accent-lg",
+    "body-xs-underline",
+    "body-xs-bold",
+    "body-xs-semibold",
+    "body-xs-medium",
+    "body-xs",
+    "body-sm-underline",
+    "body-sm-bold",
+    "body-sm-semibold",
+    "body-sm-medium",
+    "body-sm",
+    "body-md-underline",
+    "body-md-bold",
+    "body-md-semibold",
+    "body-md-medium",
+    "body-md",
+    "body-lg-underline",
+    "body-lg-bold",
+    "body-lg-semibold",
+    "body-lg-medium",
+    "body-lg",
+    "body-xl",
+    "body-2xl",
+    "overline",
+    "heading-xs-medium",
+    "heading-xs",
+    "heading-sm",
+    "heading-md",
+    "heading-lg",
+    "heading-xl",
+    "heading-2xl",
+    "heading-3xl"
 ] as const;
 
 const LineHeightScale = [
@@ -487,6 +559,42 @@ const LineHeightScale = [
     "1-125"
 ] as const;
 
+const LineHeightAliases = [
+    "accent-sm",
+    "accent-lg",
+    "body-xs-underline",
+    "body-xs-bold",
+    "body-xs-semibold",
+    "body-xs-medium",
+    "body-xs",
+    "body-sm-underline",
+    "body-sm-bold",
+    "body-sm-semibold",
+    "body-sm-medium",
+    "body-sm",
+    "body-md-underline",
+    "body-md-bold",
+    "body-md-semibold",
+    "body-md-medium",
+    "body-md",
+    "body-lg-underline",
+    "body-lg-bold",
+    "body-lg-semibold",
+    "body-lg-medium",
+    "body-lg",
+    "body-xl",
+    "body-2xl",
+    "overline",
+    "heading-xs-medium",
+    "heading-xs",
+    "heading-sm",
+    "heading-md",
+    "heading-lg",
+    "heading-xl",
+    "heading-2xl",
+    "heading-3xl"
+];
+
 function createValuesMapping<T extends readonly (string | number)[]>(values: T, template: (value: T[number]) => string) {
     const mapping = {} as Record<T[number], string>;
 
@@ -497,12 +605,6 @@ function createValuesMapping<T extends readonly (string | number)[]>(values: T, 
     }, mapping);
 
     return mapping;
-}
-
-function composePrefixes(...rest) {
-    return rest.reduce((acc, prefix) => {
-        return !isNil(prefix) ? `${acc}${acc !== "" ? "-" : ""}${prefix}` : acc;
-    }, "");
 }
 
 function createPrefixedValueTemplate(prefix: string) {
@@ -521,8 +623,8 @@ export const BackgroundColorMapping = {
 };
 
 export const BorderMapping = {
-    ...createValuesMapping(BorderColorAliases, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, { prefix: composePrefixes(ColorPrefix, "b") })})`),
-    ...createValuesMapping(OrbiterColors, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, { prefix:ColorPrefix })})`)
+    ...createValuesMapping(BorderColorAliases, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, { prefix: ColorPrefix })})`),
+    ...createValuesMapping(OrbiterColors, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, { prefix: ColorPrefix })})`)
 };
 
 export const BorderRadiusMapping = {
@@ -535,21 +637,28 @@ export const BoxShadowMapping = {
     ...createValuesMapping(BoxShadowAliases, createPrefixedValueTemplate(BoxShadowPrefix))
 };
 
-export const FontSizeMapping = createValuesMapping(FontSizeScale, createPrefixedValueTemplate(FontSizePrefix));
+export const FontSizeMapping = {
+    ...createValuesMapping(FontSizeScale, createPrefixedValueTemplate(FontSizePrefix)),
+    ...createValuesMapping(FontSizeAliases, (value: string | number) => `var(${normalizeVariable(value, { suffix: FontSizeSemanticSuffix })})`)
+};
 
-const fontVariationSettingsValueTemplate = (value: string | number) => `'wght' var(${normalizeVariable(value, { prefix: FontWeightPrefix })})`;
-
-export const FontWeightMapping = createValuesMapping(FontWeightScale, fontVariationSettingsValueTemplate);
+export const FontWeightMapping = {
+    ...createValuesMapping(FontWeightScale, (value: string | number) => `var(${normalizeVariable(value, { prefix: FontWeightPrefix })})`),
+    ...createValuesMapping(FontWeightAliases, (value: string | number) => `var(${normalizeVariable(value, { suffix: FontWeightSemanticSuffix })})`)
+};
 
 export const IconColorMapping = {
     ...createValuesMapping(IconColorAliases, createPrefixedValueTemplate(ColorPrefix)),
     ...ColorMapping
 };
 
-export const LineHeightMapping = createValuesMapping(LineHeightScale, createPrefixedValueTemplate(LineHeightPrefix));
+export const LineHeightMapping = {
+    ...createValuesMapping(LineHeightScale, createPrefixedValueTemplate(LineHeightPrefix)),
+    ...createValuesMapping(LineHeightAliases, (value: string | number) => `var(${normalizeVariable(value, { suffix: LineHeightSemanticSuffix })})`)
+};
 
 export const TextColorMapping = {
-    ...createValuesMapping(TextColorAliases, createPrefixedValueTemplate(composePrefixes(ColorPrefix, "text"))),
+    ...createValuesMapping(TextColorAliases, createPrefixedValueTemplate(ColorPrefix)),
     ...ColorMapping
 };
 
@@ -1381,19 +1490,6 @@ function createBorderPseudoHandler<TValue extends string>(pseudoClassName: strin
     };
 }
 
-// Custom handler for font-weight because of "fontVariationSettings".
-const fontWeightHandler: PropHandler<string | number> = (name, value, context) => {
-    const parsedValue = parseResponsiveSystemValue<string | number>(value, FontWeightMapping, context.matchedBreakpoints);
-
-    if (!isNil(parsedValue)) {
-        context.addStyleValue("fontVariationSettings", parsedValue);
-
-        if (!GlobalValues.includes(parsedValue as string)) {
-            context.addStyleValue("fontWeight", "400");
-        }
-    }
-};
-
 const gridColumnSpanHandler: PropHandler<string | number> = (name, value, context) => {
     const parsedValue = parseResponsiveValue(value, context.matchedBreakpoints);
 
@@ -1486,7 +1582,7 @@ export const PropsHandlers: Record<string, PropHandler<unknown>> = {
     flexWrap: createHandler(),
     fontSize: createHandler(FontSizeMapping),
     fontStyle: createHandler(),
-    fontWeight: fontWeightHandler,
+    fontWeight: createHandler(FontWeightMapping),
     gap: createHandler(SpacingMapping),
     grid: createHandler(),
     gridArea: createHandler(),
