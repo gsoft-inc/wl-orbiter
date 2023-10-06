@@ -47,11 +47,11 @@ export const Nesting: GridStory = {
     storyName: "nesting",
     render: () => (
         <Grid templateColumns={["1fr", "1fr"]} gap={160}>
-            <Grid templateColumns={[13, "auto"]}>
+            <Grid templateColumns={["8rem", "auto"]}>
                 <Div backgroundColor="sapphire-500">Alpha</Div>
                 <Div backgroundColor="sapphire-600">Bravo</Div>
             </Grid>
-            <Grid templateColumns={["auto", 9]}>
+            <Grid templateColumns={["auto", "4rem"]}>
                 <Div backgroundColor="sapphire-800">Delta</Div>
                 <Div backgroundColor="sapphire-900">Echo</Div>
             </Grid>
@@ -76,7 +76,7 @@ export const Gap: GridStory = {
 export const ColumnGap: GridStory = {
     storyName: "column gap",
     render: () => (
-        <Grid columngap={160} autoFlow="column">
+        <Grid columnGap={160} autoFlow="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
             <Div backgroundColor="sapphire-500">Bravo</Div>
             <Div backgroundColor="sapphire-500">Charlie</Div>
@@ -90,7 +90,7 @@ export const ColumnGap: GridStory = {
 export const RowGap: GridStory = {
     storyName: "row gap",
     render: () => (
-        <Grid rowgap={160}>
+        <Grid rowGap={160}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
             <Div backgroundColor="sapphire-500">Bravo</Div>
             <Div backgroundColor="sapphire-500">Charlie</Div>
@@ -113,7 +113,7 @@ export const TemplateColumns: GridStory = {
                 <Div backgroundColor="sapphire-500">Echo</Div>
                 <Div backgroundColor="sapphire-500">Foxtrot</Div>
             </Grid>
-            <Grid templateColumns={[13, 10, 13]} gap={160}>
+            <Grid templateColumns={["8rem", "4.5rem", "8rem"]} gap={160}>
                 <Div backgroundColor="sapphire-700">Alpha</Div>
                 <Div backgroundColor="sapphire-700">Bravo</Div>
                 <Div backgroundColor="sapphire-700">Charlie</Div>
@@ -121,7 +121,7 @@ export const TemplateColumns: GridStory = {
                 <Div backgroundColor="sapphire-700">Echo</Div>
                 <Div backgroundColor="sapphire-700">Foxtrot</Div>
             </Grid>
-            <Grid templateColumns={{ md: [13, 10], lg: "150px 100px 150px" }} gap={160}>
+            <Grid templateColumns={{ md: ["8rem", "4.5rem"], lg: "150px 100px 150px" }} gap={160}>
                 <Div backgroundColor="sapphire-900">Alpha</Div>
                 <Div backgroundColor="sapphire-900">Bravo</Div>
                 <Div backgroundColor="sapphire-900">Charlie</Div>
@@ -658,4 +658,3 @@ AutoColumns.parameters = {
         viewports: viewports
     }
 };
-export default {};
