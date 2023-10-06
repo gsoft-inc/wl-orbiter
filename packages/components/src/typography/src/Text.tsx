@@ -9,7 +9,7 @@ export interface InnerTextProps extends SlotProps, InternalProps, StyledComponen
     /**
      * A text can vary in size.
      */
-    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "inherit">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "inherit">;
 }
 
 export function InnerText(props: InnerTextProps) {

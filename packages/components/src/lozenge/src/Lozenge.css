@@ -5,7 +5,7 @@
     color: var(--o-ui-text-alias-primary);
     padding: 0 var(--o-ui-sp-2);
     border-radius: var(--o-ui-br-2);
-    font-variation-settings: "wght" 600;
+    font-weight: 600;
     min-height: var(--o-ui-sz-3);
     line-height: var(--o-ui-sz-3);
     width: max-content;

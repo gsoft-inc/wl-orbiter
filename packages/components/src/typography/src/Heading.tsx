@@ -11,7 +11,7 @@ export type AbstractHeadingProps<T extends ElementType> = SlotProps & InternalPr
     /**
      * An heading can vary in size.
      */
-    size?: ResponsiveProp<"2xs" | "xs" | "sm" | "md" | "lg" | "xl">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl">;
 };
 
 const DefaultElement = "div";

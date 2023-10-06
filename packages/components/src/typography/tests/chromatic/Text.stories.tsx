@@ -14,9 +14,6 @@ export const Default: TextStory = {
     storyName: "default",
     render: () => (
         <Stack gap="0">
-            <Text size="5xl">There are no passengers on spaceship earth.</Text>
-            <Text size="4xl">There are no passengers on spaceship earth.</Text>
-            <Text size="3xl">There are no passengers on spaceship earth.</Text>
             <Text size="2xl">There are no passengers on spaceship earth.</Text>
             <Text size="xl">There are no passengers on spaceship earth.</Text>
             <Text size="lg">There are no passengers on spaceship earth.</Text>

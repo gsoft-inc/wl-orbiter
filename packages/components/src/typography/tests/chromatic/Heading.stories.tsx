@@ -12,6 +12,8 @@ export const Size: HeadingStory = {
     storyName: "size",
     render: () => (
         <>
+            <Heading size="3xl">I see Earth!<br /> It is so beautiful!</Heading>
+            <Heading size="2xl">I see Earth!<br /> It is so beautiful!</Heading>
             <Heading size="xl">I see Earth!<br /> It is so beautiful!</Heading>
             <Heading size="lg">I see Earth!<br /> It is so beautiful!</Heading>
             <Heading>I see Earth!<br /> It is so beautiful!</Heading>
@@ -36,6 +38,8 @@ export const HeadingH1: HeadingStory = {
     storyName: "h1",
     render: () => (
         <>
+            <H1 size="3xl">I see Earth!<br /> It is so beautiful!</H1>
+            <H1 size="2xl">I see Earth!<br /> It is so beautiful!</H1>
             <H1 size="xl">I see Earth!<br /> It is so beautiful!</H1>
             <H1 size="lg">I see Earth!<br /> It is so beautiful!</H1>
             <H1>I see Earth!<br /> It is so beautiful!</H1>
@@ -49,6 +53,8 @@ export const HeadingH2: HeadingStory = {
     storyName: "h2",
     render: () => (
         <>
+            <H2 size="3xl">I see Earth!<br /> It is so beautiful!</H2>
+            <H2 size="2xl">I see Earth!<br /> It is so beautiful!</H2>
             <H2 size="xl">I see Earth!<br /> It is so beautiful!</H2>
             <H2 size="lg">I see Earth!<br /> It is so beautiful!</H2>
             <H2>I see Earth!<br /> It is so beautiful!</H2>
@@ -62,6 +68,8 @@ export const HeadingH3: HeadingStory = {
     storyName: "h3",
     render: () => (
         <>
+            <H3 size="3xl">I see Earth!<br /> It is so beautiful!</H3>
+            <H3 size="2xl">I see Earth!<br /> It is so beautiful!</H3>
             <H3 size="xl">I see Earth!<br /> It is so beautiful!</H3>
             <H3 size="lg">I see Earth!<br /> It is so beautiful!</H3>
             <H3>I see Earth!<br /> It is so beautiful!</H3>
@@ -75,6 +83,8 @@ export const HeadingH4: HeadingStory = {
     storyName: "h4",
     render: () => (
         <>
+            <H4 size="3xl">I see Earth!<br /> It is so beautiful!</H4>
+            <H4 size="2xl">I see Earth!<br /> It is so beautiful!</H4>
             <H4 size="xl">I see Earth!<br /> It is so beautiful!</H4>
             <H4 size="lg">I see Earth!<br /> It is so beautiful!</H4>
             <H4>I see Earth!<br /> It is so beautiful!</H4>
@@ -88,6 +98,8 @@ export const HeadingH5: HeadingStory = {
     storyName: "h5",
     render: () => (
         <>
+            <H5 size="3xl">I see Earth!<br /> It is so beautiful!</H5>
+            <H5 size="2xl">I see Earth!<br /> It is so beautiful!</H5>
             <H5 size="xl">I see Earth!<br /> It is so beautiful!</H5>
             <H5 size="lg">I see Earth!<br /> It is so beautiful!</H5>
             <H5>I see Earth!<br /> It is so beautiful!</H5>
@@ -101,6 +113,8 @@ export const HeadingH6: HeadingStory = {
     storyName: "h6",
     render: () => (
         <>
+            <H6 size="3xl">I see Earth!<br /> It is so beautiful!</H6>
+            <H6 size="2xl">I see Earth!<br /> It is so beautiful!</H6>
             <H6 size="xl">I see Earth!<br /> It is so beautiful!</H6>
             <H6 size="lg">I see Earth!<br /> It is so beautiful!</H6>
             <H6>I see Earth!<br /> It is so beautiful!</H6>

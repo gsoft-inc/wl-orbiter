@@ -128,7 +128,8 @@ export function InnerPopover({
         },
         content: {
             as: Text,
-            className: "o-ui-popover-content"
+            className: "o-ui-popover-content",
+            size: "sm"
         },
         footer: {
             as: "footer",
@@ -137,7 +138,7 @@ export function InnerPopover({
         heading: {
             as: "h3",
             id: `${popoverId}-heading`,
-            size: "sm"
+            size: "md"
         }
     }), [popoverId]));
 

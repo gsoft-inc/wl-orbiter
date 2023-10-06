@@ -30,7 +30,7 @@ export interface InnerCounterProps extends SlotProps, InternalProps, StyledCompo
     /**
      * A counter can vary in size.
      */
-    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "inherit">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "inherit">;
     /**
      * The style to use.
      */

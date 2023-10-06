@@ -11,7 +11,7 @@
     background-image: none;
     cursor: pointer;
     line-height: var(--o-ui-lh-1);
-    font-variation-settings: "wght" 500;
+    font-weight: 500;
     transition: all var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
     border: none;
     text-align: center;

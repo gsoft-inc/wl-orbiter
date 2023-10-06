@@ -69,7 +69,7 @@ export function InnerAccordionHeader(props: InnerAccordionHeaderProps) {
                 headingProps ?? {},
                 {
                     className: "o-ui-accordion-header",
-                    size: "2xs"
+                    size: "xs"
                 }
             )}
         >
