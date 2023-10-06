@@ -513,15 +513,7 @@ export const SpacingMapping = createValuesMapping(DimensionsScale, createPrefixe
 
 export const SizingMapping = createValuesMapping(DimensionsScale, createPrefixedValueTemplate(DimensionsPrefix));
 
-export const ColorMapping = test(OrbiterColors, createPrefixedValueTemplate(ColorPrefix));
-
-
-function test(values: any, template: any) {
-    console.log("AA", values, template);
-    console.log("AA2", createValuesMapping(values, template));
-
-    return createValuesMapping(values, template);
-}
+export const ColorMapping = createValuesMapping(OrbiterColors, createPrefixedValueTemplate(ColorPrefix));
 
 export const BackgroundColorMapping = {
     ...createValuesMapping(BackgroundColorAliases, createPrefixedValueTemplate(ColorPrefix)),
@@ -550,7 +542,7 @@ const fontVariationSettingsValueTemplate = (value: string | number) => `'wght' v
 export const FontWeightMapping = createValuesMapping(FontWeightScale, fontVariationSettingsValueTemplate);
 
 export const IconColorMapping = {
-    ...createValuesMapping(IconColorAliases, createPrefixedValueTemplate(composePrefixes(ColorPrefix, "icon"))),
+    ...createValuesMapping(IconColorAliases, createPrefixedValueTemplate(ColorPrefix)),
     ...ColorMapping
 };
 
@@ -594,7 +586,6 @@ export type SizingValue = LiteralUnion<keyof typeof SizingMapping, string>;
 export type SpacingValue = LiteralUnion<keyof typeof SpacingMapping, string>;
 export type StrokeValue = keyof typeof IconColorMapping | Property.Stroke;
 export type WidthValue = keyof typeof SizingMapping | Property.Width;
-
 export type AlignContentProp = ResponsiveProp<Property.AlignContent>;
 export type AlignItemsProp = ResponsiveProp<Property.AlignItems>;
 export type AlignSelfProp = ResponsiveProp<Property.AlignSelf>;
