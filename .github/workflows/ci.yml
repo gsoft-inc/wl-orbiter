@@ -24,7 +24,7 @@ jobs:
               with:
                   node-version-file: ".nvmrc"
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+              run: yarn install --frozen-lockfile --ignore-engines
             - name: Lint Eslint
               run: yarn lint-ci-eslint
 
