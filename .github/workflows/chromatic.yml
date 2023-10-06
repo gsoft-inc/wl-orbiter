@@ -22,7 +22,7 @@ jobs:
                   node-version-file: ".nvmrc"
                   cache: "yarn"
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile --ignore-engines
+              run: yarn install --frozen-lockfile
             - name: Build Packages
               run: yarn build
             - name: Publish to Chromatic
