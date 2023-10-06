@@ -18,7 +18,7 @@ function CustomComponent({
             value={value}
             onClick={handleCheck}
             color={isChecked ? "white" : undefined}
-            backgroundColor={isChecked ? "alias-accent" : "alias-warning-light"}
+            backgroundColor={isChecked ? "primary-surface" : "warning-surface-weak"}
             aria-checked={isChecked}
         >
             {children}

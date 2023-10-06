@@ -418,7 +418,7 @@ export const Focused: DialogStory = {
 export const WrapperStyledSystem: DialogStory = {
     storyName: "wrapper styled system",
     render: () => (
-        <Dialog wrapperProps={{ border: "warning-7" }}>
+        <Dialog wrapperProps={{ border: "sunken-treasure-700" }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Content>
                 <Paragraph>This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures led to the radio telescope's collapse. The 57-year old structure was once the largest radio dish telescope in the world, and researchers have used its capabilities to make significant breakthroughs in astronomy. The Arecibo Observatory also served as the dramatic backdrop to films like "Contact" and "Goldeneye."</Paragraph>

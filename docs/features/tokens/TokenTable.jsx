@@ -80,7 +80,7 @@ export function fontWeightRenderer(token) {
 }
 
 export function iconRenderer(token) {
-    if (token === "alias-static-white") {
+    if (token === "samoyed") {
         return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><InfoCircleMajorIcon fill={token} /></Div>;
     } else {
         return <Div height={400} display="flex" alignItems="center" justifyContent="start"><InfoCircleMajorIcon fill={token} /></Div>;
@@ -104,7 +104,7 @@ export function sizingRenderer() {
 }
 
 export function spacingRenderer(token) {
-    return <Div height={240} width={token} backgroundColor="alias-accent" borderRadius={2}></Div>;
+    return <Div height={240} width={token} backgroundColor="primary-surface" borderRadius={2}></Div>;
 }
 
 export function textRenderer(token) {

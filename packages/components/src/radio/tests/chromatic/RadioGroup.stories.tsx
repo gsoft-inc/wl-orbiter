@@ -44,7 +44,7 @@ function CustomComponent({
             value={value}
             onClick={handleCheck}
             color={isChecked ? "white" : undefined}
-            backgroundColor={isChecked ? "accent-6" : "neutral-6"}
+            backgroundColor={isChecked ? "sapphire-600" : "rock-600"}
         >
             {children}
         </TagAsButton>
