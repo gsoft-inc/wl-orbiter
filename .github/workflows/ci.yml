@@ -38,7 +38,7 @@ jobs:
               with:
                   node-version-file: ".nvmrc"
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+              run: yarn install --frozen-lockfile --ignore-engines
             - name: Lint Stylelint
               run: yarn lint-ci-style
 
@@ -52,7 +52,7 @@ jobs:
               with:
                   node-version-file: ".nvmrc"
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+              run: yarn install --frozen-lockfile --ignore-engines
             - name: Build Packages
               run: yarn build
             - name: Run Jest

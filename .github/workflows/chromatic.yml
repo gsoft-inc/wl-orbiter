@@ -3,7 +3,7 @@
 
 name: Chromatic
 
-on:  
+on:
     pull_request:
         branches-ignore:
           - changeset-release/*
@@ -22,7 +22,7 @@ jobs:
                   node-version-file: ".nvmrc"
                   cache: "yarn"
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+              run: yarn install --frozen-lockfile --ignore-engines
             - name: Build Packages
               run: yarn build
             - name: Publish to Chromatic
