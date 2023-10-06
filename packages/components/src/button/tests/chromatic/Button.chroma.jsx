@@ -12,7 +12,7 @@ function stories(segment) {
 }
 function WarningBackground({ button, ...rest }) {
     return (
-        <Div color="warning-6" backgroundColor="warning-1">
+        <Div color="sunken-treasure-600" backgroundColor="koi-25">
             {cloneElement(button, rest)}
         </Div>
     );
@@ -27,7 +27,7 @@ createButtonTestSuite(<Button variant="negative" />, stories("/negative"));
 stories()
     .add("styling", () =>
         <Inline>
-            <Button border="warning-6" variant="secondary">Button</Button>
+            <Button border="sunken-treasure-600" variant="secondary">Button</Button>
             <Button className="bg-red" variant="secondary">Button</Button>
             <Button style={{ backgroundColor: "red" }} variant="secondary">Button</Button>
         </Inline>

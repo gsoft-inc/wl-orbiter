@@ -27,7 +27,7 @@ function CustomComponent({ value, children, ...rest }) {
 
 render(() => {
     return (
-        <RadioGroup gap={2} orientation="horizontal">
+        <RadioGroup gap={80} orientation="horizontal">
             <CustomComponent value="mars">Mars</CustomComponent>
             <CustomComponent value="jupiter">Jupiter</CustomComponent>
             <CustomComponent value="pluton">Pluton</CustomComponent>

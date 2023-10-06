@@ -21,7 +21,7 @@ createIconButtonTestSuite(<IconButton variant="negative" />, stories("/negative"
 stories()
     .add("styling", () =>
         <Inline>
-            <IconButton border="sunray-10" variant="secondary" aria-label="Add"><AddMajorIcon /></IconButton>
+            <IconButton border="sunken-treasure-900" variant="secondary" aria-label="Add"><AddMajorIcon /></IconButton>
             <IconButton className="bg-red" variant="secondary" aria-label="Add"><AddMajorIcon /></IconButton>
             <IconButton style={{ backgroundColor: "red" }} variant="secondary" aria-label="Add"><AddMajorIcon /></IconButton>
         </Inline>

@@ -116,7 +116,7 @@ export const DisabledRadio: RadioGroupStory = {
 export const Gap: RadioGroupStory = {
     storyName: "gap",
     render: () => (
-        <RadioGroup gap={13}>
+        <RadioGroup gap={800}>
             <Radio value="1">1</Radio>
             <Radio value="2">2</Radio>
             <Radio value="3">3</Radio>
@@ -127,10 +127,10 @@ export const Gap: RadioGroupStory = {
 export const Wrap: RadioGroupStory = {
     storyName: "wrap",
     render: () => (
-        <Div width={11}>
+        <Div width={800}>
             <RadioGroup wrap orientation="horizontal">
                 {["1", "2", "3", "4", "5", "6", "7", "8"].map(x =>
-                    <Radio width={6} value={x} key={x}>{x}</Radio>
+                    <Radio width={400} value={x} key={x}>{x}</Radio>
                 )}
             </RadioGroup>
         </Div>
@@ -140,10 +140,10 @@ export const Wrap: RadioGroupStory = {
 export const NoWrap: RadioGroupStory = {
     storyName: "no wrap",
     render: () => (
-        <Div width={11}>
+        <Div width={800}>
             <RadioGroup wrap={false} orientation="horizontal">
                 {["1", "2", "3", "4", "5", "6", "7", "8"].map(x =>
-                    <Radio width={6} value={x} key={x}>{x}</Radio>
+                    <Radio width={400} value={x} key={x}>{x}</Radio>
                 )}
             </RadioGroup>
         </Div>
@@ -153,7 +153,7 @@ export const NoWrap: RadioGroupStory = {
 export const OverflowWrapped: RadioGroupStory = {
     storyName: "overflow wrapped",
     render: () => (
-        <Div width={11}>
+        <Div width={800}>
             <RadioGroup wrap orientation="horizontal">
                 {["1", "2", "3", "Neptune", "5", "6", "7", "8"].map(x =>
                     <Radio value={x} key={x}>{x}</Radio>
@@ -166,7 +166,7 @@ export const OverflowWrapped: RadioGroupStory = {
 export const ToggleButtons: RadioGroupStory = {
     storyName: "toggle buttons",
     render: () => (
-        <RadioGroup gap={2} orientation="horizontal" defaultValue="2">
+        <RadioGroup gap={80} orientation="horizontal" defaultValue="2">
             <ToggleButton variant="secondary" value="1">1</ToggleButton>
             <ToggleButton variant="secondary" value="2">2</ToggleButton>
             <ToggleButton variant="secondary" value="3">3</ToggleButton>
@@ -177,7 +177,7 @@ export const ToggleButtons: RadioGroupStory = {
 export const CustomComponents: RadioGroupStory = {
     storyName: "custom components",
     render: () => (
-        <RadioGroup gap={2} orientation="horizontal" defaultValue="2">
+        <RadioGroup gap={80} orientation="horizontal" defaultValue="2">
             <CustomComponent value="1">1</CustomComponent>
             <CustomComponent value="2">2</CustomComponent>
             <CustomComponent value="3">3</CustomComponent>
@@ -188,7 +188,7 @@ export const CustomComponents: RadioGroupStory = {
 export const Validation: RadioGroupStory = {
     storyName: "validation",
     render: () => (
-        <Inline gap={13}>
+        <Inline gap={800}>
             <RadioGroup validationState="invalid">
                 <Radio value="1">1</Radio>
                 <Radio value="2">2</Radio>
@@ -207,7 +207,7 @@ export const Styling: RadioGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <RadioGroup border="warning-7">
+            <RadioGroup border="warning-border">
                 <Radio value="1">1</Radio>
                 <Radio value="2">2</Radio>
                 <Radio value="3">3</Radio>
@@ -256,7 +256,7 @@ export const Reverse: RadioGroupStory = {
                         <Counter>60</Counter>
                     </Radio>
                 </RadioGroup>
-                <Div border="1px solid #000" width="100%" height={7}></Div>
+                <Div border="1px solid #000" width="100%" height={480}></Div>
             </Inline>
         </Stack>
     )

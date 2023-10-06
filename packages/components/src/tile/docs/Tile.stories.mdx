@@ -41,7 +41,7 @@ Tiles behaves like a radio button or a checkbox depending if it's used in a [sin
 
 A tile consists of minimally an heading and some content.
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="tile">
         <Tile>
             <Heading>Buy a ticket</Heading>
@@ -54,7 +54,7 @@ A tile consists of minimally an heading and some content.
 
 A tile can have an [image](?path=/story/chromatic-image--default).
 
-<Preview scope={{ SpacePortraitHorizontal }} width={16}>
+<Preview scope={{ SpacePortraitHorizontal }} width="20rem">
     <Story name="image">
         <Tile>
             <Image src={SpacePortraitHorizontal} alt="Planet over another planet" />
@@ -66,10 +66,10 @@ A tile can have an [image](?path=/story/chromatic-image--default).
 
 Or an [illustration](?path=/docs/illustration--horizontal) with a background color.
 
-<Preview scope={{ Planet }} width={16}>
+<Preview scope={{ Planet }} width="20rem">
     <Story name="illustration">
         <Tile>
-            <Illustration backgroundColor="alias-accent-light">
+            <Illustration backgroundColor="surface-weak">
                 <Image src={Planet} width="100px" alt="Planet" />
             </Illustration>
             <Heading>Buy a ticket</Heading>
@@ -82,7 +82,7 @@ Or an [illustration](?path=/docs/illustration--horizontal) with a background col
 
 A tile can be checked.
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="checked">
         <Tile defaultChecked>
             <Heading>Buy a ticket</Heading>
@@ -95,7 +95,7 @@ A tile can be checked.
 
 A tile can be disabled.
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="disabled">
         <Tile disabled>
             <Heading>Buy a ticket</Heading>
@@ -133,13 +133,13 @@ A tile can render horizontally.
 
 A tite can handle `checked` state in controlled mode.
 
-<Preview filePath="/tile/docs/ControlledTile" width={16} />
+<Preview filePath="/tile/docs/ControlledTile" width="20rem" />
 
 ## TileLink
 
 A tile can also be navigable. It is similar to a [link](?path=/docs/link--default-story) and it does share the same props.
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="link">
         <TileLink href="https://www.virgingalactic.com">
             <Heading>Buy a ticket</Heading>
@@ -172,7 +172,7 @@ const RouterTileLink = as(TileLink, Link);
 
 Related tiles can be grouped together. By default a tile group doesn't allow any selection. This is usually what you want if you need to group together navigable tiles.
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="no selection">
         <TileGroup>
             <TileLink href="https://www.virgingalactic.com">
@@ -195,7 +195,7 @@ Related tiles can be grouped together. By default a tile group doesn't allow any
 
 A tile group can allow a single selection. This is a behavior similar to a [radio group](?path=/docs/radio-group--default-story).
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="single selection">
         <TileGroup selectionMode="single">
             <Tile value="buy">
@@ -218,7 +218,7 @@ A tile group can allow a single selection. This is a behavior similar to a [radi
 
 A tile group can allow a multiple selection. This is a behavior similar to a [checkbox group](?path=/docs/checkbox--default-story#checkbox-group).
 
-<Preview width={16}>
+<Preview width="20rem">
     <Story name="multiple selection">
         <TileGroup selectionMode="multiple">
             <Tile value="buy">

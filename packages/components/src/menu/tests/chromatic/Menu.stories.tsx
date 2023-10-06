@@ -262,12 +262,12 @@ export const ItemOverflow: MenuStory = {
     storyName: "item overflow",
     render: () => (
         <Inline>
-            <Menu width={12} aria-label="Planets">
+            <Menu width={960} aria-label="Planets">
                 <Item>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Item>
                 <Item>Jupiter</Item>
                 <Item>Mars</Item>
             </Menu>
-            <Menu defaultSelectedKeys={["0"]} selectionMode="single" width={12} aria-label="Planets">
+            <Menu defaultSelectedKeys={["0"]} selectionMode="single" width={960} aria-label="Planets">
                 <Item>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Item>
                 <Item>Jupiter</Item>
                 <Item>Mars</Item>
@@ -326,7 +326,7 @@ export const ItemWithDescriptionOverflowWhenFluid: MenuStory = {
     storyName: "item with description overflow when fluid",
     render: () => (
         <Inline>
-            <Menu fluid width={15} aria-label="Planets">
+            <Menu fluid width="16rem" aria-label="Planets">
                 <Item key="earth">
                     <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                     <Text slot="description">Home sweet home!</Text>
@@ -341,7 +341,7 @@ export const ItemWithDescriptionOverflowWhenFluid: MenuStory = {
                 <Item key="saturn">Saturn</Item>
                 <Item key="uranus">Uranus</Item>
             </Menu>
-            <Menu defaultSelectedKeys={["earth", "mars"]} selectionMode="multiple" fluid width={15} aria-label="Planets">
+            <Menu defaultSelectedKeys={["earth", "mars"]} selectionMode="multiple" fluid width="16rem" aria-label="Planets">
                 <Item key="earth">
                     <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                     <Text slot="description">Home sweet home!</Text>
@@ -551,7 +551,7 @@ export const AdaptWidthToLargestItem: MenuStory = {
 export const CustomMenuWidth: MenuStory = {
     storyName: "custom menu width",
     render: () => (
-        <Menu width={16} aria-label="Planets">
+        <Menu width="20rem" aria-label="Planets">
             <Item key="earth">Earth</Item>
             <Item key="mars">Mars</Item>
             <Item key="saturn">Saturn</Item>
@@ -732,7 +732,7 @@ export const ScrollingMixMatch: MenuStory = {
 export const ScrollingWithCustomStyleHeight: MenuStory = {
     storyName: "scrolling with custom style height",
     render: () => (
-        <Menu selectionMode="single" height={12} aria-label="Planets">
+        <Menu selectionMode="single" height={960} aria-label="Planets">
             <Item key="ceres">Ceres</Item>
             <Item key="charon">Charon</Item>
             <Item key="earth">Earth</Item>
@@ -777,9 +777,9 @@ export const Styling: MenuStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Menu border="warning-7" aria-label="Planets">
+            <Menu border="warning-border" aria-label="Planets">
                 <Item key="earth">Earth</Item>
-                <Item border="warning-7" key="jupiter">Jupiter</Item>
+                <Item border="warning-border" key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Menu>
             <Menu className="border-red" aria-label="Planets">

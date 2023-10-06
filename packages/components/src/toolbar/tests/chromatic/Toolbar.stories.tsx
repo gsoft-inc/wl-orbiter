@@ -107,7 +107,7 @@ export const Disabled: ToolbarStory = {
 export const Gap: ToolbarStory = {
     storyName: "gap",
     render: () => (
-        <Toolbar gap={13}>
+        <Toolbar gap={800}>
             <CheckboxGroup>
                 <ToggleButton value="1">1</ToggleButton>
                 <ToggleButton value="2">2</ToggleButton>
@@ -166,8 +166,8 @@ export const Align: ToolbarStory = {
 export const VerticalAlign: ToolbarStory = {
     storyName: "vertical align",
     render: () => (
-        <Inline gap={13}>
-            <Toolbar alignY="start" height={10}>
+        <Inline gap={800}>
+            <Toolbar alignY="start" height={800}>
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -177,7 +177,7 @@ export const VerticalAlign: ToolbarStory = {
                     <NotificationMajorIcon />
                 </ToggleIconButton>
             </Toolbar>
-            <Toolbar alignY="end" height={10}>
+            <Toolbar alignY="end" height={800}>
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -187,7 +187,7 @@ export const VerticalAlign: ToolbarStory = {
                     <NotificationMajorIcon />
                 </ToggleIconButton>
             </Toolbar>
-            <Toolbar alignY="center" height={10}>
+            <Toolbar alignY="center" height={800}>
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -204,7 +204,7 @@ export const VerticalAlign: ToolbarStory = {
 export const NoWrap: ToolbarStory = {
     storyName: "no wrap",
     render: () => (
-        <Div width={12}>
+        <Div width={960}>
             <Toolbar wrap={false}>
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
@@ -278,7 +278,7 @@ export const Styling: ToolbarStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Toolbar border="warning-7">
+            <Toolbar border="warning-border">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>

@@ -79,7 +79,7 @@ export function InnerToolbar({
     children,
     disabled,
     forwardedRef,
-    gap = 5,
+    gap = 240,
     orientation = "horizontal",
     wrap = true,
     ...rest

@@ -20,16 +20,16 @@ type ThemeProviderStory = ComponentStoryObj<typeof ThemeProvider>;
 function PrimaryColors() {
     return (
         <Inline gap={0}>
-            <Box padding={4} backgroundColor="accent-1" />
-            <Box padding={4} backgroundColor="accent-2" />
-            <Box padding={4} backgroundColor="accent-3" />
-            <Box padding={4} backgroundColor="accent-4" />
-            <Box padding={4} backgroundColor="accent-5" />
-            <Box padding={4} backgroundColor="accent-6" />
-            <Box padding={4} backgroundColor="accent-7" />
-            <Box padding={4} backgroundColor="accent-8" />
-            <Box padding={4} backgroundColor="accent-9" />
-            <Box padding={4} backgroundColor="accent-10" />
+            <Box padding={160} backgroundColor="sapphire-100" />
+            <Box padding={160} backgroundColor="sapphire-200" />
+            <Box padding={160} backgroundColor="sapphire-300" />
+            <Box padding={160} backgroundColor="sapphire-400" />
+            <Box padding={160} backgroundColor="sapphire-500" />
+            <Box padding={160} backgroundColor="sapphire-600" />
+            <Box padding={160} backgroundColor="sapphire-700" />
+            <Box padding={160} backgroundColor="sapphire-800" />
+            <Box padding={160} backgroundColor="sapphire-900" />
+            <Box padding={160} backgroundColor="sapphire-900" />
         </Inline>
     );
 }
@@ -47,7 +47,7 @@ export const Light: ThemeProviderStory = {
     storyName: "light",
     render: () => (
         <ThemeProvider colorScheme="light">
-            <Box padding={4} backgroundColor="alias-mid-break" />
+            <Box padding={160} backgroundColor="neutral-surface" />
         </ThemeProvider>
     )
 };
@@ -56,7 +56,7 @@ export const Dark: ThemeProviderStory = {
     storyName: "dark",
     render: () => (
         <ThemeProvider colorScheme="dark">
-            <Box padding={4} backgroundColor="alias-mid-break" />
+            <Box padding={160} backgroundColor="neutral-surface" />
         </ThemeProvider>
     )
 };
@@ -76,7 +76,7 @@ export const SetColorSchemeWithApi: ThemeProviderStory = {
     render: () => (
         <ThemeProvider colorScheme="light">
             <SwitchColorScheme />
-            <Box padding={4} backgroundColor="alias-mid-break" />
+            <Box padding={160} backgroundColor="neutral-surface" />
         </ThemeProvider>
     )
 };

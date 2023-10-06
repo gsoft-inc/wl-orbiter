@@ -28,7 +28,7 @@ export function MotionPreview() {
 
     return (
         <>
-            <Inline marginBottom={4} alignY="end">
+            <Inline marginBottom={160} alignY="end">
                 <Field>
                     <Label data-testid="label">Easing</Label>
                     <Select placeholder="Easing" aria-label="Easing" defaultSelectedKey={easing} onSelectionChange={handleSelectEasing}>

@@ -1,7 +1,12 @@
 import { isNil } from "../../../shared";
 
-export function normalizeVariable(name: string | number, prefix?: string) {
-    return isNil(prefix) ? `--o-ui-${name}` : `--o-ui-${prefix}-${name}`;
+export function normalizeVariable(name: string | number, nameOptions?: {
+    prefix?: string;
+    suffix?: string;
+}) {
+    const prefixed = isNil(nameOptions?.prefix) ? `--hop-${name}` : `--hop-${nameOptions.prefix}-${name}`;
+
+    return isNil(nameOptions?.suffix) ? prefixed : `${prefixed}-${nameOptions.suffix}`;
 }
 
 // core

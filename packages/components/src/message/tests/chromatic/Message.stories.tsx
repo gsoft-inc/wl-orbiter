@@ -92,7 +92,7 @@ export const RichContent: MessageStory = {
 export const Contained: MessageStory = {
     storyName: "contained",
     render:  () => (
-        <Div width={16}>
+        <Div width="20rem">
             <Message>Scheduled launch today at 1PM.</Message>
         </Div>
     )
@@ -126,7 +126,7 @@ export const Styling: MessageStory = {
     storyName: "styling",
     render:  () => (
         <Stack>
-            <Message border="warning-7"><strong>Scheduled launch</strong> today at 1PM. Please be cautious.</Message>
+            <Message border="warning-border"><strong>Scheduled launch</strong> today at 1PM. Please be cautious.</Message>
             <Message className="border-red"><strong>Scheduled launch</strong> today at 1PM. Please be cautious.</Message>
             <Message style={{ border: "1px solid red" }}><strong>Scheduled launch</strong> today at 1PM. Please be cautious.</Message>
         </Stack>

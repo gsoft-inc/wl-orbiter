@@ -100,7 +100,7 @@ export const Styling: PasswordInputStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <PasswordInput border="alert-6" aria-label="Label" />
+            <PasswordInput border="amanita-600" aria-label="Label" />
             <PasswordInput className="border-red" aria-label="Label" />
             <PasswordInput style={{ border: "1px solid red" }} aria-label="Label" />
             <PasswordInput wrapperProps={{ className: "border-red" }} aria-label="Label" />

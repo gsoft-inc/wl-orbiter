@@ -58,15 +58,15 @@ export const ItemWithDot: TagListStory = {
     render: () => (
         <TagList>
             <Item key="mercury">
-                <Dot color="alias-accent" />
+                <Dot color="primary-text" />
                 <Text>Mercury Program</Text>
             </Item>
             <Item key="gemini">
-                <Dot color="alias-accent" />
+                <Dot color="primary-text" />
                 <Text>Gemini Program</Text>
             </Item>
             <Item key="apollo">
-                <Dot color="alias-accent" />
+                <Dot color="primary-text" />
                 <Text>Apollo Program</Text>
             </Item>
         </TagList>
@@ -141,7 +141,7 @@ export const MultipleRows: TagListStory = {
     storyName: "multiple rows",
     render: () => (
         <Stack>
-            <Div width={17}>
+            <Div width="24rem">
                 <TagList>
                     <Item key="mercury">Mercury Program</Item>
                     <Item key="gemini">Gemini Program</Item>
@@ -157,7 +157,7 @@ export const MultipleRows: TagListStory = {
                     <Item key="artemis-6">Artemis Program</Item>
                 </TagList>
             </Div>
-            <Div width={17}>
+            <Div width="24rem">
                 <TagList onClear={() => {}}>
                     <Item key="mercury">Mercury Program</Item>
                     <Item key="gemini">Gemini Program</Item>
@@ -181,9 +181,9 @@ export const Styling: TagListStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <TagList border="warning-7">
+            <TagList border="warning-border">
                 <Item key="earth">Earth</Item>
-                <Item border="warning-7" key="jupiter">Jupiter</Item>
+                <Item border="warning-border" key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </TagList>
             <TagList className="border-red">

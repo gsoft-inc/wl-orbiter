@@ -8,13 +8,13 @@ import { PropsHandlers, StyledSystemProps } from "./props-handler";
 SYNTAX:
 
 // No breakpoint, no pseudo, known value
-<Button backgroundColor="warning-10">Toto</Button>
+<Button backgroundColor="koi-900">Toto</Button>
 
 // No breakpoint, no pseudo, dynamic value
 <Button backgroundColor="#fff">Toto</Button>
 
 // No breakpoint, pseudo, known value
-<Button backgroundColorHover="warning-10">Toto</Button>
+<Button backgroundColorHover="sunken-treasure-300">Toto</Button>
 
 // No breakpoint, pseudo, dynamic value
 <Button backgroundColorHover="#fff">Toto</Button>
@@ -26,10 +26,10 @@ SYNTAX:
 <Button backgroundColor={{ sm: "warning-10", md: "#fff", lg: "black" }}>Toto</Button>
 
 // Breakpoint, pseudo, known value
-<Button backgroundColorHover={{ sm: "warning-10", md: "accent-10", lg: "black" }}>Toto</Button>
+<Button backgroundColorHover={{ sm: "sunken-treasure-300", md: "accent-10", lg: "black" }}>Toto</Button>
 
 // Breakpoint, pseudo, dynamic value
-<Button backgroundColorHover={{ sm: "warning-10", md: "#fff", lg: "black" }}>Toto</Button>
+<Button backgroundColorHover={{ sm: "sunken-treasure-300", md: "#fff", lg: "black" }}>Toto</Button>
 */
 
 export function useStyledSystem<TProps extends Record<string, any>>(props: TProps) {

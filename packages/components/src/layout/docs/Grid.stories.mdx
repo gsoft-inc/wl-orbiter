@@ -29,12 +29,12 @@ A grid can define explicit sections with areas.
     <Story name="areas">
         <Grid
             areas={["a  a", "b c"]}
-            gap={2}
-            height={10}
+            gap={80}
+            height={800}
         >
-            <Div gridArea="a" backgroundColor="accent-5" />
-            <Div gridArea="b" backgroundColor="alert-5" />
-            <Div gridArea="c" backgroundColor="green-5" />
+            <Div gridArea="a" backgroundColor="sapphire-500" />
+            <Div gridArea="b" backgroundColor="amanita-500" />
+            <Div gridArea="c" backgroundColor="moss-500" />
         </Grid>
     </Story>
 </Preview>
@@ -47,12 +47,12 @@ A grid can define explicit columns (and rows). A value can be a grid length valu
     <Story name="template columns">
         <Grid
             templateColumns={[9, 7, "1fr"]}
-            gap={2}
-            height={5}
+            gap={80}
+            height={320}
         >
-            <Div backgroundColor="accent-5" />
-            <Div backgroundColor="alert-5" />
-            <Div backgroundColor="green-5" />
+            <Div backgroundColor="sapphire-500" />
+            <Div backgroundColor="amanita-500" />
+            <Div backgroundColor="moss-500" />
         </Grid>
     </Story>
 </Preview>
@@ -65,12 +65,12 @@ A grid can define the size of implicitly created columns. A value can be a grid 
     <Story name="auto columns">
         <Grid
             autoColumns="1fr"
-            gap={2}
-            height={10}
+            gap={80}
+            height={800}
         >
-            <Div gridColumn={2} backgroundColor="accent-5" />
-            <Div backgroundColor="alert-5" />
-            <Div backgroundColor="green-5" />
+            <Div gridColumn={2} backgroundColor="sapphire-500" />
+            <Div backgroundColor="amanita-500" />
+            <Div backgroundColor="moss-500" />
         </Grid>
     </Story>
 </Preview>
@@ -83,13 +83,13 @@ A grid layout can have a gap between his columns and rows. `columnGap` and `rowG
     <Story name="gap">
         <Grid
             templateColumns="1fr 1fr"
-            gap={2}
-            height={10}
+            gap={80}
+            height={800}
         >
-            <Div backgroundColor="accent-5" />
-            <Div backgroundColor="alert-5" />
-            <Div backgroundColor="green-5" />
-            <Div backgroundColor="neutral-5" />
+            <Div backgroundColor="sapphire-500" />
+            <Div backgroundColor="amanita-500" />
+            <Div backgroundColor="moss-500" />
+            <Div backgroundColor="rock-500" />
         </Grid>
     </Story>
 </Preview>
@@ -102,13 +102,13 @@ A grid item can span over multiple columns.
     <Story name="column span">
         <Grid
             templateColumns="1fr 1fr 1fr"
-            gap={2}
-            height={10}
+            gap={80}
+            height={800}
         >
-            <Div backgroundColor="accent-5" />
-            <Div backgroundColor="alert-5" />
-            <Div backgroundColor="green-5" />
-            <Div gridColumnSpan={3} gridRow={2} backgroundColor="neutral-5" />
+            <Div backgroundColor="sapphire-500" />
+            <Div backgroundColor="amanita-500" />
+            <Div backgroundColor="moss-500" />
+            <Div gridColumnSpan={3} gridRow={2} backgroundColor="rock-500" />
         </Grid>
     </Story>
 </Preview>
@@ -121,15 +121,15 @@ Grids can be nested.
     <Story name="nesting">
         <Grid
             templateRows={[5, 5]}
-            gap={2}
+            gap={80}
         >
             <Grid templateColumns={[9, "auto"]}>
-                <Div backgroundColor="accent-5" />
-                <Div backgroundColor="alert-5" />
+                <Div backgroundColor="sapphire-500" />
+                <Div backgroundColor="amanita-500" />
             </Grid>
             <Grid templateColumns={["auto", 14]}>
-                <Div backgroundColor="green-5" />
-                <Div backgroundColor="neutral-5" />
+                <Div backgroundColor="moss-500" />
+                <Div backgroundColor="rock-500" />
             </Grid>
         </Grid>
     </Story>
@@ -143,39 +143,39 @@ A custom `repeat` function is available to support Orbiter spacing scale values.
     <Story name="repeat function">
         <Grid
             templateColumns={repeat("auto-fit", 7)}
-            autoRows={7}
-            gap={2}
+            autoRows={480}
+            gap={80}
         >
-            <Div backgroundColor={"#eef3fd"} width={6} height={6} />
-            <Div backgroundColor={"#dbe6fd"} width={6} height={6} />
-            <Div backgroundColor={"#b6c2ef"} width={6} height={6} />
-            <Div backgroundColor={"#95a9f5"} width={6} height={6} />
-            <Div backgroundColor={"#7689fd"} width={6} height={6} />
-            <Div backgroundColor={"#5D65f6"} width={6} height={6} />
-            <Div backgroundColor={"#4B11fd"} width={6} height={6} />
-            <Div backgroundColor={"#362aae"} width={6} height={6} />
-            <Div backgroundColor={"#1f2151"} width={6} height={6} />
-            <Div backgroundColor={"#0d0f1f"} width={6} height={6} />
-            <Div backgroundColor={"#fbf1f1"} width={6} height={6} />
-            <Div backgroundColor={"#fadfdf"} width={6} height={6} />
-            <Div backgroundColor={"#fdb0af"} width={6} height={6} />
-            <Div backgroundColor={"#f88f8d"} width={6} height={6} />
-            <Div backgroundColor={"#eb6a64"} width={6} height={6} />
-            <Div backgroundColor={"#d93c37"} width={6} height={6} />
-            <Div backgroundColor={"#a91414"} width={6} height={6} />
-            <Div backgroundColor={"#811b15"} width={6} height={6} />
-            <Div backgroundColor={"#461812"} width={6} height={6} />
-            <Div backgroundColor={"#1d0b09"} width={6} height={6} />
-            <Div backgroundColor={"#dbfbea"} width={6} height={6} />
-            <Div backgroundColor={"#cbeedb"} width={6} height={6} />
-            <Div backgroundColor={"#a5cdb8"} width={6} height={6} />
-            <Div backgroundColor={"#78ba9b"} width={6} height={6} />
-            <Div backgroundColor={"#27a57a"} width={6} height={6} />
-            <Div backgroundColor={"#268563"} width={6} height={6} />
-            <Div backgroundColor={"#2b5e48"} width={6} height={6} />
-            <Div backgroundColor={"#27493a"} width={6} height={6} />
-            <Div backgroundColor={"#1a2a23"} width={6} height={6} />
-            <Div backgroundColor={"#0c110e"} width={6} height={6} />
+            <Div backgroundColor={"#eef3fd"} width={400} height={400} />
+            <Div backgroundColor={"#dbe6fd"} width={400} height={400} />
+            <Div backgroundColor={"#b6c2ef"} width={400} height={400} />
+            <Div backgroundColor={"#95a9f5"} width={400} height={400} />
+            <Div backgroundColor={"#7689fd"} width={400} height={400} />
+            <Div backgroundColor={"#5D65f6"} width={400} height={400} />
+            <Div backgroundColor={"#4B11fd"} width={400} height={400} />
+            <Div backgroundColor={"#362aae"} width={400} height={400} />
+            <Div backgroundColor={"#1f2151"} width={400} height={400} />
+            <Div backgroundColor={"#0d0f1f"} width={400} height={400} />
+            <Div backgroundColor={"#fbf1f1"} width={400} height={400} />
+            <Div backgroundColor={"#fadfdf"} width={400} height={400} />
+            <Div backgroundColor={"#fdb0af"} width={400} height={400} />
+            <Div backgroundColor={"#f88f8d"} width={400} height={400} />
+            <Div backgroundColor={"#eb6a64"} width={400} height={400} />
+            <Div backgroundColor={"#d93c37"} width={400} height={400} />
+            <Div backgroundColor={"#a91414"} width={400} height={400} />
+            <Div backgroundColor={"#811b15"} width={400} height={400} />
+            <Div backgroundColor={"#461812"} width={400} height={400} />
+            <Div backgroundColor={"#1d0b09"} width={400} height={400} />
+            <Div backgroundColor={"#dbfbea"} width={400} height={400} />
+            <Div backgroundColor={"#cbeedb"} width={400} height={400} />
+            <Div backgroundColor={"#a5cdb8"} width={400} height={400} />
+            <Div backgroundColor={"#78ba9b"} width={400} height={400} />
+            <Div backgroundColor={"#27a57a"} width={400} height={400} />
+            <Div backgroundColor={"#268563"} width={400} height={400} />
+            <Div backgroundColor={"#2b5e48"} width={400} height={400} />
+            <Div backgroundColor={"#27493a"} width={400} height={400} />
+            <Div backgroundColor={"#1a2a23"} width={400} height={400} />
+            <Div backgroundColor={"#0c110e"} width={400} height={400} />
         </Grid>
     </Story>
 </Preview>
@@ -188,12 +188,12 @@ A custom `minmax` function is available to support Orbiter spacing scalue values
     <Story name="minmax function">
         <Grid
             templateColumns={[minmax(9, "1fr"), 10, minmax(9, "1fr")]}
-            gap={2}
-            height={5}
+            gap={80}
+            height={320}
         >
-            <Div backgroundColor="accent-5" />
-            <Div backgroundColor="alert-5" />
-            <Div backgroundColor="green-5" />
+            <Div backgroundColor="sapphire-500" />
+            <Div backgroundColor="amanita-500" />
+            <Div backgroundColor="moss-500" />
         </Grid>
     </Story>
 </Preview>
@@ -204,13 +204,13 @@ A custom `minmax` function is available to support Orbiter spacing scalue values
     <Story name="fit-content function">
         <Grid
             templateColumns={[fitContent(9), fitContent(9), "1fr"]}
-            gap={2}
+            gap={80}
             alignItems="center"
-            color="alias-static-white"
+            color="#FFFFFF"
         >
             <Div backgroundColor="alias-accent" padding={1}>Mars</Div>
-            <Div backgroundColor="alias-alert" padding={1}>Pluto</Div>
-            <Div backgroundColor="alias-success" padding={1}>Jupiter</Div>
+            <Div backgroundColor="status-negative-surface" padding={1}>Pluto</Div>
+            <Div backgroundColor="status-positive-surface" padding={1}>Jupiter</Div>
         </Grid>
     </Story>
 </Preview>

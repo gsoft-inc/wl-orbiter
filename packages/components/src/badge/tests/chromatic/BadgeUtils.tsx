@@ -9,7 +9,7 @@ export function SquareBadge({ children, ...rest }: BadgeUtilsProps) {
     return (
         <Badge {...rest}>
             {children}
-            <Div backgroundColor="alias-accent-light" width={6} height={6} />
+            <Div backgroundColor="surface-weak" width={400} height={400} />
         </Badge>
     );
 }
@@ -21,7 +21,7 @@ export function CircleBadge({ children, ...rest }: BadgeUtilsProps) {
             overlap="circle"
         >
             {children}
-            <Div backgroundColor="alias-accent-light" borderRadius="100px" width={6} height={6} />
+            <Div backgroundColor="surface-weak" borderRadius="100px" width={400} height={400} />
         </Badge>
     );
 }

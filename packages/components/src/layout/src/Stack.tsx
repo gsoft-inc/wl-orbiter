@@ -69,7 +69,7 @@ export function InnerStack({
     as = DefaultElement,
     children,
     forwardedRef,
-    gap = 5,
+    gap = 240,
     wrap,
     ...rest
 }: InnerStackProps) {

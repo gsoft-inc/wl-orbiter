@@ -26,7 +26,7 @@ export function createIconButtonTestSuite(element, stories) {
             </Stack>
         )
         .add("states", () =>
-            <Inline gap={12}>
+            <Inline gap={800}>
                 <Stack>
                     <Inline alignY="end">
                         <IconButton active size="2xs" aria-label="Add" element={element}><AddMajorIcon /></IconButton>

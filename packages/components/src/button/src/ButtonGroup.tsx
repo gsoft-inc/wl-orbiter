@@ -20,12 +20,12 @@ export interface InnerButtonGroupProps extends Omit<AbstractGroupProps<typeof De
 /* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 const Gap = {
     "horizontal": {
-        "sm": 3,
-        "md": 4
+        "sm": 80,
+        "md": 160
     },
     "vertical": {
-        "sm": 2,
-        "md": 3
+        "sm": 80,
+        "md": 160
     }
 } as const;
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */

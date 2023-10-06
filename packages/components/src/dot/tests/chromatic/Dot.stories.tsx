@@ -13,14 +13,14 @@ type DotStory = ComponentStoryObj<typeof Dot>;
 export const Default: DotStory = {
     storyName: "default",
     render: () => (
-        <Dot color="alias-hard-break" />
+        <Dot color="neutral-text-weakest" />
     )
 };
 
 export const Label: DotStory = {
     storyName: "label",
     render: () => (
-        <Dot color="alias-hard-break">Habitable</Dot>
+        <Dot color="neutral-text-weakest">Habitable</Dot>
     )
 };
 
@@ -33,9 +33,9 @@ export const Color: DotStory = {
             <Dot color="#a4b5dd"></Dot>
             <Dot color="rgb(128,0,0)"></Dot>
             <Dot color="rgb(128,0,0,0.5)"></Dot>
-            <Dot color="alias-accent"></Dot>
+            <Dot color="primary-text"></Dot>
             <Dot color="red"></Dot>
-            <Dot color="--o-ui-neutral-6"></Dot>
+            <Dot color="--hop-rock-600"></Dot>
         </Stack>
     )
 };
@@ -45,10 +45,10 @@ export const Zoom: DotStory = {
     render: () => (
         <Inline>
             <Div className="zoom-in">
-                <Dot color="alias-hard-break" />
+                <Dot color="neutral-text-weakest" />
             </Div>
             <Div className="zoom-out">
-                <Dot color="alias-hard-break" />
+                <Dot color="neutral-text-weakest" />
             </Div>
         </Inline>
     )
@@ -59,14 +59,14 @@ export const Styling: DotStory = {
     render: () => (
         <Stack>
             <Inline>
-                <Dot border="warning-7" color="alias-hard-break"></Dot>
-                <Dot className="border-red" color="alias-hard-break"></Dot>
-                <Dot style={{ border: "1px solid red" }} color="alias-hard-break"></Dot>
+                <Dot border="warning-border" color="neutral-text-weakest"></Dot>
+                <Dot className="border-red" color="neutral-text-weakest"></Dot>
+                <Dot style={{ border: "1px solid red" }} color="neutral-text-weakest"></Dot>
             </Inline>
             <Inline>
-                <Dot border="warning-7" color="alias-hard-break">Habitable</Dot>
-                <Dot className="border-red" color="alias-hard-break">Habitable</Dot>
-                <Dot style={{ border: "1px solid red" }} color="alias-hard-break">Habitable</Dot>
+                <Dot border="warning-border" color="neutral-text-weakest">Habitable</Dot>
+                <Dot className="border-red" color="neutral-text-weakest">Habitable</Dot>
+                <Dot style={{ border: "1px solid red" }} color="neutral-text-weakest">Habitable</Dot>
             </Inline>
         </Stack>
     )

@@ -16,7 +16,7 @@ export function withCenteredCanvas(story, context) {
             top="0"
             left="0"
             right="0"
-            marginTop={10}
+            marginTop="3.5rem"
             alignItems="center"
         >
             <Div

@@ -30,8 +30,8 @@ export const InheritColor: SpinnerStory = {
     storyName: "inherit color",
     render: () => (
         <Inline alignY="end" backgroundColor="alias-accent">
-            <Spinner color="alias-static-white" aria-label="Crawling in progress" />
-            <Spinner color="alias-static-white">Crawling in progress</Spinner>
+            <Spinner color="#FFFFFF" aria-label="Crawling in progress" />
+            <Spinner color="#FFFFFF">Crawling in progress</Spinner>
         </Inline>
     )
 };
@@ -79,7 +79,7 @@ export const Label: SpinnerStory = {
 export const Overflow: SpinnerStory = {
     storyName: "overflow",
     render: () => (
-        <Stack width={10}>
+        <Stack width="4.5rem">
             <Spinner size="sm">Crawling in progress</Spinner>
             <Spinner>Crawling in progress</Spinner>
             <Spinner size="lg">Crawling in progress</Spinner>

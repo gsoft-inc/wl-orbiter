@@ -14,7 +14,7 @@ export function ExperimentalMessage({ noDoc, noTests, noVisualTesting, noFinalDe
     const hasDetails = [noDoc, noTests, noVisualTesting, noFinalDesign, noMobileSupport].some(validation => validation);
 
     return (
-        <Message variant="negative" fontSize={4} {...rest}>
+        <Message variant="negative" fontSize={160} {...rest}>
             <Content>
                 <Heading>Experimental</Heading>
                 <Text size="lg">

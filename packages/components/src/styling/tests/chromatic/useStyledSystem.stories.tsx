@@ -21,8 +21,8 @@ export const EverySingleBreakpoints: UseStyledSystemStory = {
     render: () => (
         <Box
             backgroundColor={{ base: "purple-5", xs: "green-5", sm: "alert-5", md: "purple-5", lg: "neutral-5", xl: "green-5" }}
-            color="alias-static-white"
-            width={12}
+            color="#FFFFFF"
+            width={960}
         >
             Space X
         </Box>
@@ -34,8 +34,8 @@ export const MatchHigherBreakpoint: UseStyledSystemStory = {
     render: () => (
         <Box
             backgroundColor={{ base: "purple-3", sm: "alert-3" }}
-            color="alias-static-white"
-            width={12}
+            color="#FFFFFF"
+            width={960}
         >
         Space X
         </Box>
@@ -47,8 +47,8 @@ export const MatchBase: UseStyledSystemStory = {
     render: () => (
         <Box
             backgroundColor={{ base: "purple-8" }}
-            color="alias-static-white"
-            width={12}
+            color="#FFFFFF"
+            width={960}
         >
         Space X
         </Box>

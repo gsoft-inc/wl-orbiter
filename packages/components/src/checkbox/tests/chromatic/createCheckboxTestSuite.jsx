@@ -220,10 +220,10 @@ export function createCheckboxTestSuite(element, stories) {
         )
         .add("overflow", () =>
             <Stack>
-                <Flex alignItems="end" maxWidth={5}>
+                <Flex alignItems="end" maxwidth={320}>
                     <Checkbox element={element}>PA-99-N2 event and possible exoplanet in galaxy</Checkbox>
                 </Flex>
-                <Flex alignItems="end" maxWidth={5}>
+                <Flex alignItems="end" maxwidth={320}>
                     <Checkbox element={element}>
                         <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                         <IconList>
@@ -231,7 +231,7 @@ export function createCheckboxTestSuite(element, stories) {
                         </IconList>
                     </Checkbox>
                 </Flex>
-                <Flex alignItems="end" maxWidth={5}>
+                <Flex alignItems="end" maxwidth={320}>
                     <Checkbox element={element}>
                         <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                         <Counter>60</Counter>

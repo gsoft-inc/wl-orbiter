@@ -98,7 +98,7 @@ export const Reverse: CounterStory = {
 export const Color: CounterStory = {
     storyName: "color",
     render: () => (
-        <Inline color="warning-7" backgroundColor="warning-1" alignY="center">
+        <Inline color="sunken-treasure-700" backgroundColor="koi-25" alignY="center">
             <Counter color="inherit">15</Counter>
             <Counter variant="divider" color="inherit">15</Counter>
         </Inline>
@@ -151,12 +151,12 @@ export const Styling: CounterStory = {
     render: () => (
         <Stack>
             <Inline alignY="center">
-                <Counter border="warning-7">15</Counter>
+                <Counter border="warning-border">15</Counter>
                 <Counter className="bg-red">15</Counter>
                 <Counter style={{ backgroundColor: "red" }}>15</Counter>
             </Inline>
             <Inline alignY="center">
-                <Counter border="warning-7" variant="divider">15</Counter>
+                <Counter border="warning-border" variant="divider">15</Counter>
                 <Counter className="bg-red" variant="divider">15</Counter>
                 <Counter style={{ backgroundColor: "red" }} variant="divider">15</Counter>
             </Inline>

@@ -109,7 +109,7 @@ export function InnerAvatarGroup({
                 {
                     as,
                     className: "o-ui-avatar-group",
-                    gap: 1 as const,
+                    gap: 40 as const,
                     orientation: "horizontal" as const,
                     ref: forwardedRef,
                     wrap: wrapValue

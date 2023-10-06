@@ -122,14 +122,14 @@ export const Zoom: IllustratedMessageStory = {
     render: () => (
         <Stack>
             <Div className="zoom-in">
-                <IllustratedMessage border="warning-7" width="700px" height="200px" orientation="horizontal">
+                <IllustratedMessage border="warning-border" width="700px" height="200px" orientation="horizontal">
                     <Image src={Nasa} alt="Nasa" />
                     <Heading>Can't find "Saturn"</Heading>
                     <Content>Try searching for something else.</Content>
                 </IllustratedMessage>
             </Div>
             <Div className="zoom-out">
-                <IllustratedMessage border="warning-7" width="700px" height="200px" orientation="horizontal">
+                <IllustratedMessage border="warning-border" width="700px" height="200px" orientation="horizontal">
                     <Image src={Nasa} alt="Nasa" />
                     <Heading>Can't find "Saturn"</Heading>
                     <Content>Try searching for something else.</Content>
@@ -143,7 +143,7 @@ export const Styling: IllustratedMessageStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <IllustratedMessage border="warning-7" width="700px" height="200px" orientation="horizontal">
+            <IllustratedMessage border="warning-border" width="700px" height="200px" orientation="horizontal">
                 <Image src={Nasa} alt="Nasa" />
                 <Heading>Can't find "Saturn"</Heading>
                 <Content>Try searching for something else.</Content>

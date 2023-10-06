@@ -44,7 +44,7 @@ export const FieldLabel: FieldStory = {
 export const Message: FieldStory = {
     storyName: "message",
     render: () => (
-        <Stack gap={10}>
+        <Stack gap={480}>
             <Field>
                 <TextInput placeholder="Where to?" />
                 <HelpMessage>Must be a planet in earth solar system.</HelpMessage>
@@ -293,7 +293,7 @@ export const Styling: FieldStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Field border="warning-7">
+            <Field border="warning-border">
                 <Label>Launch date</Label>
                 <TextInput />
             </Field>

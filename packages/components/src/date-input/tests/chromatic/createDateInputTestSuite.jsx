@@ -79,7 +79,7 @@ export function createDateInputTestSuite(element, stories) {
         )
         .add("styling", () =>
             <Stack>
-                <DateInput border="alert-6" element={element} />
+                <DateInput border="amanita-600" element={element} />
                 <DateInput className="border-red" element={element} />
                 <DateInput style={{ border: "1px solid red" }} element={element} />
                 <DateInput wrapperProps={{ className: "border-red" }} element={element} />

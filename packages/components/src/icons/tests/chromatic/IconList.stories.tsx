@@ -30,7 +30,7 @@ export const Styling: IconListStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Icons border="warning-7" />
+            <Icons border="warning-border" />
             <Icons className="border-red" />
             <Icons style={{ border: "1px solid red" }} />
         </Stack>

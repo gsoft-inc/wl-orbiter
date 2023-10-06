@@ -30,7 +30,7 @@ export const Default: TextStory = {
 export const Inherit: TextStory = {
     storyName: "inherit",
     render: () => (
-        <Div fontSize={1}>
+        <Div fontSize="0.625rem">
             <Text size="inherit">There are no passengers on spaceship earth.</Text>
         </Div>
     )
@@ -40,7 +40,7 @@ export const Styling: TextStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Text border="warning-7">There are no passengers on spaceship earth.</Text>
+            <Text border="warning-border">There are no passengers on spaceship earth.</Text>
             <Text className="bg-red">There are no passengers on spaceship earth.</Text>
             <Text style={{ backgroundColor: "red" }}>There are no passengers on spaceship earth.</Text>
         </Stack>

@@ -335,7 +335,7 @@ export const ItemWithDescriptionOverflowWhenFluid: ListboxStory = {
     storyName: "item with description overflow when fluid",
     render: () => (
         <Inline>
-            <Listbox fluid width={15} aria-label="Planets">
+            <Listbox fluid width="16rem" aria-label="Planets">
                 <Item key="earth">
                     <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                     <Text slot="description">Home sweet home!</Text>
@@ -350,7 +350,7 @@ export const ItemWithDescriptionOverflowWhenFluid: ListboxStory = {
                 <Item key="saturn">Saturn</Item>
                 <Item key="uranus">Uranus</Item>
             </Listbox>
-            <Listbox defaultSelectedKeys={["earth", "mars"]} selectionMode="multiple" fluid width={15} aria-label="Planets">
+            <Listbox defaultSelectedKeys={["earth", "mars"]} selectionMode="multiple" fluid width="16rem" aria-label="Planets">
                 <Item key="earth">
                     <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                     <Text slot="description">Home sweet home!</Text>
@@ -648,7 +648,7 @@ export const ScrollingMixMmatch: ListboxStory = {
 export const ScrollingWithCustomStyleHeight: ListboxStory = {
     storyName: "scrolling with custom style height",
     render: () => (
-        <Listbox height={12} aria-label="Planets">
+        <Listbox height={960} aria-label="Planets">
             <Item key="ceres">Ceres</Item>
             <Item key="charon">Charon</Item>
             <Item key="earth">Earth</Item>
@@ -670,7 +670,7 @@ export const ScrollingWithCustomStyleHeight: ListboxStory = {
 export const CustomMenuWidth: ListboxStory = {
     storyName: "custom menu width",
     render: () => (
-        <Listbox width={16} aria-label="Planets">
+        <Listbox width="20rem" aria-label="Planets">
             <Item key="earth">Earth</Item>
             <Item key="mars">Mars</Item>
             <Item key="saturn">Saturn</Item>
@@ -706,9 +706,9 @@ export const Styling: ListboxStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Listbox border="warning-7" aria-label="Planets">
+            <Listbox border="warning-border" aria-label="Planets">
                 <Item key="earth">Earth</Item>
-                <Item border="warning-7" key="jupiter">Jupiter</Item>
+                <Item border="warning-border" key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Listbox>
             <Listbox className="border-red" aria-label="Planets">

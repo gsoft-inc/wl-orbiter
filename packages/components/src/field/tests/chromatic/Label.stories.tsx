@@ -38,7 +38,7 @@ export const Styling: GroupFieldStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Label border="warning-7">Where to?</Label>
+            <Label border="warning-border">Where to?</Label>
             <Label className="bg-red">Where to?</Label>
             <Label style={{ background: "red" }}>Where to?</Label>
         </Inline>

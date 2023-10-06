@@ -1,4 +1,4 @@
-import { BorderRadiusPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, FontSizePrefix, FontWeightPrefix, LineHeightPrefix, normalizeVariable } from "./theme-vars-utils";
+import { BorderRadiusPrefix, BorderRadiusSemanticPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, FontSizePrefix, FontWeightPrefix, LineHeightPrefix, normalizeVariable } from "./theme-vars-utils";
 import { Breakpoint } from "../BreakpointProvider";
 import { Globals, Property } from "csstype";
 import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue";
@@ -38,6 +38,69 @@ const DimensionsScale = [
 ] as const;
 
 const OrbiterColors = [
+    "samoyed",
+    "rock-900",
+    "rock-800",
+    "rock-700",
+    "rock-600",
+    "rock-500",
+    "rock-400",
+    "rock-300",
+    "rock-200",
+    "rock-100",
+    "rock-75",
+    "rock-50",
+    "rock-25",
+    "rock-20",
+    "abyss",
+    "moss-900",
+    "moss-800",
+    "moss-700",
+    "moss-600",
+    "moss-500",
+    "moss-400",
+    "moss-300",
+    "moss-200",
+    "moss-100",
+    "moss-75",
+    "moss-50",
+    "moss-25",
+    "amanita-900",
+    "amanita-800",
+    "amanita-700",
+    "amanita-600",
+    "amanita-500",
+    "amanita-400",
+    "amanita-300",
+    "amanita-200",
+    "amanita-100",
+    "amanita-75",
+    "amanita-50",
+    "amanita-25",
+    "koi-900",
+    "koi-800",
+    "koi-700",
+    "koi-600",
+    "koi-500",
+    "koi-400",
+    "koi-300",
+    "koi-200",
+    "koi-100",
+    "koi-75",
+    "koi-50",
+    "koi-25",
+    "sunken-treasure-900",
+    "sunken-treasure-800",
+    "sunken-treasure-700",
+    "sunken-treasure-600",
+    "sunken-treasure-500",
+    "sunken-treasure-400",
+    "sunken-treasure-300",
+    "sunken-treasure-200",
+    "sunken-treasure-100",
+    "sunken-treasure-75",
+    "sunken-treasure-50",
+    "sunken-treasure-25",
     "toad-200",
     "toad-100",
     "toad-75",
@@ -368,6 +431,15 @@ const BorderRadiusScale = [
     9999
 ] as const;
 
+const BorderRadiusAliases = [
+    // BorderRadiusSemanticPrefix
+    "rounded-sm",
+    "rounded-md",
+    "rounded-lg",
+    "pill",
+    "circle"
+];
+
 const BoxShadowScale = [
     "none",
     "sm",
@@ -434,26 +506,37 @@ function composePrefixes(...rest) {
 }
 
 function createPrefixedValueTemplate(prefix: string) {
-    return (value: string | number) => `var(${normalizeVariable(value, prefix)})`;
+    return (value: string | number) => `var(${normalizeVariable(value, { prefix })})`;
 }
 
 export const SpacingMapping = createValuesMapping(DimensionsScale, createPrefixedValueTemplate(DimensionsPrefix));
 
 export const SizingMapping = createValuesMapping(DimensionsScale, createPrefixedValueTemplate(DimensionsPrefix));
 
-export const ColorMapping = createValuesMapping(OrbiterColors, createPrefixedValueTemplate(ColorPrefix));
+export const ColorMapping = test(OrbiterColors, createPrefixedValueTemplate(ColorPrefix));
+
+
+function test(values: any, template: any) {
+    console.log("AA", values, template);
+    console.log("AA2", createValuesMapping(values, template));
+
+    return createValuesMapping(values, template);
+}
 
 export const BackgroundColorMapping = {
-    ...createValuesMapping(BackgroundColorAliases, createPrefixedValueTemplate(composePrefixes(ColorPrefix, "bg"))),
+    ...createValuesMapping(BackgroundColorAliases, createPrefixedValueTemplate(ColorPrefix)),
     ...ColorMapping
 };
 
 export const BorderMapping = {
-    ...createValuesMapping(BorderColorAliases, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, composePrefixes(ColorPrefix, "b"))})`),
-    ...createValuesMapping(OrbiterColors, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, ColorPrefix)})`)
+    ...createValuesMapping(BorderColorAliases, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, { prefix: composePrefixes(ColorPrefix, "b") })})`),
+    ...createValuesMapping(OrbiterColors, value => `${BorderWidthAndStyle} var(${normalizeVariable(value, { prefix:ColorPrefix })})`)
 };
 
-export const BorderRadiusMapping = createValuesMapping(BorderRadiusScale, createPrefixedValueTemplate(BorderRadiusPrefix));
+export const BorderRadiusMapping = {
+    ...createValuesMapping(BorderRadiusScale, createPrefixedValueTemplate(BorderRadiusPrefix)),
+    ...createValuesMapping(BorderRadiusAliases, createPrefixedValueTemplate(BorderRadiusSemanticPrefix))
+};
 
 export const BoxShadowMapping = {
     ...createValuesMapping(BoxShadowScale, createPrefixedValueTemplate(BoxShadowPrefix)),
@@ -462,7 +545,7 @@ export const BoxShadowMapping = {
 
 export const FontSizeMapping = createValuesMapping(FontSizeScale, createPrefixedValueTemplate(FontSizePrefix));
 
-const fontVariationSettingsValueTemplate = (value: string | number) => `'wght' var(${normalizeVariable(value, FontWeightPrefix)})`;
+const fontVariationSettingsValueTemplate = (value: string | number) => `'wght' var(${normalizeVariable(value, { prefix: FontWeightPrefix })})`;
 
 export const FontWeightMapping = createValuesMapping(FontWeightScale, fontVariationSettingsValueTemplate);
 
@@ -1275,7 +1358,7 @@ function createPseudoHandler<TValue extends string | number>(pseudoClassName, ps
 }
 
 // Custom handler for borders to allow the following syntax:
-// - border="warning-10" -> style="1px solid var(--o-ui-warning-10)"
+// - border="sunken-treasure-900" -> style="1px solid var(--o-ui-warning-10)"
 // - border="hsla(223, 12%, 87%, 1)" -> style="1px solid hsla(223, 12%, 87%, 1)"
 function createBorderHandler<TValue extends string>(systemValues: Record<TValue, string>): PropHandler<TValue> {
     return (name, value, context) => {

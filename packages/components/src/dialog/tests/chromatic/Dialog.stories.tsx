@@ -181,7 +181,7 @@ export const DialogIllustration: DialogStory = {
     storyName: "illustration",
     render: () => (
         <Dialog>
-            <Illustration color="warning-1">
+            <Illustration color="sunken-treasure-100">
                 <Image src={Nasa} alt="Nasa" />
             </Illustration>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -198,7 +198,7 @@ export const AllSections: DialogStory = {
     storyName: "all sections",
     render: () => (
         <Dialog>
-            <Illustration color="warning-1">
+            <Illustration color="sunken-treasure-100">
                 <Image src={Nasa} alt="Nasa" />
             </Illustration>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -460,7 +460,7 @@ export const WrapperStyle: DialogStory = {
 export const StyledSystem: DialogStory = {
     storyName: "styled system",
     render: () => (
-        <Dialog border="warning-7">
+        <Dialog border="warning-border">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Content>
                 <Paragraph>This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures led to the radio telescope's collapse. The 57-year old structure was once the largest radio dish telescope in the world, and researchers have used its capabilities to make significant breakthroughs in astronomy. The Arecibo Observatory also served as the dramatic backdrop to films like "Contact" and "Goldeneye."</Paragraph>

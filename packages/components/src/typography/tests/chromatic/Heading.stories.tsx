@@ -25,7 +25,7 @@ export const Styling: HeadingStory = {
     storyName: "styling",
     render: () => (
         <>
-            <Heading border="warning-7">I see Earth!<br /> It is so beautiful!</Heading>
+            <Heading border="warning-border">I see Earth!<br /> It is so beautiful!</Heading>
             <Heading className="border-red">I see Earth!<br /> It is so beautiful!</Heading>
             <Heading style={{ border: "1px solid red" }}>I see Earth!<br /> It is so beautiful!</Heading>
         </>

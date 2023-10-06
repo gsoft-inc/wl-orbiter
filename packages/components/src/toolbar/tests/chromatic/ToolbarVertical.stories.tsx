@@ -42,7 +42,7 @@ export const Default: ToolbarStory = {
 export const Align: ToolbarStory = {
     storyName: "align",
     render: () => (
-        <Inline gap={13}>
+        <Inline gap={800}>
             <Toolbar alignX="start" orientation="vertical">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
@@ -92,8 +92,8 @@ export const Align: ToolbarStory = {
 export const VerticalAlign: ToolbarStory = {
     storyName: "vertical align",
     render: () => (
-        <Inline gap={13}>
-            <Toolbar alignY="start" orientation="vertical" height={16}>
+        <Inline gap={800}>
+            <Toolbar alignY="start" orientation="vertical" height="20rem">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -102,7 +102,7 @@ export const VerticalAlign: ToolbarStory = {
                 <TextInput aria-label="Label" />
                 <ToggleButton>Activate</ToggleButton>
             </Toolbar>
-            <Toolbar alignY="end" orientation="vertical" height={16}>
+            <Toolbar alignY="end" orientation="vertical" height="20rem">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -111,7 +111,7 @@ export const VerticalAlign: ToolbarStory = {
                 <TextInput aria-label="Label" />
                 <ToggleButton>Activate</ToggleButton>
             </Toolbar>
-            <Toolbar alignY="center" orientation="vertical" height={16}>
+            <Toolbar alignY="center" orientation="vertical" height="20rem">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>

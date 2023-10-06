@@ -39,14 +39,14 @@ stories()
         <Stack>
             <Inline>
                 <Tile width="500px" orientation="vertical">
-                    <Illustration color="purple-2">
+                    <Illustration color="sapphire-200">
                         <Image src={Nasa} width="100px" alt="Nasa Logo" />
                     </Illustration>
                     <Heading>Fuel</Heading>
                     <Content>Fuel configuration and level</Content>
                 </Tile>
                 <Tile width="500px" orientation="vertical">
-                    <Illustration color="purple-2">
+                    <Illustration color="sapphire-200">
                         <Image src={Nasa} width="100px" alt="Nasa Logo" />
                     </Illustration>
                     <Heading>Fuel</Heading>
@@ -55,14 +55,14 @@ stories()
             </Inline>
             <Inline>
                 <Tile width="500px" orientation="horizontal">
-                    <Illustration color="purple-2">
+                    <Illustration color="sapphire-200">
                         <Image src={Nasa} width="100px" alt="Nasa Logo" />
                     </Illustration>
                     <Heading>Fuel</Heading>
                     <Content>Fuel configuration and level</Content>
                 </Tile>
                 <Tile width="500px" orientation="horizontal">
-                    <Illustration color="purple-2">
+                    <Illustration color="sapphire-200">
                         <Image src={Nasa} width="100px" alt="Nasa Logo" />
                     </Illustration>
                     <Heading>Fuel</Heading>
