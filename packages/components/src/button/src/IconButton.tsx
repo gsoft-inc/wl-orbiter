@@ -130,7 +130,6 @@ export function InnerIconButton(props: InnerIconButtonProps) {
         <Spinner
             aria-label="Loading..."
             className="o-ui-button-spinner"
-            color={variant === "primary" ? "alias-static-white" : undefined}
             role="presentation"
             size={spinnerSize(sizeValue)}
         />
