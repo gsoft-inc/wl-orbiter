@@ -138,6 +138,42 @@ a.o-ui-button {
     color: var(--hop-primary-text-active);
 }
 
+/* UPSELL */
+.o-ui-button-upsell {
+    background-color: var(--hop-upsell-surface);
+    color: var(--hop-upsell-text);
+}
+
+/* UPSELL | HOVER */
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):hover,
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
+    background-color: var(--hop-upsell-surface-hover);
+    outline: 1px solid var(--hop-upsell-border-hover);
+    color: var(--hop-upsell-text-hover);
+}
+
+/* UPSELL | FOCUS */
+.o-ui-button-upsell:not([disabled]):focus-visible,
+.o-ui-button-upsell:not([disabled]).o-ui-button-focus {
+    background-color: var(--hop-upsell-surface-hover);
+}
+
+/* UPSELL | ACTIVE */
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):active,
+.o-ui-button-upsell:not([disabled]).o-ui-button-active {
+    background-color: var(--hop-upsell-surface-active);
+    outline: 1px solid var(--hop-upsell-border-active);
+    color: var(--hop-upsell-text-active);
+}
+
+/* UPSELL | HOVER | ACTIVE */
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):hover:active,
+.o-ui-button-upsell:not([disabled]).o-ui-button-hover.o-ui-button-active {
+    background-color: var(--hop-upsell-surface-active);
+    outline: 1px solid var(--hop-upsell-border-active);
+    color: var(--hop-upsell-text-active);
+}
+
 /* SECONDARY */
 .o-ui-button-secondary {
     border: 1px solid var(--hop-neutral-border-strong);
