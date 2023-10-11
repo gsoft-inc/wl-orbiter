@@ -26,7 +26,7 @@ export interface InnerCardProps extends SlotProps, InternalProps, StyledComponen
     /**
      * The style to use.
      */
-    variant?: "elevated" | "outline";
+    variant?: "elevated" | "leveled";
 }
 
 export function InnerCard({
@@ -64,7 +64,7 @@ export function InnerCard({
         heading: {
             as: "span",
             className: "o-ui-card-heading",
-            size: "sm"
+            size: "md"
         },
         illustration: {
             className: "o-ui-card-illustration",
