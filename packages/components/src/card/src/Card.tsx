@@ -26,7 +26,7 @@ export interface InnerCardProps extends SlotProps, InternalProps, StyledComponen
     /**
      * The style to use.
      */
-    variant?: "elevated" | "leveled";
+    variant?: "elevated" | "outline";
 }
 
 export function InnerCard({
@@ -36,7 +36,7 @@ export function InnerCard({
     forwardedRef,
     orientation = "vertical",
     size,
-    variant = "elevated",
+    variant = "outline",
     ...rest
 }: InnerCardProps) {
     const fluidValue = useResponsiveValue(fluid);

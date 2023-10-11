@@ -50,33 +50,33 @@ export function createTestSuite(element, stories) {
                 </Card>
             </Stack>
         )
-        .add("leveled", () =>
+        .add("variant", () =>
             <Stack>
                 <Inline>
-                    <Card variant="leveled" size="xs" element={element}>
+                    <Card variant="elevated" size="xs" element={element}>
                         <Heading>Nasa</Heading>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
-                    <Card variant="leveled" size="sm" element={element}>
+                    <Card variant="elevated" size="sm" element={element}>
                         <Heading>Nasa</Heading>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
-                    <Card variant="leveled" element={element}>
+                    <Card variant="elevated" element={element}>
                         <Heading>Nasa</Heading>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
                 </Inline>
                 <Inline>
-                    <Card variant="leveled" size="lg" element={element}>
+                    <Card variant="elevated" size="lg" element={element}>
                         <Heading>Nasa</Heading>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
-                    <Card variant="leveled" size="xl" element={element}>
+                    <Card variant="elevated" size="xl" element={element}>
                         <Heading>Nasa</Heading>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
                 </Inline>
-                <Card variant="leveled" fluid element={element}>
+                <Card variant="elevated" fluid element={element}>
                     <Heading>Nasa</Heading>
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>

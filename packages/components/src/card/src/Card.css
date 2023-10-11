@@ -4,12 +4,12 @@
 }
 
 /* VARIANT */
-.o-ui-card-elevated {
+.o-ui-card-outline {
     background-color: var(--hop-neutral-surface);
     border: 1px solid var(--hop-neutral-border-weak);
 }
 
-.o-ui-card-leveled {
+.o-ui-card-elevated {
     background-color: var(--hop-neutral-surface-weakest);
 }
 
