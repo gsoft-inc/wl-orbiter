@@ -154,7 +154,6 @@ export function InnerButton(props: InnerButtonProps) {
         <Spinner
             aria-label="Loading..."
             className="o-ui-button-spinner"
-            color={variant === "primary" ? "samoyed" : undefined}
             role="presentation"
             size={spinnerSize(sizeValue)}
         />

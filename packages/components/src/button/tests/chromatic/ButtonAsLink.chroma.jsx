@@ -15,6 +15,8 @@ createButtonTestSuite(<ButtonAsLink variant="secondary" />, stories("/secondary"
 
 createButtonTestSuite(<ButtonAsLink variant="tertiary" />, stories("/tertiary"));
 
+createButtonTestSuite(<ButtonAsLink variant="upsell" />, stories("/upsell"));
+
 createButtonTestSuite(<ButtonAsLink variant="negative" />, stories("/negative"));
 
 stories()

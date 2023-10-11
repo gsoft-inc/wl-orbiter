@@ -22,6 +22,7 @@ createButtonTestSuite(<Button variant="secondary" />, stories("/secondary"));
 createButtonTestSuite(<WarningBackground button={<Button variant="secondary" inherit />} />, stories("/secondary (inherit)"));
 createButtonTestSuite(<Button variant="tertiary" />, stories("/tertiary"));
 createButtonTestSuite(<WarningBackground button={<Button variant="tertiary" inherit />} />, stories("/tertiary (inherit)"));
+createButtonTestSuite(<Button variant="upsell" />, stories("/upsell"));
 createButtonTestSuite(<Button variant="negative" />, stories("/negative"));
 
 stories()
