@@ -16,6 +16,8 @@ createIconButtonTestSuite(<IconButton variant="secondary" />, stories("/secondar
 
 createIconButtonTestSuite(<IconButton variant="tertiary" />, stories("/tertiary"));
 
+createIconButtonTestSuite(<IconButton variant="upsell" />, stories("/upsell"));
+
 createIconButtonTestSuite(<IconButton variant="negative" />, stories("/negative"));
 
 stories()
