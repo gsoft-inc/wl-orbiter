@@ -106,7 +106,7 @@ export const Styling: GroupFieldStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <GroupField border="warning-border">
+            <GroupField border="warning">
                 <RadioGroup>
                     <Radio value="1">1</Radio>
                     <Radio value="2">2</Radio>

@@ -273,7 +273,7 @@ export const FunctionalContent: MenuTriggerStory = {
 export const StyledSystem: MenuTriggerStory = {
     storyName: "styled system",
     render: () => (
-        <MenuTrigger border="warning-border" defaultOpen>
+        <MenuTrigger border="warning" defaultOpen>
             <Button variant="secondary">Trigger</Button>
             <Menu>
                 <Item key="earth">Earth</Item>

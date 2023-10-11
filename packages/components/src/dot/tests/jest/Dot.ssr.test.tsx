@@ -10,7 +10,7 @@ test("can render on the server", () => {
 
     const renderOnServer = () =>
         renderToString(
-            <Dot color="neutral-text-weakest" />
+            <Dot color="neutral-weakest" />
         );
 
     expect(renderOnServer).not.toThrow();

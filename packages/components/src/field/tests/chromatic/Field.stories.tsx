@@ -293,7 +293,7 @@ export const Styling: FieldStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Field border="warning-border">
+            <Field border="warning">
                 <Label>Launch date</Label>
                 <TextInput />
             </Field>

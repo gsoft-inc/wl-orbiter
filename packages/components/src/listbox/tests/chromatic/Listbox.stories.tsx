@@ -706,9 +706,9 @@ export const Styling: ListboxStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Listbox border="warning-border" aria-label="Planets">
+            <Listbox border="warning" aria-label="Planets">
                 <Item key="earth">Earth</Item>
-                <Item border="warning-border" key="jupiter">Jupiter</Item>
+                <Item border="warning" key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Listbox>
             <Listbox className="border-red" aria-label="Planets">

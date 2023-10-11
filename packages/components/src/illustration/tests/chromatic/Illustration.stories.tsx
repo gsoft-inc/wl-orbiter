@@ -101,12 +101,12 @@ export const Zoom: IllustrationStory = {
     render: () => (
         <Stack>
             <Div className="zoom-in">
-                <Illustration border="warning-border" width="700px" height="200px">
+                <Illustration border="warning" width="700px" height="200px">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
             </Div>
             <Div className="zoom-out">
-                <Illustration border="warning-border" width="700px" height="200px">
+                <Illustration border="warning" width="700px" height="200px">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
             </Div>
@@ -118,7 +118,7 @@ export const Styling: IllustrationStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Illustration border="warning-border" width="700px" height="200px">
+            <Illustration border="warning" width="700px" height="200px">
                 <Image src={Nasa} alt="Nasa" />
             </Illustration>
             <Illustration className="border-red" width="700px" height="200px">

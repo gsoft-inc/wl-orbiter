@@ -85,7 +85,7 @@ export function createTextLinkTestSuite(element, stories) {
             </Inline>
         )
         .add("inherit color", () =>
-            <Inline alignY="end" color="primary-text">
+            <Inline alignY="end" color="primary">
                 <TextLink color="inherit" size="sm" href="#" element={element}>Flight details</TextLink>
                 <TextLink color="inherit" href="#" element={element}>Flight details</TextLink>
             </Inline>

@@ -210,7 +210,7 @@ export const Styling: CheckboxGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <CheckboxGroup border="warning-border">
+            <CheckboxGroup border="warning">
                 <Checkbox value="1">1</Checkbox>
                 <Checkbox value="2">2</Checkbox>
                 <Checkbox value="3">3</Checkbox>

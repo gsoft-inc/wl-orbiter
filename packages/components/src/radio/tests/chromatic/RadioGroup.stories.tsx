@@ -207,7 +207,7 @@ export const Styling: RadioGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <RadioGroup border="warning-border">
+            <RadioGroup border="warning">
                 <Radio value="1">1</Radio>
                 <Radio value="2">2</Radio>
                 <Radio value="3">3</Radio>

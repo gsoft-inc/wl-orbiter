@@ -271,7 +271,7 @@ export const PositionLeftEnd: TooltipStory = {
 export const TooltipTriggerStyledSystem: TooltipStory = {
     storyName: "tooltip trigger styled system",
     render: () => (
-        <TooltipTrigger border="warning-border" open>
+        <TooltipTrigger border="warning" open>
             <Button variant="secondary">Trigger</Button>
             <Tooltip>Man must rise above the Earth.</Tooltip>
         </TooltipTrigger>
@@ -301,7 +301,7 @@ export const TooltipTriggerStyle: TooltipStory = {
 export const TooltipStyledSystem: TooltipStory = {
     storyName: "tooltip styled system",
     render: () => (
-        <TooltipTrigger border="warning-border" open>
+        <TooltipTrigger border="warning" open>
             <Button variant="secondary">Trigger</Button>
             <Tooltip className="border-red">Man must rise above the Earth.</Tooltip>
         </TooltipTrigger>

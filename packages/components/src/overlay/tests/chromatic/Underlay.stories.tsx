@@ -24,7 +24,7 @@ export const Default: UnderlayStory = {
 export const StyledSystem: UnderlayStory = {
     storyName: "styled system",
     render: () => (
-        <Underlay border="warning-border" />
+        <Underlay border="warning" />
     )
 };
 

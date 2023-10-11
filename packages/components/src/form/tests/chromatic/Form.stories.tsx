@@ -212,7 +212,7 @@ export const Styling: FormStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Form border="warning-border">
+            <Form border="warning">
                 <Field>
                     <TextInput placeholder="Where to?" />
                 </Field>

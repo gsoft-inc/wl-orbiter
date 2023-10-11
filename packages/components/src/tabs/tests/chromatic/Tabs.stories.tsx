@@ -667,7 +667,7 @@ export const Styling: TabsStory = {
     render: () => (
         <Stack>
             <Inline>
-                <Tabs border="warning-border" aria-label="Planets">
+                <Tabs border="warning" aria-label="Planets">
                     <Item>
                         <Header className="border-red">Mars</Header>
                         <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -690,7 +690,7 @@ export const Styling: TabsStory = {
                 <Tabs aria-label="Planets">
                     <Item>
                         <Header>Mars</Header>
-                        <Content border="warning-border">Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
+                        <Content border="warning">Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
                     </Item>
                 </Tabs>
                 <Tabs aria-label="Planets">

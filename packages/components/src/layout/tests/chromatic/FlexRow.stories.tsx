@@ -181,7 +181,7 @@ export const Styling: FlexStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Flex border="warning-border" direction="row">
+            <Flex border="warning" direction="row">
                 <Div backgroundColor="sapphire-500">Alpha</Div>
                 <Div backgroundColor="sapphire-500">Bravo</Div>
                 <Div backgroundColor="sapphire-500">Charlie</Div>

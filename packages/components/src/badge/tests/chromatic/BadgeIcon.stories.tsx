@@ -44,7 +44,7 @@ export const Styling: BadgeStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <SquareBadge border="warning-border" variant="icon">
+            <SquareBadge border="warning" variant="icon">
                 <PlaceholderMajorIcon />
             </SquareBadge>
             <SquareBadge className="border-red" variant="icon">

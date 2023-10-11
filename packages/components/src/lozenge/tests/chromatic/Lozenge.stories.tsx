@@ -218,7 +218,7 @@ export const Styling: LozengeStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Lozenge border="warning-border">New</Lozenge>
+            <Lozenge border="warning">New</Lozenge>
             <Lozenge className="border-red">New</Lozenge>
             <Lozenge
                 style={{

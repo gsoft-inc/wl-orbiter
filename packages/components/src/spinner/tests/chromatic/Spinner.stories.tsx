@@ -29,7 +29,7 @@ export const Default: SpinnerStory = {
 export const InheritColor: SpinnerStory = {
     storyName: "inherit color",
     render: () => (
-        <Inline alignY="end" backgroundColor="primary-surface">
+        <Inline alignY="end" backgroundColor="primary">
             <Spinner color="#FFFFFF" aria-label="Crawling in progress" />
             <Spinner color="#FFFFFF">Crawling in progress</Spinner>
         </Inline>

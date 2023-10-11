@@ -506,7 +506,7 @@ export const Styling: AutocompleteStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Autocomplete border="warning-border" placeholder="Select a planet" aria-label="Planets">
+            <Autocomplete border="warning" placeholder="Select a planet" aria-label="Planets">
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>

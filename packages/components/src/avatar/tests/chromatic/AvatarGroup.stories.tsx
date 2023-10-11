@@ -215,7 +215,7 @@ export const Styling: AvatarGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <AvatarGroup border="warning-border">
+            <AvatarGroup border="warning">
                 <Avatar name="Sally Ride" />
                 <Avatar name="Alan Shepard" />
             </AvatarGroup>

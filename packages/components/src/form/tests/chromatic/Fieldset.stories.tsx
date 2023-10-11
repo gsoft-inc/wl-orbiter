@@ -142,7 +142,7 @@ export const Styling: FieldsetStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Fieldset border="warning-border" label="Shipping Address">
+            <Fieldset border="warning" label="Shipping Address">
                 <Inline>
                     <Field>
                         <Label>First name</Label>

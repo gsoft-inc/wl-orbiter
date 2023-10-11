@@ -47,7 +47,7 @@ export const Light: ThemeProviderStory = {
     storyName: "light",
     render: () => (
         <ThemeProvider colorScheme="light">
-            <Box padding={160} backgroundColor="neutral-surface" />
+            <Box padding={160} backgroundColor="neutral" />
         </ThemeProvider>
     )
 };
@@ -56,7 +56,7 @@ export const Dark: ThemeProviderStory = {
     storyName: "dark",
     render: () => (
         <ThemeProvider colorScheme="dark">
-            <Box padding={160} backgroundColor="neutral-surface" />
+            <Box padding={160} backgroundColor="neutral" />
         </ThemeProvider>
     )
 };
@@ -76,7 +76,7 @@ export const SetColorSchemeWithApi: ThemeProviderStory = {
     render: () => (
         <ThemeProvider colorScheme="light">
             <SwitchColorScheme />
-            <Box padding={160} backgroundColor="neutral-surface" />
+            <Box padding={160} backgroundColor="neutral" />
         </ThemeProvider>
     )
 };

@@ -34,10 +34,10 @@ stories()
     )
     .add("styling", () =>
         <Inline>
-            <Accordion border="warning-border" expandedKeys={["0"]}>
+            <Accordion border="warning" expandedKeys={["0"]}>
                 <Item>
-                    <H3 border="warning-border">Mars</H3>
-                    <Content border="warning-border">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System.</Content>
+                    <H3 border="warning">Mars</H3>
+                    <Content border="warning">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System.</Content>
                 </Item>
             </Accordion>
             <Accordion className="border-red" expandedKeys={["0"]}>

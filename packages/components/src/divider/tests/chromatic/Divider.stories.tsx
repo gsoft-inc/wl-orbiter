@@ -87,7 +87,7 @@ export const Styling: DividerStory = {
     storyName: "styling",
     render:() => (
         <Stack>
-            <Divider border="warning-border" />
+            <Divider border="warning" />
             <Divider className="border-red" />
             <Divider style={{ border: "1px solid red" }} />
         </Stack>

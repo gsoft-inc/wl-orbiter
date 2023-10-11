@@ -777,9 +777,9 @@ export const Styling: MenuStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Menu border="warning-border" aria-label="Planets">
+            <Menu border="warning" aria-label="Planets">
                 <Item key="earth">Earth</Item>
-                <Item border="warning-border" key="jupiter">Jupiter</Item>
+                <Item border="warning" key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Menu>
             <Menu className="border-red" aria-label="Planets">

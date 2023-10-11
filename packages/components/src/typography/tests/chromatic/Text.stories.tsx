@@ -37,7 +37,7 @@ export const Styling: TextStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Text border="warning-border">There are no passengers on spaceship earth.</Text>
+            <Text border="warning">There are no passengers on spaceship earth.</Text>
             <Text className="bg-red">There are no passengers on spaceship earth.</Text>
             <Text style={{ backgroundColor: "red" }}>There are no passengers on spaceship earth.</Text>
         </Stack>

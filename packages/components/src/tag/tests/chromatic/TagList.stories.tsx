@@ -58,15 +58,15 @@ export const ItemWithDot: TagListStory = {
     render: () => (
         <TagList>
             <Item key="mercury">
-                <Dot color="primary-text" />
+                <Dot color="primary" />
                 <Text>Mercury Program</Text>
             </Item>
             <Item key="gemini">
-                <Dot color="primary-text" />
+                <Dot color="primary" />
                 <Text>Gemini Program</Text>
             </Item>
             <Item key="apollo">
-                <Dot color="primary-text" />
+                <Dot color="primary" />
                 <Text>Apollo Program</Text>
             </Item>
         </TagList>
@@ -181,9 +181,9 @@ export const Styling: TagListStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <TagList border="warning-border">
+            <TagList border="warning">
                 <Item key="earth">Earth</Item>
-                <Item border="warning-border" key="jupiter">Jupiter</Item>
+                <Item border="warning" key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </TagList>
             <TagList className="border-red">

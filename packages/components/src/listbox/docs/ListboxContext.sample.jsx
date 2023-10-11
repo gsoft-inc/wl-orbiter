@@ -6,7 +6,7 @@ function CustomOption({ item, children, ...rest }) {
         <ListboxOption
             {...rest}
             item={item}
-            color={selectedKeys.includes(key) ? "primary-icon" : undefined}
+            color={selectedKeys.includes(key) ? "primary" : undefined}
         >
             {children}
         </ListboxOption>

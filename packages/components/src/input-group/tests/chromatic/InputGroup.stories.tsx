@@ -979,7 +979,7 @@ export const Styling: InputGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <InputGroup border="warning-border">
+            <InputGroup border="warning">
                 <Text>Days</Text>
                 <TextInput aria-label="Duration" />
             </InputGroup>

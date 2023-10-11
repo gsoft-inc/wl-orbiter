@@ -157,7 +157,7 @@ export const NotDismissable: PopoverStory = {
 export const StyledSystem: PopoverStory = {
     storyName: "styled system",
     render: () => (
-        <Popover border="warning-border">
+        <Popover border="warning">
             <Heading>Space News</Heading>
             <Content>SpaceX designs, manufactures, and launches the world's most advanced rockets and spacecraft.</Content>
         </Popover>

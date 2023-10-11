@@ -151,12 +151,12 @@ export const Styling: CounterStory = {
     render: () => (
         <Stack>
             <Inline alignY="center">
-                <Counter border="warning-border">15</Counter>
+                <Counter border="warning">15</Counter>
                 <Counter className="bg-red">15</Counter>
                 <Counter style={{ backgroundColor: "red" }}>15</Counter>
             </Inline>
             <Inline alignY="center">
-                <Counter border="warning-border" variant="divider">15</Counter>
+                <Counter border="warning" variant="divider">15</Counter>
                 <Counter className="bg-red" variant="divider">15</Counter>
                 <Counter style={{ backgroundColor: "red" }} variant="divider">15</Counter>
             </Inline>

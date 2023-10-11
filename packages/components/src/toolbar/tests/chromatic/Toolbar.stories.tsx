@@ -278,7 +278,7 @@ export const Styling: ToolbarStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Toolbar border="warning-border">
+            <Toolbar border="warning">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>

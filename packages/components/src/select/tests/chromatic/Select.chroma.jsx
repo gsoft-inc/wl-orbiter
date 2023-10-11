@@ -109,7 +109,7 @@ stories()
     )
     .add("styling", () =>
         <Inline>
-            <Select border="warning-border" placeholder="Select a planet" aria-label="Planets">
+            <Select border="warning" placeholder="Select a planet" aria-label="Planets">
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>

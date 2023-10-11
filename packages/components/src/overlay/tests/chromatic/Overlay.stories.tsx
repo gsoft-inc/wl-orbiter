@@ -75,7 +75,7 @@ export const StyledSystem: OverlayStory = {
     storyName: "styled system",
     render: () => (
         <Boundary>
-            <Overlay border="warning-border" show>
+            <Overlay border="warning" show>
                 <PrimaryBox />
             </Overlay>
         </Boundary>

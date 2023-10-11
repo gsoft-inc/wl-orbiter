@@ -74,7 +74,7 @@ export const Styling: BadgeStory = {
     storyName: "styling",
     render: () => (
         <Inline gap={400}>
-            <SquareBadge border="warning-border">
+            <SquareBadge border="warning">
                 <Text>100</Text>
             </SquareBadge>
             <SquareBadge className="border-red">

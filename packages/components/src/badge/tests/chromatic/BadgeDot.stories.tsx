@@ -33,7 +33,7 @@ export const Styling: BadgeStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <SquareBadge variant="dot" border="warning-border" />
+            <SquareBadge variant="dot" border="warning" />
             <SquareBadge variant="dot" className="border-red" />
             <SquareBadge variant="dot" style={{ border: "1px solid red" }} />
         </Inline>

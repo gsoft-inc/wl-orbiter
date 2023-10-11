@@ -93,9 +93,9 @@ export function lineHeightRenderer(token) {
 
 export function radiiRenderer(token) {
     if (token === "circular") {
-        return <Div height={240} width={240} borderRadius={token} border="primary-border"></Div>;
+        return <Div height={240} width={240} borderRadius={token} border="primary"></Div>;
     } else {
-        return <Div height={240} width="3.5rem" borderRadius={token} border="primary-border"></Div>;
+        return <Div height={240} width="3.5rem" borderRadius={token} border="primary"></Div>;
     }
 }
 
@@ -104,7 +104,7 @@ export function sizingRenderer() {
 }
 
 export function spacingRenderer(token) {
-    return <Div height={240} width={token} backgroundColor="primary-surface" borderRadius={2}></Div>;
+    return <Div height={240} width={token} backgroundColor="primary" borderRadius={2}></Div>;
 }
 
 export function textRenderer(token) {
