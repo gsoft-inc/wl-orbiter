@@ -62,7 +62,7 @@ export function InnerMenuItem({
         avatar: (avatarElement: ReactElement, slotElements: SlotElements) => {
             return {
                 className: "o-ui-menu-item-option-avatar",
-                size: isNil(slotElements.description) ? "2xs" : "md"
+                size: isNil(slotElements.description) ? "xs" : "md"
             };
         },
         description: {
