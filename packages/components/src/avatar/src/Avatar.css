@@ -64,13 +64,13 @@
 
 .o-ui-avatar-group .o-ui-avatar-xs:not(:first-child):not(.o-ui-avatar-group-remainings),
 .o-ui-avatar-group .o-ui-avatar-sm:not(:first-child):not(.o-ui-avatar-group-remainings) {
-    margin-left: calc(var(--hop-space-inline-xs) * -1);
+    margin-left: calc(-1 * var(--hop-space-inline-xs));
 }
 
 .o-ui-avatar-group .o-ui-avatar-md:not(:first-child):not(.o-ui-avatar-group-remainings),
 .o-ui-avatar-group .o-ui-avatar-lg:not(:first-child):not(.o-ui-avatar-group-remainings),
 .o-ui-avatar-group .o-ui-avatar-xl:not(:first-child):not(.o-ui-avatar-group-remainings) {
-    margin-left: calc(var(--hop-space-inline-sm) * -1);
+    margin-left: calc(-1 * var(--hop-space-inline-sm));
 }
 
 /* GROUPS | REMAININGS */
