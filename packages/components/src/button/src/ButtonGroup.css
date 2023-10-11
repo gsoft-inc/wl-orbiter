@@ -4,6 +4,6 @@
 }
 
 .o-ui-button-group-in-field {
-    margin-top: var(--o-ui-sp-1);
-    margin-bottom: var(--o-ui-sp-1);
+    margin-top: var(--hop-space-stack-xs);
+    margin-bottom: var(--hop-space-stack-xs);
 }

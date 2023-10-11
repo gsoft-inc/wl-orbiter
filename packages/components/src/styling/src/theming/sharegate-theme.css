@@ -236,7 +236,7 @@
     --o-ui-text-alias-success: var(--o-ui-success-6);
     --o-ui-text-alias-static-white: var(--o-ui-white);
     --o-ui-text-alias-input-placeholder: var(--o-ui-neutral-4);
-    --o-ui-focus-ring-color-alias-default: rgba(31, 115, 183, .35);
+    --o-ui-focus-ring-color-alias-default: var(--hop-primary-border-focus);
 }
 
 .o-ui.o-ui-orbiter-dark {
@@ -332,5 +332,5 @@
     --o-ui-text-alias-success: var(--o-ui-success-5);
     --o-ui-text-alias-static-white: var(--o-ui-white);
     --o-ui-text-alias-input-placeholder: var(--o-ui-neutral-3);
-    --o-ui-focus-ring-color-alias-default: rgba(53, 144, 221, .35);
+    --o-ui-focus-ring-color-alias-default: var(--hop-primary-border-focus);
 }
