@@ -3,8 +3,7 @@ import "./CrossButton.css";
 import { AbstractIconButtonProps, IconButton, InnerIconButton } from "./IconButton";
 import { ComponentProps, forwardRef } from "react";
 import { CrossMinorIcon } from "../../icons";
-import { OmitInternalProps, slot } from "../../shared";
-import { mergeClasses } from "@components/shared";
+import { OmitInternalProps, mergeClasses, slot } from "../../shared";
 
 export type InnerCrossButtonProps = Omit<AbstractIconButtonProps<"button">, "fluid" | "loading" | "onChange" | "type" | "variant">;
 
