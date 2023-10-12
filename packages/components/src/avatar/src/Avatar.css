@@ -1,20 +1,12 @@
 .o-ui-avatar {
     display: inline-flex;
+    aspect-ratio: 1/1;
     flex-shrink: 0;
     border-radius: var(--hop-shape-circle);
     overflow: hidden;
 }
 
 /* SIZES */
-.o-ui-avatar-xs,
-.o-ui-avatar-sm,
-.o-ui-avatar-md,
-.o-ui-avatar-lg,
-.o-ui-avatar-xl,
-.o-ui-avatar-image {
-    aspect-ratio: 1/1;
-}
-
 .o-ui-avatar-xs {
     width: 1rem;
 }
