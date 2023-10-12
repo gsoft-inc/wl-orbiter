@@ -142,12 +142,12 @@ export const TemplateRows: GridStory = {
                 <Div backgroundColor="sapphire-500">Bravo</Div>
                 <Div backgroundColor="sapphire-500">Charlie</Div>
             </Grid>
-            <Grid templateRows={[800, "3.5rem", 800]} gap={160}>
+            <Grid templateRows={["8rem", "3.5rem", "8rem"]} gap={160}>
                 <Div backgroundColor="sapphire-700">Alpha</Div>
                 <Div backgroundColor="sapphire-700">Bravo</Div>
                 <Div backgroundColor="sapphire-700">Charlie</Div>
             </Grid>
-            <Grid templateRows={{ md: [800, "3.5rem", 800], lg: "200px 100px 200px" }} gap={160}>
+            <Grid templateRows={{ md: ["8rem", "3.5rem", "8rem"], lg: "200px 100px 200px" }} gap={160}>
                 <Div backgroundColor="sapphire-900">Alpha</Div>
                 <Div backgroundColor="sapphire-900">Bravo</Div>
                 <Div backgroundColor="sapphire-900">Charlie</Div>
@@ -211,7 +211,7 @@ export const AutoColumns: GridStory = {
     storyName: "auto columns",
     render: () => (
         <Stack>
-            <Grid autoColumns={800} gap={160}>
+            <Grid autoColumns="8rem" gap={160}>
                 <Div backgroundColor="sapphire-500">Alpha</Div>
                 <Div gridColumn={2} backgroundColor="sapphire-500">Bravo</Div>
                 <Div backgroundColor="sapphire-500">Charlie</Div>
@@ -225,7 +225,7 @@ export const AutoColumns: GridStory = {
                 <Div backgroundColor="sapphire-700">Delta</Div>
                 <Div backgroundColor="sapphire-700">Echo</Div>
             </Grid>
-            <Grid autoColumns={{ md: 800, lg: "200px" }} gap={160}>
+            <Grid autoColumns={{ md: "8rem", lg: "200px" }} gap={160}>
                 <Div backgroundColor="sapphire-900">Alpha</Div>
                 <Div gridColumn={2} backgroundColor="sapphire-900">Bravo</Div>
                 <Div backgroundColor="sapphire-900">Charlie</Div>
@@ -561,7 +561,7 @@ export const Minmax: GridStory = {
     storyName: "minmax",
     render: () => (
         <Stack>
-            <Grid templateColumns={[minmax(800, "auto"), "4.5rem", "4.5rem"]} gap={160}>
+            <Grid templateColumns={[minmax("8rem", "auto"), "4.5rem", "4.5rem"]} gap={160}>
                 <Div backgroundColor="sapphire-500">Alpha</Div>
                 <Div backgroundColor="sapphire-500">Bravo</Div>
                 <Div backgroundColor="sapphire-500">Charlie</Div>
@@ -585,7 +585,7 @@ export const FitContent: GridStory = {
     storyName: "fit-content",
     render: () => (
         <Stack>
-            <Grid templateColumns={[fitContent(800), "4.5rem", "4.5rem"]} gap={160}>
+            <Grid templateColumns={[fitContent("8rem"), "4.5rem", "4.5rem"]} gap={160}>
                 <Div backgroundColor="sapphire-500">Alpha</Div>
                 <Div backgroundColor="sapphire-500">Bravo</Div>
                 <Div backgroundColor="sapphire-500">Charlie</Div>
@@ -593,7 +593,7 @@ export const FitContent: GridStory = {
                 <Div backgroundColor="sapphire-500">Echo</Div>
                 <Div backgroundColor="sapphire-500">Foxtrot</Div>
             </Grid>
-            <Grid templateColumns={[fitContent(800), "4.5rem", "4.5rem"]} gap={160}>
+            <Grid templateColumns={[fitContent("8rem"), "4.5rem", "4.5rem"]} gap={160}>
                 <Div backgroundColor="sapphire-500">Alpha</Div>
                 <Div backgroundColor="sapphire-500">Bravo</Div>
                 <Div backgroundColor="sapphire-500">Charlie</Div>

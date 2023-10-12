@@ -76,7 +76,7 @@ export function fontSizeRenderer(token) {
 }
 
 export function fontWeightRenderer(token) {
-    return <Flex height={320} alignItems="center"><Text fontWeight={token} fontSize={6} lineHeight={1}>Ag</Text></Flex>;
+    return <Flex height={320} alignItems="center"><Text fontWeight={token} fontSize="1.375rem" lineHeight={1}>Ag</Text></Flex>;
 }
 
 export function iconRenderer(token) {
