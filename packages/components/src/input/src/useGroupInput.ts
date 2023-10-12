@@ -9,11 +9,11 @@ import { useFieldContext } from "../../field";
 const Gap = {
     horizontal: {
         "sm": 160,
-        "md": 240
+        "md": "1.25rem"
     },
     vertical: {
         "sm": 80,
-        "md": 160
+        "md": "0.75rem"
     }
 } as const;
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
