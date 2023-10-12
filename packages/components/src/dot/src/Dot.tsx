@@ -1,4 +1,4 @@
-import { BackgroundColorProp, useResponsiveValue } from "../../styling";
+import { BackgroundColorMapping, BackgroundColorProp, useResponsiveValue } from "../../styling";
 import { useMemo, ComponentProps, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
 import { Box } from "../../box";
@@ -20,8 +20,10 @@ function useColor(color: string) {
                 return color;
             } else if (color.startsWith("--")) {
                 return `var(${color})`;
-            } else if (color.startsWith("alias")) {
-                return `var(--o-ui-bg-${color})`;
+            } else if (!isNil(BackgroundColorMapping[color])) {
+                console.log("AA", color, BackgroundColorMapping[color]);
+
+                return BackgroundColorMapping[color];
             }
 
             return color;

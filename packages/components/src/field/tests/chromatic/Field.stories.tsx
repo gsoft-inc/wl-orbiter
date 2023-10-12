@@ -44,7 +44,7 @@ export const FieldLabel: FieldStory = {
 export const Message: FieldStory = {
     storyName: "message",
     render: () => (
-        <Stack gap={480}>
+        <Stack gap="3.5rem">
             <Field>
                 <TextInput placeholder="Where to?" />
                 <HelpMessage>Must be a planet in earth solar system.</HelpMessage>

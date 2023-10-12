@@ -13,7 +13,7 @@ type TextStory = ComponentStoryObj<typeof Text>;
 export const Default: TextStory = {
     storyName: "default",
     render: () => (
-        <Stack gap="0">
+        <Stack gap={0}>
             <Text size="2xl">There are no passengers on spaceship earth.</Text>
             <Text size="xl">There are no passengers on spaceship earth.</Text>
             <Text size="lg">There are no passengers on spaceship earth.</Text>
