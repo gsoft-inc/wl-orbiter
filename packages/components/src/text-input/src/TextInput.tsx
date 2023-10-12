@@ -76,7 +76,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
         className,
         defaultValue,
         disabled,
-        fluid,
+        fluid = true,
         focus,
         forwardedRef,
         hover,
