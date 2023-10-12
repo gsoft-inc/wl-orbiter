@@ -20,9 +20,8 @@ function useColor(color: string) {
                 return color;
             } else if (color.startsWith("--")) {
                 return `var(${color})`;
+            // This logic should be reworked and not imported as is in Hopper. Accessing the Mapping directly feels weird.
             } else if (!isNil(BackgroundColorMapping[color])) {
-                console.log("AA", color, BackgroundColorMapping[color]);
-
                 return BackgroundColorMapping[color];
             }
 
