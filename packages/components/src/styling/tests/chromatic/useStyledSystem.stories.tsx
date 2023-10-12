@@ -21,7 +21,7 @@ export const EverySingleBreakpoints: UseStyledSystemStory = {
     render: () => (
         <Box
             backgroundColor={{ base: "sapphire-500", xs: "moss-500", sm: "amanita-500", md: "sapphire-500", lg: "rock-500", xl: "moss-500" }}
-            color="#FFFFFF"
+            color="samoyed"
             width={960}
         >
             Space X
@@ -34,7 +34,7 @@ export const MatchHigherBreakpoint: UseStyledSystemStory = {
     render: () => (
         <Box
             backgroundColor={{ base: "sapphire-300", sm: "amanita-300" }}
-            color="#FFFFFF"
+            color="samoyed"
             width={960}
         >
         Space X
@@ -47,7 +47,7 @@ export const MatchBase: UseStyledSystemStory = {
     render: () => (
         <Box
             backgroundColor={{ base: "sapphire-800" }}
-            color="#FFFFFF"
+            color="samoyed"
             width={960}
         >
         Space X

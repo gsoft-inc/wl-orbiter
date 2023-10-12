@@ -108,7 +108,7 @@ export function spacingRenderer(token) {
 }
 
 export function textRenderer(token) {
-    if (token === "#FFFFFF") {
+    if (token === "#FFFFFF" || token === "samoyed") {
         return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><Text marginLeft={1} color={token} size="lg">Moon</Text></Div>;
     } else {
         return <Div height={400} display="flex" alignItems="center" justifyContent="start"><Text marginLeft={1} color={token} size="lg">Moon</Text></Div>;
