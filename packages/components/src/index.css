@@ -35,7 +35,6 @@ Sadly, we encountered CSS ordering issues when the components are bundled in our
 @import "./loader/index.css";
 @import "./lozenge/index.css";
 @import "./menu/index.css";
-@import "./message/index.css";
 @import "./modal/index.css";
 @import "./number-input/index.css";
 @import "./overlay/index.css";
