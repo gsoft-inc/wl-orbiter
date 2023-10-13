@@ -26,7 +26,8 @@ export function InnerTooltip({
                     as,
                     className: "o-ui-tooltip",
                     ref: forwardedRef,
-                    role: "tooltip"
+                    role: "tooltip",
+                    size: "xs" as const
                 }
             )}
         >
