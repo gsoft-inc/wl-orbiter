@@ -9,7 +9,7 @@ function CustomAddon({ children, ...props }) {
                 props,
                 {
                     alignItems: "center",
-                    height: 6,
+                    height: "2.5rem",
                     border: "#ADACAC",
                     padding: "0px 10px",
                     style: {
