@@ -267,7 +267,7 @@ const BackgroundColorAliases = {
     "upsell-hover": "upsell-surface-hover"
 } as const;
 
-const BorderWidthAndStyle = "1px solid";
+const BorderWidthAndStyle = "0.0625rem solid";
 
 const BorderColorAliases = {
     "information": "information-border",
