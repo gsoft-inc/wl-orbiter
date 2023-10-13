@@ -27,7 +27,7 @@ export function InnerIconList({
             {...rest}
             aria-hidden="true"
             as={as}
-            gap={1}
+            gap={40}
             ref={forwardedRef}
         >
             {Children.toArray(children).filter(x => x).map((x: ReactElement) => {

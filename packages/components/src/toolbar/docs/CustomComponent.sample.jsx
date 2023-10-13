@@ -5,7 +5,7 @@ function CustomComponent(props) {
         <HtmlInput
             {...props}
             {...omitProps(toolbarProps, ["orientation"])}
-            border="alias-low-break"
+            border="neutral"
             type="text"
         />
     );

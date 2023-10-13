@@ -10,7 +10,7 @@ import {
     IconColorMapping,
     LineHeightMapping,
     SizingMapping,
-    SpacePrefix,
+    DimensionsPrefix,
     SpacingMapping,
     StyledSystemProps,
     TextColorMapping,
@@ -49,12 +49,12 @@ const ColorSampling = [
     "rgba(255, 255, 128, .5)",
     "hsl(50, 33%, 25%)",
     "hsla(50, 33%, 25%, .75)",
-    { base: "purple-1" },
-    { sm: "purple-2" },
-    { md: "purple-3" },
-    { lg: "purple-4" },
-    { sm: "purple-2", md: "purple-3", lg: "purple-4" },
-    { base: "purple-1", sm: "purple-2", md: "purple-3", lg: "purple-4" }
+    { base: "sapphire-100" },
+    { sm: "sapphire-200" },
+    { md: "sapphire-300" },
+    { lg: "sapphire-400" },
+    { sm: "sapphire-200", md: "sapphire-300", lg: "sapphire-400" },
+    { base: "sapphire-100", sm: "sapphire-200", md: "sapphire-300", lg: "sapphire-400" }
 ];
 
 const LengthSampling = [
@@ -342,14 +342,14 @@ test("when inline style is provided, append new style", async () => {
     renderWithTheme(
         <Box
             style={{ display: "block" }}
-            width={1}
+            width={160}
             data-testid="box"
         />
     );
 
     await waitFor(() => expect(screen.getByTestId("box")).toHaveStyle({
         display: "block",
-        width: normalizeVariable("1", SpacePrefix)
+        width: normalizeVariable("1", { prefix:DimensionsPrefix })
     }));
 });
 

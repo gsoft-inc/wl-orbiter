@@ -192,11 +192,11 @@ expectAssignable<BackgroundColorProp>("rgb(255, 255, 128)");
 expectAssignable<BackgroundColorProp>("rgba(255, 255, 128, .5)");
 expectAssignable<BackgroundColorProp>("hsl(50, 33%, 25%)");
 expectAssignable<BackgroundColorProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<BackgroundColorProp>("purple-1");
-expectAssignable<BackgroundColorProp>("alias-surface");
+expectAssignable<BackgroundColorProp>("sapphire-100");
+expectAssignable<BackgroundColorProp>("primary");
 expectAssignable<BackgroundColorProp>("currentColor");
 expectAssignable<BackgroundColorProp>("transparent");
-expectAssignable<BackgroundColorProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<BackgroundColorProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<BackgroundImageProp>("url(dog.gif)");
 expectAssignable<BackgroundImageProp>({ base: "url(dog.gif)", xs: "url(dog.gif)", sm: "url(dog.gif)", md: "url(dog.gif)", lg: "url(dog.gif)", xl: "url(dog.gif)" });
@@ -232,11 +232,11 @@ expectAssignable<BorderProp>("rgb(255, 255, 128)");
 expectAssignable<BorderProp>("rgba(255, 255, 128, .5)");
 expectAssignable<BorderProp>("hsl(50, 33%, 25%)");
 expectAssignable<BorderProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<BorderProp>("purple-1");
-expectAssignable<BorderProp>("alias-low-break");
+expectAssignable<BorderProp>("sapphire-100");
+expectAssignable<BorderProp>("danger");
 expectAssignable<BorderProp>("currentColor");
 expectAssignable<BorderProp>("transparent");
-expectAssignable<BorderProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<BorderProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<BorderBottomProp>("0");
 expectAssignable<BorderBottomProp>("#fff");
@@ -245,11 +245,11 @@ expectAssignable<BorderBottomProp>("rgb(255, 255, 128)");
 expectAssignable<BorderBottomProp>("rgba(255, 255, 128, .5)");
 expectAssignable<BorderBottomProp>("hsl(50, 33%, 25%)");
 expectAssignable<BorderBottomProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<BorderBottomProp>("purple-1");
-expectAssignable<BorderBottomProp>("alias-low-break");
+expectAssignable<BorderBottomProp>("sapphire-100");
+expectAssignable<BorderBottomProp>("danger");
 expectAssignable<BorderBottomProp>("currentColor");
 expectAssignable<BorderBottomProp>("transparent");
-expectAssignable<BorderBottomProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<BorderBottomProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<BorderLeftProp>("0");
 expectAssignable<BorderLeftProp>("#fff");
@@ -258,11 +258,11 @@ expectAssignable<BorderLeftProp>("rgb(255, 255, 128)");
 expectAssignable<BorderLeftProp>("rgba(255, 255, 128, .5)");
 expectAssignable<BorderLeftProp>("hsl(50, 33%, 25%)");
 expectAssignable<BorderLeftProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<BorderLeftProp>("purple-1");
-expectAssignable<BorderLeftProp>("alias-low-break");
+expectAssignable<BorderLeftProp>("sapphire-100");
+expectAssignable<BorderLeftProp>("danger");
 expectAssignable<BorderLeftProp>("currentColor");
 expectAssignable<BorderLeftProp>("transparent");
-expectAssignable<BorderLeftProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<BorderLeftProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<BorderRightProp>("0");
 expectAssignable<BorderRightProp>("#fff");
@@ -271,11 +271,11 @@ expectAssignable<BorderRightProp>("rgb(255, 255, 128)");
 expectAssignable<BorderRightProp>("rgba(255, 255, 128, .5)");
 expectAssignable<BorderRightProp>("hsl(50, 33%, 25%)");
 expectAssignable<BorderRightProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<BorderRightProp>("purple-1");
-expectAssignable<BorderRightProp>("alias-low-break");
+expectAssignable<BorderRightProp>("sapphire-100");
+expectAssignable<BorderRightProp>("danger");
 expectAssignable<BorderRightProp>("currentColor");
 expectAssignable<BorderRightProp>("transparent");
-expectAssignable<BorderRightProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<BorderRightProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<BorderTopProp>("0");
 expectAssignable<BorderTopProp>("#fff");
@@ -284,11 +284,11 @@ expectAssignable<BorderTopProp>("rgb(255, 255, 128)");
 expectAssignable<BorderTopProp>("rgba(255, 255, 128, .5)");
 expectAssignable<BorderTopProp>("hsl(50, 33%, 25%)");
 expectAssignable<BorderTopProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<BorderTopProp>("purple-1");
-expectAssignable<BorderTopProp>("alias-low-break");
+expectAssignable<BorderTopProp>("sapphire-100");
+expectAssignable<BorderTopProp>("danger");
 expectAssignable<BorderTopProp>("currentColor");
 expectAssignable<BorderTopProp>("transparent");
-expectAssignable<BorderTopProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<BorderTopProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<BorderRadiusProp>(1);
 expectAssignable<BorderRadiusProp>(2);
@@ -361,13 +361,13 @@ expectAssignable<BottomProp>("calc(1px + 1px)");
 expectAssignable<BottomProp>("auto");
 expectAssignable<BottomProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<BoxShadowProp>(1);
-expectAssignable<BoxShadowProp>(2);
-expectAssignable<BoxShadowProp>("alias-lifted");
-expectAssignable<BoxShadowProp>("alias-floating");
+expectAssignable<BoxShadowProp>("sm");
+expectAssignable<BoxShadowProp>("lg");
+expectAssignable<BoxShadowProp>("lifted");
+expectAssignable<BoxShadowProp>("floating");
 expectAssignable<BoxShadowProp>("none");
 expectAssignable<BoxShadowProp>("10px 5px 5px black");
-expectAssignable<BoxShadowProp>({ base: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 });
+expectAssignable<BoxShadowProp>({ base: "lifted", xs: "lifted", sm: "lifted", md: "lifted", lg: "lifted", xl: "lifted" });
 
 expectAssignable<ColorProp>("#fff");
 expectAssignable<ColorProp>("white");
@@ -375,20 +375,20 @@ expectAssignable<ColorProp>("rgb(255, 255, 128)");
 expectAssignable<ColorProp>("rgba(255, 255, 128, .5)");
 expectAssignable<ColorProp>("hsl(50, 33%, 25%)");
 expectAssignable<ColorProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<ColorProp>("purple-1");
-expectAssignable<ColorProp>("alias-primary");
+expectAssignable<ColorProp>("sapphire-100");
+expectAssignable<ColorProp>("primary");
 expectAssignable<ColorProp>("currentColor");
 expectAssignable<ColorProp>("transparent");
-expectAssignable<ColorProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<ColorProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
-expectAssignable<ColumnGapProp>(1);
+expectAssignable<ColumnGapProp>(160);
 expectAssignable<ColumnGapProp>("1px");
 expectAssignable<ColumnGapProp>("1em");
 expectAssignable<ColumnGapProp>("1rem");
 expectAssignable<ColumnGapProp>("1%");
 expectAssignable<ColumnGapProp>("calc(1px + 1px)");
 expectAssignable<ColumnGapProp>("normal");
-expectAssignable<ColumnGapProp>({ base: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 });
+expectAssignable<ColumnGapProp>({ base: 160, xs: 160, sm: 160, md: 160, lg: 160, xl: 160 });
 
 expectAssignable<ContentProp>("normal");
 expectAssignable<ContentProp>("none");
@@ -438,11 +438,11 @@ expectAssignable<FillProp>("rgb(255, 255, 128)");
 expectAssignable<FillProp>("rgba(255, 255, 128, .5)");
 expectAssignable<FillProp>("hsl(50, 33%, 25%)");
 expectAssignable<FillProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<FillProp>("purple-1");
-expectAssignable<FillProp>("alias-primary");
+expectAssignable<FillProp>("sapphire-100");
+expectAssignable<FillProp>("primary");
 expectAssignable<FillProp>("currentColor");
 expectAssignable<FillProp>("transparent");
-expectAssignable<FillProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<FillProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<FilterProp>("url(\"filters.svg#filter-id\")");
 expectAssignable<FilterProp>("blur(5px)");
@@ -514,18 +514,16 @@ expectAssignable<FlexWrapProp>("wrap");
 expectAssignable<FlexWrapProp>("nowrap");
 expectAssignable<FlexWrapProp>("wrap-reverse");
 expectAssignable<FlexWrapProp>({ base: "wrap", xs: "wrap", sm: "wrap", md: "wrap", lg: "wrap", xl: "wrap" });
-
-expectAssignable<FontSizeProp>(1);
-expectAssignable<FontSizeProp>(2);
-expectAssignable<FontSizeProp>(3);
-expectAssignable<FontSizeProp>(4);
-expectAssignable<FontSizeProp>(5);
-expectAssignable<FontSizeProp>(6);
-expectAssignable<FontSizeProp>(7);
-expectAssignable<FontSizeProp>(8);
-expectAssignable<FontSizeProp>(9);
-expectAssignable<FontSizeProp>(10);
-expectAssignable<FontSizeProp>(11);
+expectAssignable<FontSizeProp>(120);
+expectAssignable<FontSizeProp>(140);
+expectAssignable<FontSizeProp>(160);
+expectAssignable<FontSizeProp>(180);
+expectAssignable<FontSizeProp>(200);
+expectAssignable<FontSizeProp>(240);
+expectAssignable<FontSizeProp>(280);
+expectAssignable<FontSizeProp>(320);
+expectAssignable<FontSizeProp>(360);
+expectAssignable<FontSizeProp>(480);
 expectAssignable<FontSizeProp>("1px");
 expectAssignable<FontSizeProp>("1em");
 expectAssignable<FontSizeProp>("1rem");
@@ -539,18 +537,18 @@ expectAssignable<FontStyleProp>("oblique");
 expectAssignable<FontStyleProp>("oblique 10deg");
 expectAssignable<FontStyleProp>({ base: "normal", xs: "normal", sm: "normal", md: "normal", lg: "normal", xl: "normal" });
 
-expectAssignable<FontWeightProp>(1);
-expectAssignable<FontWeightProp>(2);
-expectAssignable<FontWeightProp>(3);
-expectAssignable<FontWeightProp>({ base: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 });
+expectAssignable<FontWeightProp>(400);
+expectAssignable<FontWeightProp>(410);
+expectAssignable<FontWeightProp>(505);
+expectAssignable<FontWeightProp>({ base: 505, xs: 505, sm: 505, md: 505, lg: 505, xl: 505 });
 
-expectAssignable<GapProp>(1);
+expectAssignable<GapProp>(160);
 expectAssignable<GapProp>("1px");
 expectAssignable<GapProp>("1em");
 expectAssignable<GapProp>("1rem");
 expectAssignable<GapProp>("1%");
 expectAssignable<GapProp>("calc(1px + 1px)");
-expectAssignable<GapProp>({ base: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 });
+expectAssignable<GapProp>({ base: 160, xs: 160, sm: 160, md: 160, lg: 160, xl: 160 });
 
 expectAssignable<GridProp>("none");
 expectAssignable<GridProp>("\"a\" 100px \"b\" 1fr");
@@ -572,7 +570,7 @@ expectAssignable<GridAreaProp>("span 3");
 expectAssignable<GridAreaProp>("4 some-grid-area / 2 another-grid-area");
 expectAssignable<GridAreaProp>({ base: "auto", xs: "auto", sm: "auto", md: "auto", lg: "auto", xl: "auto" });
 
-expectAssignable<GridAutoColumnsProp>(1);
+expectAssignable<GridAutoColumnsProp>(160);
 expectAssignable<GridAutoColumnsProp>("1px");
 expectAssignable<GridAutoColumnsProp>("1em");
 expectAssignable<GridAutoColumnsProp>("1rem");
@@ -600,7 +598,7 @@ expectAssignable<GridAutoFlowProp>("row dense");
 expectAssignable<GridAutoFlowProp>("column dense");
 expectAssignable<GridAutoFlowProp>({ base: "row", xs: "row", sm: "row", md: "row", lg: "row", xl: "row" });
 
-expectAssignable<GridAutoRowsProp>(1);
+expectAssignable<GridAutoRowsProp>(160);
 expectAssignable<GridAutoRowsProp>("1px");
 expectAssignable<GridAutoRowsProp>("1em");
 expectAssignable<GridAutoRowsProp>("1rem");
@@ -684,7 +682,7 @@ expectAssignable<GridTemplateAreasProp>("\"head head\" \"nav  main\" \"nav  foot
 expectAssignable<GridTemplateAreasProp>({ base: "none", xs: "none", sm: "none", md: "none", lg: "none", xl: "none" });
 
 expectAssignable<GridTemplateColumnsProp>("none");
-expectAssignable<GridTemplateColumnsProp>(1);
+expectAssignable<GridTemplateColumnsProp>(160);
 expectAssignable<GridTemplateColumnsProp>("1px");
 expectAssignable<GridTemplateColumnsProp>("1em");
 expectAssignable<GridTemplateColumnsProp>("1rem");
@@ -724,7 +722,7 @@ expectAssignable<GridTemplateProp>(`
 expectAssignable<GridTemplateProp>({ base: "none", xs: "none", sm: "none", md: "none", lg: "none", xl: "none" });
 
 expectAssignable<GridTemplateRowsProp>("none");
-expectAssignable<GridTemplateRowsProp>(1);
+expectAssignable<GridTemplateRowsProp>(160);
 expectAssignable<GridTemplateRowsProp>("1px");
 expectAssignable<GridTemplateRowsProp>("1em");
 expectAssignable<GridTemplateRowsProp>("1rem");
@@ -750,7 +748,7 @@ expectAssignable<GridTemplateRowsProp>(`
 `);
 expectAssignable<GridTemplateRowsProp>({ base: "none", xs: "none", sm: "none", md: "none", lg: "none", xl: "none" });
 
-expectAssignable<HeightProp>(1);
+expectAssignable<HeightProp>(160);
 expectAssignable<HeightProp>("1px");
 expectAssignable<HeightProp>("1em");
 expectAssignable<HeightProp>("1rem");
@@ -855,7 +853,7 @@ expectAssignable<LineHeightProp>("1%");
 expectAssignable<LineHeightProp>("calc(1px + 1px)");
 expectAssignable<LineHeightProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginProp>(1);
+expectAssignable<MarginProp>(160);
 expectAssignable<MarginProp>("1px");
 expectAssignable<MarginProp>("-1px");
 expectAssignable<MarginProp>("1em");
@@ -866,7 +864,7 @@ expectAssignable<MarginProp>("auto");
 expectAssignable<MarginProp>("2px 1em 0 auto");
 expectAssignable<MarginProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginBottomProp>(1);
+expectAssignable<MarginBottomProp>(160);
 expectAssignable<MarginBottomProp>("1px");
 expectAssignable<MarginBottomProp>("-1px");
 expectAssignable<MarginBottomProp>("1em");
@@ -876,7 +874,7 @@ expectAssignable<MarginBottomProp>("calc(1px + 1px)");
 expectAssignable<MarginBottomProp>("auto");
 expectAssignable<MarginBottomProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginLeftProp>(1);
+expectAssignable<MarginLeftProp>(160);
 expectAssignable<MarginLeftProp>("1px");
 expectAssignable<MarginLeftProp>("-1px");
 expectAssignable<MarginLeftProp>("1em");
@@ -886,7 +884,7 @@ expectAssignable<MarginLeftProp>("calc(1px + 1px)");
 expectAssignable<MarginLeftProp>("auto");
 expectAssignable<MarginLeftProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginRightProp>(1);
+expectAssignable<MarginRightProp>(160);
 expectAssignable<MarginRightProp>("1px");
 expectAssignable<MarginRightProp>("-1px");
 expectAssignable<MarginRightProp>("1em");
@@ -896,7 +894,7 @@ expectAssignable<MarginRightProp>("calc(1px + 1px)");
 expectAssignable<MarginRightProp>("auto");
 expectAssignable<MarginRightProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginTopProp>(1);
+expectAssignable<MarginTopProp>(160);
 expectAssignable<MarginTopProp>("1px");
 expectAssignable<MarginTopProp>("-1px");
 expectAssignable<MarginTopProp>("1em");
@@ -906,7 +904,7 @@ expectAssignable<MarginTopProp>("calc(1px + 1px)");
 expectAssignable<MarginTopProp>("auto");
 expectAssignable<MarginTopProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginXProp>(1);
+expectAssignable<MarginXProp>(160);
 expectAssignable<MarginXProp>("1px");
 expectAssignable<MarginXProp>("-1px");
 expectAssignable<MarginXProp>("1em");
@@ -916,7 +914,7 @@ expectAssignable<MarginXProp>("calc(1px + 1px)");
 expectAssignable<MarginXProp>("auto");
 expectAssignable<MarginXProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MarginYProp>(1);
+expectAssignable<MarginYProp>(160);
 expectAssignable<MarginYProp>("1px");
 expectAssignable<MarginYProp>("-1px");
 expectAssignable<MarginYProp>("1em");
@@ -926,7 +924,7 @@ expectAssignable<MarginYProp>("calc(1px + 1px)");
 expectAssignable<MarginYProp>("auto");
 expectAssignable<MarginYProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MaxHeightProp>(1);
+expectAssignable<MaxHeightProp>(160);
 expectAssignable<MaxHeightProp>("1px");
 expectAssignable<MaxHeightProp>("1em");
 expectAssignable<MaxHeightProp>("1rem");
@@ -940,7 +938,7 @@ expectAssignable<MaxHeightProp>("fit-content(1em)");
 expectAssignable<MaxHeightProp>("auto");
 expectAssignable<MaxHeightProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MaxWidthProp>(1);
+expectAssignable<MaxWidthProp>(160);
 expectAssignable<MaxWidthProp>("1px");
 expectAssignable<MaxWidthProp>("1em");
 expectAssignable<MaxWidthProp>("1rem");
@@ -954,7 +952,7 @@ expectAssignable<MaxWidthProp>("fit-content(1em)");
 expectAssignable<MaxWidthProp>("auto");
 expectAssignable<MaxWidthProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MinHeightProp>(1);
+expectAssignable<MinHeightProp>(160);
 expectAssignable<MinHeightProp>("1px");
 expectAssignable<MinHeightProp>("1em");
 expectAssignable<MinHeightProp>("1rem");
@@ -968,7 +966,7 @@ expectAssignable<MinHeightProp>("fit-content(1em)");
 expectAssignable<MinHeightProp>("auto");
 expectAssignable<MinHeightProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<MinWidthProp>(1);
+expectAssignable<MinWidthProp>(160);
 expectAssignable<MinWidthProp>("1px");
 expectAssignable<MinWidthProp>("1em");
 expectAssignable<MinWidthProp>("1rem");
@@ -1031,7 +1029,7 @@ expectAssignable<OverflowYProp>("scroll");
 expectAssignable<OverflowYProp>("visible");
 expectAssignable<OverflowYProp>({ base: "visible", xs: "visible", sm: "visible", md: "visible", lg: "visible", xl: "visible" });
 
-expectAssignable<PaddingProp>(1);
+expectAssignable<PaddingProp>(160);
 expectAssignable<PaddingProp>("1px");
 expectAssignable<PaddingProp>("-1px");
 expectAssignable<PaddingProp>("1em");
@@ -1042,7 +1040,7 @@ expectAssignable<PaddingProp>("auto");
 expectAssignable<PaddingProp>("2px 1em 0 auto");
 expectAssignable<PaddingProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<PaddingBottomProp>(1);
+expectAssignable<PaddingBottomProp>(160);
 expectAssignable<PaddingBottomProp>("1px");
 expectAssignable<PaddingBottomProp>("-1px");
 expectAssignable<PaddingBottomProp>("1em");
@@ -1052,7 +1050,7 @@ expectAssignable<PaddingBottomProp>("calc(1px + 1px)");
 expectAssignable<PaddingBottomProp>("auto");
 expectAssignable<PaddingBottomProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<PaddingLeftProp>(1);
+expectAssignable<PaddingLeftProp>(160);
 expectAssignable<PaddingLeftProp>("1px");
 expectAssignable<PaddingLeftProp>("-1px");
 expectAssignable<PaddingLeftProp>("1em");
@@ -1062,7 +1060,7 @@ expectAssignable<PaddingLeftProp>("calc(1px + 1px)");
 expectAssignable<PaddingLeftProp>("auto");
 expectAssignable<PaddingLeftProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<PaddingRightProp>(1);
+expectAssignable<PaddingRightProp>(160);
 expectAssignable<PaddingRightProp>("1px");
 expectAssignable<PaddingRightProp>("-1px");
 expectAssignable<PaddingRightProp>("1em");
@@ -1072,7 +1070,7 @@ expectAssignable<PaddingRightProp>("calc(1px + 1px)");
 expectAssignable<PaddingRightProp>("auto");
 expectAssignable<PaddingRightProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<PaddingTopProp>(1);
+expectAssignable<PaddingTopProp>(160);
 expectAssignable<PaddingTopProp>("1px");
 expectAssignable<PaddingTopProp>("-1px");
 expectAssignable<PaddingTopProp>("1em");
@@ -1082,7 +1080,7 @@ expectAssignable<PaddingTopProp>("calc(1px + 1px)");
 expectAssignable<PaddingTopProp>("auto");
 expectAssignable<PaddingTopProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<PaddingXProp>(1);
+expectAssignable<PaddingXProp>(160);
 expectAssignable<PaddingXProp>("1px");
 expectAssignable<PaddingXProp>("-1px");
 expectAssignable<PaddingXProp>("1em");
@@ -1092,7 +1090,7 @@ expectAssignable<PaddingXProp>("calc(1px + 1px)");
 expectAssignable<PaddingXProp>("auto");
 expectAssignable<PaddingXProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<PaddingYProp>(1);
+expectAssignable<PaddingYProp>(160);
 expectAssignable<PaddingYProp>("1px");
 expectAssignable<PaddingYProp>("-1px");
 expectAssignable<PaddingYProp>("1em");
@@ -1138,14 +1136,14 @@ expectAssignable<RightProp>("calc(1px + 1px)");
 expectAssignable<RightProp>("auto");
 expectAssignable<RightProp>({ base: "1px", xs: "1px", sm: "1px", md: "1px", lg: "1px", xl: "1px" });
 
-expectAssignable<RowGapProp>(1);
+expectAssignable<RowGapProp>(160);
 expectAssignable<RowGapProp>("1px");
 expectAssignable<RowGapProp>("1em");
 expectAssignable<RowGapProp>("1rem");
 expectAssignable<RowGapProp>("1%");
 expectAssignable<RowGapProp>("calc(1px + 1px)");
 expectAssignable<RowGapProp>("normal");
-expectAssignable<RowGapProp>({ base: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 });
+expectAssignable<RowGapProp>({ base: 160, xs: 160, sm: 160, md: 160, lg: 160, xl: 160 });
 
 expectAssignable<StrokeProp>("#fff");
 expectAssignable<StrokeProp>("white");
@@ -1153,11 +1151,11 @@ expectAssignable<StrokeProp>("rgb(255, 255, 128)");
 expectAssignable<StrokeProp>("rgba(255, 255, 128, .5)");
 expectAssignable<StrokeProp>("hsl(50, 33%, 25%)");
 expectAssignable<StrokeProp>("hsla(50, 33%, 25%, .75)");
-expectAssignable<StrokeProp>("purple-1");
-expectAssignable<StrokeProp>("alias-primary");
+expectAssignable<StrokeProp>("sa");
+expectAssignable<StrokeProp>("primary");
 expectAssignable<StrokeProp>("currentColor");
 expectAssignable<StrokeProp>("transparent");
-expectAssignable<StrokeProp>({ base: "purple-1", xs: "purple-1", sm: "purple-1", md: "purple-1", lg: "purple-1", xl: "purple-1" });
+expectAssignable<StrokeProp>({ base: "sapphire-100", xs: "sapphire-100", sm: "sapphire-100", md: "sapphire-100", lg: "sapphire-100", xl: "sapphire-100" });
 
 expectAssignable<TextAlignProp>("start");
 expectAssignable<TextAlignProp>("end");
@@ -1267,7 +1265,7 @@ expectAssignable<WillChangeProp>("opacity");
 expectAssignable<WillChangeProp>("left, top");
 expectAssignable<WillChangeProp>({ base: "contents", xs: "contents", sm: "contents", md: "contents", lg: "contents", xl: "contents" });
 
-expectAssignable<WidthProp>(1);
+expectAssignable<WidthProp>(160);
 expectAssignable<WidthProp>("1px");
 expectAssignable<WidthProp>("1em");
 expectAssignable<WidthProp>("1rem");
@@ -1297,49 +1295,49 @@ expectAssignable<StyledSystemProps>({
     alignItems: "center",
     alignSelf: "center",
     aspectRatio: "1",
-    backgroundColor: "purple-1",
-    backgroundColorFocus: "purple-1",
-    backgroundColorHover: "purple-1",
+    backgroundColor: "sapphire-100",
+    backgroundColorFocus: "sapphire-100",
+    backgroundColorHover: "sapphire-100",
     backgroundImage: "url(cat.png)",
     backgroundPosition: "bottom",
     backgroundRepeat: "no-repeat",
     backgroundSize: "auto",
-    border: "purple-10",
-    borderFocus: "purple-10",
-    borderHover: "purple-10",
-    borderBottom: "purple-10",
-    borderBottomFocus: "purple-10",
-    borderBottomHover: "purple-10",
+    border: "sapphire-900",
+    borderFocus: "sapphire-900",
+    borderHover: "sapphire-900",
+    borderBottom: "sapphire-900",
+    borderBottomFocus: "sapphire-900",
+    borderBottomHover: "sapphire-900",
     borderBottomLeftRadius: "2rem",
     borderBottomRightRadius: "2rem",
-    borderLeft: "purple-10",
-    borderLeftFocus: "purple-10",
-    borderLeftHover: "purple-10",
+    borderLeft: "sapphire-900",
+    borderLeftFocus: "sapphire-900",
+    borderLeftHover: "sapphire-900",
     borderRadius: 1,
-    borderRight: "purple-10",
-    borderRightFocus: "purple-10",
-    borderRightHover: "purple-10",
-    borderTop: "purple-10",
-    borderTopFocus: "purple-10",
-    borderTopHover: "purple-10",
+    borderRight: "sapphire-900",
+    borderRightFocus: "sapphire-900",
+    borderRightHover: "sapphire-900",
+    borderTop: "sapphire-900",
+    borderTopFocus: "sapphire-900",
+    borderTopHover: "sapphire-900",
     borderTopLeftRadius: "2rem",
     borderTopRightRadius: "2rem",
     bottom: "1px",
-    boxShadow: 1,
-    boxShadowFocus: 1,
-    boxShadowHover: 1,
-    color: "purple-1",
-    colorFocus: "purple-1",
-    colorHover: "purple-1",
-    columnGap: 1,
+    boxShadow: "lifted",
+    boxShadowFocus: "lifted",
+    boxShadowHover: "lifted",
+    color: "sapphire-100",
+    colorFocus: "sapphire-100",
+    colorHover: "sapphire-100",
+    columnGap: 160,
     content: "open-quote",
     contentVisibility: "hidden",
     cursor: "crosshair",
     cursorHover: "crosshair",
     display: "block",
-    fill: "purple-1",
-    fillFocus: "purple-1",
-    fillHover: "purple-1",
+    fill: "sapphire-100",
+    fillFocus: "sapphire-100",
+    fillHover: "sapphire-100",
     filter: "blur(5px)",
     flex: "2 2 10%",
     flexBasis: "1px",
@@ -1348,10 +1346,10 @@ expectAssignable<StyledSystemProps>({
     flexGrow: 1,
     flexShrink: 1,
     flexWrap: "wrap",
-    fontSize: 1,
+    fontSize: 120,
     fontStyle: "italic",
-    fontWeight: 1,
-    gap: 1,
+    fontWeight: 505,
+    gap: 160,
     grid: "auto-flow / 1px 1px 1px",
     gridAutoColumns: "1px",
     gridAutoRows: "auto",
@@ -1377,20 +1375,20 @@ expectAssignable<StyledSystemProps>({
     gridRowSpan: 3,
     gridRowStart: "auto",
     gridRowEnd: "auto",
-    height: 1,
+    height: 160,
     justifyContent: "center",
     justifyItems: "center",
     justifySelf: "center",
     left: "1px",
     letterSpacing: "-1px",
     lineHeight: 1,
-    margin: 1,
-    marginBottom: 1,
-    marginLeft: 1,
-    marginRight: 1,
-    marginTop: 1,
-    marginX: 1,
-    marginY: 1,
+    margin: 160,
+    marginBottom: 160,
+    marginLeft: 160,
+    marginRight: 160,
+    marginTop: 160,
+    marginX: 160,
+    marginY: 160,
     maxHeight: "1px",
     maxWidth: "1px",
     minHeight: "1px",
@@ -1405,19 +1403,19 @@ expectAssignable<StyledSystemProps>({
     overflow: "clip",
     overflowX: "clip",
     overflowY: "clip",
-    padding: 1,
-    paddingBottom: 1,
-    paddingLeft: 1,
-    paddingRight: 1,
-    paddingTop: 1,
-    paddingX: 1,
-    paddingY: 1,
+    padding: 160,
+    paddingBottom: 160,
+    paddingLeft: 160,
+    paddingRight: 160,
+    paddingTop: 160,
+    paddingX: 160,
+    paddingY: 160,
     pointerEvents: "none",
     position: "absolute",
     resize: "both",
     right: "1px",
-    rowGap: 1,
-    stroke: "purple-1",
+    rowGap: 160,
+    stroke: "sapphire-100",
     textAlign: "center",
     textDecoration: "underline",
     textOverflow: "clip",
@@ -1428,7 +1426,7 @@ expectAssignable<StyledSystemProps>({
     verticalAlign: "middle",
     visibility: "hidden",
     whiteSpace: "nowrap",
-    width: 1,
+    width: 160,
     willChange: "contents",
     wordBreak: "break-all",
     zIndex: 1

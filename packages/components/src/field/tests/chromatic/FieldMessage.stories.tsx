@@ -172,7 +172,7 @@ export const Styling: HelpMessageStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <ValidMessage border="warning-7">Thank you!</ValidMessage>
+            <ValidMessage border="warning">Thank you!</ValidMessage>
             <ValidMessage className="bg-red">Thank you!</ValidMessage>
             <ValidMessage style={{ background: "red" }}>Thank you!</ValidMessage>
         </Inline>

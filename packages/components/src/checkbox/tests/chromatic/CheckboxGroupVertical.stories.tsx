@@ -30,7 +30,7 @@ export const Default: CheckboxGroupStory = {
 export const Size: CheckboxGroupStory = {
     storyName: "size",
     render: () => (
-        <Inline alignY="end" gap={13}>
+        <Inline alignY="end" gap={800}>
             <CheckboxGroup size="sm" orientation="vertical">
                 <Checkbox value="1">1</Checkbox>
                 <Checkbox value="2">2</Checkbox>

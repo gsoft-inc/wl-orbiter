@@ -154,7 +154,7 @@ export const AlignStart: MenuTriggerStory = {
     render: () => (
         <MenuTrigger align="start" allowFlip={false} allowPreventOverflow={false} defaultOpen>
             <Button variant="secondary">Trigger</Button>
-            <Menu width={14}>
+            <Menu width="12rem">
                 <Item key="earth">Earth</Item>
                 <Item key="mars">Mars</Item>
                 <Item key="saturn">Saturn</Item>
@@ -169,7 +169,7 @@ export const AlignEnd: MenuTriggerStory = {
     render: () => (
         <MenuTrigger align="end" allowFlip={false} allowPreventOverflow={false} defaultOpen>
             <Button variant="secondary">Trigger</Button>
-            <Menu width={14}>
+            <Menu width="12rem">
                 <Item key="earth">Earth</Item>
                 <Item key="mars">Mars</Item>
                 <Item key="saturn">Saturn</Item>
@@ -273,7 +273,7 @@ export const FunctionalContent: MenuTriggerStory = {
 export const StyledSystem: MenuTriggerStory = {
     storyName: "styled system",
     render: () => (
-        <MenuTrigger border="warning-7" defaultOpen>
+        <MenuTrigger border="warning" defaultOpen>
             <Button variant="secondary">Trigger</Button>
             <Menu>
                 <Item key="earth">Earth</Item>

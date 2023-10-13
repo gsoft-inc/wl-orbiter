@@ -136,7 +136,7 @@ export function InnerTileGroup({
                     alignItems: "stretch",
                     fluid: true,
                     // If you change the gap, also update the tile size gap (currently 16px) below.
-                    gap: 4,
+                    gap: 160,
                     orientation: "horizontal",
                     ref: forwardedRef,
                     wrap: true

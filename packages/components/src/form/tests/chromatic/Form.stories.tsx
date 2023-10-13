@@ -20,7 +20,7 @@ type FormStory = ComponentStoryObj<typeof Form>;
 export const Default: FormStory = {
     storyName: "default",
     render: () => (
-        <Inline alignY="end" gap={13}>
+        <Inline alignY="end" gap={800}>
             <Form>
                 <Field>
                     <Label>FullName</Label>
@@ -52,7 +52,7 @@ export const Default: FormStory = {
 export const Fluid: FormStory = {
     storyName: "fluid",
     render: () => (
-        <Inline gap={13}>
+        <Inline gap={800}>
             <Form fluid>
                 <Field>
                     <Label>FullName</Label>
@@ -85,7 +85,7 @@ export const Fluid: FormStory = {
 export const Disabled: FormStory = {
     storyName: "disabled",
     render: () => (
-        <Inline alignY="end" gap={13}>
+        <Inline alignY="end" gap={800}>
             <Form disabled>
                 <Field>
                     <Label>FullName</Label>
@@ -212,7 +212,7 @@ export const Styling: FormStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Form border="warning-7">
+            <Form border="warning">
                 <Field>
                     <TextInput placeholder="Where to?" />
                 </Field>

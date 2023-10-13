@@ -24,7 +24,7 @@ export function UsageSection({ iconDisplayName, iconFileName, iconComponent }: U
     return (
         <>
             <H2>Usage</H2>
-            <Div paddingTop={4}>
+            <Div paddingTop={160}>
                 <IconComponent componentType={componentType} />
                 <ImageSource componentType={componentType} iconFileName={iconFileName} iconDisplayName={iconDisplayName} />
             </Div>

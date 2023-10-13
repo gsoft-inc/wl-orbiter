@@ -69,7 +69,7 @@ export function InnerInline({
     as = DefaultElement,
     children,
     forwardedRef,
-    gap = 5,
+    gap = "1.25rem",
     wrap = true,
     ...rest
 }: InnerInlineProps) {

@@ -75,6 +75,10 @@
 }
 
 /* TEXT */
+:where(.o-ui-text-link-inherit) {
+    font-size: inherit;
+}
+
 :where(.o-ui-text-link-sm) {
     font-size: 1rem;
 }

@@ -129,7 +129,7 @@ export const Styling: ImageStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Image border="warning-7" src={Mars} alt="SpaceX launch" />
+            <Image border="warning" src={Mars} alt="SpaceX launch" />
             <Image className="border-red" src={Mars} alt="SpaceX launch" />
             <Image style={{ border: "1px solid red" }} src={Mars} alt="SpaceX launch" />
         </Inline>

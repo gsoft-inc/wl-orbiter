@@ -21,7 +21,7 @@ createCheckboxTestSuite(<Checkbox defaultIndeterminate />, stories("/indetermina
 stories()
     .add("styling", () =>
         <Inline>
-            <Checkbox border="warning-7">Milky Way</Checkbox>
+            <Checkbox border="warning">Milky Way</Checkbox>
             <Checkbox className="bg-red">Milky Way</Checkbox>
             <Checkbox style={{ backgroundColor: "red" }}>Milky Way</Checkbox>
         </Inline>

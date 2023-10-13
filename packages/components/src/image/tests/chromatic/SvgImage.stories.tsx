@@ -13,28 +13,28 @@ type SvgImageStory = ComponentStoryObj<typeof SvgImage>;
 export const Stroke: SvgImageStory = {
     storyName: "stroke",
     render: () => (
-        <SvgImage stroke="alias-secondary" src={NoResults} aria-label="No Results" />
+        <SvgImage stroke="neutral" src={NoResults} aria-label="No Results" />
     )
 };
 
 export const Fill: SvgImageStory = {
     storyName: "fill",
     render: () => (
-        <SvgImage fill="alias-secondary" src={NoResults} aria-label="No Results" />
+        <SvgImage fill="neutral" src={NoResults} aria-label="No Results" />
     )
 };
 
 export const Width: SvgImageStory = {
     storyName: "width",
     render: () => (
-        <SvgImage width="100px" src={NoResults} stroke="alias-secondary" aria-label="No Results" />
+        <SvgImage width="100px" src={NoResults} stroke="neutral" aria-label="No Results" />
     )
 };
 
 export const Height: SvgImageStory = {
     storyName: "height",
     render: () => (
-        <SvgImage height="100px" src={NoResults} stroke="alias-secondary" aria-label="No Results" />
+        <SvgImage height="100px" src={NoResults} stroke="neutral" aria-label="No Results" />
     )
 };
 

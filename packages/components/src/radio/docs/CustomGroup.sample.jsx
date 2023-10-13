@@ -17,7 +17,7 @@ function CustomComponent({ value, children, ...rest }) {
             value={value}
             onClick={handleCheck}
             color={isChecked ? "white" : undefined}
-            backgroundColor={isChecked ? "alias-accent" : "alias-warning-light"}
+            backgroundColor={isChecked ? "primary" : "warning-weak"}
             aria-checked={isChecked}
         >
             {children}
@@ -27,7 +27,7 @@ function CustomComponent({ value, children, ...rest }) {
 
 render(() => {
     return (
-        <RadioGroup gap={2} orientation="horizontal">
+        <RadioGroup gap={80} orientation="horizontal">
             <CustomComponent value="mars">Mars</CustomComponent>
             <CustomComponent value="jupiter">Jupiter</CustomComponent>
             <CustomComponent value="pluton">Pluton</CustomComponent>

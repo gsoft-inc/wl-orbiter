@@ -92,7 +92,7 @@ export function createTileLinkTestSuite(element, stories) {
         )
         .add("styling", () =>
             <Stack>
-                <TileLink border="warning-10" href="https://www.google.com" element={element}>
+                <TileLink border="sunken-treasure-900" href="https://www.google.com" element={element}>
                     <Heading>Fuel</Heading>
                     <Content>Fuel configuration and level</Content>
                 </TileLink>

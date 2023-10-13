@@ -145,7 +145,7 @@ export const Styling: SearchInputStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <SearchInput border="alert-6" aria-label="Label" />
+            <SearchInput border="amanita-600" aria-label="Label" />
             <SearchInput className="border-red" aria-label="Label" />
             <SearchInput style={{ border: "1px solid red" }} aria-label="Label" />
             <SearchInput wrapperProps={{ className: "border-red" }} aria-label="Label" />

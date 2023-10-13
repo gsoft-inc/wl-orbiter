@@ -9,8 +9,8 @@ export function CheckeredBackground({ children, ...rest }: DivProps) {
             {...mergeProps(
                 rest,
                 {
-                    color: "alias-primary",
-                    paddingLeft: 2,
+                    color: "neutral",
+                    paddingLeft: 80,
                     className: "o-ui-sb-checkered-background-preview"
                 }
             )}

@@ -22,10 +22,10 @@ stories()
     .add("styled system", () =>
         <Alert
             primaryButtonLabel="Yes"
-            border="warning-7"
+            border="warning"
         >
-            <Heading border="warning-7">Launch</Heading>
-            <Content border="warning-7">Are you sure you want to launch the space shuttle?</Content>
+            <Heading border="warning">Launch</Heading>
+            <Content border="warning">Are you sure you want to launch the space shuttle?</Content>
         </Alert>
     )
     .add("className", () =>

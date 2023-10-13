@@ -19,7 +19,7 @@ createTextLinkTestSuite(<TextLinkAsButton type="button" />, stories("/button"));
 stories()
     .add("styling", () =>
         <Inline>
-            <TextLink border="warning-7" href="#">Flight details</TextLink>
+            <TextLink border="warning" href="#">Flight details</TextLink>
             <TextLink className="bg-red" href="#">Flight details</TextLink>
             <TextLink style={{ backgroundColor: "red" }} href="#">Flight details</TextLink>
         </Inline>

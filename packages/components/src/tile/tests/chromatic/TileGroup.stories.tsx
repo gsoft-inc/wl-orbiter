@@ -216,7 +216,7 @@ export const Styling: TileGroupStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <TileGroup border="warning-7" rowSize={3}>
+            <TileGroup border="warning" rowSize={3}>
                 <TileLink href="https://www.google.com">
                     <Heading>Map</Heading>
                     <Content>View space map</Content>

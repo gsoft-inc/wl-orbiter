@@ -16,7 +16,7 @@ export function createTextLinkTestSuite(element, stories) {
                     <TextLink size="sm" href="#" element={element}>Flight details</TextLink>
                     <TextLink href="#" element={element}>Flight details</TextLink>
                 </Inline>
-                <Div fontSize={5}>
+                <Div fontSize={180}>
                     <TextLink size="inherit" href="#" element={element}>Flight details</TextLink>
                 </Div>
                 <Div width="400px">
@@ -85,7 +85,7 @@ export function createTextLinkTestSuite(element, stories) {
             </Inline>
         )
         .add("inherit color", () =>
-            <Inline alignY="end" color="alias-accent">
+            <Inline alignY="end" color="primary">
                 <TextLink color="inherit" size="sm" href="#" element={element}>Flight details</TextLink>
                 <TextLink color="inherit" href="#" element={element}>Flight details</TextLink>
             </Inline>

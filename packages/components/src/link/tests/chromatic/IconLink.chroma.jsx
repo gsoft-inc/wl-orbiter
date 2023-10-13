@@ -20,7 +20,7 @@ createIconLinkTestSuite(<IconLinkAsButton type="button" />, stories("/button"));
 stories()
     .add("styling", () =>
         <Inline>
-            <IconLink border="warning-7" href="#" aria-label="Add"><AddMajorIcon /></IconLink>
+            <IconLink border="warning" href="#" aria-label="Add"><AddMajorIcon /></IconLink>
             <IconLink className="bg-red" href="#" aria-label="Add"><AddMajorIcon /></IconLink>
             <IconLink style={{ backgroundColor: "red" }} href="#" aria-label="Add"><AddMajorIcon /></IconLink>
         </Inline>

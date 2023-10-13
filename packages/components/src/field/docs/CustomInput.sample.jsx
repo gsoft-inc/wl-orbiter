@@ -10,7 +10,7 @@ function CustomInput(props) {
                 base: "50%",
                 sm: "20%"
             }}
-            border={validationState === "invalid" ? "alias-alert" : "black"}
+            border={validationState === "invalid" ? "danger" : "black"}
         />
     );
 }

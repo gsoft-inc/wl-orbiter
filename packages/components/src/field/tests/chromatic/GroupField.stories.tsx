@@ -16,7 +16,7 @@ type GroupFieldStory = ComponentStoryObj<typeof GroupField>;
 export const GroupFieldCheckboxGroup: GroupFieldStory = {
     storyName: "checkbox group",
     render: () => (
-        <Stack gap={13}>
+        <Stack gap={800}>
             <GroupField>
                 <Label>Select your packages</Label>
                 <CheckboxGroup>
@@ -42,7 +42,7 @@ export const GroupFieldCheckboxGroup: GroupFieldStory = {
 export const GroupFieldRadioGroup: GroupFieldStory = {
     storyName: "radio group",
     render: () => (
-        <Inline gap={13} alignY="end">
+        <Inline gap={800} alignY="end">
             <GroupField>
                 <Label>Select your packages</Label>
                 <RadioGroup>
@@ -68,7 +68,7 @@ export const GroupFieldRadioGroup: GroupFieldStory = {
 export const GroupFieldButtonGroup: GroupFieldStory = {
     storyName: "button group",
     render: () => (
-        <Stack gap={13}>
+        <Stack gap={800}>
             <GroupField>
                 <Label>Would you like to rate your experience?</Label>
                 <ButtonGroup>
@@ -106,7 +106,7 @@ export const Styling: GroupFieldStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <GroupField border="warning-7">
+            <GroupField border="warning">
                 <RadioGroup>
                     <Radio value="1">1</Radio>
                     <Radio value="2">2</Radio>

@@ -113,7 +113,7 @@ export const Fluid: FormStory = {
 export const FluidFixWidthContainer: FormStory = {
     storyName: "fluid with fix width container",
     render: () => (
-        <Div width={17}>
+        <Div width="24rem">
             <Form fluid>
                 <Field>
                     <Label>Gender</Label>

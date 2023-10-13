@@ -20,14 +20,14 @@ To apply a style value, set a value to any [style property](#properties) of an O
 
 ```jsx
 <Div
-    fontSize={6}
-    fontWeight={3}
-    paddingTop={3}
-    paddingBottom={3}
-    marginBottom={3}
-    color="alias-static-white"
-    borderRadius={3}
-    backgroundColor="alias-accent">
+    fontSize="1.375rem"
+    fontWeight={680}
+    paddingTop={160}
+    paddingBottom={160}
+    marginBottom={160}
+    color="samoyed"
+    borderRadius="rounded-md"
+    backgroundColor="primary">
     Lost in space.
 </Div>
 ```
@@ -38,8 +38,8 @@ Props like `border` and `paddingX` are also provided to help you save keystrokes
 
 ```jsx
 <Div
-    paddingY={3}
-    border="alias-accent">
+    paddingY={80}
+    border="primary">
     Lost in space.
 </Div>
 ```
@@ -53,8 +53,8 @@ Inspired by [Styled System](https://styled-system.com/), Orbiter's style props a
 To help achieve a consistent user interface, Orbiter style props are based on scales and values defined in a customizable [theme](?path=/docs/theming--page).
 
 <Preview>
-    <Div width={18} backgroundColor="alias-accent-light" padding={4} borderRadius={2} maxWidth="100%">
-        <Paragraph fontSize={4}>Lost in space.</Paragraph>
+    <Div width="30rem" backgroundColor="primary-weak" padding={160} borderRadius="rounded-md" maxWidth="100%">
+        <Paragraph fontSize={160}>Lost in space.</Paragraph>
     </Div>
 </Preview>
 
@@ -84,8 +84,8 @@ Since the following user action pseudo-classes are often used, some style props 
 > Not all style props supports user action pseudo-classes. Find out which props support user action pseudo-classes in the [reference](#properties) section.
 
 <Preview>
-    <Div backgroundColorHover="alias-success-light" backgroundColor="alias-warning-light" padding={4} width={18} maxWidth="100%" borderRadius={2}>
-        <Paragraph fontSize={4}>Lost in space.</Paragraph>
+    <Div backgroundColorHover="status-positive" backgroundColor="warning-weak" padding={160} width="30rem" maxWidth="100%" borderRadius="rounded-md">
+        <Paragraph fontSize={160}>Lost in space.</Paragraph>
     </Div>
 </Preview>
 
@@ -106,11 +106,11 @@ To facilitate layouts, Orbiter provides specialized components for [grid](https:
 When applicable, always prefer using a [`<Grid>`](?path=/docs/grid--areas) or [`<Flex>`](?path=/docs/flex--horizontal) component instead of a [`<Div>`](?path=/docs/html-div--example) component.
 
 ```jsx
-<Grid templateColumns="1fr 1fr" gap={2} height={10}>
-    <Div backgroundColor="accent-5" />
-    <Div backgroundColor="alert-5" />
-    <Div backgroundColor="green-5" />
-    <Div backgroundColor="neutral-5" />
+<Grid templateColumns="1fr 1fr" gap={80} height={800}>
+    <Div backgroundColor="sapphire-500" />
+    <Div backgroundColor="amanita-500" />
+    <Div backgroundColor="moss-500" />
+    <Div backgroundColor="rock-500" />
 </Grid>
 ```
 
@@ -163,7 +163,7 @@ The following tables provide a list of all available style props by category.
 ### Space
 
 ```jsx
-<Div padding={4}>
+<Div padding={160}>
     Galaxy
 </Div>
 ```
@@ -191,7 +191,7 @@ The following tables provide a list of all available style props by category.
 ### Color
 
 ```jsx
-<Text backgroundColor="alias-accent-faint" color="alias-static-white">
+<Text backgroundColor="primary-weak" color="#FFFFFF">
     Galaxy
 </Text>
 ```
@@ -233,7 +233,7 @@ The following tables provide a list of all available style props by category.
 ### Layout
 
 ```jsx
-<Div width={18}>
+<Div width="30rem">
     Galaxy
 </Div>
 ```
@@ -344,8 +344,8 @@ The following tables provide a list of all available style props by category.
 
 ```jsx
 <Div
-    border={1}
-    borderRadius={2}
+    border="primary"
+    borderRadius="rounded-md"
 >
     Rocket
 </Div>
@@ -395,7 +395,7 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ```jsx
 <Div
-    boxShadow="alias-lifted"
+    boxShadow="lifted"
 />
 ```
 

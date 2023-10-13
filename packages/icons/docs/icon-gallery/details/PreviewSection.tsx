@@ -10,7 +10,7 @@ interface PreviewSectionProps {
 export function PreviewSection({ icon }: PreviewSectionProps) {
     return (
         <CheckeredBackground>
-            <Inline alignY="end" gap={2}>
+            <Inline alignY="end" gap={80}>
                 {cloneElement(icon)}
             </Inline>
         </CheckeredBackground>

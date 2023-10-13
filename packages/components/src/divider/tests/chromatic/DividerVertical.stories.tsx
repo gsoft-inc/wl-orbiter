@@ -16,7 +16,7 @@ type DividerStory = ComponentStoryObj<typeof Divider>;
 export const Default: DividerStory = {
     storyName: "default",
     render:() => (
-        <Div height={16}>
+        <Div height="20rem">
             <Divider orientation="vertical" />
         </Div>
     )
@@ -49,7 +49,7 @@ export const MultipleSeparators: DividerStory = {
 export const Labelled: DividerStory = {
     storyName: "labelled",
     render:() => (
-        <Div height={16}>
+        <Div height="20rem">
             <Divider orientation="vertical">Since 1978</Divider>
         </Div>
     )
@@ -58,7 +58,7 @@ export const Labelled: DividerStory = {
 export const LongLabel: DividerStory = {
     storyName: "long label",
     render:() => (
-        <Div height={16}>
+        <Div height="20rem">
             <Divider orientation="vertical">Since 1978 there have been more than 10 space exploration missions.</Divider>
         </Div>
     )
@@ -67,7 +67,7 @@ export const LongLabel: DividerStory = {
 export const LabelledSurrounded: DividerStory = {
     storyName: "labelled surrounded",
     render:() => (
-        <Flex height={16}>
+        <Flex height="20rem">
             <Text>Mission goals</Text>
             <Divider orientation="vertical">Since 1978</Divider>
             <Text>Mission post mortem</Text>
@@ -89,7 +89,7 @@ export const AlignItems: DividerStory = {
 export const Zoom: DividerStory = {
     storyName: "zoom",
     render:() => (
-        <Inline height={16}>
+        <Inline height="20rem">
             <Div className="zoom-in">
                 <Divider orientation="vertical">Since 1978</Divider>
             </Div>
@@ -103,8 +103,8 @@ export const Zoom: DividerStory = {
 export const Styling: DividerStory = {
     storyName: "styling",
     render:() => (
-        <Inline height={16}>
-            <Divider border="warning-7" orientation="vertical" />
+        <Inline height="20rem">
+            <Divider border="warning" orientation="vertical" />
             <Divider className="border-red" orientation="vertical" />
             <Divider style={{ border: "1px solid red" }} orientation="vertical" />
         </Inline>
