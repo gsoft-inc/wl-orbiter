@@ -12,12 +12,12 @@ export interface InnerAvatarGroupProps extends Omit<AbstractGroupProps<typeof De
     /**
      * The avatars of the group can vary in size.
      */
-    size?: ResponsiveProp<"2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl">;
 }
 
 interface RemainingAvatarsProps {
     avatars: ReactElement[];
-    size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 
 function RemainingAvatars({ avatars, size, ...rest }: RemainingAvatarsProps) {
@@ -109,7 +109,7 @@ export function InnerAvatarGroup({
                 {
                     as,
                     className: "o-ui-avatar-group",
-                    gap: 40 as const,
+                    gap: 0 as const,
                     orientation: "horizontal" as const,
                     ref: forwardedRef,
                     wrap: wrapValue
