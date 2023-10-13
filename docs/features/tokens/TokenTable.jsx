@@ -52,50 +52,50 @@ export function TokenTable({ colors }) {
 }
 
 export function backgroundRenderer(token) {
-    return <Div height={6} backgroundColor={token}></Div>;
+    return <Div height={400} backgroundColor={token}></Div>;
 }
 
 export function borderRenderer(token) {
-    return <Div padding={2}><Div height={6} border={token}></Div></Div>;
+    return <Div padding={2}><Div height={400} border={token}></Div></Div>;
 }
 
 export function boxShadowRenderer(token) {
-    return <Div paddingRight={4}><Div boxShadow={token} marginY={3} height={6}></Div></Div>;
+    return <Div paddingRight={160}><Div boxShadow={token} marginY="0.75rem" height={400}></Div></Div>;
 }
 
 export function durationRenderer() {
-    return <Div paddingRight={4}><Div marginY={3} height={6}></Div></Div>;
+    return <Div paddingRight={160}><Div marginY="0.75rem" height={400}></Div></Div>;
 }
 
 export function easingRenderer() {
-    return <Div paddingRight={4}><Div marginY={3} height={6}></Div></Div>;
+    return <Div paddingRight={160}><Div marginY="0.75rem" height={400}></Div></Div>;
 }
 
 export function fontSizeRenderer(token) {
-    return <Div height={12} display="flex" alignItems="center" justifyContent="start"><Text fontSize={token} lineHeight={1}>Ag</Text></Div>;
+    return <Div height={960} display="flex" alignItems="center" justifyContent="start"><Text fontSize={token} lineHeight={1}>Ag</Text></Div>;
 }
 
 export function fontWeightRenderer(token) {
-    return <Flex height={5} alignItems="center"><Text fontWeight={token} fontSize={6} lineHeight={1}>Ag</Text></Flex>;
+    return <Flex height={320} alignItems="center"><Text fontWeight={token} fontSize="1.375rem" lineHeight={1}>Ag</Text></Flex>;
 }
 
 export function iconRenderer(token) {
-    if (token === "alias-static-white") {
-        return <Div height={6} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><InfoCircleMajorIcon fill={token} /></Div>;
+    if (token === "samoyed") {
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><InfoCircleMajorIcon fill={token} /></Div>;
     } else {
-        return <Div height={6} display="flex" alignItems="center" justifyContent="start"><InfoCircleMajorIcon fill={token} /></Div>;
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start"><InfoCircleMajorIcon fill={token} /></Div>;
     }
 }
 
 export function lineHeightRenderer(token) {
-    return <Div display="inline-block" paddingX={2} lineHeight={token} borderRadius={2}><Span lineHeight={token}>Ag</Span></Div>;
+    return <Div display="inline-block" paddingX={80} lineHeight={token} borderRadius="rounded-md"><Span lineHeight={token}>Ag</Span></Div>;
 }
 
 export function radiiRenderer(token) {
     if (token === "circular") {
-        return <Div height={4} width={4} borderRadius={token} border="alias-accent"></Div>;
+        return <Div height={240} width={240} borderRadius={token} border="primary"></Div>;
     } else {
-        return <Div height={4} width={8} borderRadius={token} border="alias-accent"></Div>;
+        return <Div height={240} width="3.5rem" borderRadius={token} border="primary"></Div>;
     }
 }
 
@@ -104,14 +104,14 @@ export function sizingRenderer() {
 }
 
 export function spacingRenderer(token) {
-    return <Div height={4} width={token} backgroundColor="alias-accent" borderRadius={2}></Div>;
+    return <Div height={240} width={token} backgroundColor="primary" borderRadius="rounded-md"></Div>;
 }
 
 export function textRenderer(token) {
-    if (token === "alias-static-white") {
-        return <Div height={6} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><Text marginLeft={1} color={token} size="lg">Moon</Text></Div>;
+    if (token === "#FFFFFF" || token === "samoyed") {
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><Text marginLeft={40} color={token} size="lg">Moon</Text></Div>;
     } else {
-        return <Div height={6} display="flex" alignItems="center" justifyContent="start"><Text marginLeft={1} color={token} size="lg">Moon</Text></Div>;
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start"><Text marginLeft={40} color={token} size="lg">Moon</Text></Div>;
     }
 }
 

@@ -15,7 +15,7 @@ type BadgeStory = ComponentStoryObj<typeof Badge>;
 export const Default: BadgeStory = {
     storyName: "default",
     render: () => (
-        <Inline gap={8}>
+        <Inline gap={400}>
             <SquareBadge>
                 <Text>5</Text>
             </SquareBadge>
@@ -38,7 +38,7 @@ export const Default: BadgeStory = {
 export const Overlap: BadgeStory = {
     storyName: "overlap",
     render: () => (
-        <Inline gap={8}>
+        <Inline gap={400}>
             <SquareBadge>
                 <Text>50</Text>
             </SquareBadge>
@@ -55,7 +55,7 @@ export const Overlap: BadgeStory = {
 export const Zoom: BadgeStory = {
     storyName: "zoom",
     render: () => (
-        <Inline gap={8}>
+        <Inline gap={400}>
             <Div className="zoom-in">
                 <SquareBadge>
                     <Text>5</Text>
@@ -73,8 +73,8 @@ export const Zoom: BadgeStory = {
 export const Styling: BadgeStory = {
     storyName: "styling",
     render: () => (
-        <Inline gap={8}>
-            <SquareBadge border="warning-7">
+        <Inline gap={400}>
+            <SquareBadge border="warning">
                 <Text>100</Text>
             </SquareBadge>
             <SquareBadge className="border-red">

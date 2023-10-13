@@ -12,7 +12,7 @@ export function InnerCrossButton({ className, forwardedRef, ...rest }: InnerCros
         <IconButton
             {...rest}
             className={mergeClasses("o-ui-cross-button", className)}
-            fill="alias-primary"
+            fill="primary"
             ref={forwardedRef}
             variant="tertiary"
         >

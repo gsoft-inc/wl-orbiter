@@ -43,7 +43,7 @@ test("when a wrapper style is provided, render the style on the wrapper element"
 
 test("when a styled prop is provided, render the style on the wrapper element", async () => {
     renderWithTheme(
-        <TextInput marginTop={10} wrapperProps={{ "data-testid": "wrapper" }} aria-label="Label" />
+        <TextInput marginTop="3.5rem" wrapperProps={{ "data-testid": "wrapper" }} aria-label="Label" />
     );
 
     await waitFor(() => expect(screen.getByTestId("wrapper")).toHaveStyle({

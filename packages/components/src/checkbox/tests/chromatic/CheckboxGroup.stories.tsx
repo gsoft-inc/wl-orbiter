@@ -37,7 +37,7 @@ function CustomComponent({
             as="button"
             onClick={handleCheck}
             color={isChecked ? "white" : undefined}
-            backgroundColor={isChecked ? "accent-6" : "neutral-6"}
+            backgroundColor={isChecked ? "sapphire-600" : "rock-600"}
             aria-checked={isChecked}
         >
             {children}
@@ -112,7 +112,7 @@ export const Disabled: CheckboxGroupStory = {
 export const Gap: CheckboxGroupStory = {
     storyName: "gap",
     render: () => (
-        <CheckboxGroup gap={13}>
+        <CheckboxGroup gap={800}>
             <Checkbox value="1">1</Checkbox>
             <Checkbox value="2">2</Checkbox>
             <Checkbox value="3">3</Checkbox>
@@ -123,11 +123,11 @@ export const Gap: CheckboxGroupStory = {
 export const Wrap: CheckboxGroupStory = {
     storyName: "wrap",
     render: () => (
-        <Div width={11}>
+        <Div width={800}>
             <CheckboxGroup wrap>
                 {
                     ["1", "2", "3", "4", "5", "6", "7", "8"].map(x =>
-                        <Checkbox width={6} value={x} key={x}>{x}</Checkbox>
+                        <Checkbox width={400} value={x} key={x}>{x}</Checkbox>
                     )
                 }
             </CheckboxGroup>
@@ -138,11 +138,11 @@ export const Wrap: CheckboxGroupStory = {
 export const NoWrap: CheckboxGroupStory = {
     storyName: "no wrap",
     render: () => (
-        <Div width={11}>
+        <Div width={800}>
             <CheckboxGroup wrap={false}>
                 {
                     ["1", "2", "3", "4", "5", "6", "7", "8"].map(x =>
-                        <Checkbox width={6} value={x} key={x}>{x}</Checkbox>
+                        <Checkbox width={400} value={x} key={x}>{x}</Checkbox>
                     )
                 }
             </CheckboxGroup>
@@ -154,7 +154,7 @@ export const NoWrap: CheckboxGroupStory = {
 export const WrapOverflow: CheckboxGroupStory = {
     storyName: "wrap overflow",
     render: () => (
-        <Div width={12}>
+        <Div width={960}>
             <CheckboxGroup wrap>
                 {
                     ["1", "2", "3", "Neptune", "5", "6", "7", "8"].map(x =>
@@ -169,7 +169,7 @@ export const WrapOverflow: CheckboxGroupStory = {
 export const ToggleButtons: CheckboxGroupStory = {
     storyName: "toggle buttons",
     render: () => (
-        <CheckboxGroup gap={2} defaultValue={["2"]}>
+        <CheckboxGroup gap={80} defaultValue={["2"]}>
             <ToggleButton variant="secondary" value="1">1</ToggleButton>
             <ToggleButton variant="secondary" value="2">2</ToggleButton>
             <ToggleButton variant="secondary" value="3">3</ToggleButton>
@@ -180,7 +180,7 @@ export const ToggleButtons: CheckboxGroupStory = {
 export const CustomComponents: CheckboxGroupStory = {
     storyName: "custom components",
     render: () => (
-        <CheckboxGroup gap={2} defaultValue={["2"]}>
+        <CheckboxGroup gap={80} defaultValue={["2"]}>
             <CustomComponent value="1">1</CustomComponent>
             <CustomComponent value="2">2</CustomComponent>
             <CustomComponent value="3">3</CustomComponent>
@@ -191,7 +191,7 @@ export const CustomComponents: CheckboxGroupStory = {
 export const Validation: CheckboxGroupStory = {
     storyName: "validation",
     render: () => (
-        <Inline gap={13}>
+        <Inline gap={800}>
             <CheckboxGroup validationState="invalid">
                 <Checkbox value="1">1</Checkbox>
                 <Checkbox value="2">2</Checkbox>
@@ -210,7 +210,7 @@ export const Styling: CheckboxGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <CheckboxGroup border="warning-7">
+            <CheckboxGroup border="warning">
                 <Checkbox value="1">1</Checkbox>
                 <Checkbox value="2">2</Checkbox>
                 <Checkbox value="3">3</Checkbox>

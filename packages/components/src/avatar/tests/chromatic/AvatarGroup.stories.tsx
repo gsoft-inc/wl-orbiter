@@ -26,12 +26,8 @@ type AvatarGroupStory = ComponentStoryObj<typeof AvatarGroup>;
 export const Default: AvatarGroupStory = {
     storyName: "default",
     render: () => (
-        <Inline gap={13}>
+        <Inline gap={800}>
             <Stack>
-                <AvatarGroup size="2xs">
-                    <Avatar name="Sally Ride" />
-                    <Avatar name="Alan Shepard" />
-                </AvatarGroup>
                 <AvatarGroup size="xs">
                     <Avatar name="Sally Ride" />
                     <Avatar name="Alan Shepard" />
@@ -49,21 +45,11 @@ export const Default: AvatarGroupStory = {
                     <Avatar name="Alan Shepard" />
                 </AvatarGroup>
                 <AvatarGroup size="xl">
-                    <Avatar name="Sally Ride" />
-                    <Avatar name="Alan Shepard" />
-                </AvatarGroup>
-                <AvatarGroup size="2xl">
                     <Avatar name="Sally Ride" />
                     <Avatar name="Alan Shepard" />
                 </AvatarGroup>
             </Stack>
             <Stack>
-                <AvatarGroup size="2xs">
-                    <Avatar name="Sally Ride" />
-                    <Avatar name="Alan Shepard" />
-                    <Avatar name="Chris Hadfield" />
-                    <Avatar name="Christa McAuliffe" />
-                </AvatarGroup>
                 <AvatarGroup size="xs">
                     <Avatar name="Sally Ride" />
                     <Avatar name="Alan Shepard" />
@@ -89,12 +75,6 @@ export const Default: AvatarGroupStory = {
                     <Avatar name="Christa McAuliffe" />
                 </AvatarGroup>
                 <AvatarGroup size="xl">
-                    <Avatar name="Sally Ride" />
-                    <Avatar name="Alan Shepard" />
-                    <Avatar name="Chris Hadfield" />
-                    <Avatar name="Christa McAuliffe" />
-                </AvatarGroup>
-                <AvatarGroup size="2xl">
                     <Avatar name="Sally Ride" />
                     <Avatar name="Alan Shepard" />
                     <Avatar name="Chris Hadfield" />
@@ -108,7 +88,7 @@ export const Default: AvatarGroupStory = {
 export const NoWrap: AvatarGroupStory = {
     storyName: "no wrap",
     render: () => (
-        <Div width={12}>
+        <Div width={960}>
             <AvatarGroup wrap={false} size="xl">
                 <Avatar name="Sally Ride" />
                 <Avatar name="Alan Shepard" />
@@ -124,13 +104,6 @@ export const WithRemainings: AvatarGroupStory = {
     storyName: "with remainings",
     render: () => (
         <Stack>
-            <AvatarGroup size="2xs">
-                <Avatar name="Sally Ride" />
-                <Avatar name="Alan Shepard" />
-                <Avatar name="Chris Hadfield" />
-                <Avatar name="Christa McAuliffe" />
-                <Avatar name="Neil Armstrong" />
-            </AvatarGroup>
             <AvatarGroup size="xs">
                 <Avatar name="Sally Ride" />
                 <Avatar name="Alan Shepard" />
@@ -166,13 +139,6 @@ export const WithRemainings: AvatarGroupStory = {
                 <Avatar name="Christa McAuliffe" />
                 <Avatar name="Neil Armstrong" />
             </AvatarGroup>
-            <AvatarGroup size="2xl">
-                <Avatar name="Sally Ride" />
-                <Avatar name="Alan Shepard" />
-                <Avatar name="Chris Hadfield" />
-                <Avatar name="Christa McAuliffe" />
-                <Avatar name="Neil Armstrong" />
-            </AvatarGroup>
         </Stack>
     )
 };
@@ -180,8 +146,8 @@ export const WithRemainings: AvatarGroupStory = {
 export const Overflow: AvatarGroupStory = {
     storyName: "overflow",
     render: () => (
-        <Div width={10}>
-            <AvatarGroup size="2xl">
+        <Div width="4.5rem">
+            <AvatarGroup size="xl">
                 <Avatar name="Sally Ride" />
                 <Avatar name="Alan Shepard" />
                 <Avatar name="Chris Hadfield" />
@@ -215,7 +181,7 @@ export const Styling: AvatarGroupStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <AvatarGroup border="warning-7">
+            <AvatarGroup border="warning">
                 <Avatar name="Sally Ride" />
                 <Avatar name="Alan Shepard" />
             </AvatarGroup>

@@ -97,7 +97,7 @@ export const Styling: NumberInputStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <NumberInput border="warning-7" placeholder="Age" />
+            <NumberInput border="warning" placeholder="Age" />
             <NumberInput className="border-red" placeholder="Age" />
             <NumberInput style={{ border: "1px solid red" }} placeholder="Age" />
             <NumberInput wrapperProps={{ className: "border-red" }} placeholder="Age" />

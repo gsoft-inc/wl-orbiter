@@ -172,10 +172,10 @@ export const Styling: TextAreaStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <TextArea border="alert-6" aria-label="Label" />
+            <TextArea border="amanita-600" aria-label="Label" />
             <TextArea className="bg-red" aria-label="Label" />
             <TextArea style={{ backgroundColor: "red" }} aria-label="Label" />
-            <TextArea wrapperProps={{ border: "alert-6" }} aria-label="Label" />
+            <TextArea wrapperProps={{ border: "amanita-600" }} aria-label="Label" />
             <TextArea wrapperProps={{ className: "border-red" }} aria-label="Label" />
             <TextArea wrapperProps={{ style: { border: "1px solid red" } }} aria-label="Label" />
         </Inline>

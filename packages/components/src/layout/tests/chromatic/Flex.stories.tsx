@@ -13,9 +13,9 @@ export const Default: FlexStory = {
     storyName: "default",
     render: () => (
         <Flex>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Flex>
     )
 };
@@ -25,14 +25,14 @@ export const FlexInline: FlexStory = {
     render: () => (
         <>
             <Flex inline>
-                <Div backgroundColor="accent-5">Alpha</Div>
-                <Div backgroundColor="accent-5">Bravo</Div>
-                <Div backgroundColor="accent-5">Charlie</Div>
+                <Div backgroundColor="sapphire-500">Alpha</Div>
+                <Div backgroundColor="sapphire-500">Bravo</Div>
+                <Div backgroundColor="sapphire-500">Charlie</Div>
             </Flex>
             <Flex inline>
-                <Div backgroundColor="accent-5">Alpha</Div>
-                <Div backgroundColor="accent-5">Bravo</Div>
-                <Div backgroundColor="accent-5">Charlie</Div>
+                <Div backgroundColor="sapphire-500">Alpha</Div>
+                <Div backgroundColor="sapphire-500">Bravo</Div>
+                <Div backgroundColor="sapphire-500">Charlie</Div>
             </Flex>
         </>
     )
@@ -41,16 +41,16 @@ export const FlexInline: FlexStory = {
 export const Nesting: FlexStory = {
     storyName: "nesting",
     render: () => (
-        <Flex direction="row" gap={8}>
-            <Flex direction="row" gap={1}>
-                <Div backgroundColor="accent-5">Alpha</Div>
-                <Div backgroundColor="accent-5">Bravo</Div>
-                <Div backgroundColor="accent-5">Charlie</Div>
+        <Flex direction="row" gap={400}>
+            <Flex direction="row" gap={40}>
+                <Div backgroundColor="sapphire-500">Alpha</Div>
+                <Div backgroundColor="sapphire-500">Bravo</Div>
+                <Div backgroundColor="sapphire-500">Charlie</Div>
             </Flex>
-            <Flex direction="column" gap={12}>
-                <Div backgroundColor="alert-5">Delta</Div>
-                <Div backgroundColor="alert-5">Echo</Div>
-                <Div backgroundColor="alert-5">Foxtrot</Div>
+            <Flex direction="column" gap={800}>
+                <Div backgroundColor="amanita-500">Delta</Div>
+                <Div backgroundColor="amanita-500">Echo</Div>
+                <Div backgroundColor="amanita-500">Foxtrot</Div>
             </Flex>
         </Flex>
     )
@@ -59,10 +59,10 @@ export const Nesting: FlexStory = {
 export const Gap: FlexStory = {
     storyName: "gap",
     render: () => (
-        <Flex gap={4}>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Flex gap={160}>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Flex>
     )
 };
@@ -70,10 +70,10 @@ export const Gap: FlexStory = {
 export const ColumnGap: FlexStory = {
     storyName: "column gap",
     render: () => (
-        <Flex columnGap={4}>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Flex columnGap={160}>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Flex>
     )
 };
@@ -81,10 +81,10 @@ export const ColumnGap: FlexStory = {
 export const RowGap: FlexStory = {
     storyName: "row gap",
     render: () => (
-        <Flex rowGap={4} direction="column">
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Flex rowGap={160} direction="column">
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Flex>
     )
 };

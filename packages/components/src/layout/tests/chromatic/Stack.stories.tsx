@@ -13,9 +13,9 @@ export const Default: StackStory = {
     storyName: "default",
     render: () => (
         <Stack>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -24,9 +24,9 @@ export const Reverse: StackStory = {
     storyName: "reverse",
     render: () => (
         <Stack reverse>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -35,9 +35,9 @@ export const AlignXStart: StackStory = {
     storyName: "align X start",
     render: () => (
         <Stack alignX="start">
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -46,9 +46,9 @@ export const AlignXCenter: StackStory = {
     storyName: "align X center",
     render: () => (
         <Stack alignX="center">
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -57,9 +57,9 @@ export const AlignXEnd: StackStory = {
     storyName: "align X end",
     render: () => (
         <Stack alignX="end">
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -67,10 +67,10 @@ export const AlignXEnd: StackStory = {
 export const AlignYStart: StackStory = {
     storyName: "align Y start",
     render: () => (
-        <Stack alignY="start" height={12}>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Stack alignY="start" height={960}>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -78,10 +78,10 @@ export const AlignYStart: StackStory = {
 export const AlignYCenter: StackStory = {
     storyName: "align Y center",
     render: () => (
-        <Stack alignY="center" height={12}>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Stack alignY="center" height={960}>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -89,10 +89,10 @@ export const AlignYCenter: StackStory = {
 export const AlignYEnd: StackStory = {
     storyName: "align Y end",
     render: () => (
-        <Stack alignY="end" height={12}>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Stack alignY="end" height={960}>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -100,10 +100,10 @@ export const AlignYEnd: StackStory = {
 export const Wrap: StackStory = {
     storyName: "wrap",
     render: () => (
-        <Stack wrap height={4}>
-            <Div backgroundColor="accent-5">Alpha</Div>
-            <Div backgroundColor="accent-5">Bravo</Div>
-            <Div backgroundColor="accent-5">Charlie</Div>
+        <Stack wrap height={240}>
+            <Div backgroundColor="sapphire-500">Alpha</Div>
+            <Div backgroundColor="sapphire-500">Bravo</Div>
+            <Div backgroundColor="sapphire-500">Charlie</Div>
         </Stack>
     )
 };
@@ -113,14 +113,14 @@ export const Inline: StackStory = {
     render: () => (
         <>
             <Stack inline>
-                <Div backgroundColor="accent-5">Alpha</Div>
-                <Div backgroundColor="accent-5">Bravo</Div>
-                <Div backgroundColor="accent-5">Charlie</Div>
+                <Div backgroundColor="sapphire-500">Alpha</Div>
+                <Div backgroundColor="sapphire-500">Bravo</Div>
+                <Div backgroundColor="sapphire-500">Charlie</Div>
             </Stack>
             <Stack inline>
-                <Div backgroundColor="accent-5">Alpha</Div>
-                <Div backgroundColor="accent-5">Bravo</Div>
-                <Div backgroundColor="accent-5">Charlie</Div>
+                <Div backgroundColor="sapphire-500">Alpha</Div>
+                <Div backgroundColor="sapphire-500">Bravo</Div>
+                <Div backgroundColor="sapphire-500">Charlie</Div>
             </Stack>
         </>
     )
@@ -129,16 +129,16 @@ export const Inline: StackStory = {
 export const Nested: StackStory = {
     storyName: "nested",
     render: () => (
-        <Stack gap={8}>
-            <Stack gap={1}>
-                <Div backgroundColor="accent-5">Alpha</Div>
-                <Div backgroundColor="accent-5">Bravo</Div>
-                <Div backgroundColor="accent-5">Charlie</Div>
+        <Stack gap={400}>
+            <Stack gap={40}>
+                <Div backgroundColor="sapphire-500">Alpha</Div>
+                <Div backgroundColor="sapphire-500">Bravo</Div>
+                <Div backgroundColor="sapphire-500">Charlie</Div>
             </Stack>
-            <Stack gap={12}>
-                <Div backgroundColor="alert-5">Delta</Div>
-                <Div backgroundColor="alert-5">Echo</Div>
-                <Div backgroundColor="alert-5">Foxtrot</Div>
+            <Stack gap={800}>
+                <Div backgroundColor="amanita-500">Delta</Div>
+                <Div backgroundColor="amanita-500">Echo</Div>
+                <Div backgroundColor="amanita-500">Foxtrot</Div>
             </Stack>
         </Stack>
     )

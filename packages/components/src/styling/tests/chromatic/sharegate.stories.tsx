@@ -27,8 +27,8 @@ function SmallSquare(props: BoxProps) {
     return (
         <Box
             {...props}
-            width={5}
-            height={5}
+            width={320}
+            height={320}
         />
     );
 }
@@ -37,8 +37,8 @@ function LargeSquare(props: BoxProps) {
     return (
         <Box
             {...props}
-            width={8}
-            height={8}
+            width="3.5rem"
+            height="3.5rem"
         />
     );
 }
@@ -63,11 +63,11 @@ export const Border: ShareGateStory = {
     storyName: "border",
     render: () => (
         <Stack>
-            <Inline gap={1} wrap>
+            <Inline gap={40} wrap>
                 {Object.keys(BorderMapping).map(x => <SmallSquare border={x} key={x} />)}
             </Inline>
             <ThemeProvider colorScheme="dark">
-                <Inline gap={1} wrap>
+                <Inline gap={40} wrap>
                     {Object.keys(BorderMapping).map(x => <SmallSquare border={x} key={x} />)}
                 </Inline>
             </ThemeProvider>
@@ -143,7 +143,7 @@ export const Spacing: ShareGateStory = {
     storyName: "spacing",
     render: () => (
         <Stack>
-            {Object.keys(SpacingMapping).map(x => <Box width={x} height={3} backgroundColor="#000" key={x} />)}
+            {Object.keys(SpacingMapping).map(x => <Box width={x} height="1.25rem" backgroundColor="#000" key={x} />)}
         </Stack>
     )
 };
@@ -152,7 +152,7 @@ export const Sizing: ShareGateStory = {
     storyName: "sizing",
     render: () => (
         <Stack>
-            {Object.keys(SizingMapping).map(x => <Box width={x} height={3} backgroundColor="#000" key={x} />)}
+            {Object.keys(SizingMapping).map(x => <Box width={x} height="1.25rem" backgroundColor="#000" key={x} />)}
         </Stack>
     )
 };

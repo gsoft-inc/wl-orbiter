@@ -43,7 +43,7 @@ export const Default: TabsStory = {
 export const Fluid: TabsStory = {
     storyName: "fluid",
     render: () => (
-        <Tabs orientation="vertical" fluid height={14} aria-label="Planets">
+        <Tabs orientation="vertical" fluid height="12rem" aria-label="Planets">
             <Item>
                 <Header>Mars</Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>

@@ -8,7 +8,7 @@ function CustomInput(props) {
                 {
                     type: "text",
                     width: "225px",
-                    height: 6,
+                    height: "2.5rem",
                     border: "hsla(223, 12%, 87%, 1)",
                     style: {
                         borderTopLeftRadius: "var(--o-ui-input-border-radius)",

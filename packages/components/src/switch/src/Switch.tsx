@@ -1,5 +1,6 @@
 import { AbstractInputProps } from "../../input";
 import { Box } from "../../box";
+import { Span } from "../../html";
 import { ChangeEvent, ChangeEventHandler, ComponentProps, ReactNode, forwardRef, useMemo } from "react";
 import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useSlots } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
@@ -161,7 +162,7 @@ export function InnerSwitch(props: InnerSwitchProps) {
                 {...inputProps}
                 role="switch"
             />
-            <span className="o-ui-switch-control" />
+            <Span className="o-ui-switch-control" />
             {text}
             {icon}
             {counter}

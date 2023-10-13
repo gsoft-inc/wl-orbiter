@@ -22,7 +22,7 @@ createButtonTestSuite(<ButtonAsLink variant="negative" />, stories("/negative"))
 stories()
     .add("styling", () =>
         <Inline>
-            <ButtonAsLink border="warning-6" variant="secondary">Button</ButtonAsLink>
+            <ButtonAsLink border="sunken-treasure-600" variant="secondary">Button</ButtonAsLink>
             <ButtonAsLink className="bg-red" variant="secondary">Button</ButtonAsLink>
             <ButtonAsLink style={{ backgroundColor: "red" }} variant="secondary">Button</ButtonAsLink>
         </Inline>

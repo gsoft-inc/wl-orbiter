@@ -13,7 +13,7 @@ type TextStory = ComponentStoryObj<typeof Text>;
 export const Default: TextStory = {
     storyName: "default",
     render: () => (
-        <Stack gap="0">
+        <Stack gap={0}>
             <Text size="2xl">There are no passengers on spaceship earth.</Text>
             <Text size="xl">There are no passengers on spaceship earth.</Text>
             <Text size="lg">There are no passengers on spaceship earth.</Text>
@@ -27,7 +27,7 @@ export const Default: TextStory = {
 export const Inherit: TextStory = {
     storyName: "inherit",
     render: () => (
-        <Div fontSize={1}>
+        <Div fontSize="0.625rem">
             <Text size="inherit">There are no passengers on spaceship earth.</Text>
         </Div>
     )
@@ -37,7 +37,7 @@ export const Styling: TextStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Text border="warning-7">There are no passengers on spaceship earth.</Text>
+            <Text border="warning">There are no passengers on spaceship earth.</Text>
             <Text className="bg-red">There are no passengers on spaceship earth.</Text>
             <Text style={{ backgroundColor: "red" }}>There are no passengers on spaceship earth.</Text>
         </Stack>

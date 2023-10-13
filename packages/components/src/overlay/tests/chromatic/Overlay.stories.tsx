@@ -22,9 +22,9 @@ function PrimaryBox({ children, ...rest }: BoxProps) {
     return (
         <Box
             {...rest}
-            backgroundColor="accent-6"
-            height={9}
-            width={9}
+            backgroundColor="sapphire-600"
+            height="4rem"
+            width="4rem"
         >
             {children}
         </Box>
@@ -75,7 +75,7 @@ export const StyledSystem: OverlayStory = {
     storyName: "styled system",
     render: () => (
         <Boundary>
-            <Overlay border="warning-7" show>
+            <Overlay border="warning" show>
                 <PrimaryBox />
             </Overlay>
         </Boundary>

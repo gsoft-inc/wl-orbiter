@@ -26,11 +26,11 @@ export const Horizontal: IllustrationStory = {
     storyName: "horizontal",
     render: () => (
         <Stack>
-            <Illustration orientation="horizontal" width="700px" height="200px" backgroundColor="accent-2">
+            <Illustration orientation="horizontal" width="700px" height="200px" backgroundColor="sapphire-200">
                 <Image src={Nasa} alt="Nasa" />
             </Illustration>
             <Box width="700px" height="200px">
-                <Illustration orientation="horizontal" backgroundColor="accent-2">
+                <Illustration orientation="horizontal" backgroundColor="sapphire-200">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
             </Box>
@@ -42,11 +42,11 @@ export const Vertical: IllustrationStory = {
     storyName: "vertical",
     render: () => (
         <Inline>
-            <Illustration orientation="vertical" width="200px" height="500px" backgroundColor="accent-2">
+            <Illustration orientation="vertical" width="200px" height="500px" backgroundColor="sapphire-200">
                 <Image src={Nasa} alt="Nasa" />
             </Illustration>
             <Box width="200px" height="500px">
-                <Illustration orientation="vertical" backgroundColor="accent-2">
+                <Illustration orientation="vertical" backgroundColor="sapphire-200">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
             </Box>
@@ -57,7 +57,7 @@ export const Vertical: IllustrationStory = {
 export const Straight: IllustrationStory = {
     storyName: "straight",
     render: () => (
-        <Illustration shape="straight" width="700px" height="200px" backgroundColor="accent-2">
+        <Illustration shape="straight" width="700px" height="200px" backgroundColor="sapphire-200">
             <Image src={Nasa} alt="Nasa" />
         </Illustration>
     )
@@ -66,7 +66,7 @@ export const Straight: IllustrationStory = {
 export const Rounded: IllustrationStory = {
     storyName: "rounded",
     render: () => (
-        <Illustration shape="rounded" width="700px" height="200px" backgroundColor="accent-2">
+        <Illustration shape="rounded" width="700px" height="200px" backgroundColor="sapphire-200">
             <Image src={Nasa} alt="Nasa" />
         </Illustration>
     )
@@ -77,7 +77,7 @@ export const Color: IllustrationStory = {
     render: () => (
         <Stack>
             <Inline>
-                <Illustration backgroundColor="accent-2" width="700px" height="200px">
+                <Illustration backgroundColor="sapphire-200" width="700px" height="200px">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
                 <Illustration backgroundColor="rgb(151, 231, 222)" width="700px" height="200px">
@@ -101,12 +101,12 @@ export const Zoom: IllustrationStory = {
     render: () => (
         <Stack>
             <Div className="zoom-in">
-                <Illustration border="warning-7" width="700px" height="200px">
+                <Illustration border="warning" width="700px" height="200px">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
             </Div>
             <Div className="zoom-out">
-                <Illustration border="warning-7" width="700px" height="200px">
+                <Illustration border="warning" width="700px" height="200px">
                     <Image src={Nasa} alt="Nasa" />
                 </Illustration>
             </Div>
@@ -118,7 +118,7 @@ export const Styling: IllustrationStory = {
     storyName: "styling",
     render: () => (
         <Stack>
-            <Illustration border="warning-7" width="700px" height="200px">
+            <Illustration border="warning" width="700px" height="200px">
                 <Image src={Nasa} alt="Nasa" />
             </Illustration>
             <Illustration className="border-red" width="700px" height="200px">

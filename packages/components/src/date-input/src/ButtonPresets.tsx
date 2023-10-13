@@ -23,7 +23,7 @@ export function ButtonPresets({
         <RadioGroup
             aria-label="Date presets"
             className="o-ui-date-input-button-presets"
-            gap={2}
+            gap={80}
             onChange={handleSelectPreset}
             orientation="horizontal"
             value={!isNil(selectedIndex) ? selectedIndex.toString() : null}

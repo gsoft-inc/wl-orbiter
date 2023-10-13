@@ -363,7 +363,7 @@ export const TriggerStates: AutocompleteStory = {
 export const NoResults: AutocompleteStory = {
     storyName: "no results",
     render: () => (
-        <Stack gap={13}>
+        <Stack gap={800}>
             <Inline>
                 <Autocomplete defaultOpen placeholder="Select a planet" aria-label="Planets">
                     <Item key="earth">Earth</Item>
@@ -402,7 +402,7 @@ export const NoResults: AutocompleteStory = {
 export const CustomTriggerWidth: AutocompleteStory = {
     storyName: "custom trigger width",
     render: () => (
-        <Autocomplete width={16} placeholder="Select a planet" aria-label="Planets">
+        <Autocomplete width="20rem" placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
             <Item key="mars">Mars</Item>
             <Item key="saturn">Saturn</Item>
@@ -506,7 +506,7 @@ export const Styling: AutocompleteStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <Autocomplete border="warning-7" placeholder="Select a planet" aria-label="Planets">
+            <Autocomplete border="warning" placeholder="Select a planet" aria-label="Planets">
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>

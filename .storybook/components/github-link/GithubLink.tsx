@@ -14,7 +14,7 @@ export function GithubLink({ path, logo = false, children, ...rest }: GithubLink
     if (logo) {
         return (
             <Flex inline alignItems="center">
-                <Img src={GithubLogo} alt="Github" width={5} height={5} marginRight={2} />
+                <Img src={GithubLogo} alt="Github" width={320} height={320} marginRight={80} />
                 <ExternalLink href={getGithubUrl(path)} {...rest}>{children}</ExternalLink>
             </Flex>
         );

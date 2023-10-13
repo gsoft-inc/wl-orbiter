@@ -15,7 +15,7 @@ render(() => {
 
     return (
         <ThemeProvider colorScheme={parentColorScheme}>
-            <Div backgroundColor="alias-surface" padding={2}>
+            <Div backgroundColor="neutral" padding={2}>
                 <ColorSchemeToggle />
             </Div>
         </ThemeProvider>

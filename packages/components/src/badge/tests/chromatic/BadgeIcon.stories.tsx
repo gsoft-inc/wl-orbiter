@@ -23,7 +23,7 @@ export const Default: BadgeStory = {
 export const Overlap: BadgeStory = {
     storyName: "overlap",
     render: () => (
-        <Inline gap={8}>
+        <Inline gap={400}>
             <SquareBadge variant="icon">
                 <PlaceholderMajorIcon />
             </SquareBadge>
@@ -44,7 +44,7 @@ export const Styling: BadgeStory = {
     storyName: "styling",
     render: () => (
         <Inline>
-            <SquareBadge border="warning-7" variant="icon">
+            <SquareBadge border="warning" variant="icon">
                 <PlaceholderMajorIcon />
             </SquareBadge>
             <SquareBadge className="border-red" variant="icon">

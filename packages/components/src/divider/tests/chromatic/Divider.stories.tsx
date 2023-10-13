@@ -54,7 +54,7 @@ export const Labelled: DividerStory = {
 export const LongLabel: DividerStory = {
     storyName: "long label",
     render:() => (
-        <Divider height={16}>Since 1978 there have been more than 10 space exploration missions.</Divider>
+        <Divider height="20rem">Since 1978 there have been more than 10 space exploration missions.</Divider>
     )
 };
 
@@ -87,7 +87,7 @@ export const Styling: DividerStory = {
     storyName: "styling",
     render:() => (
         <Stack>
-            <Divider border="warning-7" />
+            <Divider border="warning" />
             <Divider className="border-red" />
             <Divider style={{ border: "1px solid red" }} />
         </Stack>

@@ -34,8 +34,8 @@ An image can use a different shape.
 <Preview scope={{ GalaxyImage }}>
     <Story name="shape">
         <Inline>
-            <Image shape="rounded" src={GalaxyImage} alt="Galaxy" width={12} height={12} />
-            <Image shape="circular" src={GalaxyImage} alt="Galaxy" width={12} height={12} />
+            <Image shape="rounded" src={GalaxyImage} alt="Galaxy" width={960} height={960} />
+            <Image shape="circular" src={GalaxyImage} alt="Galaxy" width={960} height={960} />
         </Inline>
     </Story>
 </Preview>
@@ -70,7 +70,7 @@ For some use cases, like dark mode support, an SVG image is a better fit than a 
 
 <Preview scope={{ NoResults }}>
     <Story name="svg image">
-        <SvgImage src={NoResults} stroke="purple-6" aria-label="No results" />
+        <SvgImage src={NoResults} stroke="sapphire-600" aria-label="No results" />
     </Story>
 </Preview>
 
@@ -80,7 +80,7 @@ An SVG image size can be specified with the `width` and `height` props.
 
 <Preview scope={{ NoResults }}>
     <Story name="svg image size">
-        <SvgImage width="150px" height="150px"stroke="purple-6" src={NoResults} aria-label="No results" />
+        <SvgImage width="150px" height="150px"stroke="sapphire-600" src={NoResults} aria-label="No results" />
     </Story>
 </Preview>
 
@@ -90,7 +90,7 @@ An SVG image `stroke` and `fill` color can vary.
 
 <Preview scope={{ NoResults }}>
     <Story name="svg image color">
-        <SvgImage stroke="purple-6" fill="warning-1" src={NoResults} aria-label="No results" />
+        <SvgImage stroke="sapphire-600" fill="sunken-treasure-100" src={NoResults} aria-label="No results" />
     </Story>
 </Preview>
 

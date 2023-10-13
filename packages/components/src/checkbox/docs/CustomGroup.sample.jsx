@@ -18,7 +18,7 @@ function CustomComponent({
             value={value}
             onClick={handleCheck}
             color={isChecked ? "white" : undefined}
-            backgroundColor={isChecked ? "alias-accent" : "alias-warning-light"}
+            backgroundColor={isChecked ? "primary" : "warning-weak"}
             aria-checked={isChecked}
         >
             {children}
@@ -28,7 +28,7 @@ function CustomComponent({
 
 render(() => {
     return (
-        <CheckboxGroup gap={2}>
+        <CheckboxGroup gap={80}>
             <CustomComponent value="milky-way">Milky Way</CustomComponent>
             <CustomComponent value="andromeda">Andromeda</CustomComponent>
             <CustomComponent value="medusa">Medusa</CustomComponent>
