@@ -60,15 +60,15 @@ export function borderRenderer(token) {
 }
 
 export function boxShadowRenderer(token) {
-    return <Div paddingRight={4}><Div boxShadow={token} marginY={3} height={400}></Div></Div>;
+    return <Div paddingRight={160}><Div boxShadow={token} marginY="0.75rem" height={400}></Div></Div>;
 }
 
 export function durationRenderer() {
-    return <Div paddingRight={4}><Div marginY={3} height={400}></Div></Div>;
+    return <Div paddingRight={160}><Div marginY="0.75rem" height={400}></Div></Div>;
 }
 
 export function easingRenderer() {
-    return <Div paddingRight={4}><Div marginY={3} height={400}></Div></Div>;
+    return <Div paddingRight={160}><Div marginY="0.75rem" height={400}></Div></Div>;
 }
 
 export function fontSizeRenderer(token) {
@@ -88,7 +88,7 @@ export function iconRenderer(token) {
 }
 
 export function lineHeightRenderer(token) {
-    return <Div display="inline-block" paddingX={2} lineHeight={token} borderRadius={2}><Span lineHeight={token}>Ag</Span></Div>;
+    return <Div display="inline-block" paddingX={80} lineHeight={token} borderRadius="rounded-md"><Span lineHeight={token}>Ag</Span></Div>;
 }
 
 export function radiiRenderer(token) {
@@ -104,14 +104,14 @@ export function sizingRenderer() {
 }
 
 export function spacingRenderer(token) {
-    return <Div height={240} width={token} backgroundColor="primary" borderRadius={2}></Div>;
+    return <Div height={240} width={token} backgroundColor="primary" borderRadius="rounded-md"></Div>;
 }
 
 export function textRenderer(token) {
     if (token === "#FFFFFF" || token === "samoyed") {
-        return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><Text marginLeft={1} color={token} size="lg">Moon</Text></Div>;
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><Text marginLeft={40} color={token} size="lg">Moon</Text></Div>;
     } else {
-        return <Div height={400} display="flex" alignItems="center" justifyContent="start"><Text marginLeft={1} color={token} size="lg">Moon</Text></Div>;
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start"><Text marginLeft={40} color={token} size="lg">Moon</Text></Div>;
     }
 }
 

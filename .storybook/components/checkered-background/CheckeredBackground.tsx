@@ -10,7 +10,7 @@ export function CheckeredBackground({ children, ...rest }: DivProps) {
                 rest,
                 {
                     color: "neutral",
-                    paddingLeft: 2,
+                    paddingLeft: 80,
                     className: "o-ui-sb-checkered-background-preview"
                 }
             )}
