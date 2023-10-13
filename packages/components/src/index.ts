@@ -30,7 +30,6 @@ export * from "./listbox";
 export * from "./loader";
 export * from "./lozenge";
 export * from "./menu";
-export * from "./message";
 export * from "./modal";
 export * from "./number-input";
 export * from "./overlay";
