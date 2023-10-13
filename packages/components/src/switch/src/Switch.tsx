@@ -1,6 +1,6 @@
 import { AbstractInputProps } from "../../input";
 import { Box } from "../../box";
-import { Span } from "@components/html";
+import { Span } from "../../html";
 import { ChangeEvent, ChangeEventHandler, ComponentProps, ReactNode, forwardRef, useMemo } from "react";
 import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useSlots } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
