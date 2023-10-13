@@ -34,7 +34,7 @@ export interface InnerAvatarProps extends SlotProps, InternalProps, StyledCompon
     /**
      * An avatar can vary in size.
      */
-    size?: ResponsiveProp<"2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl">;
     /**
      * The url of a remote image or an image object.
      */
@@ -71,20 +71,14 @@ function AvatarImage({
 }
 
 const O365InitialsColorsForName = [
-    "#99B433",
-    "#6BA5E7",
-    "#E773BD",
-    "#00A300",
-    "#1E7145",
-    "#FF0097",
-    "#7E3878",
-    "#603CBA",
-    "#5E4B8B",
-    "#00ABA9",
-    "#2D89EF",
-    "#2B5797",
-    "#DA532C",
-    "#B91D47"
+    "#95B1FF",
+    "#A3D6CB",
+    "#FFBF92",
+    "#AAD89D",
+    "#9FD2F7",
+    "#EAC96D",
+    "#E5DED6",
+    "#FFBCB7"
 ];
 
 function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAvatarProps>) {
@@ -127,9 +121,8 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
 
 /* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 const textSize = createSizeAdapter({
-    "2xs": "xs",
     "xs": "xs",
-    "sm": "sm",
+    "sm": "xs",
     "md": "md",
     "lg": "lg",
     "xl": "xl",

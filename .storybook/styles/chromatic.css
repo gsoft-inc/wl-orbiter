@@ -5,5 +5,5 @@
 *,
 *::before,
 *::after {
-    font-family: Arial;
+    font-family: Arial !important;
 }

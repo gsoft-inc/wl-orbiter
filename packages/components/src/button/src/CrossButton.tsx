@@ -1,14 +1,17 @@
+import "./CrossButton.css";
+
 import { AbstractIconButtonProps, IconButton, InnerIconButton } from "./IconButton";
 import { ComponentProps, forwardRef } from "react";
 import { CrossMinorIcon } from "../../icons";
-import { OmitInternalProps, slot } from "../../shared";
+import { OmitInternalProps, mergeClasses, slot } from "../../shared";
 
 export type InnerCrossButtonProps = Omit<AbstractIconButtonProps<"button">, "fluid" | "loading" | "onChange" | "type" | "variant">;
 
-export function InnerCrossButton({ forwardedRef, ...rest }: InnerCrossButtonProps) {
+export function InnerCrossButton({ className, forwardedRef, ...rest }: InnerCrossButtonProps) {
     return (
         <IconButton
             {...rest}
+            className={mergeClasses("o-ui-cross-button", className)}
             fill="alias-primary"
             ref={forwardedRef}
             variant="tertiary"

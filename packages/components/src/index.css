@@ -58,8 +58,9 @@ Sadly, we encountered CSS ordering issues when the components are bundled in our
     --o-ui-disabled-opacity: 0.4;
 
     /* FOCUS RING */
+    /* are sm and lg needed? */
     --o-ui-focus-ring-thickness-sm: 1px;
-    --o-ui-focus-ring-thickness-md: 3px;
+    --o-ui-focus-ring-thickness-md: 2px;
     --o-ui-focus-ring-thickness-lg: 5px;
 
     --o-ui-focus-ring-inset-sm: 0 0 0 var(--o-ui-focus-ring-thickness-sm) var(--o-ui-focus-ring-color-alias-default);
