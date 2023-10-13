@@ -107,7 +107,7 @@ export const Disabled: ToolbarStory = {
 export const Gap: ToolbarStory = {
     storyName: "gap",
     render: () => (
-        <Toolbar gap={800}>
+        <Toolbar gap="8rem">
             <CheckboxGroup>
                 <ToggleButton value="1">1</ToggleButton>
                 <ToggleButton value="2">2</ToggleButton>
@@ -166,8 +166,8 @@ export const Align: ToolbarStory = {
 export const VerticalAlign: ToolbarStory = {
     storyName: "vertical align",
     render: () => (
-        <Inline gap={800}>
-            <Toolbar alignY="start" height={800}>
+        <Inline gap="8rem">
+            <Toolbar alignY="start" height="8rem">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -177,7 +177,7 @@ export const VerticalAlign: ToolbarStory = {
                     <NotificationMajorIcon />
                 </ToggleIconButton>
             </Toolbar>
-            <Toolbar alignY="end" height={800}>
+            <Toolbar alignY="end" height="8rem">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
@@ -187,7 +187,7 @@ export const VerticalAlign: ToolbarStory = {
                     <NotificationMajorIcon />
                 </ToggleIconButton>
             </Toolbar>
-            <Toolbar alignY="center" height={800}>
+            <Toolbar alignY="center" height="8rem">
                 <CheckboxGroup>
                     <ToggleButton value="1">1</ToggleButton>
                     <ToggleButton value="2">2</ToggleButton>
