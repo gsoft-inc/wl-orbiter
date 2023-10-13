@@ -36,7 +36,7 @@ export function InnerCard({
     forwardedRef,
     orientation = "vertical",
     size,
-    variant = "elevated",
+    variant = "outline",
     ...rest
 }: InnerCardProps) {
     const fluidValue = useResponsiveValue(fluid);
@@ -64,7 +64,7 @@ export function InnerCard({
         heading: {
             as: "span",
             className: "o-ui-card-heading",
-            size: "sm"
+            size: "md"
         },
         illustration: {
             className: "o-ui-card-illustration",
