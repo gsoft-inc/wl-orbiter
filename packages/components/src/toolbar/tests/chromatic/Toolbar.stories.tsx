@@ -107,7 +107,7 @@ export const Disabled: ToolbarStory = {
 export const Gap: ToolbarStory = {
     storyName: "gap",
     render: () => (
-        <Toolbar gap="1.25rem">
+        <Toolbar gap="8rem">
             <CheckboxGroup>
                 <ToggleButton value="1">1</ToggleButton>
                 <ToggleButton value="2">2</ToggleButton>
