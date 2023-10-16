@@ -201,10 +201,12 @@ export function InnerMenu({
     const nodes = useCollectionNodes(children, nodesProp);
 
     const scrollableProps = useScrollableCollection(containerRef, nodes, {
+        borderHeight: 2,
         disabled: selectionMode === "none",
         dividerSelector: ".o-ui-menu-divider",
         itemSelector: ".o-ui-menu-item",
         maxHeight: 12 * MenuItemHeight,
+        paddingHeight: 16,
         sectionSelector: ".o-ui-menu-section-title"
     });
 

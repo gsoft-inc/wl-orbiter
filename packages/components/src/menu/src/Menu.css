@@ -5,45 +5,45 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 .o-ui {
     --o-ui-menu-border-size: 1px;
-    --o-ui-menu-item-height: var(--o-ui-sz-5);
-    --o-ui-menu-item-checkmark-size: var(--o-ui-sz-2);
+    --o-ui-menu-item-height: 2rem;
+    --o-ui-menu-item-checkmark-size: 1rem;
+    --o-ui-menu-item-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-menu-item-checkmark-size));
 }
 
 .o-ui-menu {
-    background-color: var(--o-ui-bg-alias-surface);
+    background-color: var(--hop-neutral-surface);
     list-style-type: none;
-    padding: 0;
+    padding: var(--hop-space-inset-sm);
     margin: 0;
-    border-radius: var(--o-ui-br-2);
+    border: var(--o-ui-menu-border-size) solid var(--hop-neutral-border-weak);
+    border-radius: var(--hop-shape-rounded-md);
     width: max-content;
     min-width: 200px;
-    max-width: var(--o-ui-sz-16);
+    max-width: 20rem;
     height: max-content;
-    box-shadow: var(--o-ui-bs-alias-floating);
+    box-shadow: var(--hop-elevation-lifted);
     overflow-y: auto;
 }
 
 /* ITEM */
 .o-ui-menu-item {
+    border-radius: var(--hop-shape-rounded-md);
     min-height: var(--o-ui-menu-item-height);
     list-style: none;
-    padding-right: var(--o-ui-sp-8);
-    padding-left: var(--o-ui-sp-3);
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-right: var(--o-ui-menu-item-padding-right);
+    padding-left: var(--hop-space-inset-md);
+    padding-block: 0;
     margin: 0;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: var(--o-ui-fs-3);
     position: relative;
 }
 
 .o-ui-menu-item.o-ui-menu-item-has-description {
-    --o-ui-menu-item-height: var(--o-ui-sz-7);
+    --o-ui-menu-item-height: 3.25rem;
     display: grid;
-    padding-top: var(--o-ui-sp-2);
-    padding-bottom: var(--o-ui-sp-2);
+    padding-block: 0.375rem;
     overflow-x: hidden;
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content max-content;
@@ -51,102 +51,120 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     grid-template-areas:
         "aside label"
         "aside description";
+    row-gap: var(--hop-space-stack-xs);
 }
 
 /* ITEM | ICON | START  */
 .o-ui-menu-item-start-icon {
-    margin-right: var(--o-ui-sp-2);
+    margin-right: var(--hop-space-inline-sm);
     grid-row-start: 1;
     grid-row-end: 3;
 }
 
 .o-ui-menu-item.o-ui-menu-item-has-description .o-ui-menu-item-start-icon {
-    margin-right: var(--o-ui-sp-2);
     align-self: start;
 }
 
 /* ITEM | ICON | END  */
 .o-ui-menu-item-end-icon {
-    margin-left: var(--o-ui-sp-1);
+    margin-left: var(--hop-space-inline-sm);
 }
 
 /* ITEM | STATE | SELECTED */
 .o-ui-menu-item .o-ui-menu-item-checkmark {
     opacity: 0;
-    width: var(--o-ui-listbox-option-checkmark-size);
-    height: var(--o-ui-listbox-option-checkmark-size);
-    fill: var(--o-ui-bg-alias-accent);
+    width: var(--o-ui-menu-item-checkmark-size);
+    height: var(--o-ui-menu-item-checkmark-size);
+    color: var(--hop-neutral-icon);
     position: absolute;
-    right: 0.875rem;
+    right: var(--hop-space-inline-md);
 }
 
 .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-checkmark {
     opacity: 1;
 }
 
+.o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-label {
+    font-weight: var(--hop-body-sm-semibold-font-weight);
+}
+
 /* ITEM | STATE | FOCUS */
 .o-ui-menu-item:focus,
 .o-ui-menu-item-focus {
     outline: transparent;
-    background-color: var(--o-ui-bg-alias-mid-break);
-}
-
-/* FOCUS */
-.o-ui-menu-item::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 2px;
-    opacity: 0;
-    background-color: var(--o-ui-bg-alias-accent);
-}
-
-.o-ui-menu-item:focus::after {
-    opacity: 1;
+    background-color: var(--hop-neutral-surface-hover);
+    color: var(--hop-neutral-text-hover);
 }
 
 /* ITEM | STATE | ACTIVE */
 .o-ui-menu-item:active:not([aria-disabled="true"]),
 .o-ui-menu-item-active:not([aria-disabled="true"]) {
-    background-color: var(--o-ui-bg-alias-hard-break);
+    background-color: var(--hop-neutral-surface-hover);
+    color: var(--hop-neutral-text-hover);
 }
 
 /* ITEM | STATE | DISABLED */
 .o-ui-menu-item[aria-disabled="true"] {
-    opacity: var(--o-ui-disabled-opacity);
     cursor: not-allowed;
+}
+
+.o-ui-menu-item[aria-disabled="true"] .o-ui-menu-item-label,
+.o-ui-menu-item[aria-disabled="true"] .o-ui-menu-item-description {
+    color: var(--hop-neutral-text-disabled);
+}
+
+.o-ui-menu-item[aria-disabled="true"] .o-ui-icon, {
+    color: var(--hop-neutral-icon-disabled);
 }
 
 /* ITEM | STATE | INVALID */
 .o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-label,
 .o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-description {
-    color: var(--o-ui-text-alias-alert);
+    color: var(--hop-danger-text-active);
 }
 
-.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-start-icon,
-.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-end-icon {
-    fill: var(--o-ui-text-alias-alert);
+.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-icon {
+    color: var(--hop-danger-icon-active);
 }
 
-.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-checkmark {
-    fill: var(--o-ui-text-alias-alert);
+.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]),
+.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]),
+.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"],
+.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] {
+    background-color: var(--hop-danger-surface-hover);
+}
+
+.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-menu-item-label,
+.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-menu-item-label,
+.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"] .o-ui-menu-item-label,
+.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] .o-ui-menu-item-label,
+.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"] .o-ui-menu-item-description),
+.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-menu-item-description,
+.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"] .o-ui-menu-item-description,
+.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] .o-ui-menu-item-description {
+    color: var(--hop-danger-text-strong-hover);
+}
+
+.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-icon,
+.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-icon,
+.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"] .o-ui-icon,
+.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] .o-ui-icon {
+    color: var(--hop-danger-icon-strong-hover);
 }
 
 /* ITEM | DESCRIPTION */
 .o-ui-menu-item-description {
     grid-area: description;
-    color: var(--o-ui-text-alias-tertiary);
+    color: var(--hop-neutral-text-weak);
     justify-self: start;
     width: 100%;
 }
 
 /* LABEL */
 .o-ui-menu-item-label {
+    color: var(--hop-neutral-text);
     display: inline-block;
     white-space: nowrap;
-    line-height: var(--o-ui-lh-2);
     overflow: hidden;
     text-overflow: ellipsis;
     grid-area: label;
@@ -156,13 +174,13 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 .o-ui-menu-section-title {
     cursor: default;
     display: flex;
-    font-weight: 500;
-    padding-left: var(--o-ui-sp-3);
+    font-weight: var(--hop-body-xs-medium-font-weight);
+    padding-inline: var(--hop-space-inset-md);
     height: var(--o-ui-menu-item-height);
-    line-height: var(--o-ui-lh-1);
-    color: var(--o-ui-text-alias-tertiary);
+    line-height: var(--hop-body-xs-medium-line-height);
+    color: var(--hop-neutral-text-disabled);
     text-transform: uppercase;
-    font-size: var(--o-ui-fs-2);
+    font-size: var(--hop-body-xs-medium-font-size);
     align-items: center;
 }
 
@@ -171,8 +189,8 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 }
 
 /* DIVIDER  */
-.o-ui-menu-divider {
-    margin: var(--o-ui-sp-1) 0 !important;
+.o-ui-divider.o-ui-menu-divider[aria-orientation="horizontal"] {
+    margin: var(--hop-space-stack-xs) 0;
 }
 
 /* FLUID */
@@ -182,7 +200,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 /* AVATAR */
 .o-ui-menu-item-option-avatar {
-    margin-right: var(--o-ui-sp-2);
+    margin-right: var(--hop-space-inline-sm);
     grid-area: aside;
     align-self: center;
 }
