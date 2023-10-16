@@ -1,10 +1,11 @@
 .o-ui-popover {
-    background-color: var(--o-ui-bg-alias-surface);
-    padding: var(--o-ui-sp-4);
-    border-radius: var(--o-ui-br-3);
-    box-shadow: var(--o-ui-bs-alias-floating);
+    background-color: var(--hop-neutral-surface);
+    padding: var(--hop-space-inset-md);
+    border: 0.0625rem solid var(--hop-neutral-border-weak);
+    border-radius: var(--hop-shape-rounded-md);
+    box-shadow: var(--hop-elevation-lifted);
     /* Must keep a max width. */
-    max-width: var(--o-ui-sz-16);
+    max-width: 20rem;
     width: 100%;
     position: relative;
     outline: transparent;
@@ -12,18 +13,19 @@
 
 /* HEADER | SECTION */
 .o-ui-popover-header-section {
-    margin-bottom: var(--o-ui-sp-2);
+    margin-bottom: 0;
 }
 
 /* CONTENT */
 .o-ui-popover-content {
     white-space: pre-wrap;
     overflow-wrap: break-word;
+    color: var(--hop-neutral-text-weak);
 }
 
 /* FOOTER | SECTION */
 .o-ui-popover-footer-section {
-    margin-top: var(--o-ui-sp-4);
+    margin-top: var(--hop-space-stack-md);
     display: grid;
     align-items: center;
     grid-template-columns: max-content auto;
@@ -33,7 +35,7 @@
 /* FOOTER | TEXT */
 .o-ui-popover-footer {
     grid-area: text;
-    margin-right: var(--o-ui-sp-2);
+    margin-right: var(--hop-space-inline-sm);
 }
 
 /* BUTTONS */
@@ -50,11 +52,11 @@
 /* DISMISS BUTTON */
 .o-ui-popover .o-ui-popover-dismiss-button {
     position: absolute;
-    right: var(--o-ui-sp-3);
-    top: var(--o-ui-sp-3);
+    right: 0.75rem;
+    top: 0.75rem;
 }
 
 /* DISMISSABLE */
 .o-ui-popover-dismissable .o-ui-popover-header-section {
-    padding-right: var(--o-ui-sp-6);
+    padding-right: var(--hop-space-inset-lg);
 }

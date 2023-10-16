@@ -67,7 +67,7 @@ export function InnerPopoverTrigger({
         boundaryElement: containerElement,
         defaultOpen,
         disabled: trigger.props.disabled,
-        hasArrow: true,
+        hasArrow: false,
         hideOnEscape: dismissable,
         hideOnLeave: dismissable,
         hideOnOutsideClick: false,
