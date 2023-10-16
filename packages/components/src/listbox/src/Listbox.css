@@ -103,7 +103,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 .o-ui-listbox-section {
     display: flex;
     font-weight: var(--hop-body-xs-medium-font-weight);
-    padding-inline: var(--hop-space-inset-sm);
+    padding-inline: var(--hop-space-inset-md);
     cursor: default;
     line-height: var(--hop-body-xs-medium-line-height);
     height: var(--o-ui-listbox-option-height);
