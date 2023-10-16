@@ -199,8 +199,7 @@
 }
 
 /* STATES | ACTIVE */
-.o-ui-input:has(input:active),
-.o-ui-text-input.o-ui-input-active {
+.o-ui-text-input.o-ui-input-has-active {
     --o-ui-input-border-color: var(--hop-neutral-border-active);
 }
 
