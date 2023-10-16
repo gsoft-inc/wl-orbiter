@@ -14,6 +14,11 @@
 }
 
 /* ARROW */
+/* Removing Popper Arrow using useArrow does not seem to work. This will do for now.  */
+.o-ui-overlay-arrow {
+    display: none;
+}
+
 .o-ui-overlay-arrow,
 .o-ui-overlay-arrow::before {
     position: absolute;
