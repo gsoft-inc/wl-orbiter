@@ -13,14 +13,16 @@
     position: relative;
     transition: var(--o-ui-focus-ring-transition);
     color: var(--hop-neutral-text);
+    font-family: var(--hop-body-md-font-family);
+    font-size: var(--hop-body-md-font-size);
     width: 20rem;
     align-items: center;
 }
 
 .o-ui-input input {
     -webkit-appearance: none;
-    font-family: var(--hop-body-md-font-family);
-    font-size: var(--hop-body-md-font-size);
+    font-family: inherit;
+    font-size: inherit;
     outline: transparent;
     border: none;
     width: 100%;
@@ -139,7 +141,7 @@
 
 .o-ui-input.o-ui-input-invalid:not(.o-ui-text-area):focus-within,
 .o-ui-input-focus.o-ui-input-invalid {
-    box-shadow: var(--o-ui-focus-ring-inset-md);
+    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
 }
 
 /* STATE | HOVER | INVALID */
@@ -166,7 +168,6 @@
 /* BUTTON | INPUT */
 .o-ui-text-input .o-ui-input-button,
 .o-ui-number-input .o-ui-input-button {
-    position: inline-flex !important;
     display: flex;
     text-align: center;
     margin-right: .625rem;
@@ -184,7 +185,7 @@
 .o-ui-number-input:not(.o-ui-input-disabled):focus-within,
 .o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea,
 .o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
-    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus) !important;
+    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
     outline: transparent;
 }
 
