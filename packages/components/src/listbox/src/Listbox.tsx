@@ -365,8 +365,10 @@ export function InnerListbox({
     });
 
     const scrollableProps = useScrollableCollection(containerRef, nodes, {
+        borderHeight: 2,
         itemSelector: ".o-ui-listbox-option",
         maxHeight: 12 * ListboxItemHeight + 2 * ListboxItemHeight,
+        paddingHeight: 16,
         sectionSelector: ".o-ui-listbox-section"
     });
 
