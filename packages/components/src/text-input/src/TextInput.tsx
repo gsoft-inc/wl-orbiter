@@ -1,4 +1,4 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputButton, useInputHasFocus, useInputIcon, useInputSpinner } from "../../input";
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputButton, useInputHasFocus, useInputHasActive, useInputIcon, useInputSpinner } from "../../input";
 import { Box, BoxProps } from "../../box";
 import { ChangeEvent, ComponentProps, ElementType, ReactElement, forwardRef } from "react";
 import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group";
@@ -135,6 +135,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
     });
 
     const { hasFocus, inputProps: inputFocusProps } = useInputHasFocus();
+    const { hasActive, inputProps: inputActiveProps } = useInputHasActive();
 
     const iconMarkup = useInputIcon(icon, { disabled });
 
@@ -156,7 +157,8 @@ export function InnerTextInput(props: InnerTextInputProps) {
                         style
                     },
                     inputProps,
-                    inputFocusProps
+                    inputFocusProps,
+                    inputActiveProps
                 )}
             />
             {/* Otherwise an input button will receive an addon className */}
@@ -178,7 +180,8 @@ export function InnerTextInput(props: InnerTextInputProps) {
                         iconMarkup && "has-icon",
                         disabled && "disabled",
                         buttonMarkup && "has-button",
-                        hasFocus && "has-focus"
+                        hasFocus && "has-focus",
+                        hasActive && "has-active",
                     )
                 },
                 wrapperProps
