@@ -116,7 +116,7 @@ export function InnerTooltipTrigger({
         allowFlip,
         allowPreventOverflow,
         boundaryElement: containerElement,
-        hasArrow: true,
+        hasArrow: false,
         position: positionValue
     });
 
