@@ -17,7 +17,7 @@
 .o-ui-disclosure-content-inner {
     padding-top: var(--hop-space-inset-md);
     padding-bottom: var(--hop-space-inset-md);
-    color: var(-hop-neutral-text);
+    color: var(--hop-neutral-text);
 }
 
 /* SLIDE ANIMATION */
