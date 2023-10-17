@@ -1,9 +1,9 @@
 .o-ui-tooltip {
-    background-color: var(--o-ui-bg-alias-surface);
-    border-radius: var(--o-ui-br-3);
-    box-shadow: var(--o-ui-bs-alias-floating);
-    padding: var(--o-ui-sp-3);
-    max-width: var(--o-ui-sz-16);
+    background-color: var(--hop-neutral-surface-active);
+    border-radius: var(--hop-shape-rounded-md);
+    color: var(--hop-neutral-text-strong);
+    padding: var(--hop-space-inset-squish-md);
+    max-width: 20rem;
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
@@ -11,12 +11,12 @@
 /* We need a .o-ui-tooltip-content class */
 /* LEFT ICON */
 .o-ui-tooltip .o-ui-icon {
-    margin-right: var(--o-ui-sp-1);
+    margin-right: var(--hop-space-inline-xs);
 }
 
 /* RIGHT ICON */
 .o-ui-tooltip .o-ui-text + .o-ui-icon {
-    margin-left: var(--o-ui-sp-1);
+    margin-left: var(--hop-space-inline-xs);
 }
 
 /* DISABLED WRAPPER */
