@@ -6020,6 +6020,20 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-decorative-option2-surface-strong)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option2-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-decorative-option2-surface-weak)",
       }
     }
@@ -6069,6 +6083,20 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-decorative-option4-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option4-surface-weak)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-decorative-option6-surface-strong)",
       }
     }
@@ -6077,6 +6105,13 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-decorative-option6-surface-hover)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option6-surface-weakest)",
       }
     }
   />,
@@ -6104,6 +6139,20 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-decorative-option5-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option5-surface-weak)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-decorative-option7-surface-hover)",
       }
     }
@@ -6118,7 +6167,14 @@ exports[`props background color 1`] = `
   <div
     style={
       {
-        "backgroundColor": "var(--hop-decorative-option8-surface-strong)",
+        "backgroundColor": "var(--hop-decorative-option7-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option7-surface-weak)",
       }
     }
   />,
@@ -6126,6 +6182,27 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-decorative-option8-surface-hover)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option8-surface-strong)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option8-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option8-surface-weak)",
       }
     }
   />,
@@ -6140,6 +6217,20 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-decorative-option9-surface-strong)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option9-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-decorative-option9-surface-weak)",
       }
     }
   />,
@@ -7754,6 +7845,22 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-decorative-option2-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option2-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-decorative-option2-surface-weak)",
       }
     }
@@ -7810,6 +7917,22 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-decorative-option4-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option4-surface-weak)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-decorative-option6-surface-strong)",
       }
     }
@@ -7819,6 +7942,14 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-decorative-option6-surface-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option6-surface-weakest)",
       }
     }
   />,
@@ -7850,6 +7981,22 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-decorative-option5-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option5-surface-weak)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-decorative-option7-surface-hover)",
       }
     }
@@ -7866,7 +8013,15 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
-        "--o-ui-bg-active": "var(--hop-decorative-option8-surface-strong)",
+        "--o-ui-bg-active": "var(--hop-decorative-option7-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option7-surface-weak)",
       }
     }
   />,
@@ -7875,6 +8030,30 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-decorative-option8-surface-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option8-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option8-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option8-surface-weak)",
       }
     }
   />,
@@ -7891,6 +8070,22 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-decorative-option9-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option9-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-decorative-option9-surface-weak)",
       }
     }
   />,
@@ -9665,6 +9860,22 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-decorative-option2-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option2-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-decorative-option2-surface-weak)",
       }
     }
@@ -9721,6 +9932,22 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-decorative-option4-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option4-surface-weak)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-decorative-option6-surface-strong)",
       }
     }
@@ -9730,6 +9957,14 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-decorative-option6-surface-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option6-surface-weakest)",
       }
     }
   />,
@@ -9761,6 +9996,22 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-decorative-option5-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option5-surface-weak)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-decorative-option7-surface-hover)",
       }
     }
@@ -9777,7 +10028,15 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
-        "--o-ui-bg-focus": "var(--hop-decorative-option8-surface-strong)",
+        "--o-ui-bg-focus": "var(--hop-decorative-option7-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option7-surface-weak)",
       }
     }
   />,
@@ -9786,6 +10045,30 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-decorative-option8-surface-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option8-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option8-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option8-surface-weak)",
       }
     }
   />,
@@ -9802,6 +10085,22 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-decorative-option9-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option9-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-decorative-option9-surface-weak)",
       }
     }
   />,
@@ -11576,6 +11875,22 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-decorative-option2-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option2-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-decorative-option2-surface-weak)",
       }
     }
@@ -11632,6 +11947,22 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-decorative-option4-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option4-surface-weak)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-decorative-option6-surface-strong)",
       }
     }
@@ -11641,6 +11972,14 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-decorative-option6-surface-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option6-surface-weakest)",
       }
     }
   />,
@@ -11672,6 +12011,22 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-decorative-option5-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option5-surface-weak)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-decorative-option7-surface-hover)",
       }
     }
@@ -11688,7 +12043,15 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
-        "--o-ui-bg-hover": "var(--hop-decorative-option8-surface-strong)",
+        "--o-ui-bg-hover": "var(--hop-decorative-option7-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option7-surface-weak)",
       }
     }
   />,
@@ -11697,6 +12060,30 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-decorative-option8-surface-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option8-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option8-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option8-surface-weak)",
       }
     }
   />,
@@ -11713,6 +12100,22 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-decorative-option9-surface-strong)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option9-surface-weakest)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-decorative-option9-surface-weak)",
       }
     }
   />,
