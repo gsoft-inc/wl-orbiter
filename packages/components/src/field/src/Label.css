@@ -5,5 +5,5 @@
 
 /* REQUIRED */
 .o-ui-field-label-required {
-    margin-left: var(--hop-space-stack-xs);
+    margin-left: var(--hop-space-inline-xs);
 }
