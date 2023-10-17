@@ -9,6 +9,8 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     --o-ui-menu-item-checkmark-size: 1rem;
     --o-ui-menu-item-icon-size: 1rem;
     --o-ui-menu-item-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-menu-item-checkmark-size));
+    --o-ui-menu-item-description-color: var(--hop-neutral-text-weak);
+    --o-ui-menu-item-icon-color: var(--hop-neutral-icon);
 }
 
 .o-ui-menu {
@@ -28,6 +30,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 /* ITEM */
 .o-ui-menu-item {
+    color: var(--hop-neutral-text);
     border-radius: var(--hop-shape-rounded-md);
     min-height: var(--o-ui-menu-item-height);
     list-style: none;
@@ -57,7 +60,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 /* ITEM | ICON */
 .o-ui-menu-item .o-ui-icon {
-    color: var(--hop-neutral-icon);
+    color: var(--o-ui-menu-item-icon-color);
 }
 
 .o-ui-menu-item .o-ui-icon:not(.o-ui-menu-item-checkmark) {
@@ -86,7 +89,6 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     opacity: 0;
     width: var(--o-ui-menu-item-checkmark-size);
     height: var(--o-ui-menu-item-checkmark-size);
-    color: var(--hop-neutral-icon);
     position: absolute;
     right: var(--hop-space-inline-md);
 }
@@ -102,100 +104,55 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 /* ITEM | STATE | FOCUS */
 .o-ui-menu-item:focus,
 .o-ui-menu-item-focus {
+    --o-ui-menu-item-icon-color: var(--hop-neutral-icon-hover);
     outline: transparent;
     background-color: var(--hop-neutral-surface-hover);
-}
-
-.o-ui-menu-item:focus .o-ui-menu-item-label,
-.o-ui-menu-item-focus .o-ui-menu-item-label,
-.o-ui-menu-item:focus .o-ui-menu-item-description,
-.o-ui-menu-item-focus .o-ui-menu-item-description {
     color: var(--hop-neutral-text-hover);
-}
-
-.o-ui-menu-item:focus .o-ui-icon,
-.o-ui-menu-item-focus .o-ui-icon {
-    color: var(--hop-neutral-icon-hover);
 }
 
 /* ITEM | STATE | ACTIVE */
 .o-ui-menu-item:active:not([aria-disabled="true"]),
 .o-ui-menu-item-active:not([aria-disabled="true"]) {
+    --o-ui-menu-item-icon-color: var(--hop-neutral-icon-hover);
     background-color: var(--hop-neutral-surface-hover);
-}
-
-.o-ui-menu-item:active:not([aria-disabled="true"]) .o-ui-menu-item-label,
-.o-ui-menu-item-active:not([aria-disabled="true"]) .o-ui-menu-item-label,
-.o-ui-menu-item:active:not([aria-disabled="true"]) .o-ui-menu-item-description,
-.o-ui-menu-item-active:not([aria-disabled="true"]) .o-ui-menu-item-description {
     color: var(--hop-neutral-text-hover);
-}
-
-.o-ui-menu-item:active:not([aria-disabled="true"]) .o-ui-icon,
-.o-ui-menu-item-active:not([aria-disabled="true"]) .o-ui-icon {
-    color: var(--hop-neutral-icon-hover);
 }
 
 /* ITEM | STATE | DISABLED */
 .o-ui-menu-item[aria-disabled="true"] {
+    --o-ui-menu-item-description-color: var(--hop-neutral-text-disabled);
+    --o-ui-menu-item-icon-color: var(--hop-neutral-icon-disabled);
+    color: var(--hop-neutral-text-disabled);
     cursor: not-allowed;
 }
 
-.o-ui-menu-item[aria-disabled="true"] .o-ui-menu-item-label,
-.o-ui-menu-item[aria-disabled="true"] .o-ui-menu-item-description {
-    color: var(--hop-neutral-text-disabled);
-}
-
-.o-ui-menu-item[aria-disabled="true"] .o-ui-icon, {
-    color: var(--hop-neutral-icon-disabled);
-}
-
 /* ITEM | STATE | INVALID */
-.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-label,
-.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-menu-item-description {
+.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] {
+    --o-ui-menu-item-description-color: var(--hop-danger-text-active);
+    --o-ui-menu-item-icon-color: var(--hop-danger-icon-active);
     color: var(--hop-danger-text-active);
-}
-
-.o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] .o-ui-icon {
-    color: var(--hop-danger-icon-active);
 }
 
 .o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]),
 .o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]),
 .o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"],
 .o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] {
+    --o-ui-menu-item-description-color: var(--hop-danger-text-strong-hover);
+    --o-ui-menu-item-icon-color: var(--hop-danger-icon-strong-hover);
     background-color: var(--hop-danger-surface-hover);
-}
-
-.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-menu-item-label,
-.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-menu-item-label,
-.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"] .o-ui-menu-item-label,
-.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] .o-ui-menu-item-label,
-.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"] .o-ui-menu-item-description),
-.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-menu-item-description,
-.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"] .o-ui-menu-item-description,
-.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] .o-ui-menu-item-description {
     color: var(--hop-danger-text-strong-hover);
-}
-
-.o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-icon,
-.o-ui-menu-invalid .o-ui-menu-item-active[aria-checked="true"]:not([aria-disabled="true"]) .o-ui-icon,
-.o-ui-menu-invalid .o-ui-menu-item:focus[aria-checked="true"] .o-ui-icon,
-.o-ui-menu-invalid .o-ui-menu-item-focus[aria-checked="true"] .o-ui-icon {
-    color: var(--hop-danger-icon-strong-hover);
 }
 
 /* ITEM | DESCRIPTION */
 .o-ui-menu-item-description {
     grid-area: description;
-    color: var(--hop-neutral-text-weak);
+    color: var(--o-ui-menu-item-description-color);
     justify-self: start;
     width: 100%;
 }
 
 /* LABEL */
 .o-ui-menu-item-label {
-    color: var(--hop-neutral-text);
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
