@@ -148,7 +148,7 @@
 .o-ui-input.o-ui-input-invalid:not(.o-ui-input-focus):not(.o-ui-input-disabled):hover,
 .o-ui-input.o-ui-input-invalid:not(.o-ui-input-focus):hover textarea:not(:disabled),
 .o-ui-input-hover.o-ui-input-invalid:not(.o-ui-input-focus):not(.o-ui-input-disabled) {
-    border-color: var(--o-ui-b-alias-alert-hover);
+    border-color: var(--hop-danger-border-strong);
 }
 
 /* ICON */
