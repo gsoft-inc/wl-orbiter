@@ -7,6 +7,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
     --o-ui-listbox-border-size: 1px;
     --o-ui-listbox-option-height: 2rem;
     --o-ui-listbox-option-checkmark-size: 1rem;
+    --o-ui-listbox-option-icon-size: 1rem;
     --o-ui-listbox-option-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-listbox-option-checkmark-size));
 }
 
@@ -85,6 +86,11 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 /* OPTION | ICONS */
 .o-ui-listbox-option .o-ui-icon {
     color: var(--hop-neutral-icon);
+}
+
+.o-ui-listbox-option .o-ui-icon:not(.o-ui-listbox-option-checkmark) {
+    width: var(--o-ui-listbox-option-icon-size);
+    height: var(--o-ui-listbox-option-icon-size);
 }
 
 /* OPTION | ICONS | START ICON */
@@ -169,7 +175,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 }
 
 .o-ui-listbox-option:focus .o-ui-icon,
-.o-ui-listbox-option-focus o-ui-icon,
+.o-ui-listbox-option-focus .o-ui-icon,
 .o-ui-listbox-option.o-ui-focus .o-ui-icon {
     color: var(--hop-neutral-icon-hover);
 }
