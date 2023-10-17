@@ -18,6 +18,7 @@ export const Default: TextInputStory = {
     render: () => (
         <Stack>
             <TextInput aria-label="Label" />
+            <TextInput active aria-label="Label" />
             <TextInput loading aria-label="Label" />
             <TextInput disabled aria-label="Label"></TextInput>
             <TextInput readOnly aria-label="Label"></TextInput>
@@ -35,6 +36,7 @@ export const Placeholder: TextInputStory = {
     render: () => (
         <Stack>
             <TextInput placeholder="Where to?" />
+            <TextInput active placeholder="Where to?" />
             <TextInput loading placeholder="Where to?" />
             <TextInput disabled placeholder="Where to?"></TextInput>
             <TextInput readOnly placeholder="Where to?"></TextInput>
@@ -52,6 +54,7 @@ export const Value: TextInputStory = {
     render: () => (
         <Stack>
             <TextInput defaultValue="SpaceX will win the race!" aria-label="Label" />
+            <TextInput active defaultValue="SpaceX will win the race!" aria-label="Label" />
             <TextInput loading defaultValue="SpaceX will win the race!" aria-label="Label" />
             <TextInput disabled defaultValue="SpaceX will win the race!" aria-label="Label" />
             <TextInput readOnly defaultValue="SpaceX will win the race!" aria-label="Label" />
@@ -74,6 +77,7 @@ export const Icon: TextInputStory = {
         <Stack>
             <TextInput icon={<MagnifierMajorIcon />} placeholder="Where to?" aria-label="Label" />
             <TextInput icon={<MagnifierMajorIcon />} defaultValue="SpaceX will win the race!" placeholder="Where to?" />
+            <TextInput active icon={<MagnifierMajorIcon />} placeholder="Where to?" />
             <TextInput loading icon={<MagnifierMajorIcon />} placeholder="Where to?" />
             <TextInput disabled icon={<MagnifierMajorIcon />} placeholder="Where to?" />
             <TextInput readOnly icon={<MagnifierMajorIcon />} placeholder="Where to?" />
@@ -96,6 +100,7 @@ export const Button: TextInputStory = {
                 <TextInput readOnly button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
             </Inline>
             <TextInput loading button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
+            <TextInput active button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
         </Stack>
     )
 };
