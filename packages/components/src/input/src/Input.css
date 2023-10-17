@@ -49,7 +49,7 @@
 .o-ui-text-input,
 .o-ui-text-area textarea,
 .o-ui-number-input {
-    font-size: var(--hop-body-sm-font-size);
+    font-size: var(--hop-body-md-font-size);
     padding: 0;
     border-radius: var(--o-ui-input-border-radius);
     border: 1px solid var(--o-ui-input-border-color);
@@ -199,7 +199,8 @@
 }
 
 /* STATES | ACTIVE */
-.o-ui-text-input.o-ui-input-has-active {
+.o-ui-text-input.o-ui-input-has-active,
+.o-ui-input.o-ui-input-has-active {
     --o-ui-input-border-color: var(--hop-neutral-border-active);
 }
 
