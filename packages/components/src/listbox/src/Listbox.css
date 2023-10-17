@@ -9,6 +9,8 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
     --o-ui-listbox-option-checkmark-size: 1rem;
     --o-ui-listbox-option-icon-size: 1rem;
     --o-ui-listbox-option-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-listbox-option-checkmark-size));
+    --o-ui-listbox-option-description-color: var(--hop-neutral-text-weak);
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon);
 }
 
 .o-ui-listbox {
@@ -31,6 +33,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* OPTION */
 .o-ui-listbox-option {
+    color: var(--hop-neutral-text);
     border-radius: var(--hop-shape-rounded-md);
     height: var(--o-ui-listbox-option-height);
     padding-right: var(--o-ui-listbox-option-padding-right);
@@ -43,7 +46,6 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* LABEL */
 .o-ui-listbox-option-label {
-    color: var(--hop-neutral-text);
     cursor: default;
     white-space: nowrap;
     overflow: hidden;
@@ -73,7 +75,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* OPTION | DESCRIPTION */
 .o-ui-listbox-option-description {
-    color: var(--hop-neutral-text-weak);
+    color: var(--o-ui-listbox-option-description-color);
     cursor: default;
     white-space: nowrap;
     overflow: hidden;
@@ -85,7 +87,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* OPTION | ICONS */
 .o-ui-listbox-option .o-ui-icon {
-    color: var(--hop-neutral-icon);
+    color: var(--o-ui-listbox-option-icon-color);
 }
 
 .o-ui-listbox-option .o-ui-icon:not(.o-ui-listbox-option-checkmark) {
@@ -148,64 +150,35 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 }
 
 /* OPTION | STATE | DISABLED */
-.o-ui-listbox-option[aria-disabled="true"] .o-ui-listbox-option-label,
-.o-ui-listbox-option[aria-disabled="true"] .o-ui-listbox-option-description {
+.o-ui-listbox-option[aria-disabled="true"] {
+    --o-ui-listbox-option-description-color: var(--hop-neutral-text-disabled);
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon-disabled);
     color: var(--hop-neutral-text-disabled);
-}
-
-.o-ui-listbox-option[aria-disabled="true"] .o-ui-icon {
-    color: var(--hop-neutral-icon-disabled);
 }
 
 /* OPTION | STATE | FOCUS */
 .o-ui-listbox-option:focus,
 .o-ui-listbox-option-focus,
 .o-ui-listbox-option.o-ui-focus {
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon-hover);
     background-color: var(--hop-neutral-surface-hover);
-    outline: transparent;
-}
-
-.o-ui-listbox-option:focus .o-ui-listbox-option-label,
-.o-ui-listbox-option-focus .o-ui-listbox-option-label,
-.o-ui-listbox-option.o-ui-focus .o-ui-listbox-option-label,
-.o-ui-listbox-option:focus .o-ui-listbox-option-description,
-.o-ui-listbox-option-focus .o-ui-listbox-option-description,
-.o-ui-listbox-option.o-ui-focus .o-ui-listbox-option-description {
     color: var(--hop-neutral-text-hover);
-}
-
-.o-ui-listbox-option:focus .o-ui-icon,
-.o-ui-listbox-option-focus .o-ui-icon,
-.o-ui-listbox-option.o-ui-focus .o-ui-icon {
-    color: var(--hop-neutral-icon-hover);
+    outline: transparent;
 }
 
 /* OPTION | STATE | HOVER */
 .o-ui-listbox-option:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover,
 .o-ui-listbox-option-hover:not([aria-disabled="true"]) {
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon-hover);
     background-color: var(--hop-neutral-surface-hover);
-}
-
-.o-ui-listbox-option:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover .o-ui-listbox-option-label,
-.o-ui-listbox-option-hover:not([aria-disabled="true"]) .o-ui-listbox-option-label,
-.o-ui-listbox-option:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover .o-ui-listbox-option-description,
-.o-ui-listbox-option-hover:not([aria-disabled="true"]) .o-ui-listbox-option-description {
     color: var(--hop-neutral-text-hover);
 }
 
-.o-ui-listbox-option:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover .o-ui-icon,
-.o-ui-listbox-option-hover:not([aria-disabled="true"]) o-ui-icon {
-    color: var(--hop-neutral-icon-hover);
-}
-
 /* OPTION | STATE | INVALID */
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-description {
+.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] {
+    --o-ui-listbox-option-description-color: var(--hop-danger-text-active);
+    --o-ui-listbox-option-icon-color: var(--hop-danger-icon-active);
     color: var(--hop-danger-text-active);
-}
-
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-icon {
-    color: var(--hop-danger-icon-active);
 }
 
 .o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover,
@@ -213,26 +186,8 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 .o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:focus,
 .o-ui-listbox-invalid .o-ui-listbox-option-focus[aria-selected="true"],
 .o-ui-listbox-invalid .o-ui-listbox-option.o-ui-focus[aria-selected="true"] {
+    --o-ui-listbox-option-description-color: var(--hop-danger-text-strong-hover);
+    --o-ui-listbox-option-icon-color: var(--hop-danger-icon-strong-hover);
     background-color: var(--hop-danger-surface-hover);
-}
-
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option-hover[aria-selected="true"]:not([aria-disabled="true"]) .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover .o-ui-listbox-option-description,
-.o-ui-listbox-invalid .o-ui-listbox-option-hover[aria-selected="true"]:not([aria-disabled="true"]) .o-ui-listbox-option-description,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:focus .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option-focus[aria-selected="true"] .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option.o-ui-focus[aria-selected="true"] .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:focus .o-ui-listbox-option-description,
-.o-ui-listbox-invalid .o-ui-listbox-option-focus[aria-selected="true"] .o-ui-listbox-option-description,
-.o-ui-listbox-invalid .o-ui-listbox-option.o-ui-focus[aria-selected="true"] .o-ui-listbox-option-description {
     color: var(--hop-danger-text-strong-hover);
-}
-
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover .o-ui-icon,
-.o-ui-listbox-invalid .o-ui-listbox-option-hover[aria-selected="true"]:not([aria-disabled="true"]) .o-ui-icon,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:focus .o-ui-icon,
-.o-ui-listbox-invalid .o-ui-listbox-option-focus[aria-selected="true"] .o-ui-icon,
-.o-ui-listbox-invalid .o-ui-listbox-option.o-ui-focus[aria-selected="true"] .o-ui-icon {
-    color: var(--hop-danger-icon-strong-hover);
 }
