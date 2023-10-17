@@ -68,7 +68,7 @@ export function InnerMenuItem({
         description: {
             className: "o-ui-menu-item-description",
             id: `${id}-description`,
-            size: "md"
+            size: "xs"
         },
         "end-icon": {
             className: "o-ui-menu-item-end-icon",
