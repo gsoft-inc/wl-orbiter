@@ -7,6 +7,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     --o-ui-menu-border-size: 1px;
     --o-ui-menu-item-height: 2rem;
     --o-ui-menu-item-checkmark-size: 1rem;
+    --o-ui-menu-item-icon-size: 1.5rem;
     --o-ui-menu-item-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-menu-item-checkmark-size));
 }
 
@@ -54,6 +55,16 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     row-gap: var(--hop-space-stack-xs);
 }
 
+/* ITEM | ICON */
+.o-ui-menu-item .o-ui-icon {
+    color: var(--hop-neutral-icon);
+}
+
+.o-ui-menu-item .o-ui-icon:not(.o-ui-menu-item-checkmark) {
+    width: var(--o-ui-menu-item-icon-size);
+    height: var(--o-ui-menu-item-icon-size);
+}
+
 /* ITEM | ICON | START  */
 .o-ui-menu-item-start-icon {
     margin-right: var(--hop-space-inline-sm);
@@ -93,14 +104,36 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 .o-ui-menu-item-focus {
     outline: transparent;
     background-color: var(--hop-neutral-surface-hover);
+}
+
+.o-ui-menu-item:focus .o-ui-menu-item-label,
+.o-ui-menu-item-focus .o-ui-menu-item-label,
+.o-ui-menu-item:focus .o-ui-menu-item-description,
+.o-ui-menu-item-focus .o-ui-menu-item-description {
     color: var(--hop-neutral-text-hover);
+}
+
+.o-ui-menu-item:focus .o-ui-icon,
+.o-ui-menu-item-focus .o-ui-icon {
+    color: var(--hop-neutral-icon-hover);
 }
 
 /* ITEM | STATE | ACTIVE */
 .o-ui-menu-item:active:not([aria-disabled="true"]),
 .o-ui-menu-item-active:not([aria-disabled="true"]) {
     background-color: var(--hop-neutral-surface-hover);
+}
+
+.o-ui-menu-item:active:not([aria-disabled="true"]) .o-ui-menu-item-label,
+.o-ui-menu-item-active:not([aria-disabled="true"]) .o-ui-menu-item-label,
+.o-ui-menu-item:active:not([aria-disabled="true"]) .o-ui-menu-item-description,
+.o-ui-menu-item-active:not([aria-disabled="true"]) .o-ui-menu-item-description {
     color: var(--hop-neutral-text-hover);
+}
+
+.o-ui-menu-item:active:not([aria-disabled="true"]) .o-ui-icon,
+.o-ui-menu-item-active:not([aria-disabled="true"]) .o-ui-icon {
+    color: var(--hop-neutral-icon-hover);
 }
 
 /* ITEM | STATE | DISABLED */
