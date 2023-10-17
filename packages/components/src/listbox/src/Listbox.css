@@ -136,7 +136,6 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
     opacity: 0;
     width: var(--o-ui-listbox-option-checkmark-size);
     height: var(--o-ui-listbox-option-checkmark-size);
-    color: var(--hop-neutral-icon);
     position: absolute;
     right: calc((var(--o-ui-listbox-option-padding-right) - var(--o-ui-listbox-option-checkmark-size)) / 2);
 }
