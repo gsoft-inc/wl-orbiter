@@ -5,18 +5,24 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 .o-ui {
     --o-ui-listbox-border-size: 1px;
-    --o-ui-listbox-option-height: var(--o-ui-sz-5);
-    --o-ui-listbox-option-checkmark-size: var(--o-ui-sz-3);
+    --o-ui-listbox-option-height: 2rem;
+    --o-ui-listbox-option-checkmark-size: 1rem;
+    --o-ui-listbox-option-icon-size: 1rem;
+    --o-ui-listbox-option-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-listbox-option-checkmark-size));
+    --o-ui-listbox-option-description-color: var(--hop-neutral-text-weak);
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon);
 }
 
 .o-ui-listbox {
     width: max-content;
-    max-width: var(--o-ui-sz-16);
+    max-width: 20rem;
     overflow-y: auto;
-    background-color: var(--o-ui-bg-alias-surface);
+    background-color: var(--hop-neutral-surface);
     outline: transparent;
-    border-radius: var(--o-ui-br-2);
-    box-shadow: var(--o-ui-bs-alias-floating);
+    border: var(--o-ui-listbox-border-size) solid var(--hop-neutral-border-weak);
+    border-radius: var(--hop-shape-rounded-md);
+    box-shadow: var(--hop-elevation-lifted);
+    padding: var(--hop-space-inset-sm);
 }
 
 /* FLUID */
@@ -27,18 +33,34 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* OPTION */
 .o-ui-listbox-option {
+    color: var(--hop-neutral-text);
+    border-radius: var(--hop-shape-rounded-md);
     height: var(--o-ui-listbox-option-height);
-    padding-right: var(--o-ui-sp-8);
-    padding-left: var(--o-ui-sp-3);
+    padding-right: var(--o-ui-listbox-option-padding-right);
+    padding-left: var(--hop-space-inset-md);
     display: flex;
     align-items: center;
     justify-items: center;
     position: relative;
 }
 
+/* LABEL */
+.o-ui-listbox-option-label {
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-self: start;
+}
+
+.o-ui-listbox-option-has-description .o-ui-listbox-option-label {
+    grid-area: label;
+    width: 100%;
+}
+
 /* OPTION | DESCRIPTION */
 .o-ui-listbox-option.o-ui-listbox-option-has-description {
-    --o-ui-listbox-option-height: var(--o-ui-sz-7);
+    --o-ui-listbox-option-height: 3.25rem;
     display: grid;
     overflow-x: hidden;
     grid-template-columns: max-content 1fr;
@@ -48,11 +70,12 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
         "aside label"
         "aside description";
     align-content: center;
+    row-gap: var(--hop-space-stack-xs);
 }
 
 /* OPTION | DESCRIPTION */
 .o-ui-listbox-option-description {
-    color: var(--o-ui-text-alias-tertiary);
+    color: var(--o-ui-listbox-option-description-color);
     cursor: default;
     white-space: nowrap;
     overflow: hidden;
@@ -62,14 +85,63 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
     width: 100%;
 }
 
+/* OPTION | ICONS */
+.o-ui-listbox-option .o-ui-icon {
+    color: var(--o-ui-listbox-option-icon-color);
+}
+
+.o-ui-listbox-option .o-ui-icon:not(.o-ui-listbox-option-checkmark) {
+    width: var(--o-ui-listbox-option-icon-size);
+    height: var(--o-ui-listbox-option-icon-size);
+}
+
+/* OPTION | ICONS | START ICON */
+.o-ui-listbox-option-start-icon {
+    margin-right: var(--hop-space-inline-sm);
+    grid-area: aside;
+}
+
+/* OPTION | WITH DESCRIPTION | ICONS | START ICON */
+.o-ui-listbox-option-has-description .o-ui-listbox-option-start-icon {
+    align-self: start;
+}
+
+/* OPTION | ICONS | END ICON */
+.o-ui-listbox-option-end-icon {
+    margin-left: var(--hop-space-inline-sm);
+}
+
+/* SECTION */
+.o-ui-listbox-section {
+    display: flex;
+    font-weight: var(--hop-body-xs-medium-font-weight);
+    padding-inline: var(--hop-space-inset-md);
+    cursor: default;
+    line-height: var(--hop-body-xs-medium-line-height);
+    height: var(--o-ui-listbox-option-height);
+    color: var(--hop-neutral-text-disabled);
+    text-transform: uppercase;
+    font-size: var(--hop-body-xs-medium-font-size);
+    align-items: center;
+}
+
+/* AVATAR */
+.o-ui-listbox-option-avatar {
+    margin-right: var(--hop-space-inline-sm);
+    grid-area: aside;
+}
+
 /* OPTION | STATE | SELECTED */
 .o-ui-listbox-option-checkmark {
     opacity: 0;
     width: var(--o-ui-listbox-option-checkmark-size);
     height: var(--o-ui-listbox-option-checkmark-size);
-    fill: var(--o-ui-bg-alias-accent);
     position: absolute;
-    right: calc((var(--o-ui-sp-8) - var(--o-ui-listbox-option-checkmark-size)) / 2);
+    right: calc((var(--o-ui-listbox-option-padding-right) - var(--o-ui-listbox-option-checkmark-size)) / 2);
+}
+
+.o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-label {
+    font-weight: var(--hop-body-sm-semibold-font-weight);
 }
 
 .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-checkmark {
@@ -78,107 +150,43 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* OPTION | STATE | DISABLED */
 .o-ui-listbox-option[aria-disabled="true"] {
-    opacity: var(--o-ui-disabled-opacity);
+    --o-ui-listbox-option-description-color: var(--hop-neutral-text-disabled);
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon-disabled);
+    color: var(--hop-neutral-text-disabled);
 }
 
 /* OPTION | STATE | FOCUS */
 .o-ui-listbox-option:focus,
 .o-ui-listbox-option-focus,
 .o-ui-listbox-option.o-ui-focus {
-    background-color: var(--o-ui-bg-alias-mid-break);
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon-hover);
+    background-color: var(--hop-neutral-surface-hover);
+    color: var(--hop-neutral-text-hover);
     outline: transparent;
-}
-
-/* OPTION | STATE | FOCUS | SELECTOR BAR */
-.o-ui-listbox-option:focus:after,
-.o-ui-listbox-option-focus:after,
-.o-ui-listbox-option.o-ui-focus:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    height: var(--o-ui-listbox-option-height);
-    width: 2px;
-    background-color: var(--o-ui-bg-alias-accent);
 }
 
 /* OPTION | STATE | HOVER */
 .o-ui-listbox-option:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover,
 .o-ui-listbox-option-hover:not([aria-disabled="true"]) {
-    background-color: var(--o-ui-bg-alias-mid-break);
+    --o-ui-listbox-option-icon-color: var(--hop-neutral-icon-hover);
+    background-color: var(--hop-neutral-surface-hover);
+    color: var(--hop-neutral-text-hover);
 }
 
 /* OPTION | STATE | INVALID */
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-label,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-description {
-    color: var(--o-ui-text-alias-alert);
+.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] {
+    --o-ui-listbox-option-description-color: var(--hop-danger-text-active);
+    --o-ui-listbox-option-icon-color: var(--hop-danger-icon-active);
+    color: var(--hop-danger-text-active);
 }
 
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-start-icon,
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-end-icon {
-    fill: var(--o-ui-text-alias-alert);
-}
-
-.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] .o-ui-listbox-option-checkmark {
-    fill: var(--o-ui-text-alias-alert);
-}
-
-/* OPTION | STATE | INVALID | FOCUS | SELECTOR BAR */
-.o-ui-listbox-invalid .o-ui-listbox-option:focus:after,
-.o-ui-listbox-invalid .o-ui-listbox-option-focus:after,
-.o-ui-listbox-invalid .o-ui-listbox-option.o-ui-focus:after {
-    background-color: var(--o-ui-text-alias-alert);
-}
-
-/* OPTION | ICONS */
-/* OPTION | ICONS | START ICON */
-.o-ui-listbox-option-start-icon {
-    margin-right: var(--o-ui-sp-1);
-    grid-area: aside;
-}
-
-/* OPTION | WITH DESCRIPTION | ICONS | START ICON */
-.o-ui-listbox-option-has-description .o-ui-listbox-option-start-icon {
-    margin-right: var(--o-ui-sp-2);
-    align-self: start;
-}
-
-/* OPTION | ICONS | END ICON */
-.o-ui-listbox-option-end-icon {
-    margin-left: var(--o-ui-sp-2);
-}
-
-/* SECTION */
-.o-ui-listbox-section {
-    display: flex;
-    font-weight: 500;
-    padding-left: var(--o-ui-sp-3);
-    cursor: default;
-    line-height: var(--o-ui-lh-1);
-    height: var(--o-ui-listbox-option-height);
-    color: var(--o-ui-text-alias-tertiary);
-    text-transform: uppercase;
-    font-size: var(--o-ui-fs-2);
-    align-items: center;
-}
-
-/* LABEL */
-.o-ui-listbox-option-label {
-    cursor: default;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: var(--o-ui-lh-2);
-    justify-self: start;
-}
-
-.o-ui-listbox-option-has-description .o-ui-listbox-option-label {
-    grid-area: label;
-    width: 100%;
-}
-
-/* AVATAR */
-.o-ui-listbox-option-avatar {
-    margin-right: var(--o-ui-sp-2);
-    grid-area: aside;
+.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover,
+.o-ui-listbox-invalid .o-ui-listbox-option-hover[aria-selected="true"]:not([aria-disabled="true"]),
+.o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:focus,
+.o-ui-listbox-invalid .o-ui-listbox-option-focus[aria-selected="true"],
+.o-ui-listbox-invalid .o-ui-listbox-option.o-ui-focus[aria-selected="true"] {
+    --o-ui-listbox-option-description-color: var(--hop-danger-text-strong-hover);
+    --o-ui-listbox-option-icon-color: var(--hop-danger-icon-strong-hover);
+    background-color: var(--hop-danger-surface-hover);
+    color: var(--hop-danger-text-strong-hover);
 }
