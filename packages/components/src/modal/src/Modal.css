@@ -3,7 +3,7 @@
     display: grid;
     align-items: stretch;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: var(--o-ui-sp-7);
+    gap: var(--hop-space-inline-xl);
 }
 
 .o-ui-modal-choice {

@@ -20,8 +20,8 @@
 /* DIALOG */
 .o-ui-dialog {
     position: relative;
-    background-color: var(--o-ui-bg-alias-surface);
-    border-radius: var(--o-ui-br-4);
+    background-color: var(--hop-neutral-surface);
+    border-radius: var(--hop-shape-rounded-md);
     display: grid;
     overflow: hidden;
     align-items: stretch;
@@ -39,7 +39,7 @@
 
 /* DIALOG | ASIDE */
 .o-ui-dialog-aside {
-    padding: var(--o-ui-sp-9);
+    padding: var(--hop-space-inset-lg);
     grid-area: aside;
     overflow: hidden;
     display: flex;
@@ -48,22 +48,22 @@
 
 /* DIALOG | SIZES */
 .o-ui-dialog-sm {
-    width: 544px;
+    width: 34rem;
 }
 
 .o-ui-dialog-md {
-    width: 800px;
+    width: 50rem;
 }
 
 .o-ui-dialog-lg {
-    width: 960px;
+    width: 60rem;
 }
 
 /* DIALOG | IMAGE & ILLUSTRATION */
 .o-ui-dialog-image,
 .o-ui-dialog-illustration {
     width: 100%;
-    height: var(--o-ui-sz-14);
+    height: 12rem;
     grid-area: image;
     overflow: hidden;
 }
@@ -71,7 +71,7 @@
 @media screen and (min-width: 768px) {
     .o-ui-dialog-image,
     .o-ui-dialog-illustration {
-        width: var(--o-ui-sz-15);
+        width: 16rem;
         height: 100%;
     }
 }
@@ -94,7 +94,7 @@
 .o-ui-dialog-header-section {
     display: flex;
     justify-content: space-between;
-    gap: var(--o-ui-sp-4);
+    gap: var(--hop-space-inline-md);
     flex-wrap: wrap;
 }
 
@@ -113,7 +113,8 @@
 
 /* DIALOG | CONTENT */
 .o-ui-dialog-content {
-    margin-top: var(--o-ui-sp-4);
+    color: var(--hop-neutral-text-weak);
+    margin-top: var(--hop-space-stack-md);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -123,9 +124,9 @@
 .o-ui-dialog-footer-section {
     display: flex;
     justify-content: space-between;
-    padding-top: var(--o-ui-sp-6);
+    padding-top: var(--hop-space-inset-lg);
     margin-top: auto;
-    gap: var(--o-ui-sp-4);
+    gap: var(--hop-space-inline-md);
 }
 
 /* DIALOG | FOOTER SECTION | FOOTER */
@@ -148,6 +149,6 @@
 /* DISMISS BUTTON */
 .o-ui-dialog .o-ui-dialog-dismiss-button {
     position: absolute;
-    right: var(--o-ui-sp-4);
-    top: var(--o-ui-sp-4);
+    right: 0.5rem;
+    top: 0.5rem;
 }
