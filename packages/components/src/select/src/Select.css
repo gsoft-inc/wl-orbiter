@@ -45,12 +45,12 @@
 /* TRIGGER | STATE | DISABLED */
 .o-ui-select-trigger-ghost[disabled],
 .o-ui-select-trigger-outline[disabled] {
-    --o-ui-select-icon-color: var(--hop-neutral-icon-disabled);
     color: var(--hop-neutral-text-disabled);
     cursor: not-allowed;
 }
 
 .o-ui-select-trigger-outline[disabled] {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-disabled);
     background: var(--hop-neutral-surface-disabled);
     border-color: var(--hop-neutral-border-disabled);
 }
@@ -70,11 +70,13 @@
 
 /* TRIGGER | GHOST | STATE | INVALID */
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost {
+    --o-ui-select-icon-color: var(--hop-danger-icon-weak);
     color: var(--hop-danger-text-weak);
 }
 
 /* TRIGGER | GHOST | STATE | INVALID | ACTIVE */
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled])[aria-expanded="true"] {
+    --o-ui-select-icon-color: var(--hop-danger-icon-active);
     color: var(--hop-danger-text-active);
 }
 
@@ -83,11 +85,13 @@
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]):focus-visible,
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-hover,
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]):hover {
+    --o-ui-select-icon-color: var(--hop-danger-icon-hover);
     color: var(--hop-danger-text-hover);
 }
 
 /* TRIGGER | GHOST | STATE | INVALID | DISABLED */
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost[disabled] {
+    --o-ui-select-icon-color: var(--hop-danger-icon-disabled);
     color: var(--hop-danger-text-disabled);
 }
 
@@ -100,7 +104,7 @@
 }
 
 .o-ui-select-trigger-ghost:not([disabled])[aria-expanded="true"] {
-    --o-ui-select-icon-color: var(--hop-danger-icon);
+    --o-ui-select-icon-color: var(--hop-neutral-icon);
     color: var(--hop-neutral-text);
 }
 
