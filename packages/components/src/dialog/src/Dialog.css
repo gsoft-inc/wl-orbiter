@@ -39,7 +39,7 @@
 
 /* DIALOG | ASIDE */
 .o-ui-dialog-aside {
-    padding: var(--hop-space-inset-lg);
+    padding: var(--hop-space-inset-lg) var(--hop-space-inset-xl);
     grid-area: aside;
     overflow: hidden;
     display: flex;
