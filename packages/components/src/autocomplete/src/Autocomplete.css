@@ -1,4 +1,5 @@
 .o-ui-autocomplete-no-results {
+    color: var(--hop-neutral-text);
     font-size: var(--hop-body-sm-font-size);
     line-height: var(--hop-body-sm-line-height);
     display: inline-flex;
@@ -7,7 +8,7 @@
     border-radius: var(--hop-shape-rounded-md);
     box-shadow: var(--hop-elevation-lifted);
     background-color: var(--hop-neutral-surface);
-    padding: var(--hop-space-inset-sm);
+    padding: var(--hop-space-inset-sm) var(--hop-space-inset-md);
     position: relative;
     cursor: default;
     height: 2rem + var(--hop-space-inset-sm) * 2;
