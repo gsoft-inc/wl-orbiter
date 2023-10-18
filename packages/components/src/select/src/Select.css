@@ -80,6 +80,11 @@
     color: var(--hop-danger-text-hover);
 }
 
+/* TRIGGER | GHOST | STATE | INVALID | DISABLED */
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost[disabled] {
+    color: var(--hop-danger-text-disabled);
+}
+
 /* TRIGGER | GHOST | STATE | FOCUS */
 .o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-focus,
 .o-ui-select-trigger-ghost:not([disabled]):focus-visible {
