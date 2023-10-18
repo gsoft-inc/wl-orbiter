@@ -62,6 +62,24 @@
     color: var(--hop-neutral-text-weak);
 }
 
+/* TRIGGER | GHOST | STATE | INVALID */
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost {
+    color: var(--hop-danger-text-weak);
+}
+
+/* TRIGGER | GHOST | STATE | INVALID | ACTIVE */
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled])[aria-expanded="true"] {
+    color: var(--hop-danger-text-active);
+}
+
+/* TRIGGER | GHOST | STATE | INVALID | HOVER/FOCUS */
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-focus,
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]):focus-visible,
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-hover,
+.o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled]):hover {
+    color: var(--hop-danger-text-hover);
+}
+
 /* TRIGGER | GHOST | STATE | FOCUS */
 .o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-focus,
 .o-ui-select-trigger-ghost:not([disabled]):focus-visible {
