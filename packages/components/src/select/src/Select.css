@@ -1,3 +1,7 @@
+.o-ui {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-weak);
+}
+
 /* TRIGGER */
 .o-ui-select-trigger {
     outline: transparent;
@@ -27,6 +31,7 @@
 
 /* TRIGGER | ICONS */
 .o-ui-select-trigger .o-ui-icon {
+    color: var(--o-ui-select-icon-color);
     height: 1rem;
     width: 1rem;
 }
@@ -40,6 +45,7 @@
 /* TRIGGER | STATE | DISABLED */
 .o-ui-select-trigger-ghost[disabled],
 .o-ui-select-trigger-outline[disabled] {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-disabled);
     color: var(--hop-neutral-text-disabled);
     cursor: not-allowed;
 }
@@ -88,17 +94,20 @@
 /* TRIGGER | GHOST | STATE | FOCUS */
 .o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-focus,
 .o-ui-select-trigger-ghost:not([disabled]):focus-visible {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-hover);
     background: var(--hop-neutral-surface-hover);
     box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
 }
 
 .o-ui-select-trigger-ghost:not([disabled])[aria-expanded="true"] {
+    --o-ui-select-icon-color: var(--hop-danger-icon);
     color: var(--hop-neutral-text);
 }
 
 /* TRIGGER | GHOST | STATE | HOVER */
 .o-ui-select-trigger-ghost:not([disabled]).o-ui-select-trigger-hover,
 .o-ui-select-trigger-ghost:not([disabled]):hover {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-hover);
     background: var(--hop-neutral-surface-hover);
     color: var(--hop-neutral-text-hover);
 }
@@ -118,12 +127,14 @@
 
 /* TRIGGER | OUTLINE | STATE | OPENED */
 .o-ui-select-trigger-outline[aria-expanded="true"] {
+    --o-ui-select-icon-color: var(--hop-neutral-icon);
     border-color: var(--hop-neutral-border-active);
 }
 
 /* TRIGGER | OUTLINE | STATE | HOVER */
 .o-ui-select-trigger-outline:not([disabled]):hover,
 .o-ui-select-trigger-outline:not([disabled]).o-ui-select-trigger-hover {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-hover);
     background: var(--hop-neutral-surface-hover);
     border-color: var(--hop-neutral-border-hover);
     color: var(--hop-neutral-text-hover);
@@ -148,6 +159,7 @@
 /* TRIGGER | OUTLINE | STATE | FOCUS */
 .o-ui-select-trigger-outline:not([disabled]).o-ui-select-trigger-focus,
 .o-ui-select-trigger-outline:not([disabled]):focus-visible {
+    --o-ui-select-icon-color: var(--hop-neutral-icon-hover);
     background: var(--hop-neutral-surface-hover);
     border-color: var(--hop-neutral-border-hover);
     box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
@@ -178,18 +190,6 @@
 
 .o-ui-select-trigger-outline.o-ui-select-trigger-has-placeholder[disabled] {
     color: var(--hop-neutral-text-disabled);
-}
-
-.o-ui-select-trigger-outline.o-ui-select-trigger-has-placeholder .o-ui-disclosure-arrow {
-    color: var(--hop-neutral-icon-weak);
-}
-
-.o-ui-select-trigger-outline.o-ui-select-trigger-has-placeholder[aria-expanded="true"] .o-ui-disclosure-arrow {
-    color: var(--hop-neutral-icon);
-}
-
-.o-ui-select-trigger-outline.o-ui-select-trigger-has-placeholder[disabled] .o-ui-disclosure-arrow {
-    color: var(--hop-neutral-icon-disabled);
 }
 
 /* SELECT VALUE & PLACEHOLDER */
