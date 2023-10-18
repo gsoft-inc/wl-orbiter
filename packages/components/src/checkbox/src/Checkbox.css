@@ -65,8 +65,8 @@
 
 /* BOX | INDETERMINATE */
 .o-ui-checkbox-indeterminate .o-ui-checkbox-box {
-    background-color: var(--hop-neutral-surface-active);
-    border-color: var(--hop-neutral-border-active);
+    --_checkbox-border-color: var(--hop-neutral-border-active);
+    --_checkbox-background-color: var(--hop-neutral-surface-active);
 }
 
 .o-ui-checkbox-indeterminate .o-ui-checkbox-box:after {
@@ -81,8 +81,9 @@
 }
 
 /* BOX | INDETERMINATE | STATE | INVALID */
-.o-ui-checkbox-invalid.o-ui-checkbox-indeterminate .o-ui-checkbox-box:after {
-    background-color: var(--o-ui-bg-alias-alert);
+.o-ui-checkbox-invalid.o-ui-checkbox-indeterminate .o-ui-checkbox-box {
+    --_checkbox-border-color: var(--hop-danger-border-strong);
+    --_checkbox-background-color: var(--hop-danger-surface-strong);
 }
 
 /* CONTENT | LABEL */
