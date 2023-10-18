@@ -262,11 +262,11 @@ export function InnerDialog({
     );
 
     const headerMarkup = isString(header?.props?.children)
-        ? cloneElement(header, { children: <Text>{header?.props?.children}</Text> })
+        ? cloneElement(header, { children: <Text size="sm">{header?.props?.children}</Text> })
         : header;
 
     const footerMarkup = isString(footer?.props?.children)
-        ? cloneElement(footer, { children: <Text>{footer?.props?.children}</Text> })
+        ? cloneElement(footer, { children: <Text size="sm">{footer?.props?.children}</Text> })
         : footer;
 
     const dismissButtonMarkup = dismissable && (
