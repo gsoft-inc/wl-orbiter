@@ -62,7 +62,7 @@
 /* TRIGGER | BORDERED | HOVER */
 .o-ui-accordion .o-ui-accordion-trigger:not([disabled]):hover,
 .o-ui-accordion .o-ui-accordion-trigger-hover:not([disabled]) {
-    background-color: var(--hop-neutral-surface-weak);
+    background-color: var(--hop-neutral-surface-hover);
 }
 
 /* TRIGGER | CONTENT */
