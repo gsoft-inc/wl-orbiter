@@ -248,7 +248,7 @@ button.o-ui-link-hover {
 
 /* SHAPE | ROUNDED */
 .o-ui-link-rounded {
-    border-radius: var(--hop-shape-rounded-sm);
+    border-radius: var(--hop-shape-rounded-md);
 }
 
 /* SHAPE | CIRCULAR */
