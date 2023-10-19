@@ -1,6 +1,5 @@
 .o-ui-input-group {
     display: inline-flex;
-    align-items: center;
     max-width: 100%;
     width: max-content;
 }
@@ -11,7 +10,7 @@
 
 /* TEXT INPUT */
 .o-ui-input-group-has-text-input:not(.o-ui-input-group-fluid) {
-    width: var(--o-ui-sz-16);
+    width: 20rem;
 }
 
 /* DATE INPUT */
@@ -74,22 +73,24 @@
 .o-ui-input-group-text-addon {
     display: flex;
     align-items: center;
-    padding: 0 var(--o-ui-sp-3);
-    min-height: var(--o-ui-sz-6);
-    border-radius: var(--o-ui-br-2);
-    border: 1px solid var(--o-ui-b-alias-mid-break);
-    color: var(--o-ui-text-alias-primary);
-    background-color: var(--o-ui-bg-alias-mid-break);
+    padding: 0 var(--hop-space-inset-md);
+    min-height: 2.5rem;
+    border-radius: var(--hop-shape-rounded-md);
+    border: 1px solid var(--hop-neutral-border);
+    color: var(--hop-neutral-text);
+    background-color: var(--hop-neutral-surface-weakest);
     flex-shrink: 0;
 }
 
 /* TEXT ADDON | DISABLED */
 .o-ui-input-group-addon[disabled] {
-    opacity: var(--o-ui-disabled-opacity);
+    color: var(--hop-neutral-text-disabled);
+    background-color: var(--hop-neutral-surface-disabled);
+    border-color: var(--hop-neutral-border-disabled);
 }
 
 /* SELECT ADDON */
 .o-ui-input-group-select-addon {
     width: auto !important;
-    min-width: 85px;
+    min-width: 5.3125rem;
 }
