@@ -50,6 +50,10 @@
     transition: var(--o-ui-focus-ring-transition);
 }
 
+.o-ui-checkbox:not(.o-ui-checkbox-checked):not(.o-ui-checkbox-indeterminate) input[type="checkbox"]:focus-visible + .o-ui-checkbox-box {
+    background-color: var(--hop-neutral-surface-hover);
+}
+
 .o-ui-checkbox:not(.o-ui-checkbox-checked):not(.o-ui-checkbox-indeterminate):not(.o-ui-checkbox-invalid) .o-ui-checkbox-box:before {
     background-color: var(--hop-neutral-surface-hover);
     border: 1px solid var(--hop-neutral-border-hover);
