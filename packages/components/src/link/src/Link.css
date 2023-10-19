@@ -15,12 +15,6 @@
     border-radius: inherit;
 }
 
-/* INHERIT | STATE | HOVER */
-/* .o-ui-link-inherit-color:hover,
-.o-ui-link-inherit-color-hover {
-    color: inherit;
-} */
-
 /* STATE | FOCUS */
 .o-ui-link:focus-visible,
 .o-ui-link-focus {
@@ -192,6 +186,34 @@
 }
 
 /* VARIATIONS */
+/* SOLID */
+.o-ui-link-solid {
+    color: var(--hop-neutral-text);
+}
+
+/* SOLID | STATE | HOVER */
+.o-ui-link:hover.o-ui-link-solid,
+.o-ui-link-hover.o-ui-link-solid {
+    color: var(--hop-neutral-text-hover);
+}
+
+/* SOLID | STATE | FOCUS */
+.o-ui-link:focus.o-ui-link-solid,
+.o-ui-link-focus.o-ui-link-solid {
+    color: var(--hop-neutral-text-hover);
+}
+
+/* SOLID | STATE | DISABLED */
+.o-ui-link-disabled.o-ui-link-solid {
+    color: var(--hop-neutral-text-disabled);
+}
+
+/* SOLID | STATE | DISABLED | HOVER */
+.o-ui-link-disabled.o-ui-link-solid:hover,
+.o-ui-link-disabled.o-ui-link-solid.o-ui-link-hover {
+    color: var(--hop-neutral-text-disabled);
+}
+
 /* ACCENT */
 .o-ui-link-accent {
     color: var(--hop-primary-text);
@@ -200,6 +222,12 @@
 /* ACCENT | STATE | HOVER */
 .o-ui-link:hover.o-ui-link-accent,
 .o-ui-link-hover.o-ui-link-accent {
+    color: var(--hop-primary-text-hover);
+}
+
+/* ACCENT | STATE | FOCUS */
+.o-ui-link:focus.o-ui-link-accent,
+.o-ui-link-focus.o-ui-link-accent {
     color: var(--hop-primary-text-hover);
 }
 
@@ -222,6 +250,12 @@
 /* NEGATIVE | STATE | HOVER */
 .o-ui-link:hover.o-ui-link-negative {
     color: var(--hop-danger-text-hover);
+}
+
+/* NEGATIVE | STATE | FOCUS */
+.o-ui-link:focus.o-ui-link-negative,
+.o-ui-link-focus.o-ui-link-negative {
+    color: var(--hop-primary-text-hover);
 }
 
 /* NEGATIVE | STATE | DISABLED  */
