@@ -50,6 +50,11 @@
     transition: var(--o-ui-focus-ring-transition);
 }
 
+.o-ui-checkbox:not(.o-ui-checkbox-checked):not(.o-ui-checkbox-indeterminate):not(.o-ui-checkbox-invalid) .o-ui-checkbox-box:before {
+    background-color: var(--hop-neutral-surface-hover);
+    border: 1px solid var(--hop-neutral-border-hover);
+}
+
 .o-ui-checkbox-checkmark {
     opacity: 0;
 }
@@ -126,6 +131,10 @@
     --_checkbox-border-color: var(--hop-danger-border-strong);
 }
 
+.o-ui-checkbox-invalid:hover .o-ui-checkbox-box {
+    --_checkbox-background-color: var(--hop-neutral-surface-hover);
+}
+
 .o-ui-checkbox-checked.o-ui-checkbox-invalid .o-ui-checkbox-box {
     --_checkbox-border-color: var(--hop-danger-border-strong);
     --_checkbox-background-color: var(--hop-danger-surface-strong);
@@ -175,7 +184,7 @@
 }
 
 /* STATE | HOVER */
-.o-ui-checkbox:hover:not(.o-ui-checkbox-checked):not(.o-ui-checkbox-indeterminate) > input[type="checkbox"]:not([disabled]) + .o-ui-checkbox-box,
+.o-ui-checkbox:hover:not(.o-ui-checkbox-checked):not(.o-ui-checkbox-indeterminate):not(.o-ui-checkbox-invalid) > input[type="checkbox"]:not([disabled]) + .o-ui-checkbox-box,
 .o-ui-checkbox-hover:not(.o-ui-checkbox-checked):not(.o-ui-checkbox-disabled) .o-ui-checkbox-box {
     --_checkbox-border-color: var(--hop-neutral-border-hover);
     --_checkbox-background-color: var(--hop-neutral-surface-hover);
