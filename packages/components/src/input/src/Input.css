@@ -162,7 +162,7 @@
 /* STATES | HOVER */
 .o-ui-input:not(.o-ui-input-disabled):hover,
 .o-ui-input:hover textarea:not(:disabled),
-.o-ui-input-hover:not(.o-ui-input-disabled) {
+.o-ui-input-hover:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
     --o-ui-input-border-color: var(--hop-neutral-border-hover);
     --o-ui-input-background-color: var(--hop-neutral-surface-hover);
 }
