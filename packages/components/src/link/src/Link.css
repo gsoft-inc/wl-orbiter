@@ -58,7 +58,7 @@
 
 /* STATE | DISABLED */
 .o-ui-link-disabled {
-    opacity: var(--o-ui-disabled-opacity);
+    color: var(--hop-neutral-text-disabled);
 }
 
 /* STATE | DISABLED | HOVER */
@@ -194,18 +194,45 @@
 /* VARIATIONS */
 /* ACCENT */
 .o-ui-link-accent {
-    color: var(--hop-text-primary);
+    color: var(--hop-primary-text);
 }
 
 /* ACCENT | STATE | HOVER */
 .o-ui-link:hover.o-ui-link-accent,
 .o-ui-link-hover.o-ui-link-accent {
-    color: var(--hop-text-primary-hover);
+    color: var(--hop-primary-text-hover);
+}
+
+/* ACCENT | STATE | DISABLED */
+.o-ui-link-disabled.o-ui-link-accent {
+    color: var(--hop-primary-text-disabled);
+}
+
+/* ACCENT | STATE | DISABLED | HOVER */
+.o-ui-link-disabled.o-ui-link-accent:hover,
+.o-ui-link-disabled.o-ui-link-accent.o-ui-link-hover {
+    color: var(--hop-primary-text-disabled);
 }
 
 /* NEGATIVE */
 .o-ui-link-negative {
-    color: var(--hop-text-danger);
+    color: var(--hop-danger-text-weak);
+}
+
+/* NEGATIVE | STATE | HOVER */
+.o-ui-link:hover.o-ui-link-negative {
+    color: var(--hop-danger-text-hover);
+}
+
+/* NEGATIVE | STATE | DISABLED  */
+.o-ui-link-disabled.o-ui-link-negative {
+    color: var(--hop-danger-text-disabled);
+}
+
+/* NEGATIVE | STATE | DISABLED | HOVER */
+.o-ui-link-disabled.o-ui-link-negative:hover,
+.o-ui-link-disabled.o-ui-link-negative.o-ui-link-hover {
+    color: var(--hop-danger-text-disabled);
 }
 
 /* AS BUTTON */
