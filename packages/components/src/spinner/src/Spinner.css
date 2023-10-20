@@ -26,7 +26,7 @@
 
 /* CONTENT | LABEL */
 .o-ui-spinner-label {
-    margin-left: var(--hop-space-stack-sm);
+    margin-left: var(--hop-space-inline-sm);
 }
 
 /* ANIMATION */
