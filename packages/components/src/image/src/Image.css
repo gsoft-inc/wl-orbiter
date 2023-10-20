@@ -7,12 +7,12 @@
 
 /* SHAPE | ROUNDED */
 .o-ui-image-rounded {
-    border-radius: var(--o-ui-br-4);
+    border-radius: var(--hop-shape-rounded-md);
 }
 
 /* SHAPE | CIRCULAR */
 .o-ui-image-circular {
-    border-radius: var(--o-ui-br-circular);
+    border-radius: var(--hop-shape-circle);
 }
 
 /* COLOR SCHEME */

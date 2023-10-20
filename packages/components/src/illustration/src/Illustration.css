@@ -27,15 +27,5 @@
 
 /* SHAPES */
 .o-ui-illustration-rounded {
-    border-radius: var(--o-ui-br-4);
-}
-
-/* CONTENT */
-.o-ui-illustration-heading {
-    margin-top: var(--o-ui-sp-6);
-    margin-bottom: 0;
-}
-
-.o-ui-illustration-content {
-    margin-top: var(--o-ui-sp-2);
+    border-radius: var(--hop-shape-rounded-md);
 }
