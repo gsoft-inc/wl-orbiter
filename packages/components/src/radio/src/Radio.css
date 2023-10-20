@@ -39,7 +39,6 @@
 
 /* CONTENT | LABEL */
 .o-ui-radio-label {
-    line-height: var(--hop-body-md-line-height);
     margin-left: var(--hop-space-inline-sm);
     overflow: hidden;
     white-space: nowrap;
@@ -66,13 +65,13 @@
 /* CONTENT | COUNTER */
 .o-ui-radio-counter {
     margin-left: var(--hop-space-inline-sm);
-    color: var(--o-ui-text-alias-primary);
+    color: var(--hop-neutral-text);
 }
 
 /* CONTENT | COUNTER | REVERSE */
 .o-ui-radio-reverse .o-ui-radio-counter {
     margin-left: 0;
-    margin-right: var(--hop-neutral-text);
+    margin-right: var(--hop-space-inline-sm);
 }
 
 /* VALIDATION */
