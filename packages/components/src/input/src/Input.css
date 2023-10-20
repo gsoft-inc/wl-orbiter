@@ -53,7 +53,7 @@
     padding: 0;
     border-radius: var(--o-ui-input-border-radius);
     border: 1px solid var(--o-ui-input-border-color);
-    background-color: var(--o-ui-bg-alias-surface);
+    background-color: var(--o-ui-input-background-color);
     transition: all var(--o-ui-easing-duration-2) var(--o-ui-easing-productive), padding 0s linear;
     line-height: inherit;
     font-family: inherit;
@@ -101,13 +101,6 @@
     -webkit-text-fill-color: var(--hop-neutral-text) !important;
 }
 
-/* STATE | HOVER */
-.o-ui-input:not(.o-ui-input-focus):not(.o-ui-input-disabled):hover,
-.o-ui-input:not(.o-ui-input-focus):hover textarea:not(:disabled) {
-    border-color: var(--hop-neutral-border-hover);
-    background-color: var(--hop-neutral-surface-hover);
-}
-
 /* PLACEHOLDER */
 .o-ui-input input::placeholder,
 .o-ui-input textarea::placeholder {
@@ -124,31 +117,6 @@
 /* FLUID */
 .o-ui-input.o-ui-input-fluid {
     width: 100%;
-}
-
-/* INVALID */
-.o-ui-input-invalid:not(.o-ui-input-disabled),
-.o-ui-input-invalid:not(.o-ui-input-disabled) textarea {
-    --o-ui-input-border-color: var(--hop-danger-border-strong);
-}
-
-/* INVALID | DISABLED */
-.o-ui-input-invalid.o-ui-input-disabled,
-.o-ui-input-invalid.o-ui-text-area textarea:disabled {
-    background-color: var(--hop-neutral-border-disabled);
-    --o-ui-input-border-color: var(--hop-neutral-surface-disabled);
-}
-
-.o-ui-input.o-ui-input-invalid:not(.o-ui-text-area):focus-within,
-.o-ui-input-focus.o-ui-input-invalid {
-    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
-}
-
-/* STATE | HOVER | INVALID */
-.o-ui-input.o-ui-input-invalid:not(.o-ui-input-focus):not(.o-ui-input-disabled):hover,
-.o-ui-input.o-ui-input-invalid:not(.o-ui-input-focus):hover textarea:not(:disabled),
-.o-ui-input-hover.o-ui-input-invalid:not(.o-ui-input-focus):not(.o-ui-input-disabled) {
-    border-color: var(--o-ui-b-alias-alert-hover);
 }
 
 /* ICON */
@@ -185,26 +153,52 @@
 .o-ui-number-input:not(.o-ui-input-disabled):focus-within,
 .o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea,
 .o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
+    --o-ui-input-border-color: var(--hop-neutral-border-active);
+    --o-ui-input-background-color: var(--hop-neutral-surface);
     box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
     outline: transparent;
+}
+
+/* STATES | HOVER */
+.o-ui-input:not(.o-ui-input-disabled):hover,
+.o-ui-input:hover textarea:not(:disabled),
+.o-ui-input-hover:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
+    --o-ui-input-border-color: var(--hop-neutral-border-hover);
+    --o-ui-input-background-color: var(--hop-neutral-surface-hover);
 }
 
 /* STATES | DISABLED */
 .o-ui-text-input.o-ui-input-disabled,
 .o-ui-number-input.o-ui-input-disabled,
 .o-ui-input textarea:disabled {
-    background-color: var(--hop-neutral-surface-disabled);
-    cursor: not-allowed;
+    --o-ui-input-background-color: var(--hop-neutral-surface-disabled);
     --o-ui-input-border-color: var(--hop-neutral-border-disabled);
-}
-
-/* STATES | ACTIVE */
-.o-ui-text-input.o-ui-input-has-active {
-    --o-ui-input-border-color: var(--hop-neutral-border-active);
+    cursor: not-allowed;
 }
 
 .o-ui-input-disabled > * {
     cursor: not-allowed;
+}
+
+/* INVALID */
+.o-ui-input-invalid:not(.o-ui-input-disabled),
+.o-ui-input-invalid textarea:not(:disabled) {
+    --o-ui-input-border-color: var(--hop-danger-border-strong);
+}
+
+/* STATE | HOVER | INVALID */
+.o-ui-input.o-ui-input-invalid:not(.o-ui-input-focus):not(.o-ui-input-disabled):hover,
+.o-ui-input.o-ui-input-invalid:not(.o-ui-input-focus):hover textarea:not(:disabled),
+.o-ui-input-hover.o-ui-input-invalid:not(.o-ui-input-focus):not(.o-ui-input-disabled) {
+    --o-ui-input-border-color: var(--hop-danger-border-strong);
+}
+
+/* STATE | FOCUS | INVALID */
+.o-ui-input-invalid.o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-has-focus,
+.o-ui-input-invalid.o-ui-number-input:not(.o-ui-input-disabled):focus-within,
+.o-ui-input-invalid.o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea,
+.o-ui-input-invalid.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
+    --o-ui-input-border-color: var(--hop-danger-border-strong);
 }
 
 /* STATES | LOADING */
