@@ -10,12 +10,12 @@
     transition: all var(--o-ui-easing-duration-2) var(--o-ui-easing-focus);
     position: relative;
     cursor: pointer;
-    box-shadow: var(--hop-elevation-lifted);
+    box-shadow: var(--hop-elevation-raised);
     font-family: inherit;
 }
 
 .o-ui-tile::before {
-    border: 1px solid transparent;
+    border: 1px solid var(--hop-neutral-border-weak);
     content: "";
     top: -1px;
     left: -1px;
@@ -40,7 +40,7 @@
 /* HOVER */
 .o-ui-tile:not([disabled]):not([class$="-disabled"]):not([aria-checked="true"]):not([aria-pressed="true"]):hover,
 .o-ui-tile-hover:not([disabled]):not([class$="-disabled"]):not([aria-checked="true"]):not([aria-pressed="true"]) {
-    background-color: var(--hop-primary-surface-active);
+    background-color: var(--hop-neutral-surface-hover);
 }
 
 /* FOCUS */
@@ -70,14 +70,10 @@
 }
 
 /* CHECKED */
-.o-ui-tile[aria-checked="true"],
-.o-ui-tile[aria-pressed="true"] {
-    background-color: var(--hop-primary-surface-active);
-}
-
 .o-ui-tile[aria-checked="true"]::before,
 .o-ui-tile[aria-pressed="true"]::before {
-    border-color: var(--hop-primary-border-active);
+    border-color: var(--hop-neutral-border-active);
+    border-width: 2px;
 }
 
 /* CHECKED | CHECKMARK */
@@ -91,7 +87,7 @@
     fill: var(--hop-primary-surface-weak);
     opacity: 0;
     border-radius: var(--hop-shape-circle);
-    background-color: var(--hop-primary-surface-strong);
+    background-color: var(--hop-neutral-icon);
 }
 
 .o-ui-tile[aria-checked="true"] .o-ui-tile-checkmark,
@@ -101,7 +97,6 @@
 
 /* DISABLED */
 .o-ui-tile[disabled] {
-    background-color: var(--hop-neutral-surface-disabled);
     color: var(--hop-neutral-text-disabled);
     cursor: not-allowed;
 }
