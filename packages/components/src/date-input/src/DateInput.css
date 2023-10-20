@@ -1,5 +1,5 @@
 .o-ui-date-input {
-    width: 160px;
+    width: 10rem;
 }
 
 /* BUTTON PRESETS */
@@ -9,7 +9,7 @@
     max-width: max-content;
     width: 100%;
     flex-wrap: wrap;
-    gap: var(--o-ui-sp-4);
+    gap: var(--hop-space-inline-md);
 }
 
 /* BUTTON PRESETS | FLUID */
@@ -23,5 +23,5 @@
 
 /* IN GROUP */
 .o-ui-date-input-in-group {
-    width: 140px;
+    width: 8.75rem;
 }

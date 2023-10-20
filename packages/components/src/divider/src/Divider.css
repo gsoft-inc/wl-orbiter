@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: var(--o-ui-text-alias-tertiary);
+    color: var(--hop-neutral-text-weak);
 }
 
 .o-ui-divider {
@@ -11,12 +11,12 @@
 
 /* HORIZONTAL */
 .o-ui-divider[aria-orientation="horizontal"] {
-    margin: var(--o-ui-sp-4) 0;
+    margin: var(--hop-space-stack-md) 0;
     height: 0;
 }
 
 .o-ui-divider[aria-orientation="horizontal"]:not(.o-ui-divider-has-label) {
-    border-bottom: 1px solid var(--o-ui-b-alias-low-break);
+    border-bottom: 1px solid var(--hop-neutral-border-weak);
 }
 
 /* LABELLED */
@@ -29,20 +29,20 @@
 .o-ui-divider-has-label[aria-orientation="horizontal"]::after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid var(--o-ui-b-alias-low-break);
+    border-bottom: 1px solid var(--hop-neutral-border-weak);
 }
 
 .o-ui-divider-has-label[aria-orientation="horizontal"]::before {
-    margin-right: var(--o-ui-sp-3);
+    margin-right: var(--hop-space-inline-sm);
 }
 
 .o-ui-divider-has-label[aria-orientation="horizontal"]::after {
-    margin-left: var(--o-ui-sp-3);
+    margin-left: var(--hop-space-inline-sm);
 }
 
 /* VERTICAL */
 .o-ui-divider[aria-orientation="vertical"] {
-    margin: 0 var(--o-ui-sp-2);
+    margin: 0 var(--hop-space-inline-sm);
     max-width: max-content;
     width: 100%;
     height: auto;
@@ -50,7 +50,7 @@
 }
 
 .o-ui-divider[aria-orientation="vertical"]:not(.o-ui-divider-has-label) {
-    border-left: 1px solid var(--o-ui-b-alias-low-break);
+    border-left: 1px solid var(--hop-neutral-border-weak);
 }
 
 /* VERTICAL | LABELLED */
@@ -62,13 +62,13 @@
 .o-ui-divider-has-label[aria-orientation="vertical"]::after {
     content: "";
     flex: 1;
-    border-left: 1px solid var(--o-ui-b-alias-low-break);
+    border-left: 1px solid var(--hop-neutral-border-weak);
 }
 
 .o-ui-divider-has-label[aria-orientation="vertical"]::before {
-    margin-bottom: var(--o-ui-sp-2);
+    margin-bottom: var(--hop-space-stack-sm);
 }
 
 .o-ui-divider-has-label[aria-orientation="vertical"]::after {
-    margin-top: var(--o-ui-sp-2);
+    margin-top: var(--hop-space-stack-sm);
 }
