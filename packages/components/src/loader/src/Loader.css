@@ -2,8 +2,8 @@
     --animation-duration: 2s;
     opacity: 0;
     transition: opacity var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
-    width: var(--hop-space-320);
-    height: var(--hop-space-320);
+    width: 2rem;
+    height: 2rem;
     position: relative;
 }
 

@@ -38,8 +38,8 @@
 
 /* SIZES */
 .o-ui-spinner-sm .o-ui-spinner-wheel {
-    width: var(--hop-space-160);
-    height: var(--hop-space-160);
+    width: 1rem;
+    height: 1rem;
 }
 
 .o-ui-spinner-sm .o-ui-spinner-wheel::before {
@@ -62,8 +62,8 @@
 }
 
 .o-ui-spinner-lg .o-ui-spinner-wheel {
-    width: var(--hop-space-240);
-    height: var(--hop-space-240);
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .o-ui-spinner-lg .o-ui-spinner-wheel::before {
