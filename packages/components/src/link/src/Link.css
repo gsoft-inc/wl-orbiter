@@ -3,7 +3,7 @@
     color: inherit;
     display: inline-block;
     border: none;
-    background-color: var(--o-ui-transparent);
+    background-color: transparent;
     padding: 0;
     position: relative;
     /* direct text is responsible of setting the text decoration style */
@@ -14,12 +14,6 @@
 .o-ui-link > * {
     border-radius: inherit;
 }
-
-/* INHERIT | STATE | HOVER */
-/* .o-ui-link-inherit-color:hover,
-.o-ui-link-inherit-color-hover {
-    color: inherit;
-} */
 
 /* STATE | FOCUS */
 .o-ui-link:focus-visible,
@@ -38,7 +32,7 @@
     display: block;
     position: absolute;
     box-shadow: 0 0 0 2px var(--o-ui-focus-ring-color-alias-default);
-    border-radius: var(--o-ui-br-2);
+    border-radius: var(--hop-shape-rounded-sm);
     transition: var(--o-ui-focus-ring-transition);
 }
 
@@ -52,13 +46,13 @@
 .o-ui-link-active.o-ui-link-focus,
 .o-ui-link-active.o-ui-link:focus-visible,
 .o-ui-link:active.o-ui-link-focus {
-    background-color: var(--o-ui-transparent);
+    background-color: transparent;
     box-shadow: none;
 }
 
 /* STATE | DISABLED */
 .o-ui-link-disabled {
-    opacity: var(--o-ui-disabled-opacity);
+    color: var(--hop-neutral-text-disabled);
 }
 
 /* STATE | DISABLED | HOVER */
@@ -68,9 +62,10 @@
 }
 
 /* STATE | DISABLED | FOCUS */
+.o-ui-link-disabled:focus,
 .o-ui-link-disabled:focus-visible,
 .o-ui-link-disabled.o-ui-link-focus {
-    background-color: var(--o-ui-transparent);
+    background-color: transparent;
     box-shadow: none;
 }
 
@@ -105,7 +100,7 @@
 .o-ui-text-link:focus-visible,
 .o-ui-text-link.o-ui-link-focus {
     outline: transparent;
-    border-radius: var(--o-ui-br-2);
+    border-radius: var(--hop-shape-rounded-sm);
 }
 
 .o-ui-text-link:focus-visible:after,
@@ -183,29 +178,96 @@
 
 /* LEFT ICON */
 .o-ui-text-link-start-icon {
-    margin-right: 0.25rem;
+    margin-right: var(--hop-space-inline-xs);
 }
 
 /* RIGHT ICON */
 .o-ui-text-link-end-icon {
-    margin-left: 0.25rem;
+    margin-left: var(--hop-space-inline-xs);
 }
 
 /* VARIATIONS */
+/* SOLID */
+.o-ui-link-solid {
+    color: var(--hop-neutral-text);
+}
+
+/* SOLID | STATE | HOVER */
+.o-ui-link:hover.o-ui-link-solid,
+.o-ui-link-hover.o-ui-link-solid {
+    color: var(--hop-neutral-text-hover);
+}
+
+/* SOLID | STATE | FOCUS */
+.o-ui-link:focus-visible.o-ui-link-solid,
+.o-ui-link-focus.o-ui-link-solid {
+    color: var(--hop-neutral-text-hover);
+}
+
+/* SOLID | STATE | DISABLED */
+.o-ui-link-disabled.o-ui-link-solid {
+    color: var(--hop-neutral-text-disabled);
+}
+
+/* SOLID | STATE | DISABLED | HOVER */
+.o-ui-link-disabled.o-ui-link-solid:hover,
+.o-ui-link-disabled.o-ui-link-solid.o-ui-link-hover {
+    color: var(--hop-neutral-text-disabled);
+}
+
 /* ACCENT */
 .o-ui-link-accent {
-    color: var(--o-ui-text-alias-accent);
+    color: var(--hop-primary-text);
 }
 
 /* ACCENT | STATE | HOVER */
 .o-ui-link:hover.o-ui-link-accent,
 .o-ui-link-hover.o-ui-link-accent {
-    color: var(--o-ui-text-alias-accent-hover);
+    color: var(--hop-primary-text-hover);
+}
+
+/* ACCENT | STATE | FOCUS */
+.o-ui-link:focus-visible.o-ui-link-accent,
+.o-ui-link-focus.o-ui-link-accent {
+    color: var(--hop-primary-text-hover);
+}
+
+/* ACCENT | STATE | DISABLED */
+.o-ui-link-disabled.o-ui-link-accent {
+    color: var(--hop-primary-text-disabled);
+}
+
+/* ACCENT | STATE | DISABLED | HOVER */
+.o-ui-link-disabled.o-ui-link-accent:hover,
+.o-ui-link-disabled.o-ui-link-accent.o-ui-link-hover {
+    color: var(--hop-primary-text-disabled);
 }
 
 /* NEGATIVE */
 .o-ui-link-negative {
-    color: var(--o-ui-text-alias-alert);
+    color: var(--hop-danger-text-weak);
+}
+
+/* NEGATIVE | STATE | HOVER */
+.o-ui-link:hover.o-ui-link-negative {
+    color: var(--hop-danger-text-hover);
+}
+
+/* NEGATIVE | STATE | FOCUS */
+.o-ui-link:focus-visible.o-ui-link-negative,
+.o-ui-link-focus.o-ui-link-negative {
+    color: var(--hop-primary-text-hover);
+}
+
+/* NEGATIVE | STATE | DISABLED  */
+.o-ui-link-disabled.o-ui-link-negative {
+    color: var(--hop-danger-text-disabled);
+}
+
+/* NEGATIVE | STATE | DISABLED | HOVER */
+.o-ui-link-disabled.o-ui-link-negative:hover,
+.o-ui-link-disabled.o-ui-link-negative.o-ui-link-hover {
+    color: var(--hop-danger-text-disabled);
 }
 
 /* AS BUTTON */
@@ -219,23 +281,18 @@ button.o-ui-link-hover {
     cursor: pointer;
 }
 
-/* INHERIT */
-/* .o-ui-link-inherit {
-    color: inherit;
-} */
-
 /* SHAPE | ROUNDED */
 .o-ui-link-rounded {
-    border-radius: var(--o-ui-br-4);
+    border-radius: var(--hop-shape-rounded-md);
 }
 
 /* SHAPE | CIRCULAR */
 .o-ui-link-circular {
-    border-radius: var(--o-ui-br-circular);
+    border-radius: var(--hop-shape-circle);
 }
 
 .o-ui-link.o-ui-link-circular:after {
-    border-radius: var(--o-ui-br-circular);
+    border-radius: var(--hop-shape-circle);
 }
 
 /* SHAPE | BOX */
@@ -250,5 +307,5 @@ button.o-ui-link-hover {
 
 /* ICON LINK */
 .o-ui-icon-link {
-    border-radius: var(--o-ui-br-2);
+    border-radius: var(--hop-shape-rounded-sm);
 }
