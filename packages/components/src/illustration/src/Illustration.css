@@ -27,5 +27,5 @@
 
 /* SHAPES */
 .o-ui-illustration-rounded {
-    border-radius: var(--hop-rounded-md);
+    border-radius: var(--hop-shape-rounded-md);
 }

@@ -19,7 +19,7 @@
 .o-ui-illustrated-message-horizontal {
     flex-direction: row;
     height: 100%;
-    gap: 2.5rem;
+    gap: var(--hop-space-stack-lg);
     justify-content: center;
 }
 
