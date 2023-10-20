@@ -2,7 +2,6 @@
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    line-height: var(--hop-body-md-line-height);
     max-width: 100%;
     width: max-content;
     height: max-content;
@@ -22,7 +21,7 @@
 }
 
 .o-ui-radio-button::before {
-    --_radio-button-size: 0.75rem;
+    --o-ui-radio-button-size: 0.75rem;
     content: "";
     display: block;
     background-color: var(--hop-neutral-icon-active);
@@ -32,10 +31,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: var(--_radio-button-size);
-    height: var(--_radio-button-size);
-    margin-top: calc(var(--_radio-button-size) * -1 / 2);
-    margin-left: calc(var(--_radio-button-size) * -1 / 2);
+    width: var(--o-ui-radio-button-size);
+    height: var(--o-ui-radio-button-size);
+    margin-top: calc(var(--o-ui-radio-button-size) * -1 / 2);
+    margin-left: calc(var(--o-ui-radio-button-size) * -1 / 2);
 }
 
 /* CONTENT | LABEL */
@@ -92,7 +91,7 @@
 }
 
 .o-ui-radio.o-ui-radio-invalid .o-ui-radio-button::before {
-    background-color: var(--hop-neutral-border-hover);
+    background-color: var(--hop-danger-surface);
 }
 
 /* STATE | CHECKED */
