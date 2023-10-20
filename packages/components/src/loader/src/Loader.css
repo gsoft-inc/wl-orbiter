@@ -2,8 +2,8 @@
     --animation-duration: 2s;
     opacity: 0;
     transition: opacity var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
-    width: var(--o-ui-sz-5);
-    height: var(--o-ui-sz-5);
+    width: var(--hop-space-320);
+    height: var(--hop-space-320);
     position: relative;
 }
 
@@ -14,8 +14,8 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: var(--o-ui-icon-alias-accent);
-    border-radius: var(--o-ui-br-circular);
+    background-color: var(--hop-primary-icon);
+    border-radius: var(--hop-shape-circle);
     animation: o-ui-loader-bounce var(--animation-duration) infinite ease-in-out;
 }
 
