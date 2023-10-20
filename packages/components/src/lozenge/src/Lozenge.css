@@ -1,13 +1,11 @@
 .o-ui-lozenge {
     display: inline-flex;
     align-items: center;
-    background-color: var(--o-ui-bg-alias-accent-light);
-    color: var(--o-ui-text-alias-primary);
-    padding: 0 var(--o-ui-sp-2);
-    border-radius: var(--o-ui-br-2);
-    font-weight: 600;
-    min-height: var(--o-ui-sz-3);
-    line-height: var(--o-ui-sz-3);
+    background-color: var(--hop-decorative-option5-surface);
+    color: var(--hop-decorative-option5-text);
+    padding: 0 var(--hop-space-inset-sm);
+    border-radius: var(--hop-shape-pill);
+    min-height: 1.25rem;
     width: max-content;
     height: max-content;
 }
@@ -19,13 +17,12 @@
 
 /* HIGHLIGHT */
 .o-ui-lozenge.o-ui-lozenge-highlight {
-    background-color: var(--o-ui-bg-alias-accent);
+    background-color: var(--hop-decorative-option5-surface-strong);
 }
 
 /* SIZE */
 .o-ui-lozenge-sm {
-    min-height: var(--o-ui-sz-2);
-    line-height: var(--o-ui-sz-2);
+    min-height: 1rem;
 }
 
 .o-ui-lozenge-sm .o-ui-lozenge-text {
@@ -33,8 +30,7 @@
 }
 
 .o-ui-lozenge-lg {
-    min-height: var(--o-ui-sz-4);
-    line-height: var(--o-ui-sz-4);
+    min-height: 1.5rem;
 }
 
 /* SIZE */
@@ -45,33 +41,30 @@
 
 /* CONTENT | ICON */
 .o-ui-lozenge-has-icon {
-    padding-left: calc(var(--o-ui-sp-2) / 2);
+    padding-left: var(--hop-space-inset-xs);
 }
 
 .o-ui-lozenge-icon {
-    margin-right: 0.125rem;
+    margin-right: calc(var(--hop-space-inline-xs) / 2);
 }
 
 /* INFORMATIVE */
 .o-ui-lozenge.o-ui-lozenge-informative {
-    background-color: var(--o-ui-bg-alias-accent-light);
+    background-color: var(--hop-decorative-option5-surface);
 }
 
 .o-ui-lozenge.o-ui-lozenge-informative.o-ui-lozenge-highlight {
-    background-color: var(--o-ui-bg-alias-accent);
-    /* For the icon */
-    color: var(--o-ui-white);
+    background-color: var(--hop-decorative-option5-surface-strong);
 }
 
 /* SUCCESS */
 .o-ui-lozenge.o-ui-lozenge-positive {
-    background-color: var(--o-ui-bg-alias-success-light);
+    background-color: var(--hop-decorative-option4-surface);
+    color: var(--hop-decorative-option4-text);
 }
 
 .o-ui-lozenge.o-ui-lozenge-positive.o-ui-lozenge-highlight {
-    background-color: var(--o-ui-bg-alias-success);
-    /* For the icon */
-    color: var(--o-ui-white);
+    background-color: var(--hop-decorative-option4-surface-strong);
 }
 
 .o-ui-lozenge.o-ui-lozenge-positive.o-ui-lozenge-highlight .o-ui-lozenge-text {
@@ -85,11 +78,12 @@
 
 /* WARNING */
 .o-ui-lozenge.o-ui-lozenge-warning {
-    background-color: var(--o-ui-bg-alias-warning-light);
+    background-color: var(--hop-decorative-option6-surface);
+    color: var(--hop-decorative-option6-text);
 }
 
 .o-ui-lozenge.o-ui-lozenge-warning.o-ui-lozenge-highlight {
-    background-color: var(--o-ui-bg-alias-warning);
+    background-color: var(--hop-decorative-option6-surface-strong);
 }
 
 .o-ui-lozenge.o-ui-lozenge-warning.o-ui-lozenge-highlight .o-ui-lozenge-icon {
@@ -99,17 +93,12 @@
 
 /* NEGATIVE */
 .o-ui-lozenge.o-ui-lozenge-negative {
-    background-color: var(--o-ui-bg-alias-alert-light);
+    background-color: var(--hop-decorative-option8-surface);
+    color: var(--hop-decorative-option8-text);
 }
 
 .o-ui-lozenge.o-ui-lozenge-negative.o-ui-lozenge-highlight {
-    background-color: var(--o-ui-bg-alias-alert);
-    /* For the icon */
-    color: var(--o-ui-white);
-}
-
-.o-ui-lozenge.o-ui-lozenge-negative.o-ui-lozenge-highlight .o-ui-lozenge-text {
-    color: var(--o-ui-white);
+    background-color: var(--hop-decorative-option8-surface-strong);
 }
 
 .o-ui-lozenge.o-ui-lozenge-negative.o-ui-lozenge-highlight .o-ui-lozenge-icon {
