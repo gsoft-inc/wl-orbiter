@@ -230,3 +230,12 @@ a.o-ui-tag-outline.o-ui-tag-disabled {
     margin-left: var(--hop-space-inline-xs);
     margin-right: calc(var(--hop-space-inline-xs) * -1);
 }
+
+.o-ui-tag-remove-button:after {
+    inset: -1px;
+}
+
+.o-ui-tag-remove-button:focus-visible:after,
+.o-ui-tag-remove-button:not([disabled]) .o-ui-button-focus:after {
+    inset: 0;
+}
