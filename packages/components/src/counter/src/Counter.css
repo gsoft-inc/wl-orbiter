@@ -21,7 +21,7 @@
 
 /* DISABLED */
 .o-ui-counter[disabled] {
-    color: var(--hop-space-inline-sm);
+    color: var(--hop-neutral-text-disabled);
 }
 
 /* BASIC */

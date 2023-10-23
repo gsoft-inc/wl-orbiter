@@ -213,7 +213,7 @@ a.o-ui-tag-outline.o-ui-tag-disabled {
 }
 
 /* CONTENT | END ICON */
-.o-ui-tag:not(.o-ui-tag-fluid) .o-ui-tag-end-icon {
+.o-ui-tag .o-ui-tag-end-icon {
     margin-left: var(--hop-space-inline-xs);
 }
 
@@ -227,5 +227,6 @@ a.o-ui-tag-outline.o-ui-tag-disabled {
 
 /* CONTENT | REMOVE BUTTON */
 .o-ui-tag-remove-button {
-    margin-left: var(--hop-space-inline-sm);
+    margin-left: var(--hop-space-inline-xs);
+    margin-right: calc(var(--hop-space-inline-xs) * -1);
 }

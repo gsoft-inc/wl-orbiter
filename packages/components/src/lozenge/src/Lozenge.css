@@ -48,6 +48,12 @@
     margin-right: calc(var(--hop-space-inline-xs) / 2);
 }
 
+svg.o-ui-lozenge-icon,
+.o-ui-lozenge-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
 /* INFORMATIVE */
 .o-ui-lozenge.o-ui-lozenge-informative {
     background-color: var(--hop-decorative-option5-surface);
