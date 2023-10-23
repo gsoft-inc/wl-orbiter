@@ -15,7 +15,7 @@
 
 .o-ui-sb-component-info-title {
     display: inline-block !important;
-    color: var(--o-ui-text-alias-secondary) !important;
+    color: var(--hop-neutral-text-weak) !important;
     font-weight: 550 !important;
     font-size: var(--o-ui-fs-3) !important;
     font-style: normal !important;

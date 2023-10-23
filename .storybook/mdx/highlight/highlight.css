@@ -1,7 +1,7 @@
 .highlight {
-    background-color: var(--o-ui-bg-alias-accent-light);
+    background-color: var(--hop-primary-surface-weak);
     padding: var(--o-ui-sp-3);
-    border-radius: var(--o-ui-br-3);
+    border-radius: var(--hop-shape-rouded-sm);
 }
 
 .highlight p {
