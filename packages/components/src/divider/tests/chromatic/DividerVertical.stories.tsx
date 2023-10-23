@@ -26,7 +26,7 @@ export const DividerDot: DividerStory = {
     storyName: "dot",
     render:() => (
         <Flex>
-            <Dot color="neutral-strong">Engines ready</Dot>
+            <Dot color="primary">Engines ready</Dot>
             <Divider orientation="vertical" />
             <Text>Falcon 9</Text>
         </Flex>
@@ -37,7 +37,7 @@ export const MultipleSeparators: DividerStory = {
     storyName: "multiple separators",
     render:() => (
         <Flex>
-            <Dot>Starlink</Dot>
+            <Dot color="primary">Starlink</Dot>
             <Divider orientation="vertical" />
             <Text>Delivery #9</Text>
             <Divider orientation="vertical" />
