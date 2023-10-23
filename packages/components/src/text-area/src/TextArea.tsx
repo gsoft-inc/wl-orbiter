@@ -232,6 +232,7 @@ export function InnerTextArea(props: InnerTextAreaProps) {
                     as: wrapperAs,
                     className: cssModule(
                         "o-ui-input",
+                        disabled && "disabled",
                         buttonMarkup && "has-button",
                         hasFocus && "has-focus"
                     )

@@ -18,7 +18,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    border-radius: var(--o-ui-br-circular);
+    border-radius: var(--hop-shape-circle);
     border: 2px solid transparent;
     border-top-color: currentColor;
     animation: spinner var(--o-ui-easing-duration-5) linear infinite;
@@ -26,7 +26,7 @@
 
 /* CONTENT | LABEL */
 .o-ui-spinner-label {
-    margin-left: var(--o-ui-sp-2);
+    margin-left: var(--hop-space-inline-sm);
 }
 
 /* ANIMATION */
@@ -38,8 +38,8 @@
 
 /* SIZES */
 .o-ui-spinner-sm .o-ui-spinner-wheel {
-    width: var(--o-ui-sz-2);
-    height: var(--o-ui-sz-2);
+    width: 1rem;
+    height: 1rem;
 }
 
 .o-ui-spinner-sm .o-ui-spinner-wheel::before {
@@ -50,8 +50,8 @@
 }
 
 .o-ui-spinner-md .o-ui-spinner-wheel {
-    width: var(--o-ui-sz-3);
-    height: var(--o-ui-sz-3);
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .o-ui-spinner-md .o-ui-spinner-wheel::before {
@@ -62,8 +62,8 @@
 }
 
 .o-ui-spinner-lg .o-ui-spinner-wheel {
-    width: var(--o-ui-sz-4);
-    height: var(--o-ui-sz-4);
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .o-ui-spinner-lg .o-ui-spinner-wheel::before {
