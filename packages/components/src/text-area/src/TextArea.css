@@ -1,14 +1,13 @@
 .o-ui-text-area {
-    font-size: var(--o-ui-fs-3);
+    font-size: var(--hop-body-md-font-size);
 }
 
 .o-ui-text-area textarea {
-    --o-ui-textarea-padding: var(--o-ui-sp-3);
     resize: vertical;
     /* Fixes a bug where Firefox adds one more row than the one specified. */
     overflow-x: hidden;
-    padding: var(--o-ui-sp-2) var(--o-ui-textarea-padding);
-    min-height: var(--o-ui-sz-11);
+    padding: var(--hop-space-inset-squish-md);
+    min-height: 5rem;
     color: inherit;
     font-family: inherit;
     font-size: inherit;
@@ -27,7 +26,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    right: calc((var(--o-ui-input-padding-with-button) - var(--o-ui-sp-5)) / 2);
+    right: calc((var(--o-ui-input-padding-with-button) - 1.25rem) / 2);
 }
 
 .o-ui-input-has-button.o-ui-text-area textarea {
