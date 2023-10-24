@@ -1,9 +1,9 @@
 .o-ui-sb-component-info {
-    margin: var(--o-ui-sp-6) 0 var(--o-ui-sp-7) 0;
+    margin: var(--hop-space-stack-lg) 0 var(--hop-space-stack-xl) 0;
 }
 
 .o-ui-sb-component-info-compact {
-    margin: var(--o-ui-sp-4) 0;
+    margin: var(--hop-space-stack-md) 0;
     overflow-x: auto;
 }
 
@@ -17,16 +17,16 @@
     display: inline-block !important;
     color: var(--hop-neutral-text-weak) !important;
     font-weight: 550 !important;
-    font-size: var(--o-ui-fs-3) !important;
+    font-size: var(--hop-body-sm-font-size) !important;
     font-style: normal !important;
-    width: var(--o-ui-sz-11) !important;
+    width: 5rem !important;
     margin: 0 !important;
     min-width: 80px;
 }
 
 .o-ui-sb-component-info-value {
     display: flex !important;
-    font-size: var(--o-ui-fs-3) !important;
+    font-size: var(--hop-body-sm-font-size) !important;
     font-variant: normal !important;
     margin: 0 !important;
     overflow-x: auto;
@@ -34,7 +34,7 @@
 }
 
 .o-ui-sb-component-info-value a {
-    font-size: var(--o-ui-fs-3) !important;
+    font-size: var(--hop-body-sm-font-size) !important;
 }
 
 .o-ui-sb-component-info-value ul {

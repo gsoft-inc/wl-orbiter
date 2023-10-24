@@ -1,8 +1,8 @@
 .o-ui {
     --o-ui-input-padding: var(--hop-space-inset-squish-md);
-    --o-ui-input-padding-with-icon: var(--o-ui-sp-7);
-    --o-ui-input-padding-with-button: var(--o-ui-sp-8);
-    --o-ui-input-padding-loading: var(--o-ui-sp-8);
+    --o-ui-input-padding-with-icon: var(--hop-space-inset-xl);
+    --o-ui-input-padding-with-button: 2.5rem;
+    --o-ui-input-padding-loading: 2.5rem;
     --o-ui-input-border-color: var(--hop-neutral-border);
     --o-ui-input-border-radius: var(--hop-shape-rounded-md);
     --o-ui-input-background-color: var(--hop-neutral-surface);

@@ -1,13 +1,13 @@
 /* PREVIEW */
 .o-ui-sb-preview {
-    margin: var(--o-ui-sp-7) 0 var(--o-ui-sp-8);
+    margin: var(--hop-space-stack-xl) 0;
     border-radius: var(--hop-shape-rouded-md);
     box-shadow: var(--hop-elevation-raised);
 }
 
 /* STORY */
 .o-ui-sb-preview-story {
-    padding: var(--o-ui-sp-7) var(--o-ui-sp-5);
+    padding: var(--hop-space-inset-xl) var(--hop-space-inset-lg);
 }
 
 /* SOURCE */
@@ -37,7 +37,7 @@
 
 .o-ui-sb-preview-editor .npm__react-simple-code-editor__textarea,
 .o-ui-sb-preview-editor pre {
-    padding: var(--o-ui-sp-5) !important;
+    padding: var(--hop-space-inset-lg) !important;
 }
 
 /* SOURCE | ERROR */
@@ -45,6 +45,6 @@
     background-color: var(--hop-danger-surface-weak);
     color: var(--hop-neutral-text);
     font-size: 15px;
-    padding: var(--o-ui-sp-3) var(--o-ui-sp-5);
+    padding: var(--hop-space-inset-md) var(--hop-space-inset-lg);
     margin: 0;
 }
