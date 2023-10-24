@@ -88,7 +88,7 @@
 }
 
 .o-ui-dialog-illustration {
-    padding: var(--o-ui-sp-7);
+    padding: var(--hop-space-inset-xl);
 }
 
 /* DIALOG | HEADER SECTION */

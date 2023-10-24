@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 8px;
-    border-radius: var(--o-ui-br-2);
-    background-color: var(--o-ui-bg-alias-mid-break);
+    padding: var(--hop-space-inset-xs);
+    border-radius: var(--hop-shape-rounded-sm);
+    background-color: var(--hop-neutral-surface-weak);
     cursor: pointer;
     border: 0;
-    margin-top: var(--o-ui-sp-4);
+    margin-top: var(--hop-space-stack-md);
 }
 
 .o-ui-sb-gallery-item-variant-section-toggle:first-child {

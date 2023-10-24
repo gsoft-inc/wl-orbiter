@@ -1,12 +1,14 @@
 .highlight {
-    background-color: var(--o-ui-bg-alias-accent-light);
-    padding: var(--o-ui-sp-3);
-    border-radius: var(--o-ui-br-3);
+    background-color: var(--hop-decorative-option1-surface);
+    padding: var(--hop-space-inset-md);
+    border-radius: var(--hop-shape-rounded-sm);
+    color: var(--hop-decorative-option1-text);
 }
 
 .highlight p {
+    color: inherit;
     padding: 0;
     margin: 0;
-    padding-top: calc(var(--o-ui-sp-3) / 2);
-    padding-bottom: calc(var(--o-ui-sp-3) / 2);
+    padding-top: calc(var(--hop-space-inset-md) / 2);
+    padding-bottom: calc(var(--hop-space-inset-md) / 2);
 }

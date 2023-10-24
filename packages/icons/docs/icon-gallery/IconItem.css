@@ -6,7 +6,7 @@
     margin: 0;
     padding: 1.25rem;
     border: none;
-    outline: 1px solid var(--o-ui-b-alias-low-break);
+    outline: 1px solid var(--hop-neutral-border-weakest);
     background-color: transparent;
     flex-direction: row;
     transition: background-color var(--o-ui-easing-duration-1) var(--o-ui-easing-focus);
@@ -20,7 +20,7 @@
     content: "";
     position: absolute;
     border: var(--o-ui-focus-ring-thickness-md) transparent solid;
-    border-radius: var(--o-ui-br-2);
+    border-radius: var(--hop-shape-rounded-sm);
     pointer-events: none;
     transition: var(--o-ui-focus-ring-transition);
 }
@@ -30,5 +30,5 @@
 }
 
 .o-ui-sb-gallery-item:hover {
-    background-color: var(--o-ui-bg-alias-soft-break);
+    background-color: var(--hop-neutral-surface-weakest);
 }
