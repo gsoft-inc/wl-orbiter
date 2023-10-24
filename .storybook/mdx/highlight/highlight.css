@@ -1,7 +1,7 @@
 .highlight {
     background-color: var(--hop-primary-surface-weak);
     padding: var(--hop-space-inset-md);
-    border-radius: var(--hop-shape-rouded-sm);
+    border-radius: var(--hop-shape-rounded-sm);
 }
 
 .highlight p {

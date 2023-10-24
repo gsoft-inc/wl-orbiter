@@ -1,7 +1,7 @@
 /* PREVIEW */
 .o-ui-sb-preview {
     margin: var(--hop-space-stack-xl) 0;
-    border-radius: var(--hop-shape-rouded-md);
+    border-radius: var(--hop-shape-roudned-md);
     box-shadow: var(--hop-elevation-raised);
 }
 
@@ -21,7 +21,7 @@
     top: 3px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: var(--hop-neutral-text-strong);
     z-index: 1;
     font-size: 0.625rem;
     font-weight: 550;
