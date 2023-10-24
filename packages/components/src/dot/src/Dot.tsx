@@ -1,4 +1,4 @@
-import { BackgroundColorMapping, BackgroundColorProp, useResponsiveValue } from "../../styling";
+import { IconColorMapping, BackgroundColorProp, useResponsiveValue } from "../../styling";
 import { useMemo, ComponentProps, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
 import { Box } from "../../box";
@@ -21,8 +21,8 @@ function useColor(color: string) {
             } else if (color.startsWith("--")) {
                 return `var(${color})`;
             // This logic should be reworked and not imported as is in Hopper. Accessing the Mapping directly feels weird.
-            } else if (!isNil(BackgroundColorMapping[color])) {
-                return BackgroundColorMapping[color];
+            } else if (!isNil(IconColorMapping[color])) {
+                return IconColorMapping[color];
             }
 
             return color;

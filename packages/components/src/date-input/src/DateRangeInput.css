@@ -104,7 +104,7 @@
 }
 
 /* DIVIDER */
-.o-ui-divider.o-ui-date-range-input-divider[aria-orientation="vertical"] {
+.o-ui-date-range-input .o-ui-date-range-input-divider[aria-orientation="vertical"] {
     flex-shrink: 0;
     align-self: auto;
     height: 1.5625rem;
