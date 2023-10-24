@@ -31,17 +31,28 @@
 .o-ui-tab-list-popover-trigger {
     background-color: transparent;
     border: none;
-    border-left: 1px solid var(--hop-neutral-border-weak);
     border-radius: var(--hop-shape-rounded-sm);
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     color: var(--hop-neutral-text);
     font-family: var(--hop-body-sm-font-family);
     font-size: var(--hop-body-sm-font-size);
     position: relative;
     height: 2rem;
     flex-shrink: 0;
-    margin-right: 0.5rem;
+}
+
+.o-ui-tabs-horizontal .o-ui-tab-list-popover-trigger {
+    border-left: 1px solid var(--hop-neutral-border-weak);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: var(--hop-space-inline-sm);
+}
+
+.o-ui-tabs-vertical .o-ui-tab-list-popover-trigger {
+    border-top: 1px solid var(--hop-neutral-border-weak);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-left: var(--hop-space-inline-xs);
+    margin-bottom: var(--hop-space-stack-sm);
 }
 
 .o-ui-tab-list-popover-trigger:hover {
@@ -144,6 +155,11 @@
     padding-left: calc(0.5rem + 1px);
 }
 
+.o-ui-tab-has-icon {
+    padding-top: calc(var(--hop-space-inset-md) - 2px);
+    padding-bottom: calc(var(--hop-space-inset-md) - 2px);
+}
+
 /* TAB | STATE | FOCUS */
 .o-ui-tab::before {
     content: "";
@@ -151,7 +167,6 @@
     top: 50%;
     transform: translateY(-50%);
     bottom: calc(0.5rem - var(--o-ui-tab-stroke-width));
-    border: var(--o-ui-focus-ring-thickness-md) transparent solid;
     border-radius: var(--hop-shape-rounded-sm);
     pointer-events: none;
     height: calc(1.25rem + 0.25rem);
