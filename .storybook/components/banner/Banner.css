@@ -1,0 +1,10 @@
+.o-ui-sb-banner {
+    background: var(--hop-decorative-option6-surface);
+    border: 1px solid var(--hop-decorative-option6-border);
+    border-radius: var(--hop-shape-rounded-md);
+    color: var(--hop-decorative-option6-text);
+    font-family: var(--hop-body-md-font-family);
+    font-size: var(--hop-body-md-font-size);
+    font-weight: var(--hop-body-md-font-weight);
+    line-height: var(--hop-body-md-line-height);
+}
