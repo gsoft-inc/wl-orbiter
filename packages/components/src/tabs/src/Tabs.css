@@ -109,8 +109,8 @@
 
 /* TAB LIST | POPOVER | FOCUS */
 .o-ui-tab-list-popover .o-ui-tab::before {
-    left: 0.5rem;
-    right: 0.5rem;
+    left: var(--hop-space-inline-sm);
+    right: var(--hop-space-inline-sm);
 }
 
 /* TAB LIST | HIDDEN TABS */
@@ -168,7 +168,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    bottom: calc(0.5rem - var(--o-ui-tab-stroke-width));
+    bottom: calc(var(--hop-space-inline-sm) - var(--o-ui-tab-stroke-width));
     border: var(--o-ui-focus-ring-thickness-md) transparent solid;
     border-radius: var(--hop-shape-rounded-sm);
     pointer-events: none;
@@ -178,8 +178,8 @@
 
 /* TAB | STATE | FOCUS | ORIENTATION | HORIZONTAL */
 .o-ui-tabs-horizontal .o-ui-tab::before {
-    left: 0.5rem;
-    right: 0.5rem;
+    left: var(--hop-space-inline-sm);
+    right: var(--hop-space-inline-sm);
 }
 
 /* TAB | STATE | FOCUS | ORIENTATION | VERTICAL */
