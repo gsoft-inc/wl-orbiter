@@ -1,7 +1,7 @@
 import { Box } from "../../box";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef, useMemo } from "react";
-import { CrossButton, embedIconButton } from "../../button";
-import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots } from "../../shared";
+import { CrossButton } from "../../button";
+import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots, createEmbeddableAdapter } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { Text } from "../../typography";
 
@@ -40,6 +40,11 @@ export interface InnerTagProps extends InternalProps, InteractionProps, StyledCo
 const textSize = createSizeAdapter({
     "sm": "sm",
     "md": "sm"
+});
+
+const embedIconButton = createEmbeddableAdapter({
+    "sm": "2xs",
+    "md": "2xs"
 });
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
