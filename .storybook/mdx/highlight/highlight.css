@@ -2,9 +2,11 @@
     background-color: var(--hop-decorative-option1-surface);
     padding: var(--hop-space-inset-md);
     border-radius: var(--hop-shape-rounded-sm);
+    color: var(--hop-decorative-option1-text);
 }
 
 .highlight p {
+    color: inherit;
     padding: 0;
     margin: 0;
     padding-top: calc(var(--hop-space-inset-md) / 2);
