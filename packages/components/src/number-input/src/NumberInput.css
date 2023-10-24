@@ -1,5 +1,5 @@
 .o-ui {
-    --o-ui-spinner-width: var(--o-ui-sz-4);
+    --o-ui-spinner-width: 1.5rem;
 }
 
 .o-ui-number-input {

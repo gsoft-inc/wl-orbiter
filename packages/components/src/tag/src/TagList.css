@@ -2,11 +2,11 @@
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: calc(-1 * var(--o-ui-sp-2));
+    margin-bottom: calc(-1 * var(--hop-space-stack-sm));
 }
 
 .o-ui-tag-list-item,
 .o-ui-tag-list-clear-button {
-    margin-right: var(--o-ui-sp-2);
-    margin-bottom: var(--o-ui-sp-2);
+    margin-right: var(--hop-space-inline-sm);
+    margin-bottom: var(--hop-space-stack-sm);
 }

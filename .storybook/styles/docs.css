@@ -388,7 +388,7 @@
     left: 50%;
     border-radius: 50px;
     border: 2px solid var(--hop-neutral-border-weak);
-    border-top-color: white;
+    border-top-color: #FFFFFF;
     animation: o-ui-sb-spinner 1s linear infinite;
     transform: translate(-50%, -50%) rotate(0deg);
 }

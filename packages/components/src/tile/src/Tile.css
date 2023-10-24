@@ -144,7 +144,7 @@
 
 /* ILLUSTRATION */
 .o-ui-tile-illustration {
-    padding: var(--o-ui-sp-5);
+    padding: var(--hop-space-inset-md);
 }
 
 .o-ui-tile-vertical .o-ui-tile-illustration {
