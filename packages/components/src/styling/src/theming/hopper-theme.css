@@ -440,6 +440,7 @@
     --hop-neutral-surface-hover: var(--hop-rock-25);
     --hop-neutral-surface-strong: var(--hop-rock-800);
     --hop-neutral-border-strong: var(--hop-rock-800);
+    --hop-neutral-border-strong-hover: var(--hop-rock-700);
     --hop-neutral-border-disabled: var(--hop-rock-50);
     --hop-neutral-text-weakest: var(--hop-rock-200);
     --hop-neutral-text: var(--hop-rock-800);
