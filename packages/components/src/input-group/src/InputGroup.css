@@ -104,3 +104,8 @@
 .o-ui-input-group .o-ui-button-secondary.o-ui-input-group-button-addon {
     border-color: var(--hop-neutral-border);
 }
+
+.o-ui-input-group .o-ui-button-secondary.o-ui-input-group-button-addon[disabled],
+.o-ui-input-group .o-ui-button-secondary.o-ui-input-group-button-addon.o-ui-button-disabled {
+    border-color: var(--hop-neutral-border-disabled);
+}

@@ -38,7 +38,8 @@
     outline: transparent;
 }
 
-.o-ui-button:focus-visible:after {
+.o-ui-button:focus-visible:after,
+.o-ui-button.o-ui-button-focus:after {
     opacity: 1;
 }
 
