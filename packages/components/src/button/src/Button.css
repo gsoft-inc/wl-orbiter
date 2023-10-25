@@ -39,7 +39,7 @@
 }
 
 .o-ui-button:focus-visible:after,
-.o-ui-button.o-ui-button-focus:not([disabled]):after {
+.o-ui-button.o-ui-button-focus:not([disabled]):not(.o-ui-button-loading):after {
     opacity: 1;
 }
 
@@ -200,7 +200,7 @@ a.o-ui-button {
 
 /* TERTIARY | FOCUS */
 .o-ui-button-tertiary:focus-visible:after,
-.o-ui-button-tertiary:not([disabled]).o-ui-button-focus:after {
+.o-ui-button-tertiary:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus:after {
     opacity: 1;
     top: -3px;
     left: -3px;
@@ -350,19 +350,19 @@ a.o-ui-button {
 }
 
 /* INHERIT | SECONDARY | ACTIVE */
-.o-ui-button-active:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary,
-.o-ui-button-active:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary.o-ui-button-basic,
-.o-ui-button-active:hover:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary,
-.o-ui-button-active:hover:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary.o-ui-button-basic {
+.o-ui-button-active:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary,
+.o-ui-button-active:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary.o-ui-button-basic,
+.o-ui-button-active:hover:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary,
+.o-ui-button-active:hover:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary.o-ui-button-basic {
     background-color: rgba(0, 0, 0, 0.15);
     color: inherit;
     border: 1px solid currentColor;
 }
 
-.o-ui-button-active:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-text,
-.o-ui-button-active:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-end-icon,
-.o-ui-button-active:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-start-icon,
-.o-ui-button-active:not(.o-ui-button-loading).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-counter {
+.o-ui-button-active:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-text,
+.o-ui-button-active:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-end-icon,
+.o-ui-button-active:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-start-icon,
+.o-ui-button-active:not(.o-ui-button-loading):not([disabled]).o-ui-button-inherit-style.o-ui-button-secondary .o-ui-button-counter {
     color: inherit;
 }
 
