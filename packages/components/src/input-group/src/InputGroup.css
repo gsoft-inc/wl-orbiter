@@ -93,4 +93,14 @@
 .o-ui-input-group-select-addon {
     width: auto !important;
     min-width: 5.3125rem;
+    position: relative;
+}
+
+.o-ui-input-group-select-addon[aria-expanded="true"] {
+    z-index: 2;
+}
+
+/* BUTTON ADDON */
+.o-ui-input-group .o-ui-button-secondary.o-ui-input-group-button-addon {
+    border-color: var(--hop-neutral-border);
 }
