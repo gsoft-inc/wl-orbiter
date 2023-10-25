@@ -2,12 +2,17 @@
     "name": "@orbit-ui/transition-css",
     "version": "1.0.0",
     "description": "Orbiter CSS bootstrap",
-    "repository": "https://github.com/gsoft-inc/wl-orbiter.git",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gsoft-inc/wl-orbiter.git",
+        "directory": "packages/css"
+    },
     "author": "Groupe ShareGate inc.",
     "license": "Apache-2.0",
     "main": "src/index.css",
     "style": "src/index.css",
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "provenance": true
     }
 }
