@@ -100,7 +100,7 @@
 
 /* DATE INPUT | SELECTION */
 .o-ui-date-range-input-date-input::selection {
-    background-color: var(--hop-decorative-option1-surface-weak);
+    background-color: var(--hop-primary-surface-hover);
 }
 
 /* DIVIDER */

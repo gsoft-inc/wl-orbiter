@@ -608,7 +608,7 @@
     --hop-upsell-icon-weakest: var(--hop-sunken-treasure-100);
     --hop-upsell-icon-weak: var(--hop-sunken-treasure-300);
     --hop-upsell-border: var(--hop-sunken-treasure-200);
-    --hop-upsell-surface-hover: var(--hop-sunken-treasure-600);
+    --hop-upsell-surface-hover: var(--hop-sunken-treasure-100);
     --hop-upsell-border-disabled: var(--hop-sunken-treasure-700);
     --hop-upsell-icon-active: var(--hop-sunken-treasure-300);
     --hop-upsell-surface-weak: var(--hop-sunken-treasure-800);

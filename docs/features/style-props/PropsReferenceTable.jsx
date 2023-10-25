@@ -6,10 +6,10 @@ const propTypes = {
 };
 
 const ScaleLinks = {
-    "box-shadow-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/shadow">shadows</Link>,
-    "color-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/color">colors</Link>,
-    "sizing-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/dimensions">Dimensions</Link>,
-    "spacing-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/dimensions">Dimensions</Link>
+    "box-shadow-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/shadow" target="_blank">shadows</Link>,
+    "color-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/color" target="_blank">colors</Link>,
+    "sizing-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/dimensions" target="_blank">dimensions</Link>,
+    "spacing-scale": <Link href="https://wl-hopper.netlify.app/tokens/semantic/dimensions" target="_blank">dimensions</Link>
 };
 
 function toScaleLink(scale) {
