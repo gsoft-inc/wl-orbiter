@@ -85,6 +85,11 @@ Sadly, we encountered CSS ordering issues when the components are bundled in our
     color: var(--hop-neutral-text);
 }
 
+/* SELECTION COLOR */
+::selection {
+    background-color: var(--hop-primary-surface-active);
+}
+
 /* ANIMATIONS */
 .o-ui-fade-in {
     animation: o-ui-fade-in-animation var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
