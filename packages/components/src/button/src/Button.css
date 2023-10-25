@@ -39,7 +39,7 @@
 }
 
 .o-ui-button:focus-visible:after,
-.o-ui-button.o-ui-button-focus:after {
+.o-ui-button.o-ui-button-focus:not([disabled]):after {
     opacity: 1;
 }
 
