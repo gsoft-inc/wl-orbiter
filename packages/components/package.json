@@ -2,7 +2,11 @@
     "name": "@orbit-ui/transition-components",
     "version": "1.0.0",
     "description": "Orbiter components",
-    "repository": "https://github.com/gsoft-inc/wl-orbiter.git",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gsoft-inc/wl-orbiter.git",
+        "directory": "packages/components"
+    },
     "author": "Groupe Sharegate inc.",
     "license": "Apache-2.0",
     "main": "dist/index.js",
@@ -15,7 +19,8 @@
         "index.css"
     ],
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "provenance": true
     },
     "scripts": {
         "prebuild": "yarn clean",

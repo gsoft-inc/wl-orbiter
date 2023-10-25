@@ -5,4 +5,4 @@
 "@orbit-ui/transition-icons": major
 ---
 
-Initial Release of Orbitter
+Initial Release of Orbiter

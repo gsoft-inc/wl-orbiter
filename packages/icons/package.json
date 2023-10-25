@@ -2,14 +2,19 @@
     "name": "@orbit-ui/transition-icons",
     "version": "1.0.0",
     "description": "Orbiter icons",
-    "repository": "https://github.com/gsoft-inc/wl-orbiter.git",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gsoft-inc/wl-orbiter.git",
+        "directory": "packages/icons"
+    },
     "author": "Groupe Sharegate inc.",
     "license": "Apache-2.0",
     "files": [
         "/dist"
     ],
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "provenance": true
     },
     "scripts": {
         "start": "yarn write-icons",
