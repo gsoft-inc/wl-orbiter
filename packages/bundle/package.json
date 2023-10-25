@@ -1,13 +1,12 @@
 {
     "name": "@workleap/orbiter-ui",
-    "version": "0.0.0",
+    "version": "2.0.0",
     "description": "Orbiter design system",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gsoft-inc/wl-orbiter.git",
         "directory": "packages/bundle"
     },
-
     "author": "Groupe ShareGate inc.",
     "license": "Apache-2.0",
     "main": "dist/index.js",
@@ -35,8 +34,8 @@
         "react-dom": "*"
     },
     "dependencies": {
-        "@orbit-ui/transition-components": "1.0.0",
-        "@orbit-ui/transition-css": "1.0.0",
-        "@orbit-ui/transition-icons": "1.0.0"
+        "@orbit-ui/transition-components": "2.0.0",
+        "@orbit-ui/transition-css": "2.0.0",
+        "@orbit-ui/transition-icons": "2.0.0"
     }
 }
