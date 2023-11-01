@@ -127,26 +127,15 @@
     border-radius: var(--hop-shape-rounded-sm);
     pointer-events: none;
     transition: var(--o-ui-focus-ring-transition);
-}
-
-/* FOCUS | BORDERLESS */
-.o-ui-accordion-borderless .o-ui-accordion-trigger::before {
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
 }
 
-/* FOCUS | BORDERED */
-.o-ui-accordion-bordered .o-ui-accordion-trigger::before {
-    left: 1rem;
-    right: 1rem;
-    bottom: 0.5rem;
-    top: 0.5rem;
-}
-
 .o-ui-accordion-trigger:focus-visible,
-.o-ui-accordion-trigger-focus {
+.o-ui-accordion-trigger-focus:not([disabled]) {
+    background-color: var(--hop-neutral-surface-hover);
     outline: transparent;
     position: relative;
 }
@@ -159,14 +148,22 @@
 /* BORDERED | FIRST ITEM | BORDER RADIUS */
 .o-ui-accordion-bordered .o-ui-accordion-header:first-of-type,
 .o-ui-accordion-bordered .o-ui-accordion-header:first-of-type .o-ui-accordion-trigger {
+    border-top: 0;
+}
+
+.o-ui-accordion-bordered .o-ui-accordion-header:first-of-type,
+.o-ui-accordion-bordered .o-ui-accordion-header:first-of-type .o-ui-accordion-trigger,
+.o-ui-accordion-bordered .o-ui-accordion-header:first-of-type .o-ui-accordion-trigger:focus-visible::before,
+.o-ui-accordion-bordered .o-ui-accordion-header:first-of-type .o-ui-accordion-trigger:not([disabled]).o-ui-accordion-trigger-focus::before {
     border-top-left-radius: var(--o-ui-accordion-radius);
     border-top-right-radius: var(--o-ui-accordion-radius);
-    border-top: 0;
 }
 
 /* BORDERED | LAST ITEM | BORDER RADIUS */
 .o-ui-accordion-bordered .o-ui-accordion-header:last-of-type,
-.o-ui-accordion-bordered .o-ui-accordion-header:last-of-type .o-ui-accordion-trigger {
+.o-ui-accordion-bordered .o-ui-accordion-header:last-of-type .o-ui-accordion-trigger[aria-expanded="false"],
+.o-ui-accordion-bordered .o-ui-accordion-header:last-of-type .o-ui-accordion-trigger:focus-visible[aria-expanded="false"]::before,
+.o-ui-accordion-bordered .o-ui-accordion-header:last-of-type .o-ui-accordion-trigger:not([disabled]).o-ui-accordion-trigger-focus[aria-expanded="false"]::before {
     border-bottom-left-radius: var(--o-ui-accordion-radius);
     border-bottom-right-radius: var(--o-ui-accordion-radius);
 }
