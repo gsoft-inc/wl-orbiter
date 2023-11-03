@@ -43,8 +43,8 @@ function RemainingAvatars({ avatars, size, ...rest }: RemainingAvatarsProps) {
             </Box>
             <Tooltip>
                 <ul className="o-ui-avatar-group-remainings-list">
-                    {avatars.filter((x: ReactElement) => !isNil(x?.props?.name)).map((x: ReactElement) => {
-                        const name = x?.props?.name;
+                    {avatars.filter((x: ReactElement) => !isNil(x?.props?.name) || !isNil(x?.props["aria-label"])).map((x: ReactElement) => {
+                        const name = x?.props?.name || x?.props["aria-label"];
 
                         return (
                             <li className="o-ui-avatar-group-remainings-list-item" key={name}>
@@ -83,7 +83,7 @@ export function InnerAvatarGroup({
     const remainingAvatars = isExceeding ? avatars.slice(AvailableSlots - 1) : null;
 
     const avatarsMarkup = shownAvatars.map((x: ReactElement) => {
-        const name = x?.props?.name;
+        const name = x?.props?.name || x?.props["aria-label"];
 
         return (
             <TooltipTrigger key={name}>

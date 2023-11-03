@@ -7,6 +7,7 @@ import { Inline, Stack } from "@components/layout";
 import { InnerTag, InnerTagList, Tag, TagList } from "@components/tag";
 import { Item } from "@components/collection";
 import { Text } from "@components/typography";
+import { Avatar } from "@components/avatar";
 
 <Meta
     title="Components/Tag"
@@ -31,17 +32,17 @@ import { Text } from "@components/typography";
 
 ### Content
 
-- Not rely on an icon to be understand the intention of a tag.
+- To not rely on an icon to understand the intention of a tag.
 
 ### Accessibility
 
 - Text should be descriptive enough to be understood without relying on the color.
-- Text should be descriptive and complete enough to be understood without relying on the icon. Using an icon to carry information will make it non-accessible.
+- Text should be descriptive and complete enough to be understood without relying on the icon. Using an icon to carry information will make it inaccessible.
 
 ### Tag, Lozenge, Button and other alternatives
 
-- To highlight an item's status for quick recognition or to give additional fast short information such as highlighting a new item use a [lozenge](?path=/docs/lozenge--default-story).
-- For interactivity, a clickable component, use a [button](?path=/docs/button--default-story). Tags should’nt be used as Buttons, buttons have a recognizable look throughout the app, one should not use a different pattern.
+- To highlight an item's status for quick recognition or to give additional fast short information such as highlighting a new item, use a [lozenge](?path=/docs/lozenge--default-story).
+- For interactivity, a clickable component, use a [button](?path=/docs/button--default-story). Tags shouldn't be used as Buttons. Buttons have a recognizable look throughout the app and should not use a different pattern.
 - To display a quantity, use either a [counter](?path=/docs/counter--default-story) or a [badge](?path=/docs/badge--default-story).
 
 ## Usage
@@ -53,6 +54,19 @@ A default tag. Use in most situations.
 <Preview>
     <Story name="default">
         <Tag>Falcon 9</Tag>
+    </Story>
+</Preview>
+
+### Avatar
+
+A tag can contain [avatars](?path=/docs/avatar--default-story). An avatar is used when the tag represents a user.
+
+<Preview>
+    <Story name="avatar">
+        <Tag>
+            <Avatar name="Alan Shepard" />
+            <Text>Alan Shepard</Text>
+        </Tag>
     </Story>
 </Preview>
 
@@ -124,7 +138,7 @@ A tag can be removable by specifying an `onRemove` handler.
 
 ### Size
 
-A tag can vary in size. When a lot of tags can be seen side by side, prefer the small size. The tag can be used in small version to accommodate smaller spaces, such as a column row. When used in small format, the tag should not contain an icon.
+A tag can vary in size. When a lot of tags can be seen side by side, prefer the small size. The tag can be used in small versions to accommodate smaller spaces, such as a column row. When used in a small format, the tag should not contain an icon.
 
 <Preview>
     <Story name="size">
@@ -159,9 +173,26 @@ A tag can have a subtle appearance. Avoid using this variant next to an outline 
     </Story>
 </Preview>
 
+### Validation
+
+A tag can display a validation state.
+
+<Preview>
+    <Story name="validation">
+        <Inline alignY="end">
+            <Field required validationState="invalid">
+                <Label>Space ID</Label>
+                <Tag>MyTag</Tag>
+            </Field>
+            <Tag validationState="invalid" onRemove={() => {}}>Falcon 9</Tag>        
+            <Tag variant="outline" validationState="invalid" onRemove={() => {}}>Falcon 9</Tag>
+        </Inline>
+    </Story>
+</Preview>
+
 ### Custom colors
 
-Custom colors can be applied to a tag. You’ll be responsible to insure that the color contrast is accessible.
+Custom colors can be applied to a tag. You will be responsible for ensuring that the color contrast is accessible.
 
 <Preview>
     <Story name="custom-color">
@@ -179,7 +210,7 @@ Custom colors can be applied to a tag. You’ll be responsible to insure that th
 
 ## Tag list
 
-Related tags can be grouped together.
+Related tags can be grouped.
 
 <Preview>
     <Story name="tag list">
@@ -209,7 +240,7 @@ A tag list can have a clear button.
 
 ### Size
 
-A tag list can vary in size. This will pass the size to it’s children.
+A tag list can vary in size. This will pass the size to its children.
 
 <Preview>
     <Story name="tag list size">
@@ -232,7 +263,7 @@ A tag list can vary in size. This will pass the size to it’s children.
 
 ### Dynamic items
 
-A tag list items can be rendered dynamically.
+A list of tags can be rendered dynamically.
 
 <Preview>
     <Story name="tag list dynamic items">
@@ -254,7 +285,7 @@ A tag list items can be rendered dynamically.
 
 ### Tags picker
 
-The following example show how a tag list can be composed with one of Orbiter's picker to build a basic tags picker.
+The following example shows how a tag list can be composed with one of Orbiter's pickers to build a basic tags picker.
 
 <Preview filePath="/tag/docs/TagsPicker" />
 

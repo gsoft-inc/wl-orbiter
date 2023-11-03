@@ -1,4 +1,4 @@
-import { ComponentProps, MouseEvent, ReactNode, SyntheticEvent, cloneElement, forwardRef, useCallback, useMemo, useRef } from "react";
+import { ComponentProps, ReactNode, cloneElement, forwardRef, useCallback, useMemo, useRef } from "react";
 import {
     FocusScopeContext,
     InteractionProps,
@@ -20,9 +20,7 @@ import {
 import { useOverlayFocusRing, useTrapFocus } from "../../overlay";
 
 import { Box } from "../../box";
-import { CrossButton } from "../../button";
 import { Text } from "../../typography";
-import { usePopoverTriggerContext } from "./PopoverTriggerContext";
 
 const DefaultElement = "section";
 
@@ -35,12 +33,6 @@ export interface InnerPopoverProps extends InternalProps, InteractionProps, Styl
      * Whether or not the popover should close on outside interactions.
      */
     dismissable?: boolean;
-    /**
-     * Called when a closing event happenened.
-     * @param {SyntheticEvent} event - React's original synthetic event.
-     * @returns {void}
-     */
-    onClose?: (event: SyntheticEvent) => void;
     /**
      * The z-index of the dialog.
      */
@@ -56,7 +48,6 @@ export function InnerPopover({
     focus,
     forwardedRef,
     id,
-    onClose,
     zIndex = 10000,
     ...rest
 }: InnerPopoverProps) {
@@ -64,19 +55,7 @@ export function InnerPopover({
 
     const popoverRef = useMergedRefs(forwardedRef, setFocusRef);
     const dismissButtonRef = useRef<HTMLButtonElement>();
-
-    const { close: triggerClose } = usePopoverTriggerContext();
-
-    const close = useCallback(event => {
-        if (!isNil(triggerClose)) {
-            triggerClose(event);
-        }
-
-        if (!isNil(onClose)) {
-            onClose(event);
-        }
-    }, [onClose, triggerClose]);
-
+    
     const focusManager = useFocusManager(focusScope);
 
     useTrapFocus(focusManager);
@@ -107,10 +86,6 @@ export function InnerPopover({
     });
 
     const focusRingProps = useOverlayFocusRing({ focus });
-
-    const handleDismissButtonClick = useEventCallback((event: MouseEvent) => {
-        close(event);
-    });
 
     const popoverId = useId(id, "o-ui-popover");
 
@@ -148,16 +123,6 @@ export function InnerPopover({
         ? cloneElement(footer, { children: <Text>{footer?.props?.children}</Text> })
         : footer;
 
-    const dismissButtonMarkup = dismissable && (
-        <CrossButton
-            aria-label="Dismiss"
-            className="o-ui-popover-dismiss-button"
-            onClick={handleDismissButtonClick}
-            ref={dismissButtonRef}
-            size="xs"
-        />
-    );
-
     const headerSectionMarkup = heading && (
         <header className="o-ui-popover-header-section">
             {heading}
@@ -194,7 +159,6 @@ export function InnerPopover({
                     focusRingProps
                 )}
             >
-                {dismissButtonMarkup}
                 {headerSectionMarkup}
                 {content}
                 {footerSectionMarkup}

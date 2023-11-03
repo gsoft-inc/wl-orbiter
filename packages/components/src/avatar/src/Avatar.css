@@ -44,6 +44,12 @@
     transition: background-color var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
 }
 
+/* DELETED / ANONYMOUS */
+.o-ui-avatar svg {
+    height: 100%;
+    width: 100%;
+}
+
 /* GROUPS */
 .o-ui-avatar-group {
     display: inline-flex;
