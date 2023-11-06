@@ -6,6 +6,7 @@ import { Inline, Stack } from "@components/layout";
 import { Text } from "@components/typography";
 import { cloneElement } from "react";
 import { Avatar } from "@components/avatar";
+import { Field, Label } from "@components/field";
 
 function Tag({ element, ...rest }) {
     return cloneElement(element, rest);
@@ -266,7 +267,7 @@ export function createTagTestSuite(element, stories) {
                     </Tag>
                     <Tag onRemove={() => {}} element={element} validationState="invalid">
                         Falcon 9
-                    </Tag>
+                    </Tag> 
                 </Inline>
                 <Tag fluid onRemove={() => {}} element={element} validationState="invalid">
                         Falcon 9
@@ -276,6 +277,10 @@ export function createTagTestSuite(element, stories) {
                         Falcon 9
                     </Tag>
                 </Div>
+                <Field required validationState="invalid">
+                    <Label>Invalid Field</Label>
+                    <Tag element={element}>Falcon 9</Tag>
+                </Field>
             </Stack>
         )
         .add("zoom", () =>

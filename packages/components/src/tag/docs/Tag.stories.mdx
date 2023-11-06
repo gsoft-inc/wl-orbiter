@@ -179,13 +179,8 @@ A tag can display a validation state.
 
 <Preview>
     <Story name="validation">
-        <Inline alignY="end">
-            <Field required validationState="invalid">
-                <Label>Space ID</Label>
-                <Tag>MyTag</Tag>
-            </Field>
-            <Tag validationState="invalid" onRemove={() => {}}>Falcon 9</Tag>        
-            <Tag variant="outline" validationState="invalid" onRemove={() => {}}>Falcon 9</Tag>
+        <Inline alignY="end">    
+            <Tag validationState="invalid" onRemove={() => {}}>Falcon 9</Tag>
         </Inline>
     </Story>
 </Preview>

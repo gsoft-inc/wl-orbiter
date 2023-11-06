@@ -151,6 +151,11 @@ export const Validation: TagListStory = {
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
             </TagList>
+            <TagList validationState="valid">
+                <Item key="mercury">Mercury Program</Item>
+                <Item key="gemini">Gemini Program</Item>
+                <Item key="apollo">Apollo Program</Item>
+            </TagList>
         </Stack>
     )
 };

@@ -51,7 +51,7 @@ export function InnerDeletedAvatar({
                 }
             )}
         >
-            <DeletedIcon />
+            <DeletedIcon className="o-ui-avatar-icon o-ui-avatar-deleted-icon" />
         </Box>
     );
 }

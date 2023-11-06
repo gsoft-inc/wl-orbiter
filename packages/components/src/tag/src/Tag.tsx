@@ -85,11 +85,9 @@ export function InnerTag(props: InnerTagProps) {
         _: {
             defaultWrapper: Text
         },
-        avatar: () => {
-            return {
-                className: "o-ui-tag-avatar",
-                size: "xs"
-            };
+        avatar: {
+            className: "o-ui-tag-avatar",
+            size: "xs"
         },
         counter: {
             color: "inherit",

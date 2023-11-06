@@ -17,7 +17,7 @@ const DefaultElement = "div";
 
 export interface InnerAnonymousAvatarProps extends SlotProps, InternalProps, StyledComponentProps<typeof DefaultElement | "image"> {
     /**
-     * The label to display for the avatar.
+     * See [WCAG](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html).
      */
     "aria-label": string;
     /**
@@ -51,7 +51,7 @@ export function InnerAnonymousAvatar({
                 }
             )}
         >
-            <AnonymousIcon />
+            <AnonymousIcon className="o-ui-avatar-icon o-ui-avatar-anonymous-icon" />
         </Box>
     );
 }

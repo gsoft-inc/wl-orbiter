@@ -1,6 +1,7 @@
 .o-ui-tag {
     --o-ui-padding-sm: var(--hop-space-inset-md);
     --o-ui-padding-md: var(--hop-space-inset-md);
+    --o-ui-tag-border-size: 1px;
     border: none;
     display: inline-flex;
     align-items: center;
@@ -23,10 +24,7 @@ button.o-ui-tag:after,
 a.o-ui-tag:after {
     opacity: 0;
     content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: block;
     position: absolute;
     box-shadow: 0 0 0 var(--o-ui-focus-ring-thickness-md) var(--hop-primary-border-focus);
@@ -85,7 +83,7 @@ a:not([disabled]).o-ui-tag.o-ui-tag-focus:after {
 /* SOLID */
 .o-ui-tag-solid {
     background-color: var(--hop-neutral-surface-weakest);
-    border: 1px solid var(--hop-neutral-border);
+    border: var(--o-ui-tag-border-size) solid var(--hop-neutral-border);
 }
 
 /* SOLID | AS ANCHOR / BUTTON | STATES */
@@ -134,15 +132,13 @@ a.o-ui-tag-solid.o-ui-tag-disabled {
 /* OUTLINE */
 .o-ui-tag-outline {
     background-color: var(--hop-neutral-surface);
-    border: 1px solid var(--hop-neutral-border-weak);
+    border: var(--o-ui-tag-border-size) solid var(--hop-neutral-border-weak);
 }
 
 button.o-ui-tag-outline::after,
 a.o-ui-tag-outline::after {
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
+    --o-ui-tag-focus-offset: -2px;
+    inset: calc(var(--o-ui-tag-focus-offset) - var(--o-ui-tag-border-size));
 }
 
 /* OUTLINE | AS ANCHOR / BUTTON | STATES */

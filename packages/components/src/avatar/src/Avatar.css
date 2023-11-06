@@ -44,8 +44,8 @@
     transition: background-color var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
 }
 
-/* DELETED / ANONYMOUS */
-.o-ui-avatar svg {
+/* ICON | DELETED / ANONYMOUS */
+.o-ui-avatar .o-ui-avatar-icon {
     height: 100%;
     width: 100%;
 }
