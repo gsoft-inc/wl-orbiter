@@ -4,6 +4,8 @@ import { CrossButton } from "../../button";
 import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots, createEmbeddableAdapter } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { Text } from "../../typography";
+import { useFieldInputProps } from "../../field";
+import { ValidationState } from "../../input";
 
 const DefaultElement = "div";
 
@@ -31,6 +33,10 @@ export interface InnerTagProps extends InternalProps, InteractionProps, StyledCo
      */
     size?: ResponsiveProp<"sm" | "md">;
     /**
+     * Whether or not the tag should display as "valid" or "invalid".
+     */
+    validationState?: ValidationState;
+    /**
      * The tag style to use.
      */
     variant?: "solid" | "outline";
@@ -48,28 +54,40 @@ const embedIconButton = createEmbeddableAdapter({
 });
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
-export function InnerTag({
-    active,
-    as = DefaultElement,
-    children,
-    disabled,
-    fluid,
-    focus,
-    forwardedRef,
-    hover,
-    onRemove,
-    size,
-    variant = "solid",
-    ...rest
-}: InnerTagProps) {
+export function InnerTag(props: InnerTagProps) {
+    const [fieldProps] = useFieldInputProps();
+
+    const {
+        active,
+        as = DefaultElement,
+        children,
+        disabled,
+        fluid,
+        focus,
+        forwardedRef,
+        hover,
+        onRemove,
+        size,
+        validationState,
+        variant = "solid",
+        ...rest
+    } = mergeProps(
+        props,
+        fieldProps
+    );
+    
     const fluidValue = useResponsiveValue(fluid);
     const sizeValue = useResponsiveValue(size);
 
     const ref = useMergedRefs(forwardedRef);
 
-    const { counter, dot, "end-icon": endIcon, icon, text } = useSlots(children, useMemo(() => ({
+    const { avatar, counter, dot, "end-icon": endIcon, icon, text } = useSlots(children, useMemo(() => ({
         _: {
             defaultWrapper: Text
+        },
+        avatar: {
+            className: "o-ui-tag-avatar",
+            size: "xs"
         },
         counter: {
             color: "inherit",
@@ -118,13 +136,16 @@ export function InnerTag({
                         active && "active",
                         focus && "focus",
                         hover && "hover",
-                        normalizeSize(sizeValue)
+                        normalizeSize(sizeValue),
+                        validationState
                     ),
                     disabled,
                     ref
                 }
             )}
         >
+            
+            {avatar}
             {icon}
             {dot}
             {text}

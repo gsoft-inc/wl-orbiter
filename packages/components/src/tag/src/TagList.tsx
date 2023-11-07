@@ -4,6 +4,7 @@ import { CollectionItem, useCollection } from "../../collection";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, StyledComponentProps, isNil, mergeProps, useEventCallback } from "../../shared";
 import { Tag, TagProps } from "./Tag";
+import { ValidationState } from "../../input";
 
 const DefaultElement = "div";
 
@@ -33,6 +34,10 @@ export interface InnerTagListProps extends InternalProps, StyledComponentProps<t
      * A tag list can vary in size.
      */
     size?: "sm" | "md";
+    /**
+     * Whether or not the tag list should display as "valid" or "invalid".
+     */
+    validationState?: ValidationState;
 }
 
 export interface TagItemProps extends Omit<TagProps, "children"> {
@@ -80,6 +85,7 @@ export function InnerTagList({
     onRemove,
     readOnly,
     size,
+    validationState,
     ...rest
 }: InnerTagListProps) {
     const nodes = useCollection(children);
@@ -113,6 +119,7 @@ export function InnerTagList({
                     onRemove={onRemove}
                     readOnly={readOnly}
                     size={size}
+                    validationState={validationState}
                 />
             ))}
             {clearButtonMarkup}

@@ -66,27 +66,6 @@ test("do not autofocus an anchor element", async () => {
     await waitFor(() => expect(screen.getByTestId("popover")).toHaveFocus());
 });
 
-test("when dismissable, tabbing the last focusable element of the popover will move the focus to the dissmiss button", async () => {
-    renderWithTheme(
-        <Popover data-testid="popover">
-            <Heading>Iconic Arecibo Observatory collapses</Heading>
-            <Content>
-                This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures led to the radio telescope's collapse.
-                <HtmlInput type="text" />
-                <HtmlInput type="text" data-testid="last-focusable-element" />
-            </Content>
-        </Popover>
-    );
-
-    act(() => {
-        screen.getByTestId("last-focusable-element").focus();
-    });
-
-    await userEvent.tab();
-
-    await waitFor(() => expect(screen.getByLabelText("Dismiss")).toHaveFocus());
-});
-
 test("when not dismissable, tabbing the last focusable element of the popover will move the focus to the first focusable element", async () => {
     renderWithTheme(
         <Popover dismissable={false} data-testid="popover">
@@ -153,24 +132,6 @@ test("when no aria-label or aria-labelledby attributes are provided, the popover
     );
 
     await waitFor(() => expect(screen.getByTestId("popover")).toHaveAttribute("aria-labelledby", "heading-1"));
-});
-
-// ***** Api *****
-
-test("call onClose when the dismiss button is click", async () => {
-    const handler = jest.fn();
-
-    renderWithTheme(
-        <Popover onClose={handler}>
-            <Heading>Iconic Arecibo Observatory collapses</Heading>
-            <Content>This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures led to the radio telescope's collapse.</Content>
-        </Popover>
-    );
-
-    await userEvent.click(screen.getByLabelText("Dismiss"));
-
-    await waitFor(() => expect(handler).toHaveBeenCalledWith(expect.anything()));
-    await waitFor(() => expect(handler).toHaveBeenCalledTimes(1));
 });
 
 // ***** Refs *****

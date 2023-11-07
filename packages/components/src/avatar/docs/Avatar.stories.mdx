@@ -1,5 +1,5 @@
 import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { Avatar, AvatarGroup, InnerAvatar, InnerAvatarGroup } from "@components/avatar";
+import { Avatar, AvatarGroup, InnerAvatar, InnerAvatarGroup, DeletedAvatar, InnerDeletedAvatar, InnerAnonymousAvatar } from "@components/avatar";
 import { ChrisHadfield } from "./assets";
 import { ComponentInfo, Preview, Tagline } from "@stories/components";
 import { Inline } from "@components/layout";
@@ -20,7 +20,7 @@ import { Inline } from "@components/layout";
 
 # Avatar
 
-<Tagline>An avatar is a graphical representation of a user and typically appears in list and card views, along side a user's information and/or content that they have created</Tagline>
+<Tagline>An avatar is a graphical representation of a user and typically appears in list and card views, alongside a user's information and/or content that they have created.</Tagline>
 
 <ComponentInfo
     usage={"import { Avatar, AvatarGroup } from \"@workleap/orbiter-ui\";"}
@@ -33,7 +33,7 @@ Since ShareGate's applications are closely tied to [Microsoft Office 365](https:
 
 ### Default
 
-By default, an avatar display the initials of a user.
+By default, an avatar displays the initials of a user.
 
 <Preview>
     <Story name="default">
@@ -53,7 +53,7 @@ An avatar can accept a local image.
 
 ### Remote image
 
-An avatar can accept a remote image url. If the remote image loading is *delayed* or *fail to load*, the user initials will be displayed.
+An avatar can accept a remote image URL. If the remote image loading is *delayed* or *fails to load*, the user initials will be displayed.
 
 <Preview>
     <Story name="remote image">
@@ -77,6 +77,38 @@ An avatar component can vary in size.
     </Story>
 </Preview>
 
+## DeletedAvatar
+
+In some cases, you might want to display a deleted avatar.
+
+<Preview>
+    <Story name="deleted avatar">
+        <Inline alignY="center">
+            <DeletedAvatar size="xs" aria-label="Deleted user" />
+            <DeletedAvatar size="sm" aria-label="Deleted user" />
+            <DeletedAvatar size="md" aria-label="Deleted user" />
+            <DeletedAvatar size="lg" aria-label="Deleted user" />
+            <DeletedAvatar size="xl" aria-label="Deleted user" />
+        </Inline>
+    </Story>
+</Preview>
+
+## AnonymousAvatar
+
+In some cases, you might want to display an anonymous avatar.
+
+<Preview>
+    <Story name="anonymous avatar">
+        <Inline alignY="center">
+            <AnonymousAvatar size="xs" aria-label="Anonymous user" />
+            <AnonymousAvatar size="sm" aria-label="Anonymous user" />
+            <AnonymousAvatar size="md" aria-label="Anonymous user" />
+            <AnonymousAvatar size="lg" aria-label="Anonymous user" />
+            <AnonymousAvatar size="xl" aria-label="Anonymous user" />
+        </Inline>
+    </Story>
+</Preview>
+
 ## AvatarGroup
 
 In some cases, you might want to stack avatars as a group.
@@ -84,8 +116,9 @@ In some cases, you might want to stack avatars as a group.
 <Preview scope={{ ChrisHadfield }}>
     <Story name="avatar group">
         <AvatarGroup>
-            <Avatar name="Sally Ride" />
             <Avatar name="Alan Shepard" />
+            <DeletedAvatar aria-label="Deleted user" />
+            <AnonymousAvatar aria-label="Anonymous user" />
             <Avatar src={ChrisHadfield} name="Chris Hadfield" />
         </AvatarGroup>
     </Story>
@@ -93,7 +126,7 @@ In some cases, you might want to stack avatars as a group.
 
 ### Remainings
 
-An avatar group have a maximum of 4 slots. Once this threshold is exceeded, the remaining avatars count is indicated as the fourth slot.
+An avatar group has a maximum of 4 slots. Once this threshold is exceeded, the remaining avatar count is indicated as the fourth slot.
 
 <Preview scope={{ ChrisHadfield }}>
     <Story name="avatar group remainings">
@@ -103,6 +136,8 @@ An avatar group have a maximum of 4 slots. Once this threshold is exceeded, the 
             <Avatar src={ChrisHadfield} name="Chris Hadfield" />
             <Avatar name="Christa McAuliffe" />
             <Avatar name="Neil Armstrong" />
+            <DeletedAvatar aria-label="Deleted user" />
+            <AnonymousAvatar aria-label="Anonymous user" />
         </AvatarGroup>
     </Story>
 </Preview>
@@ -118,6 +153,26 @@ An avatar group have a maximum of 4 slots. Once this threshold is exceeded, the 
 />
 
 <ArgsTable of={InnerAvatar} sort="alpha" />
+
+### Deleted Avatar
+
+<ComponentInfo
+    usage={"import { DeletedAvatar } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAvatar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgsTable of={InnerDeletedAvatar} sort="alpha" />
+
+### Anonymous Avatar
+
+<ComponentInfo
+    usage={"import { AnonymousAvatar } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAvatar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgsTable of={InnerAnonymousAvatar} sort="alpha" />
 
 ### AvatarGroup
 
