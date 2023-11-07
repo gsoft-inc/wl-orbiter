@@ -137,6 +137,29 @@ export const Readonly: TagListStory = {
     )
 };
 
+export const Validation: TagListStory = {
+    storyName: "validation",
+    render: () => (
+        <Stack>
+            <TagList validationState="invalid">
+                <Item key="mercury">Mercury Program</Item>
+                <Item key="gemini">Gemini Program</Item>
+                <Item key="apollo">Apollo Program</Item>
+            </TagList>
+            <TagList readOnly onClear={() => {}} validationState="invalid">
+                <Item key="mercury">Mercury Program</Item>
+                <Item key="gemini">Gemini Program</Item>
+                <Item key="apollo">Apollo Program</Item>
+            </TagList>
+            <TagList validationState="valid">
+                <Item key="mercury">Mercury Program</Item>
+                <Item key="gemini">Gemini Program</Item>
+                <Item key="apollo">Apollo Program</Item>
+            </TagList>
+        </Stack>
+    )
+};
+
 export const MultipleRows: TagListStory = {
     storyName: "multiple rows",
     render: () => (
