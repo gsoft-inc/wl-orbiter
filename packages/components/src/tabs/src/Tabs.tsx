@@ -54,10 +54,6 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
      * A controlled selected key.
      */
     selectedKey?: string | null;
-    /**
-     * The tabs style to use.
-     */
-    variant?: "standalone" | "in-card" | "heading";
 }
 
 export function InnerTabs({
@@ -74,7 +70,6 @@ export function InnerTabs({
     onSelectionChange,
     orientation = "horizontal",
     selectedKey: selectedKeyProp,
-    variant = "standalone",
     ...rest
 }: InnerTabsProps) {
     const fluidValue = useResponsiveValue(fluid);
@@ -118,8 +113,7 @@ export function InnerTabs({
                     className: cssModule(
                         "o-ui-tabs",
                         fluidValue && "fluid",
-                        orientationValue,
-                        variant
+                        orientationValue
                     ),
                     id,
                     ref: forwardedRef
