@@ -54,18 +54,30 @@ function CustomComponent({
 export const Default: RadioGroupStory = {
     storyName: "default",
     render: () => (
-        <RadioGroup>
-            <Radio value="1">1</Radio>
-            <Radio value="2">2</Radio>
-            <Radio value="3">3</Radio>
-        </RadioGroup>
+        <Inline alignY="start">
+            <RadioGroup size="sm">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+            <RadioGroup>
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+        </Inline>
     )
 };
 
 export const Selection: RadioGroupStory = {
     storyName: "selection",
     render: () => (
-        <Inline>
+        <Inline alignY="start">
+            <RadioGroup value="2" size="sm">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
             <RadioGroup value="2">
                 <Radio value="1">1</Radio>
                 <Radio value="2">2</Radio>
@@ -83,44 +95,72 @@ export const Selection: RadioGroupStory = {
 export const Number: RadioGroupStory = {
     storyName: "number",
     render: () => (
-        <RadioGroup defaultValue="2">
-            <Radio value="1">1</Radio>
-            <Radio value="2">2</Radio>
-            <Radio value="3">3</Radio>
-        </RadioGroup>
+        <Inline alignY="start">
+            <RadioGroup defaultValue="2" size="sm">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+            <RadioGroup defaultValue="2">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+        </Inline>
     )
 };
 
 export const Disabled: RadioGroupStory = {
     storyName: "disabled",
     render: () => (
-        <RadioGroup disabled>
-            <Radio value="1">1</Radio>
-            <Radio value="2">2</Radio>
-            <Radio value="3">3</Radio>
-        </RadioGroup>
+        <Inline alignY="start">
+            <RadioGroup disabled size="sm">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+            <RadioGroup disabled>
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+        </Inline>
     )
 };
 
 export const DisabledRadio: RadioGroupStory = {
     storyName: "disabled radio",
     render: () => (
-        <RadioGroup>
-            <Radio disabled value="1">1</Radio>
-            <Radio value="2">2</Radio>
-            <Radio value="3">3</Radio>
-        </RadioGroup>
+        <Inline alignY="start">
+            <RadioGroup size="sm">
+                <Radio disabled value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+            <RadioGroup>
+                <Radio disabled value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+        </Inline>
     )
 };
 
 export const Gap: RadioGroupStory = {
     storyName: "gap",
     render: () => (
-        <RadioGroup gap={800}>
-            <Radio value="1">1</Radio>
-            <Radio value="2">2</Radio>
-            <Radio value="3">3</Radio>
-        </RadioGroup>
+        <Inline alignY="start">
+            <RadioGroup gap={800} size="sm">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+            <RadioGroup gap={800}>
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
+        </Inline>
     )
 };
 
@@ -166,29 +206,48 @@ export const OverflowWrapped: RadioGroupStory = {
 export const ToggleButtons: RadioGroupStory = {
     storyName: "toggle buttons",
     render: () => (
-        <RadioGroup gap={80} orientation="horizontal" defaultValue="2">
-            <ToggleButton variant="secondary" value="1">1</ToggleButton>
-            <ToggleButton variant="secondary" value="2">2</ToggleButton>
-            <ToggleButton variant="secondary" value="3">3</ToggleButton>
-        </RadioGroup>
+        <Stack>
+            <RadioGroup gap={80} orientation="horizontal" defaultValue="2" size="sm">
+                <ToggleButton variant="secondary" value="1">1</ToggleButton>
+                <ToggleButton variant="secondary" value="2">2</ToggleButton>
+                <ToggleButton variant="secondary" value="3">3</ToggleButton>
+            </RadioGroup>
+            <RadioGroup gap={80} orientation="horizontal" defaultValue="2">
+                <ToggleButton variant="secondary" value="1">1</ToggleButton>
+                <ToggleButton variant="secondary" value="2">2</ToggleButton>
+                <ToggleButton variant="secondary" value="3">3</ToggleButton>
+            </RadioGroup>
+        </Stack>
     )
 };
 
 export const CustomComponents: RadioGroupStory = {
     storyName: "custom components",
     render: () => (
-        <RadioGroup gap={80} orientation="horizontal" defaultValue="2">
-            <CustomComponent value="1">1</CustomComponent>
-            <CustomComponent value="2">2</CustomComponent>
-            <CustomComponent value="3">3</CustomComponent>
-        </RadioGroup>
+        <Stack>
+            <RadioGroup gap={80} orientation="horizontal" defaultValue="2" size="sm">
+                <CustomComponent value="1">1</CustomComponent>
+                <CustomComponent value="2">2</CustomComponent>
+                <CustomComponent value="3">3</CustomComponent>
+            </RadioGroup>
+            <RadioGroup gap={80} orientation="horizontal" defaultValue="2">
+                <CustomComponent value="1">1</CustomComponent>
+                <CustomComponent value="2">2</CustomComponent>
+                <CustomComponent value="3">3</CustomComponent>
+            </RadioGroup>
+        </Stack>
     )
 };
 
 export const Validation: RadioGroupStory = {
     storyName: "validation",
     render: () => (
-        <Inline gap={800}>
+        <Inline gap={800} alignY="start">
+            <RadioGroup validationState="invalid" size="sm">
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+            </RadioGroup>
             <RadioGroup validationState="invalid">
                 <Radio value="1">1</Radio>
                 <Radio value="2">2</Radio>
