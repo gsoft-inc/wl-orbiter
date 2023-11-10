@@ -1,4 +1,4 @@
-import { BorderRadiusPrefix, BorderRadiusSemanticPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, FontSizePrefix, FontSizeSemanticSuffix, FontWeightPrefix, FontWeightSemanticSuffix, LineHeightPrefix, LineHeightSemanticSuffix, normalizeVariable } from "./theme-vars-utils";
+import { BorderRadiusPrefix, BorderRadiusSemanticPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, ElevationPrefix, FontFamilyPrefix, FontFamilySemanticSuffix, FontSizePrefix, FontSizeSemanticSuffix, FontWeightPrefix, FontWeightSemanticSuffix, LineHeightPrefix, LineHeightSemanticSuffix, normalizeVariable } from "./theme-vars-utils";
 import { Breakpoint } from "../BreakpointProvider";
 import { Globals, Property } from "csstype";
 import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue";
@@ -6,12 +6,12 @@ import { LiteralUnion } from "type-fest";
 import { isNil } from "../../../shared";
 import { StylingContext } from "./StylingContext";
 
-const GlobalValues = [
+export const GlobalValues = [
     "inherit",
     "initial",
     "revert",
     "unset"
-];
+] as const;
 
 export const ColorExpressionTypes = [
     "#",
@@ -21,7 +21,7 @@ export const ColorExpressionTypes = [
     "hsla"
 ] as const;
 
-const DimensionsScale = [
+export const DimensionsScale = [
     1280,
     960,
     800,
@@ -43,7 +43,7 @@ export const SemanticSimplePaddingSpace = [
     "inset-md",
     "inset-lg",
     "inset-xl"
-];
+] as const;
 
 export const SemanticComplexPaddingSpace = [
     "inset-squish-sm",
@@ -52,7 +52,7 @@ export const SemanticComplexPaddingSpace = [
     "inset-stretch-sm",
     "inset-stretch-md",
     "inset-stretch-lg"
-];
+] as const;
 
 export const SemanticSimpleMarginSpace = [
     "stack-xs",
@@ -65,11 +65,11 @@ export const SemanticSimpleMarginSpace = [
     "inline-md",
     "inline-lg",
     "inline-xl"
-];
+] as const;
 
 export const SemanticComplexMarginSpace = [];
 
-const OrbiterColors = [
+export const OrbiterColors = [
     "coastal-25",
     "coastal-50",
     "coastal-75",
@@ -207,7 +207,7 @@ const OrbiterColors = [
     "samoyed"
 ] as const;
 
-const BackgroundColorAliases = {
+export const BackgroundColorAliases = {
     "upsell-hover": "upsell-surface-hover",
     "upsell-weak": "upsell-surface-weak",
     "upsell-disabled": "upsell-surface-disabled",
@@ -327,9 +327,9 @@ const BackgroundColorAliases = {
     "status-positive": "status-positive-surface"
 } as const;
 
-const BorderWidthAndStyle = "0.0625rem solid";
+export const BorderWidthAndStyle = "0.0625rem solid";
 
-const BorderColorAliases = {
+export const BorderColorAliases = {
     "upsell-active": "upsell-border-active",
     "upsell": "upsell-border",
     "upsell-disabled": "upsell-border-disabled",
@@ -361,7 +361,7 @@ const BorderColorAliases = {
     "information": "information-border"
 } as const;
 
-const IconColorAliases = {
+export const IconColorAliases = {
     "upsell-weakest": "upsell-icon-weakest",
     "upsell-weak": "upsell-icon-weak",
     "upsell-active": "upsell-icon-active",
@@ -419,7 +419,7 @@ const IconColorAliases = {
     "status-positive": "status-positive-icon"
 } as const;
 
-const TextColorAliases = {
+export const TextColorAliases = {
     "upsell-active": "upsell-text-active",
     "upsell": "upsell-text",
     "upsell-hover": "upsell-text-hover",
@@ -483,7 +483,7 @@ const TextColorAliases = {
     "status-positive": "status-positive-text"
 } as const;
 
-const BorderRadiusScale = [
+export const BorderRadiusScale = [
     0,
     1,
     2,
@@ -492,7 +492,7 @@ const BorderRadiusScale = [
     9999
 ] as const;
 
-const BorderRadiusAliases = [
+export const BorderRadiusAliases = [
     "rounded-sm",
     "rounded-md",
     "rounded-lg",
@@ -500,21 +500,63 @@ const BorderRadiusAliases = [
     "circle"
 ];
 
-const BoxShadowScale = [
+export const BoxShadowScale = [
     "none",
     "sm",
     "md",
     "lg"
 ] as const;
 
-const BoxShadowAliases = [
+export const BoxShadowAliases = [
     "none",
     "raised",
     "lifted",
     "floating"
 ] as const;
 
-const FontSizeScale = [
+export const FontFamilyScale = [
+    "primary",
+    "secondary",
+    "tertiary",
+]
+
+export const FontFamilyAliases = [
+    "heading-3xl",
+    "heading-2xl",
+    "heading-xl",
+    "heading-lg",
+    "heading-md",
+    "heading-sm",
+    "heading-xs",
+    "heading-xs-medium",
+    "overline",
+    "body-2xl",
+    "body-xl",
+    "body-lg",
+    "body-lg-medium",
+    "body-lg-semibold",
+    "body-lg-bold",
+    "body-lg-underline",
+    "body-md",
+    "body-md-medium",
+    "body-md-semibold",
+    "body-md-bold",
+    "body-md-underline",
+    "body-sm",
+    "body-sm-medium",
+    "body-sm-semibold",
+    "body-sm-bold",
+    "body-sm-underline",
+    "body-xs",
+    "body-xs-medium",
+    "body-xs-semibold",
+    "body-xs-bold",
+    "body-xs-underline",
+    "accent-lg",
+    "accent-sm"
+];
+
+export const FontSizeScale = [
     480,
     360,
     320,
@@ -527,7 +569,7 @@ const FontSizeScale = [
     120
 ] as const;
 
-const FontSizeAliases = [
+export const FontSizeAliases = [
     "heading-3xl",
     "heading-2xl",
     "heading-xl",
@@ -563,7 +605,7 @@ const FontSizeAliases = [
     "accent-sm"
 ] as const;
 
-const FontWeightScale = [
+export const FontWeightScale = [
     690,
     680,
     590,
@@ -573,7 +615,7 @@ const FontWeightScale = [
     400
 ] as const;
 
-const FontWeightAliases = [
+export const FontWeightAliases = [
     "heading-3xl",
     "heading-2xl",
     "heading-xl",
@@ -609,7 +651,7 @@ const FontWeightAliases = [
     "accent-sm"
 ] as const;
 
-const LineHeightScale = [
+export const LineHeightScale = [
     "1-50",
     "1-4285",
     "1-33",
@@ -619,7 +661,7 @@ const LineHeightScale = [
     "1-125"
 ] as const;
 
-const LineHeightAliases = [
+export const LineHeightAliases = [
     "heading-3xl",
     "heading-2xl",
     "heading-xl",
@@ -706,7 +748,6 @@ export const ComplexMarginMapping = {
     ...createValuesMapping(SemanticComplexMarginSpace, createPrefixedValueTemplate(DimensionsPrefix))
 };
 
-
 export const SizingMapping = {
     ...createValuesMapping(DimensionsScale, createPrefixedValueTemplate(DimensionsPrefix))
 };
@@ -730,8 +771,14 @@ export const BorderRadiusMapping = {
 
 export const BoxShadowMapping = {
     ...createValuesMapping(BoxShadowScale, createPrefixedValueTemplate(BoxShadowPrefix)),
-    ...createValuesMapping(BoxShadowAliases, createPrefixedValueTemplate(BoxShadowPrefix))
+    ...createValuesMapping(BoxShadowAliases, createPrefixedValueTemplate(ElevationPrefix))
 };
+
+
+export const FontFamilyMapping = {
+    ...createValuesMapping(FontFamilyScale, createPrefixedValueTemplate(FontFamilyPrefix)),
+    ...createValuesMapping(FontFamilyAliases, (value: string | number) => `var(${normalizeVariable(value, { suffix: FontFamilySemanticSuffix })})`)
+}
 
 export const FontSizeMapping = {
     ...createValuesMapping(FontSizeScale, createPrefixedValueTemplate(FontSizePrefix)),
@@ -775,6 +822,7 @@ export type BoxShadowValue = keyof typeof BoxShadowMapping | Property.BoxShadow;
 export type ColorValue = keyof typeof TextColorMapping | CssColor;
 export type ColumnGapValue = keyof typeof SimpleMarginMapping | Property.ColumnGap;
 export type FillValue = keyof typeof IconColorMapping | Fill;
+export type FontFamilyValue = keyof typeof FontFamilyMapping | Property.FontFamily;
 export type FontSizeValue = keyof typeof FontSizeMapping | Property.FontSize;
 export type FontWeightValue = keyof typeof FontWeightMapping | typeof GlobalValues[number];
 export type GapValue = keyof typeof SimpleMarginMapping | Property.Gap;
@@ -829,6 +877,7 @@ export type FlexGrowProp = ResponsiveProp<Property.FlexGrow>;
 export type FlexShrinkProp = ResponsiveProp<Property.FlexShrink>;
 export type FlexWrapProp = ResponsiveProp<Property.FlexWrap>;
 export type FontSizeProp = ResponsiveProp<FontSizeValue>;
+export type FontFamilyProp = ResponsiveProp<FontFamilyValue>;
 export type FontStyleProp = ResponsiveProp<Property.FontStyle>;
 export type FontWeightProp = ResponsiveProp<FontWeightValue>;
 export type GapProp = ResponsiveProp<GapValue>;
@@ -1157,6 +1206,10 @@ export interface StyledSystemProps {
      * @ignore
      */
     flexWrap?: FlexWrapProp;
+    /**
+     * @ignore
+     */
+    fontFamily?: FontFamilyProp;
     /**
      * @ignore
      */
@@ -1677,6 +1730,7 @@ export const PropsHandlers: Record<string, PropHandler<unknown>> = {
     flexGrow: createHandler(),
     flexShrink: createHandler(),
     flexWrap: createHandler(),
+    fontFamily: createHandler(FontFamilyMapping),
     fontSize: createHandler(FontSizeMapping),
     fontStyle: createHandler(),
     fontWeight: createHandler(FontWeightMapping),
