@@ -1,4 +1,20 @@
-import { BorderRadiusPrefix, BorderRadiusSemanticPrefix, BoxShadowPrefix, ColorPrefix, DimensionsPrefix, ElevationPrefix, FontFamilyPrefix, FontFamilySemanticSuffix, FontSizePrefix, FontSizeSemanticSuffix, FontWeightPrefix, FontWeightSemanticSuffix, LineHeightPrefix, LineHeightSemanticSuffix, normalizeVariable } from "./theme-vars-utils";
+import {
+    BorderRadiusPrefix,
+    BorderRadiusSemanticPrefix,
+    BoxShadowPrefix,
+    ColorPrefix,
+    DimensionsPrefix,
+    ElevationPrefix,
+    FontFamilyPrefix,
+    FontFamilySemanticSuffix,
+    FontSizePrefix,
+    FontSizeSemanticSuffix,
+    FontWeightPrefix,
+    FontWeightSemanticSuffix,
+    LineHeightPrefix,
+    LineHeightSemanticSuffix,
+    normalizeVariable
+} from "./theme-vars-utils";
 import { Breakpoint } from "../BreakpointProvider";
 import { Globals, Property } from "csstype";
 import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue";
@@ -823,7 +839,7 @@ export type ColorValue = keyof typeof TextColorMapping | CssColor;
 export type ColumnGapValue = keyof typeof SimpleMarginMapping | Property.ColumnGap;
 export type FillValue = keyof typeof IconColorMapping | Fill;
 export type FontFamilyValue = keyof typeof FontFamilyMapping | Property.FontFamily;
-export type FontSizeValue = keyof typeof FontSizeMapping | Property.FontSize;
+export type FontSizeValue = keyof typeof FontSizeMapping | Property.FontWeight;
 export type FontWeightValue = keyof typeof FontWeightMapping | typeof GlobalValues[number];
 export type GapValue = keyof typeof SimpleMarginMapping | Property.Gap;
 export type GridAutoColumnsValue = keyof typeof SizingMapping | Property.GridAutoColumns;
