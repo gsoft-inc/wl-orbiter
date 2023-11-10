@@ -1,5 +1,6 @@
 .o-ui-counter {
     color: var(--hop-neutral-text);
+    line-height: 1; /* Prevent counter from adding extra space between counter and text element. */
 }
 
 /* HIGHLIGHT */

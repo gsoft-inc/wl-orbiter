@@ -22,7 +22,7 @@ import { Children, ComponentProps, ReactElement, SyntheticEvent, forwardRef, use
 
 import { Group } from "../../group";
 import { useFieldInputProps } from "../../field";
-import { useResponsiveValue } from "../../styling";
+import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { useToolbarProps } from "../../toolbar";
 
 const DefaultElement = "div";
@@ -32,6 +32,10 @@ export interface InnerRadioGroupProps extends AbstractGroupInputProps<typeof Def
       * Radio group name.
       */
     name?: string;
+    /**
+     * The radio group can vary in size.
+     */
+    size?: ResponsiveProp<"sm" | "md">;
 }
 
 const NavigationKeyBinding = {
@@ -66,6 +70,7 @@ export function InnerRadioGroup(props: InnerRadioGroupProps) {
         orientation = "vertical",
         required,
         reverse,
+        size,
         validationState,
         value,
         wrap = true,
@@ -76,6 +81,7 @@ export function InnerRadioGroup(props: InnerRadioGroupProps) {
         omitProps(fieldProps, ["fluid", "size"])
     );
 
+    const sizeValue = useResponsiveValue(size);
     const wrapValue = useResponsiveValue(wrap);
 
     const [checkedValue, setCheckedValue] = useControllableState(value, defaultValue, null);
@@ -124,6 +130,7 @@ export function InnerRadioGroup(props: InnerRadioGroupProps) {
         required,
         reverse,
         role: "radiogroup",
+        size: sizeValue,
         validationState,
         wrap: wrapValue
     });

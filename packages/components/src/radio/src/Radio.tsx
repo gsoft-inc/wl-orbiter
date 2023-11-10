@@ -12,8 +12,10 @@ import {
     useCheckableProps,
     useControllableState,
     useForwardInputApi,
-    useSlots
+    useSlots,
+    normalizeSize
 } from "../../shared";
+import { ResponsiveProp, useResponsiveValue } from "../../styling";
 
 import { AbstractInputProps } from "../../input";
 import { Box } from "../../box";
@@ -62,6 +64,10 @@ export interface InnerRadioProps extends Omit<AbstractInputProps<typeof DefaultE
      */
     reverse?: boolean;
     /**
+     * A radio button can vary in size.
+     */
+    size?: ResponsiveProp<"sm" | "md">;
+    /**
      * The value to associate with when in a group.
      */
     value?: string;
@@ -86,6 +92,7 @@ export function InnerRadio(props: InnerRadioProps) {
         onCheck,
         onValueChange,
         reverse,
+        size,
         tabIndex,
         validationState,
         value,
@@ -99,6 +106,8 @@ export function InnerRadio(props: InnerRadioProps) {
 
     const labelRef = useRef();
     const inputRef = useRef();
+    
+    const sizeValue = useResponsiveValue(size);
 
     useAutoFocus(inputRef, {
         delay: isNumber(autoFocus) ? autoFocus : undefined,
@@ -142,6 +151,7 @@ export function InnerRadio(props: InnerRadioProps) {
             color: "inherit",
             pushed: true,
             reverse,
+            size: sizeValue,
             variant: "divider"
         },
         icon: {
@@ -150,9 +160,10 @@ export function InnerRadio(props: InnerRadioProps) {
         },
         text: {
             className: "o-ui-radio-label",
-            color: "inherit"
+            color: "inherit",
+            size: sizeValue
         }
-    }), [reverse]));
+    }), [reverse, sizeValue]));
 
     return (
         <Box
@@ -168,7 +179,8 @@ export function InnerRadio(props: InnerRadioProps) {
                         disabled && "disabled",
                         active && "active",
                         focus && "focus",
-                        hover && "hover"
+                        hover && "hover",
+                        normalizeSize(sizeValue)
                     ),
                     ref: labelRef
                 }

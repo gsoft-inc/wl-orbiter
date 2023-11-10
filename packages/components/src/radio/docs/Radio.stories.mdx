@@ -113,6 +113,27 @@ A radio can have a [counter](?path=/docs/counter--default-story) after his text.
     </Story>
 </Preview>
 
+### Size
+
+A radio group can vary in size.
+
+<Preview>
+    <Story name="size">
+        <Inline alignY="start" gap={50}>
+            <RadioGroup defaultValue="jupiter" size="md">
+                <Radio value="mars">Mars</Radio>
+                <Radio value="jupiter">Jupiter</Radio>
+                <Radio value="pluto">Pluto</Radio>
+            </RadioGroup>
+            <RadioGroup defaultValue="jupiter" size="sm">
+                <Radio value="mars">Mars</Radio>
+                <Radio value="jupiter">Jupiter</Radio>
+                <Radio value="pluto">Pluto</Radio>
+            </RadioGroup>
+        </Inline>
+    </Story>
+</Preview>
+
 ### Reverse
 
 A radio button can be to the left or to the right of his label.
