@@ -126,7 +126,7 @@ export const FontSize: ShareGateStory = {
 export const FontWeight: ShareGateStory = {
     storyName: "font weight",
     render: () => (
-        <>{Object.keys(FontWeightMapping).map(x => <Box fontWeight={x} key={x}>Space exploration</Box>)}</>
+        <>{Object.keys(FontWeightMapping).map(x => <Box fontWeight={x as keyof typeof FontWeightMapping} key={x}>Space exploration</Box>)}</>
     )
 };
 
