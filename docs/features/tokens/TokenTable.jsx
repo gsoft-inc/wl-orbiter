@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@components/styling";
+import { ThemeProvider, ThemeComputedStyle } from "@components/styling";
 import { arrayOf, func, shape, string } from "prop-types";
 
 import { Div, Span } from "@components/html";
@@ -7,7 +7,6 @@ import { DocsContext } from "@storybook/addon-docs";
 import { InfoCircleMajorIcon } from "@components/icons";
 import { Table } from "@stories/components";
 import { Text } from "@components/typography";
-import { ThemeComputedStyle } from "@components/styling";
 import { useEffect, useContext, useRef, useState } from "react";
 
 const propTypes = {
@@ -19,7 +18,6 @@ const propTypes = {
 };
 
 function toRowValues({ token, variable, itemRenderer }, docsContext, themeComputedStyle) {
-    const scheme = docsContext.globals.colorScheme;
     const valueTest = themeComputedStyle ? themeComputedStyle.getPropertyValue(variable) : "N/A";
 
     return [
@@ -117,7 +115,7 @@ export function paddingRenderer(token) {
     return (
         <Div display="flex" justifyContent="center" padding={1}>
             <Div padding={token} display="inline-block" backgroundColor="primary">
-                <Div backgroundColor="neutral"  height={400} width={400}>
+                <Div backgroundColor="neutral" height={400} width={400}>
 
                 </Div>
             </Div>
@@ -129,13 +127,13 @@ export function marginRenderer(token) {
     const isStack = token.includes("stack");
 
 
-    if(!isStack) {
+    if (!isStack) {
         return marginInlineRenderer(token);
     }
 
     return (
         <Div display="flex" alignItems="center" padding={1}>
-            <Div display="flex" backgroundColor="primary"  border="neutral" height="40px" width="24px">
+            <Div display="flex" backgroundColor="primary" border="neutral" height="40px" width="24px">
                 <Div backgroundColor="neutral" marginTop={token} width="24px">
 
                 </Div>
@@ -147,7 +145,7 @@ export function marginRenderer(token) {
 export function marginInlineRenderer(token) {
     return (
         <Div display="flex" alignItems="center" padding={1}>
-            <Div display="inline-block" backgroundColor="primary"  border="neutral" width="48px">
+            <Div display="inline-block" backgroundColor="primary" border="neutral" width="48px">
                 <Div backgroundColor="neutral" height={240} marginLeft={token}>
 
                 </Div>

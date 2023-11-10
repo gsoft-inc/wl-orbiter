@@ -517,8 +517,8 @@ export const BoxShadowAliases = [
 export const FontFamilyScale = [
     "primary",
     "secondary",
-    "tertiary",
-]
+    "tertiary"
+];
 
 export const FontFamilyAliases = [
     "heading-3xl",
@@ -778,7 +778,7 @@ export const BoxShadowMapping = {
 export const FontFamilyMapping = {
     ...createValuesMapping(FontFamilyScale, createPrefixedValueTemplate(FontFamilyPrefix)),
     ...createValuesMapping(FontFamilyAliases, (value: string | number) => `var(${normalizeVariable(value, { suffix: FontFamilySemanticSuffix })})`)
-}
+};
 
 export const FontSizeMapping = {
     ...createValuesMapping(FontSizeScale, createPrefixedValueTemplate(FontSizePrefix)),
@@ -838,6 +838,7 @@ export type SimplePaddingValue = keyof typeof SimplePaddingMapping | Property.Pa
 export type ComplexPaddingValue = keyof typeof ComplexPaddingMapping | Property.Padding;
 export type RowGapValue = keyof typeof SimpleMarginMapping | Property.RowGap;
 export type SizingValue = LiteralUnion<keyof typeof SizingMapping, string>;
+export type SpacingValue = LiteralUnion<keyof typeof SpacingMapping, string>;
 export type StrokeValue = keyof typeof IconColorMapping | Property.Stroke;
 export type WidthValue = keyof typeof SizingMapping | Property.Width;
 export type AlignContentProp = ResponsiveProp<Property.AlignContent>;
