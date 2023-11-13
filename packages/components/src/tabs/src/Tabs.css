@@ -261,7 +261,7 @@
 /* TAB | STATE | HOVER */
 .o-ui-tab:not([disabled]):hover,
 .o-ui-tab-hover:not([disabled]) {
-    color: var(--o-ui-text-alias-primary);
+    color: var(--hop-neutral-text-hover);
 }
 
 /* TAB | STATE | SELECTED */
