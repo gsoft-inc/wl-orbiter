@@ -79,7 +79,7 @@ export function InnerTab({
             className: "o-ui-tab-text",
             size: textSize(variant)
         }
-    }), []));
+    }), [variant, textSize]));
 
     const handleClick = useEventCallback((event: MouseEvent) => {
         event.preventDefault();

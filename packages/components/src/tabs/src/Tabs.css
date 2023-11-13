@@ -19,14 +19,19 @@
     --o-ui-tab-focus-bottom: var(--hop-space-inline-xs);
 }
 
-/* TAB LIST CONTAINER */
-.o-ui-tab-list-container {
+/* TAB LIST CONTAINER | ORIENTATION | HORIZONTAL */
+.o-ui-tabs-horizontal .o-ui-tab-list-container {
     align-items: center;
     display: flex;
 }
 
-/* TAB HEADING*/
-.o-ui-tab-heading {
+/* TAB LIST CONTAINER | ORIENTATION | VERTICAL */
+.o-ui-tabs-vertical .o-ui-tab-list-container {
+    flex: 0 0 auto;
+}
+
+/* TAB HEADING | ORIENTATION | HORIZONTAL */
+.o-ui-tabs-horizontal .o-ui-tab-heading {
     margin-right: var(--hop-space-inline-md);
 }
 
