@@ -1,7 +1,7 @@
 import { useMemo, ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useControllableState, useEventCallback, useId } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { TabsContext, TabsOrientation } from "./TabsContext";
+import { TabsContext, TabsOrientation, TabsVariant } from "./TabsContext";
 
 import { Box } from "../../box";
 import { TabList } from "./TabList";
@@ -36,7 +36,7 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
      */
     fluid?: ResponsiveProp<boolean>;
     /**
-     * Whether or not keyboard navigation changes focus between tabs but doens't activate it.
+     * Whether or not keyboard navigation changes focus between tabs but doesn't activate it.
      */
     manual?: boolean;
     /**
@@ -54,6 +54,10 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
      * A controlled selected key.
      */
     selectedKey?: string | null;
+    /**
+     * The tabs style to use.
+     */
+    variant?: TabsVariant;
 }
 
 export function InnerTabs({
@@ -70,6 +74,7 @@ export function InnerTabs({
     onSelectionChange,
     orientation = "horizontal",
     selectedKey: selectedKeyProp,
+    variant = "standalone",
     ...rest
 }: InnerTabsProps) {
     const fluidValue = useResponsiveValue(fluid);
@@ -113,7 +118,8 @@ export function InnerTabs({
                     className: cssModule(
                         "o-ui-tabs",
                         fluidValue && "fluid",
-                        orientationValue
+                        orientationValue,
+                        variant
                     ),
                     id,
                     ref: forwardedRef
@@ -126,7 +132,8 @@ export function InnerTabs({
                     isManual: manual,
                     onSelect: handleSelect,
                     orientation: orientationValue,
-                    selectedKey: adjustedKey
+                    selectedKey: adjustedKey,
+                    variant: variant
                 }}
             >
                 <TabList
