@@ -97,7 +97,7 @@
 /* AUTOFILL */
 .o-ui-input input:-webkit-autofill,
 .o-ui-input textarea:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px var(--o-ui-bg-alias-accent-faint) inset !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--hop-primary-surface-weak) inset !important;
     -webkit-text-fill-color: var(--hop-neutral-text) !important;
 }
 
