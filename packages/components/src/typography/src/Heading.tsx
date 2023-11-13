@@ -9,7 +9,7 @@ export type AbstractHeadingProps<T extends ElementType> = SlotProps & InternalPr
      */
     children: ReactNode;
     /**
-     * An heading can vary in size.
+     * A heading can vary in size.
      */
     size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl">;
 };

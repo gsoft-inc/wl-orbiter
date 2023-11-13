@@ -42,7 +42,7 @@ export function InnerTab({
     tab: { key, panelId, tabId },
     ...rest
 }: InnerTabProps) {
-    const { isManual, selectedKey } = useTabsContext();
+    const { isManual, selectedKey, variant } = useTabsContext();
 
     const { icon, lozenge, text } = useSlots(children, useMemo(() => ({
         _: {
@@ -60,9 +60,10 @@ export function InnerTab({
             variant: "informative"
         },
         text: {
-            className: "o-ui-tab-text"
+            className: "o-ui-tab-text",
+            size: variant === "heading" ? "md" : "sm"
         }
-    }), []));
+    }), [variant]));
 
     const handleClick = useEventCallback((event: MouseEvent) => {
         event.preventDefault();

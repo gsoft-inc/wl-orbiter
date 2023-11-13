@@ -102,6 +102,44 @@ export const TabWithLozenge: TabsStory = {
     )
 };
 
+export const InCard: TabsStory = {
+    storyName: "in card",
+    render: () => (
+        <Tabs orientation="vertical" variant="in-card" aria-label="Planets">
+            <Item>
+                <Header>
+                    <NotificationMajorIcon />
+                    <Text>Mars</Text>
+                </Header>
+                <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
+            </Item>
+            <Item>
+                <Header>Jupiter</Header>
+                <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
+            </Item>
+        </Tabs>
+    )
+};
+
+export const Heading: TabsStory = {
+    storyName: "heading",
+    render: () => (
+        <Tabs orientation="vertical" variant="heading" aria-label="Planets">
+            <Item>
+                <Header>
+                    <NotificationMajorIcon />
+                    <Text>Mars</Text>
+                </Header>
+                <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
+            </Item>
+            <Item>
+                <Header>Jupiter</Header>
+                <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
+            </Item>
+        </Tabs>
+    )
+};
+
 export const States: TabsStory = {
     storyName: "states",
     render: () => (
