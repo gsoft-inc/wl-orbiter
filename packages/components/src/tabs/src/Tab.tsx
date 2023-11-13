@@ -1,10 +1,10 @@
 import { ComponentProps, KeyboardEvent, MouseEvent, ReactNode, SyntheticEvent, forwardRef, useMemo } from "react";
-import { InteractionProps, InternalProps, Keys, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots } from "../../shared";
+import { InteractionProps, InternalProps, Keys, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots, Size } from "../../shared";
 
 import { Box } from "../../box";
 import { TabType } from "./useTabsItems";
 import { Text } from "../../typography";
-import { useTabsContext } from "./TabsContext";
+import { useTabsContext, TabsVariant } from "./TabsContext";
 
 export const TabKeyProp = "data-o-ui-key";
 
@@ -29,6 +29,16 @@ export interface InnerTabProps extends InternalProps, InteractionProps, Omit<Sty
     tab: TabType;
 }
 
+export function normalizeTabsVariant<T extends TabsVariant>(tabsVariant?: T) {
+    return tabsVariant || "standalone";
+}
+
+export type TabsVariantAdapter<T extends Size> = Partial<Record<TabsVariant, T>>;
+
+export function createTabTextSizeAdapter<T extends Size>(adapter: TabsVariantAdapter<T>) {
+    return (tabsVariant: TabsVariant) => adapter[normalizeTabsVariant(tabsVariant)];
+}
+
 export function InnerTab({
     active,
     as = DefaultElement,
@@ -42,7 +52,13 @@ export function InnerTab({
     tab: { key, panelId, tabId },
     ...rest
 }: InnerTabProps) {
-    const { isManual, selectedKey } = useTabsContext();
+    const { isManual, selectedKey, variant } = useTabsContext();
+
+    const textSize = createTabTextSizeAdapter({
+        "heading": "md",
+        "in-card": "sm",
+        "standalone": "sm"
+    });
 
     const { icon, lozenge, text } = useSlots(children, useMemo(() => ({
         _: {
@@ -60,7 +76,8 @@ export function InnerTab({
             variant: "informative"
         },
         text: {
-            className: "o-ui-tab-text"
+            className: "o-ui-tab-text",
+            size: textSize(variant)
         }
     }), []));
 

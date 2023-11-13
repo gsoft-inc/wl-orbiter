@@ -2,6 +2,10 @@
 .o-ui-tabs {
     height: max-content;
     --o-ui-tab-stroke-width: 2px;
+    --o-ui-tab-border: 1px solid var(--hop-neutral-border-weak);
+    --o-ui-tab-height: 3rem;
+    --o-ui-tab-padding-inline: var(--hop-space-inset-md);
+    --o-ui-tab-focus-bottom: calc(var(--hop-space-inline-sm) - var(--o-ui-tab-stroke-width));
 }
 
 /* TABS | ORIENTATION | VERTICAL */
@@ -9,22 +13,61 @@
     display: flex;
 }
 
+/* TABS | VARIANT | HEADING */
+.o-ui-tabs-heading {
+    --o-ui-tab-height: 2.5rem;
+    --o-ui-tab-focus-bottom: var(--hop-space-inline-xs);
+}
+
+/* TAB LIST CONTAINER */
+.o-ui-tab-list-container {
+    align-items: center;
+    display: flex;
+}
+
+/* TAB HEADING*/
+.o-ui-tab-heading {
+    margin-right: var(--hop-space-inline-md);
+}
+
 /* TAB LIST */
 .o-ui-tab-list {
     display: flex;
     background-color: var(--hop-neutral-surface-weakest);
-    outline: 1px solid var(--hop-neutral-border-weak);
+    border: var(--o-ui-tab-border);
     border-radius: var(--hop-shape-rounded-md);
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 /* TAB LIST | ORIENTATION | HORIZONTAL */
 .o-ui-tabs-horizontal .o-ui-tab-list {
     align-items: center;
+    height: var(--o-ui-tab-height);
 }
 
 /* TAB LIST | ORIENTATION | VERTICAL */
 .o-ui-tabs-vertical .o-ui-tab-list {
     flex-direction: column;
+}
+
+/* TAB LIST | ORIENTATION | HORIZONTAL | VARIANT | IN-CARD */
+.o-ui-tabs-horizontal.o-ui-tabs-in-card .o-ui-tab-list {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* TAB LIST | ORIENTATION | VERTICAL | VARIANT | IN-CARD */
+.o-ui-tabs-vertical.o-ui-tabs-in-card .o-ui-tab-list {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* TAB LIST | VARIANT | HEADING */
+.o-ui-tabs-heading .o-ui-tab-list {
+    background: none;
+    border: none;
+    border-radius: 0;
 }
 
 /* TAB LIST | POPOVER | TRIGGER */
@@ -136,14 +179,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--hop-space-inset-md);
+    padding-block: var(--hop-space-inset-sm);
+    padding-inline: var(--o-ui-tab-padding-inline);
     border: transparent;
     transition: all var(--o-ui-easing-duration-2) var(--o-ui-easing-productive);
     min-width: max-content;
-    min-height: 3rem;
+    min-height: var(--o-ui-tab-height);
     color: var(--hop-neutral-text-weak);
     position: relative;
     font-family: inherit;
+    font-weight: var(--hop-body-sm-medium-font-weight);
 }
 
 /* View https://css-tricks.com/slightly-careful-sub-elements-clickable-things */
@@ -162,13 +207,19 @@
     padding-bottom: calc(var(--hop-space-inset-md) - 2px);
 }
 
+/* TAB LIST | VARIANT | HEADING */
+.o-ui-tabs-heading .o-ui-tab {
+    --o-ui-tab-padding-inline: var(--hop-space-inset-sm);
+    font-weight: var(--hop-body-md-medium-font-weight);
+}
+
 /* TAB | STATE | FOCUS */
 .o-ui-tab::before {
     content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    bottom: calc(var(--hop-space-inline-sm) - var(--o-ui-tab-stroke-width));
+    bottom: var(--o-ui-tab-focus-bottom);
     border: var(--o-ui-focus-ring-thickness-md) transparent solid;
     border-radius: var(--hop-shape-rounded-sm);
     pointer-events: none;
@@ -178,14 +229,19 @@
 
 /* TAB | STATE | FOCUS | ORIENTATION | HORIZONTAL */
 .o-ui-tabs-horizontal .o-ui-tab::before {
-    left: var(--hop-space-inline-sm);
-    right: var(--hop-space-inline-sm);
+    left: calc(var(--o-ui-tab-padding-inline) / 2);
+    right: calc(var(--o-ui-tab-padding-inline) / 2);
 }
 
 /* TAB | STATE | FOCUS | ORIENTATION | VERTICAL */
 .o-ui-tabs-vertical .o-ui-tab::before {
     left: 1px;
     right: 0;
+}
+
+/* TAB | STATE | FOCUS | VARIANT | HEADING */
+.o-ui-tabs-heading .o-ui-tab::before {
+    height: 1.75rem;
 }
 
 .o-ui-tabs-vertical .o-ui-tab {
@@ -206,7 +262,7 @@
 /* TAB | STATE | FOCUS */
 .o-ui-tab:not([disabled]):focus-visible:before,
 .o-ui-tab-focus:not([disabled]):before {
-    border-color: var(--o-ui-focus-ring-color-alias-default);
+    border-color: var(--hop-primary-border-focus);
 }
 
 /* TAB | STATE | HOVER */
@@ -223,11 +279,11 @@
 /* TAB | STATE | SELECTED | ORIENTATION | HORIZONTAL */
 .o-ui-tabs-horizontal .o-ui-tab[aria-selected="true"]::after {
     content: "";
-    width: calc(100% - calc(1rem * 2));
+    width: calc(100% - calc(var(--o-ui-tab-padding-inline) * 2));
     height: 2px;
     background-color: var(--hop-neutral-border-strong);
     position: absolute;
-    left: 1rem;
+    left: var(--o-ui-tab-padding-inline);
     bottom: -1px;
 }
 
@@ -239,6 +295,11 @@
     background-color: var(--hop-neutral-border-strong);
     position: absolute;
     left: 0;
+}
+
+/* TAB | STATE | SELECTED | ORIENTATION | HORIZONTAL | VARIANT | HEADING */
+.o-ui-tabs-horizontal.o-ui-tabs-heading .o-ui-tab[aria-selected="true"]::after {
+    bottom: calc(var(--hop-space-inset-xs) + var(--o-ui-tab-stroke-width));
 }
 
 /* TAB | FLUID */
@@ -260,6 +321,7 @@
 
 .o-ui-tab .o-ui-tab-text {
     color: inherit;
+    font-weight: inherit;
     line-height: 1;
 }
 
@@ -282,6 +344,11 @@
     margin-left: var(--hop-space-inline-md);
 }
 
+/* PANELS | ORIENTATION | VERTICAL | VARIANT | IN-CARD */
+.o-ui-tabs-vertical.o-ui-tabs-in-card .o-ui-tab-panels {
+    display: flex;
+}
+
 /* PANEL */
 .o-ui-tab-panel {
     color: var(--hop-neutral-text);
@@ -296,6 +363,25 @@
 /*  PANEL | ORIENTATION | VERTICAL */
 .o-ui-tabs-vertical .o-ui-tab-panel {
     padding: var(--hop-space-inset-squish-md);
+}
+
+/* PANEL | VARIANT | IN-CARD */
+.o-ui-tabs-in-card .o-ui-tab-panel {
+    border: var(--o-ui-tab-border);
+}
+
+/* PANEL | ORIENTATION | HORIZONTAL | VARIANT | IN-CARD */
+.o-ui-tabs-horizontal.o-ui-tabs-in-card .o-ui-tab-panel {
+    border-top: none;
+    border-bottom-left-radius: var(--hop-shape-rounded-md);
+    border-bottom-right-radius: var(--hop-shape-rounded-md);
+}
+
+/* PANEL | ORIENTATION | VERTICAL | VARIANT | IN-CARD */
+.o-ui-tabs-vertical.o-ui-tabs-in-card .o-ui-tab-panel {
+    border-left: none;
+    border-top-right-radius: var(--hop-shape-rounded-md);
+    border-bottom-right-radius: var(--hop-shape-rounded-md);
 }
 
 /* PANEL | FLUID */

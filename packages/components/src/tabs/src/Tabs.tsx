@@ -1,8 +1,9 @@
 import { useMemo, ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useControllableState, useEventCallback, useId } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { TabsContext, TabsOrientation } from "./TabsContext";
+import { TabsContext, TabsOrientation, TabsVariant } from "./TabsContext";
 
+import { Div } from "../../html";
 import { Box } from "../../box";
 import { TabList } from "./TabList";
 import { TabPanels } from "./TabPanels";
@@ -36,7 +37,11 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
      */
     fluid?: ResponsiveProp<boolean>;
     /**
-     * Whether or not keyboard navigation changes focus between tabs but doens't activate it.
+     * The heading displayed the the left of the Tabs. Used with the heading variant.
+     */
+    heading?: ReactNode;
+    /**
+     * Whether or not keyboard navigation changes focus between tabs but doesn't activate it.
      */
     manual?: boolean;
     /**
@@ -57,7 +62,7 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
     /**
      * The tabs style to use.
      */
-    variant?: "standalone" | "in-card" | "heading";
+    variant?: TabsVariant;
 }
 
 export function InnerTabs({
@@ -69,6 +74,7 @@ export function InnerTabs({
     defaultSelectedKey,
     fluid,
     forwardedRef,
+    heading,
     id,
     manual,
     onSelectionChange,
@@ -132,14 +138,18 @@ export function InnerTabs({
                     isManual: manual,
                     onSelect: handleSelect,
                     orientation: orientationValue,
-                    selectedKey: adjustedKey
+                    selectedKey: adjustedKey,
+                    variant: variant
                 }}
             >
-                <TabList
-                    aria-label={ariaLabel}
-                    autoFocus={autoFocus}
-                    tabs={tabs}
-                />
+                <Div className="o-ui-tab-list-container">
+                    {heading && <Div className="o-ui-tab-heading">{heading}</Div>}
+                    <TabList
+                        aria-label={ariaLabel}
+                        autoFocus={autoFocus}
+                        tabs={tabs}
+                    />
+                </Div>
                 <TabPanels panels={panels} />
             </TabsContext.Provider>
         </Box>

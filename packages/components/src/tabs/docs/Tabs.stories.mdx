@@ -35,7 +35,7 @@ We recommend specifying a unique `key` prop for every `<Item>`. If you choose to
 
 ### Default
 
-A default tabs.
+A default tab.
 
 <Preview>
     <Story name="default">
@@ -136,7 +136,7 @@ By default, tabs are activated automatically. This means when you use the arrow 
 
 > The content of a tab should ideally be preloaded. However, if switching to a tab panel causes a network request and possibly a page refresh, there might be some notable latency and this might affect the experience for keyboard and screen reader users.
 
-In this scenario, you should use a manually activated tab, it moves focus without activating the tabs. With focus on a specifc tab, users can activate a tab by pressing ``Space`` or ``Enter``.
+In this scenario, you should use a manually activated tab, it moves focus without activating the tabs. With the focus on a specific tab, users can activate a tab by pressing ``Space`` or ``Enter``.
 
 <Preview>
     <Story name="manual">
@@ -186,9 +186,57 @@ A tabs component can be rendered vertically.
     </Story>
 </Preview>
 
+### In Card
+
+A tabs component can be rendered as an in-card variant.
+
+<Preview>
+    <Story name="in-card">
+        <Tabs variant="in-card" aria-label="Planets">
+            <Item key="mars">
+                <Header>Mars</Header>
+                <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
+            </Item>
+            <Item key="jupiter">
+                <Header>Jupiter</Header>
+                <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
+            </Item>
+            <Item key="venus">
+                <Header>Venus</Header>
+                <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
+            </Item>
+        </Tabs>
+    </Story>
+</Preview>
+
+### Heading
+
+A tabs component can be rendered as a heading variant.
+
+<Preview>
+    <Story name="heading">
+        <Tabs variant="heading" aria-label="Planets" heading={
+            <h2>Planets</h2>
+        }>
+            <Item key="mars">
+                <Header>Mars</Header>
+                <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
+            </Item>
+            <Item key="jupiter">
+                <Header>Jupiter</Header>
+                <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
+            </Item>
+            <Item key="venus">
+                <Header>Venus</Header>
+                <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
+            </Item>
+        </Tabs>
+    </Story>
+</Preview>
+
 ### Fluid
 
-A tabs component can split the width of it's container equally between his tabs.
+A tabs component can split the width of its container equally between its tabs.
 
 <Preview>
     <Story name="fluid">
@@ -227,7 +275,7 @@ A tabs component can handle horizontal overflow by collapsing the overflowing ta
                 </Item>
                 <Item key="jupiter">
                     <Header>Jupiter</Header>
-                    <Content>Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.</Content>
+                    <Content>Jupiter is more than twice as massive as the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.</Content>
                 </Item>
                 <Item key="venus">
                     <Header>Venus</Header>
@@ -250,7 +298,7 @@ A tabs component can handle horizontal overflow by collapsing the overflowing ta
                 </Item>
                 <Item key="neptune">
                     <Header>Neptune</Header>
-                    <Content>Neptune—the eighth and most distant major planet orbitering our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
+                    <Content>Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
                 </Item>
                 <Item key="pluto">
                     <Header>Pluto</Header>
@@ -306,7 +354,7 @@ A tab can be disabled.
 
 ### Controlled
 
-The `selectedKey` state can be handled in controlled mode.
+The `selectedKey` state can be handled in a controlled mode.
 
 <Preview filePath="/tabs/docs/ControlledTabs" />
 
