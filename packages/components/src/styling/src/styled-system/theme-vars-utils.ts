@@ -21,6 +21,7 @@ export const BoxShadowPrefix = "shadow";
 
 // semantic
 export const BorderRadiusSemanticPrefix = "shape";
+export const ElevationPrefix = "elevation";
 // color no prefix
 // dimension same as non-semantic
 export const FontFamilySemanticSuffix = "font-family";
