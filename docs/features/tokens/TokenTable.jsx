@@ -116,7 +116,6 @@ export function paddingRenderer(token) {
         <Div display="flex" justifyContent="center" padding={1}>
             <Div padding={token} display="inline-block" backgroundColor="primary">
                 <Div backgroundColor="neutral" height={400} width={400}>
-
                 </Div>
             </Div>
         </Div>
@@ -135,7 +134,6 @@ export function marginRenderer(token) {
         <Div display="flex" alignItems="center" padding={1}>
             <Div display="flex" backgroundColor="primary" border="neutral" height="40px" width="24px">
                 <Div backgroundColor="neutral" marginTop={token} width="24px">
-
                 </Div>
             </Div>
         </Div>
