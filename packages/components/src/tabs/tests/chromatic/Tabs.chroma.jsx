@@ -22,11 +22,7 @@ createTabsTestSuite(<Tabs variant="standalone" />, stories("/standalone"));
 
 createTabsTestSuite(<Tabs variant="in-card" />, stories("/in-card"));
 
-createTabsTestSuite(<Tabs variant="heading"
-    heading={
-        <h2>Planets</h2>
-    }
-/>, stories("/heading"));
+createTabsTestSuite(<Tabs variant="heading" />, stories("/heading"));
 
 // set tab optional since its provided automatically by the parent component, and client code do not need to provide it
 const ActiveHeader = ({ tab, children, onSelect, ...rest }) => {

@@ -19,18 +19,6 @@
     --o-ui-tab-focus-bottom: var(--hop-space-inline-xs);
 }
 
-/* TAB LIST CONTAINER | ORIENTATION | HORIZONTAL */
-.o-ui-tabs-horizontal .o-ui-tab-list-container {
-    align-items: center;
-    display: flex;
-}
-
-/* TAB LIST CONTAINER | ORIENTATION | VERTICAL */
-.o-ui-tabs-vertical .o-ui-tab-list-container {
-    display: flex;
-    flex: 0 0 auto;
-}
-
 /* TAB HEADING | ORIENTATION | HORIZONTAL */
 .o-ui-tabs-horizontal .o-ui-tab-heading {
     margin-right: var(--hop-space-inline-md);
@@ -42,8 +30,6 @@
     background-color: var(--hop-neutral-surface-weakest);
     border: var(--o-ui-tab-border);
     border-radius: var(--hop-shape-rounded-md);
-    flex: 1 1 auto;
-    min-width: 0;
 }
 
 /* TAB LIST | ORIENTATION | HORIZONTAL */
@@ -54,6 +40,7 @@
 
 /* TAB LIST | ORIENTATION | VERTICAL */
 .o-ui-tabs-vertical .o-ui-tab-list {
+    flex: 0 0 auto;
     flex-direction: column;
 }
 

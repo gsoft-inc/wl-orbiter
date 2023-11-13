@@ -3,7 +3,6 @@ import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNi
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { TabsContext, TabsOrientation, TabsVariant } from "./TabsContext";
 
-import { Div } from "../../html";
 import { Box } from "../../box";
 import { TabList } from "./TabList";
 import { TabPanels } from "./TabPanels";
@@ -36,10 +35,6 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
      * Whether or not the tabs take up the width of the container.
      */
     fluid?: ResponsiveProp<boolean>;
-    /**
-     * The heading displayed the the left of the Tabs. Used with the heading variant.
-     */
-    heading?: ReactNode;
     /**
      * Whether or not keyboard navigation changes focus between tabs but doesn't activate it.
      */
@@ -74,7 +69,6 @@ export function InnerTabs({
     defaultSelectedKey,
     fluid,
     forwardedRef,
-    heading,
     id,
     manual,
     onSelectionChange,
@@ -142,14 +136,11 @@ export function InnerTabs({
                     variant: variant
                 }}
             >
-                <Div className="o-ui-tab-list-container">
-                    {heading && <Div className="o-ui-tab-heading">{heading}</Div>}
-                    <TabList
-                        aria-label={ariaLabel}
-                        autoFocus={autoFocus}
-                        tabs={tabs}
-                    />
-                </Div>
+                <TabList
+                    aria-label={ariaLabel}
+                    autoFocus={autoFocus}
+                    tabs={tabs}
+                />
                 <TabPanels panels={panels} />
             </TabsContext.Provider>
         </Box>
