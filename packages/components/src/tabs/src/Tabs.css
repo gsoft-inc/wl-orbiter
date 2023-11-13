@@ -27,6 +27,7 @@
 
 /* TAB LIST CONTAINER | ORIENTATION | VERTICAL */
 .o-ui-tabs-vertical .o-ui-tab-list-container {
+    display: flex;
     flex: 0 0 auto;
 }
 
