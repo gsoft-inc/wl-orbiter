@@ -32,10 +32,12 @@
     },
     "peerDependencies": {
         "react": "^18.0.0",
-        "react-dom": "^18.0.0"
+        "react-dom": "^18.0.0",
+        "@hopper-ui/styled-system": "*"
     },
     "dependencies": {
-        "@orbit-ui/transition-icons": "2.0.0",
+        "@hopper-ui/icons": "1.0.0",
+        "@hopper-ui/styled-system": "0.2.0",
         "@popperjs/core": "2.11.2",
         "react-is": "17.0.2",
         "text-mask-core": "5.1.2",
