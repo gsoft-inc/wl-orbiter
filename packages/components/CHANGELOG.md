@@ -1,5 +1,12 @@
 # @orbit-ui/transition-components
 
+## 2.2.1
+
+### Patch Changes
+
+- 6781a7049: Fix for heading small line height token
+- a4f2cc02e: Token update
+
 ## 2.2.0
 
 ### Minor Changes
