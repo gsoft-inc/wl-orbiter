@@ -1,5 +1,5 @@
 import { Box } from "../../box";
-import { CheckMajorIcon } from "../../icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
 import { CollectionItem } from "../../collection";
 import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactElement, ReactNode, forwardRef, useMemo } from "react";
 import {
@@ -117,12 +117,12 @@ export function InnerListboxOption({
         },
         "end-icon": {
             className: "o-ui-listbox-option-end-icon",
-            size: "sm"
+            size: "md"
         },
         icon: (iconElement: ReactElement, slotElements: SlotElements) => {
             return {
                 className: "o-ui-listbox-option-start-icon",
-                size: isNil(slotElements.description) ? "sm" : "lg"
+                size: isNil(slotElements.description) ? "sm" : "md"
             };
         },
         text: {
@@ -171,7 +171,7 @@ export function InnerListboxOption({
             {text}
             {description}
             {endIcon}
-            {selectionMode !== "none" && <CheckMajorIcon aria-hidden="true" className="o-ui-listbox-option-checkmark" />}
+            {selectionMode !== "none" && <CheckmarkIcon aria-hidden="true" className="o-ui-listbox-option-checkmark" size="sm" />}
         </Box>
     );
 

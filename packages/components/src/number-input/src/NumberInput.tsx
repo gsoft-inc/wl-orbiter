@@ -18,7 +18,7 @@ import {
 } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 
-import { ChevronMinorIcon } from "../../icons";
+import { AngleDownIcon, AngleUpIcon } from "@hopper-ui/icons";
 import { useFieldInputProps } from "../../field";
 import { useInputGroupProps } from "../../input-group";
 import { useToolbarProps } from "../../toolbar";
@@ -115,8 +115,8 @@ function Spinner({
                 tabIndex={-1}
                 type="button"
             >
-                <ChevronMinorIcon
-                    transform="rotate(270deg)"
+                <AngleUpIcon
+                    size="sm"
                 />
             </HtmlButton>
             <HtmlButton
@@ -128,8 +128,8 @@ function Spinner({
                 tabIndex={-1}
                 type="button"
             >
-                <ChevronMinorIcon
-                    transform="rotate(90deg)"
+                <AngleDownIcon
+                    size="sm"
                 />
             </HtmlButton>
         </Div>

@@ -1,6 +1,6 @@
-import { ChevronMinorIcon } from "../../icons";
+import { AngleDownIcon } from "@hopper-ui/icons";
 import { ComponentProps, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
+import { InternalProps, OmitInternalProps, omitProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
 import { useDisclosureContext } from "./DisclosureContext";
 
 const DefaultElement = "svg";
@@ -12,11 +12,13 @@ export interface InnerDisclosureArrowProps extends SlotProps, InternalProps, Sty
     open?: boolean;
 }
 
-export function InnerDisclosureArrow({
-    forwardedRef,
-    open,
-    ...rest
-}: InnerDisclosureArrowProps) {
+export function InnerDisclosureArrow(props: InnerDisclosureArrowProps) {
+    const {
+        forwardedRef,
+        open,
+        ...rest
+    } = omitProps(props, ["size"]);
+
     const disclosureContext = useDisclosureContext();
 
     const isOpen = open ?? disclosureContext?.isOpen;
@@ -26,7 +28,7 @@ export function InnerDisclosureArrow({
     }
 
     return (
-        <ChevronMinorIcon
+        <AngleDownIcon
             {...mergeProps(
                 rest,
                 {
@@ -34,7 +36,8 @@ export function InnerDisclosureArrow({
                         "o-ui-disclosure-arrow",
                         isOpen ? "up" : "down"
                     ),
-                    ref: forwardedRef
+                    ref: forwardedRef,
+                    size: "md"
                 }
             )}
         />

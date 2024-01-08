@@ -12,7 +12,7 @@ import {
     ThemeProvider
 } from "@components/styling";
 import { Box, BoxProps } from "@components/box";
-import { FileMajorIcon } from "@components/icons";
+import { NoteIcon } from "@hopper-ui/icons";
 import { Inline, Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -105,11 +105,11 @@ export const IconColors: ShareGateStory = {
     render: () => (
         <Stack>
             <Inline gap={0} wrap>
-                {Object.keys(IconColorMapping).map(x => <FileMajorIcon fill={x} key={x} />)}
+                {Object.keys(IconColorMapping).map(x => <NoteIcon fill={x} key={x} />)}
             </Inline>
             <ThemeProvider colorScheme="dark">
                 <Inline gap={0} wrap>
-                    {Object.keys(IconColorMapping).map(x => <FileMajorIcon fill={x} key={x} />)}
+                    {Object.keys(IconColorMapping).map(x => <NoteIcon fill={x} key={x} />)}
                 </Inline>
             </ThemeProvider>
         </Stack>

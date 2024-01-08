@@ -8,7 +8,7 @@ const CustomTrigger = forwardRef((props, ref) => {
             aria-label="View tasks"
             ref={ref}
         >
-            <VerticalDotsMajorIcon />
+            <KebabIcon />
         </IconButton>
     );
 });

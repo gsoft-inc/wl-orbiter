@@ -1,6 +1,6 @@
 import { Disclosure, useDisclosureContext } from "@components/disclosure";
 import { Flex, FlexProps, Stack } from "@components/layout";
-import { ArrowMajorIcon } from "@components/icons";
+import { ArrowDownIcon, ArrowRightIcon } from "@hopper-ui/icons";
 import { Button } from "@components/button";
 import { Div } from "@components/html";
 import { TextLinkAsButton } from "@components/link";
@@ -22,7 +22,7 @@ const Trigger = ({ children, ...rest }: FlexProps) => {
             alignItems="center"
         >
             {children}
-            <ArrowMajorIcon transform={isOpen ? "rotate(90deg)" : undefined} />
+            {isOpen ? <ArrowDownIcon /> : <ArrowRightIcon />}
         </Flex>
     );
 };

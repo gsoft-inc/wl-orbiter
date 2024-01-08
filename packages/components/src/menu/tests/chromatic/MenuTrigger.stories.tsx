@@ -5,7 +5,7 @@ import { DisclosureArrow } from "@components/disclosure";
 import { Divider } from "@components/divider";
 import { HtmlButton, HtmlButtonProps } from "@components/html";
 import { Text } from "@components/typography";
-import { VerticalDotsMajorIcon } from "@components/icons";
+import { KebabIcon } from "@components/icons";
 import { forwardRef } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -183,7 +183,7 @@ export const IconButtonTrigger: MenuTriggerStory = {
     render: () => (
         <MenuTrigger defaultOpen>
             <IconButton variant="secondary" aria-label="Open menu">
-                <VerticalDotsMajorIcon />
+                <KebabIcon />
             </IconButton>
             <Menu>
                 <Item key="earth">Earth</Item>

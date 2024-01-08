@@ -1,4 +1,4 @@
-import { PlaceholderMajorIcon } from "@components/icons";
+import { SparklesIcon } from "@hopper-ui/icons";
 import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
 import { ComponentInfo, Preview, Tagline } from "@stories/components";
 import { GalaxyLargeImage } from "./assets";
@@ -42,11 +42,11 @@ A text link can contain [icons](#).
         <Inline alignY="center">
             <TextLink size="sm" href="#">
                 <Text>Flight details</Text>
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </TextLink>
             <TextLink href="#">
                 <Text>Flight details</Text>
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </TextLink>
         </Inline>
     </Story>
@@ -59,7 +59,7 @@ A text link can contain [icons](#).
 <Preview>
     <Story name="start icon">
         <TextLink href="#">
-            <PlaceholderMajorIcon slot="start-icon" />
+            <SparklesIcon slot="start-icon" />
             <Text>Flight details</Text>
         </TextLink>
     </Story>
@@ -138,7 +138,7 @@ A link content can be a single icon.
 <Preview>
     <Story name="icon link">
         <Inline alignY="center">
-            <IconLink aria-label="Add" href="#"><PlaceholderMajorIcon /></IconLink>
+            <IconLink aria-label="Add" href="#"><SparklesIcon /></IconLink>
         </Inline>
     </Story>
 </Preview>
@@ -149,7 +149,7 @@ An icon link can behave like a button by using the `IconLinkAsButton` component.
 
 <Preview>
     <Story name="icon link button">
-        <IconLinkAsButton><PlaceholderMajorIcon /></IconLinkAsButton>
+        <IconLinkAsButton><SparklesIcon /></IconLinkAsButton>
     </Story>
 </Preview>
 

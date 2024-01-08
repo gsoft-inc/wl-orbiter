@@ -70,6 +70,12 @@ const spinnerSize = createSizeAdapter({
     "sm": "md",
     "md": "lg"
 });
+
+const iconSize = createSizeAdapter({
+    "xs": "sm",
+    "sm": "md",
+    "md": "md"
+});
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
 export function InnerIconButton(props: InnerIconButtonProps) {
@@ -123,7 +129,7 @@ export function InnerIconButton(props: InnerIconButtonProps) {
 
     const iconMarkup = augmentElement(icon, {
         className: "o-ui-button-icon",
-        size: sizeValue
+        size: iconSize(sizeValue)
     });
 
     const loadingMarkup = loading && (

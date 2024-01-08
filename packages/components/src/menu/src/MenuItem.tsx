@@ -1,5 +1,5 @@
 import { Box } from "../../box";
-import { CheckMajorIcon } from "../../icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
 import { CollectionItem } from "../../collection";
 import { ComponentProps, MouseEvent, ReactElement, ReactNode, forwardRef, useMemo } from "react";
 import { InteractionProps, InternalProps, OmitInternalProps, SlotElements, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots } from "../../shared";
@@ -72,12 +72,12 @@ export function InnerMenuItem({
         },
         "end-icon": {
             className: "o-ui-menu-item-end-icon",
-            size: "sm"
+            size: "md"
         },
         icon: (iconElement: ReactElement, slotElements: SlotElements) => {
             return {
                 className: "o-ui-menu-item-start-icon",
-                size: isNil(slotElements.description) ? "sm" : "lg"
+                size: isNil(slotElements.description) ? "md" : "md"
             };
         },
         text: {
@@ -124,7 +124,7 @@ export function InnerMenuItem({
             {text}
             {description}
             {endIcon}
-            {selectionMode !== "none" && <CheckMajorIcon aria-hidden="true" className="o-ui-menu-item-checkmark" />}
+            {selectionMode !== "none" && <CheckmarkIcon aria-hidden="true" className="o-ui-menu-item-checkmark" size="sm" />}
         </Box>
     );
 

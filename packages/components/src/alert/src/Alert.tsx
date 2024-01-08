@@ -2,7 +2,7 @@ import { AbstractDialogProps, Dialog, useDialogTriggerContext } from "../../dial
 import { Button, ButtonGroup } from "../../button";
 import { ComponentProps, MouseEvent, forwardRef, useMemo } from "react";
 import { Header } from "../../placeholders";
-import { AlertMajorIcon, WarningMajorIcon } from "../../icons";
+import { WarningIcon } from "@hopper-ui/icons";
 import { OmitInternalProps, isNil, isNilOrEmpty, mergeProps, useChainedEventCallback, useSlots } from "../../shared";
 
 const DefaultElement = "section";
@@ -103,13 +103,13 @@ export function InnerAlert({
 
     const warningIconMarkup = variant === "warning" && (
         <Header>
-            <WarningMajorIcon className="o-ui-alert-icon o-ui-alert-warning-icon" />
+            <WarningIcon className="o-ui-alert-icon o-ui-alert-warning-icon" />
         </Header>
     );
 
     const negativeIconMarkup = variant === "negative" && (
         <Header>
-            <AlertMajorIcon className="o-ui-alert-icon o-ui-alert-negative-icon" />
+            <WarningIcon className="o-ui-alert-icon o-ui-alert-negative-icon" />
         </Header>
     );
 

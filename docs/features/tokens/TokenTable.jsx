@@ -4,7 +4,7 @@ import { arrayOf, func, shape, string } from "prop-types";
 import { Div, Span } from "@components/html";
 import { Flex } from "@components/layout";
 import { DocsContext } from "@storybook/addon-docs";
-import { InfoCircleMajorIcon } from "@components/icons";
+import { InfoIcon } from "@hopper-ui/icons";
 import { Table } from "@stories/components";
 import { Text } from "@components/typography";
 import { useEffect, useContext, useRef, useState } from "react";
@@ -89,9 +89,9 @@ export function fontWeightRenderer(token) {
 
 export function iconRenderer(token) {
     if (token === "samoyed") {
-        return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><InfoCircleMajorIcon fill={token} /></Div>;
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start" backgroundColor="#272626"><InfoIcon fill={token} /></Div>;
     } else {
-        return <Div height={400} display="flex" alignItems="center" justifyContent="start"><InfoCircleMajorIcon fill={token} /></Div>;
+        return <Div height={400} display="flex" alignItems="center" justifyContent="start"><InfoIcon fill={token} /></Div>;
     }
 }
 

@@ -106,7 +106,7 @@ export function InnerRadio(props: InnerRadioProps) {
 
     const labelRef = useRef();
     const inputRef = useRef();
-    
+
     const sizeValue = useResponsiveValue(size);
 
     useAutoFocus(inputRef, {
@@ -156,7 +156,7 @@ export function InnerRadio(props: InnerRadioProps) {
         },
         icon: {
             className: "o-ui-radio-icon",
-            size: "sm"
+            size: sizeValue
         },
         text: {
             className: "o-ui-radio-label",

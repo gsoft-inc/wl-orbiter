@@ -1,4 +1,5 @@
-import { PlaceholderMajorIcon, IconList } from "@components/icons";
+import { IconList } from "@components/icons";
+import { SparklesIcon } from "@hopper-ui/icons";
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
 import { Dot } from "@components/dot";
@@ -30,35 +31,35 @@ export function createTagTestSuite(element, stories) {
             <Stack>
                 <Inline alignY="end">
                     <Tag size="sm" element={element}>
-                        <PlaceholderMajorIcon />
+                        <SparklesIcon />
                         <Text>Falcon 9</Text>
                     </Tag>
                     <Tag element={element}>
-                        <PlaceholderMajorIcon />
+                        <SparklesIcon />
                         <Text>Falcon 9</Text>
                     </Tag>
                 </Inline>
                 <Inline alignY="end">
                     <Tag size="sm" element={element}>
                         <IconList>
-                            <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
                         </IconList>
                         <Text>Falcon 9</Text>
                     </Tag>
                     <Tag element={element}>
                         <IconList>
-                            <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
                         </IconList>
                         <Text>Falcon 9</Text>
                     </Tag>
                 </Inline>
                 <Tag fluid element={element}>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>Falcon 9</Text>
                 </Tag>
                 <Div width="10%">
                     <Tag fluid element={element}>
-                        <PlaceholderMajorIcon />
+                        <SparklesIcon />
                         <Text>Falcon 9</Text>
                     </Tag>
                 </Div>
@@ -66,42 +67,42 @@ export function createTagTestSuite(element, stories) {
                     <Tag size="sm" element={element}>
                         <Text>Falcon 9</Text>
                         <IconList slot="end-icon">
-                            <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
                         </IconList>
                     </Tag>
                     <Tag element={element}>
                         <Text>Falcon 9</Text>
                         <IconList slot="end-icon">
-                            <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
                         </IconList>
                     </Tag>
                 </Inline>
                 <Tag fluid element={element}>
                     <Text>Falcon 9</Text>
                     <IconList slot="end-icon">
-                        <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                        <SparklesIcon /><SparklesIcon /><SparklesIcon />
                     </IconList>
                 </Tag>
                 <Div width="10%">
                     <Tag fluid element={element}>
                         <Text>Falcon 9</Text>
                         <IconList slot="end-icon">
-                            <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
                         </IconList>
                     </Tag>
                 </Div>
                 <Tag element={element}>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>Falcon 9</Text>
                     <IconList slot="end-icon">
-                        <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                        <SparklesIcon /><SparklesIcon /><SparklesIcon />
                     </IconList>
                 </Tag>
                 <Tag fluid element={element}>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>Falcon 9</Text>
                     <IconList slot="end-icon">
-                        <PlaceholderMajorIcon /><PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                        <SparklesIcon /><SparklesIcon /><SparklesIcon />
                     </IconList>
                 </Tag>
             </Stack>
@@ -165,7 +166,7 @@ export function createTagTestSuite(element, stories) {
                     <Text>Falcon 9</Text>
                 </Tag>
                 <Tag size="sm" fluid element={element}>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>Falcon 9</Text>
                 </Tag>
                 <Tag fluid element={element}>
@@ -176,7 +177,7 @@ export function createTagTestSuite(element, stories) {
                     <Text>Falcon 9</Text>
                 </Tag>
                 <Tag fluid element={element}>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>Falcon 9</Text>
                 </Tag>
                 <Div width="10%">
@@ -202,11 +203,11 @@ export function createTagTestSuite(element, stories) {
                         </Inline>
                         <Inline>
                             <Tag size="sm" fluid element={element}>
-                                <PlaceholderMajorIcon />
+                                <SparklesIcon />
                                 <Text>Falcon 9</Text>
                             </Tag>
                             <Tag fluid element={element}>
-                                <PlaceholderMajorIcon />
+                                <SparklesIcon />
                                 <Text>Falcon 9</Text>
                             </Tag>
                         </Inline>
@@ -267,7 +268,7 @@ export function createTagTestSuite(element, stories) {
                     </Tag>
                     <Tag onRemove={() => {}} element={element} validationState="invalid">
                         Falcon 9
-                    </Tag> 
+                    </Tag>
                 </Inline>
                 <Tag fluid onRemove={() => {}} element={element} validationState="invalid">
                         Falcon 9
