@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 2.2.2
+
+### Patch Changes
+
+- 388522eeb: Added missing token for neutral surface active color.
+
 ## 2.2.1
 
 ### Patch Changes
