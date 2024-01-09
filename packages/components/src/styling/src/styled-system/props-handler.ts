@@ -307,6 +307,7 @@ export const BackgroundColorAliases = {
     "neutral-strong": "neutral-surface-strong",
     "neutral-hover": "neutral-surface-hover",
     "neutral-weak-hover": "neutral-surface-weak-hover",
+    "neutral-weak-active": "neutral-surface-weak-active",
     "neutral-weakest": "neutral-surface-weakest",
     "warning": "warning-surface",
     "warning-strong": "warning-surface-strong",
