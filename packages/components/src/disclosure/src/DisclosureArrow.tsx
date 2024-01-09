@@ -2,7 +2,7 @@ import { AngleDownIcon } from "@hopper-ui/icons";
 import { ComponentProps, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, omitProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
 import { useDisclosureContext } from "./DisclosureContext";
-import { useStyledSystem } from "@components/styling";
+import { useStyledSystem } from "../../styling";
 
 const DefaultElement = "svg";
 
