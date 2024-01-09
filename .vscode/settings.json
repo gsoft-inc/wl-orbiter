@@ -2,8 +2,8 @@
     "editor.minimap.enabled": false,
     "editor.wordWrap": "off",
     "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.organizeImports": "never"
+        "source.fixAll": true,
+        "source.organizeImports": false
     },
     "editor.formatOnSave": true,
     "[html]": {
