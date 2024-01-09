@@ -2,6 +2,7 @@ import { AngleDownIcon } from "@hopper-ui/icons";
 import { ComponentProps, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, omitProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
 import { useDisclosureContext } from "./DisclosureContext";
+import { useStyledSystem } from "@components/styling";
 
 const DefaultElement = "svg";
 
@@ -17,8 +18,7 @@ export function InnerDisclosureArrow(props: InnerDisclosureArrowProps) {
         forwardedRef,
         open,
         ...rest
-    } = omitProps(props, ["size"]);
-
+    } = omitProps(useStyledSystem(props), ["size"]);
     const disclosureContext = useDisclosureContext();
 
     const isOpen = open ?? disclosureContext?.isOpen;
@@ -38,7 +38,7 @@ export function InnerDisclosureArrow(props: InnerDisclosureArrowProps) {
                     ),
                     ref: forwardedRef,
                     size: "md"
-                }
+                } as const
             )}
         />
     );
