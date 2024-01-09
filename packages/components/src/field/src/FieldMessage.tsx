@@ -1,6 +1,7 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
 import { InternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared";
 import { ResponsiveProp, StyleProvider, useResponsiveValue } from "../../styling";
+import { IconContext } from "@hopper-ui/icons";
 import { Text } from "../../typography";
 
 export const FieldMessageDefaultElement = "div";
@@ -90,7 +91,9 @@ export const FieldMessage = forwardRef<any, InnerFieldMessageProps>(({
                     }
                 }}
             >
-                {children}
+                <IconContext.Provider value={{ size: "sm" }}>
+                    {children}
+                </IconContext.Provider>
             </StyleProvider>
         </Text>
     );

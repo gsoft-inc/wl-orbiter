@@ -78,8 +78,7 @@ The following documentation is a brief overview of the tools and processes invol
 
 ### Adding or modifying an icon
 
-When adding a new icon in @orbit-ui/transition-icons, you want to make sure that the @orbit-ui/transition-components package is updated accordingly. You will need to generate
-a new react component for that icon using the `yarn generate-icons-components` command.
+Orbiter is using hopper-ui icon components, please refer to the [Hopper documentation](https://github.com/gsoft-inc/wl-hopper).
 
 ### Storybook
 

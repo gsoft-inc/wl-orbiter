@@ -5,7 +5,7 @@ import { DisclosureArrow } from "@components/disclosure";
 import { Divider } from "@components/divider";
 import { HtmlButton, HtmlButtonProps } from "@components/html";
 import { Text } from "@components/typography";
-import { KebabIcon } from "@components/icons";
+import { KebabIcon } from "@hopper-ui/icons";
 import { forwardRef } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
