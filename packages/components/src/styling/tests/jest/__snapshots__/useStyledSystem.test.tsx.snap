@@ -6181,6 +6181,13 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-neutral-surface-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-neutral-surface-weakest)",
       }
     }
@@ -8127,6 +8134,14 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-neutral-surface-weak-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-neutral-surface-weak-active)",
       }
     }
   />,
@@ -10269,6 +10284,14 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-neutral-surface-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-neutral-surface-weakest)",
       }
     }
@@ -12397,6 +12420,14 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-neutral-surface-weak-hover)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-neutral-surface-weak-active)",
       }
     }
   />,
