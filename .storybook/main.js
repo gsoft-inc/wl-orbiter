@@ -9,7 +9,6 @@ if (includeDocs) {
     stories = [
         // TODO simplify imports for any pkgs /docs/**/*.stories.mdx
         "../docs/**/*.stories.mdx",
-        "../packages/icons/docs/**/*.stories.mdx",
         "../packages/components/src/**/docs/**/*.stories.mdx"
     ];
 }

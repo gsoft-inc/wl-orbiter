@@ -1,4 +1,4 @@
-import { CheckIcon } from "@hopper-ui/icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
 import { Inline } from "@components/layout";
 import { ToggleIconButton } from "@components/button";
 import { createToggleIconButtonTestSuite } from "./createToggleIconButtonTestSuite";
@@ -17,8 +17,8 @@ createToggleIconButtonTestSuite(<ToggleIconButton variant="secondary" />, storie
 stories()
     .add("styling", () =>
         <Inline>
-            <ToggleIconButton border="sunken-treasure-600" variant="secondary" aria-label="Activate"><CheckIcon /></ToggleIconButton>
-            <ToggleIconButton className="bg-red" variant="secondary" aria-label="Activate"><CheckIcon /></ToggleIconButton>
-            <ToggleIconButton style={{ backgroundColor: "red" }} variant="secondary" aria-label="Activate"><CheckIcon /></ToggleIconButton>
+            <ToggleIconButton border="sunken-treasure-600" variant="secondary" aria-label="Activate"><CheckmarkIcon /></ToggleIconButton>
+            <ToggleIconButton className="bg-red" variant="secondary" aria-label="Activate"><CheckmarkIcon /></ToggleIconButton>
+            <ToggleIconButton style={{ backgroundColor: "red" }} variant="secondary" aria-label="Activate"><CheckmarkIcon /></ToggleIconButton>
         </Inline>
     );
