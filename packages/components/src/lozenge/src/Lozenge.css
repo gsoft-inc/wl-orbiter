@@ -78,7 +78,6 @@ svg.o-ui-lozenge-icon,
 }
 
 .o-ui-lozenge.o-ui-lozenge-positive.o-ui-lozenge-highlight .o-ui-lozenge-icon {
-    fill: currentColor;
     color: inherit;
 }
 
@@ -93,7 +92,6 @@ svg.o-ui-lozenge-icon,
 }
 
 .o-ui-lozenge.o-ui-lozenge-warning.o-ui-lozenge-highlight .o-ui-lozenge-icon {
-    fill: currentColor;
     color: inherit;
 }
 
@@ -108,6 +106,5 @@ svg.o-ui-lozenge-icon,
 }
 
 .o-ui-lozenge.o-ui-lozenge-negative.o-ui-lozenge-highlight .o-ui-lozenge-icon {
-    fill: currentColor;
     color: inherit;
 }

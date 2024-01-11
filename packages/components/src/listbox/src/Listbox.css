@@ -86,11 +86,13 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 }
 
 /* OPTION | ICONS */
-.o-ui-listbox-option .o-ui-icon {
+.o-ui-listbox-option .o-ui-listbox-option-start-icon,
+.o-ui-listbox-option .o-ui-listbox-option-end-icon {
     color: var(--o-ui-listbox-option-icon-color);
 }
 
-.o-ui-listbox-option .o-ui-icon:not(.o-ui-listbox-option-checkmark) {
+.o-ui-listbox-option .o-ui-listbox-option-start-icon:not(.o-ui-listbox-option-checkmark),
+.o-ui-listbox-option .o-ui-listbox-option-end-icon:not(.o-ui-listbox-option-checkmark) {
     width: var(--o-ui-listbox-option-icon-size);
     height: var(--o-ui-listbox-option-icon-size);
 }

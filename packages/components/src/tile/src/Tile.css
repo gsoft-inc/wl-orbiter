@@ -85,7 +85,6 @@
     z-index: 1;
     right: 0.5rem;
     top: 0.5rem;
-    fill: var(--hop-primary-surface-weak);
     opacity: 0;
     border-radius: var(--hop-shape-circle);
     background-color: var(--hop-neutral-icon);
