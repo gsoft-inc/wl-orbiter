@@ -340,7 +340,7 @@ export function InnerNumberInput(props: InnerNumberInputProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const numericInputValue = useMemo(() => toNumber(inputValueRef.current), [inputValueRef.current]);
 
-    const iconMarkup = useInputIcon(icon, { disabled });
+    const iconMarkup = useInputIcon(icon);
 
     const loadingMarkup = useInputSpinner(loading);
 
