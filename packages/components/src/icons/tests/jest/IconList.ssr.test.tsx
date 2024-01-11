@@ -1,7 +1,8 @@
 /**
  * @jest-environment node
  */
-import { CheckMajorIcon, IconList } from "@components/icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
+import { IconList } from "@components/icons";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 
@@ -11,8 +12,8 @@ test("can render on the server", () => {
     const renderOnServer = () =>
         renderToString(
             <IconList >
-                <CheckMajorIcon />
-                <CheckMajorIcon />
+                <CheckmarkIcon />
+                <CheckmarkIcon />
             </IconList>
         );
 

@@ -30,7 +30,7 @@
 }
 
 /* TRIGGER | ICONS */
-.o-ui-select-trigger .o-ui-icon {
+.o-ui-select-trigger .o-ui-select-icon {
     color: var(--o-ui-select-icon-color);
     height: 1rem;
     width: 1rem;

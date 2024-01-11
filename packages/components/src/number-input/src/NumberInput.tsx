@@ -116,6 +116,7 @@ function Spinner({
                 type="button"
             >
                 <AngleUpIcon
+                    className="o-ui-number-input-spinner-icon"
                     size="sm"
                 />
             </HtmlButton>
@@ -129,6 +130,7 @@ function Spinner({
                 type="button"
             >
                 <AngleDownIcon
+                    className="o-ui-number-input-spinner-icon"
                     size="sm"
                 />
             </HtmlButton>
