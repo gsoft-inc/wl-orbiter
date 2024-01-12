@@ -56,16 +56,6 @@ export const OpenOnFocus: TooltipStory = {
     )
 };
 
-export const IconTrigger: TooltipStory = {
-    storyName: "icon trigger",
-    render: () => (
-        <TooltipTrigger open>
-            <MailIcon />
-            <Tooltip>Man must rise above the Earth</Tooltip>
-        </TooltipTrigger>
-    )
-};
-
 export const IconButtonTrigger: TooltipStory = {
     storyName: "icon button trigger",
     render: () => (
