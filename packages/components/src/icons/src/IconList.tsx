@@ -13,6 +13,10 @@ export interface InnerIconListProps extends SlotProps, InternalProps, StyledComp
      * Whether or not the icons of the list should look disabled.
      */
     disabled?: boolean;
+    /**
+     * Size of the icons.
+     */
+    size?: string;
 }
 
 export function InnerIconList({
@@ -20,6 +24,7 @@ export function InnerIconList({
     children,
     disabled,
     forwardedRef,
+    size,
     ...rest
 }: InnerIconListProps) {
     return (
@@ -32,7 +37,8 @@ export function InnerIconList({
         >
             {Children.toArray(children).filter(x => x).map((x: ReactElement) => {
                 return cloneElement(x, {
-                    disabled
+                    disabled,
+                    size
                 });
             })}
         </Inline>
