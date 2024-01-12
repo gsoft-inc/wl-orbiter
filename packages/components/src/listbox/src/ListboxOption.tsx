@@ -1,13 +1,12 @@
 import { Box } from "../../box";
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { CollectionItem } from "../../collection";
-import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactElement, ReactNode, forwardRef, useMemo } from "react";
+import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, forwardRef, useMemo } from "react";
 import {
     InteractionProps,
     InternalProps,
     Keys,
     OmitInternalProps,
-    SlotElements,
     StyledComponentProps,
     cssModule,
     isNil,
