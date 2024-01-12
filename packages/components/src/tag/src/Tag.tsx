@@ -75,7 +75,7 @@ export function InnerTag(props: InnerTagProps) {
         props,
         fieldProps
     );
-    
+
     const fluidValue = useResponsiveValue(fluid);
     const sizeValue = useResponsiveValue(size);
 
@@ -100,10 +100,12 @@ export function InnerTag(props: InnerTagProps) {
             disabled
         },
         "end-icon": {
-            className: "o-ui-tag-end-icon"
+            className: "o-ui-tag-end-icon",
+            size: "sm"
         },
         icon: {
-            className: "o-ui-tag-start-icon"
+            className: "o-ui-tag-start-icon",
+            size: "sm"
         },
         text: {
             className: "o-ui-tag-text",
@@ -144,7 +146,7 @@ export function InnerTag(props: InnerTagProps) {
                 }
             )}
         >
-            
+
             {avatar}
             {icon}
             {dot}

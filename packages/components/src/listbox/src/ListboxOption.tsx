@@ -1,13 +1,12 @@
 import { Box } from "../../box";
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { CollectionItem } from "../../collection";
-import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactElement, ReactNode, forwardRef, useMemo } from "react";
+import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, forwardRef, useMemo } from "react";
 import {
     InteractionProps,
     InternalProps,
     Keys,
     OmitInternalProps,
-    SlotElements,
     StyledComponentProps,
     cssModule,
     isNil,
@@ -104,11 +103,9 @@ export function InnerListboxOption({
         _: {
             defaultWrapper: Text
         },
-        avatar: (avatarElement: ReactElement, slotElements: SlotElements) => {
-            return {
-                className: "o-ui-listbox-option-avatar",
-                size: isNil(slotElements.description) ? "sm" : "sm"
-            };
+        avatar: {
+            className: "o-ui-listbox-option-avatar",
+            size: "sm"
         },
         description: {
             className: "o-ui-listbox-option-description",
