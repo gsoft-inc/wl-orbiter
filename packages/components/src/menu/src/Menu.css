@@ -65,7 +65,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 }
 
 .o-ui-menu-item .o-ui-menu-item-start-icon:not(.o-ui-menu-item-checkmark),
-.o-ui-menu-item .o-ui-menu-item-end-icon:not(.o-ui-menu-item-checkmark) {
+.o-ui-menu-item svg.o-ui-menu-item-end-icon:not(.o-ui-menu-item-checkmark) {
     width: var(--o-ui-menu-item-icon-size);
     height: var(--o-ui-menu-item-icon-size);
 }

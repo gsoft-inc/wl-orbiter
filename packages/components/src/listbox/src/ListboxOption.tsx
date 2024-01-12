@@ -117,7 +117,7 @@ export function InnerListboxOption({
         },
         "end-icon": {
             className: "o-ui-listbox-option-end-icon",
-            size: "md"
+            size: "sm"
         },
         icon: (iconElement: ReactElement, slotElements: SlotElements) => {
             return {
@@ -134,6 +134,7 @@ export function InnerListboxOption({
 
     const labelId = text?.props?.id;
     const descriptionId = description?.props?.id;
+    console.log("endicon", endIcon);
 
     const optionMarkup = (
         <Box
