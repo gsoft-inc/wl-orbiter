@@ -104,11 +104,9 @@ export function InnerListboxOption({
         _: {
             defaultWrapper: Text
         },
-        avatar: (avatarElement: ReactElement, slotElements: SlotElements) => {
-            return {
-                className: "o-ui-listbox-option-avatar",
-                size: isNil(slotElements.description) ? "sm" : "sm"
-            };
+        avatar: {
+            className: "o-ui-listbox-option-avatar",
+            size: "sm"
         },
         description: {
             className: "o-ui-listbox-option-description",
