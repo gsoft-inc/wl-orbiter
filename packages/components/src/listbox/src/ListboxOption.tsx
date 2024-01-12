@@ -117,7 +117,7 @@ export function InnerListboxOption({
         },
         "end-icon": {
             className: "o-ui-listbox-option-end-icon",
-            size: "md"
+            size: "sm"
         },
         icon: (iconElement: ReactElement, slotElements: SlotElements) => {
             return {

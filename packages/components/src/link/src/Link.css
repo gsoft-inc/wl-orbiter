@@ -308,4 +308,5 @@ button.o-ui-link-hover {
 /* ICON LINK */
 .o-ui-icon-link {
     border-radius: var(--hop-shape-rounded-sm);
+    display: inline-flex;
 }
