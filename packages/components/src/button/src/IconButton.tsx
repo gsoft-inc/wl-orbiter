@@ -72,6 +72,7 @@ const spinnerSize = createSizeAdapter({
 });
 
 const iconSize = createSizeAdapter({
+    "2xs": "sm",
     "xs": "sm",
     "sm": "md",
     "md": "md"
