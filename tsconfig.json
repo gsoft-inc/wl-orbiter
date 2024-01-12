@@ -4,6 +4,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "noEmit": true,
+        "allowJs": true,
         "paths": {
             "@test-utils": ["tooling/test-utils"],
             "@components": ["packages/components/src"],
