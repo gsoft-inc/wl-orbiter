@@ -72,7 +72,7 @@ export function InnerMenuItem({
         },
         "end-icon": {
             className: "o-ui-menu-item-end-icon",
-            size: "md"
+            size: "sm"
         },
         icon: (iconElement: ReactElement, slotElements: SlotElements) => {
             return {
