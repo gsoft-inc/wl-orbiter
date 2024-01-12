@@ -62,7 +62,7 @@ export function InnerMenuItem({
         avatar: (avatarElement: ReactElement, slotElements: SlotElements) => {
             return {
                 className: "o-ui-menu-item-option-avatar",
-                size: isNil(slotElements.description) ? "xs" : "md"
+                size: isNil(slotElements.description) ? "sm" : "md"
             };
         },
         description: {
@@ -72,13 +72,11 @@ export function InnerMenuItem({
         },
         "end-icon": {
             className: "o-ui-menu-item-end-icon",
-            size: "sm"
+            size: "md"
         },
-        icon: (iconElement: ReactElement, slotElements: SlotElements) => {
-            return {
-                className: "o-ui-menu-item-start-icon",
-                size: isNil(slotElements.description) ? "md" : "md"
-            };
+        icon: {
+            className: "o-ui-menu-item-start-icon",
+            size: "md"
         },
         text: {
             className: "o-ui-menu-item-label",

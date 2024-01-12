@@ -7,7 +7,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
     --o-ui-listbox-border-size: 1px;
     --o-ui-listbox-option-height: 2rem;
     --o-ui-listbox-option-checkmark-size: 1rem;
-    --o-ui-listbox-option-icon-size: 1rem;
+    --o-ui-listbox-option-icon-size: 1.5rem;
     --o-ui-listbox-option-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-listbox-option-checkmark-size));
     --o-ui-listbox-option-description-color: var(--hop-neutral-text-weak);
     --o-ui-listbox-option-icon-color: var(--hop-neutral-icon);

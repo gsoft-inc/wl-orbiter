@@ -7,7 +7,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     --o-ui-menu-border-size: 1px;
     --o-ui-menu-item-height: 2rem;
     --o-ui-menu-item-checkmark-size: 1rem;
-    --o-ui-menu-item-icon-size: 1rem;
+    --o-ui-menu-item-icon-size: 1.5rem;
     --o-ui-menu-item-padding-right: calc(var(--hop-space-inset-lg) + var(--o-ui-menu-item-checkmark-size));
     --o-ui-menu-item-description-color: var(--hop-neutral-text-weak);
     --o-ui-menu-item-icon-color: var(--hop-neutral-icon);
@@ -64,7 +64,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
     color: var(--o-ui-menu-item-icon-color);
 }
 
-.o-ui-menu-item .o-ui-menu-item-start-icon:not(.o-ui-menu-item-checkmark),
+.o-ui-menu-item svg.o-ui-menu-item-start-icon:not(.o-ui-menu-item-checkmark),
 .o-ui-menu-item svg.o-ui-menu-item-end-icon:not(.o-ui-menu-item-checkmark) {
     width: var(--o-ui-menu-item-icon-size);
     height: var(--o-ui-menu-item-icon-size);
