@@ -1579,10 +1579,10 @@
     clsx "2.0.0"
     react-aria-components "1.0.0-rc.0"
 
-"@hopper-ui/styled-system@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/styled-system/-/styled-system-0.2.3.tgz#685dec7d3fe21cb272373dbfb7579ba462a62911"
-  integrity sha512-IlR712PYSzb/oB9GQ/7t3bRJlgKmTXiiVo7J9oSG5E5Y2r8kPgMjbpZ1DuNt6WcTajgCt72uvIu6bupiPk7jtA==
+"@hopper-ui/styled-system@0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/styled-system/-/styled-system-0.2.4.tgz#8c9a71bbaf7a3411888d4e4ffa368b66a3d79334"
+  integrity sha512-kD5xPsHY4vR6Yu/qjI6rNiKxifqzBIDhReo0Kqg7yLIWfvq36n+Fx6YTeacZpnvwXev68pi6IH6gCP7Pqu/4Fw==
   dependencies:
     clsx "2.0.0"
     react-aria "3.30.0"
@@ -3097,6 +3097,11 @@
   integrity sha512-LUewfj94xCMH2rbD5YJ+6AQ4AVjFYTgpp6rboWM5T7N3IsIF65SBEOVcYMGAEzO/kKNiNaW4LoWtoThOhH06gw==
   dependencies:
     "@octokit/openapi-types" "^16.0.0"
+
+"@orbit-ui/transition-icons@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@orbit-ui/transition-icons/-/transition-icons-2.0.0.tgz#da93d3076b779906a976c9178ad37f2d2f970eed"
+  integrity sha512-KohAgfaEs/iQoyMdJouJoUZ7roZ4UFuPeCYYIZ1cJgSUBMcXLV3sBEdzeJfY39ZHVYmOpb3anIWvXiFbgBXOHA==
 
 "@parcel/watcher@2.0.4":
   version "2.0.4"
