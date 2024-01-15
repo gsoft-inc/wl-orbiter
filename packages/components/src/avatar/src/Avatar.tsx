@@ -105,6 +105,8 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
         return O365InitialsColorsForName[hashCode % O365InitialsColorsForName.length];
     }, [name]);
 
+    const initialValue = size === "xs" ? initials.at(0) : initials;
+
     return (
         <AvatarText
             aria-label={ariaLabel ?? name}
@@ -114,7 +116,7 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
                 backgroundColor: color
             }}
         >
-            {initials}
+            {initialValue}
         </AvatarText>
     );
 }
