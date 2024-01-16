@@ -1570,10 +1570,10 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@hopper-ui/icons@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/icons/-/icons-1.0.2.tgz#c3ecfaffb81507e1fd18b9b264832a393588d568"
-  integrity sha512-8s6cVfVikvBLUWyZoAwavybcwuPUwZnGK1xIJ5BA7OJDgGEOHnjsPQX/OBC2DvFjMhyzFTARcxew66mLZ4GOww==
+"@hopper-ui/icons@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/icons/-/icons-1.0.3.tgz#c8f361caf2dbc574d17c5e8a685ea8324d57e6e9"
+  integrity sha512-fdTBSEYZHZFcfd4WTrGhmBE23+smyh/r9p/MjTfTBVax9w55HAahY4pFismVEfIf3VdLS1Czu/f+ODsdK/+zVg==
   dependencies:
     "@react-aria/utils" "3.22.0"
     clsx "2.0.0"
