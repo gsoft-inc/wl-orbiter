@@ -1,4 +1,4 @@
-import { AddMajorIcon } from "@components/icons";
+import { AddIcon } from "@hopper-ui/icons";
 import { IconButtonAsLink } from "@components/button";
 import { Inline } from "@components/layout";
 import { createIconButtonTestSuite } from "./createIconButtonTestSuite";
@@ -23,8 +23,8 @@ createIconButtonTestSuite(<IconButtonAsLink variant="negative" />, stories("/neg
 stories()
     .add("styling", () =>
         <Inline>
-            <IconButtonAsLink border="sunken-treasure-600" variant="secondary"><AddMajorIcon /></IconButtonAsLink>
-            <IconButtonAsLink className="bg-red" variant="secondary"><AddMajorIcon /></IconButtonAsLink>
-            <IconButtonAsLink style={{ backgroundColor: "red" }} variant="secondary"><AddMajorIcon /></IconButtonAsLink>
+            <IconButtonAsLink border="sunken-treasure-600" variant="secondary"><AddIcon /></IconButtonAsLink>
+            <IconButtonAsLink className="bg-red" variant="secondary"><AddIcon /></IconButtonAsLink>
+            <IconButtonAsLink style={{ backgroundColor: "red" }} variant="secondary"><AddIcon /></IconButtonAsLink>
         </Inline>
     );

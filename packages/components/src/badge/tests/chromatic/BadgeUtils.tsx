@@ -1,6 +1,6 @@
 import { Badge, BadgeProps } from "@components/badge";
 import { Div } from "@components/html";
-import { EmailMajorIcon } from "@components/icons";
+import { MailIcon } from "@hopper-ui/icons";
 import { PropsWithChildren } from "react";
 
 type BadgeUtilsProps = PropsWithChildren<Omit<BadgeProps, "children">>;
@@ -33,7 +33,7 @@ export function IconBadge({ children, ...rest }: BadgeUtilsProps) {
             overlap="icon"
         >
             {children}
-            <EmailMajorIcon />
+            <MailIcon />
         </Badge>
     );
 }

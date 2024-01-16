@@ -1,7 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
 import { Dot } from "@components/dot";
-import { HelpCircleMajorIcon, LightbulbMajorIcon, NotificationMajorIcon } from "@components/icons";
+import { QuestionIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Inline, Stack } from "@components/layout";
 import { Item } from "@components/collection";
 import { TagList } from "@components/tag";
@@ -38,15 +38,15 @@ export const ItemWithIicon: TagListStory = {
     render: () => (
         <TagList>
             <Item key="mercury">
-                <LightbulbMajorIcon />
+                <LightbulbIcon />
                 <Text>Mercury Program</Text>
             </Item>
             <Item key="gemini">
-                <NotificationMajorIcon />
+                <NotificationIcon />
                 <Text>Gemini Program</Text>
             </Item>
             <Item key="apollo">
-                <HelpCircleMajorIcon />
+                <QuestionIcon />
                 <Text>Apollo Program</Text>
             </Item>
         </TagList>

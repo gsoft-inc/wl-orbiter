@@ -14,7 +14,7 @@ import {
 } from "../../shared";
 
 import { CrossButton } from "../../button";
-import { MagnifierMajorIcon } from "../../icons";
+import { SearchIcon } from "@hopper-ui/icons";
 import { useInputGroupTextInputProps } from "../../input-group";
 
 const DefaultElement = "input";
@@ -107,7 +107,7 @@ export function InnerSearchInput(props: InnerSearchInputProps) {
                     autoComplete: "off",
                     autoCorrect: "off",
                     button: clearButtonMarkup || undefined,
-                    icon: isUndefined(icon) ? <MagnifierMajorIcon /> : icon,
+                    icon: isUndefined(icon) ? <SearchIcon /> : icon,
                     onChange: handleChange,
                     onKeyDown: handleKeyDown,
                     ref: inputRef,

@@ -1,5 +1,5 @@
 import { IconButton, Button } from "@components/button";
-import { EmailMajorIcon } from "@components/icons";
+import { MailIcon } from "@hopper-ui/icons";
 import { Image } from "@components/image";
 import { Launch } from "./assets";
 import { TextLink } from "@components/link";
@@ -56,22 +56,12 @@ export const OpenOnFocus: TooltipStory = {
     )
 };
 
-export const IconTrigger: TooltipStory = {
-    storyName: "icon trigger",
-    render: () => (
-        <TooltipTrigger open>
-            <EmailMajorIcon />
-            <Tooltip>Man must rise above the Earth</Tooltip>
-        </TooltipTrigger>
-    )
-};
-
 export const IconButtonTrigger: TooltipStory = {
     storyName: "icon button trigger",
     render: () => (
         <TooltipTrigger open>
             <IconButton variant="secondary" aria-label="Email">
-                <EmailMajorIcon />
+                <MailIcon />
             </IconButton>
             <Tooltip>Man must rise above the Earth</Tooltip>
         </TooltipTrigger>

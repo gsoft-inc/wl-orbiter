@@ -1,4 +1,4 @@
-import { AddMajorIcon } from "@components/icons";
+import { AddIcon } from "@hopper-ui/icons";
 import { ToggleIconButton } from "@components/button";
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
@@ -17,7 +17,7 @@ test("call onChange when the button is selected", async () => {
             aria-label="Add"
             data-testid="toggle-icon-button"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </ToggleIconButton>
     );
 
@@ -38,7 +38,7 @@ test("call onChange when the button is unselected", async () => {
             aria-label="Add"
             data-testid="toggle-icon-button"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </ToggleIconButton>
     );
 
@@ -62,7 +62,7 @@ test("ref is a DOM element", async () => {
             value="any"
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </ToggleIconButton>
     );
 
@@ -84,7 +84,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
             value="any"
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </ToggleIconButton>
     );
 
@@ -104,7 +104,7 @@ test("set ref once", async () => {
             value="any"
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </ToggleIconButton>
     );
 

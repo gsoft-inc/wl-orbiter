@@ -1,7 +1,7 @@
 import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
 import { Button, IconButton } from "@components/button"
 import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { PlaceholderMajorIcon } from "@components/icons";
+import { SparklesIcon } from "@hopper-ui/icons";
 import { Inline } from "@components/layout";
 import { InnerTooltip, InnerTooltipTrigger, Tooltip, TooltipTrigger } from "@components/tooltip";
 
@@ -54,13 +54,9 @@ A tooltip trigger can be anything.
         <Inline gap={480} alignY="center">
             <TooltipTrigger>
                 <IconButton variant="secondary" aria-label="An awesome quote">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                 </IconButton>
                 <Tooltip>Earth is a small town with many neighborhoods in a very big universe.</Tooltip>
-            </TooltipTrigger>
-            <TooltipTrigger>
-                <PlaceholderMajorIcon />
-                <Tooltip>Send an email to the orbiteral space station.</Tooltip>
             </TooltipTrigger>
         </Inline>
     </Story>

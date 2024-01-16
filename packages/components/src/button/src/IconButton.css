@@ -47,14 +47,12 @@
 
 /* INHERIT */
 .o-ui-button-inherit.o-ui-button-solid .o-ui-button-icon {
-    fill: var(--hop-samoyed);
+    color: var(--hop-samoyed);
     opacity: .9;
 }
 
-.o-ui-icon-button .o-ui-button-icon,
-.o-ui-icon-button .o-ui-button-icon .o-ui-icon {
+.o-ui-icon-button .o-ui-button-icon {
     color: inherit;
-    fill: currentColor;
 }
 
 /* ICON */
@@ -64,6 +62,6 @@
 }
 
 .o-ui-button-md.o-ui-icon-button .o-ui-button-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }

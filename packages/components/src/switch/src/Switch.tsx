@@ -139,7 +139,8 @@ export function InnerSwitch(props: InnerSwitchProps) {
             variant: "divider"
         },
         icon: {
-            className: "o-ui-switch-icon"
+            className: "o-ui-switch-icon",
+            size: sizeValue
         },
         text: {
             className: "o-ui-switch-label",

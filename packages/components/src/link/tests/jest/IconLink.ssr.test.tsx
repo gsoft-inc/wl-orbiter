@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { AddMajorIcon } from "@components/icons";
+import { AddIcon } from "@hopper-ui/icons";
 import { IconLink } from "@components/link";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
@@ -12,7 +12,7 @@ test("can render on the server", () => {
     const renderOnServer = () =>
         renderToString(
             <IconLink external href="#" aria-label="Add">
-                <AddMajorIcon />
+                <AddIcon />
             </IconLink>
         );
 

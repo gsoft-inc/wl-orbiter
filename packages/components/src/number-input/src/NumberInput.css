@@ -69,8 +69,8 @@
     visibility: visible;
 }
 
-.o-ui-number-input-spinner .o-ui-icon {
-    fill: var(--hop-neutral-icon);
+.o-ui-number-input-spinner .o-ui-number-input-spinner-icon {
+    color: var(--hop-neutral-icon);
     align-self: center;
     width: 1rem;
     height: 1rem;
@@ -82,9 +82,9 @@
     background-color: var(--hop-neutral-surface-hover);
 }
 
-.o-ui-number-input-spinner-increment:active:focus .o-ui-icon,
-.o-ui-number-input-spinner-decrement:active:focus .o-ui-icon {
-    fill: var(--hop-neutral-icon-hover);
+.o-ui-number-input-spinner-increment:active:focus .o-ui-number-input-spinner-icon,
+.o-ui-number-input-spinner-decrement:active:focus .o-ui-number-input-spinner-icon {
+    color: var(--hop-neutral-icon-hover);
 }
 
 /* SPINNER | HOVER */
@@ -93,9 +93,9 @@
     background-color: var(--hop-neutral-surface-hover);
 }
 
-.o-ui-number-input-spinner-increment:hover .o-ui-icon,
-.o-ui-number-input-spinner-decrement:hover .o-ui-icon {
-    fill: var(--hop-neutral-icon-hover);
+.o-ui-number-input-spinner-increment:hover .o-ui-number-input-spinner-icon,
+.o-ui-number-input-spinner-decrement:hover .o-ui-number-input-spinner-icon {
+    color: var(--hop-neutral-icon-hover);
 }
 
 /* SPINNER | DISABLED */
@@ -104,9 +104,9 @@
     background-color: var(--hop-neutral-surface-disabled);
 }
 
-.o-ui-number-input-spinner-increment:disabled .o-ui-icon,
-.o-ui-number-input-spinner-decrement:disabled .o-ui-icon {
-    fill: var(--hop-neutral-icon-disabled);
+.o-ui-number-input-spinner-increment:disabled .o-ui-number-input-spinner-icon,
+.o-ui-number-input-spinner-decrement:disabled .o-ui-number-input-spinner-icon {
+    color: var(--hop-neutral-icon-disabled);
 }
 
 /* SPINNER | LOADING */

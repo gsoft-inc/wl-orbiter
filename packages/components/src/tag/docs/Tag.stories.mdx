@@ -1,5 +1,5 @@
 import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { PlaceholderMajorIcon, UfoMajorIcon, TelescopeMajorIcon, RocketMajorIcon } from "@components/icons";
+import { CatIcon, LightbulbIcon, NotificationIcon, RocketIcon, SparklesIcon } from "@hopper-ui/icons";
 import { ComponentInfo, Preview, Tagline } from "@stories/components";
 import { Counter } from "@components/counter";
 import { Dot } from "@components/dot";
@@ -77,7 +77,7 @@ A tag can contain [icons](?path=/docs/icon-gallery--page). An icon is used when 
 <Preview>
     <Story name="icon">
         <Tag>
-            <PlaceholderMajorIcon />
+            <SparklesIcon />
             <Text>Falcon 9</Text>
         </Tag>
     </Story>
@@ -92,9 +92,9 @@ A tag can contain [icons](?path=/docs/icon-gallery--page). An icon is used when 
         <Tag>
             <Text>Falcon 9</Text>
             <IconList slot="end-icon">
-                <UfoMajorIcon />
-                <TelescopeMajorIcon />
-                <RocketMajorIcon />
+                <CatIcon />
+                <SparklesIcon />
+                <RocketIcon />
             </IconList>
         </Tag>
     </Story>
@@ -156,7 +156,7 @@ A tag can take the width of its container.
 <Preview>
     <Story name="fluid">
         <Tag fluid>
-            <PlaceholderMajorIcon />
+            <SparklesIcon />
             <Text>Falcon 9</Text>
             <Counter>6</Counter>
         </Tag>
@@ -179,7 +179,7 @@ A tag can display a validation state.
 
 <Preview>
     <Story name="validation">
-        <Inline alignY="end">    
+        <Inline alignY="end">
             <Tag validationState="invalid" onRemove={() => {}}>Falcon 9</Tag>
         </Inline>
     </Story>
@@ -264,10 +264,10 @@ A list of tags can be rendered dynamically.
     <Story name="tag list dynamic items">
         <TagList>
             {[
-                { key: "mercury", value: "Mercury Program", icon: <PlaceholderMajorIcon /> },
+                { key: "mercury", value: "Mercury Program", icon: <SparklesIcon /> },
                 { key: "gemini", value: "Gemini Program" },
-                { key: "apollo", value: "Apollo Program", icon: <NotificationMajorIcon /> },
-                { key: "artemis", value: "Artemis Program", icon: <LightbulbMajorIcon /> }
+                { key: "apollo", value: "Apollo Program", icon: <NotificationIcon /> },
+                { key: "artemis", value: "Artemis Program", icon: <LightbulbIcon /> }
             ].map(x => (
                 <Item key={x.key}>
                     {x.icon}
@@ -306,6 +306,3 @@ The following example shows how a tag list can be composed with one of Orbiter's
 />
 
 <ArgsTable of={InnerTagList} sort="alpha" />
-
-
-

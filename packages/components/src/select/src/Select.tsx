@@ -184,7 +184,7 @@ export function InnerSelect(props: InnerSelectProps) {
 
     const iconMarkup = icon && augmentElement(icon, {
         className: "o-ui-select-icon",
-        size: "sm"
+        size: "md"
     });
 
     const selectedIconMarkup = selectedItem?.icon && augmentElement(selectedItem.icon, {

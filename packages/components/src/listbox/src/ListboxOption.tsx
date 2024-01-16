@@ -1,13 +1,12 @@
 import { Box } from "../../box";
-import { CheckMajorIcon } from "../../icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
 import { CollectionItem } from "../../collection";
-import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactElement, ReactNode, forwardRef, useMemo } from "react";
+import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, forwardRef, useMemo } from "react";
 import {
     InteractionProps,
     InternalProps,
     Keys,
     OmitInternalProps,
-    SlotElements,
     StyledComponentProps,
     cssModule,
     isNil,
@@ -104,11 +103,9 @@ export function InnerListboxOption({
         _: {
             defaultWrapper: Text
         },
-        avatar: (avatarElement: ReactElement, slotElements: SlotElements) => {
-            return {
-                className: "o-ui-listbox-option-avatar",
-                size: isNil(slotElements.description) ? "xs" : "sm"
-            };
+        avatar: {
+            className: "o-ui-listbox-option-avatar",
+            size: "sm"
         },
         description: {
             className: "o-ui-listbox-option-description",
@@ -117,13 +114,11 @@ export function InnerListboxOption({
         },
         "end-icon": {
             className: "o-ui-listbox-option-end-icon",
-            size: "sm"
+            size: "md"
         },
-        icon: (iconElement: ReactElement, slotElements: SlotElements) => {
-            return {
-                className: "o-ui-listbox-option-start-icon",
-                size: isNil(slotElements.description) ? "sm" : "lg"
-            };
+        icon: {
+            className: "o-ui-listbox-option-start-icon",
+            size: "md"
         },
         text: {
             className: "o-ui-listbox-option-label",
@@ -134,6 +129,7 @@ export function InnerListboxOption({
 
     const labelId = text?.props?.id;
     const descriptionId = description?.props?.id;
+    console.log("endicon", endIcon);
 
     const optionMarkup = (
         <Box
@@ -171,7 +167,7 @@ export function InnerListboxOption({
             {text}
             {description}
             {endIcon}
-            {selectionMode !== "none" && <CheckMajorIcon aria-hidden="true" className="o-ui-listbox-option-checkmark" />}
+            {selectionMode !== "none" && <CheckmarkIcon aria-hidden="true" className="o-ui-listbox-option-checkmark" size="sm" />}
         </Box>
     );
 

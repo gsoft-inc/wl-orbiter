@@ -1,4 +1,4 @@
-import { ArrowMajorIcon, InfoCircleMajorIcon } from "@components/icons";
+import { ArrowRightIcon, InfoIcon } from "@hopper-ui/icons";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
 import { Text } from "@components/typography";
@@ -31,17 +31,17 @@ export function createTextLinkTestSuite(element, stories) {
                 <Inline alignY="end">
                     <TextLink size="sm" href="#" element={element}>
                         <Text>Flight details</Text>
-                        <ArrowMajorIcon />
+                        <ArrowRightIcon />
                     </TextLink>
                     <TextLink href="#" element={element}>
                         <Text>Flight details</Text>
-                        <ArrowMajorIcon />
+                        <ArrowRightIcon />
                     </TextLink>
                 </Inline>
                 <Div width="400px">
                     <TextLink href="#" element={element}>
                         <Text>NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbiter and the surface of the Moon as part of NASA’s Artemis program.</Text>
-                        <ArrowMajorIcon />
+                        <ArrowRightIcon />
                     </TextLink>
                 </Div>
             </Stack>
@@ -50,17 +50,17 @@ export function createTextLinkTestSuite(element, stories) {
             <Stack>
                 <Inline alignY="end">
                     <TextLink size="sm" href="#" element={element}>
-                        <InfoCircleMajorIcon slot="start-icon" />
+                        <InfoIcon slot="start-icon" />
                         <Text>Flight details</Text>
                     </TextLink>
                     <TextLink href="#" element={element}>
-                        <InfoCircleMajorIcon slot="start-icon" />
+                        <InfoIcon slot="start-icon" />
                         <Text>Flight details</Text>
                     </TextLink>
                 </Inline>
                 <Div width="400px">
                     <TextLink href="#" element={element}>
-                        <InfoCircleMajorIcon slot="start-icon" />
+                        <InfoIcon slot="start-icon" />
                         <Text>NASA selected SpaceX to develop a lunar optimized Starship to transport crew between lunar orbiter and the surface of the Moon as part of NASA’s Artemis program.</Text>
                     </TextLink>
                 </Div>

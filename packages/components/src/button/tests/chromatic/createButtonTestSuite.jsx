@@ -1,6 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
-import { IconList, SignoutMajorIcon } from "@components/icons";
+import { IconList } from "@components/icons";
+import { StartOverIcon } from "@hopper-ui/icons";
 import { Inline, Stack } from "@components/layout";
 import { Text } from "@components/typography";
 import { cloneElement } from "react";
@@ -36,47 +37,47 @@ export function createButtonTestSuite(element, stories) {
             <Stack>
                 <Inline alignY="end">
                     <Button size="sm" element={element}>
-                        <SignoutMajorIcon />
+                        <StartOverIcon />
                         <Text>Button</Text>
                     </Button>
                     <Button element={element}>
-                        <SignoutMajorIcon />
+                        <StartOverIcon />
                         <Text>Button</Text>
                     </Button>
                 </Inline>
                 <Inline alignY="end">
                     <Button size="sm" element={element}>
                         <IconList>
-                            <SignoutMajorIcon /><SignoutMajorIcon /><SignoutMajorIcon />
+                            <StartOverIcon /><StartOverIcon /><StartOverIcon />
                         </IconList>
                         <Text>Button</Text>
                     </Button>
                     <Button element={element}>
                         <IconList>
-                            <SignoutMajorIcon /><SignoutMajorIcon /><SignoutMajorIcon />
+                            <StartOverIcon /><StartOverIcon /><StartOverIcon />
                         </IconList>
                         <Text>Button</Text>
                     </Button>
                 </Inline>
                 <Inline alignY="end">
                     <Button loading size="sm" element={element}>
-                        <SignoutMajorIcon />
+                        <StartOverIcon />
                         <Text>Button</Text>
                     </Button>
                     <Button loading element={element}>
-                        <SignoutMajorIcon />
+                        <StartOverIcon />
                         <Text>Button</Text>
                     </Button>
                 </Inline>
                 <Div>
                     <Button disabled element={element}>
-                        <SignoutMajorIcon />
+                        <StartOverIcon />
                         <Text>Button</Text>
                     </Button>
                 </Div>
                 <Stack>
                     <Button fluid element={element}>
-                        <SignoutMajorIcon />
+                        <StartOverIcon />
                         <Text>Button</Text>
                     </Button>
                     <Button fluid element={element}>
@@ -90,47 +91,47 @@ export function createButtonTestSuite(element, stories) {
                 <Inline alignY="end">
                     <Button size="sm" element={element}>
                         <Text>Button</Text>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                     <Button element={element}>
                         <Text>Button</Text>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                 </Inline>
                 <Inline alignY="end">
                     <Button size="sm" element={element}>
                         <Text>Button</Text>
                         <IconList slot="end-icon">
-                            <SignoutMajorIcon /><SignoutMajorIcon /><SignoutMajorIcon />
+                            <StartOverIcon /><StartOverIcon /><StartOverIcon />
                         </IconList>
                     </Button>
                     <Button element={element}>
                         <Text>Button</Text>
                         <IconList slot="end-icon">
-                            <SignoutMajorIcon /><SignoutMajorIcon /><SignoutMajorIcon />
+                            <StartOverIcon /><StartOverIcon /><StartOverIcon />
                         </IconList>
                     </Button>
                 </Inline>
                 <Inline alignY="end">
                     <Button loading size="sm" element={element}>
                         <Text>Button</Text>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                     <Button loading element={element}>
                         <Text>Button</Text>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                 </Inline>
                 <Div>
                     <Button disabled element={element}>
                         <Text>Button</Text>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                 </Div>
                 <Stack>
                     <Button fluid element={element}>
                         <Text>Button</Text>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                     <Button fluid element={element}>
                         <Text>Button</Text>
@@ -154,12 +155,12 @@ export function createButtonTestSuite(element, stories) {
                     <Button size="sm" element={element}>
                         <Text>Button</Text>
                         <Counter variant="divider">15</Counter>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                     <Button element={element}>
                         <Text>Button</Text>
                         <Counter variant="divider">15</Counter>
-                        <SignoutMajorIcon slot="end-icon" />
+                        <StartOverIcon slot="end-icon" />
                     </Button>
                 </Inline>
                 <Inline alignY="end">
