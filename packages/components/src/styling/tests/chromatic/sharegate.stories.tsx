@@ -105,11 +105,11 @@ export const IconColors: ShareGateStory = {
     render: () => (
         <Stack>
             <Inline gap={0} wrap>
-                {(Object.keys(IconColorMapping) as (keyof typeof IconColorMapping)[]).map(x => <NoteIcon UNSAFE_color={x} key={x} />)}
+                {(Object.keys(IconColorMapping) as (keyof typeof IconColorMapping)[]).map(x => <NoteIcon fill={x} key={x} />)}
             </Inline>
             <ThemeProvider colorScheme="dark">
                 <Inline gap={0} wrap>
-                    {(Object.keys(IconColorMapping) as (keyof typeof IconColorMapping)[]).map(x => <NoteIcon UNSAFE_color={x} key={x} />)}
+                    {(Object.keys(IconColorMapping) as (keyof typeof IconColorMapping)[]).map(x => <NoteIcon fill={x} key={x} />)}
                 </Inline>
             </ThemeProvider>
         </Stack>
