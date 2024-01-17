@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.0.1
+
+### Patch Changes
+
+- 2d4001fb9: Fixed input and textarea text size
+
 ## 3.0.0
 
 ### Major Changes
