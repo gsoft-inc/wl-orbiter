@@ -54,7 +54,7 @@ export function InnerDialogTrigger({
     forwardedRef,
     onOpenChange,
     open: openProp,
-    zIndex = 1,
+    zIndex = 10000,
     ...rest
 }: InnerDialogTriggerProps) {
     const [isOpen, setIsOpen] = useControllableState(openProp, defaultOpen, false);
