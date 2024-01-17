@@ -1,5 +1,12 @@
 # @orbit-ui/transition-components
 
+## 3.0.2
+
+### Patch Changes
+
+- 1e24525e9: DialogTrigger's zIndex default value has been bumped from 1 to 10000 to better reflect the expected zIndex value of Dialogs
+- 1ec1ed454: XS Avatar design update: only one letter is now shown as per design.
+
 ## 3.0.1
 
 ### Patch Changes
