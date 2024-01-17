@@ -1,4 +1,4 @@
-import { AddMajorIcon } from "@components/icons";
+import { AddIcon } from "@hopper-ui/icons";
 import { IconLink, IconLinkAsButton } from "@components/link";
 import { Inline } from "@components/layout";
 import { createIconLinkTestSuite } from "./createIconLinkTestSuite";
@@ -20,8 +20,8 @@ createIconLinkTestSuite(<IconLinkAsButton type="button" />, stories("/button"));
 stories()
     .add("styling", () =>
         <Inline>
-            <IconLink border="warning" href="#" aria-label="Add"><AddMajorIcon /></IconLink>
-            <IconLink className="bg-red" href="#" aria-label="Add"><AddMajorIcon /></IconLink>
-            <IconLink style={{ backgroundColor: "red" }} href="#" aria-label="Add"><AddMajorIcon /></IconLink>
+            <IconLink border="warning" href="#" aria-label="Add"><AddIcon /></IconLink>
+            <IconLink className="bg-red" href="#" aria-label="Add"><AddIcon /></IconLink>
+            <IconLink style={{ backgroundColor: "red" }} href="#" aria-label="Add"><AddIcon /></IconLink>
         </Inline>
     );

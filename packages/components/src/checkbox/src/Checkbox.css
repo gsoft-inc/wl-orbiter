@@ -64,12 +64,12 @@
 }
 
 .o-ui-checkbox-checked .o-ui-checkbox-box .o-ui-checkbox-checkmark {
-    fill: var(--hop-neutral-icon-active);
+    color: var(--hop-neutral-icon-active);
     opacity: 1;
 }
 
 .o-ui-checkbox-checked.o-ui-checkbox-disabled .o-ui-checkbox-box .o-ui-checkbox-checkmark {
-    fill: var(--hop-neutral-icon-disabled);
+    color: var(--hop-neutral-icon-disabled);
 }
 
 /* BOX | INDETERMINATE */

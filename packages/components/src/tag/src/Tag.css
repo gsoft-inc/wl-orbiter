@@ -222,6 +222,7 @@ a.o-ui-tag-invalid:not([disabled]):not(.o-ui-tag-disabled) {
 
 /* CONTENT | END ICON */
 .o-ui-tag .o-ui-tag-end-icon {
+    display: flex;
     margin-left: var(--hop-space-inline-xs);
 }
 

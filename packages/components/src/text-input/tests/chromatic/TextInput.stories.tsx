@@ -2,7 +2,7 @@ import { Inline, Stack } from "@components/layout";
 
 import { CrossButton } from "@components/button";
 import { Div } from "@components/html";
-import { MagnifierMajorIcon } from "@components/icons";
+import { SearchIcon } from "@hopper-ui/icons";
 import { TextInput } from "@components/text-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -75,15 +75,15 @@ export const Icon: TextInputStory = {
     storyName: "icon",
     render: () => (
         <Stack>
-            <TextInput icon={<MagnifierMajorIcon />} placeholder="Where to?" aria-label="Label" />
-            <TextInput icon={<MagnifierMajorIcon />} defaultValue="SpaceX will win the race!" placeholder="Where to?" />
-            <TextInput active icon={<MagnifierMajorIcon />} placeholder="Where to?" />
-            <TextInput loading icon={<MagnifierMajorIcon />} placeholder="Where to?" />
-            <TextInput disabled icon={<MagnifierMajorIcon />} placeholder="Where to?" />
-            <TextInput readOnly icon={<MagnifierMajorIcon />} placeholder="Where to?" />
-            <TextInput fluid icon={<MagnifierMajorIcon />} placeholder="Where to?" />
+            <TextInput icon={<SearchIcon />} placeholder="Where to?" aria-label="Label" />
+            <TextInput icon={<SearchIcon />} defaultValue="SpaceX will win the race!" placeholder="Where to?" />
+            <TextInput active icon={<SearchIcon />} placeholder="Where to?" />
+            <TextInput loading icon={<SearchIcon />} placeholder="Where to?" />
+            <TextInput disabled icon={<SearchIcon />} placeholder="Where to?" />
+            <TextInput readOnly icon={<SearchIcon />} placeholder="Where to?" />
+            <TextInput fluid icon={<SearchIcon />} placeholder="Where to?" />
             <Div width="10%">
-                <TextInput fluid icon={<MagnifierMajorIcon />} placeholder="Where to?" />
+                <TextInput fluid icon={<SearchIcon />} placeholder="Where to?" />
             </Div>
         </Stack>
     )

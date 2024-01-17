@@ -300,12 +300,13 @@ button.o-ui-link-hover {
     border-radius: 0;
 }
 
-/* we need a .o-ui-icon-link-icon [sic] */
-.o-ui-icon-link .o-ui-icon {
+.o-ui-icon-link .o-ui-text-link-start-icon,
+.o-ui-icon-link .o-ui-text-link-end-icon {
     display: block;
 }
 
 /* ICON LINK */
 .o-ui-icon-link {
     border-radius: var(--hop-shape-rounded-sm);
+    display: inline-flex;
 }

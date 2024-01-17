@@ -1,5 +1,9 @@
 @import "./styling/index.css";
 
+/* ~ is temporary as it's not ideal, see: https://github.com/gsoft-inc/sg-orbit/issues/1024 */
+@import "@hopper-ui/icons/index.css";
+@import "@hopper-ui/styled-system/index.css";
+
 /*
 NOTE: Importing all the components CSS files in a root file is not our preferred solution. Ideally, every components would import is own CSS file.
 Sadly, we encountered CSS ordering issues when the components are bundled in our apps.
@@ -25,7 +29,6 @@ Sadly, we encountered CSS ordering issues when the components are bundled in our
 @import "./dot/index.css";
 @import "./field/index.css";
 @import "./form/index.css";
-@import "./icons/index.css";
 @import "./illustrated-message/index.css";
 @import "./illustration/index.css";
 @import "./image/index.css";

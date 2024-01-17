@@ -1,4 +1,4 @@
-import { NotificationMajorIcon } from "@components/icons";
+import { NotificationIcon } from "@hopper-ui/icons";
 import { Content, Header } from "@components/placeholders";
 import { Item } from "@components/collection";
 import { Stack } from "@components/layout";
@@ -137,7 +137,7 @@ export function createTabsTestSuite(element, stories) {
             <Tabs element={element} aria-label="Planets">
                 <Item>
                     <Header>
-                        <NotificationMajorIcon />
+                        <NotificationIcon />
                         <Text>Mars</Text>
                     </Header>
                     <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -159,7 +159,7 @@ export function createTabsTestSuite(element, stories) {
                 </Item>
                 <Item>
                     <Header>
-                        <NotificationMajorIcon />
+                        <NotificationIcon />
                         <Text>Jupiter</Text>
                         <Lozenge>New</Lozenge>
                     </Header>
@@ -283,7 +283,7 @@ export function createTabsTestSuite(element, stories) {
             <Tabs element={element} aria-label="Planets">
                 <Item disabled>
                     <Header>
-                        <NotificationMajorIcon />
+                        <NotificationIcon />
                         <Text>Mars</Text>
                     </Header>
                     <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -298,7 +298,7 @@ export function createTabsTestSuite(element, stories) {
             <Tabs element={element} selectedKey="0" aria-label="Planets">
                 <Item disabled>
                     <Header>
-                        <NotificationMajorIcon />
+                        <NotificationIcon />
                         <Text>Mars</Text>
                     </Header>
                     <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -333,7 +333,7 @@ export function createTabsTestSuite(element, stories) {
                     </Item>
                     <Item key="saturn">
                         <Header>
-                            <NotificationMajorIcon />
+                            <NotificationIcon />
                             <Text>Saturn</Text>
                         </Header>
                         <Content>Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's.</Content>
@@ -341,13 +341,13 @@ export function createTabsTestSuite(element, stories) {
                     <Item key="uranus">
                         <Header>
                             <Text>Uranus</Text>
-                            <NotificationMajorIcon />
+                            <NotificationIcon />
                         </Header>
                         <Content>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbiter. This unique tilt makes Uranus appear to spin on its side.</Content>
                     </Item>
                     <Item key="neptune">
                         <Header>
-                            <NotificationMajorIcon />
+                            <NotificationIcon />
                             <Text>Neptune</Text>
                             <Lozenge>New</Lozenge>
                         </Header>

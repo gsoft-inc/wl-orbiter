@@ -1,6 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
-import { EmailMajorIcon, IconList, InfoCircleMajorIcon, WarningMajorIcon } from "@components/icons";
+import { IconList } from "@components/icons";
+import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
 import { Flex, Inline, Stack } from "@components/layout";
 import { Text } from "@components/typography";
 import { cloneElement } from "react";
@@ -20,24 +21,24 @@ export function createCheckboxTestSuite(element, stories) {
                 <Inline alignY="end">
                     <Checkbox size="sm" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Checkbox>
                     <Checkbox element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Checkbox>
                 </Inline>
                 <Inline alignY="end">
                     <Checkbox size="sm" element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon /><MailIcon />
                         </IconList>
                     </Checkbox>
                     <Checkbox element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon /><MailIcon />
                         </IconList>
                     </Checkbox>
                 </Inline>
@@ -54,12 +55,12 @@ export function createCheckboxTestSuite(element, stories) {
                 <Inline alignY="end">
                     <Checkbox size="sm" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                         <Counter>60</Counter>
                     </Checkbox>
                     <Checkbox element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                         <Counter>60</Counter>
                     </Checkbox>
                 </Inline>
@@ -73,24 +74,24 @@ export function createCheckboxTestSuite(element, stories) {
                 </Inline>
                 <Inline alignY="end">
                     <Checkbox size="sm" aria-label="Email" element={element}>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Checkbox>
                     <Checkbox element={element} aria-label="Email">
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Checkbox>
                     <Checkbox disabled aria-label="Email" element={element}>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Checkbox>
                 </Inline>
                 <Inline alignY="end">
                     <Checkbox size="sm" aria-label="Email" element={element}>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon /><MailIcon />
                         </IconList>
                     </Checkbox>
                     <Checkbox aria-label="Email" element={element}>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon /><MailIcon />
                         </IconList>
                     </Checkbox>
                 </Inline>
@@ -104,11 +105,11 @@ export function createCheckboxTestSuite(element, stories) {
                 </Inline>
                 <Inline alignY="end">
                     <Checkbox size="sm" aria-label="Email" element={element}>
-                        <EmailMajorIcon />
+                        <MailIcon />
                         <Counter>60</Counter>
                     </Checkbox>
                     <Checkbox aria-label="Email" element={element}>
-                        <EmailMajorIcon />
+                        <MailIcon />
                         <Counter>60</Counter>
                     </Checkbox>
                 </Inline>
@@ -123,12 +124,12 @@ export function createCheckboxTestSuite(element, stories) {
                     <Checkbox reverse element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                     </Checkbox>
                     <Checkbox reverse element={element}>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                     </Checkbox>
                 </Inline>
@@ -145,12 +146,12 @@ export function createCheckboxTestSuite(element, stories) {
                     <Checkbox reverse element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                         <Counter>60</Counter>
                     </Checkbox>
                     <Checkbox reverse element={element}>
-                        <IconList><EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon /></IconList>
+                        <IconList><MailIcon /><InfoIcon /><WarningIcon /></IconList>
                         <Counter>60</Counter>
                     </Checkbox>
                 </Inline>
@@ -165,7 +166,7 @@ export function createCheckboxTestSuite(element, stories) {
                 <Inline>
                     <Checkbox validationState="invalid" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Checkbox>
                     <Checkbox validationState="invalid" element={element}>
                         <Text>Milky Way</Text>
@@ -227,7 +228,7 @@ export function createCheckboxTestSuite(element, stories) {
                     <Checkbox element={element}>
                         <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon />
                         </IconList>
                     </Checkbox>
                 </Flex>

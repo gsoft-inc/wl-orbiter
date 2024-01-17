@@ -1,6 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
-import { EmailMajorIcon, IconList, InfoCircleMajorIcon, WarningMajorIcon } from "@components/icons";
+import { IconList } from "@components/icons";
+import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
 import { Flex, Inline, Stack } from "@components/layout";
 import { Text } from "@components/typography";
 import { cloneElement } from "react";
@@ -20,28 +21,28 @@ export function createRadioTestSuite(element, stories) {
                 <Inline alignY="end">
                     <Radio value="any" element={element} size="sm">
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Radio>
                     <Radio value="any" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Radio>
                     <Radio disabled value="any" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Radio>
-                </Inline>                
+                </Inline>
                 <Inline alignY="end">
                     <Radio value="any" element={element} size="sm">
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon /><MailIcon />
                         </IconList>
                     </Radio>
                     <Radio value="any" element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon /><MailIcon />
                         </IconList>
                     </Radio>
                 </Inline>
@@ -62,12 +63,12 @@ export function createRadioTestSuite(element, stories) {
                 <Inline alignY="end">
                     <Radio value="any" element={element} size="sm">
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                         <Counter>60</Counter>
                     </Radio>
                     <Radio value="any" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                         <Counter>60</Counter>
                     </Radio>
                 </Inline>
@@ -83,13 +84,13 @@ export function createRadioTestSuite(element, stories) {
                     <Radio reverse value="any" element={element} size="sm">
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                     </Radio>
                     <Radio reverse value="any" element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                     </Radio>
                 </Inline>
@@ -107,14 +108,14 @@ export function createRadioTestSuite(element, stories) {
                     <Radio reverse value="any" element={element} size="sm">
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                         <Counter>60</Counter>
                     </Radio>
                     <Radio reverse value="any" element={element}>
                         <Text>Milky Way</Text>
                         <IconList>
-                            <EmailMajorIcon /><InfoCircleMajorIcon /><WarningMajorIcon />
+                            <MailIcon /><InfoIcon /><WarningIcon />
                         </IconList>
                         <Counter>60</Counter>
                     </Radio>
@@ -131,11 +132,11 @@ export function createRadioTestSuite(element, stories) {
                 <Inline>
                     <Radio validationState="invalid" value="any" element={element} size="sm">
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Radio>
                     <Radio validationState="invalid" value="any" element={element}>
                         <Text>Milky Way</Text>
-                        <EmailMajorIcon />
+                        <MailIcon />
                     </Radio>
                     <Radio validationState="invalid" value="any" element={element}>
                         <Text>Milky Way</Text>
@@ -183,7 +184,7 @@ export function createRadioTestSuite(element, stories) {
                     <Radio value="any" element={element}>
                         <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                         <IconList>
-                            <EmailMajorIcon /><EmailMajorIcon />
+                            <MailIcon /><MailIcon />
                         </IconList>
                     </Radio>
                 </Flex>

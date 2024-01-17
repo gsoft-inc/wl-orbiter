@@ -1,6 +1,6 @@
 import { embedIconButton } from "../../button";
 import { Spinner } from "../../spinner";
-import { CreatedIconProps } from "../../icons";
+import { CreatedIconProps } from "@hopper-ui/icons";
 import { ReactElement } from "react";
 import { augmentElement } from "../../shared";
 

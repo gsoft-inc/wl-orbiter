@@ -136,7 +136,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
 
     const { hasFocus, inputProps: inputFocusProps } = useInputHasFocus();
 
-    const iconMarkup = useInputIcon(icon, { disabled });
+    const iconMarkup = useInputIcon(icon);
 
     const buttonMarkup = useInputButton(button, !disabled && !readOnly);
 

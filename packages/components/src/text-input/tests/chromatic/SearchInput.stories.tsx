@@ -1,7 +1,7 @@
 import { Inline, Stack } from "@components/layout";
 
 import { Div } from "@components/html";
-import { EmailMajorIcon } from "@components/icons";
+import { MailIcon } from "@hopper-ui/icons";
 import { SearchInput } from "@components/text-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -71,14 +71,14 @@ export const CustomIcon: SearchInputStory = {
     storyName: "custom icon",
     render: () => (
         <Stack>
-            <SearchInput icon={<EmailMajorIcon />} placeholder="Where to?" aria-label="Label" />
-            <SearchInput icon={<EmailMajorIcon />} defaultValue="SpaceX will win the race!" aria-label="Label" />
-            <SearchInput loading icon={<EmailMajorIcon />} placeholder="Where to?" />
-            <SearchInput disabled icon={<EmailMajorIcon />} placeholder="Where to?" />
-            <SearchInput readOnly icon={<EmailMajorIcon />} placeholder="Where to?" />
-            <SearchInput fluid icon={<EmailMajorIcon />} placeholder="Where to?" />
+            <SearchInput icon={<MailIcon />} placeholder="Where to?" aria-label="Label" />
+            <SearchInput icon={<MailIcon />} defaultValue="SpaceX will win the race!" aria-label="Label" />
+            <SearchInput loading icon={<MailIcon />} placeholder="Where to?" />
+            <SearchInput disabled icon={<MailIcon />} placeholder="Where to?" />
+            <SearchInput readOnly icon={<MailIcon />} placeholder="Where to?" />
+            <SearchInput fluid icon={<MailIcon />} placeholder="Where to?" />
             <Div width="10%">
-                <SearchInput fluid icon={<EmailMajorIcon />} placeholder="Where to?" />
+                <SearchInput fluid icon={<MailIcon />} placeholder="Where to?" />
             </Div>
         </Stack>
     )

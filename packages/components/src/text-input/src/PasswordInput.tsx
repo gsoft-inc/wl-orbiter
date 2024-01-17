@@ -1,6 +1,6 @@
 import { AbstractTextInputProps, TextInput } from "./TextInput";
 import { useState, ChangeEvent, ComponentProps, forwardRef } from "react";
-import { EyeMajorIcon, EyeSlashMajorIcon } from "../../icons";
+import { EyeVisibleIcon, EyeHiddenIcon } from "@hopper-ui/icons";
 import { OmitInternalProps, mergeProps, useControllableState, useEventCallback } from "../../shared";
 
 import { IconButton } from "../../button";
@@ -42,10 +42,11 @@ export function InnerPasswordInput(props: InnerPasswordInputProps) {
             aria-label="Toggle password visibility"
             className="o-ui-password-input-show-button"
             onClick={handleShowValue}
+            size="sm"
             title="Toggle password visibility"
             variant="tertiary"
         >
-            {isHidden ? <EyeMajorIcon /> : <EyeSlashMajorIcon />}
+            {isHidden ? <EyeVisibleIcon /> : <EyeHiddenIcon />}
         </IconButton>
     );
 

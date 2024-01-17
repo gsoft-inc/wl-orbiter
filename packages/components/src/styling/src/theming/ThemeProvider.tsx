@@ -1,6 +1,7 @@
 import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme";
 import { InternalProps, StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps } from "../../../shared";
 import { ComponentProps, forwardRef, ReactNode, useCallback, useState } from "react";
+import { StyledSystemProvider } from "@hopper-ui/styled-system";
 
 import { Box } from "../../../box";
 import { BreakpointProvider } from "../BreakpointProvider";
@@ -46,25 +47,27 @@ export function InnerThemeProvider({
                 setColorScheme
             }}
         >
-            <BreakpointProvider>
-                <Box
-                    {...mergeProps(
-                        rest,
-                        {
-                            as,
-                            ref: forwardedRef,
-                            className: mergeClasses(
-                                "o-ui",
-                                `o-ui-${computedColorScheme}`,
-                                "o-ui-orbiter",
-                                `o-ui-orbiter-${computedColorScheme}`,
-                            )
-                        }
-                    )}
-                >
-                    {children}
-                </Box>
-            </BreakpointProvider>
+            <StyledSystemProvider colorScheme={computedColorScheme}>
+                <BreakpointProvider>
+                    <Box
+                        {...mergeProps(
+                            rest,
+                            {
+                                as,
+                                ref: forwardedRef,
+                                className: mergeClasses(
+                                    "o-ui",
+                                    `o-ui-${computedColorScheme}`,
+                                    "o-ui-orbiter",
+                                    `o-ui-orbiter-${computedColorScheme}`,
+                                )
+                            }
+                        )}
+                    >
+                        {children}
+                    </Box>
+                </BreakpointProvider>
+            </StyledSystemProvider>
         </ColorSchemeContext.Provider>
     );
 }

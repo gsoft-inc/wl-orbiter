@@ -1,6 +1,6 @@
 import { AbstractInputProps } from "../../input";
 import { Box } from "../../box";
-import { CheckMajorIcon } from "../../icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
 import { ChangeEvent, ChangeEventHandler, ComponentProps, forwardRef, useMemo } from "react";
 import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useCheckableProps, useSlots } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
@@ -161,7 +161,8 @@ export function InnerCheckbox(props: InnerCheckboxProps) {
             variant: "divider"
         },
         icon: {
-            className: "o-ui-checkbox-icon"
+            className: "o-ui-checkbox-icon",
+            size: sizeValue
         },
         text: {
             className: "o-ui-checkbox-label",
@@ -182,7 +183,7 @@ export function InnerCheckbox(props: InnerCheckboxProps) {
         >
             <VisuallyHidden {...inputProps} />
             <Span className="o-ui-checkbox-box">
-                <CheckMajorIcon aria-hidden="true" className="o-ui-checkbox-checkmark" />
+                <CheckmarkIcon aria-hidden="true" className="o-ui-checkbox-checkmark" />
             </Span>
             {text}
             {icon}
