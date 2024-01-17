@@ -84,13 +84,13 @@ const O365InitialsColorsForName = [
 function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAvatarProps>) {
     const initials = useMemo(() => {
         const cleanName = name.replace(/\s+/g, " ").trim();
-
         const [firstName, lastName] = cleanName.split(" ");
-
-        return !isNil(firstName) && !isNil(lastName)
+        const letters = !isNil(firstName) && !isNil(lastName)
             ? `${firstName.charAt(0)}${lastName.charAt(0)}`
             : firstName.charAt(0);
-    }, [name]);
+
+        return size === "xs" && letters.length > 1 ? letters.charAt(0) : letters;
+    }, [name, size]);
 
     const color = useMemo(() => {
         let hashCode = 0;
@@ -105,6 +105,8 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
         return O365InitialsColorsForName[hashCode % O365InitialsColorsForName.length];
     }, [name]);
 
+    const initialValue = size === "xs" ? initials.at(0) : initials;
+
     return (
         <AvatarText
             aria-label={ariaLabel ?? name}
@@ -114,7 +116,7 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
                 backgroundColor: color
             }}
         >
-            {initials}
+            {initialValue}
         </AvatarText>
     );
 }
