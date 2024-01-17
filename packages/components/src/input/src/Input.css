@@ -49,7 +49,7 @@
 .o-ui-text-input,
 .o-ui-text-area textarea,
 .o-ui-number-input {
-    font-size: var(--hop-body-sm-font-size);
+    font-size: var(--hop-body-md-font-size);
     padding: 0;
     border-radius: var(--o-ui-input-border-radius);
     border: 1px solid var(--o-ui-input-border-color);
@@ -106,7 +106,7 @@
 .o-ui-input textarea::placeholder {
     color: var(--hop-neutral-text-weakest);
     opacity: 1;
-    font-size: var(--hop-body-md-font-size);
+    font-size: inherit;
 }
 
 .o-ui-input-disabled input::placeholder,
