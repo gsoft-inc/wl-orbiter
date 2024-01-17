@@ -2,8 +2,8 @@
     "editor.minimap.enabled": false,
     "editor.wordWrap": "off",
     "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": false
+        "source.fixAll": "explicit",
+        "source.organizeImports": "never"
     },
     "editor.formatOnSave": true,
     "[html]": {
@@ -16,7 +16,6 @@
     "json.format.enable": false,
     "css.validate": false,
     "eslint.alwaysShowStatus": true,
-    "eslint.packageManager": "yarn",
     "eslint.validate": ["javascript", "javascriptreact", "mdx"],
     "stylelint.autoFixOnSave": true,
     "stylelint.useLocal": true,
@@ -29,5 +28,5 @@
         "**/dist*": true
     },
     "timeline.showView": true,
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

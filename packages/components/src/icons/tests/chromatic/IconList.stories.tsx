@@ -1,4 +1,5 @@
-import { UfoMajorIcon, TelescopeMajorIcon, RocketMajorIcon, IconList, IconListProps } from "@components/icons";
+import { IconList, IconListProps } from "@components/icons";
+import { CatIcon, SparklesIcon, RocketIcon } from "@hopper-ui/icons";
 import { Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -12,9 +13,9 @@ type IconListStory = ComponentStoryObj<typeof IconList>;
 function Icons(props: Omit<IconListProps, "children">) {
     return (
         <IconList {...props}>
-            <UfoMajorIcon />
-            <TelescopeMajorIcon />
-            <RocketMajorIcon />
+            <CatIcon />
+            <SparklesIcon />
+            <RocketIcon />
         </IconList>
     );
 }

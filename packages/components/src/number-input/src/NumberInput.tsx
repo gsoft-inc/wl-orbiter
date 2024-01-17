@@ -18,7 +18,7 @@ import {
 } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 
-import { ChevronMinorIcon } from "../../icons";
+import { AngleDownIcon, AngleUpIcon } from "@hopper-ui/icons";
 import { useFieldInputProps } from "../../field";
 import { useInputGroupProps } from "../../input-group";
 import { useToolbarProps } from "../../toolbar";
@@ -115,8 +115,9 @@ function Spinner({
                 tabIndex={-1}
                 type="button"
             >
-                <ChevronMinorIcon
-                    transform="rotate(270deg)"
+                <AngleUpIcon
+                    className="o-ui-number-input-spinner-icon"
+                    size="sm"
                 />
             </HtmlButton>
             <HtmlButton
@@ -128,8 +129,9 @@ function Spinner({
                 tabIndex={-1}
                 type="button"
             >
-                <ChevronMinorIcon
-                    transform="rotate(90deg)"
+                <AngleDownIcon
+                    className="o-ui-number-input-spinner-icon"
+                    size="sm"
                 />
             </HtmlButton>
         </Div>
@@ -338,7 +340,7 @@ export function InnerNumberInput(props: InnerNumberInputProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const numericInputValue = useMemo(() => toNumber(inputValueRef.current), [inputValueRef.current]);
 
-    const iconMarkup = useInputIcon(icon, { disabled });
+    const iconMarkup = useInputIcon(icon);
 
     const loadingMarkup = useInputSpinner(loading);
 

@@ -380,7 +380,6 @@ a.o-ui-button {
 
 .o-ui-button-inherit-style.o-ui-button-primary .o-ui-button-start-icon,
 .o-ui-button-inherit-style.o-ui-button-primary .o-ui-button-end-icon {
-    fill: var(--hop-samoyed);
     color: var(--hop-samoyed);
     opacity: .9;
 }

@@ -355,7 +355,7 @@ export function InnerAutocomplete(props: InnerAutocompleteProps) {
 
     const iconMarkup = icon && augmentElement(icon, {
         className: "o-ui-autocomplete-icon",
-        size: "sm"
+        size: "md"
     });
 
     const listboxMarkup = (

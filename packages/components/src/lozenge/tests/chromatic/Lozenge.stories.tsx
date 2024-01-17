@@ -1,4 +1,5 @@
-import { PlaceholderMajorIcon, IconList } from "@components/icons";
+import { IconList } from "@components/icons";
+import { SparklesIcon } from "@hopper-ui/icons";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
 import { Lozenge } from "@components/lozenge";
@@ -36,46 +37,45 @@ export const Variants: LozengeStory = {
             <Lozenge variant="negative">New</Lozenge>
             <Lozenge variant="informative" size="sm">New</Lozenge>
             <Lozenge variant="informative">New</Lozenge>
-
             <Inline alignY="end">
                 <Lozenge size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="warning" size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="warning">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="positive" size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="positive">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="negative" size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="negative">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="informative" size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="informative">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
             </Inline>
@@ -89,18 +89,18 @@ export const Icon: LozengeStory = {
         <Stack>
             <Inline alignY="end">
                 <Lozenge size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
             </Inline>
             <Div>
                 <Lozenge>
                     <IconList>
-                        <PlaceholderMajorIcon /><PlaceholderMajorIcon />
+                        <SparklesIcon /><SparklesIcon />
                     </IconList>
                     <Text>New</Text>
                 </Lozenge>
@@ -127,43 +127,43 @@ export const HighlightAndVariant: LozengeStory = {
             </Inline>
             <Inline alignY="end">
                 <Lozenge highlight size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge highlight>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="warning" highlight size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="warning" highlight>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="positive" highlight size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="positive" highlight>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="negative" highlight size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="negative" highlight>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="informative" highlight size="sm">
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
                 <Lozenge variant="informative" highlight>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
             </Inline>
@@ -177,7 +177,7 @@ export const InheritParentProperties: LozengeStory = {
         <Inline alignY="end">
             <Lozenge textTransform="uppercase">New</Lozenge>
             <Lozenge color="red" highlight>
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
                 <Text>New</Text>
             </Lozenge>
         </Inline>
@@ -191,7 +191,7 @@ export const Fluid: LozengeStory = {
             <Inline>
                 <Lozenge fluid>New</Lozenge>
                 <Lozenge fluid>
-                    <PlaceholderMajorIcon />
+                    <SparklesIcon />
                     <Text>New</Text>
                 </Lozenge>
             </Inline>

@@ -1,4 +1,4 @@
-import { NotificationMajorIcon } from "@components/icons";
+import { NotificationIcon } from "@hopper-ui/icons";
 import { Content, Header } from "@components/placeholders";
 import { Inline } from "@components/layout";
 import { Tabs } from "@components/tabs";
@@ -66,7 +66,7 @@ export const TabWithIcon: TabsStory = {
         <Tabs orientation="vertical" aria-label="Planets">
             <Item>
                 <Header>
-                    <NotificationMajorIcon />
+                    <NotificationIcon />
                     <Text>Mars</Text>
                 </Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -92,7 +92,7 @@ export const TabWithLozenge: TabsStory = {
             </Item>
             <Item>
                 <Header>
-                    <NotificationMajorIcon />
+                    <NotificationIcon />
                     <Text>Jupiter</Text>
                     <Lozenge>New</Lozenge>
                 </Header>
@@ -108,7 +108,7 @@ export const InCard: TabsStory = {
         <Tabs orientation="vertical" variant="in-card" aria-label="Planets">
             <Item>
                 <Header>
-                    <NotificationMajorIcon />
+                    <NotificationIcon />
                     <Text>Mars</Text>
                 </Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -127,7 +127,7 @@ export const Heading: TabsStory = {
         <Tabs orientation="vertical" variant="heading" aria-label="Planets">
             <Item>
                 <Header>
-                    <NotificationMajorIcon />
+                    <NotificationIcon />
                     <Text>Mars</Text>
                 </Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>

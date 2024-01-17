@@ -1,4 +1,4 @@
-import { AddMajorIcon } from "@components/icons";
+import { AddIcon } from "@hopper-ui/icons";
 import { IconLink } from "@components/link";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
@@ -8,7 +8,7 @@ import { renderWithTheme, screen, waitFor } from "@test-utils";
 test("when external, add rel=\"noopener noreferrer\"", async () => {
     renderWithTheme(
         <IconLink external href="#" aria-label="Add" data-testid="icon-link">
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 
@@ -18,7 +18,7 @@ test("when external, add rel=\"noopener noreferrer\"", async () => {
 test("when autofocus is true, the icon link is focused on render", async () => {
     renderWithTheme(
         <IconLink autoFocus href="#" aria-label="Add" data-testid="icon-link">
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 
@@ -34,7 +34,7 @@ test("when autofocus is true and the link is disabled, the icon link is not focu
             aria-label="Add"
             data-testid="icon-link"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 
@@ -49,7 +49,7 @@ test("when autofocus is specified with a delay, the link is focused after the de
             aria-label="Add"
             data-testid="icon-link"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 
@@ -65,7 +65,7 @@ test("ref is a DOM element", async () => {
 
     renderWithTheme(
         <IconLink ref={ref} href="#" aria-label="Add">
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 
@@ -86,7 +86,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
             href="#"
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 
@@ -101,7 +101,7 @@ test("set ref once", async () => {
 
     renderWithTheme(
         <IconLink ref={handler} href="#" aria-label="Add">
-            <AddMajorIcon />
+            <AddIcon />
         </IconLink>
     );
 

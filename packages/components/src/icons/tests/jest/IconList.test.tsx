@@ -1,4 +1,5 @@
-import { CheckMajorIcon, IconList, IconListProps } from "@components/icons";
+import { IconList, IconListProps } from "@components/icons";
+import { CheckmarkIcon } from "@hopper-ui/icons";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -8,8 +9,8 @@ const Icons = forwardRef<HTMLElement, Omit<IconListProps, "children">>((props, r
             {...props}
             ref={ref}
         >
-            <CheckMajorIcon />
-            <CheckMajorIcon />
+            <CheckmarkIcon />
+            <CheckmarkIcon />
         </IconList>
     );
 });

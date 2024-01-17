@@ -1,4 +1,4 @@
-import { PlaceholderMajorIcon, CrossMajorIcon } from "@components/icons";
+import { SparklesIcon, DismissIcon } from "@hopper-ui/icons";
 import { Content, Header } from "@components/placeholders";
 import { Inline, Stack } from "@components/layout";
 import { Tab, TabPanel, Tabs, useTabsContext } from "@components/tabs";
@@ -35,7 +35,7 @@ const ActiveHeader = ({ tab, children, onSelect, ...rest }) => {
             {...rest}
             tab={tab}
         >
-            {key === selectedKey ? <PlaceholderMajorIcon /> : <CrossMajorIcon />}
+            {key === selectedKey ? <SparklesIcon /> : <DismissIcon />}
             <Text>{children}</Text>
         </Tab>
     );

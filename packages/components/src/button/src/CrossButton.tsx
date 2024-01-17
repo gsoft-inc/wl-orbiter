@@ -2,7 +2,7 @@ import "./CrossButton.css";
 
 import { AbstractIconButtonProps, IconButton, InnerIconButton } from "./IconButton";
 import { ComponentProps, forwardRef } from "react";
-import { CrossMinorIcon } from "../../icons";
+import { DismissIcon } from "@hopper-ui/icons";
 import { OmitInternalProps, mergeClasses, slot } from "../../shared";
 
 export type InnerCrossButtonProps = Omit<AbstractIconButtonProps<"button">, "fluid" | "loading" | "onChange" | "type" | "variant">;
@@ -16,7 +16,7 @@ export function InnerCrossButton({ className, forwardedRef, ...rest }: InnerCros
             ref={forwardedRef}
             variant="tertiary"
         >
-            <CrossMinorIcon />
+            <DismissIcon />
         </IconButton>
     );
 }

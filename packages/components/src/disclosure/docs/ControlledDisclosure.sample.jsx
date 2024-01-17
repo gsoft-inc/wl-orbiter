@@ -13,7 +13,7 @@
         >
             <TextLinkAsButton>
                 <Text>EVE Online</Text>
-                <ChevronMajorIcon transform={`rotate(${isOpen ? 270 : 90}deg)`} />
+                <AngleDownIcon transform={`rotate(${isOpen ? 0 : 180}deg)`} />
             </TextLinkAsButton>
             <Div>
                 Eve Online is a space-based, persistent world massively multiplayer online role-playing game (MMORPG) developed and published by CCP Games.

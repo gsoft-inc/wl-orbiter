@@ -1,5 +1,5 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { AddMajorIcon } from "@components/icons";
+import { AddIcon } from "@hopper-ui/icons";
 import { IconButton } from "@components/button";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
@@ -14,7 +14,7 @@ test("when autofocus is true, the button is focused on render", async () => {
             aria-label="Add"
             data-testid="button"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -30,7 +30,7 @@ test("when autofocus is true and the button is disabled, the button is not focus
             aria-label="Add"
             data-testid="button"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -45,7 +45,7 @@ test("when autofocus is specified with a delay, the button is focused after the 
             aria-label="Add"
             data-testid="button"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -64,7 +64,7 @@ test("when loading is true, the button should prevent onClick", async () => {
             data-testid="button"
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -81,7 +81,7 @@ test("when loading is true, the spinner should have an aria-label", async () => 
             loading
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -103,7 +103,7 @@ test("can focus the button with the focus api", async () => {
             }}
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -125,7 +125,7 @@ test("ref is a DOM element", async () => {
             ref={ref}
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -146,7 +146,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
             }}
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 
@@ -165,7 +165,7 @@ test("set ref once", async () => {
             ref={handler}
             aria-label="Add"
         >
-            <AddMajorIcon />
+            <AddIcon />
         </IconButton>
     );
 

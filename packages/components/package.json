@@ -1,6 +1,6 @@
 {
     "name": "@orbit-ui/transition-components",
-    "version": "2.2.2",
+    "version": "3.0.0",
     "description": "Orbiter components",
     "repository": {
         "type": "git",
@@ -27,20 +27,23 @@
         "build": "run-s build:* copy-files",
         "build:js": "tsc --build ./tsconfig.build.json",
         "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
-        "generate-icons-components": "node ./scripts/generate-icons-components.js",
         "clean": "rimraf dist tsconfig.build.tsbuildinfo"
     },
     "peerDependencies": {
         "react": "^18.0.0",
-        "react-dom": "^18.0.0"
+        "react-dom": "^18.0.0",
+        "@hopper-ui/styled-system": "*"
     },
     "dependencies": {
-        "@orbit-ui/transition-icons": "2.0.0",
+        "@hopper-ui/icons": "1.0.3",
         "@popperjs/core": "2.11.2",
         "react-is": "17.0.2",
         "text-mask-core": "5.1.2",
         "type-fest": "2.9.0",
         "use-debounce": "7.0.1"
+    },
+    "devDependencies": {
+        "@hopper-ui/styled-system": "0.2.4"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }

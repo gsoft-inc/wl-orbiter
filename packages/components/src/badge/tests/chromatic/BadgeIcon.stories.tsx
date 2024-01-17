@@ -1,4 +1,4 @@
-import { PlaceholderMajorIcon } from "@components/icons";
+import { SparklesIcon } from "@hopper-ui/icons";
 import { Badge } from "@components/badge";
 import { CircleBadge, IconBadge, SquareBadge, TextBadge } from "./BadgeUtils";
 import { Inline } from "@components/layout";
@@ -15,7 +15,7 @@ export const Default: BadgeStory = {
     storyName: "default",
     render: () => (
         <SquareBadge variant="icon">
-            <PlaceholderMajorIcon />
+            <SparklesIcon />
         </SquareBadge>
     )
 };
@@ -25,16 +25,16 @@ export const Overlap: BadgeStory = {
     render: () => (
         <Inline gap={400}>
             <SquareBadge variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </SquareBadge>
             <CircleBadge variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </CircleBadge>
             <IconBadge variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </IconBadge>
             <TextBadge variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </TextBadge>
         </Inline>
     )
@@ -45,13 +45,13 @@ export const Styling: BadgeStory = {
     render: () => (
         <Inline>
             <SquareBadge border="warning" variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </SquareBadge>
             <SquareBadge className="border-red" variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </SquareBadge>
             <SquareBadge style={{ border: "1px solid red" }} variant="icon">
-                <PlaceholderMajorIcon />
+                <SparklesIcon />
             </SquareBadge>
         </Inline>
     )

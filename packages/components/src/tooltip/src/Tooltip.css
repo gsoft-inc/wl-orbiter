@@ -8,17 +8,6 @@
     overflow-wrap: break-word;
 }
 
-/* We need a .o-ui-tooltip-content class */
-/* LEFT ICON */
-.o-ui-tooltip .o-ui-icon {
-    margin-right: var(--hop-space-inline-xs);
-}
-
-/* RIGHT ICON */
-.o-ui-tooltip .o-ui-text + .o-ui-icon {
-    margin-left: var(--hop-space-inline-xs);
-}
-
 /* DISABLED WRAPPER */
 .o-ui-tooltip-disabled-wrapper {
     display: inline-block;
