@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.0.3
+
+### Patch Changes
+
+- 92915be6a: Tile Component follows Hopper design
+
 ## 3.0.2
 
 ### Patch Changes
