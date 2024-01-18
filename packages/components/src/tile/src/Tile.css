@@ -1,8 +1,5 @@
-:root {
-    --o-ui-tile-checmark-size: 1.5rem;
-}
-
 .o-ui-tile {
+    --o-ui-tile-checmark-size: 1.5rem;
     width: 100%;
     min-width: 100px;
     border: none;
