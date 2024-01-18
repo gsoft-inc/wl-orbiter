@@ -112,7 +112,7 @@
 }
 
 .o-ui-tile[disabled] .o-ui-tile-checkmark {
-    background-color: var(--hop-neutral-icon-disabled);
+    fill: var(--hop-neutral-icon-disabled);
 }
 
 /* IMAGES & ILLUSTRATION */
