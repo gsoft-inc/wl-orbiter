@@ -6,6 +6,7 @@ import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { useFieldInputProps } from "../../field";
 
 const DefaultElement = "textarea";
+const DefaultMinimumTextAreaRows = 3;
 
 export interface InnerTextAreaProps extends AbstractInputProps<typeof DefaultElement> {
     /**
@@ -143,6 +144,10 @@ export function InnerTextArea(props: InnerTextAreaProps) {
         console.error("An input component must either have an \"aria-label\" attribute, an \"aria-labelledby\" attribute or a \"placeholder\" attribute.");
     }
 
+    if (!isNil(maxRows) && !isNil(rowsProp)) {
+        console.error("The \"maxRows\" prop can not be used when the \"rows\" prop is set");
+    }
+
     const fluidValue = useResponsiveValue(fluid);
 
     const [inputValue, setValue] = useControllableState(value, defaultValue, "");
@@ -181,19 +186,31 @@ export function InnerTextArea(props: InnerTextAreaProps) {
     const lineHeight = useCalculateLineHeight(inputRef.current);
 
     const adjustRows = useCallback(() => {
+        if (lineHeight === 0) {
+            // lineHeight is not calculated yet, we can't adjust the height
+            return;
+        }
+
         const input = inputRef.current;
 
         const { paddingBottom, paddingTop } = window.getComputedStyle(input);
 
         const padding = pxToInt(paddingTop) + pxToInt(paddingBottom);
-        const currentRows = Math.floor((input.scrollHeight - padding) / lineHeight);
+        const currentRowsWithText = Math.floor((input.scrollHeight - padding) / lineHeight);
 
-        const newRows = !isNil(maxRows) && currentRows > maxRows
-            ? maxRows
-            : currentRows;
-
-        setRows(newRows);
-    }, [inputRef, lineHeight, maxRows]);
+        if (isNil(rowsProp) && isNil(maxRows)) {
+            // if the number of rows is not specified, we don't need to adjust the height.
+            setRows(Math.max(currentRowsWithText, DefaultMinimumTextAreaRows));
+        } else if (!isNil(rowsProp)) {
+            // if a number of rows is specified, we need to adjust the height
+            setRows(rowsProp);
+        } else if (!isNil(maxRows) && currentRowsWithText > maxRows) {
+            // if the number of rows with text is greater than the max rows, we need to adjust the height
+            setRows(maxRows);
+        } else {
+            setRows(Math.max(currentRowsWithText, DefaultMinimumTextAreaRows));
+        }
+    }, [inputRef, lineHeight, maxRows, rowsProp]);
 
     useIsomorphicLayoutEffect(() => {
         adjustRows();
