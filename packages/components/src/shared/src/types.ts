@@ -38,7 +38,7 @@ export interface InteractionProps {
     hover?: boolean;
 }
 
-export type StyledSystemOverlappingHtmlAttributes = "as" | "color" | "content" | "height" | "size" | "width" | "wrap";
+export type StyledSystemOverlappingHtmlAttributes = "as" | "color" | "content" | "height" | "size" | "width" | "wrap" | "border";
 
 export type StyledComponentProps<T extends ElementType> = StyledSystemProps & Omit<ComponentProps<T>, StyledSystemOverlappingHtmlAttributes>;
 

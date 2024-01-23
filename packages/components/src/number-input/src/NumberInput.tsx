@@ -272,6 +272,8 @@ export function InnerNumberInput(props: InnerNumberInputProps) {
                     updateValue(event, max);
                 }
             }
+        } else {
+            updateValue(event, newValue);
         }
     };
 

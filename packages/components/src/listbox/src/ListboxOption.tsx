@@ -129,7 +129,6 @@ export function InnerListboxOption({
 
     const labelId = text?.props?.id;
     const descriptionId = description?.props?.id;
-    console.log("endicon", endIcon);
 
     const optionMarkup = (
         <Box
