@@ -2,7 +2,7 @@ import { Avatar } from "@components/avatar";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Person } from "./assets";
+import { Astronaut, Person } from "./assets";
 
 export default {
     title: "Chromatic/Avatar",
@@ -32,6 +32,19 @@ export const LocalImage: AvatarStory = {
             <Avatar src={Person} name="Neil Armstrong" />
             <Avatar src={Person} size="lg" name="Neil Armstrong" />
             <Avatar src={Person} size="xl" name="Neil Armstrong" />
+        </Inline>
+    )
+};
+
+export const LocalImageRectangle: AvatarStory = {
+    storyName: "local image rectangle",
+    render: () => (
+        <Inline alignY="center">
+            <Avatar src={Astronaut} size="xs" name="Neil Armstrong" />
+            <Avatar src={Astronaut} size="sm" name="Neil Armstrong" />
+            <Avatar src={Astronaut} name="Neil Armstrong" />
+            <Avatar src={Astronaut} size="lg" name="Neil Armstrong" />
+            <Avatar src={Astronaut} size="xl" name="Neil Armstrong" />
         </Inline>
     )
 };
