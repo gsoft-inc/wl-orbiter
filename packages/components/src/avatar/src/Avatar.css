@@ -30,6 +30,7 @@
 /* IMAGE */
 .o-ui-avatar-image {
     width: 100%;
+    object-fit: cover;
 }
 
 /* TEXT */
