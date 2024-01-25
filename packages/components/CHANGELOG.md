@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.1.1
+
+### Patch Changes
+
+- 381a9c55d: Added object-fit cover to avatars in order to fit image that aren't square
+
 ## 3.1.0
 
 ### Minor Changes
