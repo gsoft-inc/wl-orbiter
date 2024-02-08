@@ -1,5 +1,16 @@
 # @workleap/orbiter-ui
 
+## 3.2.0
+
+### Minor Changes
+
+- c98d16e00: Removed the "as" prop from the ThemeProvider. The ThemeProvider now creates 1 wrapping div instead of 2.
+
+### Patch Changes
+
+- Updated dependencies [c98d16e00]
+  - @orbit-ui/transition-components@3.2.0
+
 ## 3.1.1
 
 ### Patch Changes
