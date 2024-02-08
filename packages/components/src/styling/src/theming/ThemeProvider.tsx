@@ -1,15 +1,15 @@
 import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme";
-import { InternalProps, StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps } from "../../../shared";
-import { ComponentProps, forwardRef, ReactNode, useCallback, useState } from "react";
+import { StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps, omitProps } from "../../../shared";
+import { ComponentProps, ForwardedRef, forwardRef, ReactNode, useCallback, useState } from "react";
 import { StyledSystemProvider } from "@hopper-ui/styled-system";
 
-import { Box } from "../../../box";
 import { BreakpointProvider } from "../BreakpointProvider";
 import { ColorSchemeContext } from "../ColorSchemeContext";
+import { useStyledSystem } from "..";
 
 const DefaultElement = "div";
 
-export interface InnerThemeProviderProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerThemeProviderProps extends StyledComponentProps<typeof DefaultElement> {
     /**
      * React children
      */
@@ -22,23 +22,29 @@ export interface InnerThemeProviderProps extends InternalProps, StyledComponentP
      * Default color scheme to use when a user preferred color scheme (system) is not available.
      */
     defaultColorScheme?: ColorScheme;
+    /**
+     * @ignore
+     */
+    forwardedRef?: ForwardedRef<any>;
 }
 
-export function InnerThemeProvider({
-    as = DefaultElement,
-    children,
-    colorScheme,
-    defaultColorScheme,
-    forwardedRef,
-    ...rest
-}: InnerThemeProviderProps) {
+export function InnerThemeProvider(props: InnerThemeProviderProps) {
     const [remoteColorScheme, setRemoteColorScheme] = useState();
+
+    const {
+        children,
+        colorScheme,
+        defaultColorScheme,
+        forwardedRef,
+        ...rest
+    } = omitProps(useStyledSystem(props), ["slot"]);
 
     const computedColorScheme = useColorScheme(remoteColorScheme ?? colorScheme, defaultColorScheme);
 
     const setColorScheme = useCallback(newColorScheme => {
         setRemoteColorScheme(newColorScheme);
     }, [setRemoteColorScheme]);
+
 
     return (
         <ColorSchemeContext.Provider
@@ -47,27 +53,25 @@ export function InnerThemeProvider({
                 setColorScheme
             }}
         >
-            <StyledSystemProvider colorScheme={computedColorScheme}>
-                <BreakpointProvider>
-                    <Box
-                        {...mergeProps(
-                            rest,
-                            {
-                                as,
-                                ref: forwardedRef,
-                                className: mergeClasses(
-                                    "o-ui",
-                                    `o-ui-${computedColorScheme}`,
-                                    "o-ui-orbiter",
-                                    `o-ui-orbiter-${computedColorScheme}`,
-                                )
-                            }
-                        )}
-                    >
-                        {children}
-                    </Box>
-                </BreakpointProvider>
-            </StyledSystemProvider>
+            <BreakpointProvider>
+                <StyledSystemProvider
+                    {...mergeProps(
+                        rest,
+                        {
+                            ref: forwardedRef,
+                            className: mergeClasses(
+                                "o-ui",
+                                `o-ui-${computedColorScheme}`,
+                                "o-ui-orbiter",
+                                `o-ui-orbiter-${computedColorScheme}`,
+                            )
+                        }
+                    )}
+                    colorScheme={computedColorScheme}
+                >
+                    {children}
+                </StyledSystemProvider>
+            </BreakpointProvider>
         </ColorSchemeContext.Provider>
     );
 }
