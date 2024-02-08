@@ -45,7 +45,6 @@ export function InnerThemeProvider(props: InnerThemeProviderProps) {
         setRemoteColorScheme(newColorScheme);
     }, [setRemoteColorScheme]);
 
-
     return (
         <ColorSchemeContext.Provider
             value={{
