@@ -1,5 +1,13 @@
 # @workleap/orbiter-ui
 
+## 3.2.1
+
+### Patch Changes
+
+- a9762fcd0: Add slot "toolbar" to the toolbar component
+- Updated dependencies [a9762fcd0]
+  - @orbit-ui/transition-components@3.2.1
+
 ## 3.2.0
 
 ### Minor Changes
