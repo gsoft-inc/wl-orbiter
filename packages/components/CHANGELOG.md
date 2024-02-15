@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.2.1
+
+### Patch Changes
+
+- a9762fcd0: Add slot "toolbar" to the toolbar component
+
 ## 3.2.0
 
 ### Minor Changes
