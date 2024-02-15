@@ -83,7 +83,7 @@ export const SemanticSimpleMarginSpace = [
     "inline-xl"
 ] as const;
 
-export const SemanticComplexMarginSpace = [];
+export const SemanticComplexMarginSpace = [] as const;
 
 export const OrbiterColors = [
     "coastal-25",
@@ -515,7 +515,7 @@ export const BorderRadiusAliases = [
     "rounded-lg",
     "pill",
     "circle"
-];
+] as const;
 
 export const BoxShadowScale = [
     "none",
@@ -535,7 +535,7 @@ export const FontFamilyScale = [
     "primary",
     "secondary",
     "tertiary"
-];
+] as const;
 
 export const FontFamilyAliases = [
     "heading-3xl",
@@ -571,7 +571,7 @@ export const FontFamilyAliases = [
     "body-xs-underline",
     "accent-lg",
     "accent-sm"
-];
+] as const;
 
 export const FontSizeScale = [
     480,
@@ -712,7 +712,7 @@ export const LineHeightAliases = [
     "body-xs-underline",
     "accent-lg",
     "accent-sm"
-];
+] as const;
 
 function createValuesMapping<T extends readonly (string | number)[]>(values: T, template: (value: T[number]) => string) {
     const mapping = {} as Record<T[number], string>;
