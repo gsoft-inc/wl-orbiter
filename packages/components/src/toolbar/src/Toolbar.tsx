@@ -12,7 +12,8 @@ import {
     useFocusScope,
     useKeyboardNavigation,
     useMergedRefs,
-    useRovingFocus
+    useRovingFocus,
+    slot
 } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { ToolbarContext } from "./ToolbarContext";
@@ -147,8 +148,8 @@ InnerToolbar.defaultElement = DefaultElement;
  *
  * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/toolbar--default-story)
 */
-export const Toolbar = forwardRef<any, OmitInternalProps<InnerToolbarProps>>((props, ref) => (
+export const Toolbar = slot("toolbar", forwardRef<any, OmitInternalProps<InnerToolbarProps>>((props, ref) => (
     <InnerToolbar {...props} forwardedRef={ref} />
-));
+)));
 
 export type ToolbarProps = ComponentProps<typeof Toolbar>;
