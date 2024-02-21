@@ -43,7 +43,7 @@
         "use-debounce": "7.0.1"
     },
     "devDependencies": {
-        "@hopper-ui/styled-system": "0.2.4"
+        "@hopper-ui/styled-system": "0.2.7"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }
