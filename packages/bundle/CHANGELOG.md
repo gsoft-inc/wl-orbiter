@@ -1,5 +1,15 @@
 # @workleap/orbiter-ui
 
+## 3.2.2
+
+### Patch Changes
+
+- 573db6381: Update documentation links in component's jsdoc
+- ba32d933b: Fixed intellisence for border-radius, font-family and line-height in the styled system
+- Updated dependencies [573db6381]
+- Updated dependencies [ba32d933b]
+  - @orbit-ui/transition-components@3.2.2
+
 ## 3.2.1
 
 ### Patch Changes
