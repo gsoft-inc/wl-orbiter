@@ -128,7 +128,7 @@ export function InnerPopoverTrigger({
 InnerPopoverTrigger.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/popover--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/popover--default-story)
 */
 export const PopoverTrigger = forwardRef<any, OmitInternalProps<InnerPopoverTriggerProps>>((props, ref) => (
     <InnerPopoverTrigger {...props} forwardedRef={ref} />

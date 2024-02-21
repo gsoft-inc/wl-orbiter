@@ -163,7 +163,7 @@ InnerAccordion.defaultElement = DefaultElement;
 /**
  * Accordions are commonly used to reduce the need to scroll when presenting multiple sections of content on a single page.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/accordion--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/accordion--default-story)
 */
 export const Accordion = forwardRef<any, OmitInternalProps<InnerAccordionProps>>((props, ref) => (
     <InnerAccordion {...props} forwardedRef={ref} />

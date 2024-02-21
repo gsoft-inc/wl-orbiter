@@ -73,7 +73,7 @@ export function InnerPasswordInput(props: InnerPasswordInputProps) {
 InnerPasswordInput.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/text-input--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/text-input--default-story)
 */
 export const PasswordInput = forwardRef<HTMLInputElement, OmitInternalProps<InnerPasswordInputProps>>((props, ref) => (
     <InnerPasswordInput {...props} forwardedRef={ref} />

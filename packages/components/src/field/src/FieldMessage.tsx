@@ -36,7 +36,7 @@ export function getValidationProps(validationState: string) {
 }
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/field--input)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/field--input)
 */
 export const FieldMessage = forwardRef<any, InnerFieldMessageProps>(({
     as = FieldMessageDefaultElement,

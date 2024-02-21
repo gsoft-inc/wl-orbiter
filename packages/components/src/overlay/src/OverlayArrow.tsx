@@ -28,7 +28,7 @@ export function InnerOverlayArrow({
 InnerOverlayArrow.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/overlay--page)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/overlay--page)
 */
 export const OverlayArrow = forwardRef<any, OmitInternalProps<InnerOverlayArrowProps>>((props, ref) => (
     <InnerOverlayArrow {...props} forwardedRef={ref} />

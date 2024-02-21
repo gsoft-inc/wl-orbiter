@@ -48,7 +48,7 @@ export function InnerIconList({
 InnerIconList.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/icon--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/icon--default-story)
 */
 export const IconList = slot("icon", forwardRef<any, OmitInternalProps<InnerIconListProps>>((props, ref) => (
     <InnerIconList {...props} forwardedRef={ref} />

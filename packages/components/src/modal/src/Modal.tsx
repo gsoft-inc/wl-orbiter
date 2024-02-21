@@ -132,7 +132,7 @@ InnerModal.defaultElement = DefaultElement;
 /**
  * A modal focus the user’s attention exclusively on one task or piece of information via a dialog that sits on top of the page content.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/modal--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/modal--default-story)
 */
 export const Modal = forwardRef<any, OmitInternalProps<InnerModalProps>>((props, ref) => (
     <InnerModal {...props} forwardedRef={ref} />

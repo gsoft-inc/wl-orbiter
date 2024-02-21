@@ -55,7 +55,7 @@ export function InnerPopover({
 
     const popoverRef = useMergedRefs(forwardedRef, setFocusRef);
     const dismissButtonRef = useRef<HTMLButtonElement>();
-    
+
     const focusManager = useFocusManager(focusScope);
 
     useTrapFocus(focusManager);
@@ -172,7 +172,7 @@ InnerPopover.defaultElement = DefaultElement;
 /**
  * A Popover can be used to display some content on top of another.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/popover--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/popover--default-story)
 */
 export const Popover = forwardRef<any, OmitInternalProps<InnerPopoverProps>>((props, ref) => (
     <InnerPopover {...props} forwardedRef={ref} />

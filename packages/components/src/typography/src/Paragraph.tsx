@@ -65,7 +65,7 @@ InnerParagraph.defaultElement = DefaultElement;
 /**
  * A paragraph is used to render blocks of text.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/paragraph--size)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/paragraph--size)
 */
 export const Paragraph = forwardRef<any, OmitInternalProps<InnerParagraphProps>>((props, ref) => (
     <InnerParagraph {...props} forwardedRef={ref} />

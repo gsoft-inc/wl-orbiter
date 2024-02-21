@@ -457,7 +457,7 @@ InnerAutocomplete.defaultElement = DefaultElement;
 /**
  * An autocomplete is a normal text input enhanced by a panel of suggested options.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/autocomplete--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/autocomplete--default-story)
 */
 export const Autocomplete = forwardRef<HTMLInputElement, OmitInternalProps<InnerAutocompleteProps>>((props, ref) => (
     <InnerAutocomplete {...props} forwardedRef={ref} />

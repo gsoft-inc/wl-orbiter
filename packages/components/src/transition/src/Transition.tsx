@@ -92,7 +92,7 @@ InnerTransition.defaultElement = DefaultElement;
 /**
  * A transition component allow enter/leave CSS transitions for React elements.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/transition--page)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/transition--page)
 */
 export const Transition = forwardRef<any, OmitInternalProps<InnerTransitionProps>>((props, ref) => (
     <InnerTransition {...props} forwardedRef={ref} />

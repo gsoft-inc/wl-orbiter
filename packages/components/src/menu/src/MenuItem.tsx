@@ -150,7 +150,7 @@ export function InnerMenuItem({
 InnerMenuItem.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/menu--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/menu--default-story)
 */
 export const MenuItem = forwardRef<any, OmitInternalProps<InnerMenuItemProps>>((props, ref) => (
     <InnerMenuItem {...props} forwardedRef={ref} />

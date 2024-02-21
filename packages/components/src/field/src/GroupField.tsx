@@ -89,7 +89,7 @@ export function InnerGroupField(props: InnerGroupFieldProps) {
 InnerGroupField.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/field--input)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/field--input)
 */
 export const GroupField = forwardRef<any, OmitInternalProps<InnerGroupFieldProps>>((props, ref) => (
     <InnerGroupField {...props} forwardedRef={ref} />
