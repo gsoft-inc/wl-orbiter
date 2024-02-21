@@ -35,7 +35,9 @@ export function TokenTable({ tokens }) {
 
     useEffect(() => {
         // we need to delay this until the ref is set
-        setRows(tokens.map(x => toRowValues(x, docsContext, new ThemeComputedStyle(ref))));
+        if (ref.current) {
+            setRows(tokens.map(x => toRowValues(x, docsContext, new ThemeComputedStyle(ref))));
+        }
     }, [tokens, docsContext, ref]);
 
     return (
