@@ -86,7 +86,7 @@ InnerField.defaultElement = DefaultElement;
 /**
  * A field add a label and a message to an input. They are typically used in forms and dialogs.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/field--input)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/field--input)
 */
 export const Field = forwardRef<any, OmitInternalProps<InnerFieldProps>>((props, ref) => (
     <InnerField {...props} forwardedRef={ref} />

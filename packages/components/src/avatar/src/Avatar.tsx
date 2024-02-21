@@ -207,7 +207,7 @@ InnerAvatar.defaultElement = DefaultElement;
 /**
  * An avatar is a graphical representation of a user and typically appears in list and card views, along side a user's information and/or content that they have created
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/avatar--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/avatar--default-story)
 */
 export const Avatar = slot("avatar", forwardRef<any, OmitInternalProps<InnerAvatarProps>>((props, ref) => (
     <InnerAvatar {...props} forwardedRef={ref} />

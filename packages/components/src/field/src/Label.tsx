@@ -57,7 +57,7 @@ export function InnerLabel(props: InnerLabelProps) {
 InnerLabel.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/field--input)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/field--input)
 */
 export const Label = forwardRef<any, OmitInternalProps<InnerLabelProps>>((props, ref) => (
     <InnerLabel {...props} forwardedRef={ref} />

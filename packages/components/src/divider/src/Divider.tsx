@@ -58,7 +58,7 @@ InnerDivider.defaultElement = DefaultElement;
 /**
  * A divider to separates and distinguishes sections of content or groups of menu items.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/divider--horizontal)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/divider--horizontal)
 */
 export const Divider = forwardRef<any, OmitInternalProps<InnerDividerProps>>((props, ref) => (
     <InnerDivider {...props} forwardedRef={ref} />

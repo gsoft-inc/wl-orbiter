@@ -152,7 +152,7 @@ InnerTabs.defaultElement = DefaultElement;
 /**
  * Tabs are used to organize content by grouping similar information on the same page.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/tabs--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/tabs--default-story)
 */
 export const Tabs = forwardRef<any, OmitInternalProps<InnerTabsProps>>((props, ref) => (
     <InnerTabs {...props} forwardedRef={ref} />

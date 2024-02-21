@@ -61,7 +61,7 @@ InnerAnonymousAvatar.defaultElement = DefaultElement;
 /**
  * An anonymous avatar is a graphical representation of a user who wants to remain anonymous and typically appears in list and card views, along side a user's information and/or content that they have created
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/avatar--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/avatar--default-story)
 */
 export const AnonymousAvatar = slot("avatar", forwardRef<any, OmitInternalProps<InnerAnonymousAvatarProps>>((props, ref) => (
     <InnerAnonymousAvatar {...props} forwardedRef={ref} />

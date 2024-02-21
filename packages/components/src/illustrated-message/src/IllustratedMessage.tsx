@@ -73,7 +73,7 @@ InnerIllustratedMessage.defaultElement = DefaultElement;
 /**
  * An illustration compose an image with a background color. Use an illustration as an hero in a modal.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/illustration--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/illustration--default-story)
 */
 export const IllustratedMessage = forwardRef<any, OmitInternalProps<InnerIllustratedMessageProps>>((props, ref) => (
     <InnerIllustratedMessage {...props} forwardedRef={ref} />

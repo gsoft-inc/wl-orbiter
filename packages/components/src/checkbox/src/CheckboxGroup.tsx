@@ -151,7 +151,7 @@ export function InnerCheckboxGroup(props: InnerCheckboxGroupProps) {
 InnerCheckboxGroup.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/checkbox--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/checkbox--default-story)
 */
 export const CheckboxGroup = forwardRef<any, OmitInternalProps<InnerCheckboxGroupProps>>((props, ref) => (
     <InnerCheckboxGroup {...props} forwardedRef={ref} />

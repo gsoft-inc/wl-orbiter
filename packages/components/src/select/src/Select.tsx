@@ -266,7 +266,7 @@ InnerSelect.defaultElement = DefaultElement;
 /**
  * A select allow users to choose a single option from a collapsible list of options.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/select--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/select--default-story)
 */
 export const Select = forwardRef<any, OmitInternalProps<InnerSelectProps>>((props, ref) => (
     <InnerSelect {...props} forwardedRef={ref} />

@@ -130,7 +130,7 @@ export function InnerTagList({
 InnerTagList.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/tag--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/tag--default-story)
 */
 export const TagList = forwardRef<any, OmitInternalProps<InnerTagListProps>>((props, ref) => (
     <InnerTagList {...props} forwardedRef={ref} />

@@ -197,7 +197,7 @@ InnerCheckbox.defaultElement = DefaultElement;
 /**
  * A checkbox allows the user to toggle between 2 or 3 (indeterminate) choices.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/checkbox--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/checkbox--default-story)
 */
 export const Checkbox = forwardRef<any, OmitInternalProps<InnerCheckboxProps>>((props, ref) => (
     <InnerCheckbox {...props} forwardedRef={ref} />

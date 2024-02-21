@@ -49,7 +49,7 @@ InnerDisclosureArrow.defaultElement = DefaultElement;
 /**
  * A top / bottom pointing arrow to hint that activating the trigger will display additional content.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/disclosure-arrow--context)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/disclosure-arrow--context)
 */
 export const DisclosureArrow = slot("icon", forwardRef<any, OmitInternalProps<InnerDisclosureArrowProps>>((props, ref) => (
     <InnerDisclosureArrow {...props} forwardedRef={ref} />

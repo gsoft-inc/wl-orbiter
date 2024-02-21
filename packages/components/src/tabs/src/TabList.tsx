@@ -452,7 +452,7 @@ export function InnerTabList({
 }
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/tabs--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/tabs--default-story)
 */
 export const TabList = forwardRef<any, OmitInternalProps<InnerTabListProps>>((props, ref) => (
     <InnerTabList {...props} forwardedRef={ref} />

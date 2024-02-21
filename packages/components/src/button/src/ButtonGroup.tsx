@@ -86,7 +86,7 @@ export function InnerButtonGroup(props: InnerButtonGroupProps) {
 InnerButtonGroup.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/button--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/button--default-story)
 */
 export const ButtonGroup = slot("button-group", forwardRef<any, OmitInternalProps<InnerButtonGroupProps>>((props, ref) => (
     <InnerButtonGroup {...props} forwardedRef={ref} />

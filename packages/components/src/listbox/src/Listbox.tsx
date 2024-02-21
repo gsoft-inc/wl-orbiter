@@ -486,7 +486,7 @@ InnerListbox.defaultElement = DefaultElement;
 /**
  * A listbox presents a list of options and allows a user to select one or more of them
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/listbox--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/listbox--default-story)
 */
 export const Listbox = forwardRef<ListboxElement, OmitInternalProps<InnerListboxProps>>((props, ref) => (
     <InnerListbox {...props} forwardedRef={ref} />

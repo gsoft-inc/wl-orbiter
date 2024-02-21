@@ -156,10 +156,10 @@ Every Orbiter custom components must share a consistent API and a similar design
 ### Common functionnalities
 
 All components should:
-- Use Orbiter's [tokens](https://wl-orbiter-website.netlify.app//?path=/docs/tokens--page)
-- Support Orbiter's [color schemes](https://wl-orbiter-website.netlify.app//?path=/docs/color-schemes--page)
-- Implement Orbiter's [style props](https://wl-orbiter-website.netlify.app//?path=/docs/style-props--page)
-- Support Orbiter's [responsive styles](https://wl-orbiter-website.netlify.app//?path=/docs/responsive-styles--page)
+- Use Orbiter's [tokens](https://wl-orbiter-website.netlify.app/?path=/docs/tokens--page)
+- Support Orbiter's [color schemes](https://wl-orbiter-website.netlify.app/?path=/docs/color-schemes--page)
+- Implement Orbiter's [style props](https://wl-orbiter-website.netlify.app/?path=/docs/style-props--page)
+- Support Orbiter's [responsive styles](https://wl-orbiter-website.netlify.app/?path=/docs/responsive-styles--page)
 
 ### Design
 

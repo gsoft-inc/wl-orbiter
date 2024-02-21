@@ -83,7 +83,7 @@ export function InnerToggleButton(props: InnerToggleButtonProps) {
 InnerToggleButton.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/button--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/button--default-story)
 */
 export const ToggleButton = forwardRef<HTMLButtonElement, OmitInternalProps<InnerToggleButtonProps>>((props, ref) => (
     <InnerToggleButton {...props} forwardedRef={ref} />

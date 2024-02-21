@@ -557,7 +557,7 @@ InnerDateRangeInput.defaultElement = "input";
 /**
  * An specialized input to enter a range of dates.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/date-range-input--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/date-range-input--default-story)
 */
 export const DateRangeInput = forwardRef<any, OmitInternalProps<InnerDateRangeInputProps>>((props, ref) => (
     <InnerDateRangeInput {...props} forwardedRef={ref} />

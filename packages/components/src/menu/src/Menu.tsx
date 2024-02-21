@@ -339,7 +339,7 @@ InnerMenu.defaultElement = DefaultElement;
 /**
  * A menu offers a list of choices to the user, such as a set of actions or functions.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/menu--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/menu--default-story)
 */
 export const Menu = forwardRef<any, OmitInternalProps<InnerMenuProps>>((props, ref) => (
     <InnerMenu {...props} forwardedRef={ref} />

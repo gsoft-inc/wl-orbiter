@@ -102,7 +102,7 @@ InnerInline.defaultElement = DefaultElement;
 /**
  * A layout container using flexbox.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/flex--horizontal)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/flex--horizontal)
 */
 export const Inline = forwardRef<any, OmitInternalProps<InnerInlineProps>>((props, ref) => (
     <InnerInline {...props} forwardedRef={ref} />

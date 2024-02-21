@@ -213,7 +213,7 @@ export function InnerTooltipTrigger({
 InnerTooltipTrigger.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/tooltip--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/tooltip--default-story)
 */
 export const TooltipTrigger = forwardRef<any, OmitInternalProps<InnerTooltipTriggerProps>>((props, ref) => (
     <InnerTooltipTrigger {...props} forwardedRef={ref} />

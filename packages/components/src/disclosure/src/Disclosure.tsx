@@ -150,7 +150,7 @@ InnerDisclosure.defaultElement = DefaultElement;
 /**
  * The disclosure component is used to create regions of content that can expand/collapse with a simple animation.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/disclosure--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/disclosure--default-story)
 */
 export const Disclosure = forwardRef<any, OmitInternalProps<InnerDisclosureProps>>((props, ref) => (
     <InnerDisclosure {...props} forwardedRef={ref} />

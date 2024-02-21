@@ -104,7 +104,7 @@ export function InnerAccordionHeader(props: InnerAccordionHeaderProps) {
 InnerAccordionHeader.defaultElement = DefaultElement;
 
 /**
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/accordion--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/accordion--default-story)
 */
 export const AccordionHeader = forwardRef<any, OmitInternalProps<InnerAccordionHeaderProps>>((props, ref) => (
     <InnerAccordionHeader {...props} forwardedRef={ref} />

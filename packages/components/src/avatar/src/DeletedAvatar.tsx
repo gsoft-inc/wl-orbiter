@@ -61,7 +61,7 @@ InnerDeletedAvatar.defaultElement = DefaultElement;
 /**
  * A deleted avatar is a graphical representation of a user that has been deleted and typically appears in list and card views, along side a user's information and/or content that they have created.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/avatar--default-story)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/avatar--default-story)
 */
 export const DeletedAvatar = slot("avatar", forwardRef<any, OmitInternalProps<InnerDeletedAvatarProps>>((props, ref) => (
     <InnerDeletedAvatar {...props} forwardedRef={ref} />

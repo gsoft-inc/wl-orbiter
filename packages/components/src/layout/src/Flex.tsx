@@ -191,7 +191,7 @@ InnerFlex.defaultElement = DefaultElement;
 /**
  * A layout container using flexbox.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/flex--horizontal)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/flex--horizontal)
 */
 export const Flex = forwardRef<any, OmitInternalProps<InnerFlexProps>>((props, ref) => (
     <InnerFlex {...props} forwardedRef={ref} />

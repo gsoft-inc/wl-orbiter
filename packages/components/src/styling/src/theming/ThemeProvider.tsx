@@ -80,7 +80,7 @@ InnerThemeProvider.defaultElement = DefaultElement;
 /**
  * Container used to define the theme and color scheme to use.
  *
- * [Documentation](https://wl-orbiter-website.netlify.app//?path=/docs/theme-provider--page)
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/theme-provider--page)
 */
 export const ThemeProvider = forwardRef<any, OmitInternalProps<InnerThemeProviderProps>>((props, ref) => (
     <InnerThemeProvider {...props} forwardedRef={ref} />
