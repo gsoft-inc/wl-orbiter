@@ -1,5 +1,13 @@
 # @workleap/orbiter-ui
 
+## 3.2.3
+
+### Patch Changes
+
+- c5c13d67c: Add tag slot to the tag component
+- Updated dependencies [c5c13d67c]
+  - @orbit-ui/transition-components@3.2.3
+
 ## 3.2.2
 
 ### Patch Changes
