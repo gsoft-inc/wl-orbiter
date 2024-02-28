@@ -1,7 +1,7 @@
 import { Box } from "../../box";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef, useMemo } from "react";
 import { CrossButton } from "../../button";
-import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots, createEmbeddableAdapter } from "../../shared";
+import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots, createEmbeddableAdapter, slot } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { Text } from "../../typography";
 import { useFieldInputProps } from "../../field";
@@ -165,9 +165,9 @@ InnerTag.defaultElement = DefaultElement;
  *
  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/tag--default-story)
 */
-export const Tag = forwardRef<any, OmitInternalProps<InnerTagProps>>((props, ref) => (
+export const Tag = slot("tag", forwardRef<any, OmitInternalProps<InnerTagProps>>((props, ref) => (
     <InnerTag {...props} forwardedRef={ref} />
-));
+)));
 
 export type TagProps = ComponentProps<typeof Tag>;
 
