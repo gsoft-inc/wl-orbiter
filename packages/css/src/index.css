@@ -1,2 +1,2 @@
-@import "./font/index.css";
+@import "@hopper-ui/tokens/fonts.css";
 @import "./normalize.css";
