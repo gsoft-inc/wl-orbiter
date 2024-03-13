@@ -19,6 +19,7 @@ function addWebpackAliases(config) {
         // we could use the ~, but this only works for webpack, and vite doesn't support it.
         // also, since we are not using ~, it's considered a relative path, so we add the ./ to the alias.
         "./@hopper-ui/icons/index.css": path.resolve(__dirname, "../node_modules/@hopper-ui/icons/dist/index.css"),
+        "./@hopper-ui/tokens/fonts.css": path.resolve(__dirname, "../node_modules/@hopper-ui/tokens/dist/fonts.css"),
         "./@hopper-ui/styled-system/index.css": path.resolve(__dirname, "../node_modules/@hopper-ui/styled-system/dist/index.css"),
     };
 }

@@ -11,6 +11,9 @@
     "license": "Apache-2.0",
     "main": "src/index.css",
     "style": "src/index.css",
+    "dependencies": {
+        "@hopper-ui/tokens": "^3.2.1"
+    },
     "publishConfig": {
         "access": "public",
         "provenance": true
