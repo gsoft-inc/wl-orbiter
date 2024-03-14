@@ -1587,10 +1587,10 @@
     "@react-aria/ssr" "^3.9.1"
     clsx "^2.1.0"
 
-"@hopper-ui/tokens@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/tokens/-/tokens-3.2.1.tgz#b0a895a580ceec4767a6d8d6e7e89ac96d00f3fe"
-  integrity sha512-JwWtudZESiceYzzytUWtW0H3zMy51Y0tPhAak+hrI7Sk/oBgPeGNTHV7Q9iesqvNswoOVIOQJCasnjsUoIm/fA==
+"@hopper-ui/tokens@^3.2.1":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/tokens/-/tokens-3.3.0.tgz#4eb409b8cafe567a28b57f7d9d67237338391fef"
+  integrity sha512-YO9VjFrAVwqvukjsByxtF44fkIrGx0a/KXqR9hkIu+AD79sWXWbGkp2S+288XzzAVsR1j5I5qhLyBJzw8g2E+Q==
 
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
@@ -3102,6 +3102,18 @@
   integrity sha512-LUewfj94xCMH2rbD5YJ+6AQ4AVjFYTgpp6rboWM5T7N3IsIF65SBEOVcYMGAEzO/kKNiNaW4LoWtoThOhH06gw==
   dependencies:
     "@octokit/openapi-types" "^16.0.0"
+
+"@orbit-ui/transition-components@3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@orbit-ui/transition-components/-/transition-components-3.2.3.tgz#7886a946cd31645127f03a92a95ccc23b242b1d1"
+  integrity sha512-TKRXJCrtkxA7RsaptyM8FVc5PiJK3d5FvbsyfbJ2mQ/5vf7Kae9MXn+HifoI20jqgp6ytC5wZl9+56Xv/776zw==
+  dependencies:
+    "@hopper-ui/icons" "1.0.3"
+    "@popperjs/core" "2.11.2"
+    react-is "17.0.2"
+    text-mask-core "5.1.2"
+    type-fest "2.9.0"
+    use-debounce "7.0.1"
 
 "@orbit-ui/transition-icons@2.0.0":
   version "2.0.0"

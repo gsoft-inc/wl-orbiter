@@ -45,3 +45,4 @@ export * from "./CheckableContext";
 
 // Types
 export * from "./types";
+export * from "./type-fest";
