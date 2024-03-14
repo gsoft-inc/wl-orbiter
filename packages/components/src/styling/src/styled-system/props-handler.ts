@@ -18,8 +18,7 @@ import {
 import { Breakpoint } from "../BreakpointProvider";
 import { Globals, Property } from "csstype";
 import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue";
-import { LiteralUnion } from "type-fest";
-import { isNil } from "../../../shared";
+import { isNil, LiteralUnion } from "../../../shared";
 import { StylingContext } from "./StylingContext";
 
 export const GlobalValues = [

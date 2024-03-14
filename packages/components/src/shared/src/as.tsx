@@ -1,7 +1,6 @@
 import { ComponentProps, ElementRef, ElementType, JSXElementConstructor, forwardRef } from "react";
-
-import { Merge } from "type-fest";
-import { mergeProps } from ".";
+import { Merge } from "./type-fest";
+import { mergeProps } from "./mergeProps";
 
 export interface AsOptions {
     normalizeStyles?: boolean;

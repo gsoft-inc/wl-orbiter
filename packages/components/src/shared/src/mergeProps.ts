@@ -1,6 +1,5 @@
 import { isFunction, isNil, isUndefined } from "./assertions";
-
-import { UnionToIntersection } from "type-fest";
+import { UnionToIntersection } from "./type-fest";
 import { createChainedFunction } from "./useChainedEventCallback";
 import { mergeClasses } from "./mergeClasses";
 import { mergeRefs } from "./useMergedRefs";
