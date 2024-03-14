@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.2.5
+
+### Patch Changes
+
+- 47b07b656: Internal changes.
+
 ## 3.2.3
 
 ### Patch Changes
