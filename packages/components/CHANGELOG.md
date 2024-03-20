@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.2.6
+
+### Patch Changes
+
+- 49d0798e1: Modify the Typescript typings for the as function
+
 ## 3.2.5
 
 ### Patch Changes
