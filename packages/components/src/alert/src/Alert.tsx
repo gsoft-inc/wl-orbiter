@@ -1,13 +1,11 @@
 import { AbstractDialogProps, Dialog, useDialogTriggerContext } from "../../dialog";
 import { Button, ButtonGroup } from "../../button";
 import { ComponentProps, MouseEvent, forwardRef, useMemo } from "react";
-import { Header } from "../../placeholders";
-import { WarningIcon } from "@hopper-ui/icons";
 import { OmitInternalProps, isNil, isNilOrEmpty, mergeProps, useChainedEventCallback, useSlots } from "../../shared";
 
 const DefaultElement = "section";
 
-export interface InnerAlertProps extends Omit<AbstractDialogProps<typeof DefaultElement>, "dismissable"> {
+export interface InnerAlertProps extends AbstractDialogProps<typeof DefaultElement> {
     /**
      * The button to focus by default when the alert open.
      */
@@ -53,7 +51,7 @@ export interface InnerAlertProps extends Omit<AbstractDialogProps<typeof Default
     /**
      * The style to use.
      */
-    variant?: "confirmation" | "destructive" | "warning" | "negative";
+    variant?: "confirmation" | "destructive";
 }
 
 export function InnerAlert({
@@ -61,6 +59,7 @@ export function InnerAlert({
     autoFocusButton,
     cancelButtonLabel,
     children,
+    dismissable = true,
     forwardedRef,
     onCancelButtonClick,
     onPrimaryButtonClick,
@@ -74,6 +73,8 @@ export function InnerAlert({
     ...rest
 }: InnerAlertProps) {
     const { close } = useDialogTriggerContext();
+
+    console.log(dismissable, "dismissable");
 
     const { content, heading } = useSlots(children, useMemo(() => ({
         _: {
@@ -100,18 +101,6 @@ export function InnerAlert({
             close(event);
         }
     });
-
-    const warningIconMarkup = variant === "warning" && (
-        <Header>
-            <WarningIcon className="o-ui-alert-icon o-ui-alert-warning-icon" />
-        </Header>
-    );
-
-    const negativeIconMarkup = variant === "negative" && (
-        <Header>
-            <WarningIcon className="o-ui-alert-icon o-ui-alert-negative-icon" />
-        </Header>
-    );
 
     const primaryButtonMarkup = (
         <Button
@@ -149,7 +138,7 @@ export function InnerAlert({
     const buttonsMarkup = isNil(secondaryButtonMarkup) && isNil(cancelButtonMarkup)
         ? primaryButtonMarkup
         : (
-            <ButtonGroup>
+            <ButtonGroup className="o-ui-alert-button-group" fluid>
                 {cancelButtonMarkup}
                 {secondaryButtonMarkup}
                 {primaryButtonMarkup}
@@ -158,11 +147,12 @@ export function InnerAlert({
 
     return (
         <Dialog
+            className="o-ui-alert o-ui-alert-dialog"
+            dismissable={dismissable}
             {...mergeProps(
                 rest,
                 {
                     as,
-                    dismissable: false,
                     ref: forwardedRef,
                     role: "alertdialog" as const,
                     size: "sm" as const,
@@ -171,8 +161,6 @@ export function InnerAlert({
             )}
         >
             {heading}
-            {warningIconMarkup}
-            {negativeIconMarkup}
             {content}
             {buttonsMarkup}
         </Dialog>

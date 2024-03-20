@@ -14,10 +14,6 @@ createTestSuite(<Alert variant="confirmation" />, stories("/confirmation"));
 
 createTestSuite(<Alert variant="destructive" />, stories("/destructive"));
 
-createTestSuite(<Alert variant="warning" />, stories("/warning"));
-
-createTestSuite(<Alert variant="negative" />, stories("/negative"));
-
 stories()
     .add("styled system", () =>
         <Alert

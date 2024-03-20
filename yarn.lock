@@ -3103,18 +3103,6 @@
   dependencies:
     "@octokit/openapi-types" "^16.0.0"
 
-"@orbit-ui/transition-components@3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@orbit-ui/transition-components/-/transition-components-3.2.3.tgz#7886a946cd31645127f03a92a95ccc23b242b1d1"
-  integrity sha512-TKRXJCrtkxA7RsaptyM8FVc5PiJK3d5FvbsyfbJ2mQ/5vf7Kae9MXn+HifoI20jqgp6ytC5wZl9+56Xv/776zw==
-  dependencies:
-    "@hopper-ui/icons" "1.0.3"
-    "@popperjs/core" "2.11.2"
-    react-is "17.0.2"
-    text-mask-core "5.1.2"
-    type-fest "2.9.0"
-    use-debounce "7.0.1"
-
 "@orbit-ui/transition-icons@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@orbit-ui/transition-icons/-/transition-icons-2.0.0.tgz#da93d3076b779906a976c9178ad37f2d2f970eed"
@@ -21062,11 +21050,6 @@ type-detect@4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
   integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
-
-type-fest@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.9.0.tgz#7a2d430dd966f52b6bc723da2aaa2c9867530551"
-  integrity sha512-uC0hJKi7eAGXUJ/YKk53RhnKxMwzHWgzf4t92oz8Qez28EBgVTfpDTB59y9hMYLzc/Wl85cD7Tv1hLZZoEJtrg==
 
 type-fest@^0.10.0:
   version "0.10.0"

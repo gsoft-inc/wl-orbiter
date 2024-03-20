@@ -1,7 +1,3 @@
-.o-ui-alert-warning-icon {
-    color: var(--hop-warning-icon-weak);
-}
-
-.o-ui-alert-negative-icon {
-    color: var(--hop-danger-icon-weak);
+.o-ui-alert.o-ui-alert-dialog {
+    width: 28.75rem;
 }

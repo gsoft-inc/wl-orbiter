@@ -11,7 +11,7 @@ export function InnerAlertTrigger({
     return (
         <DialogTrigger
             {...rest}
-            dismissable={false}
+            dismissable
             ref={forwardedRef}
         />
     );
