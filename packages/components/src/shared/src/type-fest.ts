@@ -12,8 +12,6 @@ type Except<ObjectType, KeysType extends keyof ObjectType> = {
     [KeyType in keyof ObjectType as Filter<KeyType, KeysType>]: ObjectType[KeyType];
 };
 
-type Extract<T, U> = T extends U ? T : never;
-
 type Merge_<FirstType, SecondType> = Except<FirstType, Extract<keyof FirstType, keyof SecondType>> & SecondType;
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
