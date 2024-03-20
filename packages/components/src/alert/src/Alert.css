@@ -10,8 +10,8 @@
 }
 
 .o-ui-alert-heading {
-    align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .o-ui-alert-content {

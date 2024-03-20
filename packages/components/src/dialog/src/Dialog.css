@@ -144,6 +144,10 @@
     margin-left: auto;
 }
 
+.o-ui-dialog-button-group {
+    width: 100%;
+}
+
 /* DISMISS BUTTON */
 .o-ui-dialog .o-ui-dialog-dismiss-button {
     position: absolute;
