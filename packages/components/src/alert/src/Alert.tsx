@@ -74,14 +74,16 @@ export function InnerAlert({
 }: InnerAlertProps) {
     const { close } = useDialogTriggerContext();
 
-    console.log(dismissable, "dismissable");
-
     const { content, heading } = useSlots(children, useMemo(() => ({
         _: {
             required: ["heading", "content"]
         },
-        content: null,
-        heading: null
+        content: {
+            className: "o-ui-alert-content"
+        },
+        heading: {
+            className: "o-ui-alert-heading"
+        }
     }), []));
 
     const handlePrimaryButtonClick = useChainedEventCallback(onPrimaryButtonClick, event => {
@@ -123,7 +125,6 @@ export function InnerAlert({
             {secondaryButtonLabel}
         </Button>
     );
-
 
     const cancelButtonMarkup = !isNilOrEmpty(cancelButtonLabel) && (
         <Button

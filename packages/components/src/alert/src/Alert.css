@@ -1,3 +1,19 @@
+.o-ui-alert-button-group > .o-ui-button {
+    max-width: 50%;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
 .o-ui-alert.o-ui-alert-dialog {
     width: 28.75rem;
+}
+
+.o-ui-alert-heading {
+    align-items: center;
+    text-align: center;
+}
+
+.o-ui-alert-content {
+    text-align: center;
 }

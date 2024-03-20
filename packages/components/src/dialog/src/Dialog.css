@@ -46,7 +46,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 /* DIALOG | SIZES */
@@ -104,9 +103,7 @@
 /* DIALOG | HEADER SECTION | HEADING */
 .o-ui-dialog .o-ui-dialog-heading {
     align-self: center;
-    text-align: center;
     margin-bottom: 0;
-    width: 100%;
 }
 
 /* DIALOG | HEADER SECTION | HEADER */
@@ -141,23 +138,10 @@
 }
 
 /* DIALOG | FOOTER SECTION | BUTTONS */
-.o-ui-alert-button-group > .o-ui-button {
-    max-width: 50%;
-    flex-grow: 1;
-    flex-basis: 0;
-    min-width: 0;
-}
-
 .o-ui-dialog-button,
 .o-ui-dialog-button-group {
     justify-content: flex-end;
     margin-left: auto;
-}
-
-.o-ui-dialog.o-ui-dialog-button-group {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
 }
 
 /* DISMISS BUTTON */
