@@ -1,8 +1,16 @@
 .o-ui-alert-button-group > .o-ui-button {
     max-width: 50%;
+    width: 50%;
     flex-grow: 1;
     flex-basis: 0;
-    min-width: 0;
+}
+
+/* We need to determine a sensitive max-width to wrap - 360px seems like a good point */
+@media all and (max-width: 40rem) {
+    .o-ui-alert-button-group > .o-ui-button {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .o-ui-alert-heading {

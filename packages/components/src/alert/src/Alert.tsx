@@ -139,7 +139,17 @@ export function InnerAlert({
     const buttonsMarkup = isNil(secondaryButtonMarkup) && isNil(cancelButtonMarkup)
         ? primaryButtonMarkup
         : (
-            <ButtonGroup className="o-ui-alert-button-group" fluid>
+            <ButtonGroup
+                className="o-ui-alert-button-group"
+                fluid={{
+                    base: true,
+                    xs: false
+                }}
+                orientation={{
+                    base: "vertical",
+                    xs: "horizontal"
+                }}
+            >
                 {cancelButtonMarkup}
                 {secondaryButtonMarkup}
                 {primaryButtonMarkup}
