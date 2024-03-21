@@ -148,11 +148,11 @@ export function InnerAlert({
 
     return (
         <Dialog
-            className="o-ui-alert o-ui-alert-dialog"
             {...mergeProps(
                 rest,
                 {
                     as,
+                    className: "o-ui-alert o-ui-alert-dialog",
                     dismissable,
                     ref: forwardedRef,
                     role: "alertdialog" as const,
