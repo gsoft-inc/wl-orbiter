@@ -28,7 +28,6 @@
     align-items: stretch;
     grid-template-areas: "image image" "aside aside";
     grid-template-rows: min-content auto;
-    width: 28.75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -50,7 +49,7 @@
 
 /* DIALOG | SIZES */
 .o-ui-dialog-sm {
-    width: 34rem;
+    width: 28.75rem;
 }
 
 .o-ui-dialog-md {

@@ -5,10 +5,6 @@
     min-width: 0;
 }
 
-.o-ui-alert.o-ui-alert-dialog {
-    width: 28.75rem;
-}
-
 .o-ui-alert-heading {
     text-align: center;
     width: 100%;
