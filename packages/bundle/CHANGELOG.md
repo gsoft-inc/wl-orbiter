@@ -1,5 +1,13 @@
 # @workleap/orbiter-ui
 
+## 3.2.7
+
+### Patch Changes
+
+- 2f178cc61: Exported types that were not being exported (ButtonVariant, ToggleButtonVariant, LinkVariant and TileOrientation)
+- Updated dependencies [2f178cc61]
+  - @orbit-ui/transition-components@3.2.7
+
 ## 3.2.6
 
 ### Patch Changes
