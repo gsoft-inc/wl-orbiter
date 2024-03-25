@@ -3,4 +3,4 @@
 "@workleap/orbiter-ui": patch
 ---
 
-Exported some internal types that were missing
+Exported types that were not being exported (ButtonVariant, ToggleButtonVariant, LinkVariant and TileOrientation)
