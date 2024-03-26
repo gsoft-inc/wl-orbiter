@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 3.3.0
+
+### Minor Changes
+
+- c11b045e1: Added support for size prop on TextInput / SearchInput and PasswordInput
+
 ## 3.2.7
 
 ### Patch Changes
