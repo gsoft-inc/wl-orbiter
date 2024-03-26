@@ -1,12 +1,11 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputHasFocus } from "../../input";
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner, useInputButton, useInputHasFocus } from "../../input";
 import { Box, BoxProps } from "../../box";
 import { ChangeEvent, ComponentProps, ElementType, ReactElement, forwardRef } from "react";
 import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group";
-import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, augmentElement, omitProps, useChainedEventCallback, useControllableState } from "../../shared";
+import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, omitProps, useChainedEventCallback, useControllableState } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { useFieldInputProps } from "../../field";
 import { useToolbarProps } from "../../toolbar";
-import { Spinner } from "../../spinner";
 
 export type AbstractTextInputProps<T extends ElementType> = AbstractInputProps<T> & {
     /**
@@ -165,24 +164,13 @@ export function InnerTextInput(props: InnerTextInputProps) {
 
     const { hasFocus, inputProps: inputFocusProps } = useInputHasFocus();
 
-    const iconMarkup = icon && augmentElement(icon, {
-        className: "o-ui-input-icon",
+    const iconMarkup = useInputIcon(icon, {
         size: iconSize(sizeValue)
     });
 
-    const buttonMarkup = button && !disabled && !readOnly && augmentElement(button, {
-        className: "o-ui-input-button",
-        size: buttonSize(sizeValue)
-    });
+    const buttonMarkup = useInputButton(button, !disabled && !readOnly, { size: buttonSize(sizeValue) });
 
-    const loadingMarkup = loading && (
-        <Spinner
-            aria-label="Loading..."
-            className="o-ui-input-spinner"
-            role="presentation"
-            size={spinnerSize(sizeValue)}
-        />
-    );
+    const loadingMarkup = useInputSpinner(loading, { size: spinnerSize(sizeValue) });
 
     const content = (
         <>

@@ -1,5 +1,5 @@
 import { embedIconButton } from "../../button";
-import { Spinner } from "../../spinner";
+import { Spinner, SpinnerProps } from "../../spinner";
 import { CreatedIconProps } from "@hopper-ui/icons";
 import { ReactElement } from "react";
 import { augmentElement } from "../../shared";
@@ -21,6 +21,6 @@ export function useInputButton(button: ReactElement, isActive: boolean, props: R
     });
 }
 
-export function useInputSpinner(loading: boolean) {
-    return loading && <Spinner aria-label="Loading..." className="o-ui-input-spinner" role="presentation" />;
+export function useInputSpinner(loading: boolean, props: Partial<SpinnerProps>) {
+    return loading && <Spinner aria-label="Loading..." className="o-ui-input-spinner" role="presentation" {...props} />;
 }
