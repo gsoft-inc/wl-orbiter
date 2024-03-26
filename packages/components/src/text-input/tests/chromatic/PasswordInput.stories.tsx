@@ -14,7 +14,10 @@ export const Default: PasswordInputStory = {
     storyName: "default",
     render: () => (
         <Stack>
-            <PasswordInput aria-label="Label" />
+            <Inline alignY="center">
+                <PasswordInput aria-label="Label" />
+                <PasswordInput aria-label="Label" size="sm" />
+            </Inline>
             <PasswordInput disabled aria-label="Label"></PasswordInput>
             <PasswordInput readOnly aria-label="Label"></PasswordInput>
             <PasswordInput fluid aria-label="Label"></PasswordInput>
@@ -29,7 +32,10 @@ export const Placeholder: PasswordInputStory = {
     storyName: "placeholder",
     render: () => (
         <Stack>
-            <PasswordInput placeholder="What's your secret?" />
+            <Inline alignY="center">
+                <PasswordInput placeholder="What's your secret?" />
+                <PasswordInput placeholder="What's your secret?" size="sm" />
+            </Inline>
             <PasswordInput disabled placeholder="What's your secret?"></PasswordInput>
             <PasswordInput readOnly placeholder="What's your secret?"></PasswordInput>
             <PasswordInput fluid placeholder="What's your secret?"></PasswordInput>
@@ -44,7 +50,10 @@ export const Value: PasswordInputStory = {
     storyName: "value",
     render: () => (
         <Stack>
-            <PasswordInput defaultValue="test123!" aria-label="Label" />
+            <Inline alignY="center">
+                <PasswordInput defaultValue="test123!" aria-label="Label" />
+                <PasswordInput defaultValue="test123!" aria-label="Label" size="sm" />
+            </Inline>
             <PasswordInput disabled defaultValue="test123!" aria-label="Label" />
             <PasswordInput readOnly defaultValue="test123!" aria-label="Label" />
             <Inline>
@@ -87,10 +96,16 @@ export const Zoom: PasswordInputStory = {
     render: () => (
         <Stack>
             <Div className="zoom-in">
-                <PasswordInput placeholder="What's your secret?" />
+                <Inline alignY="center">
+                    <PasswordInput placeholder="What's your secret?" />
+                    <PasswordInput placeholder="What's your secret?" size="sm" />
+                </Inline>
             </Div>
             <Div className="zoom-out">
-                <PasswordInput placeholder="What's your secret?" />
+                <Inline alignY="center">
+                    <PasswordInput placeholder="What's your secret?" />
+                    <PasswordInput placeholder="What's your secret?" size="sm" />
+                </Inline>
             </Div>
         </Stack>
     )

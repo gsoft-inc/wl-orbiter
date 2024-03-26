@@ -1,5 +1,5 @@
 import { ChangeEvent, ChangeEventHandler, ForwardedRef } from "react";
-import { cssModule, isNil, isNumber, mergeClasses, useAutoFocus, useEventCallback, useMergedRefs } from "../../shared";
+import { cssModule, isNil, isNumber, mergeClasses, normalizeSize, Size, useAutoFocus, useEventCallback, useMergedRefs } from "../../shared";
 
 import { ValidationState } from "./types";
 
@@ -18,6 +18,7 @@ export interface UseInputProps {
     placeholder?: string;
     readOnly?: boolean;
     required?: boolean;
+    size?: Size;
     type?: "text" | "password" | "search" | "url" | "tel" | "email" | "number";
     validationState?: ValidationState;
     value?: string | number;
@@ -38,6 +39,7 @@ export function useInput({
     placeholder,
     readOnly,
     required,
+    size,
     type,
     validationState,
     value
@@ -81,7 +83,8 @@ export function useInput({
                     loading && "loading",
                     active && "active",
                     focus && "focus",
-                    hover && "hover"
+                    hover && "hover",
+                    normalizeSize(size)
                 )
             ),
             role: "presentation"

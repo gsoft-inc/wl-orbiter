@@ -3,9 +3,12 @@
     --o-ui-input-padding-with-icon: var(--hop-space-inset-xl);
     --o-ui-input-padding-with-button: 2.5rem;
     --o-ui-input-padding-loading: 2.5rem;
+    --o-ui-input-sm-padding: var(--hop-space-inset-squish-sm);
     --o-ui-input-border-color: var(--hop-neutral-border);
     --o-ui-input-border-radius: var(--hop-shape-rounded-md);
     --o-ui-input-background-color: var(--hop-neutral-surface);
+    --o-ui-input-height: 2.5rem;
+    --o-ui-input-sm-height: 2rem;
 }
 
 .o-ui-input {
@@ -28,9 +31,13 @@
     width: 100%;
     background-color: inherit;
     color: var(--hop-neutral-text);
-    min-height: calc(2.5rem - 2px);
+    min-height: calc(var(--o-ui-input-height) - 2px);
     margin: 0;
     padding: 0;
+}
+
+.o-ui-input-sm input {
+    min-height: calc(var(--o-ui-input-sm-height) - 2px);
 }
 
 .o-ui-input textarea {
@@ -59,10 +66,18 @@
     font-family: inherit;
 }
 
+.o-ui-text-input.o-ui-input-sm {
+    font-size: var(--hop-body-sm-font-size);
+}
+
 .o-ui-text-input input,
 .o-ui-text-area textarea,
 .o-ui-number-input input {
     padding: var(--o-ui-input-padding);
+}
+
+.o-ui-text-input.o-ui-input-sm input {
+    padding: var(--o-ui-input-sm-padding);
 }
 
 .o-ui-text-input input,
