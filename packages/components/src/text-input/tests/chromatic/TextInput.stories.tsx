@@ -17,9 +17,15 @@ export const Default: TextInputStory = {
     storyName: "default",
     render: () => (
         <Stack>
-            <TextInput aria-label="Label" />
+            <Inline alignY="center">
+                <TextInput aria-label="Label" />
+                <TextInput aria-label="Label" size="sm" />
+            </Inline>
             <TextInput active aria-label="Label" />
-            <TextInput loading aria-label="Label" />
+            <Inline alignY="center">
+                <TextInput loading aria-label="Label" />
+                <TextInput loading aria-label="Label" size="sm" />
+            </Inline>
             <TextInput disabled aria-label="Label"></TextInput>
             <TextInput readOnly aria-label="Label"></TextInput>
             <TextInput fluid aria-label="Label"></TextInput>
@@ -35,7 +41,10 @@ export const Placeholder: TextInputStory = {
     storyName: "placeholder",
     render: () => (
         <Stack>
-            <TextInput placeholder="Where to?" />
+            <Inline alignY="center">
+                <TextInput placeholder="Where to?" />
+                <TextInput placeholder="Where to?" size="sm" />
+            </Inline>
             <TextInput active placeholder="Where to?" />
             <TextInput loading placeholder="Where to?" />
             <TextInput disabled placeholder="Where to?"></TextInput>
@@ -53,7 +62,10 @@ export const Value: TextInputStory = {
     storyName: "value",
     render: () => (
         <Stack>
-            <TextInput defaultValue="SpaceX will win the race!" aria-label="Label" />
+            <Inline alignY="center">
+                <TextInput defaultValue="SpaceX will win the race!" aria-label="Label" />
+                <TextInput defaultValue="SpaceX will win the race!" aria-label="Label" size="sm" />
+            </Inline>
             <TextInput active defaultValue="SpaceX will win the race!" aria-label="Label" />
             <TextInput loading defaultValue="SpaceX will win the race!" aria-label="Label" />
             <TextInput disabled defaultValue="SpaceX will win the race!" aria-label="Label" />
@@ -75,7 +87,10 @@ export const Icon: TextInputStory = {
     storyName: "icon",
     render: () => (
         <Stack>
-            <TextInput icon={<SearchIcon />} placeholder="Where to?" aria-label="Label" />
+            <Inline alignY="center">
+                <TextInput icon={<SearchIcon />} placeholder="Where to?" aria-label="Label" />
+                <TextInput icon={<SearchIcon />} placeholder="Where to?" aria-label="Label" size="sm" />
+            </Inline>
             <TextInput icon={<SearchIcon />} defaultValue="SpaceX will win the race!" placeholder="Where to?" />
             <TextInput active icon={<SearchIcon />} placeholder="Where to?" />
             <TextInput loading icon={<SearchIcon />} placeholder="Where to?" />
@@ -93,7 +108,10 @@ export const Button: TextInputStory = {
     storyName: "button",
     render: () => (
         <Stack>
-            <TextInput button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
+            <Inline alignY="center">
+                <TextInput button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
+                <TextInput button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" size="sm" />
+            </Inline>
             <TextInput button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" defaultValue="SpaceX will win the race!" />
             <Inline>
                 <TextInput disabled button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
@@ -153,10 +171,16 @@ export const Zoom: TextInputStory = {
     render: () => (
         <Stack>
             <Div className="zoom-in">
-                <TextInput placeholder="Where to?" />
+                <Inline alignY="center">
+                    <TextInput placeholder="Where to?" />
+                    <TextInput placeholder="Where to?" size="sm" />
+                </Inline>
             </Div>
             <Div className="zoom-out">
-                <TextInput placeholder="Where to?" />
+                <Inline alignY="center">
+                    <TextInput placeholder="Where to?" />
+                    <TextInput placeholder="Where to?" size="sm" />
+                </Inline>
             </Div>
         </Stack>
     )

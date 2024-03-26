@@ -1,11 +1,12 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputButton, useInputHasFocus, useInputIcon, useInputSpinner } from "../../input";
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputHasFocus } from "../../input";
 import { Box, BoxProps } from "../../box";
 import { ChangeEvent, ComponentProps, ElementType, ReactElement, forwardRef } from "react";
 import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group";
-import { OmitInternalProps, cssModule, isNil, mergeProps, omitProps, useChainedEventCallback, useControllableState } from "../../shared";
+import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, augmentElement, omitProps, useChainedEventCallback, useControllableState } from "../../shared";
 import { ResponsiveProp, useResponsiveValue } from "../../styling";
 import { useFieldInputProps } from "../../field";
 import { useToolbarProps } from "../../toolbar";
+import { Spinner } from "../../spinner";
 
 export type AbstractTextInputProps<T extends ElementType> = AbstractInputProps<T> & {
     /**
@@ -36,6 +37,10 @@ export type AbstractTextInputProps<T extends ElementType> = AbstractInputProps<T
      */
     onValueChange?: (event: ChangeEvent<HTMLInputElement>, value: string) => void;
     /**
+     * An input can vary in size.
+     */
+    size?: ResponsiveProp<"sm" | "md">;
+    /**
      * A controlled value.
      */
     value?: string | null;
@@ -53,6 +58,27 @@ export interface InnerTextInputProps extends AbstractTextInputProps<typeof Defau
      */
     type?: "text" | "password" | "search" | "url" | "tel" | "email";
 }
+
+/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
+const spinnerSize = createSizeAdapter({
+    "sm": "md",
+    "md": "md"
+});
+/* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
+
+/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
+const iconSize = createSizeAdapter({
+    "sm": "sm",
+    "md": "md"
+});
+/* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
+
+/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
+const buttonSize = createSizeAdapter({
+    "sm": "2xs",
+    "md": "xs"
+});
+/* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
 export function InnerTextInput(props: InnerTextInputProps) {
     const [toolbarProps] = useToolbarProps();
@@ -88,6 +114,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
         placeholder,
         readOnly,
         required,
+        size,
         style,
         type = "text",
         validationState,
@@ -101,6 +128,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
     }
 
     const fluidValue = useResponsiveValue(fluid);
+    const sizeValue = useResponsiveValue(size);
 
     const [inputValue, setValue] = useControllableState(value, defaultValue, "");
 
@@ -129,6 +157,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
         placeholder,
         readOnly,
         required,
+        size: sizeValue,
         type,
         validationState,
         value: inputValue
@@ -136,11 +165,24 @@ export function InnerTextInput(props: InnerTextInputProps) {
 
     const { hasFocus, inputProps: inputFocusProps } = useInputHasFocus();
 
-    const iconMarkup = useInputIcon(icon);
+    const iconMarkup = icon && augmentElement(icon, {
+        className: "o-ui-input-icon",
+        size: iconSize(sizeValue)
+    });
 
-    const buttonMarkup = useInputButton(button, !disabled && !readOnly);
+    const buttonMarkup = button && !disabled && !readOnly && augmentElement(button, {
+        className: "o-ui-input-button",
+        size: buttonSize(sizeValue)
+    });
 
-    const loadingMarkup = useInputSpinner(loading);
+    const loadingMarkup = loading && (
+        <Spinner
+            aria-label="Loading..."
+            className="o-ui-input-spinner"
+            role="presentation"
+            size={spinnerSize(sizeValue)}
+        />
+    );
 
     const content = (
         <>
