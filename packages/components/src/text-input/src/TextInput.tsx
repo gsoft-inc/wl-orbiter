@@ -72,13 +72,6 @@ const iconSize = createSizeAdapter({
 });
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
-/* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
-const buttonSize = createSizeAdapter({
-    "sm": "2xs",
-    "md": "xs"
-});
-/* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
-
 export function InnerTextInput(props: InnerTextInputProps) {
     const [toolbarProps] = useToolbarProps();
     const [fieldProps] = useFieldInputProps();
@@ -168,7 +161,7 @@ export function InnerTextInput(props: InnerTextInputProps) {
         size: iconSize(sizeValue)
     });
 
-    const buttonMarkup = useInputButton(button, !disabled && !readOnly, { size: buttonSize(sizeValue) });
+    const buttonMarkup = useInputButton(button, !disabled && !readOnly, { size: sizeValue });
 
     const loadingMarkup = useInputSpinner(loading, { size: spinnerSize(sizeValue) });
 
@@ -219,7 +212,6 @@ export function InnerTextInput(props: InnerTextInputProps) {
     );
 }
 
-InnerTextInput.defaultElement = DefaultElement;
 
 /**
  * A text input allow a user to enter and edit a text.
