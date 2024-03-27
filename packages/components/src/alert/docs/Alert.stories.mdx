@@ -155,38 +155,18 @@ Use a destructive alert to confirm a permanent change, like deleting data.
     </Story>
 </Preview>
 
-### Warning
+### Not Dismissable
 
-Use a warning alert to inform of a significant change.
+An alert can be undismissable.
 
 <Preview>
-    <Story name="warning">
+    <Story name="not dismissable">
         <AlertTrigger>
             <Button variant="secondary">Open</Button>
             <Alert
-                variant="warning"
-                primaryButtonLabel="Ok"
-                secondaryButtonLabel="Diagnose"
-            >
-                <Heading>Low carburant</Heading>
-                <Content>The space shuttle will be out of fuel in an hour.</Content>
-            </Alert>
-        </AlertTrigger>
-    </Story>
-</Preview>
-
-### Negative
-
-Use a negative alert to inform that something went wrong, like a server error.
-
-<Preview>
-    <Story name="negative">
-        <AlertTrigger>
-            <Button variant="secondary">Open</Button>
-            <Alert
-                variant="negative"
                 primaryButtonLabel="Retry"
                 cancelButtonLabel="Cancel"
+                dismissable={false}
             >
                 <Heading>Network error</Heading>
                 <Content>Something went wrong while connecting to NASA network. Please try again in a few minutes.</Content>

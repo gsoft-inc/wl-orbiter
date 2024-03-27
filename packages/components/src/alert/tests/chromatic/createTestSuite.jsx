@@ -70,6 +70,17 @@ export function createTestSuite(element, stories) {
                 <Content>Are you sure you want to launch the space shuttle?</Content>
             </Alert>
         )
+        .add("not dismissable", () =>
+            <Alert
+                primaryButtonLabel="Launch"
+                secondaryButtonLabel="Postpone"
+                element={element}
+                dismissable={false}
+            >
+                <Heading>Launch</Heading>
+                <Content>Are you sure you want to launch the space shuttle?</Content>
+            </Alert>
+        )
         .add("zoom in", () =>
             <Div className="zoom-in">
                 <Alert primaryButtonLabel="Yes" element={element}>

@@ -29,7 +29,7 @@ const ExtendLinks = {
 };
 
 
-export interface ComponentInfoProps extends ComponentProps<"dl">{
+export interface ComponentInfoProps extends ComponentProps<"dl"> {
     usage: string | {
         sharegate: string;
     };
