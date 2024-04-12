@@ -5,19 +5,25 @@
     flex-basis: 0;
 }
 
+.o-ui-alert-heading {
+    text-align: left;
+    width: 100%;
+}
+
+.o-ui-alert-content {
+    text-align: left;
+}
+
 /* We need to determine a sensitive max-width to wrap - 360px seems like a good point */
 @media all and (max-width: 40rem) {
     .o-ui-alert-button-group > .o-ui-button {
         max-width: 100%;
         width: 100%;
     }
-}
-
-.o-ui-alert-heading {
-    text-align: center;
-    width: 100%;
-}
-
-.o-ui-alert-content {
-    text-align: center;
+    .o-ui-alert-heading {
+        text-align: center;
+    }
+    .o-ui-alert-content {
+        text-align: center;
+    }
 }
