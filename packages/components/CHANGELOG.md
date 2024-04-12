@@ -1,5 +1,23 @@
 # @orbit-ui/transition-components
 
+## 3.3.0
+
+### Minor Changes
+
+- c11b045e1: Added support for size prop on TextInput / SearchInput and PasswordInput
+
+## 3.2.7
+
+### Patch Changes
+
+- 2f178cc61: Exported types that were not being exported (ButtonVariant, ToggleButtonVariant, LinkVariant and TileOrientation)
+
+## 3.2.6
+
+### Patch Changes
+
+- 49d0798e1: Modify the Typescript typings for the as function
+
 ## 3.2.5
 
 ### Patch Changes

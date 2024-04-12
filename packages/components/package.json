@@ -1,6 +1,6 @@
 {
     "name": "@orbit-ui/transition-components",
-    "version": "3.2.5",
+    "version": "3.3.0",
     "description": "Orbiter components",
     "repository": {
         "type": "git",
@@ -32,17 +32,19 @@
     "peerDependencies": {
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
-        "@hopper-ui/styled-system": "*"
+        "@hopper-ui/styled-system": "*",
+        "react-aria-components": "*"
     },
     "dependencies": {
-        "@hopper-ui/icons": "1.0.3",
+        "@hopper-ui/icons": "^1.6.0",
         "@popperjs/core": "2.11.2",
         "react-is": "17.0.2",
         "text-mask-core": "5.1.2",
         "use-debounce": "7.0.1"
     },
     "devDependencies": {
-        "@hopper-ui/styled-system": "0.2.7"
+        "@hopper-ui/styled-system": "^1.0.0",
+        "react-aria-components": "^1.1.1"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }

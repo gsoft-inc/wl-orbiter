@@ -40,6 +40,7 @@ export function InnerSearchInput(props: InnerSearchInputProps) {
         onChange,
         onKeyDown,
         onValueChange,
+        size,
         value,
         wrapperProps,
         ...rest
@@ -111,6 +112,7 @@ export function InnerSearchInput(props: InnerSearchInputProps) {
                     onChange: handleChange,
                     onKeyDown: handleKeyDown,
                     ref: inputRef,
+                    size: size,
                     spellCheck: "false",
                     type: "search" as const,
                     value: inputValue,

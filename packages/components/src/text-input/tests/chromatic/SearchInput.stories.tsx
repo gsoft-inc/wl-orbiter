@@ -16,8 +16,14 @@ export const Default: SearchInputStory = {
     storyName: "default",
     render: () => (
         <Stack>
-            <SearchInput aria-label="Label" />
-            <SearchInput loading aria-label="Label"></SearchInput>
+            <Inline alignY="center">
+                <SearchInput aria-label="Label" />
+                <SearchInput aria-label="Label" size="sm" />
+            </Inline>
+            <Inline alignY="center">
+                <SearchInput loading aria-label="Label"></SearchInput>
+                <SearchInput loading aria-label="Label" size="sm"></SearchInput>
+            </Inline>
             <SearchInput disabled aria-label="Label"></SearchInput>
             <SearchInput readOnly aria-label="Label"></SearchInput>
             <SearchInput fluid aria-label="Label"></SearchInput>
@@ -25,7 +31,7 @@ export const Default: SearchInputStory = {
                 <SearchInput fluid aria-label="Label"></SearchInput>
             </Div>
             <SearchInput loading fluid aria-label="Label"></SearchInput>
-        </Stack>
+        </Stack >
     )
 };
 
@@ -33,7 +39,10 @@ export const Placeholder: SearchInputStory = {
     storyName: "placeholder",
     render: () => (
         <Stack>
-            <SearchInput placeholder="Where to?" />
+            <Inline alignY="center">
+                <SearchInput placeholder="Where to?" />
+                <SearchInput placeholder="Where to?" size="sm" />
+            </Inline>
             <SearchInput loading placeholder="Where to?" />
             <SearchInput disabled placeholder="Where to?"></SearchInput>
             <SearchInput readOnly placeholder="Where to?"></SearchInput>
@@ -50,7 +59,10 @@ export const Value: SearchInputStory = {
     storyName: "value",
     render: () => (
         <Stack>
-            <SearchInput defaultValue="Mars" aria-label="Label" />
+            <Inline alignY="center">
+                <SearchInput defaultValue="Mars" aria-label="Label" />
+                <SearchInput defaultValue="Mars" aria-label="Label" size="sm" />
+            </Inline>
             <SearchInput loading defaultValue="Mars" aria-label="Label" />
             <SearchInput disabled defaultValue="Mars" aria-label="Label" />
             <SearchInput readOnly defaultValue="Mars" aria-label="Label" />
@@ -71,7 +83,10 @@ export const CustomIcon: SearchInputStory = {
     storyName: "custom icon",
     render: () => (
         <Stack>
-            <SearchInput icon={<MailIcon />} placeholder="Where to?" aria-label="Label" />
+            <Inline alignY="center">
+                <SearchInput icon={<MailIcon />} placeholder="Where to?" aria-label="Label" />
+                <SearchInput icon={<MailIcon />} placeholder="Where to?" aria-label="Label" size="sm" />
+            </Inline>
             <SearchInput icon={<MailIcon />} defaultValue="SpaceX will win the race!" aria-label="Label" />
             <SearchInput loading icon={<MailIcon />} placeholder="Where to?" />
             <SearchInput disabled icon={<MailIcon />} placeholder="Where to?" />
@@ -132,10 +147,16 @@ export const Zoom: SearchInputStory = {
     render: () => (
         <Stack>
             <Div className="zoom-in">
-                <SearchInput placeholder="Where to?" />
+                <Inline alignY="center">
+                    <SearchInput placeholder="Where to?" />
+                    <SearchInput placeholder="Where to?" size="sm" />
+                </Inline>
             </Div>
             <Div className="zoom-out">
-                <SearchInput placeholder="Where to?" />
+                <Inline alignY="center">
+                    <SearchInput placeholder="Where to?" />
+                    <SearchInput placeholder="Where to?" size="sm" />
+                </Inline>
             </Div>
         </Stack>
     )
