@@ -1,5 +1,13 @@
 # @orbit-ui/transition-components
 
+## 4.0.0
+
+### Major Changes
+
+- 6dddca86e: - Alert is now dismissable by default. This is potentially a breaking change if you we're not expecting the alert to be closable. To fix this, either add `dismissable={false}` to the Alert, or handle the `onClose` event handler.
+
+  - Dialog small size has been slightly reduced by 84px.
+
 ## 3.3.0
 
 ### Minor Changes
