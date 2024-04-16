@@ -1,7 +1,29 @@
-.o-ui-alert-warning-icon {
-    color: var(--hop-warning-icon-weak);
+.o-ui-alert-button-group > .o-ui-button {
+    max-width: 50%;
+    width: 50%;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
-.o-ui-alert-negative-icon {
-    color: var(--hop-danger-icon-weak);
+.o-ui-alert-heading {
+    text-align: left;
+    width: 100%;
+}
+
+.o-ui-alert-content {
+    text-align: left;
+}
+
+/* We need to determine a sensitive max-width to wrap - 360px seems like a good point */
+@media all and (max-width: 40rem) {
+    .o-ui-alert-button-group > .o-ui-button {
+        max-width: 100%;
+        width: 100%;
+    }
+    .o-ui-alert-heading {
+        text-align: center;
+    }
+    .o-ui-alert-content {
+        text-align: center;
+    }
 }
