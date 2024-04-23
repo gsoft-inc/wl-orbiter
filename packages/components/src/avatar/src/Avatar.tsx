@@ -70,16 +70,18 @@ function AvatarImage({
     );
 }
 
-const O365InitialsColorsForName = [
-    "#95B1FF",
-    "#A3D6CB",
-    "#FFBF92",
-    "#AAD89D",
-    "#9FD2F7",
-    "#EAC96D",
-    "#E5DED6",
-    "#FFBCB7"
-];
+function getColorIndexForInitial(name: string, maxNumberOfColor: number) {
+    let hashCode = 0;
+
+    for (let i = name.length - 1; i >= 0; i--) {
+        const character = name.charCodeAt(i);
+        const shift = i % 8;
+
+        hashCode ^= (character << shift) + (character >> (8 - shift));
+    }
+
+    return hashCode % maxNumberOfColor;
+}
 
 function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAvatarProps>) {
     const initials = useMemo(() => {
@@ -92,20 +94,11 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
         return size === "xs" && letters.length > 1 ? letters.charAt(0) : letters;
     }, [name, size]);
 
-    const color = useMemo(() => {
-        let hashCode = 0;
-
-        for (let i = name.length - 1; i >= 0; i--) {
-            const character = name.charCodeAt(i);
-            const shift = i % 8;
-
-            hashCode ^= (character << shift) + (character >> (8 - shift));
-        }
-
-        return O365InitialsColorsForName[hashCode % O365InitialsColorsForName.length];
-    }, [name]);
+    const variantToUse = useMemo(() => `option${getColorIndexForInitial(name, 8) + 1}`, [name]);
 
     const initialValue = size === "xs" ? initials.at(0) : initials;
+    const tokenBackgroundColor = `var(--hop-decorative-${variantToUse}-surface-strong)`;
+    const tokenTextColor = `var(--hop-decorative-${variantToUse}-text)`;
 
     return (
         <AvatarText
@@ -113,7 +106,8 @@ function AvatarInitials({ "aria-label": ariaLabel, name, size }: Partial<InnerAv
             role="img"
             size={size}
             style={{
-                backgroundColor: color
+                backgroundColor: tokenBackgroundColor,
+                color: tokenTextColor
             }}
         >
             {initialValue}
