@@ -27,6 +27,10 @@
     width: 4rem;
 }
 
+.o-ui-avatar-2xl {
+    width: 6rem;
+}
+
 /* IMAGE */
 .o-ui-avatar-image {
     width: 100%;
