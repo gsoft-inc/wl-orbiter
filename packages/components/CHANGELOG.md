@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.0.1
+
+### Patch Changes
+
+- 9ddb577c8: Avatar Initials color is now the right one
+
 ## 4.0.0
 
 ### Major Changes

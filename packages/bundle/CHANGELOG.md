@@ -1,5 +1,12 @@
 # @workleap/orbiter-ui
 
+## 4.0.1
+
+### Patch Changes
+
+- Updated dependencies [9ddb577c8]
+  - @orbit-ui/transition-components@4.0.1
+
 ## 4.0.0
 
 ### Patch Changes
