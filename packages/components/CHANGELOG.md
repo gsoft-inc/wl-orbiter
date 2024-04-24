@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.1.0
+
+### Minor Changes
+
+- 27ec1d00b: Added a 2xl variant to Avatar
+
 ## 4.0.1
 
 ### Patch Changes
