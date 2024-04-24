@@ -32,6 +32,7 @@ export const LocalImage: AvatarStory = {
             <Avatar src={Person} name="Neil Armstrong" />
             <Avatar src={Person} size="lg" name="Neil Armstrong" />
             <Avatar src={Person} size="xl" name="Neil Armstrong" />
+            <Avatar src={Person} size="2xl" name="Neil Armstrong" />
         </Inline>
     )
 };
@@ -45,6 +46,7 @@ export const LocalImageRectangle: AvatarStory = {
             <Avatar src={Astronaut} name="Neil Armstrong" />
             <Avatar src={Astronaut} size="lg" name="Neil Armstrong" />
             <Avatar src={Astronaut} size="xl" name="Neil Armstrong" />
+            <Avatar src={Astronaut} size="2xl" name="Neil Armstrong" />
         </Inline>
     )
 };
@@ -68,6 +70,7 @@ export const FailingRemoteSrc: AvatarStory = {
             <Avatar src="https://www.google.com" name="Neil Armstrong" />
             <Avatar size="lg" src="https://www.google.com" name="Neil Armstrong" />
             <Avatar size="xl" src="https://www.google.com" name="Neil Armstrong" />
+            <Avatar size="2xl" src="https://www.google.com" name="Neil Armstrong" />
         </Inline>
     )
 };
@@ -82,6 +85,7 @@ export const Initials: AvatarStory = {
                 <Avatar name="Neil Armstrong" />
                 <Avatar size="lg" name="Neil Armstrong" />
                 <Avatar size="xl" name="Neil Armstrong" />
+                <Avatar size="2xl" name="Neil Armstrong" />
             </Inline>
             <Inline>
                 <Avatar name="Sally Ride" />

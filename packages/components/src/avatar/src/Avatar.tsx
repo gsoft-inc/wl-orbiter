@@ -34,7 +34,7 @@ export interface InnerAvatarProps extends SlotProps, InternalProps, StyledCompon
     /**
      * An avatar can vary in size.
      */
-    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl">;
     /**
      * The url of a remote image or an image object.
      */
@@ -122,7 +122,7 @@ const textSize = createSizeAdapter({
     "md": "md",
     "lg": "lg",
     "xl": "xl",
-    "2xl": "2xl"
+    "2xl": "xl"
 });
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
