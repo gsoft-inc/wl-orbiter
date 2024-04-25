@@ -89,7 +89,7 @@
 .o-ui-switch-focus:not(.o-ui-switch-disabled) .o-ui-switch-control {
     background-color: var(--o-ui-switch-background-focus);
     border-color: var(--o-ui-switch-border-focus);
-    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
+    box-shadow: 0 0 0 0.125rem var(--hop-neutral-surface), 0 0 0 0.25rem var(--hop-primary-border-focus);
 }
 
 .o-ui-switch input[type="checkbox"]:focus-visible + .o-ui-switch-control::before,

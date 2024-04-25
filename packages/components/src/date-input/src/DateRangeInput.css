@@ -31,7 +31,7 @@
 .o-ui-date-range-input-focus:not(.o-ui-date-range-input-disabled) {
     --o-ui-date-range-input-border-color: var(--hop-neutral-border-active);
     background-color: var(--hop-neutral-surface);
-    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
+    box-shadow: 0 0 0 0.125rem var(--hop-neutral-surface), 0 0 0 0.25rem var(--hop-primary-border-focus);
 }
 
 /* STATES | FOCUS / INVALID */
