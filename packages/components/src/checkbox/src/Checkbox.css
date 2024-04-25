@@ -45,7 +45,7 @@
     bottom: -1px;
     display: block;
     position: absolute;
-    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
+    box-shadow: 0 0 0 0.125rem var(--hop-neutral-surface), 0 0 0 0.25rem var(--hop-primary-border-focus);
     border-radius: var(--_checkbox-border-radius);
     transition: var(--o-ui-focus-ring-transition);
 }

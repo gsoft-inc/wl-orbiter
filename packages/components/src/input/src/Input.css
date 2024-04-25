@@ -170,7 +170,7 @@
 .o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
     --o-ui-input-border-color: var(--hop-neutral-border-active);
     --o-ui-input-background-color: var(--hop-neutral-surface);
-    box-shadow: 0 0 0 0.12rem var(--hop-neutral-surface), 0 0 0 0.219rem var(--hop-primary-border-focus);
+    box-shadow: 0 0 0 0.125rem var(--hop-neutral-surface), 0 0 0 0.25rem var(--hop-primary-border-focus);
     outline: transparent;
 }
 
