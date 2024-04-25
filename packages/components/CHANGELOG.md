@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.1.1
+
+### Patch Changes
+
+- 6cfd22898: Fix focus size in Firefox
+
 ## 4.1.0
 
 ### Minor Changes
