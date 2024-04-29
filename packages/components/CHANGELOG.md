@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.2.0
+
+### Minor Changes
+
+- a64e9fd79: Updated Fluid button behaviour regarding icon and counter
+
 ## 4.1.1
 
 ### Patch Changes
