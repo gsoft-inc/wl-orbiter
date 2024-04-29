@@ -11,26 +11,13 @@
 }
 
 /* CONTENT | ICON | START */
-.o-ui-text-button:not(.o-ui-button-fluid) .o-ui-button-start-icon + .o-ui-button-text {
+.o-ui-text-button .o-ui-button-start-icon + .o-ui-button-text {
     margin-left: var(--hop-space-inline-xs);
 }
 
 /* CONTENT | ICON | END */
-.o-ui-text-button:not(.o-ui-button-fluid) .o-ui-button-end-icon {
+.o-ui-text-button .o-ui-button-end-icon {
     margin-left: var(--hop-space-inline-xs);
-}
-
-.o-ui-button-fluid.o-ui-button-has-start-icon.o-ui-button .o-ui-button-text {
-    margin-left: calc(-1 * (var(--o-ui-text-button-with-icon-padding) + var(--o-ui-text-button-icon-size)) / 2);
-}
-
-.o-ui-button-fluid.o-ui-button-has-end-icon.o-ui-button .o-ui-button-text {
-    margin-right: calc(-1 * (var(--o-ui-text-button-with-icon-padding) + var(--o-ui-text-button-icon-size)) / 2);
-}
-
-.o-ui-button-fluid.o-ui-button-has-end-icon.o-ui-button-has-start-icon.o-ui-button .o-ui-button-text {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 /* SIZES */

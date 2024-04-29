@@ -182,7 +182,7 @@ export function createButtonTestSuite(element, stories) {
                 <Div>
                     <Button fluid element={element}>
                         <Text>Button</Text>
-                        <Counter>15</Counter>
+                        <Counter variant="divider">15</Counter>
                     </Button>
                 </Div>
             </Stack>
