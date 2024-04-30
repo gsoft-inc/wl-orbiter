@@ -83,6 +83,10 @@ export interface InnerAutocompleteProps extends PopupProps, Omit<AbstractInputPr
      */
     overlayProps?: Partial<OverlayProps>;
     /**
+    * An autocomplete trigger can vary in size.
+    */
+    size?: ResponsiveProp<"sm" | "md">;
+    /**
      * A controlled autocomplete value.
      */
     value?: string | null;
@@ -131,6 +135,7 @@ export function InnerAutocomplete(props: InnerAutocompleteProps) {
         placeholder,
         readOnly,
         required,
+        size,
         validationState,
         value: valueProp,
         wrapperProps,
@@ -419,6 +424,7 @@ export function InnerAutocomplete(props: InnerAutocompleteProps) {
                         readOnly,
                         ref: triggerRef,
                         role: "combobox",
+                        size,
                         type: "text",
                         validationState,
                         value: queryRef.current,

@@ -221,6 +221,16 @@ export const DefaultValueNotMatching: AutocompleteStory = {
     )
 };
 
+export const Size: AutocompleteStory = {
+    storyName: "size",
+    render: () => (
+        <Autocomplete size="sm" placeholder="Select a planet" aria-label="Planets">
+            <Item key="earth">Earth</Item>
+            <Item key="mars">Mars</Item>
+            <Item key="saturn">Saturn</Item>
+        </Autocomplete>
+    )
+};
 
 export const TriggerIcon: AutocompleteStory = {
     storyName: "trigger icon",
