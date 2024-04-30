@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.2.1
+
+### Patch Changes
+
+- 04900c01b: Fixed a typing issue when using a size on Autocomplete
+
 ## 4.2.0
 
 ### Minor Changes
