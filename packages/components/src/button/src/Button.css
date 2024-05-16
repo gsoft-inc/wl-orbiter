@@ -105,7 +105,7 @@ a.o-ui-button {
 /* PRIMARY | FOCUS */
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
-    background-color: var(--hop-primary-surface-hover);
+    background-color: var(--hop-primary-surface-strong-hover);
 }
 
 /* PRIMARY | HOVER | FOCUS */
@@ -189,12 +189,12 @@ a.o-ui-button {
 .o-ui-button-tertiary {
     background-color: transparent;
     border: 1px solid transparent;
-    color: var(--hop-neutral-text-weak);
+    color: var(--hop-neutral-text);
 }
 
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style) .o-ui-button-start-icon,
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style) .o-ui-button-end-icon {
-    color: var(--hop-neutral-icon-weak);
+    color: var(--hop-neutral-icon);
 }
 
 /* TERTIARY | FOCUS */
@@ -211,14 +211,14 @@ a.o-ui-button {
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-neutral-surface-hover);
-    color: var(--hop-neutral-text-weak-hover);
+    color: var(--hop-neutral-text-hover);
 }
 
 /* TERTIARY | FOCUS */
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-neutral-surface-hover);
-    color: var(--hop-neutral-text-weak-hover);
+    color: var(--hop-neutral-text-hover);
 }
 
 /* TERTIARY | ACTIVE */
