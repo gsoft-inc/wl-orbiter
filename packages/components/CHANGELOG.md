@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.2.2
+
+### Patch Changes
+
+- a5b632082: Updated dependency on Hopper - fixed breaking changes caused by Hopper, see [https://github.com/gsoft-inc/wl-hopper/pull/261](https://github.com/gsoft-inc/wl-hopper/pull/261)
+
 ## 4.2.1
 
 ### Patch Changes
