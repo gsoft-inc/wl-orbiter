@@ -90,7 +90,7 @@ Sadly, we encountered CSS ordering issues when the components are bundled in our
 
 /* SELECTION COLOR */
 ::selection {
-    background-color: var(--hop-primary-surface-active);
+    background-color: var(--hop-primary-surface-selected);
 }
 
 /* ANIMATIONS */

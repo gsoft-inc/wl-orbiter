@@ -177,9 +177,9 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* OPTION | STATE | INVALID */
 .o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"] {
-    --o-ui-listbox-option-description-color: var(--hop-danger-text-active);
-    --o-ui-listbox-option-icon-color: var(--hop-danger-icon-active);
-    color: var(--hop-danger-text-active);
+    --o-ui-listbox-option-description-color: var(--hop-danger-text-selected);
+    --o-ui-listbox-option-icon-color: var(--hop-danger-icon-selected);
+    color: var(--hop-danger-text-selected);
 }
 
 .o-ui-listbox-invalid .o-ui-listbox-option[aria-selected="true"]:not([aria-disabled="true"]):not(.o-ui-listbox-option-no-hover):hover,

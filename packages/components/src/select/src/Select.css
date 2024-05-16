@@ -76,8 +76,8 @@
 
 /* TRIGGER | GHOST | STATE | INVALID | ACTIVE */
 .o-ui-select-trigger-invalid.o-ui-select-trigger-ghost:not([disabled])[aria-expanded="true"] {
-    --o-ui-select-icon-color: var(--hop-danger-icon-active);
-    color: var(--hop-danger-text-active);
+    --o-ui-select-icon-color: var(--hop-danger-icon-selected);
+    color: var(--hop-danger-text-selected);
 }
 
 /* TRIGGER | GHOST | STATE | INVALID | HOVER/FOCUS */
@@ -132,7 +132,7 @@
 /* TRIGGER | OUTLINE | STATE | OPENED */
 .o-ui-select-trigger-outline[aria-expanded="true"] {
     --o-ui-select-icon-color: var(--hop-neutral-icon);
-    border-color: var(--hop-neutral-border-active);
+    border-color: var(--hop-neutral-border-selected);
 }
 
 /* TRIGGER | OUTLINE | STATE | HOVER */
@@ -151,7 +151,7 @@
 
 /* TRIGGER | OUTLINE | STATE | OPENED | INVALID */
 .o-ui-select-trigger-outline[aria-expanded="true"].o-ui-select-trigger-invalid {
-    border-color: var(--hop-danger-border-active);
+    border-color: var(--hop-danger-border-selected);
 }
 
 /* TRIGGER | OUTLINE | STATE | HOVER | INVALID */
