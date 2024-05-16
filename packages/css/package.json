@@ -12,7 +12,7 @@
     "main": "src/index.css",
     "style": "src/index.css",
     "dependencies": {
-        "@hopper-ui/tokens": "^3.2.1"
+        "@hopper-ui/tokens": "^4.0.0"
     },
     "publishConfig": {
         "access": "public",

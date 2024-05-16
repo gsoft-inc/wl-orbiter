@@ -64,7 +64,7 @@
 }
 
 .o-ui-checkbox-checked .o-ui-checkbox-box .o-ui-checkbox-checkmark {
-    color: var(--hop-neutral-icon-active);
+    color: var(--hop-neutral-icon-selected);
     opacity: 1;
 }
 
@@ -74,8 +74,8 @@
 
 /* BOX | INDETERMINATE */
 .o-ui-checkbox-indeterminate .o-ui-checkbox-box {
-    --_checkbox-border-color: var(--hop-neutral-border-active);
-    --_checkbox-background-color: var(--hop-neutral-surface-active);
+    --_checkbox-border-color: var(--hop-neutral-border-selected);
+    --_checkbox-background-color: var(--hop-neutral-surface-selected);
 }
 
 .o-ui-checkbox-indeterminate .o-ui-checkbox-box:after {
@@ -86,7 +86,7 @@
     width: 0.75rem;
     height: 0.09375rem;
     transform: translate(-50%, -50%);
-    background-color: var(--hop-neutral-icon-active);
+    background-color: var(--hop-neutral-icon-selected);
 }
 
 /* BOX | INDETERMINATE | STATE | INVALID */
@@ -150,8 +150,8 @@
 
 /* STATE | CHECKED */
 .o-ui-checkbox-checked .o-ui-checkbox-box {
-    --_checkbox-border-color: var(--hop-neutral-border-active);
-    --_checkbox-background-color: var(--hop-neutral-surface-active);
+    --_checkbox-border-color: var(--hop-neutral-border-selected);
+    --_checkbox-background-color: var(--hop-neutral-surface-selected);
 }
 
 /* STATE | CHECKED | CHECKMARK */
@@ -199,7 +199,7 @@
 .o-ui-checkbox-checked.o-ui-checkbox-hover input[type="checkbox"]:not([disabled]):focus-visible + .o-ui-checkbox-box:before,
 .o-ui-checkbox-checked:not(.o-ui-checkbox-disabled).o-ui-checkbox-focus:hover .o-ui-checkbox-box:before,
 .o-ui-checkbox-checked:not(.o-ui-checkbox-disabled).o-ui-checkbox-focus.o-ui-checkbox-hover .o-ui-checkbox-box:before {
-    --_checkbox-border-color: var(--hop-neutral-border-active);
+    --_checkbox-border-color: var(--hop-neutral-border-selected);
 }
 
 /* SIZING */

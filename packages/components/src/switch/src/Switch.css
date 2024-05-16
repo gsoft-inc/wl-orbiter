@@ -103,8 +103,8 @@
 .o-ui-switch-checked.o-ui-switch-hover:not(.o-ui-switch-disabled) .o-ui-switch-control,
 .o-ui-switch-checked input[type="checkbox"]:focus-visible + .o-ui-switch-control,
 .o-ui-switch-checked.o-ui-switch-focus:not(.o-ui-switch-disabled) .o-ui-switch-control {
-    background-color: var(--hop-neutral-surface-active);
-    border-color: var(--hop-neutral-border-active);
+    background-color: var(--hop-neutral-surface-selected);
+    border-color: var(--hop-neutral-border-selected);
 }
 
 .o-ui-switch-checked .o-ui-switch-control::before {
@@ -116,7 +116,7 @@
 .o-ui-switch-checked.o-ui-switch-hover:not(.o-ui-switch-disabled) .o-ui-switch-control::before,
 .o-ui-switch-checked input[type="checkbox"]:focus-visible + .o-ui-switch-control::before,
 .o-ui-switch-checked.o-ui-switch-focus:not(.o-ui-switch-disabled) .o-ui-switch-control::before {
-    background-color: var(--hop-neutral-icon-active);
+    background-color: var(--hop-neutral-icon-selected);
 }
 
 /* STATE | DISABLED */

@@ -1,5 +1,5 @@
 .o-ui-tooltip {
-    background-color: var(--hop-neutral-surface-active);
+    background-color: var(--hop-neutral-surface-selected);
     border-radius: var(--hop-shape-rounded-md);
     color: var(--hop-neutral-text-strong);
     padding: var(--hop-space-inset-squish-md);

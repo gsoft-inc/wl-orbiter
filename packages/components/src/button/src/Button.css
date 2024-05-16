@@ -116,9 +116,9 @@ a.o-ui-button {
 
 /* PRIMARY | ACTIVE */
 :not([disabled]):not(.o-ui-button-loading).o-ui-button-primary.o-ui-button-active {
-    background-color: var(--hop-primary-surface-strong-active);
-    outline: 1px solid var(--hop-primary-border-active);
-    color: var(--hop-primary-text-active);
+    background-color: var(--hop-primary-surface-strong-selected);
+    outline: 1px solid var(--hop-primary-border-selected);
+    color: var(--hop-primary-text-selected);
 }
 
 /* UPSELL */
@@ -143,9 +143,9 @@ a.o-ui-button {
 
 /* UPSELL | ACTIVE */
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
-    background-color: var(--hop-upsell-surface-active);
-    outline: 1px solid var(--hop-upsell-border-active);
-    color: var(--hop-upsell-text-active);
+    background-color: var(--hop-upsell-surface-selected);
+    outline: 1px solid var(--hop-upsell-border-selected);
+    color: var(--hop-upsell-text-selected);
 }
 
 /* SECONDARY */
@@ -180,9 +180,9 @@ a.o-ui-button {
 
 /* SECONDARY | ACTIVE */
 .o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
-    background-color: var(--hop-neutral-surface-active);
-    border-color: var(--hop-neutral-surface-active);
-    color: var(--hop-neutral-text-active);
+    background-color: var(--hop-neutral-surface-selected);
+    border-color: var(--hop-neutral-surface-selected);
+    color: var(--hop-neutral-text-selected);
 }
 
 /* TERTIARY */
@@ -254,9 +254,9 @@ a.o-ui-button {
 
 /* NEGATIVE | ACTIVE */
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
-    background-color: var(--hop-danger-surface-active);
-    outline: 1px solid var(--hop-danger-border-active);
-    color: var(--hop-danger-text-active);
+    background-color: var(--hop-danger-surface-selected);
+    outline: 1px solid var(--hop-danger-border-selected);
+    color: var(--hop-danger-text-selected);
 }
 
 /* FLUID */

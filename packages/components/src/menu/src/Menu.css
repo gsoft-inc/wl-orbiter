@@ -130,9 +130,9 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 /* ITEM | STATE | INVALID */
 .o-ui-menu-invalid .o-ui-menu-item[aria-checked="true"] {
-    --o-ui-menu-item-description-color: var(--hop-danger-text-active);
-    --o-ui-menu-item-icon-color: var(--hop-danger-icon-active);
-    color: var(--hop-danger-text-active);
+    --o-ui-menu-item-description-color: var(--hop-danger-text-selected);
+    --o-ui-menu-item-icon-color: var(--hop-danger-icon-selected);
+    color: var(--hop-danger-text-selected);
 }
 
 .o-ui-menu-invalid .o-ui-menu-item:active[aria-checked="true"]:not([aria-disabled="true"]),

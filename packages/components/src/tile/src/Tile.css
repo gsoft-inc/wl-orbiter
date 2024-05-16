@@ -69,7 +69,7 @@
 /* CHECKED */
 .o-ui-tile[aria-checked="true"]::before,
 .o-ui-tile[aria-pressed="true"]::before {
-    border-color: var(--hop-neutral-border-active);
+    border-color: var(--hop-neutral-border-selected);
     border-width: 2px;
 }
 
