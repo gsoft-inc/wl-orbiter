@@ -5,6 +5,7 @@ import { isNil, useControllableState, useEventCallback } from "../../shared";
 export type ToggleButtonVariant = Omit<ButtonVariant, "negative">;
 
 export interface UseToggleButtonProps {
+    active?: boolean;
     checked?: boolean | null;
     defaultChecked?: boolean;
     forwardedRef?: ForwardedRef<any>;
