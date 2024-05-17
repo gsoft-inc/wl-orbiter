@@ -93,6 +93,7 @@ a.o-ui-button {
 /* PRIMARY */
 .o-ui-button-primary {
     background-color: var(--hop-primary-surface-strong);
+    border: 1px solid var(--hop-primary-surface-strong);
     color: var(--hop-primary-text-strong);
 }
 
@@ -100,30 +101,44 @@ a.o-ui-button {
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-primary-surface-strong-hover);
+    border-color: var(--hop-primary-surface-strong-hover);
+}
+
+/* PRIMARY | SELECTED / SELECTED + ACTIVE */
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
+    background-color: var(--hop-primary-surface-selected);
+    border-color: var(--hop-primary-border-selected);
+    color: var(--hop-primary-text-selected);
+}
+
+/* PRIMARY | ACTIVE */
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):active,
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
+    background-color: var(--hop-primary-surface-strong-press);
+    border-color: var(--hop-primary-surface-strong-press);
+    color: var(--hop-primary-text-strong);
 }
 
 /* PRIMARY | FOCUS */
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-primary-surface-strong-hover);
+    border-color: var(--hop-primary-surface-strong-hover);
 }
 
 /* PRIMARY | HOVER | FOCUS */
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):hover:focus-visible,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover.o-ui-button-focus {
     background-color: var(--hop-primary-surface-strong-hover);
-}
-
-/* PRIMARY | ACTIVE */
-:not([disabled]):not(.o-ui-button-loading).o-ui-button-primary.o-ui-button-active {
-    background-color: var(--hop-primary-surface-strong-selected);
-    outline: 1px solid var(--hop-primary-border-selected);
-    color: var(--hop-primary-text-selected);
+    border-color: var(--hop-primary-surface-strong-hover);
 }
 
 /* UPSELL */
 .o-ui-button-upsell {
     background-color: var(--hop-upsell-surface);
+    border: 1px solid var(--hop-upsell-surface);
     color: var(--hop-upsell-text);
 }
 
@@ -131,7 +146,7 @@ a.o-ui-button {
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-upsell-surface-hover);
-    outline: 1px solid var(--hop-upsell-border-hover);
+    border-color: var(--hop-upsell-surface-hover);
     color: var(--hop-upsell-text-hover);
 }
 
@@ -139,12 +154,23 @@ a.o-ui-button {
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-upsell-surface-hover);
+    border-color: var(--hop-upsell-surface-hover);
 }
 
 /* UPSELL | ACTIVE */
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
+    background-color: var(--hop-upsell-surface-press);
+    border-color: var(--hop-upsell-surface-press);
+    color: var(--hop-upsell-text-press);
+}
+
+/* UPSELL | SELECTED / SELECTED + ACTIVE */
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
     background-color: var(--hop-upsell-surface-selected);
-    outline: 1px solid var(--hop-upsell-border-selected);
+    border-color: var(--hop-upsell-border-selected);
     color: var(--hop-upsell-text-selected);
 }
 
@@ -179,7 +205,17 @@ a.o-ui-button {
 }
 
 /* SECONDARY | ACTIVE */
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
+    background-color: var(--hop-neutral-surface-press);
+    border-color: var(--hop-neutral-border-strong);
+    color: var(--hop-neutral-text-press);
+}
+
+/* SECONDARY | SELECTED / SELECTED + ACTIVE */
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
     background-color: var(--hop-neutral-surface-selected);
     border-color: var(--hop-neutral-surface-selected);
     color: var(--hop-neutral-text-selected);
@@ -212,6 +248,7 @@ a.o-ui-button {
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-neutral-surface-hover);
     color: var(--hop-neutral-text-hover);
+    text-decoration: underline;
 }
 
 /* TERTIARY | FOCUS */
@@ -219,12 +256,23 @@ a.o-ui-button {
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-neutral-surface-hover);
     color: var(--hop-neutral-text-hover);
+    text-decoration: underline;
 }
 
 /* TERTIARY | ACTIVE */
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
-    background-color: transparent;
-    color: var(--hop-neutral-text);
+    background-color: var(--hop-neutral-surface-press);
+    color: var(--hop-neutral-text-press);
+    text-decoration: underline;
+}
+
+/* TERTIARY | SELECTED / SELECTED + ACTIVE */
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active,
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active {
+    background-color: var(--hop-neutral-surface-press);
+    color: var(--hop-neutral-text-press);
 }
 
 /* TERTIARY | DISABLED */
@@ -237,6 +285,7 @@ a.o-ui-button {
 /* NEGATIVE */
 .o-ui-button-negative {
     background-color: var(--hop-danger-surface-strong);
+    border: 1px solid var(--hop-danger-surface-strong);
     color: var(--hop-danger-text-strong);
 }
 
@@ -244,18 +293,30 @@ a.o-ui-button {
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-danger-surface-hover);
+    border-color: var(--hop-danger-surface-hover);
 }
 
 /* NEGATIVE | FOCUS */
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-danger-surface-hover);
+    border-color: var(--hop-danger-surface-hover);
 }
 
 /* NEGATIVE | ACTIVE */
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
+    background-color: var(--hop-danger-surface-press);
+    border-color: var(--hop-danger-surface-press);
+    color: var(--hop-danger-text-strong-hover);
+}
+
+/* NEGATIVE | SELECTED / SELECTED + ACTIVE */
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
     background-color: var(--hop-danger-surface-selected);
-    outline: 1px solid var(--hop-danger-border-selected);
+    border-color: var(--hop-danger-border-selected);
     color: var(--hop-danger-text-selected);
 }
 

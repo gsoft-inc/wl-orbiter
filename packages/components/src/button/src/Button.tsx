@@ -95,6 +95,7 @@ export function InnerButton(props: InnerButtonProps) {
         inherit,
         loading,
         onClick,
+        selected,
         size,
         type,
         variant = "primary",
@@ -122,6 +123,7 @@ export function InnerButton(props: InnerButtonProps) {
         inherit,
         loading,
         onClick,
+        selected,
         size: sizeValue,
         type,
         variant

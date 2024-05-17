@@ -168,10 +168,16 @@
 .o-ui-number-input:not(.o-ui-input-disabled):focus-within,
 .o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea,
 .o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
-    --o-ui-input-border-color: var(--hop-neutral-border-selected);
+    --o-ui-input-border-color: var(--hop-primary-border-focus);
     --o-ui-input-background-color: var(--hop-neutral-surface);
-    box-shadow: 0 0 0 0.125rem var(--hop-neutral-surface), 0 0 0 0.25rem var(--hop-primary-border-focus);
-    outline: transparent;
+    outline: none;
+}
+
+.o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-has-focus:hover,
+.o-ui-number-input:not(.o-ui-input-disabled):focus-within:hover,
+.o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea:hover,
+.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled):hover {
+    --o-ui-input-border-color: var(--hop-primary-border-focus);
 }
 
 /* STATES | HOVER */

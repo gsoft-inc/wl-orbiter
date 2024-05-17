@@ -38,6 +38,7 @@ export function useButton({
     inherit,
     loading,
     onClick,
+    selected,
     size,
     type = "button",
     variant = "primary"
@@ -59,10 +60,11 @@ export function useButton({
             cssModule(
                 "o-ui-button",
                 variant,
+                active && "active",
                 inherit && "inherit-style",
                 fluid && "fluid",
                 loading && "loading",
-                active && "active",
+                selected && "selected",
                 focus && "focus",
                 hover && "hover",
                 normalizeSize(size)

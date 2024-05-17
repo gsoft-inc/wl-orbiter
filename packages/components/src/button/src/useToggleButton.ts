@@ -5,13 +5,13 @@ import { isNil, useControllableState, useEventCallback } from "../../shared";
 export type ToggleButtonVariant = Omit<ButtonVariant, "negative">;
 
 export interface UseToggleButtonProps {
-    active?: boolean;
     checked?: boolean | null;
     defaultChecked?: boolean;
     forwardedRef?: ForwardedRef<any>;
     isCheckable: boolean;
     onChange?: (event: FormEvent<HTMLButtonElement>, isChecked: boolean) => void;
     onCheck?: (event: FormEvent<HTMLButtonElement>, value: string) => void;
+    selected?: boolean;
     value?: string;
     variant?: ToggleButtonVariant;
 }
@@ -24,6 +24,7 @@ export function useToggleButton({
     isCheckable,
     onChange,
     onCheck,
+    selected,
     value,
     variant
 }: UseToggleButtonProps) {
@@ -43,9 +44,10 @@ export function useToggleButton({
 
     return {
         buttonProps: {
-            active: active || isChecked,
+            active: active,
             onClick: handleClick,
             ref: forwardedRef,
+            selected: selected || isChecked,
             value,
             [isCheckable ? "aria-checked" : "aria-pressed"]: isChecked,
             variant: variant as ButtonVariant
