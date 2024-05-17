@@ -105,9 +105,9 @@ a.o-ui-button {
 }
 
 /* PRIMARY | SELECTED / SELECTED + ACTIVE */
-.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
-.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
-.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"],
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"]:active,
+.o-ui-button-primary:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"].o-ui-button-active {
     background-color: var(--hop-primary-surface-selected);
     border-color: var(--hop-primary-border-selected);
     color: var(--hop-primary-text-selected);
@@ -166,9 +166,9 @@ a.o-ui-button {
 }
 
 /* UPSELL | SELECTED / SELECTED + ACTIVE */
-.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
-.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
-.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"],
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"]:active,
+.o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"].o-ui-button-active {
     background-color: var(--hop-upsell-surface-selected);
     border-color: var(--hop-upsell-border-selected);
     color: var(--hop-upsell-text-selected);
@@ -213,9 +213,9 @@ a.o-ui-button {
 }
 
 /* SECONDARY | SELECTED / SELECTED + ACTIVE */
-.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
-.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
-.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"],
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"]:active,
+.o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"].o-ui-button-active {
     background-color: var(--hop-neutral-surface-selected);
     border-color: var(--hop-neutral-surface-selected);
     color: var(--hop-neutral-text-selected);
@@ -268,9 +268,9 @@ a.o-ui-button {
 }
 
 /* TERTIARY | SELECTED / SELECTED + ACTIVE */
-.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
-.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active,
-.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active {
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"],
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"].o-ui-button-active,
+.o-ui-button-tertiary:not(.o-ui-button-inherit-style):not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"]:active {
     background-color: var(--hop-neutral-surface-press);
     color: var(--hop-neutral-text-press);
 }
@@ -312,9 +312,9 @@ a.o-ui-button {
 }
 
 /* NEGATIVE | SELECTED / SELECTED + ACTIVE */
-.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected,
-.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected:active,
-.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-selected.o-ui-button-active {
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"],
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"]:active,
+.o-ui-button-negative:not([disabled]):not(.o-ui-button-loading)[aria-pressed="true"].o-ui-button-active {
     background-color: var(--hop-danger-surface-selected);
     border-color: var(--hop-danger-border-selected);
     color: var(--hop-danger-text-selected);

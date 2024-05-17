@@ -96,7 +96,6 @@ export function InnerIconButton(props: InnerIconButtonProps) {
         inherit,
         loading,
         onClick,
-        selected,
         size,
         type,
         variant = "secondary",
@@ -122,7 +121,6 @@ export function InnerIconButton(props: InnerIconButtonProps) {
         inherit,
         loading,
         onClick,
-        selected,
         size: sizeValue,
         type,
         variant

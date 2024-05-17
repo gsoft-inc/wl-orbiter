@@ -38,7 +38,6 @@ export function useButton({
     inherit,
     loading,
     onClick,
-    selected,
     size,
     type = "button",
     variant = "primary"
@@ -64,7 +63,6 @@ export function useButton({
                 inherit && "inherit-style",
                 fluid && "fluid",
                 loading && "loading",
-                selected && "selected",
                 focus && "focus",
                 hover && "hover",
                 normalizeSize(size)
