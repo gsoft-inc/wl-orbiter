@@ -174,6 +174,7 @@
 }
 
 .o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-has-focus:hover,
+.o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-focus.o-ui-input-hover,
 .o-ui-number-input:not(.o-ui-input-disabled):focus-within:hover,
 .o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea:hover,
 .o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled):hover {
