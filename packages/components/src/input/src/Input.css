@@ -177,7 +177,8 @@
 .o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-focus.o-ui-input-hover,
 .o-ui-number-input:not(.o-ui-input-disabled):focus-within:hover,
 .o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea:hover,
-.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled):hover {
+.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled):hover,
+.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled).o-ui-input-hover {
     --o-ui-input-border-color: var(--hop-primary-border-focus);
 }
 
@@ -220,7 +221,16 @@
 .o-ui-input-invalid.o-ui-number-input:not(.o-ui-input-disabled):focus-within,
 .o-ui-input-invalid.o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea,
 .o-ui-input-invalid.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled) {
-    --o-ui-input-border-color: var(--hop-danger-border-strong);
+    --o-ui-input-border-color: var(--hop-primary-border-focus);
+}
+
+.o-ui-input-invalid.o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-has-focus:hover,
+.o-ui-input-invalid.o-ui-text-input:not(.o-ui-input-disabled).o-ui-input-focus.o-ui-input-hover,
+.o-ui-input-invalid.o-ui-number-input:not(.o-ui-input-disabled):focus-within:hover,
+.o-ui-input-invalid.o-ui-text-area:not(.o-ui-input-disabled).o-ui-input-has-focus textarea:hover,
+.o-ui-input-invalid.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled):hover,
+.o-ui-input-invalid.o-ui-input-focus:not(.o-ui-input-disabled):not(.o-ui-has-button-disabled).o-ui-input-hover {
+    --o-ui-input-border-color: var(--hop-primary-border-focus);
 }
 
 /* STATES | LOADING */
