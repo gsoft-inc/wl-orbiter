@@ -101,7 +101,7 @@ a.o-ui-button {
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-primary-surface-strong-hover);
-    border-color: var(--hop-primary-surface-strong-hover);
+    border-color: transparent;
 }
 
 /* PRIMARY | SELECTED / SELECTED + ACTIVE */
@@ -120,7 +120,7 @@ a.o-ui-button {
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
     background-color: var(--hop-primary-surface-strong-press);
-    border-color: var(--hop-primary-surface-strong-press);
+    border-color: transparent;
     color: var(--hop-primary-text-strong);
 }
 
@@ -128,14 +128,14 @@ a.o-ui-button {
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-primary-surface-strong-hover);
-    border-color: var(--hop-primary-surface-strong-hover);
+    border-color: transparent;
 }
 
 /* PRIMARY | HOVER | FOCUS */
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading):hover:focus-visible,
 .o-ui-button-primary:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover.o-ui-button-focus {
     background-color: var(--hop-primary-surface-strong-hover);
-    border-color: var(--hop-primary-surface-strong-hover);
+    border-color: transparent;
 }
 
 /* UPSELL */
@@ -149,7 +149,7 @@ a.o-ui-button {
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-upsell-surface-hover);
-    border-color: var(--hop-upsell-surface-hover);
+    border-color: transparent;
     color: var(--hop-upsell-text-hover);
 }
 
@@ -157,14 +157,14 @@ a.o-ui-button {
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-upsell-surface-hover);
-    border-color: var(--hop-upsell-surface-hover);
+    border-color: transparent;
 }
 
 /* UPSELL | ACTIVE */
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-upsell:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
     background-color: var(--hop-upsell-surface-press);
-    border-color: var(--hop-upsell-surface-press);
+    border-color: transparent;
     color: var(--hop-upsell-text-press);
 }
 
@@ -226,7 +226,7 @@ a.o-ui-button {
 .o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading)[aria-checked="true"]:active,
 .o-ui-button-secondary:not([disabled]):not(.o-ui-button-loading)[aria-checked="true"].o-ui-button-active {
     background-color: var(--hop-neutral-surface-selected);
-    border-color: var(--hop-neutral-surface-selected);
+    border-color: transparent;
     color: var(--hop-neutral-text-selected);
 }
 
@@ -305,21 +305,21 @@ a.o-ui-button {
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading):hover,
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-hover {
     background-color: var(--hop-danger-surface-hover);
-    border-color: var(--hop-danger-surface-hover);
+    border-color: transparent;
 }
 
 /* NEGATIVE | FOCUS */
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading):focus-visible,
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-focus {
     background-color: var(--hop-danger-surface-hover);
-    border-color: var(--hop-danger-surface-hover);
+    border-color: transparent;
 }
 
 /* NEGATIVE | ACTIVE */
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading):active,
 .o-ui-button-negative:not([disabled]):not(.o-ui-button-loading).o-ui-button-active {
     background-color: var(--hop-danger-surface-press);
-    border-color: var(--hop-danger-surface-press);
+    border-color: transparent;
     color: var(--hop-danger-text-strong-hover);
 }
 
