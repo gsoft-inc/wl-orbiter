@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 4.2.3
+
+### Patch Changes
+
+- d203870ea: Added pressed states and active states to buttons / updated fields focus states
+
 ## 4.2.2
 
 ### Patch Changes
