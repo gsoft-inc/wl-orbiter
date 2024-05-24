@@ -43,7 +43,7 @@ export function useToggleButton({
 
     return {
         buttonProps: {
-            active: active || isChecked,
+            active: active,
             onClick: handleClick,
             ref: forwardedRef,
             value,

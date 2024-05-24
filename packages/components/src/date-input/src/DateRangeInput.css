@@ -29,9 +29,8 @@
 /* STATES */
 /* STATES | FOCUS */
 .o-ui-date-range-input-focus:not(.o-ui-date-range-input-disabled) {
-    --o-ui-date-range-input-border-color: var(--hop-neutral-border-selected);
+    --o-ui-date-range-input-border-color: var(--hop-primary-border-focus);
     background-color: var(--hop-neutral-surface);
-    box-shadow: 0 0 0 0.125rem var(--hop-neutral-surface), 0 0 0 0.25rem var(--hop-primary-border-focus);
 }
 
 /* STATES | FOCUS / INVALID */
@@ -49,6 +48,14 @@
 .o-ui-date-range-input-hover:not(.o-ui-date-range-input-disabled) {
     --o-ui-date-range-input-border-color: var(--hop-neutral-border-hover);
     background-color: var(--hop-neutral-surface-hover);
+}
+
+/* STATES | HOVER + FOCUS */
+.o-ui-date-range-input:focus:hover:not(.o-ui-date-range-input-disabled),
+.o-ui-date-range-input-focus.o-ui-date-range-input-hover:not(.o-ui-date-range-input-disabled),
+.o-ui-date-range-input-focus:hover:not(.o-ui-date-range-input-disabled),
+.o-ui-date-range-input-hover:focus.o-ui-date-range-input-hover:not(.o-ui-date-range-input-disabled) {
+    --o-ui-date-range-input-border-color: var(--hop-primary-border-focus);
 }
 
 /* STATES | HOVER / INVALID */

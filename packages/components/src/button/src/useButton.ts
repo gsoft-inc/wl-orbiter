@@ -59,10 +59,10 @@ export function useButton({
             cssModule(
                 "o-ui-button",
                 variant,
+                active && "active",
                 inherit && "inherit-style",
                 fluid && "fluid",
                 loading && "loading",
-                active && "active",
                 focus && "focus",
                 hover && "hover",
                 normalizeSize(size)

@@ -198,6 +198,12 @@
     color: var(--hop-neutral-text-hover);
 }
 
+/* SOLID | STATE | ACTIVE */
+.o-ui-link:active.o-ui-link-solid,
+.o-ui-link-active.o-ui-link-solid {
+    color: var(--hop-neutral-text-press);
+}
+
 /* SOLID | STATE | FOCUS */
 .o-ui-link:focus-visible.o-ui-link-solid,
 .o-ui-link-focus.o-ui-link-solid {
@@ -226,6 +232,12 @@
     color: var(--hop-primary-text-hover);
 }
 
+/* ACCENT | STATE | ACTIVE */
+.o-ui-link:active.o-ui-link-accent,
+.o-ui-link-active.o-ui-link-accent {
+    color: var(--hop-primary-text-press);
+}
+
 /* ACCENT | STATE | FOCUS */
 .o-ui-link:focus-visible.o-ui-link-accent,
 .o-ui-link-focus.o-ui-link-accent {
@@ -251,6 +263,11 @@
 /* NEGATIVE | STATE | HOVER */
 .o-ui-link:hover.o-ui-link-negative {
     color: var(--hop-danger-text-hover);
+}
+
+/* NEGATIVE | STATE | ACTIVE */
+.o-ui-link:active.o-ui-link-negative {
+    color: var(--hop-danger-text-press);
 }
 
 /* NEGATIVE | STATE | FOCUS */

@@ -65,6 +65,11 @@
     background-color: var(--hop-neutral-surface-hover);
 }
 
+/* TRIGGER | BORDERED | ACTIVE */
+.o-ui-accordion .o-ui-accordion-trigger:not([disabled]):active {
+    background-color: var(--hop-neutral-surface-press);
+}
+
 /* TRIGGER | CONTENT */
 .o-ui-accordion-trigger-content {
     display: flex;
