@@ -1,6 +1,6 @@
 {
     "name": "@workleap/orbiter-ui",
-    "version": "5.0.0",
+    "version": "5.0.1",
     "description": "Orbiter design system",
     "repository": {
         "type": "git",
@@ -35,7 +35,7 @@
     },
     "dependencies": {
         "@orbit-ui/transition-components": "5.0.0",
-        "@orbit-ui/transition-css": "2.1.1",
+        "@orbit-ui/transition-css": "2.1.2",
         "@orbit-ui/transition-icons": "2.0.0"
     }
 }
