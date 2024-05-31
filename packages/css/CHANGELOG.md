@@ -1,5 +1,11 @@
 # @orbit-ui/transition-css
 
+## 2.1.2
+
+### Patch Changes
+
+- c35ff1a4a: Updated hopper token dependency
+
 ## 2.1.1
 
 ### Patch Changes
