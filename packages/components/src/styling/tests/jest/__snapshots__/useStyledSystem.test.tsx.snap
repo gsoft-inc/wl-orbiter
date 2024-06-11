@@ -92,7 +92,7 @@ exports[`breakpoints lg 1`] = `
   <div
     style={
       {
-        "border": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "border": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -100,7 +100,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-b-active"
     style={
       {
-        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -108,7 +108,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-b-focus"
     style={
       {
-        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -116,14 +116,14 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-b-hover"
     style={
       {
-        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
   <div
     style={
       {
-        "borderBottom": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "borderBottom": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -131,7 +131,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bb-active"
     style={
       {
-        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -139,7 +139,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bb-focus"
     style={
       {
-        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -147,14 +147,14 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bb-hover"
     style={
       {
-        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
   <div
     style={
       {
-        "borderLeft": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "borderLeft": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -162,7 +162,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bl-active"
     style={
       {
-        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -170,7 +170,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bl-focus"
     style={
       {
-        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -178,14 +178,14 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bl-hover"
     style={
       {
-        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
   <div
     style={
       {
-        "borderRight": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "borderRight": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -193,7 +193,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-br-active"
     style={
       {
-        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -201,7 +201,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-br-focus"
     style={
       {
-        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -209,14 +209,14 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-br-hover"
     style={
       {
-        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
   <div
     style={
       {
-        "borderTop": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "borderTop": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -224,7 +224,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bt-active"
     style={
       {
-        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -232,7 +232,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bt-focus"
     style={
       {
-        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -240,7 +240,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-bt-hover"
     style={
       {
-        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
       }
     }
   />,
@@ -320,7 +320,7 @@ exports[`breakpoints lg 1`] = `
   <div
     style={
       {
-        "color": "var(--hop-upsell-text-disabled)",
+        "color": "var(--hop-upsell-text-hover)",
       }
     }
   />,
@@ -328,7 +328,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-c-active"
     style={
       {
-        "--o-ui-c-active": "var(--hop-upsell-text-disabled)",
+        "--o-ui-c-active": "var(--hop-upsell-text-hover)",
       }
     }
   />,
@@ -336,7 +336,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-c-focus"
     style={
       {
-        "--o-ui-c-focus": "var(--hop-upsell-text-disabled)",
+        "--o-ui-c-focus": "var(--hop-upsell-text-hover)",
       }
     }
   />,
@@ -344,7 +344,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-c-hover"
     style={
       {
-        "--o-ui-c-hover": "var(--hop-upsell-text-disabled)",
+        "--o-ui-c-hover": "var(--hop-upsell-text-hover)",
       }
     }
   />,
@@ -394,7 +394,7 @@ exports[`breakpoints lg 1`] = `
   <div
     style={
       {
-        "fill": "var(--hop-upsell-icon)",
+        "fill": "var(--hop-upsell-icon-active)",
       }
     }
   />,
@@ -402,7 +402,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-f-focus"
     style={
       {
-        "--o-ui-f-focus": "var(--hop-upsell-icon)",
+        "--o-ui-f-focus": "var(--hop-upsell-icon-active)",
       }
     }
   />,
@@ -410,7 +410,7 @@ exports[`breakpoints lg 1`] = `
     className="o-ui-f-hover"
     style={
       {
-        "--o-ui-f-hover": "var(--hop-upsell-icon)",
+        "--o-ui-f-hover": "var(--hop-upsell-icon-active)",
       }
     }
   />,
@@ -910,7 +910,7 @@ exports[`breakpoints lg 1`] = `
   <div
     style={
       {
-        "stroke": "var(--hop-upsell-icon)",
+        "stroke": "var(--hop-upsell-icon-active)",
       }
     }
   />,
@@ -1114,7 +1114,7 @@ exports[`breakpoints md 1`] = `
   <div
     style={
       {
-        "border": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "border": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1122,7 +1122,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-b-active"
     style={
       {
-        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1130,7 +1130,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-b-focus"
     style={
       {
-        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1138,14 +1138,14 @@ exports[`breakpoints md 1`] = `
     className="o-ui-b-hover"
     style={
       {
-        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
   <div
     style={
       {
-        "borderBottom": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "borderBottom": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1153,7 +1153,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bb-active"
     style={
       {
-        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1161,7 +1161,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bb-focus"
     style={
       {
-        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1169,14 +1169,14 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bb-hover"
     style={
       {
-        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
   <div
     style={
       {
-        "borderLeft": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "borderLeft": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1184,7 +1184,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bl-active"
     style={
       {
-        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1192,7 +1192,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bl-focus"
     style={
       {
-        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1200,14 +1200,14 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bl-hover"
     style={
       {
-        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
   <div
     style={
       {
-        "borderRight": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "borderRight": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1215,7 +1215,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-br-active"
     style={
       {
-        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1223,7 +1223,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-br-focus"
     style={
       {
-        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1231,14 +1231,14 @@ exports[`breakpoints md 1`] = `
     className="o-ui-br-hover"
     style={
       {
-        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
   <div
     style={
       {
-        "borderTop": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "borderTop": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1246,7 +1246,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bt-active"
     style={
       {
-        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1254,7 +1254,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bt-focus"
     style={
       {
-        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1262,7 +1262,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-bt-hover"
     style={
       {
-        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border-selected)",
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
   />,
@@ -1342,7 +1342,7 @@ exports[`breakpoints md 1`] = `
   <div
     style={
       {
-        "color": "var(--hop-upsell-text-hover)",
+        "color": "var(--hop-upsell-text)",
       }
     }
   />,
@@ -1350,7 +1350,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-c-active"
     style={
       {
-        "--o-ui-c-active": "var(--hop-upsell-text-hover)",
+        "--o-ui-c-active": "var(--hop-upsell-text)",
       }
     }
   />,
@@ -1358,7 +1358,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-c-focus"
     style={
       {
-        "--o-ui-c-focus": "var(--hop-upsell-text-hover)",
+        "--o-ui-c-focus": "var(--hop-upsell-text)",
       }
     }
   />,
@@ -1366,7 +1366,7 @@ exports[`breakpoints md 1`] = `
     className="o-ui-c-hover"
     style={
       {
-        "--o-ui-c-hover": "var(--hop-upsell-text-hover)",
+        "--o-ui-c-hover": "var(--hop-upsell-text)",
       }
     }
   />,
@@ -2136,7 +2136,7 @@ exports[`breakpoints sm 1`] = `
   <div
     style={
       {
-        "border": "0.0625rem solid var(--hop-upsell-border)",
+        "border": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2144,7 +2144,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-b-active"
     style={
       {
-        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2152,7 +2152,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-b-focus"
     style={
       {
-        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2160,14 +2160,14 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-b-hover"
     style={
       {
-        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
   <div
     style={
       {
-        "borderBottom": "0.0625rem solid var(--hop-upsell-border)",
+        "borderBottom": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2175,7 +2175,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bb-active"
     style={
       {
-        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2183,7 +2183,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bb-focus"
     style={
       {
-        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2191,14 +2191,14 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bb-hover"
     style={
       {
-        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
   <div
     style={
       {
-        "borderLeft": "0.0625rem solid var(--hop-upsell-border)",
+        "borderLeft": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2206,7 +2206,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bl-active"
     style={
       {
-        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2214,7 +2214,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bl-focus"
     style={
       {
-        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2222,14 +2222,14 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bl-hover"
     style={
       {
-        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
   <div
     style={
       {
-        "borderRight": "0.0625rem solid var(--hop-upsell-border)",
+        "borderRight": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2237,7 +2237,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-br-active"
     style={
       {
-        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2245,7 +2245,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-br-focus"
     style={
       {
-        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2253,14 +2253,14 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-br-hover"
     style={
       {
-        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
   <div
     style={
       {
-        "borderTop": "0.0625rem solid var(--hop-upsell-border)",
+        "borderTop": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2268,7 +2268,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bt-active"
     style={
       {
-        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2276,7 +2276,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bt-focus"
     style={
       {
-        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2284,7 +2284,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-bt-hover"
     style={
       {
-        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border)",
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border-active)",
       }
     }
   />,
@@ -2364,7 +2364,7 @@ exports[`breakpoints sm 1`] = `
   <div
     style={
       {
-        "color": "var(--hop-upsell-text)",
+        "color": "var(--hop-upsell-text-active)",
       }
     }
   />,
@@ -2372,7 +2372,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-c-active"
     style={
       {
-        "--o-ui-c-active": "var(--hop-upsell-text)",
+        "--o-ui-c-active": "var(--hop-upsell-text-active)",
       }
     }
   />,
@@ -2380,7 +2380,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-c-focus"
     style={
       {
-        "--o-ui-c-focus": "var(--hop-upsell-text)",
+        "--o-ui-c-focus": "var(--hop-upsell-text-active)",
       }
     }
   />,
@@ -2388,7 +2388,7 @@ exports[`breakpoints sm 1`] = `
     className="o-ui-c-hover"
     style={
       {
-        "--o-ui-c-hover": "var(--hop-upsell-text)",
+        "--o-ui-c-hover": "var(--hop-upsell-text-active)",
       }
     }
   />,
@@ -3111,7 +3111,7 @@ exports[`breakpoints xl 1`] = `
   <div
     style={
       {
-        "backgroundColor": "var(--hop-upsell-surface)",
+        "backgroundColor": "var(--hop-upsell-surface-active)",
       }
     }
   />,
@@ -3119,7 +3119,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bg-active"
     style={
       {
-        "--o-ui-bg-active": "var(--hop-upsell-surface)",
+        "--o-ui-bg-active": "var(--hop-upsell-surface-active)",
       }
     }
   />,
@@ -3127,7 +3127,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bg-focus"
     style={
       {
-        "--o-ui-bg-focus": "var(--hop-upsell-surface)",
+        "--o-ui-bg-focus": "var(--hop-upsell-surface-active)",
       }
     }
   />,
@@ -3135,7 +3135,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bg-hover"
     style={
       {
-        "--o-ui-bg-hover": "var(--hop-upsell-surface)",
+        "--o-ui-bg-hover": "var(--hop-upsell-surface-active)",
       }
     }
   />,
@@ -3170,7 +3170,7 @@ exports[`breakpoints xl 1`] = `
   <div
     style={
       {
-        "border": "0.0625rem solid var(--hop-danger-border-strong)",
+        "border": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3178,7 +3178,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-b-active"
     style={
       {
-        "--o-ui-b-active": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3186,7 +3186,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-b-focus"
     style={
       {
-        "--o-ui-b-focus": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3194,14 +3194,14 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-b-hover"
     style={
       {
-        "--o-ui-b-hover": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
   <div
     style={
       {
-        "borderBottom": "0.0625rem solid var(--hop-danger-border-strong)",
+        "borderBottom": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3209,7 +3209,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bb-active"
     style={
       {
-        "--o-ui-bb-active": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3217,7 +3217,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bb-focus"
     style={
       {
-        "--o-ui-bb-focus": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3225,14 +3225,14 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bb-hover"
     style={
       {
-        "--o-ui-bb-hover": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
   <div
     style={
       {
-        "borderLeft": "0.0625rem solid var(--hop-danger-border-strong)",
+        "borderLeft": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3240,7 +3240,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bl-active"
     style={
       {
-        "--o-ui-bl-active": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3248,7 +3248,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bl-focus"
     style={
       {
-        "--o-ui-bl-focus": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3256,14 +3256,14 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bl-hover"
     style={
       {
-        "--o-ui-bl-hover": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
   <div
     style={
       {
-        "borderRight": "0.0625rem solid var(--hop-danger-border-strong)",
+        "borderRight": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3271,7 +3271,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-br-active"
     style={
       {
-        "--o-ui-br-active": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3279,7 +3279,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-br-focus"
     style={
       {
-        "--o-ui-br-focus": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3287,14 +3287,14 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-br-hover"
     style={
       {
-        "--o-ui-br-hover": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
   <div
     style={
       {
-        "borderTop": "0.0625rem solid var(--hop-danger-border-strong)",
+        "borderTop": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3302,7 +3302,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bt-active"
     style={
       {
-        "--o-ui-bt-active": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3310,7 +3310,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bt-focus"
     style={
       {
-        "--o-ui-bt-focus": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3318,7 +3318,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-bt-hover"
     style={
       {
-        "--o-ui-bt-hover": "0.0625rem solid var(--hop-danger-border-strong)",
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border-disabled)",
       }
     }
   />,
@@ -3398,7 +3398,7 @@ exports[`breakpoints xl 1`] = `
   <div
     style={
       {
-        "color": "var(--hop-upsell-text-selected)",
+        "color": "var(--hop-upsell-text-disabled)",
       }
     }
   />,
@@ -3406,7 +3406,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-c-active"
     style={
       {
-        "--o-ui-c-active": "var(--hop-upsell-text-selected)",
+        "--o-ui-c-active": "var(--hop-upsell-text-disabled)",
       }
     }
   />,
@@ -3414,7 +3414,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-c-focus"
     style={
       {
-        "--o-ui-c-focus": "var(--hop-upsell-text-selected)",
+        "--o-ui-c-focus": "var(--hop-upsell-text-disabled)",
       }
     }
   />,
@@ -3422,7 +3422,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-c-hover"
     style={
       {
-        "--o-ui-c-hover": "var(--hop-upsell-text-selected)",
+        "--o-ui-c-hover": "var(--hop-upsell-text-disabled)",
       }
     }
   />,
@@ -3472,7 +3472,7 @@ exports[`breakpoints xl 1`] = `
   <div
     style={
       {
-        "fill": "var(--hop-upsell-icon-selected)",
+        "fill": "var(--hop-upsell-icon)",
       }
     }
   />,
@@ -3480,7 +3480,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-f-focus"
     style={
       {
-        "--o-ui-f-focus": "var(--hop-upsell-icon-selected)",
+        "--o-ui-f-focus": "var(--hop-upsell-icon)",
       }
     }
   />,
@@ -3488,7 +3488,7 @@ exports[`breakpoints xl 1`] = `
     className="o-ui-f-hover"
     style={
       {
-        "--o-ui-f-hover": "var(--hop-upsell-icon-selected)",
+        "--o-ui-f-hover": "var(--hop-upsell-icon)",
       }
     }
   />,
@@ -3988,7 +3988,7 @@ exports[`breakpoints xl 1`] = `
   <div
     style={
       {
-        "stroke": "var(--hop-upsell-icon-selected)",
+        "stroke": "var(--hop-upsell-icon)",
       }
     }
   />,
@@ -5628,6 +5628,13 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-upsell-surface-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-upsell-surface)",
       }
     }
@@ -5650,6 +5657,13 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-upsell-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-upsell-surface-weak-active)",
       }
     }
   />,
@@ -5712,7 +5726,21 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-danger-surface-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-danger-surface-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-danger-surface-active)",
       }
     }
   />,
@@ -5768,6 +5796,13 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-primary-surface-strong-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-primary-surface-strong-hover)",
       }
     }
@@ -5783,6 +5818,13 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-primary-surface-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-primary-surface-active)",
       }
     }
   />,
@@ -5811,6 +5853,13 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-primary-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-primary-surface-weak-active)",
       }
     }
   />,
@@ -6216,6 +6265,13 @@ exports[`props background color 1`] = `
   <div
     style={
       {
+        "backgroundColor": "var(--hop-neutral-surface-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "backgroundColor": "var(--hop-neutral-surface-weak)",
       }
     }
@@ -6273,6 +6329,13 @@ exports[`props background color 1`] = `
     style={
       {
         "backgroundColor": "var(--hop-neutral-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "backgroundColor": "var(--hop-neutral-surface-weak-active)",
       }
     }
   />,
@@ -7600,6 +7663,14 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-upsell-surface-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-upsell-surface)",
       }
     }
@@ -7625,6 +7696,14 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-upsell-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-upsell-surface-weak-active)",
       }
     }
   />,
@@ -7696,7 +7775,23 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-danger-surface-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-danger-surface-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-danger-surface-active)",
       }
     }
   />,
@@ -7760,6 +7855,14 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-primary-surface-strong-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-primary-surface-strong-hover)",
       }
     }
@@ -7777,6 +7880,14 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-primary-surface-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-primary-surface-active)",
       }
     }
   />,
@@ -7809,6 +7920,14 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-primary-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-primary-surface-weak-active)",
       }
     }
   />,
@@ -8272,6 +8391,14 @@ exports[`props background color/active 1`] = `
     className="o-ui-bg-active"
     style={
       {
+        "--o-ui-bg-active": "var(--hop-neutral-surface-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
         "--o-ui-bg-active": "var(--hop-neutral-surface-weak)",
       }
     }
@@ -8337,6 +8464,14 @@ exports[`props background color/active 1`] = `
     style={
       {
         "--o-ui-bg-active": "var(--hop-neutral-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-active"
+    style={
+      {
+        "--o-ui-bg-active": "var(--hop-neutral-surface-weak-active)",
       }
     }
   />,
@@ -9847,6 +9982,14 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-upsell-surface-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-upsell-surface)",
       }
     }
@@ -9872,6 +10015,14 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-upsell-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-upsell-surface-weak-active)",
       }
     }
   />,
@@ -9943,7 +10094,23 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-danger-surface-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-danger-surface-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-danger-surface-active)",
       }
     }
   />,
@@ -10007,6 +10174,14 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-primary-surface-strong-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-primary-surface-strong-hover)",
       }
     }
@@ -10024,6 +10199,14 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-primary-surface-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-primary-surface-active)",
       }
     }
   />,
@@ -10056,6 +10239,14 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-primary-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-primary-surface-weak-active)",
       }
     }
   />,
@@ -10519,6 +10710,14 @@ exports[`props background color/focus 1`] = `
     className="o-ui-bg-focus"
     style={
       {
+        "--o-ui-bg-focus": "var(--hop-neutral-surface-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
         "--o-ui-bg-focus": "var(--hop-neutral-surface-weak)",
       }
     }
@@ -10584,6 +10783,14 @@ exports[`props background color/focus 1`] = `
     style={
       {
         "--o-ui-bg-focus": "var(--hop-neutral-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-focus"
+    style={
+      {
+        "--o-ui-bg-focus": "var(--hop-neutral-surface-weak-active)",
       }
     }
   />,
@@ -12094,6 +12301,14 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-upsell-surface-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-upsell-surface)",
       }
     }
@@ -12119,6 +12334,14 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-upsell-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-upsell-surface-weak-active)",
       }
     }
   />,
@@ -12190,7 +12413,23 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-danger-surface-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-danger-surface-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-danger-surface-active)",
       }
     }
   />,
@@ -12254,6 +12493,14 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-primary-surface-strong-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-primary-surface-strong-hover)",
       }
     }
@@ -12271,6 +12518,14 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-primary-surface-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-primary-surface-active)",
       }
     }
   />,
@@ -12303,6 +12558,14 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-primary-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-primary-surface-weak-active)",
       }
     }
   />,
@@ -12766,6 +13029,14 @@ exports[`props background color/hover 1`] = `
     className="o-ui-bg-hover"
     style={
       {
+        "--o-ui-bg-hover": "var(--hop-neutral-surface-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
         "--o-ui-bg-hover": "var(--hop-neutral-surface-weak)",
       }
     }
@@ -12831,6 +13102,14 @@ exports[`props background color/hover 1`] = `
     style={
       {
         "--o-ui-bg-hover": "var(--hop-neutral-surface-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bg-hover"
+    style={
+      {
+        "--o-ui-bg-hover": "var(--hop-neutral-surface-weak-active)",
       }
     }
   />,
@@ -14601,6 +14880,13 @@ exports[`props border 1`] = `
   <div
     style={
       {
+        "border": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "border": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -14636,6 +14922,13 @@ exports[`props border 1`] = `
   <div
     style={
       {
+        "border": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "border": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -14651,6 +14944,13 @@ exports[`props border 1`] = `
     style={
       {
         "border": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "border": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -14791,6 +15091,13 @@ exports[`props border 1`] = `
     style={
       {
         "border": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "border": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -15889,6 +16196,13 @@ exports[`props border bottom 1`] = `
   <div
     style={
       {
+        "borderBottom": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderBottom": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -15924,6 +16238,13 @@ exports[`props border bottom 1`] = `
   <div
     style={
       {
+        "borderBottom": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderBottom": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -15939,6 +16260,13 @@ exports[`props border bottom 1`] = `
     style={
       {
         "borderBottom": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderBottom": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -16079,6 +16407,13 @@ exports[`props border bottom 1`] = `
     style={
       {
         "borderBottom": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderBottom": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -17564,6 +17899,14 @@ exports[`props border bottom/active 1`] = `
     className="o-ui-bb-active"
     style={
       {
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-active"
+    style={
+      {
         "--o-ui-bb-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -17604,6 +17947,14 @@ exports[`props border bottom/active 1`] = `
     className="o-ui-bb-active"
     style={
       {
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-active"
+    style={
+      {
         "--o-ui-bb-active": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -17621,6 +17972,14 @@ exports[`props border bottom/active 1`] = `
     style={
       {
         "--o-ui-bb-active": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-active"
+    style={
+      {
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -17781,6 +18140,14 @@ exports[`props border bottom/active 1`] = `
     style={
       {
         "--o-ui-bb-active": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-active"
+    style={
+      {
+        "--o-ui-bb-active": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -19027,6 +19394,14 @@ exports[`props border bottom/focus 1`] = `
     className="o-ui-bb-focus"
     style={
       {
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-focus"
+    style={
+      {
         "--o-ui-bb-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -19067,6 +19442,14 @@ exports[`props border bottom/focus 1`] = `
     className="o-ui-bb-focus"
     style={
       {
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-focus"
+    style={
+      {
         "--o-ui-bb-focus": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -19084,6 +19467,14 @@ exports[`props border bottom/focus 1`] = `
     style={
       {
         "--o-ui-bb-focus": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-focus"
+    style={
+      {
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -19244,6 +19635,14 @@ exports[`props border bottom/focus 1`] = `
     style={
       {
         "--o-ui-bb-focus": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-focus"
+    style={
+      {
+        "--o-ui-bb-focus": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -20490,6 +20889,14 @@ exports[`props border bottom/hover 1`] = `
     className="o-ui-bb-hover"
     style={
       {
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-hover"
+    style={
+      {
         "--o-ui-bb-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -20530,6 +20937,14 @@ exports[`props border bottom/hover 1`] = `
     className="o-ui-bb-hover"
     style={
       {
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-hover"
+    style={
+      {
         "--o-ui-bb-hover": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -20547,6 +20962,14 @@ exports[`props border bottom/hover 1`] = `
     style={
       {
         "--o-ui-bb-hover": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-hover"
+    style={
+      {
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -20707,6 +21130,14 @@ exports[`props border bottom/hover 1`] = `
     style={
       {
         "--o-ui-bb-hover": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bb-hover"
+    style={
+      {
+        "--o-ui-bb-hover": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -21951,6 +22382,13 @@ exports[`props border left 1`] = `
   <div
     style={
       {
+        "borderLeft": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderLeft": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -21986,6 +22424,13 @@ exports[`props border left 1`] = `
   <div
     style={
       {
+        "borderLeft": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderLeft": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -22001,6 +22446,13 @@ exports[`props border left 1`] = `
     style={
       {
         "borderLeft": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderLeft": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -22141,6 +22593,13 @@ exports[`props border left 1`] = `
     style={
       {
         "borderLeft": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderLeft": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -23234,6 +23693,14 @@ exports[`props border left/active 1`] = `
     className="o-ui-bl-active"
     style={
       {
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-active"
+    style={
+      {
         "--o-ui-bl-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -23274,6 +23741,14 @@ exports[`props border left/active 1`] = `
     className="o-ui-bl-active"
     style={
       {
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-active"
+    style={
+      {
         "--o-ui-bl-active": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -23291,6 +23766,14 @@ exports[`props border left/active 1`] = `
     style={
       {
         "--o-ui-bl-active": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-active"
+    style={
+      {
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -23451,6 +23934,14 @@ exports[`props border left/active 1`] = `
     style={
       {
         "--o-ui-bl-active": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-active"
+    style={
+      {
+        "--o-ui-bl-active": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -24697,6 +25188,14 @@ exports[`props border left/focus 1`] = `
     className="o-ui-bl-focus"
     style={
       {
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-focus"
+    style={
+      {
         "--o-ui-bl-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -24737,6 +25236,14 @@ exports[`props border left/focus 1`] = `
     className="o-ui-bl-focus"
     style={
       {
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-focus"
+    style={
+      {
         "--o-ui-bl-focus": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -24754,6 +25261,14 @@ exports[`props border left/focus 1`] = `
     style={
       {
         "--o-ui-bl-focus": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-focus"
+    style={
+      {
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -24914,6 +25429,14 @@ exports[`props border left/focus 1`] = `
     style={
       {
         "--o-ui-bl-focus": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-focus"
+    style={
+      {
+        "--o-ui-bl-focus": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -26160,6 +26683,14 @@ exports[`props border left/hover 1`] = `
     className="o-ui-bl-hover"
     style={
       {
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-hover"
+    style={
+      {
         "--o-ui-bl-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -26200,6 +26731,14 @@ exports[`props border left/hover 1`] = `
     className="o-ui-bl-hover"
     style={
       {
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-hover"
+    style={
+      {
         "--o-ui-bl-hover": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -26217,6 +26756,14 @@ exports[`props border left/hover 1`] = `
     style={
       {
         "--o-ui-bl-hover": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-hover"
+    style={
+      {
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -26377,6 +26924,14 @@ exports[`props border left/hover 1`] = `
     style={
       {
         "--o-ui-bl-hover": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bl-hover"
+    style={
+      {
+        "--o-ui-bl-hover": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -27824,6 +28379,13 @@ exports[`props border right 1`] = `
   <div
     style={
       {
+        "borderRight": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderRight": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -27859,6 +28421,13 @@ exports[`props border right 1`] = `
   <div
     style={
       {
+        "borderRight": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderRight": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -27874,6 +28443,13 @@ exports[`props border right 1`] = `
     style={
       {
         "borderRight": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderRight": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -28014,6 +28590,13 @@ exports[`props border right 1`] = `
     style={
       {
         "borderRight": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderRight": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -29107,6 +29690,14 @@ exports[`props border right/active 1`] = `
     className="o-ui-br-active"
     style={
       {
+        "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-active"
+    style={
+      {
         "--o-ui-br-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -29147,6 +29738,14 @@ exports[`props border right/active 1`] = `
     className="o-ui-br-active"
     style={
       {
+        "--o-ui-br-active": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-active"
+    style={
+      {
         "--o-ui-br-active": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -29164,6 +29763,14 @@ exports[`props border right/active 1`] = `
     style={
       {
         "--o-ui-br-active": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-active"
+    style={
+      {
+        "--o-ui-br-active": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -29324,6 +29931,14 @@ exports[`props border right/active 1`] = `
     style={
       {
         "--o-ui-br-active": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-active"
+    style={
+      {
+        "--o-ui-br-active": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -30570,6 +31185,14 @@ exports[`props border right/focus 1`] = `
     className="o-ui-br-focus"
     style={
       {
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-focus"
+    style={
+      {
         "--o-ui-br-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -30610,6 +31233,14 @@ exports[`props border right/focus 1`] = `
     className="o-ui-br-focus"
     style={
       {
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-focus"
+    style={
+      {
         "--o-ui-br-focus": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -30627,6 +31258,14 @@ exports[`props border right/focus 1`] = `
     style={
       {
         "--o-ui-br-focus": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-focus"
+    style={
+      {
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -30787,6 +31426,14 @@ exports[`props border right/focus 1`] = `
     style={
       {
         "--o-ui-br-focus": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-focus"
+    style={
+      {
+        "--o-ui-br-focus": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -32033,6 +32680,14 @@ exports[`props border right/hover 1`] = `
     className="o-ui-br-hover"
     style={
       {
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-hover"
+    style={
+      {
         "--o-ui-br-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -32073,6 +32728,14 @@ exports[`props border right/hover 1`] = `
     className="o-ui-br-hover"
     style={
       {
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-hover"
+    style={
+      {
         "--o-ui-br-hover": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -32090,6 +32753,14 @@ exports[`props border right/hover 1`] = `
     style={
       {
         "--o-ui-br-hover": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-hover"
+    style={
+      {
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -32250,6 +32921,14 @@ exports[`props border right/hover 1`] = `
     style={
       {
         "--o-ui-br-hover": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-br-hover"
+    style={
+      {
+        "--o-ui-br-hover": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -33494,6 +34173,13 @@ exports[`props border top 1`] = `
   <div
     style={
       {
+        "borderTop": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderTop": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -33529,6 +34215,13 @@ exports[`props border top 1`] = `
   <div
     style={
       {
+        "borderTop": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "borderTop": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -33544,6 +34237,13 @@ exports[`props border top 1`] = `
     style={
       {
         "borderTop": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderTop": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -33684,6 +34384,13 @@ exports[`props border top 1`] = `
     style={
       {
         "borderTop": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "borderTop": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -35169,6 +35876,14 @@ exports[`props border top/active 1`] = `
     className="o-ui-bt-active"
     style={
       {
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-active"
+    style={
+      {
         "--o-ui-bt-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -35209,6 +35924,14 @@ exports[`props border top/active 1`] = `
     className="o-ui-bt-active"
     style={
       {
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-active"
+    style={
+      {
         "--o-ui-bt-active": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -35226,6 +35949,14 @@ exports[`props border top/active 1`] = `
     style={
       {
         "--o-ui-bt-active": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-active"
+    style={
+      {
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -35386,6 +36117,14 @@ exports[`props border top/active 1`] = `
     style={
       {
         "--o-ui-bt-active": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-active"
+    style={
+      {
+        "--o-ui-bt-active": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -36632,6 +37371,14 @@ exports[`props border top/focus 1`] = `
     className="o-ui-bt-focus"
     style={
       {
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-focus"
+    style={
+      {
         "--o-ui-bt-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -36672,6 +37419,14 @@ exports[`props border top/focus 1`] = `
     className="o-ui-bt-focus"
     style={
       {
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-focus"
+    style={
+      {
         "--o-ui-bt-focus": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -36689,6 +37444,14 @@ exports[`props border top/focus 1`] = `
     style={
       {
         "--o-ui-bt-focus": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-focus"
+    style={
+      {
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -36849,6 +37612,14 @@ exports[`props border top/focus 1`] = `
     style={
       {
         "--o-ui-bt-focus": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-focus"
+    style={
+      {
+        "--o-ui-bt-focus": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -38095,6 +38866,14 @@ exports[`props border top/hover 1`] = `
     className="o-ui-bt-hover"
     style={
       {
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-hover"
+    style={
+      {
         "--o-ui-bt-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -38135,6 +38914,14 @@ exports[`props border top/hover 1`] = `
     className="o-ui-bt-hover"
     style={
       {
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-hover"
+    style={
+      {
         "--o-ui-bt-hover": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -38152,6 +38939,14 @@ exports[`props border top/hover 1`] = `
     style={
       {
         "--o-ui-bt-hover": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-hover"
+    style={
+      {
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -38312,6 +39107,14 @@ exports[`props border top/hover 1`] = `
     style={
       {
         "--o-ui-bt-hover": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-bt-hover"
+    style={
+      {
+        "--o-ui-bt-hover": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -39558,6 +40361,14 @@ exports[`props border/active 1`] = `
     className="o-ui-b-active"
     style={
       {
+        "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-active"
+    style={
+      {
         "--o-ui-b-active": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -39598,6 +40409,14 @@ exports[`props border/active 1`] = `
     className="o-ui-b-active"
     style={
       {
+        "--o-ui-b-active": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-active"
+    style={
+      {
         "--o-ui-b-active": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -39615,6 +40434,14 @@ exports[`props border/active 1`] = `
     style={
       {
         "--o-ui-b-active": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-active"
+    style={
+      {
+        "--o-ui-b-active": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -39775,6 +40602,14 @@ exports[`props border/active 1`] = `
     style={
       {
         "--o-ui-b-active": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-active"
+    style={
+      {
+        "--o-ui-b-active": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -41021,6 +41856,14 @@ exports[`props border/focus 1`] = `
     className="o-ui-b-focus"
     style={
       {
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-focus"
+    style={
+      {
         "--o-ui-b-focus": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -41061,6 +41904,14 @@ exports[`props border/focus 1`] = `
     className="o-ui-b-focus"
     style={
       {
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-focus"
+    style={
+      {
         "--o-ui-b-focus": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -41078,6 +41929,14 @@ exports[`props border/focus 1`] = `
     style={
       {
         "--o-ui-b-focus": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-focus"
+    style={
+      {
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -41238,6 +42097,14 @@ exports[`props border/focus 1`] = `
     style={
       {
         "--o-ui-b-focus": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-focus"
+    style={
+      {
+        "--o-ui-b-focus": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -42484,6 +43351,14 @@ exports[`props border/hover 1`] = `
     className="o-ui-b-hover"
     style={
       {
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-hover"
+    style={
+      {
         "--o-ui-b-hover": "0.0625rem solid var(--hop-upsell-border)",
       }
     }
@@ -42524,6 +43399,14 @@ exports[`props border/hover 1`] = `
     className="o-ui-b-hover"
     style={
       {
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-danger-border-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-hover"
+    style={
+      {
         "--o-ui-b-hover": "0.0625rem solid var(--hop-danger-border)",
       }
     }
@@ -42541,6 +43424,14 @@ exports[`props border/hover 1`] = `
     style={
       {
         "--o-ui-b-hover": "0.0625rem solid var(--hop-primary-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-hover"
+    style={
+      {
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-primary-border-active)",
       }
     }
   />,
@@ -42701,6 +43592,14 @@ exports[`props border/hover 1`] = `
     style={
       {
         "--o-ui-b-hover": "0.0625rem solid var(--hop-neutral-border-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-b-hover"
+    style={
+      {
+        "--o-ui-b-hover": "0.0625rem solid var(--hop-neutral-border-active)",
       }
     }
   />,
@@ -44494,6 +45393,13 @@ exports[`props color 1`] = `
   <div
     style={
       {
+        "color": "var(--hop-upsell-text-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "color": "var(--hop-upsell-text)",
       }
     }
@@ -44543,7 +45449,21 @@ exports[`props color 1`] = `
   <div
     style={
       {
+        "color": "var(--hop-upsell-text-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "color": "var(--hop-danger-text-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "color": "var(--hop-danger-text-active)",
       }
     }
   />,
@@ -44565,6 +45485,13 @@ exports[`props color 1`] = `
     style={
       {
         "color": "var(--hop-danger-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "color": "var(--hop-danger-text-weak-active)",
       }
     }
   />,
@@ -44614,6 +45541,13 @@ exports[`props color 1`] = `
     style={
       {
         "color": "var(--hop-primary-text-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "color": "var(--hop-primary-text-active)",
       }
     }
   />,
@@ -44816,6 +45750,13 @@ exports[`props color 1`] = `
   <div
     style={
       {
+        "color": "var(--hop-neutral-text-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "color": "var(--hop-neutral-text-weak-hover)",
       }
     }
@@ -44824,6 +45765,13 @@ exports[`props color 1`] = `
     style={
       {
         "color": "var(--hop-neutral-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "color": "var(--hop-neutral-text-weak-active)",
       }
     }
   />,
@@ -46043,6 +46991,14 @@ exports[`props color/active 1`] = `
     className="o-ui-c-active"
     style={
       {
+        "--o-ui-c-active": "var(--hop-upsell-text-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
         "--o-ui-c-active": "var(--hop-upsell-text)",
       }
     }
@@ -46099,7 +47055,23 @@ exports[`props color/active 1`] = `
     className="o-ui-c-active"
     style={
       {
+        "--o-ui-c-active": "var(--hop-upsell-text-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
         "--o-ui-c-active": "var(--hop-danger-text-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
+        "--o-ui-c-active": "var(--hop-danger-text-active)",
       }
     }
   />,
@@ -46124,6 +47096,14 @@ exports[`props color/active 1`] = `
     style={
       {
         "--o-ui-c-active": "var(--hop-danger-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
+        "--o-ui-c-active": "var(--hop-danger-text-weak-active)",
       }
     }
   />,
@@ -46180,6 +47160,14 @@ exports[`props color/active 1`] = `
     style={
       {
         "--o-ui-c-active": "var(--hop-primary-text-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
+        "--o-ui-c-active": "var(--hop-primary-text-active)",
       }
     }
   />,
@@ -46411,6 +47399,14 @@ exports[`props color/active 1`] = `
     className="o-ui-c-active"
     style={
       {
+        "--o-ui-c-active": "var(--hop-neutral-text-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
         "--o-ui-c-active": "var(--hop-neutral-text-weak-hover)",
       }
     }
@@ -46420,6 +47416,14 @@ exports[`props color/active 1`] = `
     style={
       {
         "--o-ui-c-active": "var(--hop-neutral-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
+        "--o-ui-c-active": "var(--hop-neutral-text-weak-active)",
       }
     }
   />,
@@ -47810,6 +48814,14 @@ exports[`props color/focus 1`] = `
     className="o-ui-c-focus"
     style={
       {
+        "--o-ui-c-focus": "var(--hop-upsell-text-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
         "--o-ui-c-focus": "var(--hop-upsell-text)",
       }
     }
@@ -47866,7 +48878,23 @@ exports[`props color/focus 1`] = `
     className="o-ui-c-focus"
     style={
       {
+        "--o-ui-c-focus": "var(--hop-upsell-text-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
         "--o-ui-c-focus": "var(--hop-danger-text-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
+        "--o-ui-c-focus": "var(--hop-danger-text-active)",
       }
     }
   />,
@@ -47891,6 +48919,14 @@ exports[`props color/focus 1`] = `
     style={
       {
         "--o-ui-c-focus": "var(--hop-danger-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
+        "--o-ui-c-focus": "var(--hop-danger-text-weak-active)",
       }
     }
   />,
@@ -47947,6 +48983,14 @@ exports[`props color/focus 1`] = `
     style={
       {
         "--o-ui-c-focus": "var(--hop-primary-text-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
+        "--o-ui-c-focus": "var(--hop-primary-text-active)",
       }
     }
   />,
@@ -48178,6 +49222,14 @@ exports[`props color/focus 1`] = `
     className="o-ui-c-focus"
     style={
       {
+        "--o-ui-c-focus": "var(--hop-neutral-text-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
         "--o-ui-c-focus": "var(--hop-neutral-text-weak-hover)",
       }
     }
@@ -48187,6 +49239,14 @@ exports[`props color/focus 1`] = `
     style={
       {
         "--o-ui-c-focus": "var(--hop-neutral-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
+        "--o-ui-c-focus": "var(--hop-neutral-text-weak-active)",
       }
     }
   />,
@@ -49577,6 +50637,14 @@ exports[`props color/hover 1`] = `
     className="o-ui-c-hover"
     style={
       {
+        "--o-ui-c-hover": "var(--hop-upsell-text-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
         "--o-ui-c-hover": "var(--hop-upsell-text)",
       }
     }
@@ -49633,7 +50701,23 @@ exports[`props color/hover 1`] = `
     className="o-ui-c-hover"
     style={
       {
+        "--o-ui-c-hover": "var(--hop-upsell-text-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
         "--o-ui-c-hover": "var(--hop-danger-text-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
+        "--o-ui-c-hover": "var(--hop-danger-text-active)",
       }
     }
   />,
@@ -49658,6 +50742,14 @@ exports[`props color/hover 1`] = `
     style={
       {
         "--o-ui-c-hover": "var(--hop-danger-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
+        "--o-ui-c-hover": "var(--hop-danger-text-weak-active)",
       }
     }
   />,
@@ -49714,6 +50806,14 @@ exports[`props color/hover 1`] = `
     style={
       {
         "--o-ui-c-hover": "var(--hop-primary-text-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
+        "--o-ui-c-hover": "var(--hop-primary-text-active)",
       }
     }
   />,
@@ -49945,6 +51045,14 @@ exports[`props color/hover 1`] = `
     className="o-ui-c-hover"
     style={
       {
+        "--o-ui-c-hover": "var(--hop-neutral-text-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
         "--o-ui-c-hover": "var(--hop-neutral-text-weak-hover)",
       }
     }
@@ -49954,6 +51062,14 @@ exports[`props color/hover 1`] = `
     style={
       {
         "--o-ui-c-hover": "var(--hop-neutral-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
+        "--o-ui-c-hover": "var(--hop-neutral-text-weak-active)",
       }
     }
   />,
@@ -51899,6 +53015,13 @@ exports[`props fill 1`] = `
   <div
     style={
       {
+        "fill": "var(--hop-upsell-icon-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "fill": "var(--hop-upsell-icon)",
       }
     }
@@ -51934,7 +53057,21 @@ exports[`props fill 1`] = `
   <div
     style={
       {
+        "fill": "var(--hop-upsell-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "fill": "var(--hop-danger-icon-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "fill": "var(--hop-danger-icon-active)",
       }
     }
   />,
@@ -52004,7 +53141,21 @@ exports[`props fill 1`] = `
   <div
     style={
       {
+        "fill": "var(--hop-danger-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "fill": "var(--hop-primary-icon-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "fill": "var(--hop-primary-icon-active)",
       }
     }
   />,
@@ -52172,6 +53323,13 @@ exports[`props fill 1`] = `
   <div
     style={
       {
+        "fill": "var(--hop-neutral-icon-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "fill": "var(--hop-neutral-icon-selected)",
       }
     }
@@ -52187,6 +53345,13 @@ exports[`props fill 1`] = `
     style={
       {
         "fill": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "fill": "var(--hop-neutral-icon-weak-active)",
       }
     }
   />,
@@ -53415,6 +54580,14 @@ exports[`props fill/focus 1`] = `
     className="o-ui-f-focus"
     style={
       {
+        "--o-ui-f-focus": "var(--hop-upsell-icon-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
         "--o-ui-f-focus": "var(--hop-upsell-icon)",
       }
     }
@@ -53455,7 +54628,23 @@ exports[`props fill/focus 1`] = `
     className="o-ui-f-focus"
     style={
       {
+        "--o-ui-f-focus": "var(--hop-upsell-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
         "--o-ui-f-focus": "var(--hop-danger-icon-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
+        "--o-ui-f-focus": "var(--hop-danger-icon-active)",
       }
     }
   />,
@@ -53535,7 +54724,23 @@ exports[`props fill/focus 1`] = `
     className="o-ui-f-focus"
     style={
       {
+        "--o-ui-f-focus": "var(--hop-danger-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
         "--o-ui-f-focus": "var(--hop-primary-icon-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
+        "--o-ui-f-focus": "var(--hop-primary-icon-active)",
       }
     }
   />,
@@ -53727,6 +54932,14 @@ exports[`props fill/focus 1`] = `
     className="o-ui-f-focus"
     style={
       {
+        "--o-ui-f-focus": "var(--hop-neutral-icon-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
         "--o-ui-f-focus": "var(--hop-neutral-icon-selected)",
       }
     }
@@ -53744,6 +54957,14 @@ exports[`props fill/focus 1`] = `
     style={
       {
         "--o-ui-f-focus": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
+        "--o-ui-f-focus": "var(--hop-neutral-icon-weak-active)",
       }
     }
   />,
@@ -55142,6 +56363,14 @@ exports[`props fill/hover 1`] = `
     className="o-ui-f-hover"
     style={
       {
+        "--o-ui-f-hover": "var(--hop-upsell-icon-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
         "--o-ui-f-hover": "var(--hop-upsell-icon)",
       }
     }
@@ -55182,7 +56411,23 @@ exports[`props fill/hover 1`] = `
     className="o-ui-f-hover"
     style={
       {
+        "--o-ui-f-hover": "var(--hop-upsell-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
         "--o-ui-f-hover": "var(--hop-danger-icon-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
+        "--o-ui-f-hover": "var(--hop-danger-icon-active)",
       }
     }
   />,
@@ -55262,7 +56507,23 @@ exports[`props fill/hover 1`] = `
     className="o-ui-f-hover"
     style={
       {
+        "--o-ui-f-hover": "var(--hop-danger-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
         "--o-ui-f-hover": "var(--hop-primary-icon-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
+        "--o-ui-f-hover": "var(--hop-primary-icon-active)",
       }
     }
   />,
@@ -55454,6 +56715,14 @@ exports[`props fill/hover 1`] = `
     className="o-ui-f-hover"
     style={
       {
+        "--o-ui-f-hover": "var(--hop-neutral-icon-active)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
         "--o-ui-f-hover": "var(--hop-neutral-icon-selected)",
       }
     }
@@ -55471,6 +56740,14 @@ exports[`props fill/hover 1`] = `
     style={
       {
         "--o-ui-f-hover": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
+        "--o-ui-f-hover": "var(--hop-neutral-icon-weak-active)",
       }
     }
   />,
@@ -66958,6 +68235,13 @@ exports[`props stroke 1`] = `
   <div
     style={
       {
+        "stroke": "var(--hop-upsell-icon-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "stroke": "var(--hop-upsell-icon)",
       }
     }
@@ -66993,7 +68277,21 @@ exports[`props stroke 1`] = `
   <div
     style={
       {
+        "stroke": "var(--hop-upsell-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "stroke": "var(--hop-danger-icon-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "stroke": "var(--hop-danger-icon-active)",
       }
     }
   />,
@@ -67063,7 +68361,21 @@ exports[`props stroke 1`] = `
   <div
     style={
       {
+        "stroke": "var(--hop-danger-icon-weak-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "stroke": "var(--hop-primary-icon-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "stroke": "var(--hop-primary-icon-active)",
       }
     }
   />,
@@ -67231,6 +68543,13 @@ exports[`props stroke 1`] = `
   <div
     style={
       {
+        "stroke": "var(--hop-neutral-icon-active)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "stroke": "var(--hop-neutral-icon-selected)",
       }
     }
@@ -67246,6 +68565,13 @@ exports[`props stroke 1`] = `
     style={
       {
         "stroke": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "stroke": "var(--hop-neutral-icon-weak-active)",
       }
     }
   />,
