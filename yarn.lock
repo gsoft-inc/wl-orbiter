@@ -1578,12 +1578,12 @@
     "@react-aria/utils" "^3.24.0"
     clsx "^2.1.1"
 
-"@hopper-ui/styled-system@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/styled-system/-/styled-system-2.0.0.tgz#540b13d6d7c84f2fb287139c9e7a638cdee37d9e"
-  integrity sha512-LEnQzJpRxzNvnnbG76eUZKSk/rov/QyhIFxotXTguRy/WAsrp3kW+lqXt/TvIJWbU4DJpCu6pmvNWbIunipcnA==
+"@hopper-ui/styled-system@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/styled-system/-/styled-system-2.0.1.tgz#ce03191e785206ce999252b72675fada7f42409b"
+  integrity sha512-s3w9SdVqBBpI1s+FFLfqCmFcqDyr76TDtAuODN18gU/RLLFjyMzSS+U/vj7nmRjDx8q9QZqyLggTypmyNhRR1g==
   dependencies:
-    "@react-aria/ssr" "^3.9.3"
+    "@react-aria/ssr" "^3.9.4"
     clsx "^2.1.1"
 
 "@hopper-ui/tokens@^4.0.2":
@@ -3594,6 +3594,13 @@
   version "3.9.3"
   resolved "https://registry.yarnpkg.com/@react-aria/ssr/-/ssr-3.9.3.tgz#9e7d4e019965aaf86cec3da2411a392be49ac2b3"
   integrity sha512-5bUZ93dmvHFcmfUcEN7qzYe8yQQ8JY+nHN6m9/iSDCQ/QmCiE0kWXYwhurjw5ch6I8WokQzx66xKIMHBAa4NNA==
+  dependencies:
+    "@swc/helpers" "^0.5.0"
+
+"@react-aria/ssr@^3.9.4":
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/@react-aria/ssr/-/ssr-3.9.4.tgz#9da8b10342c156e816dbfa4c9e713b21f274d7ab"
+  integrity sha512-4jmAigVq409qcJvQyuorsmBR4+9r3+JEC60wC+Y0MZV0HCtTmm8D9guYXlJMdx0SSkgj0hHAyFm/HvPNFofCoQ==
   dependencies:
     "@swc/helpers" "^0.5.0"
 
