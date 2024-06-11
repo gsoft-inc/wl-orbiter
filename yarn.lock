@@ -1586,10 +1586,10 @@
     "@react-aria/ssr" "^3.9.3"
     clsx "^2.1.1"
 
-"@hopper-ui/tokens@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/tokens/-/tokens-4.0.1.tgz#6cce97873544aa88209af13ddfcbf2dd305c949a"
-  integrity sha512-NspcERZak2iI4V0B0mLdrKAqayIWEpZ4428KGEPg0GMScwD8uKJz+vHMeijfFNrM0kOXRu/+kRZmAkOpF15mpA==
+"@hopper-ui/tokens@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/tokens/-/tokens-4.0.2.tgz#b4b3eac6f445ae7d1a8013b8b6522cde687e29db"
+  integrity sha512-bOA0MB7PmcRfOA1Ljn7RA4+EpjPoUuSpM1RAtJ34mvbkN99a/QqITzh9n6tEgPnHGJ6iALCve1mGHlGQu7yiHA==
 
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
