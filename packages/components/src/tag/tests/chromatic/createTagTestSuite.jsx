@@ -18,6 +18,7 @@ export function createTagTestSuite(element, stories) {
         .add("default", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>Falcon 9</Tag>
                     <Tag size="sm" element={element}>Falcon 9</Tag>
                     <Tag element={element}>Falcon 9</Tag>
                 </Inline>
@@ -30,6 +31,10 @@ export function createTagTestSuite(element, stories) {
         .add("icon", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>
+                        <SparklesIcon />
+                        <Text>Falcon 9</Text>
+                    </Tag>
                     <Tag size="sm" element={element}>
                         <SparklesIcon />
                         <Text>Falcon 9</Text>
@@ -40,6 +45,12 @@ export function createTagTestSuite(element, stories) {
                     </Tag>
                 </Inline>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>
+                        <IconList>
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
+                        </IconList>
+                        <Text>Falcon 9</Text>
+                    </Tag>
                     <Tag size="sm" element={element}>
                         <IconList>
                             <SparklesIcon /><SparklesIcon /><SparklesIcon />
@@ -64,6 +75,12 @@ export function createTagTestSuite(element, stories) {
                     </Tag>
                 </Div>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>
+                        <Text>Falcon 9</Text>
+                        <IconList slot="end-icon">
+                            <SparklesIcon /><SparklesIcon /><SparklesIcon />
+                        </IconList>
+                    </Tag>
                     <Tag size="sm" element={element}>
                         <Text>Falcon 9</Text>
                         <IconList slot="end-icon">
@@ -110,6 +127,10 @@ export function createTagTestSuite(element, stories) {
         .add("dot", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>
+                        <Dot color="primary" />
+                        <Text>Falcon 9</Text>
+                    </Tag>
                     <Tag size="sm" element={element}>
                         <Dot color="primary" />
                         <Text>Falcon 9</Text>
@@ -134,6 +155,10 @@ export function createTagTestSuite(element, stories) {
         .add("avatar", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>
+                        <Avatar name="Alan Shepard" />
+                        <Text>Alan Shepard</Text>
+                    </Tag>
                     <Tag size="sm" element={element}>
                         <Avatar name="Alan Shepard" />
                         <Text>Alan Shepard</Text>
@@ -183,6 +208,10 @@ export function createTagTestSuite(element, stories) {
                 <Div width="10%">
                     <Stack>
                         <Inline>
+                            <Tag fluid size="xs" element={element}>
+                                <Dot color="primary" />
+                                <Text>Falcon 9</Text>
+                            </Tag>
                             <Tag fluid size="sm" element={element}>
                                 <Dot color="primary" />
                                 <Text>Falcon 9</Text>
@@ -202,6 +231,10 @@ export function createTagTestSuite(element, stories) {
                             </Tag>
                         </Inline>
                         <Inline>
+                            <Tag size="xs" fluid element={element}>
+                                <SparklesIcon />
+                                <Text>Falcon 9</Text>
+                            </Tag>
                             <Tag size="sm" fluid element={element}>
                                 <SparklesIcon />
                                 <Text>Falcon 9</Text>
@@ -219,6 +252,10 @@ export function createTagTestSuite(element, stories) {
         .add("counter", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" element={element}>
+                        <Text>Falcon 9</Text>
+                        <Counter variant="divider">60</Counter>
+                    </Tag>
                     <Tag size="sm" element={element}>
                         <Text>Falcon 9</Text>
                         <Counter variant="divider">60</Counter>
@@ -243,6 +280,9 @@ export function createTagTestSuite(element, stories) {
         .add("remove button", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" onRemove={() => {}} element={element}>
+                        Falcon 9
+                    </Tag>
                     <Tag size="sm" onRemove={() => {}} element={element}>
                         Falcon 9
                     </Tag>
@@ -263,6 +303,9 @@ export function createTagTestSuite(element, stories) {
         .add("validation", () =>
             <Stack>
                 <Inline alignY="end">
+                    <Tag size="xs" onRemove={() => {}} element={element} validationState="invalid">
+                        Falcon 9
+                    </Tag>
                     <Tag size="sm" onRemove={() => {}} element={element} validationState="invalid">
                         Falcon 9
                     </Tag>

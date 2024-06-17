@@ -1,4 +1,5 @@
 .o-ui-tag {
+    --o-ui-padding-xs: var(--hop-space-inset-sm);
     --o-ui-padding-sm: var(--hop-space-inset-md);
     --o-ui-padding-md: var(--hop-space-inset-md);
     --o-ui-tag-border-size: 1px;
@@ -48,6 +49,12 @@ a:not([disabled]).o-ui-tag.o-ui-tag-focus:after {
 }
 
 /* SIZE */
+/* SIZE | XSMALL */
+.o-ui-tag-xs {
+    min-height: 1rem;
+    padding: 0 var(--o-ui-padding-xs);
+}
+
 /* SIZE | SMALL */
 .o-ui-tag-sm {
     min-height: 1.5rem;

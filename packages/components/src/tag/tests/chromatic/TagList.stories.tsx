@@ -29,6 +29,11 @@ export const Default: TagListStory = {
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
             </TagList>
+            <TagList size="xs">
+                <Item key="mercury">Mercury Program</Item>
+                <Item key="gemini">Gemini Program</Item>
+                <Item key="apollo">Apollo Program</Item>
+            </TagList>
         </Stack>
     )
 };
@@ -97,12 +102,12 @@ export const WithClearButton: TagListStory = {
     storyName: "with clear button",
     render: () => (
         <Stack>
-            <TagList onClear={() => {}}>
+            <TagList onClear={() => { }}>
                 <Item key="mercury">Mercury Program</Item>
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
             </TagList>
-            <TagList size="sm" onClear={() => {}}>
+            <TagList size="sm" onClear={() => { }}>
                 <Item key="mercury">Mercury Program</Item>
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
@@ -114,7 +119,7 @@ export const WithClearButton: TagListStory = {
 export const WithClearButtonEmpty: TagListStory = {
     storyName: "with clear button & empty",
     render: () => (
-        <TagList onClear={() => {}}>
+        <TagList onClear={() => { }}>
         </TagList>
     )
 };
@@ -128,7 +133,7 @@ export const Readonly: TagListStory = {
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
             </TagList>
-            <TagList readOnly onClear={() => {}}>
+            <TagList readOnly onClear={() => { }}>
                 <Item key="mercury">Mercury Program</Item>
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
@@ -146,7 +151,7 @@ export const Validation: TagListStory = {
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
             </TagList>
-            <TagList readOnly onClear={() => {}} validationState="invalid">
+            <TagList readOnly onClear={() => { }} validationState="invalid">
                 <Item key="mercury">Mercury Program</Item>
                 <Item key="gemini">Gemini Program</Item>
                 <Item key="apollo">Apollo Program</Item>
@@ -181,7 +186,7 @@ export const MultipleRows: TagListStory = {
                 </TagList>
             </Div>
             <Div width="24rem">
-                <TagList onClear={() => {}}>
+                <TagList onClear={() => { }}>
                     <Item key="mercury">Mercury Program</Item>
                     <Item key="gemini">Gemini Program</Item>
                     <Item key="apollo">Apollo Program</Item>

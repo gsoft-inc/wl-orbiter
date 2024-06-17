@@ -31,7 +31,7 @@ export interface InnerTagProps extends InternalProps, InteractionProps, StyledCo
     /**
      * A tag can vary in size.
      */
-    size?: ResponsiveProp<"sm" | "md">;
+    size?: ResponsiveProp<"xs" | "sm" | "md">;
     /**
      * Whether or not the tag should display as "valid" or "invalid".
      */
@@ -44,11 +44,13 @@ export interface InnerTagProps extends InternalProps, InteractionProps, StyledCo
 
 /* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 const textSize = createSizeAdapter({
+    "xs": "xs",
     "sm": "sm",
     "md": "sm"
 });
 
 const embedIconButton = createEmbeddableAdapter({
+    "xs": "2xs",
     "sm": "2xs",
     "md": "2xs"
 });
