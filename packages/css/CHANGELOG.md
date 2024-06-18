@@ -1,5 +1,11 @@
 # @orbit-ui/transition-css
 
+## 2.1.3
+
+### Patch Changes
+
+- d1c95e372: Added -active tokens back before deprecating them for compatibility issues
+
 ## 2.1.2
 
 ### Patch Changes
