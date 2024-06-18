@@ -1,5 +1,12 @@
 # @orbit-ui/transition-components
 
+## 5.0.2
+
+### Patch Changes
+
+- d1c95e372: Added -active tokens back before deprecating them for compatibility issues
+- 1cc5d4ebc: Color of tertiary button is now matching Hopper
+
 ## 5.0.0
 
 ### Major Changes
