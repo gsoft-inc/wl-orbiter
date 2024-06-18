@@ -45,7 +45,7 @@ export interface InnerTagProps extends InternalProps, InteractionProps, StyledCo
 /* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 const textSize = createSizeAdapter({
     "xs": "xs",
-    "sm": "sm",
+    "sm": "xs",
     "md": "sm"
 });
 

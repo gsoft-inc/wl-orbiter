@@ -51,7 +51,7 @@ a:not([disabled]).o-ui-tag.o-ui-tag-focus:after {
 /* SIZE */
 /* SIZE | XSMALL */
 .o-ui-tag-xs {
-    min-height: 1rem;
+    min-height: 1.25rem;
     padding: 0 var(--o-ui-padding-xs);
 }
 
