@@ -59,7 +59,7 @@ export function InnerBadge({
             <StyleProvider
                 value={{
                     text: {
-                        size: "sm"
+                        size: "xs"
                     }
                 }}
             >
