@@ -32,6 +32,29 @@
     padding: 0 0.4rem;
 }
 
+.o-ui-badge-text {
+    font-family: var(--hop-overline-font-family);
+    line-height: var(--hop-overline-line-height);
+    letter-spacing: 0.015rem;
+    text-transform: uppercase;
+}
+
+.o-ui-badge-text::before,
+.o-ui-badge-text::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.o-ui-badge-text::before {
+    margin-bottom: var(--hop-overline-bottom-offset);
+}
+
+.o-ui-badge-text::after {
+    margin-top: var(--hop-overline-top-offset);
+}
+
 /* COUNT | OVERLAP */
 .o-ui-badge-count.o-ui-badge-over-icon .o-ui-badge-anchor {
     top: -8%;

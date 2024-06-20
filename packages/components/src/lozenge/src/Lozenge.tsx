@@ -44,7 +44,7 @@ export interface InnerLozengeProps extends SlotProps, InternalProps, StyledCompo
 /* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 const textSize = createSizeAdapter({
     "sm": "xs",
-    "md": "sm"
+    "md": "xs"
 });
 /* eslint-enable sort-keys, sort-keys-fix/sort-keys-fix */
 
