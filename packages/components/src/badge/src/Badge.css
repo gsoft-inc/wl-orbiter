@@ -34,6 +34,9 @@
 
 .o-ui-badge-text {
     font-family: var(--hop-overline-font-family);
+    line-height: var(--hop-overline-line-height);
+    letter-spacing: 0.015rem;
+    text-transform: uppercase;
 }
 
 /* COUNT | OVERLAP */
