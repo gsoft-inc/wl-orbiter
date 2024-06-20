@@ -32,6 +32,10 @@
     padding: 0 0.4rem;
 }
 
+.o-ui-badge-text {
+    font-family: var(--hop-overline-font-family);
+}
+
 /* COUNT | OVERLAP */
 .o-ui-badge-count.o-ui-badge-over-icon .o-ui-badge-anchor {
     top: -8%;

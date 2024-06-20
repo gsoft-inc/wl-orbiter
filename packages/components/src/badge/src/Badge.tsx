@@ -59,6 +59,7 @@ export function InnerBadge({
             <StyleProvider
                 value={{
                     text: {
+                        className: "o-ui-badge-text",
                         size: "xs"
                     }
                 }}
