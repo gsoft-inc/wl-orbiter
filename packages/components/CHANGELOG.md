@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.0.3
+
+### Patch Changes
+
+- dfea2e24c: Tag / Lozenge and Badge font size match with Hopper
+
 ## 5.0.2
 
 ### Patch Changes
