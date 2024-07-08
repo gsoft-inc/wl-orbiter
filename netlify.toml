@@ -2,3 +2,4 @@
   NODE_VERSION = "16.14"
   YARN_VERSION = "1.17.3"
   YARN_FLAGS = "--version"
+  NODE_OPTIONS = "--max-old-space-size=8192"
