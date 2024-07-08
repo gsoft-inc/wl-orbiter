@@ -40,7 +40,7 @@
     "release-alpha": "cross-env NODE_ENV=production run-s build publish-pkg-alpha",
     "release": "cross-env NODE_ENV=production run-s build publish-pkg",
     "diff": "lerna changed && lerna diff",
-    "deploy-netlify-sb-preview": "yarn build && yarn build-sb && netlify deploy --dir=storybook-static/sb --site=4b420380-aed1-4dc6-b002-6efe7b413025 --open",
+    "deploy-netlify-sb-preview": "cross-env NODE_OPTIONS=--max-old-space-size=8192 yarn build && yarn build-sb && netlify deploy --dir=storybook-static/sb --site=4b420380-aed1-4dc6-b002-6efe7b413025 --open",
     "serve-sb": "serve storybook-static/sb",
     "serve-sb-chroma": "serve storybook-static/chromatic",
     "serve-sb-docs": "serve storybook-static/docs",
