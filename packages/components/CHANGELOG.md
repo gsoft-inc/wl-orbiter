@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.1.0
+
+### Minor Changes
+
+- ad53ef35c: Added status tokens to match Hopper / updated some values for status tokens
+
 ## 5.0.3
 
 ### Patch Changes
