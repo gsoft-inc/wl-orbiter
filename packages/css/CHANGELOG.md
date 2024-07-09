@@ -1,5 +1,11 @@
 # @orbit-ui/transition-css
 
+## 2.2.0
+
+### Minor Changes
+
+- ad53ef35c: Added status tokens to match Hopper / updated some values for status tokens
+
 ## 2.1.3
 
 ### Patch Changes
