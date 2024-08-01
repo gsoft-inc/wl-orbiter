@@ -56559,6 +56559,13 @@ exports[`props color 1`] = `
   <div
     style={
       {
+        "color": "var(--hop-neutral-text-weak-selected)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "color": "var(--hop-neutral-text-weak-active)",
       }
     }
@@ -58540,6 +58547,14 @@ exports[`props color/active 1`] = `
     style={
       {
         "--o-ui-c-active": "var(--hop-neutral-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-active"
+    style={
+      {
+        "--o-ui-c-active": "var(--hop-neutral-text-weak-selected)",
       }
     }
   />,
@@ -60754,6 +60769,14 @@ exports[`props color/focus 1`] = `
     className="o-ui-c-focus"
     style={
       {
+        "--o-ui-c-focus": "var(--hop-neutral-text-weak-selected)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-focus"
+    style={
+      {
         "--o-ui-c-focus": "var(--hop-neutral-text-weak-active)",
       }
     }
@@ -62954,6 +62977,14 @@ exports[`props color/hover 1`] = `
     style={
       {
         "--o-ui-c-hover": "var(--hop-neutral-text-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-c-hover"
+    style={
+      {
+        "--o-ui-c-hover": "var(--hop-neutral-text-weak-selected)",
       }
     }
   />,
@@ -65627,6 +65658,13 @@ exports[`props fill 1`] = `
   <div
     style={
       {
+        "fill": "var(--hop-neutral-icon-weak-selected)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
         "fill": "var(--hop-neutral-icon-weak-active)",
       }
     }
@@ -67569,6 +67607,14 @@ exports[`props fill/focus 1`] = `
     style={
       {
         "--o-ui-f-focus": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-focus"
+    style={
+      {
+        "--o-ui-f-focus": "var(--hop-neutral-icon-weak-selected)",
       }
     }
   />,
@@ -69736,6 +69782,14 @@ exports[`props fill/hover 1`] = `
     style={
       {
         "--o-ui-f-hover": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    className="o-ui-f-hover"
+    style={
+      {
+        "--o-ui-f-hover": "var(--hop-neutral-icon-weak-selected)",
       }
     }
   />,
@@ -81945,6 +81999,13 @@ exports[`props stroke 1`] = `
     style={
       {
         "stroke": "var(--hop-neutral-icon-weak-press)",
+      }
+    }
+  />,
+  <div
+    style={
+      {
+        "stroke": "var(--hop-neutral-icon-weak-selected)",
       }
     }
   />,
