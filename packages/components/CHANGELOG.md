@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.2.0
+
+### Minor Changes
+
+- 404fbba13: Updated to latest hopper tokens
+
 ## 5.1.0
 
 ### Minor Changes
