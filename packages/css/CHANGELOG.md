@@ -1,5 +1,11 @@
 # @orbit-ui/transition-css
 
+## 2.3.0
+
+### Minor Changes
+
+- 404fbba13: Updated to latest hopper tokens
+
 ## 2.2.0
 
 ### Minor Changes
