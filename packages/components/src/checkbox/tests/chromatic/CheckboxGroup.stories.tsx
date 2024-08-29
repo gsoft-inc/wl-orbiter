@@ -1,10 +1,10 @@
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Tag, TagProps } from "@components/tag";
-import { ToggleButton } from "@components/button";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.js";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Tag, TagProps } from "@components/tag/index.js";
+import { ToggleButton } from "@components/button/index.js";
 import { useCallback } from "react";
-import { useCheckableProps } from "@components/shared";
+import { useCheckableProps } from "@components/shared/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

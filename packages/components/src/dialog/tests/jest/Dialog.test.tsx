@@ -1,9 +1,9 @@
-import { Content, Footer, Header } from "@components/placeholders";
+import { Content, Footer, Header } from "@components/placeholders/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Dialog } from "@components/dialog";
-import { Heading } from "@components/typography";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.js";
+import { Dialog } from "@components/dialog/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Keys } from "@components/shared/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -193,7 +193,7 @@ test("when no aria-describedby attributes is provided, the dialog aria-described
 // ***** Api *****
 
 test("call onClose when the dismiss button is clicked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Dialog onClose={handler}>
@@ -209,7 +209,7 @@ test("call onClose when the dismiss button is clicked", async () => {
 });
 
 test("call onClose on esc keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Dialog onClose={handler} data-testid="dialog">
@@ -225,7 +225,7 @@ test("call onClose on esc keypress", async () => {
 });
 
 test("call onClose on outside click", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Dialog onClose={handler}>
@@ -279,7 +279,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Dialog ref={handler}>

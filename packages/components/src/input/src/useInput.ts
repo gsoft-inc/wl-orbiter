@@ -1,11 +1,11 @@
 import { ChangeEvent, ChangeEventHandler, ForwardedRef } from "react";
-import { cssModule, isNil, isNumber, mergeClasses, normalizeSize, Size, useAutoFocus, useEventCallback, useMergedRefs } from "../../shared";
+import { cssModule, isNil, isNumber, mergeClasses, normalizeSize, Size, useAutoFocus, useEventCallback, useMergedRefs } from "../../shared/index.js";
 
-import { ValidationState } from "./types";
+import { ValidationState } from "./types.js";
 
 export interface UseInputProps {
     active?: boolean;
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     cssModule?: string;
     disabled?: boolean;
     fluid?: boolean;

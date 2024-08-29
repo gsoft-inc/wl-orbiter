@@ -1,4 +1,4 @@
-import { ErrorMessage, ErrorMessageProps, HelpMessage, HelpMessageProps, ValidMessage, ValidMessageProps } from "@components/field";
+import { ErrorMessage, ErrorMessageProps, HelpMessage, HelpMessageProps, ValidMessage, ValidMessageProps } from "@components/field/index.js";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -75,7 +75,7 @@ const Valid = forwardRef<HTMLElement, Omit<ValidMessageProps, "children">>((prop
         });
 
         test("set ref once", async () => {
-            const handler = jest.fn();
+            const handler = vi.fn();
 
             renderWithTheme(
                 <Element ref={handler} />

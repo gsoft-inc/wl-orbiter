@@ -1,8 +1,8 @@
 import { RefObject, createContext, useCallback, useContext, useEffect, useMemo } from "react";
-import { createFocusableTreeWalker, isFocusableElement } from "./focusableTreeWalker";
+import { createFocusableTreeWalker, isFocusableElement } from "./focusableTreeWalker.js";
 
-import { isNil } from "./assertions";
-import { useRefState } from "./useRefState";
+import { isNil } from "./assertions.js";
+import { useRefState } from "./useRefState.js";
 
 export interface ChildScopesOptions {
     includeChildScopes?: boolean;

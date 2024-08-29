@@ -1,6 +1,6 @@
-import { isNil } from "../../shared";
+import { isNil } from "../../shared/index.js";
 import { useEffect } from "react";
-import { useMediaQuery } from "./useMediaQuery";
+import { useMediaQuery } from "./useMediaQuery.js";
 
 export type ColorScheme = "light" | "dark";
 

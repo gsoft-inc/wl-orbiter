@@ -1,4 +1,4 @@
-import { PasswordInput } from "@components/text-input";
+import { PasswordInput } from "@components/text-input/index.js";
 import { act, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 
@@ -57,7 +57,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <PasswordInput ref={handler} aria-label="Label" />

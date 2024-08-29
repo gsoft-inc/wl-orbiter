@@ -1,5 +1,5 @@
 import { RefObject, useMemo } from "react";
-import { isNil } from "../../../shared";
+import { isNil } from "../../../shared/index.js";
 
 export function toPixelValue(value: string) {
     if (value.endsWith("rem")) {

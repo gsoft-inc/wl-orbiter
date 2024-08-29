@@ -16,7 +16,6 @@ module.exports = {
             extends: [
                 "plugin:@sharegate/core",
                 "plugin:@sharegate/react",
-                "plugin:@sharegate/jest",
                 "plugin:@sharegate/typescript",
                 "plugin:@sharegate/testing-library",
                 "plugin:@sharegate/storybook"

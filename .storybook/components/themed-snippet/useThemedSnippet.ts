@@ -1,5 +1,5 @@
 import { DocsContext } from "@storybook/addon-docs";
-import { isNil, isString } from "@components/shared";
+import { isNil, isString } from "@components/shared/index.js";
 import { useContext, useMemo } from "react";
 
 export function useThemedSnippet(snippets: string | Record<string, string>) {
@@ -11,6 +11,6 @@ export function useThemedSnippet(snippets: string | Record<string, string>) {
         }
 
         return snippets[globals.theme];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(snippets), globals.theme]);
 }

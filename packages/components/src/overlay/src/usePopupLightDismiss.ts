@@ -1,9 +1,9 @@
 import { FocusEvent, KeyboardEvent, RefObject, SyntheticEvent } from "react";
-import { FocusScope, Keys, isNil, mergeProps, useEventCallback, useRefState } from "../../shared";
-import { UseOverlayLightDismissOptions, useOverlayLightDismiss } from "./useOverlayLightDismiss";
+import { FocusScope, Keys, isNil, mergeProps, useEventCallback, useRefState } from "../../shared/index.js";
+import { UseOverlayLightDismissOptions, useOverlayLightDismiss } from "./useOverlayLightDismiss.js";
 
-import { isDevToolsBlurEvent } from "./isDevtoolsBlurEvent";
-import { isTargetParent } from "./isTargetParent";
+import { isDevToolsBlurEvent } from "./isDevtoolsBlurEvent.js";
+import { isTargetParent } from "./isTargetParent.js";
 
 export function usePopupLightDismiss(triggerRef: RefObject<HTMLElement>, focusScope: FocusScope, {
     hideOnEscape,

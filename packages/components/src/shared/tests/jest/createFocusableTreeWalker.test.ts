@@ -1,4 +1,4 @@
-import { createFocusableTreeWalker } from "@components/shared";
+import { createFocusableTreeWalker } from "@components/shared/index.js";
 
 test("accept input elements", () => {
     const element = document.createElement("INPUT");

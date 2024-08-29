@@ -1,7 +1,7 @@
-export * from "./useGroupInput";
-export * from "./useInput";
-export * from "./useInputContent";
-export * from "./useInputHasFocus";
-export * from "./adaptInputStylingProps";
-export * from "./types";
+export * from "./useGroupInput.js";
+export * from "./useInput.js";
+export * from "./useInputContent.js";
+export * from "./useInputHasFocus.js";
+export * from "./adaptInputStylingProps.js";
+export * from "./types.js";
 

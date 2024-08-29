@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Switch } from "@components/switch";
+import { Switch } from "@components/switch/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

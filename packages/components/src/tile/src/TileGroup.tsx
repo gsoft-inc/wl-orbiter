@@ -1,5 +1,5 @@
-import { AbstractGroupProps, Group } from "../../group";
-import { CheckboxGroup } from "../../checkbox";
+import { AbstractGroupProps, Group } from "../../group/index.js";
+import { CheckboxGroup } from "../../checkbox/index.js";
 import { Children, ComponentProps, ReactElement, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     OmitInternalProps,
@@ -13,9 +13,9 @@ import {
     useFocusManager,
     useFocusScope,
     useMergedRefs
-} from "../../shared";
-import { RadioGroup } from "../../radio";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { RadioGroup } from "../../radio/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
 const DefaultElement = "div";
 
@@ -23,7 +23,7 @@ export interface InnerTileGroupProps extends Omit<AbstractGroupProps<typeof Defa
     /**
      * Whether or not the first tile of the group should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * React children.
      */
@@ -58,7 +58,7 @@ export interface InnerTileGroupProps extends Omit<AbstractGroupProps<typeof Defa
 }
 
 export interface UnselectableGroupProps extends AbstractGroupProps<typeof DefaultElement> {
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
 }
 
 const UnselectableGroup = forwardRef<HTMLElement, UnselectableGroupProps>(({
@@ -147,7 +147,7 @@ export function InnerTileGroup({
                     onChange: handleChange,
                     value: denormalizeValue(value, selectionMode)
                 }
-            )}
+            ) as Record<string, any>}
         >
             {Children.toArray(children).filter(x => x).map((x: ReactElement) => {
                 return augmentElement(x, {

@@ -1,6 +1,6 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.js";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { NumberInput } from "@components/number-input";
+import { NumberInput } from "@components/number-input/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -304,7 +304,7 @@ test("when autofocus is true and the input is readonly, the input is not focused
 
 test("when autofocus is specified with a delay, the input is focused after the delay", async () => {
     renderWithTheme(
-        <NumberInput autoFocus={10} aria-label="Label" data-testid="input" />
+        <NumberInput autoFocus aria-label="Label" data-testid="input" />
     );
 
     expect(screen.getByTestId("input")).not.toHaveFocus();
@@ -328,7 +328,7 @@ test("when in a field, clicking on the field label focus the input", async () =>
 // ***** Api *****
 
 test("call onChange when the value change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput onChange={handler} aria-label="Label" data-testid="input" />
@@ -341,7 +341,7 @@ test("call onChange when the value change", async () => {
 });
 
 test("call onValueChange when the value change and the input lose focus", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput onValueChange={handler} aria-label="Label" data-testid="input" />
@@ -356,7 +356,7 @@ test("call onValueChange when the value change and the input lose focus", async 
 });
 
 test("call onValueChange when the value is incremented", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput
@@ -378,7 +378,7 @@ test("call onValueChange when the value is incremented", async () => {
 });
 
 test("call onValueChange when the value is decremented", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput
@@ -400,7 +400,7 @@ test("call onValueChange when the value is decremented", async () => {
 });
 
 test("call onFocus when the input receive focus", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput
@@ -420,7 +420,7 @@ test("call onFocus when the input receive focus", async () => {
 });
 
 test("do not call onFocus again when a spinner arrow is clicked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput
@@ -441,7 +441,7 @@ test("do not call onFocus again when a spinner arrow is clicked", async () => {
 });
 
 test("call onBlur when the input lose focus", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput
@@ -463,7 +463,7 @@ test("call onBlur when the input lose focus", async () => {
 });
 
 test("do not call onBlur when a spinner arrow is clicked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput
@@ -503,7 +503,7 @@ test("can focus the input with the focus api", async () => {
 });
 
 test("when the entered value exceed the specified min or max value, onValueChange is called with the clamped value before onBlur is called", async () => {
-    const handleValueChange = jest.fn();
+    const handleValueChange = vi.fn();
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     const onBlur = () => {
@@ -566,7 +566,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <NumberInput ref={handler} aria-label="Label" />

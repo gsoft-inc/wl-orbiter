@@ -1,1 +1,1 @@
-export * from "./PackageInstallationSnippet";
+export * from "./PackageInstallationSnippet.js";

@@ -1,5 +1,5 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { ToggleIconButton } from "@components/button";
+import { ToggleIconButton } from "@components/button/index.js";
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 // ***** Api *****
 
 test("call onChange when the button is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <ToggleIconButton
@@ -28,7 +28,7 @@ test("call onChange when the button is selected", async () => {
 });
 
 test("call onChange when the button is unselected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <ToggleIconButton
@@ -95,7 +95,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <ToggleIconButton

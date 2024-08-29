@@ -1,4 +1,4 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, forwardRef } from "react";
 import {
     InternalProps,
@@ -9,9 +9,9 @@ import {
     mergeProps,
     normalizeSize,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { AnonymousIcon } from "./svgs";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { AnonymousIcon } from "./svgs.js";
 
 const DefaultElement = "div";
 

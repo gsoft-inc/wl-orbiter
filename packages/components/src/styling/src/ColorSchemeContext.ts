@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-import { ColorScheme } from "./useColorScheme";
+import { ColorScheme } from "./useColorScheme.js";
 
 export interface ColorSchemeContextType {
     colorScheme?: ColorScheme;

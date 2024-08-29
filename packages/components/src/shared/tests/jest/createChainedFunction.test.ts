@@ -1,12 +1,12 @@
-import { createChainedFunction } from "@components/shared";
+import { createChainedFunction } from "@components/shared/index.js";
 
 test("return func when no arguments", () => {
     expect(typeof (createChainedFunction())).toBe("function");
 });
 
 test("wraps two functions with another that invokes both when called", () => {
-    const func1 = jest.fn();
-    const func2 = jest.fn();
+    const func1 = vi.fn();
+    const func2 = vi.fn();
 
     const chained = createChainedFunction(func1, func2);
 
@@ -36,8 +36,8 @@ test("forwards arguments to all chained functions", () => {
     const arg1 = "SpaceX";
     const arg2 = "Won the race!";
 
-    const func1 = jest.fn();
-    const func2 = jest.fn();
+    const func1 = vi.fn();
+    const func2 = vi.fn();
 
     const chained = createChainedFunction(func1, func2);
 

@@ -1,3 +1,3 @@
-export * from "./Select";
-export * from "./HiddenSelect";
-export * from "./useSelect";
+export * from "./Select.js";
+export * from "./HiddenSelect.js";
+export * from "./useSelect.js";

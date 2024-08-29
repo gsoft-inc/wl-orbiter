@@ -1,7 +1,7 @@
-import { ColumnGapProp, GapProp, ResponsiveProp, RowGapProp, useResponsiveValue } from "../../styling";
+import { ColumnGapProp, GapProp, ResponsiveProp, RowGapProp, useResponsiveValue } from "../../styling/index.js";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { Flex, FlexAlignmentProp, useFlexAlignment } from "./Flex";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, mergeProps } from "../../shared";
+import { Flex, FlexAlignmentProp, useFlexAlignment } from "./Flex.js";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, mergeProps } from "../../shared/index.js";
 
 const DefaultElement = "div";
 

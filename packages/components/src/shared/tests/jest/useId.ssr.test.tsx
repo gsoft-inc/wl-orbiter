@@ -3,7 +3,7 @@
  */
 
 import { renderToString } from "react-dom/server";
-import { useId } from "@components/shared";
+import { useId } from "@components/shared/index.js";
 
 function Test() {
     const id = useId();

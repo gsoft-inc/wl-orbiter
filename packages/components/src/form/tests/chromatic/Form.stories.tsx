@@ -1,13 +1,13 @@
-import { Button, ButtonGroup } from "@components/button";
-import { DateInput } from "@components/date-input";
-import { Div } from "@components/html";
-import { Field, GroupField, HelpMessage, Label } from "@components/field";
-import { Form } from "@components/form";
-import { Inline } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-import { TextArea } from "@components/text-area";
-import { TextInput } from "@components/text-input";
-import { TextLinkAsButton } from "@components/link";
+import { Button, ButtonGroup } from "@components/button/index.js";
+import { DateInput } from "@components/date-input/index.js";
+import { Div } from "@components/html/index.js";
+import { Field, GroupField, HelpMessage, Label } from "@components/field/index.js";
+import { Form } from "@components/form/index.js";
+import { Inline } from "@components/layout/index.js";
+import { Radio, RadioGroup } from "@components/radio/index.js";
+import { TextArea } from "@components/text-area/index.js";
+import { TextInput } from "@components/text-input/index.js";
+import { TextLinkAsButton } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

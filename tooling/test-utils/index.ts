@@ -1,3 +1,3 @@
-export * from "./errorHandling";
-export * from "./renderWithTheme";
-export * from "./expect-assignable";
+export * from "./errorHandling.js";
+export * from "./renderWithTheme.js";
+export * from "./expect-assignable.js";

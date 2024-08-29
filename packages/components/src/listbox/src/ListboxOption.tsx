@@ -1,6 +1,6 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { CheckmarkIcon } from "@hopper-ui/icons";
-import { CollectionItem } from "../../collection";
+import { CollectionItem } from "../../collection/index.js";
 import { ComponentProps, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, forwardRef, useMemo } from "react";
 import {
     InteractionProps,
@@ -14,11 +14,11 @@ import {
     useEventCallback,
     useRefState,
     useSlots
-} from "../../shared";
-import { OptionKeyProp } from "./Listbox";
-import { Text } from "../../typography";
-import { TooltipTrigger } from "../../tooltip";
-import { useListboxContext } from "./ListboxContext";
+} from "../../shared/index.js";
+import { OptionKeyProp } from "./Listbox.js";
+import { Text } from "../../typography/index.js";
+import { TooltipTrigger } from "../../tooltip/index.js";
+import { useListboxContext } from "./ListboxContext.js";
 
 const DefaultElement = "div";
 

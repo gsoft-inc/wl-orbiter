@@ -1,4 +1,4 @@
-import { A } from "@components/html";
+import { A } from "@components/html/index.js";
 import { ComponentProps, createRef } from "react";
 import { expectAssignable } from "@test-utils";
 

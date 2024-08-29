@@ -1,4 +1,4 @@
-import { CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useOnlyCollectionItems, useScrollableCollection } from "../../collection";
+import { CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useOnlyCollectionItems, useScrollableCollection } from "../../collection/index.js";
 import { ComponentProps, KeyboardEvent, ReactNode, SyntheticEvent, forwardRef, useImperativeHandle, useMemo } from "react";
 import {
     FocusManager,
@@ -23,14 +23,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
-import { Box } from "../../box";
-import { ListboxContext } from "./ListboxContext";
-import { ListboxOption } from "./ListboxOption";
-import { ListboxSection } from "./ListboxSection";
-import { ValidationState } from "../../input";
+import { Box } from "../../box/index.js";
+import { ListboxContext } from "./ListboxContext.js";
+import { ListboxOption } from "./ListboxOption.js";
+import { ListboxSection } from "./ListboxSection.js";
+import { ValidationState } from "../../input/index.js";
 
 export const OptionKeyProp = "data-o-ui-key";
 
@@ -42,7 +42,7 @@ export interface InnerListboxProps extends InternalProps, StyledComponentProps<t
     /**
      * Whether or not the listbox should autofocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * Default focus target on autofocus.
      */

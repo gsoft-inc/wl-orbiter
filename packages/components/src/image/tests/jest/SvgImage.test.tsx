@@ -1,5 +1,5 @@
 import { ComponentProps, createRef, forwardRef } from "react";
-import { SvgImage } from "@components/image";
+import { SvgImage } from "@components/image/index.js";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
 const BasicSvg = forwardRef<SVGSVGElement, ComponentProps<"svg">>((props, ref) => {
@@ -98,7 +98,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <SvgImage

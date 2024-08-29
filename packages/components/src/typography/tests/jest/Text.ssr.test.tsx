@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

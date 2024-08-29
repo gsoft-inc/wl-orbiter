@@ -1,7 +1,7 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.js";
 
-import { Text } from "../../typography";
+import { Text } from "../../typography/index.js";
 
 const DefaultElement = "div";
 

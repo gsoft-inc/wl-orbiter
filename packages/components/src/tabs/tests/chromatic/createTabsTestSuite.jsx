@@ -1,11 +1,11 @@
 import { NotificationIcon } from "@hopper-ui/icons";
-import { Content, Header } from "@components/placeholders";
-import { Item } from "@components/collection";
-import { Stack } from "@components/layout";
+import { Content, Header } from "@components/placeholders/index.js";
+import { Item } from "@components/collection/index.js";
+import { Stack } from "@components/layout/index.js";
 import { cloneElement } from "react";
-import { Lozenge } from "@components/lozenge";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Lozenge } from "@components/lozenge/index.js";
+import { Div } from "@components/html/index.js";
+import { Text } from "@components/typography/index.js";
 
 function Tabs({ element, ...rest }) {
     return cloneElement(element, rest);

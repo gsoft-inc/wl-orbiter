@@ -1,7 +1,7 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactElement, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, augmentElement, cssModule, mergeProps, slot } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, augmentElement, cssModule, mergeProps, slot } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
 const DefaultElement = "div";
 

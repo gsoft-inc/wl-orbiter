@@ -1,5 +1,5 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Checkbox } from "@components/checkbox";
+import { Checkbox } from "@components/checkbox/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -32,7 +32,7 @@ test("when autofocus is true and the checkbox is disabled, the checkbox is not f
 test("when autofocus is specified with a delay, the checkbox is focused after the delay", async () => {
     renderWithTheme(
         <Checkbox
-            autoFocus={10}
+            autoFocus
             data-testid="checkbox"
         >Milky Way</Checkbox>
     );
@@ -45,7 +45,7 @@ test("when autofocus is specified with a delay, the checkbox is focused after th
 // ***** Api *****
 
 test("call onChange, when the checkbox is checked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox onChange={handler} data-testid="checkbox">Milky Way</Checkbox>
@@ -58,7 +58,7 @@ test("call onChange, when the checkbox is checked", async () => {
 });
 
 test("call onChange when the checkbox is unchecked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox onChange={handler} data-testid="checkbox">Milky Way</Checkbox>
@@ -73,7 +73,7 @@ test("call onChange when the checkbox is unchecked", async () => {
 });
 
 test("call onValueChange when the checkbox is checked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox onValueChange={handler} data-testid="checkbox">Milky Way</Checkbox>
@@ -86,7 +86,7 @@ test("call onValueChange when the checkbox is checked", async () => {
 });
 
 test("call onValueChange when the checkbox is unchecked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox onValueChange={handler} data-testid="checkbox">Milky Way</Checkbox>
@@ -101,7 +101,7 @@ test("call onValueChange when the checkbox is unchecked", async () => {
 });
 
 test("call onValueChange when the checkbox goes from indeterminate to checked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox defaultIndeterminate onValueChange={handler} data-testid="checkbox">Milky Way</Checkbox>
@@ -114,7 +114,7 @@ test("call onValueChange when the checkbox goes from indeterminate to checked", 
 });
 
 test("dont call onValueChange when the checkbox is disabled", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox disabled onValueChange={handler} data-testid="checkbox">Milky Way</Checkbox>
@@ -178,7 +178,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Checkbox ref={handler} data-testid="checkbox">Milky Way</Checkbox>

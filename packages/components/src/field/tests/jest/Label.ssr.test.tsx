@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Label } from "@components/field";
+import { Label } from "@components/field/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

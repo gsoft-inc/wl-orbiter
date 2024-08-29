@@ -1,8 +1,8 @@
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { Inline } from "@components/layout";
+import { Button } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
+import { Inline } from "@components/layout/index.js";
 import { cloneElement } from "react";
-import { createButtonTestSuite } from "./createButtonTestSuite";
+import { createButtonTestSuite } from "./createButtonTestSuite.js";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
@@ -19,17 +19,25 @@ function WarningBackground({ button, ...rest }) {
 }
 createButtonTestSuite(<Button variant="primary" />, stories("/primary"));
 createButtonTestSuite(<Button variant="secondary" />, stories("/secondary"));
-createButtonTestSuite(<WarningBackground button={<Button variant="secondary" inherit />} />, stories("/secondary (inherit)"));
+createButtonTestSuite(
+    <WarningBackground button={<Button variant="secondary" inherit />} />,
+    stories("/secondary (inherit)"),
+);
 createButtonTestSuite(<Button variant="tertiary" />, stories("/tertiary"));
-createButtonTestSuite(<WarningBackground button={<Button variant="tertiary" inherit />} />, stories("/tertiary (inherit)"));
+createButtonTestSuite(
+    <WarningBackground button={<Button variant="tertiary" inherit />} />,
+    stories("/tertiary (inherit)"),
+);
 createButtonTestSuite(<Button variant="upsell" />, stories("/upsell"));
 createButtonTestSuite(<Button variant="negative" />, stories("/negative"));
 
 stories()
-    .add("styling", () =>
+    .add("styling", () => (
         <Inline>
             <Button border="sunken-treasure-600" variant="secondary">Button</Button>
             <Button className="bg-red" variant="secondary">Button</Button>
-            <Button style={{ backgroundColor: "red" }} variant="secondary">Button</Button>
+            <Button style={{ backgroundColor: "red" }} variant="secondary">
+        Button
+            </Button>
         </Inline>
-    );
+    ));

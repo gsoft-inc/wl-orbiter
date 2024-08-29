@@ -1,8 +1,8 @@
-import { IconColorMapping, BackgroundColorProp, useResponsiveValue } from "../../styling";
+import { IconColorMapping, BackgroundColorProp, useResponsiveValue } from "../../styling/index.js";
 import { useMemo, ComponentProps, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
-import { Box } from "../../box";
-import { Text } from "../../typography";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared/index.js";
+import { Box } from "../../box/index.js";
+import { Text } from "../../typography/index.js";
 
 const DefaultElement = "span";
 

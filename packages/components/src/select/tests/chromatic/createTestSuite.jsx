@@ -1,9 +1,9 @@
 import { NotificationIcon, TeamIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Item, Section } from "@components/collection";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Item, Section } from "@components/collection/index.js";
 
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.js";
+import { Text } from "@components/typography/index.js";
 import { cloneElement } from "react";
 import { paramsBuilder } from "@stories/utils";
 

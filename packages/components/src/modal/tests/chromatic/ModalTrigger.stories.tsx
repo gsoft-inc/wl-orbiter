@@ -1,7 +1,7 @@
-import { Heading, Paragraph } from "@components/typography";
-import { Modal, ModalTrigger } from "@components/modal";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
+import { Heading, Paragraph } from "@components/typography/index.js";
+import { Modal, ModalTrigger } from "@components/modal/index.js";
+import { Button } from "@components/button/index.js";
+import { Content } from "@components/placeholders/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

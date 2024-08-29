@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Autocomplete } from "@components/autocomplete";
-import { Item } from "@components/collection";
+import { Autocomplete } from "@components/autocomplete/index.js";
+import { Item } from "@components/collection/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,7 +1,7 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { Span, UL } from "../../html";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.js";
+import { Span, UL } from "../../html/index.js";
 
 const DefaultElement = "li";
 

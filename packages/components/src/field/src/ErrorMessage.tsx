@@ -1,7 +1,7 @@
 import { ComponentProps, forwardRef } from "react";
-import { FieldMessage, FieldMessageDefaultElement, SharedFieldMessageProps, getValidationProps } from "./FieldMessage";
-import { OmitInternalProps, mergeProps } from "../../shared";
-import { useFieldMessageProps } from "./FieldContext";
+import { FieldMessage, FieldMessageDefaultElement, SharedFieldMessageProps, getValidationProps } from "./FieldMessage.js";
+import { OmitInternalProps, mergeProps } from "../../shared/index.js";
+import { useFieldMessageProps } from "./FieldContext.js";
 
 export function InnerErrorMessage(props: SharedFieldMessageProps) {
     const [{ validationState, ...messageProps }, isInField] = useFieldMessageProps();

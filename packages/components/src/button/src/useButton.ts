@@ -1,12 +1,12 @@
 import { AriaAttributes, MouseEventHandler } from "react";
-import { HtmlButton } from "../../html";
-import { InteractionProps, InternalProps, MergedRef, Size, cssModule, isNumber, mergeClasses, normalizeSize, useAutoFocus, useMergedRefs } from "../../shared";
-import { useDisableClick } from "./useDisableClick";
+import { HtmlButton } from "../../html/index.js";
+import { InteractionProps, InternalProps, MergedRef, Size, cssModule, isNumber, mergeClasses, normalizeSize, useAutoFocus, useMergedRefs } from "../../shared/index.js";
+import { useDisableClick } from "./useDisableClick.js";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary" | "negative" | "upsell";
 
 export interface UseButtonProps extends Partial<InternalProps>, InteractionProps {
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     cssModule?: string;
     fluid?: boolean;
     inherit?: boolean;

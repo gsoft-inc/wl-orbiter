@@ -1,6 +1,6 @@
-import { Alert } from "@components/alert";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
+import { Alert } from "@components/alert/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -90,7 +90,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Alert ref={handler} primaryButtonLabel="Primary">

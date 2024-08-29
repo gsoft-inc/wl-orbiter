@@ -1,5 +1,5 @@
-import { Span } from "../../html";
-import { VisuallyHidden } from "../../visually-hidden";
+import { Span } from "../../html/index.js";
+import { VisuallyHidden } from "../../visually-hidden/index.js";
 
 export function NewTabIndicator() {
     return (

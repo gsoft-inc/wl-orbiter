@@ -1,3 +1,3 @@
-import { ReactComponent as NoResults } from "./NoResults";
+import { ReactComponent as NoResults } from "./NoResults.js";
 
 export { NoResults };

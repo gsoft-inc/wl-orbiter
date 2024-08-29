@@ -1,6 +1,6 @@
 import { Children, ComponentProps, ReactElement, ReactNode, cloneElement, forwardRef } from "react";
-import { Inline } from "../../layout";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, slot } from "../../shared";
+import { Inline } from "../../layout/index.js";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, slot } from "../../shared/index.js";
 
 const DefaultElement = "span";
 

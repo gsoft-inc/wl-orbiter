@@ -1,6 +1,6 @@
 import { ComponentProps, forwardRef } from "react";
-import { DialogTrigger, InnerDialogTrigger, InnerDialogTriggerProps } from "../../dialog";
-import { OmitInternalProps } from "../../shared";
+import { DialogTrigger, InnerDialogTrigger, InnerDialogTriggerProps } from "../../dialog/index.js";
+import { OmitInternalProps } from "../../shared/index.js";
 
 export type InnerModalTriggerProps = InnerDialogTriggerProps;
 

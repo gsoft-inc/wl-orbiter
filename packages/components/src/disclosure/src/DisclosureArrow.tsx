@@ -1,8 +1,8 @@
 import { AngleDownIcon } from "@hopper-ui/icons";
 import { ComponentProps, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, omitProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared";
-import { useDisclosureContext } from "./DisclosureContext";
-import { useStyledSystem } from "../../styling";
+import { InternalProps, OmitInternalProps, omitProps, SlotProps, StyledComponentProps, cssModule, isNil, mergeProps, slot } from "../../shared/index.js";
+import { useDisclosureContext } from "./DisclosureContext.js";
+import { useStyledSystem } from "../../styling/index.js";
 
 const DefaultElement = "svg";
 

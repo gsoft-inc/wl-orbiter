@@ -1,8 +1,8 @@
-import { Item, Section } from "@components/collection";
-import { Listbox, ListboxElement } from "@components/listbox";
+import { Item, Section } from "@components/collection/index.js";
+import { Listbox, ListboxElement } from "@components/listbox/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Keys } from "@components/shared";
-import { Text } from "@components/typography";
+import { Keys } from "@components/shared/index.js";
+import { Text } from "@components/typography/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -714,7 +714,7 @@ test("when autofocus is true and the default focus target match an option key, t
 
 test("when autofocus is specified with a delay, the first listbox option is focused after the delay", async () => {
     renderWithTheme(
-        <Listbox autoFocus={10}>
+        <Listbox autoFocus>
             <Item key="earth" data-testid="earth-option">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
             <Item key="mars">Mars</Item>
@@ -729,7 +729,7 @@ test("when autofocus is specified with a delay, the first listbox option is focu
 // ***** Api *****
 
 test("call onSelectionChange when a single option is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox onSelectionChange={handler}>
@@ -746,7 +746,7 @@ test("call onSelectionChange when a single option is selected", async () => {
 });
 
 test("call onSelectionChange when multiple options are selected in sequence", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox
@@ -768,7 +768,7 @@ test("call onSelectionChange when multiple options are selected in sequence", as
 });
 
 test("call onSelectionChange when multiple options are selected at once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox
@@ -799,7 +799,7 @@ test("call onSelectionChange when multiple options are selected at once", async 
 });
 
 test("call onFocusChange when an option is programatically focused", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox onFocusChange={handler}>
@@ -818,7 +818,7 @@ test("call onFocusChange when an option is programatically focused", async () =>
 });
 
 test("dont call onFocusChange when a disabled option is programatically focused", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox onFocusChange={handler}>
@@ -836,7 +836,7 @@ test("dont call onFocusChange when a disabled option is programatically focused"
 });
 
 test("call onFocusChange when an option is focused following an arrow down keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox onFocusChange={handler}>
@@ -857,7 +857,7 @@ test("call onFocusChange when an option is focused following an arrow down keypr
 });
 
 test("call onFocusChange when an option is focused following an arrow up keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox onFocusChange={handler}>
@@ -878,7 +878,7 @@ test("call onFocusChange when an option is focused following an arrow up keypres
 });
 
 test("when focusOnHover is true, call onFocusChange when an option is hovered with mouse", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox
@@ -898,7 +898,7 @@ test("when focusOnHover is true, call onFocusChange when an option is hovered wi
 });
 
 test("when focusOnHover is true, dont call onFocusChange when a disabled option is hovered with mouse", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox
@@ -917,7 +917,7 @@ test("when focusOnHover is true, dont call onFocusChange when a disabled option 
 });
 
 test("when useVirtualFocus is true, call onFocusChange when an option is focused following an arrow up keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox
@@ -941,7 +941,7 @@ test("when useVirtualFocus is true, call onFocusChange when an option is focused
 });
 
 test("when useVirtualFocus is true, call onFocusChange when an option is focused following an arrow down keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox
@@ -1009,7 +1009,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Listbox ref={handler} />

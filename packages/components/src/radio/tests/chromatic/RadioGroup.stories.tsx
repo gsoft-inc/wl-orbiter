@@ -1,14 +1,14 @@
-import { Field, HelpMessage, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
+import { Field, HelpMessage, Label } from "@components/field/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Radio, RadioGroup } from "@components/radio/index.js";
 
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Tag } from "@components/tag";
-import { Text } from "@components/typography";
-import { ToggleButton } from "@components/button";
+import { Counter } from "@components/counter/index.js";
+import { Div } from "@components/html/index.js";
+import { Tag } from "@components/tag/index.js";
+import { Text } from "@components/typography/index.js";
+import { ToggleButton } from "@components/button/index.js";
 import { ComponentProps, useCallback } from "react";
-import { as, useCheckableProps } from "@components/shared";
+import { as, useCheckableProps } from "@components/shared/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

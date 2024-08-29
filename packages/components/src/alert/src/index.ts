@@ -1,2 +1,2 @@
-export * from "./Alert";
-export * from "./AlertTrigger";
+export * from "./Alert.js";
+export * from "./AlertTrigger.js";

@@ -1,8 +1,7 @@
-import { FocusScope, FocusScopeIterator } from "./useFocusScope";
-import { isFunction, isNil } from "./assertions";
+import { FocusScope, FocusScopeIterator, ChildScopesOptions } from "./useFocusScope.js";
+import { isFunction, isNil } from "./assertions.js";
 
-import { ChildScopesOptions } from ".";
-import { FocusTarget } from "./focusTarget";
+import { FocusTarget } from "./focusTarget.js";
 import { useMemo } from "react";
 
 export interface FocusManagerOptions {

@@ -1,6 +1,6 @@
-import { Breakpoint } from "../BreakpointProvider";
+import { Breakpoint } from "../BreakpointProvider.js";
 import { CSSProperties } from "react";
-import { isNil } from "../../../shared";
+import { isNil } from "../../../shared/index.js";
 
 export class StylingContext {
     private classes: string[];

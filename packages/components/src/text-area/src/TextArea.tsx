@@ -1,9 +1,9 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputButton, useInputHasFocus, useInputSpinner } from "../../input";
-import { Box, BoxProps } from "../../box";
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputButton, useInputHasFocus, useInputSpinner } from "../../input/index.js";
+import { Box, BoxProps } from "../../box/index.js";
 import { ChangeEvent, ComponentProps, ReactElement, forwardRef, useCallback, useEffect, useMemo, useState } from "react";
-import { OmitInternalProps, cssModule, getBodyElement, isNil, mergeProps, useChainedEventCallback, useControllableState, useIsomorphicLayoutEffect } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { useFieldInputProps } from "../../field";
+import { OmitInternalProps, cssModule, getBodyElement, isNil, mergeProps, useChainedEventCallback, useControllableState, useIsomorphicLayoutEffect } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { useFieldInputProps } from "../../field/index.js";
 
 const DefaultElement = "textarea";
 const DefaultMinimumTextAreaRows = 3;

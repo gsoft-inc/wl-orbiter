@@ -1,6 +1,6 @@
-import { A } from "@components/html";
-import { Inline } from "@components/layout";
-import { StyleProvider } from "@components/styling";
+import { A } from "@components/html/index.js";
+import { Inline } from "@components/layout/index.js";
+import { StyleProvider } from "@components/styling/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { PropsWithChildren } from "react";
 

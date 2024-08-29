@@ -1,5 +1,5 @@
-import { Box } from "@components/box";
-import { as } from "@components/shared";
+import { Box } from "@components/box/index.js";
+import { as } from "@components/shared/index.js";
 import { forwardRef } from "react";
 
 const A = as(Box, "a");

@@ -1,4 +1,4 @@
-import { Underlay } from "@components/overlay";
+import { Underlay } from "@components/overlay/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

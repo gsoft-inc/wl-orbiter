@@ -1,7 +1,7 @@
 import { useState, useEffect, ComponentProps, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, isNil, isNumber } from "../../shared";
-import { Box } from "../../box";
-import { Div } from "../../html";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, isNil, isNumber } from "../../shared/index.js";
+import { Box } from "../../box/index.js";
+import { Div } from "../../html/index.js";
 
 const DefaultElement = "div";
 

@@ -1,2 +1,2 @@
-export * from "./Toolbar";
-export * from "./ToolbarContext";
+export * from "./Toolbar.js";
+export * from "./ToolbarContext.js";

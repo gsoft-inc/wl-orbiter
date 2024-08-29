@@ -1,15 +1,15 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Content, Footer } from "@components/placeholders";
-import { Field, Label } from "@components/field";
+import { Button, ButtonGroup } from "@components/button/index.js";
+import { Content, Footer } from "@components/placeholders/index.js";
+import { Field, Label } from "@components/field/index.js";
 
-import { Div } from "@components/html";
-import { Form } from "@components/form";
-import { Heading } from "@components/typography";
-import { Image } from "@components/image";
-import { Launch } from "./assets";
-import { Popover } from "@components/popover";
-import { TextInput } from "@components/text-input";
-import { TextLink } from "@components/link";
+import { Div } from "@components/html/index.js";
+import { Form } from "@components/form/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Image } from "@components/image/index.js";
+import { Launch } from "./assets/index.js";
+import { Popover } from "@components/popover/index.js";
+import { TextInput } from "@components/text-input/index.js";
+import { TextLink } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

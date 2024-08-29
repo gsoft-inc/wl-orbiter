@@ -1,4 +1,4 @@
-import { isNil } from "../../shared";
+import { isNil } from "../../shared/index.js";
 
 export function areEqualDates(x: Date, y: Date) {
     return x?.getTime() === y?.getTime();

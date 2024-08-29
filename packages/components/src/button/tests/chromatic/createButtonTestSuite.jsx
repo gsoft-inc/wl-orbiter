@@ -1,9 +1,9 @@
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { IconList } from "@components/icons";
+import { Counter } from "@components/counter/index.js";
+import { Div } from "@components/html/index.js";
+import { IconList } from "@components/icons/index.js";
 import { StartOverIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Text } from "@components/typography/index.js";
 import { cloneElement } from "react";
 
 function Button({ element, ...rest }) {

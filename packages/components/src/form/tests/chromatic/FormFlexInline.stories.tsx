@@ -1,11 +1,11 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox } from "@components/checkbox";
-import { Div } from "@components/html";
-import { ErrorMessage, Field, HelpMessage, Label } from "@components/field";
-import { Form } from "@components/form";
-import { Inline } from "@components/layout";
-import { TextInput } from "@components/text-input";
-import { TextLinkAsButton } from "@components/link";
+import { Button, ButtonGroup } from "@components/button/index.js";
+import { Checkbox } from "@components/checkbox/index.js";
+import { Div } from "@components/html/index.js";
+import { ErrorMessage, Field, HelpMessage, Label } from "@components/field/index.js";
+import { Form } from "@components/form/index.js";
+import { Inline } from "@components/layout/index.js";
+import { TextInput } from "@components/text-input/index.js";
+import { TextLinkAsButton } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

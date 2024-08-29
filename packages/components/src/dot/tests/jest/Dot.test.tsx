@@ -1,4 +1,4 @@
-import { Dot } from "@components/dot";
+import { Dot } from "@components/dot/index.js";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -36,7 +36,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Dot color="neutral-weakest" ref={handler} />

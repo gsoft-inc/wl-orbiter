@@ -1,4 +1,4 @@
-import { useId } from "../../shared";
+import { useId } from "../../shared/index.js";
 
 export type PopupType = "menu" | "listbox" | "dialog";
 
@@ -6,7 +6,7 @@ export interface UsePopupAriaPropsOptions {
     id?: string;
 }
 
-export function usePopupAriaProps(isOpen: boolean, popupType: PopupType, { id } : UsePopupAriaPropsOptions = {}) {
+export function usePopupAriaProps(isOpen: boolean, popupType: PopupType, { id }: UsePopupAriaPropsOptions = {}) {
     const overlayId = useId(id, "o-ui-overlay");
 
     return {

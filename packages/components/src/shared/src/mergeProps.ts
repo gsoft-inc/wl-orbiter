@@ -1,8 +1,8 @@
-import { isFunction, isNil, isUndefined } from "./assertions";
-import { UnionToIntersection } from "./type-fest";
-import { createChainedFunction } from "./useChainedEventCallback";
-import { mergeClasses } from "./mergeClasses";
-import { mergeRefs } from "./useMergedRefs";
+import { isFunction, isNil, isUndefined } from "./assertions.js";
+import { UnionToIntersection } from "./type-fest.js";
+import { createChainedFunction } from "./useChainedEventCallback.js";
+import { mergeClasses } from "./mergeClasses.js";
+import { mergeRefs } from "./useMergedRefs.js";
 
 export interface CompositeKeyWeakMapNode<T> {
     map: WeakMap<any, any>;
@@ -154,4 +154,3 @@ export function mergeProps<T extends Props[]>(...args: T) {
 
     return result as UnionToIntersection<TupleTypes<T>>;
 }
-

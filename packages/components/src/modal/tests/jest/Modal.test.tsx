@@ -1,6 +1,6 @@
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Modal } from "@components/modal";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Modal } from "@components/modal/index.js";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -43,7 +43,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Modal ref={handler}>

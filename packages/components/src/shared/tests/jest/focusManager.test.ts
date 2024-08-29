@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { DomFocusManager, FocusScope, VirtualFocusManager } from "@components/shared";
+import { DomFocusManager, FocusScope, VirtualFocusManager } from "@components/shared/index.js";
 import { MutableRefObject, createRef } from "react";
 
 class Scope extends FocusScope {
@@ -62,7 +62,7 @@ describe("focusFirst", () => {
     });
 
     test("call onFocus when the first element is focused", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const elements = [
             createInput(),
@@ -80,7 +80,7 @@ describe("focusFirst", () => {
     });
 
     test("call onNotFound when the scope is empty", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const focusManager = new DomFocusManager(new Scope([]));
         focusManager.focusFirst({ onNotFound });
@@ -125,7 +125,7 @@ describe("focusFirst", () => {
     });
 
     test("call onNotFound when canFocus returns false for all the elements of the scope", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const elements = [
             createInput(),
@@ -163,7 +163,7 @@ describe("focusLast", () => {
     });
 
     test("call onFocus when the last element is focused", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const elements = [
             createInput(),
@@ -181,7 +181,7 @@ describe("focusLast", () => {
     });
 
     test("call onNotFound when the scope is empty", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const focusManager = new DomFocusManager(new Scope([]));
         focusManager.focusLast({ onNotFound });
@@ -226,7 +226,7 @@ describe("focusLast", () => {
     });
 
     test("call onNotFound when canFocus returns false for all the elements of the scope", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const elements = [
             createInput(),
@@ -302,7 +302,7 @@ describe("focusNext", () => {
     });
 
     test("call onFocus when the next element is focused", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const elements = [
             createInput(),
@@ -322,7 +322,7 @@ describe("focusNext", () => {
     });
 
     test("call onNotFound when the scope is empty", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const focusManager = new DomFocusManager(new Scope([]));
         focusManager.focusNext({ onNotFound });
@@ -371,7 +371,7 @@ describe("focusNext", () => {
     });
 
     test("call onNotFound when canFocus returns false for all the elements of the scope", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const elements = [
             createInput(),
@@ -469,7 +469,7 @@ describe("focusPrevious", () => {
     });
 
     test("call onFocus when the previous element is focused", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const elements = [
             createInput(),
@@ -489,7 +489,7 @@ describe("focusPrevious", () => {
     });
 
     test("call onNotFound when the scope is empty", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const focusManager = new DomFocusManager(new Scope([]));
         focusManager.focusPrevious({ onNotFound });
@@ -538,7 +538,7 @@ describe("focusPrevious", () => {
     });
 
     test("call onNotFound when canFocus returns false for all the elements of the scope", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const elements = [
             createInput(),
@@ -600,7 +600,7 @@ describe("focusKey", () => {
     });
 
     test("call onFocus when the matching element is focused", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const Key = "data-key";
 
@@ -620,7 +620,7 @@ describe("focusKey", () => {
     });
 
     test("call onNotFound when no elements match the key", () => {
-        const onNotFound = jest.fn();
+        const onNotFound = vi.fn();
 
         const Key = "data-key";
 
@@ -843,7 +843,7 @@ describe("virtual focus", () => {
 
 describe("global onFocus", () => {
     test("call global onFocus when an element is focused", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const elements = [
             createInput(),
@@ -861,7 +861,7 @@ describe("global onFocus", () => {
     });
 
     test("call global onFocus when a function specific onFocus is specified", () => {
-        const onFocus = jest.fn();
+        const onFocus = vi.fn();
 
         const elements = [
             createInput(),

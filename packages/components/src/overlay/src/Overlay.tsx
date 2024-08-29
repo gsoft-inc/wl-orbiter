@@ -1,8 +1,8 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, getBodyElement, mergeProps } from "../../shared";
-import { ThemeProvider, useColorSchemeContext } from "../../styling";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, getBodyElement, mergeProps } from "../../shared/index.js";
+import { ThemeProvider, useColorSchemeContext } from "../../styling/index.js";
 
-import { Transition } from "../../transition";
+import { Transition } from "../../transition/index.js";
 import { createPortal } from "react-dom";
 
 const DefaultElement = "div";

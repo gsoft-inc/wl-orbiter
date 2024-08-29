@@ -1,4 +1,4 @@
-import { AbstractGroupInputProps, useGroupInput } from "../../input";
+import { AbstractGroupInputProps, useGroupInput } from "../../input/index.js";
 import {
     CheckableContext,
     OmitInternalProps,
@@ -14,12 +14,12 @@ import {
     useFocusManager,
     useFocusScope,
     useMergedRefs
-} from "../../shared";
+} from "../../shared/index.js";
 import { Children, ComponentProps, ReactElement, SyntheticEvent, forwardRef } from "react";
-import { ClearFieldContext, useFieldInputProps } from "../../field";
-import { ClearToolbar, useToolbarProps } from "../../toolbar";
-import { Group } from "../../group";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { ClearFieldContext, useFieldInputProps } from "../../field/index.js";
+import { ClearToolbar, useToolbarProps } from "../../toolbar/index.js";
+import { Group } from "../../group/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
 const DefaultElement = "div";
 

@@ -14,12 +14,12 @@ import {
     LineHeightPrefix,
     LineHeightSemanticSuffix,
     normalizeVariable
-} from "./theme-vars-utils";
-import { Breakpoint } from "../BreakpointProvider";
+} from "./theme-vars-utils.js";
+import { Breakpoint } from "../BreakpointProvider.js";
 import { Globals, Property } from "csstype";
-import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue";
-import { isNil, LiteralUnion } from "../../../shared";
-import { StylingContext } from "./StylingContext";
+import { ResponsiveProp, parseResponsiveValue } from "../useResponsiveValue.js";
+import { isNil, LiteralUnion } from "../../../shared/index.js";
+import { StylingContext } from "./StylingContext.js";
 
 export const GlobalValues = [
     "inherit",

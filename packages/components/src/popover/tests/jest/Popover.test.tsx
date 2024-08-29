@@ -1,10 +1,10 @@
-import { Content, Footer } from "@components/placeholders";
+import { Content, Footer } from "@components/placeholders/index.js";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Heading } from "@components/typography";
-import { HtmlInput } from "@components/html";
-import { Popover } from "@components/popover";
-import { TextLink } from "@components/link";
+import { Button } from "@components/button/index.js";
+import { Heading } from "@components/typography/index.js";
+import { HtmlInput } from "@components/html/index.js";
+import { Popover } from "@components/popover/index.js";
+import { TextLink } from "@components/link/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -173,7 +173,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Popover ref={handler}>

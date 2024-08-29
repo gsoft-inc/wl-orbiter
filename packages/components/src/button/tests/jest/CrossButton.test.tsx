@@ -1,4 +1,4 @@
-import { CrossButton } from "@components/button";
+import { CrossButton } from "@components/button/index.js";
 import { act, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 
@@ -57,7 +57,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <CrossButton ref={handler} aria-label="Clear" />

@@ -1,4 +1,4 @@
-import { CollectionItem, CollectionNode, isItem, isSection } from "./useCollection";
+import { CollectionItem, CollectionNode, isItem, isSection } from "./useCollection.js";
 
 export function reduceCollection(nodes: CollectionNode[], acceptItem: (item: CollectionItem) => boolean): CollectionItem[] {
     return nodes.reduce((acc, node) => {

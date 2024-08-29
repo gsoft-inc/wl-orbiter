@@ -1,7 +1,7 @@
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Dialog, DialogTrigger } from "@components/dialog";
-import { Heading, Paragraph } from "@components/typography";
+import { Button } from "@components/button/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Dialog, DialogTrigger } from "@components/dialog/index.js";
+import { Heading, Paragraph } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

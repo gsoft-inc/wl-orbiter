@@ -1,12 +1,12 @@
-import { AbstractLinkProps } from "./Link";
-import { Box } from "../../box";
+import { AbstractLinkProps } from "./Link.js";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef, useMemo } from "react";
-import { LinkVariant, useLink } from "./useLink";
-import { NewTabIndicator } from "./NewTabIndicator";
-import { OmitInternalProps, as, augmentElement, normalizeSize, cssModule, mergeProps, useSlots } from "../../shared";
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling";
-import { Text } from "../../typography";
-import { useFormButton } from "../../form";
+import { LinkVariant, useLink } from "./useLink.js";
+import { NewTabIndicator } from "./NewTabIndicator.js";
+import { OmitInternalProps, as, augmentElement, normalizeSize, cssModule, mergeProps, useSlots } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.js";
+import { Text } from "../../typography/index.js";
+import { useFormButton } from "../../form/index.js";
 
 const DefaultElement = "a";
 
@@ -14,7 +14,7 @@ export interface InnerTextLinkProps extends AbstractLinkProps<typeof DefaultElem
     /**
      * Whether or not the link should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * React children.
      */

@@ -1,6 +1,6 @@
-import { AbstractGroupProps } from "../../group";
+import { AbstractGroupProps } from "../../group/index.js";
 import { ElementType, SyntheticEvent } from "react";
-import { InteractionProps, InternalProps, StyledComponentProps } from "../../shared";
+import { InteractionProps, InternalProps, StyledComponentProps } from "../../shared/index.js";
 
 export type ValidationState = "valid" | "invalid";
 
@@ -8,7 +8,7 @@ export type AbstractInputProps<T extends ElementType> = InternalProps & Interact
     /**
     * Whether or not the input should autoFocus on render.
     */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * Whether or not a user input is required before form submission.
      */
@@ -23,7 +23,7 @@ export type AbstractGroupInputProps<T extends ElementType, V> = Omit<AbstractGro
     /**
      * Whether or not the first input of the group should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * The initial value of `value`.
      */

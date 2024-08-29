@@ -14,14 +14,14 @@ import {
     useForwardInputApi,
     useSlots,
     normalizeSize
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
-import { AbstractInputProps } from "../../input";
-import { Box } from "../../box";
-import { Span } from "../../html";
-import { Text } from "../../typography";
-import { VisuallyHidden } from "../../visually-hidden";
+import { AbstractInputProps } from "../../input/index.js";
+import { Box } from "../../box/index.js";
+import { Span } from "../../html/index.js";
+import { Text } from "../../typography/index.js";
+import { VisuallyHidden } from "../../visually-hidden/index.js";
 
 const DefaultElement = "label";
 

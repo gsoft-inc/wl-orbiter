@@ -1,8 +1,8 @@
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading } from "@components/typography";
-import { Stack } from "@components/layout";
-import { Tile, TileGroup, TileLink } from "@components/tile";
+import { Content } from "@components/placeholders/index.js";
+import { Div } from "@components/html/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Stack } from "@components/layout/index.js";
+import { Tile, TileGroup, TileLink } from "@components/tile/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

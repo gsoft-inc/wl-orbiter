@@ -1,6 +1,6 @@
-import { Children, ReactElement, ReactNode, Ref, RefAttributes, useMemo } from "react";
-import { Content, Header } from "../../placeholders";
-import { isNil, mergeProps, resolveChildren } from "../../shared";
+import { Children, LegacyRef, ReactElement, ReactNode, RefAttributes, useMemo } from "react";
+import { Content, Header } from "../../placeholders/index.js";
+import { isNil, mergeProps, resolveChildren } from "../../shared/index.js";
 
 export interface PanelType {
     disabled?: boolean;
@@ -9,7 +9,7 @@ export interface PanelType {
     key: string;
     panelId: string;
     props?: Record<string, any>;
-    ref?: Ref<any>;
+    ref?: LegacyRef<any>;
     tabId: string;
 }
 
@@ -20,7 +20,7 @@ export interface TabType {
     key: string;
     panelId: string;
     props?: Record<string, any>;
-    ref?: Ref<any>;
+    ref?: LegacyRef<any>;
     tabId: string;
 }
 

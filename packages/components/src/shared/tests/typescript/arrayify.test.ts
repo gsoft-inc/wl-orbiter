@@ -1,4 +1,4 @@
-import { arrayify } from "@components/shared";
+import { arrayify } from "@components/shared/index.js";
 import { expectAssignable } from "@test-utils";
 
 expectAssignable<number[]>(arrayify(1));

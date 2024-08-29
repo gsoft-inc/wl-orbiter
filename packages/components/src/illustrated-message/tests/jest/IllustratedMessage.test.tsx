@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { IllustratedMessage } from "@components/illustrated-message";
+import { Div } from "@components/html/index.js";
+import { IllustratedMessage } from "@components/illustrated-message/index.js";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -40,7 +40,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <IllustratedMessage ref={handler}>

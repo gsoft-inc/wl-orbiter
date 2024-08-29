@@ -1,4 +1,4 @@
-import { Loader } from "@components/loader";
+import { Loader } from "@components/loader/index.js";
 import { createRef } from "react";
 import { renderWithTheme } from "@test-utils";
 import { screen, waitFor } from "@testing-library/react";
@@ -59,7 +59,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Loader ref={handler} aria-label="Loading..." />

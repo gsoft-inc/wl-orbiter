@@ -1,3 +1,3 @@
-export * from "./paramsBuilder";
-export * from "./storiesOfBuilder";
-export * from "./getGlobals";
+export * from "./paramsBuilder.js";
+export * from "./storiesOfBuilder.js";
+export * from "./getGlobals.js";

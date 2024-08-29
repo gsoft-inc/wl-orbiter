@@ -2,11 +2,11 @@ import "@css/normalize.css";
 import "@components/index.css";
 import "./styles";
 
-import { isChromatic, isDocs } from "./env";
-import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators";
+import { isChromatic, isDocs } from "./env.js";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators.js";
 
 import { Code, Highlight } from "@stories/mdx";
-import { Themes } from "./styles/themes";
+import { Themes } from "./styles/themes.js";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.

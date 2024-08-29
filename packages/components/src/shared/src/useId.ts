@@ -1,4 +1,4 @@
-import { isNil } from "./assertions";
+import { isNil } from "./assertions.js";
 import { useId as _useId } from "react";
 
 export function useId(userId?: string, prefix?: string) {

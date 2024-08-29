@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useDisposables } from "../../shared";
+import { useDisposables } from "../../shared/index.js";
 
 export function useDeferredValue<T>(value: T, delay?: number, defaultValue?: T) {
     const [deferredValue, setDeferredValue] = useState(defaultValue);

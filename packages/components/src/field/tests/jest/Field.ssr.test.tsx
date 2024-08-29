@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Field, HelpMessage, Label } from "@components/field";
-import { TextInput } from "@components/text-input";
+import { Field, HelpMessage, Label } from "@components/field/index.js";
+import { TextInput } from "@components/text-input/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

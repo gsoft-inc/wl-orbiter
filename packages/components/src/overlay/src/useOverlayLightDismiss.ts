@@ -1,9 +1,9 @@
 import { FocusEvent, KeyboardEvent, MouseEvent, SyntheticEvent } from "react";
-import { FocusScope, Keys, isNil, useEventCallback, useFocusWithin } from "../../shared";
+import { FocusScope, Keys, isNil, useEventCallback, useFocusWithin } from "../../shared/index.js";
 
-import { OverlayTrigger } from "./useOverlayTrigger";
-import { isDevToolsBlurEvent } from "./isDevtoolsBlurEvent";
-import { useInteractOutside } from "./useInteractOutside";
+import { OverlayTrigger } from "./useOverlayTrigger.js";
+import { isDevToolsBlurEvent } from "./isDevtoolsBlurEvent.js";
+import { useInteractOutside } from "./useInteractOutside.js";
 
 export interface UseOverlayLightDismissOptions {
     hideOnEscape?: boolean;

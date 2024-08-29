@@ -1,7 +1,7 @@
-import { Field, Label } from "@components/field";
-import { InputGroup } from "@components/input-group";
-import { Text } from "@components/typography";
-import { TextInput } from "@components/text-input";
+import { Field, Label } from "@components/field/index.js";
+import { InputGroup } from "@components/input-group/index.js";
+import { Text } from "@components/typography/index.js";
+import { TextInput } from "@components/text-input/index.js";
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
@@ -63,7 +63,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <InputGroup ref={handler}>

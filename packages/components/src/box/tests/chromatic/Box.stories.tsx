@@ -1,5 +1,5 @@
-import { Box } from "@components/box";
-import { Inline } from "@components/layout";
+import { Box } from "@components/box/index.js";
+import { Inline } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

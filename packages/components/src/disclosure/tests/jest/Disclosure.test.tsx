@@ -1,7 +1,7 @@
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Disclosure } from "@components/disclosure";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Disclosure } from "@components/disclosure/index.js";
+import { Keys } from "@components/shared/index.js";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
 // ***** Behaviors *****
@@ -93,7 +93,7 @@ test("when an id is auto generated, a disclosure aria-controls attribute match t
 // ***** Api *****
 
 test("call onOpenChange when expand", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Disclosure onOpenChange={handler}>
@@ -109,7 +109,7 @@ test("call onOpenChange when expand", async () => {
 });
 
 test("call onOpenChange when close", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Disclosure defaultOpen onOpenChange={handler}>

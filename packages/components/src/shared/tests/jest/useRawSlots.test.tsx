@@ -1,7 +1,7 @@
-import { Box, BoxProps } from "@components/box";
+import { Box, BoxProps } from "@components/box/index.js";
 import { forwardRef } from "react";
 import { renderHook } from "@test-utils";
-import { slot, useRawSlots } from "@components/shared";
+import { slot, useRawSlots } from "@components/shared/index.js";
 
 const Title = slot("title", forwardRef<HTMLElement, BoxProps>(({ children, ...rest }, ref) => {
     return (

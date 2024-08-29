@@ -1,9 +1,9 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField, HelpMessage, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
+import { Button, ButtonGroup } from "@components/button/index.js";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.js";
+import { DateRangeInput } from "@components/date-input/index.js";
+import { GroupField, HelpMessage, Label } from "@components/field/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Radio, RadioGroup } from "@components/radio/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

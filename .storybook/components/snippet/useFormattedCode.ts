@@ -1,8 +1,8 @@
-import { isNil } from "@components/shared";
+import { isNil } from "@components/shared/index.js";
 import { useMemo } from "react";
-import prettier from "prettier/standalone";
-import prettierBabel from "prettier/parser-babel";
-import prettierPostCss from "prettier/parser-postcss";
+import prettier from "prettier/standalone.js";
+import prettierBabel from "prettier/parser-babel.js";
+import prettierPostCss from "prettier/parser-postcss.js";
 
 const PrettierParser = {
     "javascript": "babel",

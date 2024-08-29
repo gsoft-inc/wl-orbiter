@@ -1,5 +1,5 @@
-import { CrossButton } from "@components/button";
-import { Inline } from "@components/layout";
+import { CrossButton } from "@components/button/index.js";
+import { Inline } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

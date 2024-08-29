@@ -1,7 +1,7 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner } from "../../input";
-import { Box, BoxProps } from "../../box";
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner } from "../../input/index.js";
+import { Box, BoxProps } from "../../box/index.js";
 import { ChangeEvent, ComponentProps, FocusEvent, FocusEventHandler, MouseEvent, ReactElement, Ref, SyntheticEvent, forwardRef, useCallback, useMemo } from "react";
-import { Div, HtmlButton } from "../../html";
+import { Div, HtmlButton } from "../../html/index.js";
 import {
     OmitInternalProps,
     cssModule,
@@ -15,13 +15,13 @@ import {
     useEventCallback,
     useFocusWithin,
     useRefState
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
 import { AngleDownIcon, AngleUpIcon } from "@hopper-ui/icons";
-import { useFieldInputProps } from "../../field";
-import { useInputGroupProps } from "../../input-group";
-import { useToolbarProps } from "../../toolbar";
+import { useFieldInputProps } from "../../field/index.js";
+import { useInputGroupProps } from "../../input-group/index.js";
+import { useToolbarProps } from "../../toolbar/index.js";
 
 const DefaultElement = "input";
 

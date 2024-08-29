@@ -1,6 +1,6 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
 import { cloneElement } from "react";
 
 function IconButton({ element, ...rest }) {

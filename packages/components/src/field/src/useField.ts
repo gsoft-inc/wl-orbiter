@@ -1,7 +1,7 @@
 import { ForwardedRef } from "react";
-import { MergedRef, cssModule, mergeClasses, useHasChildren, useId, useIsInitialRender, useMergedRefs } from "../../shared";
-import { ValidationState } from "../../input";
-import type { FieldContextType } from "./FieldContext";
+import { MergedRef, cssModule, mergeClasses, useHasChildren, useId, useIsInitialRender, useMergedRefs } from "../../shared/index.js";
+import { ValidationState } from "../../input/index.js";
+import type { FieldContextType } from "./FieldContext.js";
 
 export interface UseFieldProps {
     className?: string;

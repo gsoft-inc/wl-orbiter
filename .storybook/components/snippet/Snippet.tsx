@@ -1,8 +1,8 @@
 import "./Snippet.css";
 
-import { Div } from "@components/html";
-import { isNil, mergeClasses } from "@components/shared";
-import { useFormattedCode } from "./useFormattedCode";
+import { Div } from "@components/html/index.js";
+import { isNil, mergeClasses } from "@components/shared/index.js";
+import { useFormattedCode } from "./useFormattedCode.js";
 import { ComponentProps, useState } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/dracula";

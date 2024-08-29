@@ -1,7 +1,7 @@
 import { ComponentProps, ElementType, ReactNode, forwardRef } from "react";
-import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout/index.js";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
 export type AbstractGroupProps<T extends ElementType> = InternalProps & Omit<StyledComponentProps<T>, "display" | "alignItems" | "flex" | "flexDirection" | "flexWrap" | "justifyContent"> & {
     /**

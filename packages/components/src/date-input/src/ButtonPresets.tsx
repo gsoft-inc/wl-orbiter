@@ -1,8 +1,8 @@
-import { isNil, useEventCallback } from "../../shared";
+import { isNil, useEventCallback } from "../../shared/index.js";
 
-import { RadioGroup } from "../../radio";
+import { RadioGroup } from "../../radio/index.js";
 import { SyntheticEvent } from "react";
-import { ToggleButton } from "../../button";
+import { ToggleButton } from "../../button/index.js";
 
 export interface ButtonPresetsProps {
     onSelectionChange: (event: SyntheticEvent, index: number) => void;

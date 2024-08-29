@@ -1,6 +1,6 @@
 import { ErrorBoundary, muteConsoleErrors, act, renderHook } from "@test-utils";
 import { ReactNode } from "react";
-import { useControllableState } from "@components/shared";
+import { useControllableState } from "@components/shared/index.js";
 
 // Errors in useEffect are not catch by @test-utils-hooks error handling code. Therefore we must catch those errors with a custom ErrorBoundary.
 function withErrorBoundary(onError: (error: Error) => void) {
@@ -46,7 +46,7 @@ test("state is the default value when no controlled value and no initial value a
 });
 
 test("state is unchanged when a subsequent run is made with the same values", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { result, rerender } = renderHook(() => useControllableState(true, undefined, false, { onChange: handler }));
 
@@ -59,7 +59,7 @@ test("state is unchanged when a subsequent run is made with the same values", ()
 });
 
 test("state is updated when a new controlled value is provided on a subsequent run", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { result, rerender } = renderHook(({ controlledValue }) => useControllableState(controlledValue, undefined, false, { onChange: handler }), {
         initialProps: {
@@ -227,7 +227,7 @@ test("call onChange when a new value is provided for a controlled prop", () => {
 });
 
 test("don't call onChange when a new uncontrolled value is set for a controlled prop", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { result } = renderHook(({ controlledValue }) => useControllableState(controlledValue, undefined, false, { onChange: handler }), {
         initialProps: {
@@ -266,7 +266,7 @@ test("call onChange when a new value is set for an uncontrolled prop", () => {
 test("when onChange return a value for a controlled prop, this is the new value", () => {
     let callCount = 0;
 
-    const handler = jest.fn(state => {
+    const handler = vi.fn(state => {
         callCount++;
 
         return `${state} ${callCount}`;
@@ -289,7 +289,7 @@ test("when onChange return a value for a controlled prop, this is the new value"
 test("when onChange return a value for an uncontrolled prop, this is the new value", () => {
     let callCount = 0;
 
-    const handler = jest.fn(state => {
+    const handler = vi.fn(state => {
         callCount++;
 
         return `${state} ${callCount}`;

@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.js";
 import {
     ChangeEvent,
     ComponentProps,
@@ -9,16 +9,16 @@ import {
     useMemo,
     useRef
 } from "react";
-import { InputGroup, useInputGroupProps } from "../../input-group";
-import { OmitInternalProps, augmentElement, cssModule, isNil, mergeClasses, mergeProps, useControllableState, useEventCallback } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { areEqualDates, toMidnightDate } from "./dateUtils";
+import { InputGroup, useInputGroupProps } from "../../input-group/index.js";
+import { OmitInternalProps, augmentElement, cssModule, isNil, mergeClasses, mergeProps, useControllableState, useEventCallback } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { areEqualDates, toMidnightDate } from "./dateUtils.js";
 
-import { AbstractInputProps } from "../../input";
-import { ButtonPresets } from "./ButtonPresets";
-import { MenuPresets } from "./MenuPresets";
-import { TextInput } from "../../text-input";
-import { useDateInput } from "./useDateInput";
+import { AbstractInputProps } from "../../input/index.js";
+import { ButtonPresets } from "./ButtonPresets.js";
+import { MenuPresets } from "./MenuPresets.js";
+import { TextInput } from "../../text-input/index.js";
+import { useDateInput } from "./useDateInput.js";
 
 export interface DatePreset {
     date: Date;

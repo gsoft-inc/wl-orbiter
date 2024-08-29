@@ -1,3 +1,3 @@
-export * from "./Content";
-export * from "./Header";
-export * from "./Footer";
+export * from "./Content.js";
+export * from "./Header.js";
+export * from "./Footer.js";

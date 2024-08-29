@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Div } from "@components/html";
-import { Grid } from "@components/layout";
+import { Div } from "@components/html/index.js";
+import { Grid } from "@components/layout/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

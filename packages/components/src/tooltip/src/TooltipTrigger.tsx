@@ -12,12 +12,12 @@ import {
     useId,
     useMergedRefs,
     useFocusScope
-} from "../../shared";
-import { Overlay, OverlayArrow, OverlayPositionProp, isTargetParent, useOverlayPosition, useOverlayTrigger, useOverlayLightDismiss } from "../../overlay";
-import { useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { Overlay, OverlayArrow, OverlayPositionProp, isTargetParent, useOverlayPosition, useOverlayTrigger, useOverlayLightDismiss } from "../../overlay/index.js";
+import { useResponsiveValue } from "../../styling/index.js";
 
-import { Div } from "../../html";
-import { TooltipTriggerContext } from "./TooltipTriggerContext";
+import { Div } from "../../html/index.js";
+import { TooltipTriggerContext } from "./TooltipTriggerContext.js";
 
 const DefaultElement = "div";
 

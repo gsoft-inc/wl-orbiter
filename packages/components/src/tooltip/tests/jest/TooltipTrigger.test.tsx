@@ -1,6 +1,6 @@
-import { Button } from "@components/button";
-import { Tooltip, TooltipTrigger } from "@components/tooltip";
-import { Transition } from "@components/transition";
+import { Button } from "@components/button/index.js";
+import { Tooltip, TooltipTrigger } from "@components/tooltip/index.js";
+import { Transition } from "@components/transition/index.js";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
@@ -68,7 +68,9 @@ test("when hovering the overlay arrow, close on overlay leave", async () => {
 
     await userEvent.unhover(getOverlayArrow(screen.getByTestId("overlay")));
 
-    expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
+    await waitFor(() => {
+        expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
+    });
 });
 
 test("when hovering the tooltip, do not close if hovering the trigger", async () => {
@@ -102,11 +104,11 @@ test("when unhovering the tooltip, close tooltip", async () => {
 
     await userEvent.hover(screen.getByTestId("trigger"), { });
 
-    expect(screen.getByRole("tooltip")).toBeInTheDocument();
+    expect(await screen.findByRole("tooltip")).toBeInTheDocument();
 
     await userEvent.unhover(screen.getByRole("tooltip"));
 
-    expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
+    await waitFor(() => expect(screen.queryByRole("tooltip")).not.toBeInTheDocument());
 });
 
 
@@ -154,7 +156,7 @@ test("when a tooltip is visible, the tooltip trigger aria-describedby match the 
 // ***** Api *****
 
 test("call onOpenChange when the tooltip appears", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TooltipTrigger onOpenChange={handler}>
@@ -170,7 +172,7 @@ test("call onOpenChange when the tooltip appears", async () => {
 });
 
 test("call onOpenChange when the tooltip disappear", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TooltipTrigger onOpenChange={handler}>
@@ -230,7 +232,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TooltipTrigger ref={handler}>

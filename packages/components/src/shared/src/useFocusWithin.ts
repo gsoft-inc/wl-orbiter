@@ -1,7 +1,7 @@
 import { FocusEvent } from "react";
-import { isNil } from "./assertions";
-import { useEventCallback } from "./useEventCallback";
-import { useRefState } from "./useRefState";
+import { isNil } from "./assertions.js";
+import { useEventCallback } from "./useEventCallback.js";
+import { useRefState } from "./useRefState.js";
 
 export interface UseFocusWithinOptions {
     isDisabled?: boolean;

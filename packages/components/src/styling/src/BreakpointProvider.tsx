@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useCallback, useContext, useEffect, useState } from "react";
-import { isNil } from "../../shared";
-import { supportsMatchMedia } from "./useMediaQuery";
+import { isNil } from "../../shared/index.js";
+import { supportsMatchMedia } from "./useMediaQuery.js";
 import { useDebouncedCallback } from "use-debounce";
 
 /* eslint-disable sort-keys-fix/sort-keys-fix */

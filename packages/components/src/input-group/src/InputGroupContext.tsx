@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useContext } from "react";
-import { UseFieldInputPropsReturn } from "../../field";
-import { UseToolbarPropsReturn } from "../../toolbar";
-import { isNil, mergeProps } from "../../shared";
+import { UseFieldInputPropsReturn } from "../../field/index.js";
+import { UseToolbarPropsReturn } from "../../toolbar/index.js";
+import { isNil, mergeProps } from "../../shared/index.js";
 
 export type InputGroupContextType = {
     disabled?: boolean;

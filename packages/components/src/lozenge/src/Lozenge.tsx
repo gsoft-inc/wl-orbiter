@@ -1,4 +1,4 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef, useMemo } from "react";
 import {
     InternalProps,
@@ -12,9 +12,9 @@ import {
     slot,
     useMergedRefs,
     useSlots
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Text } from "../../typography";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { Text } from "../../typography/index.js";
 
 const DefaultElement = "span";
 

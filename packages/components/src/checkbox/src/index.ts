@@ -1,3 +1,3 @@
-export * from "./Checkbox";
-export * from "./CheckboxGroup";
-export * from "./useCheckbox";
+export * from "./Checkbox.js";
+export * from "./CheckboxGroup.js";
+export * from "./useCheckbox.js";

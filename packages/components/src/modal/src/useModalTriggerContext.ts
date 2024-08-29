@@ -1,4 +1,4 @@
-import { DialogTriggerContextType, useDialogTriggerContext } from "../../dialog";
+import { DialogTriggerContextType, useDialogTriggerContext } from "../../dialog/index.js";
 
 export type ModalTriggerContextType = DialogTriggerContextType;
 

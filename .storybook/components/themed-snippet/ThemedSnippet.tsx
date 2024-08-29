@@ -1,5 +1,5 @@
 import { Snippet, SnippetProps } from "@stories/components";
-import { useThemedSnippet } from "./useThemedSnippet";
+import { useThemedSnippet } from "./useThemedSnippet.js";
 
 interface ThemedSnippetProps extends SnippetProps {
     sharegate: string;

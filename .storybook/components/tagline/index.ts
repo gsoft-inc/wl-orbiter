@@ -1,1 +1,1 @@
-export * from "./Tagline";
+export * from "./Tagline.js";

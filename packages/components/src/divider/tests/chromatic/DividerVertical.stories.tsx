@@ -1,9 +1,9 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Dot } from "@components/dot";
-import { Flex, Inline } from "@components/layout";
-import { Text } from "@components/typography";
-import { TextLink } from "@components/link";
+import { Div } from "@components/html/index.js";
+import { Divider } from "@components/divider/index.js";
+import { Dot } from "@components/dot/index.js";
+import { Flex, Inline } from "@components/layout/index.js";
+import { Text } from "@components/typography/index.js";
+import { TextLink } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

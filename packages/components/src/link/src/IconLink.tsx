@@ -1,10 +1,10 @@
-import { AbstractLinkProps } from "./Link";
-import { Box } from "../../box";
+import { AbstractLinkProps } from "./Link.js";
+import { Box } from "../../box/index.js";
 import { Children, ComponentProps, ReactElement, ReactNode, forwardRef } from "react";
-import { LinkVariant, useLink } from "./useLink";
-import { NewTabIndicator } from "./NewTabIndicator";
-import { OmitInternalProps, as, mergeProps } from "../../shared";
-import { useStyleProps } from "../../styling";
+import { LinkVariant, useLink } from "./useLink.js";
+import { NewTabIndicator } from "./NewTabIndicator.js";
+import { OmitInternalProps, as, mergeProps } from "../../shared/index.js";
+import { useStyleProps } from "../../styling/index.js";
 
 const DefaultElement = "a";
 
@@ -16,7 +16,7 @@ export interface InnerIconLinkProps extends AbstractLinkProps<typeof DefaultElem
     /**
      * Whether or not the link should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * React children.
      */

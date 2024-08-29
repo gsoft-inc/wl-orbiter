@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Div } from "@components/html";
-import { IllustratedMessage } from "@components/illustrated-message";
+import { Div } from "@components/html/index.js";
+import { IllustratedMessage } from "@components/illustrated-message/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

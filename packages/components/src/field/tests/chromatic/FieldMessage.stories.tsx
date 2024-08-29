@@ -1,9 +1,9 @@
-import { Div, LI, OL, UL } from "@components/html";
-import { ErrorMessage, HelpMessage, ValidMessage } from "@components/field";
+import { Div, LI, OL, UL } from "@components/html/index.js";
+import { ErrorMessage, HelpMessage, ValidMessage } from "@components/field/index.js";
 import { QuestionIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Paragraph } from "@components/typography";
-import { TextLink } from "@components/link";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Paragraph } from "@components/typography/index.js";
+import { TextLink } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { ReactNode } from "react";
 

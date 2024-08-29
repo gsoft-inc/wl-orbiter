@@ -1,3 +1,3 @@
-export * from "./TextInput";
-export * from "./PasswordInput";
-export * from "./SearchInput";
+export * from "./TextInput.js";
+export * from "./PasswordInput.js";
+export * from "./SearchInput.js";

@@ -1,9 +1,9 @@
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.js";
 
-import { CrossButton } from "@components/button";
-import { Div } from "@components/html";
+import { CrossButton } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
 import { SearchIcon } from "@hopper-ui/icons";
-import { TextInput } from "@components/text-input";
+import { TextInput } from "@components/text-input/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

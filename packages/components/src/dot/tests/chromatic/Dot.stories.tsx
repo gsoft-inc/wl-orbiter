@@ -1,6 +1,6 @@
-import { Div } from "@components/html";
-import { Dot } from "@components/dot";
-import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html/index.js";
+import { Dot } from "@components/dot/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

@@ -1,3 +1,3 @@
-export * from "./Image";
-export * from "./AsyncImage";
-export * from "./SvgImage";
+export * from "./Image.js";
+export * from "./AsyncImage.js";
+export * from "./SvgImage.js";

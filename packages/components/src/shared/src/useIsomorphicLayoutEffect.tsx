@@ -1,5 +1,5 @@
 import * as React from "react";
-import { isBrowser } from "./dom";
+import { isBrowser } from "./dom.js";
 
 /**
  * useIsomorphicLayoutEffect enables us to safely call `useLayoutEffect` on the browser

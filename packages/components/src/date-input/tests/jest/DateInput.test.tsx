@@ -1,6 +1,6 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.js";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { DateInput } from "@components/date-input";
+import { DateInput } from "@components/date-input/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -260,7 +260,7 @@ test("when autofocus is true and the date input is readonly, the date input is n
 
 test("when autofocus is specified with a de lay, the date input is focused after the delay", async () => {
     renderWithTheme(
-        <DateInput autoFocus={10} data-testid="date" />
+        <DateInput autoFocus data-testid="date" />
     );
 
     expect(screen.getByTestId("date")).not.toHaveFocus();
@@ -399,7 +399,7 @@ describe("expanded presets", () => {
 // ***** Api *****
 
 test("when the input has no value and a valid date has been entered, call onDateChange with the new date on blur", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -421,7 +421,7 @@ test("when the input has no value and a valid date has been entered, call onDate
 });
 
 test("when the input has no value and a partial date has been cleared, do not call onDateChange", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -448,7 +448,7 @@ test("when the input has no value and a partial date has been cleared, do not ca
 });
 
 test("when the input has no value and a malformed date has been entered, do not call onDateChange", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -471,7 +471,7 @@ test("when the input has no value and a malformed date has been entered, do not 
 });
 
 test("when the input value has a valid date and a new valid date has been entered, call onDateChange with the new date", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -496,7 +496,7 @@ test("when the input value has a valid date and a new valid date has been entere
 });
 
 test("when the input value has a valid date and the date has been cleared, call onDateChange with null", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -519,7 +519,7 @@ test("when the input value has a valid date and the date has been cleared, call 
 });
 
 test("when the input value has a valid date and a partial date has been entered, do not call onDateChange on date reset", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -543,7 +543,7 @@ test("when the input value has a valid date and a partial date has been entered,
 });
 
 test("when the input value has a valid date and a malformed date has been entered, do not call onDateChange", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -567,7 +567,7 @@ test("when the input value has a valid date and a malformed date has been entere
 });
 
 test("when the input value has a valid date and is focused then blured with the same date, do not call onDateChange", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -587,7 +587,7 @@ test("when the input value has a valid date and is focused then blured with the 
 });
 
 test("when a valid date has been entered and the date exceed the specified min or max value, onDateChange is called with the clamped date before onBlur is called", async () => {
-    const handleDateChange = jest.fn();
+    const handleDateChange = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -610,7 +610,7 @@ test("when a valid date has been entered and the date exceed the specified min o
 });
 
 test("when a preset is selected, call onDateChange with the preset date", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput
@@ -753,7 +753,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateInput ref={handler} />

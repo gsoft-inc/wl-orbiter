@@ -1,12 +1,12 @@
-import { Box } from "../../box";
-import { ClearToolbar, useToolbarProps } from "../../toolbar";
+import { Box } from "../../box/index.js";
+import { ClearToolbar, useToolbarProps } from "../../toolbar/index.js";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { FieldContext } from "./FieldContext";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { ValidationState } from "../../input";
-import { useFormField } from "../../form";
-import { useGroupField } from "./useGroupField";
+import { FieldContext } from "./FieldContext.js";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { ValidationState } from "../../input/index.js";
+import { useFormField } from "../../form/index.js";
+import { useGroupField } from "./useGroupField.js";
 
 const DefaultElement = "div";
 

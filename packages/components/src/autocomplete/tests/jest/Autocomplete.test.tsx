@@ -1,11 +1,11 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Autocomplete } from "@components/autocomplete";
-import { Button } from "@components/button";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Transition } from "@components/transition";
+import { Autocomplete } from "@components/autocomplete/index.js";
+import { Button } from "@components/button/index.js";
+import { Item } from "@components/collection/index.js";
+import { Keys } from "@components/shared/index.js";
+import { Transition } from "@components/transition/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -498,7 +498,7 @@ test("when autofocus is true and the autocomplete is disabled, the autocomplete 
 test("when autofocus is specified with a delay, the autocomplete trigger is focused after the delay", async () => {
     renderWithTheme(
         <Autocomplete
-            autoFocus={10}
+            autoFocus
             aria-label="Planet"
             data-testid="autocomplete"
         >
@@ -599,7 +599,7 @@ test("when opened, the autocomplete aria-controls match the overlay id", async (
 // ***** Api *****
 
 test("call onSearch when the query is updated", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Autocomplete
@@ -621,7 +621,7 @@ test("call onSearch when the query is updated", async () => {
 });
 
 test("do not call onSearch when the query is empty", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Autocomplete
@@ -644,7 +644,7 @@ test("do not call onSearch when the query is empty", async () => {
 });
 
 test("call onOpenChange when the autocomplete overlay open", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Autocomplete
@@ -666,7 +666,7 @@ test("call onOpenChange when the autocomplete overlay open", async () => {
 });
 
 test("call onOpenChange when the autocomplete overlay close", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Autocomplete
@@ -691,7 +691,7 @@ test("call onOpenChange when the autocomplete overlay close", async () => {
 
 test("call onSelectionChange when a value is selected", async () => {
     const user = userEvent.setup();
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Autocomplete
@@ -784,7 +784,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Autocomplete

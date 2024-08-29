@@ -1,4 +1,4 @@
-import { mergeClasses } from "@components/shared";
+import { mergeClasses } from "@components/shared/index.js";
 
 test("can merge classes", () => {
     const result = mergeClasses(

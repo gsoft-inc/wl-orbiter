@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 import { ComponentProps, forwardRef } from "react";
-import { SvgImage } from "@components/image";
+import { SvgImage } from "@components/image/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

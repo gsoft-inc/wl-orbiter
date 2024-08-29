@@ -1,4 +1,4 @@
-import { CompositeKeyWeakMap, mergeProps } from "@components/shared";
+import { CompositeKeyWeakMap, mergeProps } from "@components/shared/index.js";
 
 describe("CompositeKeyWeakMap", () => {
     test("can store single key value", () => {
@@ -139,7 +139,7 @@ describe("mergeProps", () => {
     });
 
     test("can specify additional handler", () => {
-        const func = jest.fn();
+        const func = vi.fn();
 
         const result = mergeProps({}, {
             onClick: func
@@ -151,8 +151,8 @@ describe("mergeProps", () => {
     });
 
     test("merge handlers when exist on original", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
 
         const originalProps = {
             onClick: func1
@@ -169,7 +169,7 @@ describe("mergeProps", () => {
     });
 
     test("can specify additional ref", () => {
-        const func = jest.fn();
+        const func = vi.fn();
 
         const result = mergeProps({}, {
             ref: func
@@ -181,8 +181,8 @@ describe("mergeProps", () => {
     });
 
     test("merge ref when exist on original", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
 
         const originalProps = {
             ref: func1
@@ -199,7 +199,7 @@ describe("mergeProps", () => {
     });
 
     test("ignore original null ref", () => {
-        const func2 = jest.fn();
+        const func2 = vi.fn();
 
         const originalProps: { ref: typeof func2 | null } = {
             ref: null
@@ -215,7 +215,7 @@ describe("mergeProps", () => {
     });
 
     test("ignore additional null ref", () => {
-        const func1 = jest.fn();
+        const func1 = vi.fn();
 
         const originalProps = {
             ref: func1
@@ -231,8 +231,8 @@ describe("mergeProps", () => {
     });
 
     test("merged handler is memoized", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
 
         const result1 = mergeProps({ onClick: func1 }, { onClick: func2 });
         const result2 = mergeProps({ onClick: func1 }, { onClick: func2 });
@@ -241,9 +241,9 @@ describe("mergeProps", () => {
     });
 
     test("merge handler is updated when handlers change", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
-        const func3 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
+        const func3 = vi.fn();
 
         const result1 = mergeProps({ onClick: func1 }, { onClick: func2 });
         const result2 = mergeProps({ onClick: func2 }, { onClick: func1 });
@@ -254,8 +254,8 @@ describe("mergeProps", () => {
     });
 
     test("merged ref is memoized", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
 
         const result1 = mergeProps({ ref: func1 }, { ref: func2 });
         const result2 = mergeProps({ ref: func1 }, { ref: func2 });
@@ -264,9 +264,9 @@ describe("mergeProps", () => {
     });
 
     test("merged ref is updated when refs change", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
-        const func3 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
+        const func3 = vi.fn();
 
         const result1 = mergeProps({ ref: func1 }, { ref: func2 });
         const result2 = mergeProps({ ref: func2 }, { ref: func1 });
@@ -277,12 +277,12 @@ describe("mergeProps", () => {
     });
 
     test("can merge multiple props objects", () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
-        const func3 = jest.fn();
-        const func4 = jest.fn();
-        const func5 = jest.fn();
-        const func6 = jest.fn();
+        const func1 = vi.fn();
+        const func2 = vi.fn();
+        const func3 = vi.fn();
+        const func4 = vi.fn();
+        const func5 = vi.fn();
+        const func6 = vi.fn();
 
         const result = mergeProps({
             className: "space-x",

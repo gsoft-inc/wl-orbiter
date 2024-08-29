@@ -1,6 +1,6 @@
 // Copied from https://github.com/react-bootstrap/react-bootstrap/blob/master/src/createChainedFunction.js.
 
-import { useEventCallback } from "./useEventCallback";
+import { useEventCallback } from "./useEventCallback.js";
 
 type ChainableFunction = (...args: any[]) => void;
 

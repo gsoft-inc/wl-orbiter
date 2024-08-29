@@ -1,4 +1,4 @@
-import { isNil } from "../../../shared";
+import { isNil } from "../../../shared/index.js";
 
 export function normalizeVariable(name: string | number, nameOptions?: {
     prefix?: string;

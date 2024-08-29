@@ -1,4 +1,4 @@
-import { Avatar } from "@components/avatar";
+import { Avatar } from "@components/avatar/index.js";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -54,7 +54,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Avatar name="Elon Musk" ref={handler} />

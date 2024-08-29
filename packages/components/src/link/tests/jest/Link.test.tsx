@@ -1,5 +1,5 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { Link } from "@components/link";
+import { Link } from "@components/link/index.js";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -44,7 +44,7 @@ test("when autofocus is true and the link is disabled, the icon link is not focu
 test("when autofocus is specified with a delay, the link is focused after the delay", async () => {
     renderWithTheme(
         <Link
-            autoFocus={10}
+            autoFocus
             href="#"
             aria-label="Add"
             data-testid="link"
@@ -97,7 +97,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Link ref={handler} href="#" aria-label="Add">

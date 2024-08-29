@@ -1,8 +1,8 @@
 import { act, fireEvent, screen, waitFor, within, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField } from "@components/field";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.js";
+import { DateRangeInput } from "@components/date-input/index.js";
+import { GroupField } from "@components/field/index.js";
+import { Keys } from "@components/shared/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -414,7 +414,7 @@ test("when autofocus is true and the date range input is readonly, the date rang
 test("when autofocus is specified with a delay, the date range input is focused after the delay", async () => {
     const { container } = renderWithTheme(
         <DateRangeInput
-            autoFocus={10}
+            autoFocus
             name="date-range"
             data-testid="date-range-input"
         />
@@ -594,7 +594,7 @@ test("when is in a group field, a role attribute is not rendered", async () => {
 // ***** Api *****
 
 test("when a start date is applied, call onDatesChange with the new start date", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { container } = renderWithTheme(
         <DateRangeInput
@@ -616,7 +616,7 @@ test("when a start date is applied, call onDatesChange with the new start date",
 });
 
 test("when an end date is applied, call onDatesChange with the new end date", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { container } = renderWithTheme(
         <DateRangeInput
@@ -638,7 +638,7 @@ test("when an end date is applied, call onDatesChange with the new end date", as
 });
 
 test("when the start date and the end date are applied, call onDatesChange with both dates", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { container } = renderWithTheme(
         <DateRangeInput
@@ -668,7 +668,7 @@ test("when the start date and the end date are applied, call onDatesChange with 
 });
 
 test("when the dates are cleared, call onDatesChange with null for both dates", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateRangeInput
@@ -685,7 +685,7 @@ test("when the dates are cleared, call onDatesChange with null for both dates", 
 });
 
 test("when a preset is selected, call onDatesChange with both dates", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateRangeInput
@@ -827,7 +827,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DateRangeInput ref={handler} />

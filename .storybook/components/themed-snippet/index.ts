@@ -1,2 +1,2 @@
-export * from "./ThemedSnippet";
-export * from "./useThemedSnippet";
+export * from "./ThemedSnippet.js";
+export * from "./useThemedSnippet.js";

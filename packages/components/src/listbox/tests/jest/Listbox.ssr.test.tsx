@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Item } from "@components/collection";
-import { Listbox } from "@components/listbox";
+import { Item } from "@components/collection/index.js";
+import { Listbox } from "@components/listbox/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

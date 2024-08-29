@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { Flex, FlexProps } from "@components/layout";
+import { Div } from "@components/html/index.js";
+import { Flex, FlexProps } from "@components/layout/index.js";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -47,7 +47,7 @@ test("using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Flexed ref={handler} />

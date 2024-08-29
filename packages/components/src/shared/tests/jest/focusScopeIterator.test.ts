@@ -1,4 +1,4 @@
-import { FocusScope, FocusScopeIterator } from "@components/shared";
+import { FocusScope, FocusScopeIterator } from "@components/shared/index.js";
 import { MutableRefObject, createRef } from "react";
 
 class Scope extends FocusScope {

@@ -1,5 +1,5 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout";
+import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout/index.js";
 import {
     InternalProps,
     Keys,
@@ -14,9 +14,9 @@ import {
     useMergedRefs,
     useRovingFocus,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { ToolbarContext } from "./ToolbarContext";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { ToolbarContext } from "./ToolbarContext.js";
 
 const DefaultElement = "div";
 
@@ -34,7 +34,7 @@ export interface InnerToolbarProps extends
     /**
      * Whether or not the toolbar should autoFocus the first tabbable element on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * React children.
      */

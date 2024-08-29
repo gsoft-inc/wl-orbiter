@@ -1,9 +1,9 @@
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { CheckableContext } from "@components/shared";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Tile } from "@components/tile";
+import { CheckableContext } from "@components/shared/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Tile } from "@components/tile/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -33,7 +33,7 @@ test("when autofocus is true and the tile is disabled, the tile is not focused o
 
 test("when autofocus is specified with a delay, the tile is focused after the delay", async () => {
     renderWithTheme(
-        <Tile autoFocus={10} data-testid="tile">
+        <Tile autoFocus data-testid="tile">
             <Heading>Fuel</Heading>
             <Content>Fuel configuration and level</Content>
         </Tile>
@@ -105,7 +105,7 @@ test("when a tile is in a checkable context and is selected, aria-checked is \"t
 // ***** Api *****
 
 test("call onChange when the tile is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tile onChange={handler} data-testid="tile">
@@ -121,7 +121,7 @@ test("call onChange when the tile is selected", async () => {
 });
 
 test("call onChange when the tile is unselected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tile onChange={handler} data-testid="tile">
@@ -177,7 +177,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tile ref={handler}>

@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Box } from "@components/box";
+import { Box } from "@components/box/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,11 +1,11 @@
-import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme";
-import { StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps, omitProps } from "../../../shared";
+import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme.js";
+import { StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps, omitProps } from "../../../shared/index.js";
 import { ComponentProps, ForwardedRef, forwardRef, ReactNode, useCallback, useState } from "react";
 import { StyledSystemProvider } from "@hopper-ui/styled-system";
 
-import { BreakpointProvider } from "../BreakpointProvider";
-import { ColorSchemeContext } from "../ColorSchemeContext";
-import { useStyledSystem } from "..";
+import { BreakpointProvider } from "../BreakpointProvider.js";
+import { ColorSchemeContext } from "../ColorSchemeContext.js";
+import { useStyledSystem } from "../index.js";
 
 const DefaultElement = "div";
 

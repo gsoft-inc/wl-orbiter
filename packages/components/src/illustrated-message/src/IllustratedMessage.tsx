@@ -1,9 +1,9 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef, useMemo } from "react";
-import { Flex } from "../../layout";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, useSlots } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Text } from "../../typography";
+import { Flex } from "../../layout/index.js";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, useSlots } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { Text } from "../../typography/index.js";
 
 const DefaultElement = "div";
 

@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { Grid, Inline, Stack, fitContent, minmax, repeat } from "@components/layout";
+import { Div } from "@components/html/index.js";
+import { Grid, Inline, Stack, fitContent, minmax, repeat } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 const viewports = [640, 768, 1024, 1280, 1440];

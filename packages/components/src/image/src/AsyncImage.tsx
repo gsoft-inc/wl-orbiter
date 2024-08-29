@@ -1,7 +1,7 @@
-import { AbstractImageProps, Image as OrbiterImage } from "./Image";
+import { AbstractImageProps, Image as OrbiterImage } from "./Image.js";
 import { ComponentProps, ReactElement, ReactNode, forwardRef, useEffect, useState } from "react";
-import { OmitInternalProps, isNil, mergeProps, slot, useRefState } from "../../shared";
-import { useResponsiveValue } from "../../styling";
+import { OmitInternalProps, isNil, mergeProps, slot, useRefState } from "../../shared/index.js";
+import { useResponsiveValue } from "../../styling/index.js";
 
 const DefaultElement = "img";
 

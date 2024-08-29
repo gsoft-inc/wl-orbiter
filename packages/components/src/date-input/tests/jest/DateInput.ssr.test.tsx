@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { DateInput } from "@components/date-input";
+import { DateInput } from "@components/date-input/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

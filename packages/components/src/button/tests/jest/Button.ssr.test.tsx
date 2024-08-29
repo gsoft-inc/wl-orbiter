@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Button } from "@components/button";
+import { Button } from "@components/button/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

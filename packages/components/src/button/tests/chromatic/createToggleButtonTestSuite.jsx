@@ -1,7 +1,7 @@
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
 import { LightbulbIcon } from "@hopper-ui/icons";
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.js";
 import { cloneElement } from "react";
 
 function ToggleButton({ element, ...rest }) {

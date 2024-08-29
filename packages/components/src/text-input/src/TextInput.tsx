@@ -1,11 +1,11 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner, useInputButton, useInputHasFocus } from "../../input";
-import { Box, BoxProps } from "../../box";
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner, useInputButton, useInputHasFocus } from "../../input/index.js";
+import { Box, BoxProps } from "../../box/index.js";
 import { ChangeEvent, ComponentProps, ElementType, ReactElement, forwardRef } from "react";
-import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group";
-import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, omitProps, useChainedEventCallback, useControllableState } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { useFieldInputProps } from "../../field";
-import { useToolbarProps } from "../../toolbar";
+import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group/index.js";
+import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, omitProps, useChainedEventCallback, useControllableState } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { useFieldInputProps } from "../../field/index.js";
+import { useToolbarProps } from "../../toolbar/index.js";
 
 export type AbstractTextInputProps<T extends ElementType> = AbstractInputProps<T> & {
     /**

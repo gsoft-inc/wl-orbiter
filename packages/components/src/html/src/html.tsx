@@ -1,7 +1,7 @@
 import { ComponentProps, ElementType } from "react";
 
-import { htmlElement } from "./htmlElement";
-import { isNil } from "../../shared";
+import { htmlElement } from "./htmlElement.js";
+import { isNil } from "../../shared/index.js";
 
 // Sectioning & Content sectioning
 
@@ -304,7 +304,7 @@ export const HtmlElementType: Record<any, ElementType> = {
     "ul": UL
 };
 
-export function getHtmlElementType(as: ElementType) {
+export function getHtmlElementType(as: any): any {
     const elementType = HtmlElementType[as as any];
 
     if (!isNil(elementType)) {

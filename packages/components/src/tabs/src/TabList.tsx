@@ -1,5 +1,5 @@
 import { ComponentProps, ForwardedRef, KeyboardEvent, RefObject, SyntheticEvent, forwardRef, useCallback, useState } from "react";
-import { Div, HtmlButton } from "../../html";
+import { Div, HtmlButton } from "../../html/index.js";
 import {
     FocusScopeContext,
     InternalProps,
@@ -18,14 +18,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { Overlay, OverlayProps, useOverlayPosition, useOverlayTrigger, usePopupAriaProps, usePopupLightDismiss } from "../../overlay";
-import { Tab, TabKeyProp } from "./Tab";
+} from "../../shared/index.js";
+import { Overlay, OverlayProps, useOverlayPosition, useOverlayTrigger, usePopupAriaProps, usePopupLightDismiss } from "../../overlay/index.js";
+import { Tab, TabKeyProp } from "./Tab.js";
 
-import { Box } from "../../box";
-import { TabType } from "./useTabsItems";
-import { useCollapsibleTabs } from "./useCollapsibleTabs";
-import { useTabsContext } from "./TabsContext";
+import { Box } from "../../box/index.js";
+import { TabType } from "./useTabsItems.js";
+import { useCollapsibleTabs } from "./useCollapsibleTabs.js";
+import { useTabsContext } from "./TabsContext.js";
 
 const TabGap = 8;
 const PopoverTriggerWidth = 48;
@@ -171,7 +171,7 @@ ref) => {
 const DefaultElement = "div";
 
 export interface InnerTabListProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     forwardedRef: ForwardedRef<any>;
     tabs?: TabType[];
 }

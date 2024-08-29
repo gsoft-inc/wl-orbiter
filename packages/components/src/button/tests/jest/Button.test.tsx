@@ -1,5 +1,5 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
+import { Button } from "@components/button/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -29,7 +29,7 @@ test("when autofocus is true and the button is disabled, the button is not focus
 test("when autofocus is specified with a delay, the button is focused after the delay", async () => {
     renderWithTheme(
         <Button
-            autoFocus={10}
+            autoFocus
             variant="secondary"
             data-testid="button"
         >Cutoff</Button>
@@ -41,7 +41,7 @@ test("when autofocus is specified with a delay, the button is focused after the 
 });
 
 test("when loading is true, the button should prevent onClick", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Button
@@ -138,7 +138,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Button variant="secondary" ref={handler}>Cutoff</Button>

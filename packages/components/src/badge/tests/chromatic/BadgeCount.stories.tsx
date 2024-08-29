@@ -1,8 +1,8 @@
-import { Badge } from "@components/badge";
-import { Div } from "@components/html";
-import { Inline } from "@components/layout";
-import { CircleBadge, IconBadge, SquareBadge } from "./BadgeUtils";
-import { Text } from "@components/typography";
+import { Badge } from "@components/badge/index.js";
+import { Div } from "@components/html/index.js";
+import { Inline } from "@components/layout/index.js";
+import { CircleBadge, IconBadge, SquareBadge } from "./BadgeUtils.js";
+import { Text } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

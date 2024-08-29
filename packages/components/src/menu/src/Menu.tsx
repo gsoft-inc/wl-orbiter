@@ -1,4 +1,4 @@
-import { CollectionDivider, CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useScrollableCollection } from "../../collection";
+import { CollectionDivider, CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useScrollableCollection } from "../../collection/index.js";
 import { ComponentProps, KeyboardEvent, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     InternalProps,
@@ -21,14 +21,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
 
-import { Box } from "../../box";
-import { MenuContext } from "./MenuContext";
-import { MenuItem } from "./MenuItem";
-import { MenuSection } from "./MenuSection";
-import { ValidationState } from "../../input";
+import { Box } from "../../box/index.js";
+import { MenuContext } from "./MenuContext.js";
+import { MenuItem } from "./MenuItem.js";
+import { MenuSection } from "./MenuSection.js";
+import { ValidationState } from "../../input/index.js";
 
 export type MenuSelectionMode = "none" | "single" | "multiple";
 
@@ -40,7 +40,7 @@ export interface InnerMenuProps extends InternalProps, StyledComponentProps<type
     /**
      * Whether or not the menu should autofocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * Default focus target when enabling autofocus.
      */

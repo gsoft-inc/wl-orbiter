@@ -1,3 +1,3 @@
-export * from "./Dialog";
-export * from "./DialogTrigger";
-export * from "./DialogTriggerContext";
+export * from "./Dialog.js";
+export * from "./DialogTrigger.js";
+export * from "./DialogTriggerContext.js";

@@ -1,13 +1,13 @@
-import { IconList } from "@components/icons";
+import { IconList } from "@components/icons/index.js";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Dot } from "@components/dot";
-import { Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Counter } from "@components/counter/index.js";
+import { Div } from "@components/html/index.js";
+import { Dot } from "@components/dot/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Text } from "@components/typography/index.js";
 import { cloneElement } from "react";
-import { Avatar } from "@components/avatar";
-import { Field, Label } from "@components/field";
+import { Avatar } from "@components/avatar/index.js";
+import { Field, Label } from "@components/field/index.js";
 
 function Tag({ element, ...rest }) {
     return cloneElement(element, rest);

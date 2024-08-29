@@ -1,2 +1,2 @@
-export * from "./GithubLink";
-export * from "./getGithubUrl";
+export * from "./GithubLink.js";
+export * from "./getGithubUrl.js";

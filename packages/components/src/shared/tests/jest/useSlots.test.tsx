@@ -1,7 +1,7 @@
-import { Div, DivProps } from "@components/html";
+import { Div, DivProps } from "@components/html/index.js";
 import { ErrorBoundary, muteConsoleErrors, render, screen, waitFor } from "@test-utils";
 import { ReactNode, createRef, forwardRef } from "react";
-import { slot, useSlots } from "@components/shared";
+import { slot, useSlots } from "@components/shared/index.js";
 
 // Errors in useEffect are not catch by @test-utils-hooks error handling code. Therefore we must catch those errors with a custom ErrorBoundary.
 function withErrorBoundary(onError: (error: Error) => void) {

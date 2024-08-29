@@ -1,7 +1,7 @@
-import { Box } from "../../box";
-import { ButtonVariant, useButton } from "./useButton";
+import { Box } from "../../box/index.js";
+import { ButtonVariant, useButton } from "./useButton.js";
 import { Children, ComponentProps, ElementType, ReactElement, ReactNode, forwardRef } from "react";
-import { Spinner } from "../../spinner";
+import { Spinner } from "../../spinner/index.js";
 
 import {
     InteractionProps,
@@ -16,10 +16,10 @@ import {
     mergeProps,
     omitProps,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { useInputGroupButtonAddonProps } from "../../input-group";
-import { useToolbarProps } from "../../toolbar";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { useInputGroupButtonAddonProps } from "../../input-group/index.js";
+import { useToolbarProps } from "../../toolbar/index.js";
 
 export type AbstractIconButtonProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "autoFocus"> & {
     /**
@@ -29,7 +29,7 @@ export type AbstractIconButtonProps<T extends ElementType> = InternalProps & Int
     /**
      * Whether or not the button should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * Whether or not the button take up the width of its container.
      */

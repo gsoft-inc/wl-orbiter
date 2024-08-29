@@ -1,6 +1,6 @@
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading } from "@components/typography";
+import { Content } from "@components/placeholders/index.js";
+import { Div } from "@components/html/index.js";
+import { Heading } from "@components/typography/index.js";
 import { cloneElement } from "react";
 
 function Alert({ element, ...rest }) {

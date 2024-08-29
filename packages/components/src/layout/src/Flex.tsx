@@ -12,12 +12,12 @@ import {
     ResponsiveProp,
     RowGapProp,
     useResponsiveValue
-} from "../../styling";
-import { Box } from "../../box";
+} from "../../styling/index.js";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isNil, mergeProps, omitProps } from "../../shared";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isNil, mergeProps, omitProps } from "../../shared/index.js";
 import { Property } from "csstype";
-import { useFormContext } from "../../form";
+import { useFormContext } from "../../form/index.js";
 
 export type FlexOrientation = "horizontal" | "vertical";
 export type FlexAlignment = "start" | "end" | "center";

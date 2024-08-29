@@ -1,14 +1,16 @@
-import { DateInput } from "@components/date-input";
-import { createDateInputTestSuite } from "./createDateInputTestSuite";
+import { DateInput } from "@components/date-input/index.js";
+import { createDateInputTestSuite } from "./createDateInputTestSuite.js";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 import { subMonths, subWeeks } from "date-fns";
 
 function stories(segment) {
     return storiesOfBuilder(module, "Chromatic/DateInput")
         .segment(segment)
-        .parameters(paramsBuilder()
-            .chromaticDelay(100)
-            .build())
+        .parameters(
+            paramsBuilder()
+                .chromaticDelay(100)
+                .build(),
+        )
         .build();
 }
 
@@ -24,7 +26,7 @@ createDateInputTestSuite(
         ]}
         presetsVariant="compact"
     />,
-    stories("/compact presets")
+    stories("/compact presets"),
 );
 
 createDateInputTestSuite(
@@ -37,5 +39,5 @@ createDateInputTestSuite(
         ]}
         presetsVariant="expanded"
     />,
-    stories("/expanded presets")
+    stories("/expanded presets"),
 );

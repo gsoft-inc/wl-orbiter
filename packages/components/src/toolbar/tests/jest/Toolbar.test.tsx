@@ -1,6 +1,6 @@
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { Toolbar } from "@components/toolbar";
+import { Button } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
+import { Toolbar } from "@components/toolbar/index.js";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -65,7 +65,7 @@ test("when autofocus is true and the first focusable element is disabled, the ne
 
 test("when autofocus is specified with a delay, the first focusable element is focused after the delay", async () => {
     renderWithTheme(
-        <Toolbar autoFocus={10}>
+        <Toolbar autoFocus>
             <Button data-testid="element-1">1</Button>
             <Button>2</Button>
         </Toolbar>
@@ -122,7 +122,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Toolbar ref={handler}>

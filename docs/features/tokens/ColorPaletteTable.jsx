@@ -1,6 +1,6 @@
 import { arrayOf, shape, string } from "prop-types";
 
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.js";
 import { Table } from "@stories/components";
 
 const propTypes = {

@@ -1,8 +1,8 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, cloneElement, forwardRef, useMemo } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, isString, mergeProps, normalizeSize, slot, useSlots } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Text } from "../../typography";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, isNil, isString, mergeProps, normalizeSize, slot, useSlots } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { Text } from "../../typography/index.js";
 
 const DefaultElement = "section";
 

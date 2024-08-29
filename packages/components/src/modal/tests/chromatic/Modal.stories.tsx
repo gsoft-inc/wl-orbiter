@@ -1,13 +1,13 @@
-import { Apollo11Poster, BlueOrigin, Nasa, SpaceX } from "./assets";
-import { Heading, Paragraph } from "@components/typography";
+import { Apollo11Poster, BlueOrigin, Nasa, SpaceX } from "./assets/index.js";
+import { Heading, Paragraph } from "@components/typography/index.js";
 
-import { Button } from "@components/button";
-import { Card } from "@components/card";
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Modal } from "@components/modal";
+import { Button } from "@components/button/index.js";
+import { Card } from "@components/card/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Div } from "@components/html/index.js";
+import { Illustration } from "@components/illustration/index.js";
+import { Image } from "@components/image/index.js";
+import { Modal } from "@components/modal/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

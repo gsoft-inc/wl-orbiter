@@ -1,5 +1,5 @@
-import { Keys } from "@components/shared";
-import { SearchInput } from "@components/text-input";
+import { Keys } from "@components/shared/index.js";
+import { SearchInput } from "@components/text-input/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
@@ -79,7 +79,7 @@ test("can focus the input with the focus api", async () => {
 });
 
 test("call onChange when the value change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <SearchInput onChange={handler} aria-label="Label" data-testid="input" />
@@ -92,7 +92,7 @@ test("call onChange when the value change", async () => {
 });
 
 test("call onValueChange when the value change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <SearchInput onValueChange={handler} aria-label="Label" data-testid="input" />
@@ -109,7 +109,7 @@ test("call onValueChange when the value change", async () => {
 });
 
 test("call onValueChange when the value is cleared", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <SearchInput onValueChange={handler} aria-label="Label" data-testid="input" />
@@ -161,7 +161,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <SearchInput ref={handler} aria-label="Label" />

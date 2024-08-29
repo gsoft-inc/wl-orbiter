@@ -1,10 +1,10 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Select } from "@components/select";
-import { Transition } from "@components/transition";
+import { Button } from "@components/button/index.js";
+import { Item } from "@components/collection/index.js";
+import { Keys } from "@components/shared/index.js";
+import { Select } from "@components/select/index.js";
+import { Transition } from "@components/transition/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -373,7 +373,7 @@ test("when no aria-label and no aria-labelledby are provided, set the trigger id
 // ***** Api *****
 
 test("call onOpenChange when the select open", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Select
@@ -393,7 +393,7 @@ test("call onOpenChange when the select open", async () => {
 });
 
 test("call onOpenChange when the select close", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Select
@@ -421,7 +421,7 @@ test("call onOpenChange when the select close", async () => {
 });
 
 test("call onSelectionChange when an option is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Select
@@ -484,7 +484,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Select ref={handler}>

@@ -1,4 +1,4 @@
-import { Inline } from "@components/layout";
+import { Inline } from "@components/layout/index.js";
 import { cloneElement } from "react";
 
 function Link({ element, ...rest }) {

@@ -1,11 +1,11 @@
-import { Popover, PopoverProps, PopoverTrigger, usePopoverTriggerContext } from "@components/popover";
+import { Popover, PopoverProps, PopoverTrigger, usePopoverTriggerContext } from "@components/popover/index.js";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef, forwardRef } from "react";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Keys } from "@components/shared";
-import { Transition } from "@components/transition";
+import { Button } from "@components/button/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Keys } from "@components/shared/index.js";
+import { Transition } from "@components/transition/index.js";
 import userEvent from "@testing-library/user-event";
 
 beforeAll(() => {
@@ -191,7 +191,7 @@ test("a popover trigger have an aria-haspopup attribute", async () => {
 // ***** Api *****
 
 test("call onOpenChange when the popover appears", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <PopoverTrigger onOpenChange={handler}>
@@ -211,7 +211,7 @@ test("call onOpenChange when the popover appears", async () => {
 });
 
 test("call onOpenChange on esc keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <PopoverTrigger onOpenChange={handler} defaultOpen>
@@ -232,7 +232,7 @@ test("call onOpenChange on esc keypress", async () => {
 });
 
 test("call onOpenChange on outside click", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <PopoverTrigger onOpenChange={handler} defaultOpen>
@@ -301,7 +301,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <PopoverTrigger ref={handler}>

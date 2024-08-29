@@ -1,3 +1,3 @@
-export * from "./Modal";
-export * from "./ModalTrigger";
-export * from "./useModalTriggerContext";
+export * from "./Modal.js";
+export * from "./ModalTrigger.js";
+export * from "./useModalTriggerContext.js";

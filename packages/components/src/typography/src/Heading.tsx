@@ -1,7 +1,7 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ElementType, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, mergeProps, normalizeSize, slot } from "../../shared";
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, mergeProps, normalizeSize, slot } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.js";
 
 export type AbstractHeadingProps<T extends ElementType> = SlotProps & InternalProps & StyledComponentProps<T> & {
     /**

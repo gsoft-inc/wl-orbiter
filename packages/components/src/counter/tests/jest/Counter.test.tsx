@@ -1,4 +1,4 @@
-import { Counter } from "@components/counter";
+import { Counter } from "@components/counter/index.js";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -35,7 +35,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Counter ref={handler}>15</Counter>

@@ -16,11 +16,11 @@ import {
     useId,
     useMergedRefs,
     useSlots
-} from "../../shared";
-import { useOverlayFocusRing, useTrapFocus } from "../../overlay";
+} from "../../shared/index.js";
+import { useOverlayFocusRing, useTrapFocus } from "../../overlay/index.js";
 
-import { Box } from "../../box";
-import { Text } from "../../typography";
+import { Box } from "../../box/index.js";
+import { Text } from "../../typography/index.js";
 
 const DefaultElement = "section";
 

@@ -1,11 +1,11 @@
-import { Apollo11Banner, Apollo11Poster, Nasa } from "./assets";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Tile } from "@components/tile";
-import { createTileTestSuite } from "./createTileTestSuite";
+import { Apollo11Banner, Apollo11Poster, Nasa } from "./assets/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Illustration } from "@components/illustration/index.js";
+import { Image } from "@components/image/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Tile } from "@components/tile/index.js";
+import { createTileTestSuite } from "./createTileTestSuite.js";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
@@ -14,12 +14,18 @@ function stories(segment) {
         .build();
 }
 
-createTileTestSuite(<Tile orientation="horizontal" width="600px" />, stories("/horizontal"));
+createTileTestSuite(
+    <Tile orientation="horizontal" width="600px" />,
+    stories("/horizontal"),
+);
 
-createTileTestSuite(<Tile orientation="vertical" width="300px" />, stories("/vertical"));
+createTileTestSuite(
+    <Tile orientation="vertical" width="300px" />,
+    stories("/vertical"),
+);
 
 stories()
-    .add("images", () =>
+    .add("images", () => (
         <Inline>
             <Stack>
                 <Tile width="300px" orientation="vertical">
@@ -34,8 +40,8 @@ stories()
                 </Tile>
             </Stack>
         </Inline>
-    )
-    .add("flex layout", () =>
+    ))
+    .add("flex layout", () => (
         <Stack>
             <Inline>
                 <Tile width="500px" orientation="vertical">
@@ -70,4 +76,4 @@ stories()
                 </Tile>
             </Inline>
         </Stack>
-    );
+    ));

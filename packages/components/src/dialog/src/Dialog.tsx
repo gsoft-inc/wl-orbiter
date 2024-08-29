@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.js";
 import { ComponentProps, ElementType, MouseEvent, ReactNode, SyntheticEvent, cloneElement, forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
     FocusScopeContext,
@@ -22,14 +22,14 @@ import {
     useRefState,
     useResizeObserver,
     useSlots
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Underlay, isElementInViewport, useOverlayFocusRing, useOverlayLightDismiss, useRestoreFocus, useTrapFocus } from "../../overlay";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { Underlay, isElementInViewport, useOverlayFocusRing, useOverlayLightDismiss, useRestoreFocus, useTrapFocus } from "../../overlay/index.js";
 
-import { CrossButton } from "../../button";
-import { Div } from "../../html";
-import { Text } from "../../typography";
-import { useDialogTriggerContext } from "./DialogTriggerContext";
+import { CrossButton } from "../../button/index.js";
+import { Div } from "../../html/index.js";
+import { Text } from "../../typography/index.js";
+import { useDialogTriggerContext } from "./DialogTriggerContext.js";
 
 export type AbstractDialogProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "role" | "zIndex"> & {
     /**

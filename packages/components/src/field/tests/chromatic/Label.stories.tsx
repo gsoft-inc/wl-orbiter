@@ -1,7 +1,7 @@
-import { Inline } from "@components/layout";
-import { Label } from "@components/field";
-import { Span } from "@components/html";
-import { TextLink } from "@components/link";
+import { Inline } from "@components/layout/index.js";
+import { Label } from "@components/field/index.js";
+import { Span } from "@components/html/index.js";
+import { TextLink } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

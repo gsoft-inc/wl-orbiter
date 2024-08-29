@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Counter } from "@components/counter";
+import { Counter } from "@components/counter/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

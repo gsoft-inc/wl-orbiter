@@ -1,5 +1,5 @@
-import { Paragraph } from "@components/typography";
-import { TextLink } from "@components/link";
+import { Paragraph } from "@components/typography/index.js";
+import { TextLink } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

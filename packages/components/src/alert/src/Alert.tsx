@@ -1,7 +1,7 @@
-import { AbstractDialogProps, Dialog, useDialogTriggerContext } from "../../dialog";
-import { Button, ButtonGroup } from "../../button";
+import { AbstractDialogProps, Dialog, useDialogTriggerContext } from "../../dialog/index.js";
+import { Button, ButtonGroup } from "../../button/index.js";
 import { ComponentProps, MouseEvent, forwardRef, useMemo } from "react";
-import { OmitInternalProps, isNil, isNilOrEmpty, mergeProps, useChainedEventCallback, useSlots } from "../../shared";
+import { OmitInternalProps, isNil, isNilOrEmpty, mergeProps, useChainedEventCallback, useSlots } from "../../shared/index.js";
 
 const DefaultElement = "section";
 

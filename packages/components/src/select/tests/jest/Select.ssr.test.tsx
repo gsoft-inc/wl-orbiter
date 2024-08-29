@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Item } from "@components/collection";
-import { Select } from "@components/select";
+import { Item } from "@components/collection/index.js";
+import { Select } from "@components/select/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

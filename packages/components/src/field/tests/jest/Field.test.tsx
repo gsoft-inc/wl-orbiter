@@ -1,5 +1,5 @@
-import { Field, HelpMessage, Label } from "@components/field";
-import { TextInput } from "@components/text-input";
+import { Field, HelpMessage, Label } from "@components/field/index.js";
+import { TextInput } from "@components/text-input/index.js";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -178,7 +178,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Field ref={handler}>

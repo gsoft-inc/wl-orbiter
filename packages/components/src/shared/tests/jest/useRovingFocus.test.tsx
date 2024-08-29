@@ -1,8 +1,8 @@
-import { Button } from "@components/button";
-import { Div } from "@components/html";
+import { Button } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
 import { ReactNode } from "react";
 import { render, screen, waitFor } from "@test-utils";
-import { useFocusScope, useRovingFocus } from "@components/shared";
+import { useFocusScope, useRovingFocus } from "@components/shared/index.js";
 import userEvent from "@testing-library/user-event";
 
 function RovingFocus({ children }: { children?: ReactNode }) {

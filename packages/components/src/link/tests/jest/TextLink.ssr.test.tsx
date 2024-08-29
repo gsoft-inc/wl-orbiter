@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { TextLink } from "@components/link";
+import { TextLink } from "@components/link/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

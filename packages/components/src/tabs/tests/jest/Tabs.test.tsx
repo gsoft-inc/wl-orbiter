@@ -1,9 +1,9 @@
-import { Content, Header } from "@components/placeholders";
+import { Content, Header } from "@components/placeholders/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Tabs } from "@components/tabs";
+import { Item } from "@components/collection/index.js";
+import { Keys } from "@components/shared/index.js";
+import { Tabs } from "@components/tabs/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -458,7 +458,7 @@ test("a tab header have the \"tab\" role", async () => {
 // ***** Api *****
 
 test("call onSelectionChange when the active tab change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tabs onSelectionChange={handler} aria-label="Tabs" collapsible={false}>
@@ -480,7 +480,7 @@ test("call onSelectionChange when the active tab change", async () => {
 });
 
 test("call onSelectionChange once when a tab is clicked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tabs onSelectionChange={handler} aria-label="Tabs" collapsible={false}>
@@ -501,7 +501,7 @@ test("call onSelectionChange once when a tab is clicked", async () => {
 });
 
 test("dont' call onSelectionChange when the active tab is clicked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tabs onSelectionChange={handler} aria-label="Tabs" collapsible={false}>
@@ -526,7 +526,7 @@ test("dont' call onSelectionChange when the active tab is clicked", async () => 
 });
 
 test("dont call onSelectionChange when a tab is disabled", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Tabs onSelectionChange={handler} aria-label="Tabs" collapsible={false}>

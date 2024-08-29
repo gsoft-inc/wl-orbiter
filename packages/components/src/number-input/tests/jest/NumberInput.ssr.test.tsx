@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { NumberInput } from "@components/number-input";
+import { NumberInput } from "@components/number-input/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

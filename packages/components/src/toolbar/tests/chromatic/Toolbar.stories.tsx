@@ -1,15 +1,15 @@
-import { Field, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-import { ToggleButton, ToggleIconButton } from "@components/button";
+import { Field, Label } from "@components/field/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Radio, RadioGroup } from "@components/radio/index.js";
+import { ToggleButton, ToggleIconButton } from "@components/button/index.js";
 
-import { CheckboxGroup } from "@components/checkbox";
-import { Div } from "@components/html";
-import { InputGroup } from "@components/input-group";
+import { CheckboxGroup } from "@components/checkbox/index.js";
+import { Div } from "@components/html/index.js";
+import { InputGroup } from "@components/input-group/index.js";
 import { NotificationIcon } from "@hopper-ui/icons";
-import { Text } from "@components/typography";
-import { TextInput } from "@components/text-input";
-import { Toolbar } from "@components/toolbar";
+import { Text } from "@components/typography/index.js";
+import { TextInput } from "@components/text-input/index.js";
+import { Toolbar } from "@components/toolbar/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

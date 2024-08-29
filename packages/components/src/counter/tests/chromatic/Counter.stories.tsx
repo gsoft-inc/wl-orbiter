@@ -1,7 +1,7 @@
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Counter } from "@components/counter/index.js";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Text } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

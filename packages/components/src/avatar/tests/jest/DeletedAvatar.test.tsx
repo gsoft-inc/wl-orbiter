@@ -1,4 +1,4 @@
-import { DeletedAvatar } from "@components/avatar";
+import { DeletedAvatar } from "@components/avatar/index.js";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -47,7 +47,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DeletedAvatar aria-label="Elon Musk" ref={handler} />

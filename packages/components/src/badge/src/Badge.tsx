@@ -1,8 +1,8 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.js";
 import { Children, ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared/index.js";
 
-import { StyleProvider } from "../../styling";
+import { StyleProvider } from "../../styling/index.js";
 
 const DefaultElement = "div";
 

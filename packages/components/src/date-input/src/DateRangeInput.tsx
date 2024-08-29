@@ -1,6 +1,6 @@
-import { AbstractInputProps } from "../../input";
-import { Box } from "../../box";
-import { ButtonPresets } from "./ButtonPresets";
+import { AbstractInputProps } from "../../input/index.js";
+import { Box } from "../../box/index.js";
+import { ButtonPresets } from "./ButtonPresets.js";
 import {
     ChangeEvent,
     ComponentProps,
@@ -14,11 +14,11 @@ import {
     useRef,
     useState
 } from "react";
-import { ClearInputGroupContext, InputGroup, useInputGroupProps } from "../../input-group";
-import { CrossButton } from "../../button";
-import { DateInputMask, useDateInput } from "./useDateInput";
-import { Divider } from "../../divider";
-import { HtmlInput } from "../../html";
+import { ClearInputGroupContext, InputGroup, useInputGroupProps } from "../../input-group/index.js";
+import { CrossButton } from "../../button/index.js";
+import { DateInputMask, useDateInput } from "./useDateInput.js";
+import { Divider } from "../../divider/index.js";
+import { HtmlInput } from "../../html/index.js";
 import {
     Keys,
     OmitInternalProps,
@@ -35,12 +35,12 @@ import {
     useEventCallback,
     useFocusWithin,
     useMergedRefs
-} from "../../shared";
-import { MenuPresets } from "./MenuPresets";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { areEqualDates, toMidnightDate } from "./dateUtils";
-import { useFieldInputProps } from "../../field";
-import { useToolbarProps } from "../../toolbar";
+} from "../../shared/index.js";
+import { MenuPresets } from "./MenuPresets.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { areEqualDates, toMidnightDate } from "./dateUtils.js";
+import { useFieldInputProps } from "../../field/index.js";
+import { useToolbarProps } from "../../toolbar/index.js";
 
 export interface DateRangePreset {
     endDate: Date;

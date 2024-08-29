@@ -1,42 +1,47 @@
-import { Inline, Stack } from "@components/layout";
-import { Select, useSelect } from "@components/select";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Select, useSelect } from "@components/select/index.js";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { Item } from "@components/collection";
-import { Listbox } from "@components/listbox";
-import { Overlay } from "@components/overlay";
-import { createTestSuite } from "./createTestSuite";
+import { Button } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
+import { Item } from "@components/collection/index.js";
+import { Listbox } from "@components/listbox/index.js";
+import { Overlay } from "@components/overlay/index.js";
+import { createTestSuite } from "./createTestSuite.js";
 
 function stories(segment) {
     return storiesOfBuilder(module, "Chromatic/Select")
         .segment(segment)
-        .parameters(paramsBuilder()
-            .chromaticDelay(100)
-            .chromaticPauseAnimationAtEnd()
-            .build())
+        .parameters(
+            paramsBuilder()
+                .chromaticDelay(100)
+                .chromaticPauseAnimationAtEnd()
+                .build(),
+        )
         .build();
 }
 
 createTestSuite(<Select variant="outline" />, stories("/outline"))
-    .add("without placeholder", () =>
+    .add("without placeholder", () => (
         <Select aria-label="Planets">
             <Item key="earth">Earth</Item>
             <Item key="mars">Mars</Item>
             <Item key="saturn">Saturn</Item>
         </Select>
-    );
+    ));
 
 createTestSuite(<Select variant="ghost" />, stories("/ghost"));
 
 stories()
-    .add("conditional rendering", () =>
-        <Select defaultOpen placeholder="Select a planet" aria-label="Planets">
-            {false && <Item key="earth">Earth</Item>}
-            <Item key="mars">Mars</Item>
-            <Item key="saturn">Saturn</Item>
-        </Select>
+    .add(
+        "conditional rendering",
+        () => (
+            <Select defaultOpen placeholder="Select a planet" aria-label="Planets">
+                {false && <Item key="earth">Earth</Item>}
+                <Item key="mars">Mars</Item>
+                <Item key="saturn">Saturn</Item>
+            </Select>
+        ),
     )
     .add("custom select", () => {
         function CustomSelect({
@@ -46,10 +51,11 @@ stories()
             children,
             ...rest
         }) {
-            const { selectedItem, triggerProps, overlayProps, listboxProps } = useSelect(children, {
-                open,
-                ariaLabel
-            });
+            const { selectedItem, triggerProps, overlayProps, listboxProps } =
+        useSelect(children, {
+            open,
+            ariaLabel
+        });
 
             return (
                 <>
@@ -82,14 +88,17 @@ stories()
             </Inline>
         );
     })
-    .add("name", () =>
-        <Select name="planet" placeholder="Select a planet" aria-label="Planets">
-            <Item key="earth">Earth</Item>
-            <Item key="mars">Mars</Item>
-            <Item key="saturn">Saturn</Item>
-        </Select>
+    .add(
+        "name",
+        () => (
+            <Select name="planet" placeholder="Select a planet" aria-label="Planets">
+                <Item key="earth">Earth</Item>
+                <Item key="mars">Mars</Item>
+                <Item key="saturn">Saturn</Item>
+            </Select>
+        ),
     )
-    .add("zoom", () =>
+    .add("zoom", () => (
         <Stack>
             <Div className="zoom-in">
                 <Select placeholder="Select a planet" aria-label="Planets">
@@ -106,24 +115,35 @@ stories()
                 </Select>
             </Div>
         </Stack>
-    )
-    .add("styling", () =>
+    ))
+    .add("styling", () => (
         <Inline>
-            <Select border="warning" placeholder="Select a planet" aria-label="Planets">
+            <Select
+                border="warning"
+                placeholder="Select a planet"
+                aria-label="Planets"
+            >
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Select>
-            <Select className="border-red" placeholder="Select a planet" aria-label="Planets">
+            <Select
+                className="border-red"
+                placeholder="Select a planet"
+                aria-label="Planets"
+            >
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Select>
-            <Select style={{ border: "1px solid red" }} placeholder="Select a planet" aria-label="Planets">
+            <Select
+                style={{ border: "1px solid red" }}
+                placeholder="Select a planet"
+                aria-label="Planets"
+            >
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
             </Select>
         </Inline>
-    );
-
+    ));

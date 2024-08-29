@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Loader } from "@components/loader";
+import { Loader } from "@components/loader/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

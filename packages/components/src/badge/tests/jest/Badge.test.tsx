@@ -1,6 +1,6 @@
-import { Badge, BadgeProps } from "@components/badge";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Badge, BadgeProps } from "@components/badge/index.js";
+import { Div } from "@components/html/index.js";
+import { Text } from "@components/typography/index.js";
 import { forwardRef, createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -53,7 +53,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <SquareBadge ref={handler}>

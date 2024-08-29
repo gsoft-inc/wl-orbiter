@@ -1,13 +1,13 @@
-import { FocusScope, FocusScopeContext, isFunction, useFocusScope, useMergedRefs } from "@components/shared";
+import { FocusScope, FocusScopeContext, isFunction, useFocusScope, useMergedRefs } from "@components/shared/index.js";
 import { ReactNode, createRef, forwardRef } from "react";
 import { render, waitFor, renderWithTheme } from "@test-utils";
 
-import { Button } from "@components/button";
-import { Disclosure } from "@components/disclosure";
-import { Div } from "@components/html";
-import { Item } from "@components/collection";
-import { Select } from "@components/select";
-import { TextInput } from "@components/text-input";
+import { Button } from "@components/button/index.js";
+import { Disclosure } from "@components/disclosure/index.js";
+import { Div } from "@components/html/index.js";
+import { Item } from "@components/collection/index.js";
+import { Select } from "@components/select/index.js";
+import { TextInput } from "@components/text-input/index.js";
 
 interface FocusScopeProps {
     tabIndex?: number;
@@ -171,7 +171,7 @@ test("when the root element is focusable, the scope includes the root element", 
 test("when the hidden attribute of an element change, the scope is updated", async () => {
     let focusScope: FocusScope = null;
 
-    const onScopeChange = jest.fn();
+    const onScopeChange = vi.fn();
 
     const buttonRef = createRef<HTMLButtonElement>();
     const textInputRef = createRef<HTMLInputElement>();
@@ -210,7 +210,7 @@ test("when the hidden attribute of an element change, the scope is updated", asy
 test("when the aria-hidden attribute of an element change, the scope is updated", async () => {
     let focusScope: FocusScope = null;
 
-    const onScopeChange = jest.fn();
+    const onScopeChange = vi.fn();
 
     const buttonRef = createRef<HTMLButtonElement>();
     const textInputRef = createRef<HTMLInputElement>();
@@ -249,7 +249,7 @@ test("when the aria-hidden attribute of an element change, the scope is updated"
 test("when the display attribute of an element change, the scope is updated", async () => {
     let focusScope: FocusScope = null;
 
-    const onScopeChange = jest.fn();
+    const onScopeChange = vi.fn();
 
     const buttonRef = createRef<HTMLButtonElement>();
     const textInputRef = createRef<HTMLInputElement>();
@@ -288,7 +288,7 @@ test("when the display attribute of an element change, the scope is updated", as
 test("when the visibility attribute of an element change, the scope is updated", async () => {
     let focusScope: FocusScope = null;
 
-    const onScopeChange = jest.fn();
+    const onScopeChange = vi.fn();
 
     const buttonRef = createRef<HTMLButtonElement>();
     const textInputRef = createRef<HTMLInputElement>();
@@ -327,7 +327,7 @@ test("when the visibility attribute of an element change, the scope is updated",
 test("when the class attribute of an element change, the scope is updated", async () => {
     let focusScope: FocusScope = null;
 
-    const onScopeChange = jest.fn();
+    const onScopeChange = vi.fn();
 
     const buttonRef = createRef<HTMLButtonElement>();
     const textInputRef = createRef<HTMLInputElement>();

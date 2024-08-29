@@ -1,13 +1,13 @@
-import { AccordionHeader, useAccordionContext } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { H1, H3, Text } from "@components/typography";
+import { AccordionHeader, useAccordionContext } from "@components/accordion/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Counter } from "@components/counter/index.js";
+import { Div } from "@components/html/index.js";
+import { H1, H3, Text } from "@components/typography/index.js";
 import { InfoIcon } from "@hopper-ui/icons";
-import { Item } from "@components/collection";
-import { Stack } from "@components/layout";
+import { Item } from "@components/collection/index.js";
+import { Stack } from "@components/layout/index.js";
 import { cloneElement } from "react";
-import { mergeProps } from "@components/shared";
+import { mergeProps } from "@components/shared/index.js";
 
 function Accordion({ element, ...rest }) {
     return cloneElement(element, rest);

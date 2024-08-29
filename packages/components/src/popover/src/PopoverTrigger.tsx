@@ -7,11 +7,11 @@ import {
     isNil,
     mergeProps,
     resolveChildren
-} from "../../shared";
-import { Overlay, OverlayArrow, PopupPositionProp, PopupProps, usePopup } from "../../overlay";
-import { useResponsiveValue } from "../../styling";
+} from "../../shared/index.js";
+import { Overlay, OverlayArrow, PopupPositionProp, PopupProps, usePopup } from "../../overlay/index.js";
+import { useResponsiveValue } from "../../styling/index.js";
 
-import { PopoverTriggerContext } from "./PopoverTriggerContext";
+import { PopoverTriggerContext } from "./PopoverTriggerContext.js";
 
 const DefaultElement = "div";
 

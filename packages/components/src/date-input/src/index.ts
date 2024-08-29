@@ -1,2 +1,2 @@
-export * from "./DateInput";
-export * from "./DateRangeInput";
+export * from "./DateInput.js";
+export * from "./DateRangeInput.js";

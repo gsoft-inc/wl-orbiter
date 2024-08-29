@@ -1,5 +1,5 @@
 import { screen, waitFor, renderWithTheme } from "@test-utils";
-import { ToggleButton } from "@components/button";
+import { ToggleButton } from "@components/button/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -29,7 +29,7 @@ test("when autofocus is true and the button is disabled, the button is not focus
 test("when autofocus is specified with a delay, the button is focused after the delay", async () => {
     renderWithTheme(
         <ToggleButton
-            autoFocus={10}
+            autoFocus
             variant="secondary"
             data-testid="button"
         >Cutoff</ToggleButton>
@@ -43,7 +43,7 @@ test("when autofocus is specified with a delay, the button is focused after the 
 // ***** Api *****
 
 test("call onChange when the button is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <ToggleButton
@@ -63,7 +63,7 @@ test("call onChange when the button is selected", async () => {
 });
 
 test("call onChange when the button is unselected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <ToggleButton
@@ -119,7 +119,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <ToggleButton variant="secondary" ref={handler} value="any">Cutoff</ToggleButton>

@@ -1,4 +1,4 @@
-import { parseResponsiveValue } from "@components/styling";
+import { parseResponsiveValue } from "@components/styling/index.js";
 
 test("when the value is a string, return the string value", () => {
     const result = parseResponsiveValue("10px", ["lg"]);

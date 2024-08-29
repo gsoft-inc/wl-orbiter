@@ -1,6 +1,6 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Switch } from "@components/switch";
+import { Switch } from "@components/switch/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -28,7 +28,7 @@ test("when autofocus is true and the switch is disabled, do not focus the switch
 
 test("when autofocus is specified with a delay, the switch is focused after the delay", async () => {
     renderWithTheme(
-        <Switch autoFocus={10} data-testid="switch">Engines</Switch>
+        <Switch autoFocus data-testid="switch">Engines</Switch>
     );
 
     expect(getInput(screen.getByTestId("switch"))).not.toHaveFocus();
@@ -49,7 +49,7 @@ test("a switch role is \"switch\"", async () => {
 // ***** Api *****
 
 test("call onChange, when the switch is checked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Switch onChange={handler} data-testid="switch">Milky Way</Switch>
@@ -62,7 +62,7 @@ test("call onChange, when the switch is checked", async () => {
 });
 
 test("call onChange when the switch is unchecked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Switch onChange={handler} data-testid="switch">Milky Way</Switch>
@@ -77,7 +77,7 @@ test("call onChange when the switch is unchecked", async () => {
 });
 
 test("call onValueChange when the switch is turned on", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Switch onValueChange={handler} data-testid="switch">Engines</Switch>
@@ -90,7 +90,7 @@ test("call onValueChange when the switch is turned on", async () => {
 });
 
 test("call onValueChange when the switch is turned off", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Switch onValueChange={handler} data-testid="switch">Engines</Switch>
@@ -105,7 +105,7 @@ test("call onValueChange when the switch is turned off", async () => {
 });
 
 test("dont call onValueChange when the switch is disabled", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Switch disabled onValueChange={handler} data-testid="switch">Engines</Switch>
@@ -167,7 +167,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Switch ref={handler}>Engines</Switch>

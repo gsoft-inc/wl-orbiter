@@ -1,15 +1,15 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Content, Header } from "@components/placeholders";
-import { Div, LI, UL } from "@components/html";
-import { Heading, Paragraph } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Item } from "@components/collection";
-import { Nasa } from "./assets";
-import { Switch } from "@components/switch";
-import { Tabs } from "@components/tabs";
-import { TextLink } from "@components/link";
+import { Button, ButtonGroup } from "@components/button/index.js";
+import { Content, Header } from "@components/placeholders/index.js";
+import { Div, LI, UL } from "@components/html/index.js";
+import { Heading, Paragraph } from "@components/typography/index.js";
+import { Illustration } from "@components/illustration/index.js";
+import { Image } from "@components/image/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Item } from "@components/collection/index.js";
+import { Nasa } from "./assets/index.js";
+import { Switch } from "@components/switch/index.js";
+import { Tabs } from "@components/tabs/index.js";
+import { TextLink } from "@components/link/index.js";
 import { cloneElement } from "react";
 
 function Card({ element, ...rest }) {
@@ -18,7 +18,7 @@ function Card({ element, ...rest }) {
 
 export function createTestSuite(element, stories) {
     return stories
-        .add("default", () =>
+        .add("default", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -49,8 +49,8 @@ export function createTestSuite(element, stories) {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Stack>
-        )
-        .add("variant", () =>
+        ))
+        .add("variant", () => (
             <Stack>
                 <Inline>
                     <Card variant="elevated" size="xs" element={element}>
@@ -81,8 +81,8 @@ export function createTestSuite(element, stories) {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Stack>
-        )
-        .add("illustration 1", () =>
+        ))
+        .add("illustration 1", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -121,8 +121,8 @@ export function createTestSuite(element, stories) {
                     </Card>
                 </Inline>
             </Stack>
-        )
-        .add("illustration 2", () =>
+        ))
+        .add("illustration 2", () => (
             <Stack>
                 <Card fluid element={element}>
                     <Illustration color="sunken-treasure-100" width="200px">
@@ -139,8 +139,8 @@ export function createTestSuite(element, stories) {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Stack>
-        )
-        .add("text header", () =>
+        ))
+        .add("text header", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -177,8 +177,8 @@ export function createTestSuite(element, stories) {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Stack>
-        )
-        .add("component alignment header", () =>
+        ))
+        .add("component alignment header", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -227,7 +227,7 @@ export function createTestSuite(element, stories) {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Stack>
-        ).add("link header", () =>
+        )).add("link header", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -276,15 +276,17 @@ export function createTestSuite(element, stories) {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Stack>
-        )
-        .add("rich content", () =>
+        ))
+        .add("rich content", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <TextLink href="https://www.nasa.gov" external>
+                  The National Aeronautics and Space Administration
+                                </TextLink>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -296,7 +298,9 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <TextLink href="https://www.nasa.gov" external>
+                  The National Aeronautics and Space Administration
+                                </TextLink>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -308,7 +312,9 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <TextLink href="https://www.nasa.gov" external>
+                  The National Aeronautics and Space Administration
+                                </TextLink>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -322,7 +328,9 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <TextLink href="https://www.nasa.gov" external>
+                  The National Aeronautics and Space Administration
+                                </TextLink>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -334,7 +342,9 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <TextLink href="https://www.nasa.gov" external>
+                  The National Aeronautics and Space Administration
+                                </TextLink>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -347,7 +357,9 @@ export function createTestSuite(element, stories) {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                            <TextLink href="https://www.nasa.gov" external>
+                The National Aeronautics and Space Administration
+                            </TextLink>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -356,8 +368,8 @@ export function createTestSuite(element, stories) {
                     </Content>
                 </Card>
             </Stack>
-        )
-        .add("button", () =>
+        ))
+        .add("button", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -394,8 +406,8 @@ export function createTestSuite(element, stories) {
                     <Button>Visit</Button>
                 </Card>
             </Stack>
-        )
-        .add("button group", () =>
+        ))
+        .add("button group", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -450,8 +462,8 @@ export function createTestSuite(element, stories) {
                     </ButtonGroup>
                 </Card>
             </Stack>
-        )
-        .add("all sections 1", () =>
+        ))
+        .add("all sections 1", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -525,8 +537,8 @@ export function createTestSuite(element, stories) {
                     </Card>
                 </Inline>
             </Stack>
-        )
-        .add("all sections 2", () =>
+        ))
+        .add("all sections 2", () => (
             <Card fluid element={element}>
                 <Illustration color="sunken-treasure-100">
                     <Image src={Nasa} alt="Nasa" width="200px" />
@@ -541,8 +553,8 @@ export function createTestSuite(element, stories) {
                     <Button>Visit</Button>
                 </ButtonGroup>
             </Card>
-        )
-        .add("tabs", () =>
+        ))
+        .add("tabs", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -551,11 +563,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                         </Content>
@@ -566,11 +585,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                         </Content>
@@ -581,11 +607,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                         </Content>
@@ -598,11 +631,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                         </Content>
@@ -613,11 +653,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                         </Content>
@@ -629,18 +676,25 @@ export function createTestSuite(element, stories) {
                         <Tabs aria-label="Nasa">
                             <Item key="vision">
                                 <Header>Vision</Header>
-                                <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                <Content>
+                  We reach for new heights and reveal the unknown for the
+                  benefit of humankind
+                                </Content>
                             </Item>
                             <Item key="mission">
                                 <Header>Mission</Header>
-                                <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                <Content>
+                  Drive advances in science, technology, aeronautics, and space
+                  exploration to enhance knowledge, education, innovation,
+                  economic vitality and stewardship of Earth
+                                </Content>
                             </Item>
                         </Tabs>
                     </Content>
                 </Card>
             </Stack>
-        )
-        .add("tabs & button", () =>
+        ))
+        .add("tabs & button", () => (
             <Stack>
                 <Inline>
                     <Card size="xs" element={element}>
@@ -649,11 +703,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                             <Button>Next</Button>
@@ -665,11 +726,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                             <Button>Next</Button>
@@ -681,11 +749,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                             <Button>Next</Button>
@@ -699,11 +774,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                             <Button>Next</Button>
@@ -715,11 +797,18 @@ export function createTestSuite(element, stories) {
                             <Tabs aria-label="Nasa">
                                 <Item key="vision">
                                     <Header>Vision</Header>
-                                    <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
+                                    <Content>
+                    We reach for new heights and reveal the unknown for the
+                    benefit of humankind
+                                    </Content>
                                 </Item>
                                 <Item key="mission">
                                     <Header>Mission</Header>
-                                    <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
+                                    <Content>
+                    Drive advances in science, technology, aeronautics, and
+                    space exploration to enhance knowledge, education,
+                    innovation, economic vitality and stewardship of Earth
+                                    </Content>
                                 </Item>
                             </Tabs>
                             <Button>Next</Button>
@@ -727,27 +816,39 @@ export function createTestSuite(element, stories) {
                     </Card>
                 </Inline>
             </Stack>
-        )
-        .add("heading overflow", () =>
+        ))
+        .add("heading overflow", () => (
             <Card element={element}>
-                <Heading>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Heading>
+                <Heading>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus
+          dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum
+          lectus, non lobortis dui nulla sed nisi.
+                </Heading>
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
-        )
-        .add("heading alignment", () =>
+        ))
+        .add("heading alignment", () => (
             <Card element={element}>
-                <Heading>Lorem ipsum dolor sit amet<Switch aria-label="Lorem" /></Heading>
+                <Heading>
+          Lorem ipsum dolor sit amet<Switch aria-label="Lorem" />
+                </Heading>
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
-        )
-        .add("header overflow", () =>
+        ))
+        .add("header overflow", () => (
             <Card element={element}>
                 <Heading>Nasa</Heading>
-                <Header>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Header>
+                <Header>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus
+          dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum
+          lectus, non lobortis dui nulla sed nisi.
+                </Header>
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
-        )
-        .add("button overflow", () =>
+        ))
+        .add("button overflow", () => (
             <Card element={element}>
                 <Heading>Nasa</Heading>
                 <Content>The National Aeronautics and Space Administration</Content>
@@ -757,11 +858,21 @@ export function createTestSuite(element, stories) {
                     <Button>Lorem ipsum dolor sit amet.</Button>
                 </ButtonGroup>
             </Card>
-        )
-        .add("everything overflow", () =>
+        ))
+        .add("everything overflow", () => (
             <Card element={element}>
-                <Heading>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Heading>
-                <Header>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Header>
+                <Heading>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus
+          dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum
+          lectus, non lobortis dui nulla sed nisi.
+                </Heading>
+                <Header>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus
+          dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum
+          lectus, non lobortis dui nulla sed nisi.
+                </Header>
                 <Content>The National Aeronautics and Space Administration</Content>
                 <ButtonGroup>
                     <Button>Lorem ipsum dolor sit amet.</Button>
@@ -769,8 +880,8 @@ export function createTestSuite(element, stories) {
                     <Button>Lorem ipsum dolor sit amet.</Button>
                 </ButtonGroup>
             </Card>
-        )
-        .add("zoom", () =>
+        ))
+        .add("zoom", () => (
             <Stack>
                 <Div className="zoom-in">
                     <Card element={element}>
@@ -785,5 +896,5 @@ export function createTestSuite(element, stories) {
                     </Card>
                 </Div>
             </Stack>
-        );
+        ));
 }

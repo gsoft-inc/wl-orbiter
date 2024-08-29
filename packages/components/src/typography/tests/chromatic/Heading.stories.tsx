@@ -1,4 +1,4 @@
-import { H1, H2, H3, H4, H5, H6, Heading } from "@components/typography";
+import { H1, H2, H3, H4, H5, H6, Heading } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

@@ -1,7 +1,7 @@
 // Inspired from https://github.com/react-restart/hooks/blob/master/src/useResizeObserver.ts.
 
 import { RefCallback, RefObject, useCallback, useRef } from "react";
-import { isFunction, isNil } from "./assertions";
+import { isFunction, isNil } from "./assertions.js";
 
 interface MapValue {
     elementRef: RefObject<HTMLElement>;

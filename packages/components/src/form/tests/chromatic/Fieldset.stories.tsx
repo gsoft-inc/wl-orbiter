@@ -1,9 +1,9 @@
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { Field, Label } from "@components/field";
-import { Fieldset, Form } from "@components/form";
-import { Inline, Stack } from "@components/layout";
-import { TextInput } from "@components/text-input";
+import { Button } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
+import { Field, Label } from "@components/field/index.js";
+import { Fieldset, Form } from "@components/form/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { TextInput } from "@components/text-input/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

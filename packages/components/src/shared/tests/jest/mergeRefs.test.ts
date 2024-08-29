@@ -1,8 +1,8 @@
-import { mergeRefs } from "@components/shared";
+import { mergeRefs } from "@components/shared/index.js";
 
 test("can merge refs", () => {
-    const func1 = jest.fn();
-    const func2 = jest.fn();
+    const func1 = vi.fn();
+    const func2 = vi.fn();
 
     const result = mergeRefs(func1, func2);
 
@@ -13,8 +13,8 @@ test("can merge refs", () => {
 });
 
 test("filter out falsy values", () => {
-    const func1 = jest.fn();
-    const func2 = jest.fn();
+    const func1 = vi.fn();
+    const func2 = vi.fn();
 
     const result = mergeRefs(func1, null, func2, undefined);
 

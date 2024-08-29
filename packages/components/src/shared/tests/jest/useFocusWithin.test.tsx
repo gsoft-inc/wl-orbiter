@@ -1,8 +1,8 @@
 import { act, render, screen, waitFor } from "@test-utils";
 
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.js";
 import { ReactNode } from "react";
-import { useFocusWithin } from "@components/shared";
+import { useFocusWithin } from "@components/shared/index.js";
 import userEvent from "@testing-library/user-event";
 
 interface FocusWithinProps {
@@ -23,7 +23,7 @@ function FocusWithin({ onFocus, onBlur, disabled, children }: FocusWithinProps) 
 }
 
 test("call onFocus when a child of the element receive focus", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     render(
         <FocusWithin onFocus={handler}>
@@ -40,7 +40,7 @@ test("call onFocus when a child of the element receive focus", async () => {
 });
 
 test("do not call onFocus again when the focus move to another child of the element", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     render(
         <FocusWithin onFocus={handler}>
@@ -61,7 +61,7 @@ test("do not call onFocus again when the focus move to another child of the elem
 });
 
 test("do not call onFocus when isDisabled is true", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     render(
         <FocusWithin onFocus={handler} disabled>
@@ -78,7 +78,7 @@ test("do not call onFocus when isDisabled is true", async () => {
 });
 
 test("call onBlur when the focus move out of the element", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     render(
         <FocusWithin onBlur={handler}>
@@ -97,7 +97,7 @@ test("call onBlur when the focus move out of the element", async () => {
 });
 
 test("do not call onBlur when the focus move to another child of the element", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     render(
         <FocusWithin onBlur={handler}>
@@ -118,7 +118,7 @@ test("do not call onBlur when the focus move to another child of the element", a
 });
 
 test("do not call onBlur when isDisabled is true", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     render(
         <FocusWithin onBlur={handler} disabled>

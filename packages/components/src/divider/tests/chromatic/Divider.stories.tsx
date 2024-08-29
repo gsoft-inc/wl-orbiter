@@ -1,7 +1,7 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.js";
+import { Divider } from "@components/divider/index.js";
+import { Stack } from "@components/layout/index.js";
+import { Text } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

@@ -1,9 +1,9 @@
-import { IconList } from "@components/icons";
+import { IconList } from "@components/icons/index.js";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Lozenge } from "@components/lozenge";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Lozenge } from "@components/lozenge/index.js";
+import { Text } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

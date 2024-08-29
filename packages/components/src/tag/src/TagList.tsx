@@ -1,10 +1,10 @@
-import { Box } from "../../box";
-import { Button } from "../../button";
-import { CollectionItem, useCollection } from "../../collection";
+import { Box } from "../../box/index.js";
+import { Button } from "../../button/index.js";
+import { CollectionItem, useCollection } from "../../collection/index.js";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, isNil, mergeProps, useEventCallback } from "../../shared";
-import { Tag, TagProps } from "./Tag";
-import { ValidationState } from "../../input";
+import { InternalProps, OmitInternalProps, StyledComponentProps, isNil, mergeProps, useEventCallback } from "../../shared/index.js";
+import { Tag, TagProps } from "./Tag.js";
+import { ValidationState } from "../../input/index.js";
 
 const DefaultElement = "div";
 

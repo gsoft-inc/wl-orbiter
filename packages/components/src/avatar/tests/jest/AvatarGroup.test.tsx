@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup } from "@components/avatar";
+import { Avatar, AvatarGroup } from "@components/avatar/index.js";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -41,7 +41,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <AvatarGroup ref={handler}>

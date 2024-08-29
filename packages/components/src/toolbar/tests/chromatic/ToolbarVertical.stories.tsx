@@ -1,9 +1,9 @@
-import { Inline } from "@components/layout";
-import { RadioGroup } from "@components/radio";
-import { ToggleButton } from "@components/button";
-import { CheckboxGroup } from "@components/checkbox";
-import { TextInput } from "@components/text-input";
-import { Toolbar } from "@components/toolbar";
+import { Inline } from "@components/layout/index.js";
+import { RadioGroup } from "@components/radio/index.js";
+import { ToggleButton } from "@components/button/index.js";
+import { CheckboxGroup } from "@components/checkbox/index.js";
+import { TextInput } from "@components/text-input/index.js";
+import { Toolbar } from "@components/toolbar/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

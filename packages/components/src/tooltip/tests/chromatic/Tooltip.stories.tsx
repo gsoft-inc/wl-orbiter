@@ -1,9 +1,9 @@
-import { IconButton, Button } from "@components/button";
+import { IconButton, Button } from "@components/button/index.js";
 import { MailIcon } from "@hopper-ui/icons";
-import { Image } from "@components/image";
-import { Launch } from "./assets";
-import { TextLink } from "@components/link";
-import { Tooltip, TooltipTrigger } from "@components/tooltip";
+import { Image } from "@components/image/index.js";
+import { Launch } from "./assets/index.js";
+import { TextLink } from "@components/link/index.js";
+import { Tooltip, TooltipTrigger } from "@components/tooltip/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

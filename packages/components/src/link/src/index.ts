@@ -1,4 +1,4 @@
-export * from "./Link";
-export * from "./TextLink";
-export * from "./IconLink";
-export type { LinkVariant } from "./useLink";
+export * from "./Link.js";
+export * from "./TextLink.js";
+export * from "./IconLink.js";
+export type { LinkVariant } from "./useLink.js";

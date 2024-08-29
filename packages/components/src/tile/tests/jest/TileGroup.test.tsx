@@ -1,6 +1,6 @@
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Tile, TileGroup } from "@components/tile";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Tile, TileGroup } from "@components/tile/index.js";
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
@@ -184,7 +184,7 @@ test("when selectionMode is \"multiple\", the tile role is \"checkbox\"", async 
 // ***** Api *****
 
 test("when selectionMode is \"single\", call onChange when a tile is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup onChange={handler} selectionMode="single">
@@ -206,7 +206,7 @@ test("when selectionMode is \"single\", call onChange when a tile is selected", 
 });
 
 test("when selectionMode is \"single\", call onChange when then selected tile change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup onChange={handler} selectionMode="single">
@@ -230,7 +230,7 @@ test("when selectionMode is \"single\", call onChange when then selected tile ch
 });
 
 test("when selectionMode is \"multiple\", call onChange when a tile is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup onChange={handler} selectionMode="multiple">
@@ -254,7 +254,7 @@ test("when selectionMode is \"multiple\", call onChange when a tile is selected"
 });
 
 test("when selectionMode is \"multiple\", call onChange when a tile is unselected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup onChange={handler} selectionMode="multiple">
@@ -278,7 +278,7 @@ test("when selectionMode is \"multiple\", call onChange when a tile is unselecte
 });
 
 test("when selectionMode is \"single\" call the tile onChange handler when a tile is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup selectionMode="single">
@@ -300,7 +300,7 @@ test("when selectionMode is \"single\" call the tile onChange handler when a til
 });
 
 test("when selectionMode is \"multiple\", call the tile onChange handler when a tile is selected", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup selectionMode="multiple">
@@ -372,7 +372,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <TileGroup ref={handler}>

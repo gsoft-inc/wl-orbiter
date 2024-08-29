@@ -1,4 +1,4 @@
-import { Themes } from "./styles/themes";
+import { Themes } from "./styles/themes.js";
 import { addons } from "@storybook/addons";
 
 addons.setConfig({

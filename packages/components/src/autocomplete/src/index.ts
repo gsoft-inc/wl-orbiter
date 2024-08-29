@@ -1,2 +1,2 @@
-export * from "./Autocomplete";
-export * from "./HiddenAutocomplete";
+export * from "./Autocomplete.js";
+export * from "./HiddenAutocomplete.js";

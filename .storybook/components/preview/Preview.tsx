@@ -1,17 +1,19 @@
 import "./Preview.css";
 
 import { CodeTheme, useFormattedCode } from "@stories/components";
-import { Div, Span } from "@components/html";
+import { Div, Span } from "@components/html/index.js";
 import { DocsContext, DocsContextProps, SourceContext, getSourceProps, storyBlockIdFromId } from "@storybook/addon-docs";
 import { Editor as JarleEditor, Error as JarleError, Preview as JarlePreview, Provider as JarleProvider } from "jarle";
 import { applyHooks, defaultDecorateStory } from "@storybook/client-api";
-import { as, isNil } from "@components/shared";
+import { as, isNil } from "@components/shared/index.js";
 import { storyNameFromExport, toId } from "@storybook/csf";
 import { ComponentProps, ReactElement, useContext, useState } from "react";
 
-import { Box } from "@components/box";
-import { KnownScope } from "./scopes";
+import { Box } from "@components/box/index.js";
+import { KnownScope } from "./scopes.js";
 
+const JarleEditorAny = JarleEditor as any;
+const JarleErrorAny = JarleError as any;
 
 const StyledJarlePreview = as(Box, JarlePreview);
 type JarleProviderProps = ComponentProps<typeof JarleProvider>;
@@ -48,8 +50,8 @@ function CodeEditor({
                 </Div>
                 <Div className="o-ui-sb-preview-source">
                     <Span className="o-ui-sb-preview-editable-label">Editable example</Span>
-                    <JarleEditor className="o-ui-sb-preview-editor" />
-                    <JarleError className="o-ui-sb-preview-error" />
+                    <JarleEditorAny className="o-ui-sb-preview-editor" />
+                    <JarleErrorAny className="o-ui-sb-preview-error" />
                 </Div>
             </JarleProvider>
         </Div>

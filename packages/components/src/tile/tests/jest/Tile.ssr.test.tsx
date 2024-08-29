@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Tile } from "@components/tile";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
+import { Tile } from "@components/tile/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

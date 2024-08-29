@@ -1,8 +1,8 @@
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.js";
 
-import { CrossButton } from "@components/button";
-import { Div } from "@components/html";
-import { TextArea } from "@components/text-area";
+import { CrossButton } from "@components/button/index.js";
+import { Div } from "@components/html/index.js";
+import { TextArea } from "@components/text-area/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

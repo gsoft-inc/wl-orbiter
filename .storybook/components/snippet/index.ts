@@ -1,2 +1,2 @@
-export * from "./Snippet";
-export * from "./useFormattedCode";
+export * from "./Snippet.js";
+export * from "./useFormattedCode.js";

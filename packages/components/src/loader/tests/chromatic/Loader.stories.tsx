@@ -1,5 +1,5 @@
-import { Loader } from "@components/loader";
-import { Inline, Stack } from "@components/layout";
+import { Loader } from "@components/loader/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

@@ -1,14 +1,14 @@
-import { Dialog, DialogProps, DialogTrigger, useDialogTriggerContext } from "@components/dialog";
-import { Heading, Paragraph } from "@components/typography";
-import { Radio, RadioGroup } from "@components/radio";
+import { Dialog, DialogProps, DialogTrigger, useDialogTriggerContext } from "@components/dialog/index.js";
+import { Heading, Paragraph } from "@components/typography/index.js";
+import { Radio, RadioGroup } from "@components/radio/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef, forwardRef } from "react";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Select } from "@components/select";
-import { Transition } from "@components/transition";
+import { Button } from "@components/button/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Item } from "@components/collection/index.js";
+import { Keys } from "@components/shared/index.js";
+import { Select } from "@components/select/index.js";
+import { Transition } from "@components/transition/index.js";
 import userEvent from "@testing-library/user-event";
 
 beforeAll(() => {
@@ -158,7 +158,7 @@ test("when the context close function is called, close the dialog", async () => 
 // ***** Api *****
 
 test("when the dialog open, call onOpenChange", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DialogTrigger onOpenChange={handler}>
@@ -179,7 +179,7 @@ test("when the dialog open, call onOpenChange", async () => {
 });
 
 test("call onOpenChange when the dismiss button is clicked", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DialogTrigger onOpenChange={handler}>
@@ -204,7 +204,7 @@ test("call onOpenChange when the dismiss button is clicked", async () => {
 });
 
 test("call onOpenChange on outside click", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DialogTrigger onOpenChange={handler}>
@@ -229,7 +229,7 @@ test("call onOpenChange on outside click", async () => {
 });
 
 test("call onOpenChange on esc keypress", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DialogTrigger onOpenChange={handler}>
@@ -299,7 +299,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <DialogTrigger defaultOpen ref={handler}>

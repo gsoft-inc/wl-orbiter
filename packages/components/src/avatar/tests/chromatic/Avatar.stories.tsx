@@ -1,8 +1,8 @@
-import { Avatar } from "@components/avatar";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Avatar } from "@components/avatar/index.js";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Astronaut, Person } from "./assets";
+import { Astronaut, Person } from "./assets/index.js";
 
 export default {
     title: "Chromatic/Avatar",

@@ -1,4 +1,4 @@
-import { FocusScope, isNil, useDocumentListener, useEventCallback } from "../../shared";
+import { FocusScope, isNil, useDocumentListener, useEventCallback } from "../../shared/index.js";
 
 import { MouseEvent } from "react";
 

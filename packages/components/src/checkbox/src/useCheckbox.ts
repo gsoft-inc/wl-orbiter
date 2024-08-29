@@ -1,12 +1,12 @@
 import { ChangeEvent, ElementType, ForwardedRef, Ref, useImperativeHandle, useRef } from "react";
-import { ValidationState } from "../../input";
-import { cssModule, isNil, isNumber, normalizeSize, useAutoFocus, useControllableState, useEventCallback, useForwardInputApi, useIsomorphicLayoutEffect } from "../../shared";
+import { ValidationState } from "../../input/index.js";
+import { cssModule, isNil, isNumber, normalizeSize, useAutoFocus, useControllableState, useEventCallback, useForwardInputApi, useIsomorphicLayoutEffect } from "../../shared/index.js";
 
 export interface UseCheckboxProps {
     active?: boolean;
     ariaLabel?: string;
     ariaLabelledBy?: string;
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     checked?: boolean | null;
     cssModule?: string;
     defaultChecked?: boolean;

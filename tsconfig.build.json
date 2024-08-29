@@ -2,6 +2,8 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "extends": "@sharegate/typescript-config/react-library.json",
     "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "strict": false,
         "noFallthroughCasesInSwitch": false
     }

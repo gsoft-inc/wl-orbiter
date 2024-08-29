@@ -15,11 +15,11 @@ import {
     SpacingValue,
     getSizingValue,
     useResponsiveValue
-} from "../../styling";
-import { Box } from "../../box";
+} from "../../styling/index.js";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isArray, isNil, mergeProps } from "../../shared";
-import { useFormContext } from "../../form";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isArray, isNil, mergeProps } from "../../shared/index.js";
+import { useFormContext } from "../../form/index.js";
 
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/repeat.
 export function repeat(count: number | "auto-fill" | "auto-fit", repetition: SpacingValue | SpacingValue[]) {
@@ -169,7 +169,7 @@ export function InnerGrid({
                     ref: forwardedRef
                 },
                 formProps
-            )}
+            ) as any}
         >
             {children}
         </Box>

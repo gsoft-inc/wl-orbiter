@@ -1,8 +1,8 @@
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.js";
 
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.js";
 import { MailIcon } from "@hopper-ui/icons";
-import { SearchInput } from "@components/text-input";
+import { SearchInput } from "@components/text-input/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

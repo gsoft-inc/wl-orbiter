@@ -1,11 +1,11 @@
-import { AbstractTextInputProps, TextInput } from "./TextInput";
+import { AbstractTextInputProps, TextInput } from "./TextInput.js";
 import { useState, ChangeEvent, ComponentProps, forwardRef } from "react";
 import { EyeVisibleIcon, EyeHiddenIcon } from "@hopper-ui/icons";
-import { OmitInternalProps, mergeProps, createSizeAdapter, useControllableState, useEventCallback } from "../../shared";
-import { useResponsiveValue } from "../../styling";
+import { OmitInternalProps, mergeProps, createSizeAdapter, useControllableState, useEventCallback } from "../../shared/index.js";
+import { useResponsiveValue } from "../../styling/index.js";
 
-import { IconButton } from "../../button";
-import { useInputGroupTextInputProps } from "../../input-group";
+import { IconButton } from "../../button/index.js";
+import { useInputGroupTextInputProps } from "../../input-group/index.js";
 
 const DefaultElement = "input";
 

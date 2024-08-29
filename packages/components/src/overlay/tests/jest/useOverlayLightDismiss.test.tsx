@@ -1,8 +1,8 @@
-import { Keys, mergeProps, useFocusScope, useMergedRefs } from "@components/shared";
-import { UseOverlayLightDismissOptions, useOverlayLightDismiss } from "@components/overlay";
+import { Keys, mergeProps, useFocusScope, useMergedRefs } from "@components/shared/index.js";
+import { UseOverlayLightDismissOptions, useOverlayLightDismiss } from "@components/overlay/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { ComponentProps } from "react";
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.js";
 import userEvent from "@testing-library/user-event";
 
 type OverlayProps = UseOverlayLightDismissOptions & ComponentProps<"div">;
@@ -47,7 +47,7 @@ function Overlay({
 
 describe("\"click\" trigger", () => {
     test("call onHide on esc keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -67,7 +67,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("call onHide on blur", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <>
@@ -92,7 +92,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("call onHide on outside click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -108,7 +108,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when hideOnEscape is false, do not call onHide on esc keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -129,7 +129,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when hideOnLeave is false, do not call onHide on blur", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <>
@@ -155,7 +155,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when hideOnOutsideClick is false, do not call onHide on outside click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -176,7 +176,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when disabled, outside interaction do not call onHide", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -197,7 +197,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when disabled, focus interaction do not call onHide", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <>
@@ -223,7 +223,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when disabled, keydown event do not call onHide", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -246,7 +246,7 @@ describe("\"click\" trigger", () => {
 
 describe("\"hover\" trigger", () => {
     test("call onHide on esc keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -266,7 +266,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("call onHide on mouse leave", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -282,7 +282,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("call onHide on outside click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -298,7 +298,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when hideOnEscape is false, do not call onHide on esc keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -319,7 +319,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when hideOnLeave is false, do not call onHide on mouse leave", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <>
@@ -339,7 +339,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when hideOnOutsideClick is false, do not call onHide on outside click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -360,7 +360,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when disabled, outside interaction do not call onHide", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -381,7 +381,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when disabled, focus interaction do not call onHide", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <>
@@ -407,7 +407,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when disabled, keydown event do not call onHide", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay

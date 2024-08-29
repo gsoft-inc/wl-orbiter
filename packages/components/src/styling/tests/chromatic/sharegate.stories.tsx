@@ -9,11 +9,11 @@ import {
     SizingMapping,
     SpacingMapping,
     ThemeProvider
-} from "@components/styling";
-import { Box, BoxProps } from "@components/box";
+} from "@components/styling/index.js";
+import { Box, BoxProps } from "@components/box/index.js";
 import { IconColorMapping } from "@hopper-ui/styled-system";
 import { NoteIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 // eslint-disable-next-line storybook/csf-component

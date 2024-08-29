@@ -1,12 +1,12 @@
-import { ThemeProvider, ThemeComputedStyle } from "@components/styling";
+import { ThemeProvider, ThemeComputedStyle } from "@components/styling/index.js";
 import { arrayOf, func, shape, string } from "prop-types";
 
-import { Div, Span } from "@components/html";
-import { Flex } from "@components/layout";
+import { Div, Span } from "@components/html/index.js";
+import { Flex } from "@components/layout/index.js";
 import { DocsContext } from "@storybook/addon-docs";
 import { InfoIcon } from "@hopper-ui/icons";
 import { Table } from "@stories/components";
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.js";
 import { useEffect, useContext, useRef, useState } from "react";
 
 const propTypes = {

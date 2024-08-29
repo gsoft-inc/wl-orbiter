@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
-import { mergeProps, Keys } from "@components/shared";
-import { UseOverlayTriggerOptions, useOverlayTrigger } from "@components/overlay";
+import { mergeProps, Keys } from "@components/shared/index.js";
+import { UseOverlayTriggerOptions, useOverlayTrigger } from "@components/overlay/index.js";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import userEvent from "@testing-library/user-event";
 
@@ -38,7 +38,7 @@ function Overlay({
 
 describe("\"click\" trigger", () => {
     test("when is closed, call onShow on trigger click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -55,7 +55,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is closed, call onShow on trigger space keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -72,7 +72,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is opened, do not call onShow on trigger space keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -89,7 +89,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is closed, call onShow on trigger enter keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -106,7 +106,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is opened, do not call onShow on trigger enter keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -123,7 +123,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is closed and disabled, do not call onShow on trigger click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -141,7 +141,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is closed and disabled, do not call onShow on trigger space keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -159,7 +159,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is closed and disabled, do not call onShow on trigger enter keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -177,7 +177,7 @@ describe("\"click\" trigger", () => {
     });
 
     test("when is opened, call onHide on trigger click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -196,7 +196,7 @@ describe("\"click\" trigger", () => {
 
 describe("\"hover\" trigger", () => {
     test("when is closed, call onShow on hover", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -213,7 +213,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when is closed, call onShow on focus", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -232,7 +232,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when is opened, call onHide on unhover", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -251,7 +251,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when is opened, call onHide on blur", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -272,7 +272,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when hideOnLeave is false, do not call onHide on unhover", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -292,7 +292,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when hideOnLeave is false, do not call onHide on blur", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -314,7 +314,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when is closed and disabled, do not call onShow on hover", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -332,7 +332,7 @@ describe("\"hover\" trigger", () => {
     });
 
     test("when is closed and disabled, do not call onShow on focus", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -354,7 +354,7 @@ describe("\"hover\" trigger", () => {
 
 describe("\"none\" trigger", () => {
     test("when is closed, do not call onShow on trigger click", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -371,7 +371,7 @@ describe("\"none\" trigger", () => {
     });
 
     test("when is closed, do not call onShow on trigger space keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -388,7 +388,7 @@ describe("\"none\" trigger", () => {
     });
 
     test("when is closed, do not call onShow on trigger enter keypress", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -405,7 +405,7 @@ describe("\"none\" trigger", () => {
     });
 
     test("when is closed, do not call onShow on hover", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay
@@ -422,7 +422,7 @@ describe("\"none\" trigger", () => {
     });
 
     test("when is closed, do not call onShow on focus", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Overlay

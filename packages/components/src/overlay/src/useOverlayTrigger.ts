@@ -1,5 +1,5 @@
 import { FocusEvent, KeyboardEvent, MouseEvent, SyntheticEvent } from "react";
-import { Keys, isNil, useEventCallback } from "../../shared";
+import { Keys, isNil, useEventCallback } from "../../shared/index.js";
 
 export type OverlayTrigger = "none" | "click" | "hover";
 

@@ -1,9 +1,9 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ElementType, ReactNode, forwardRef } from "react";
-import { InteractionProps, InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, mergeProps } from "../../shared";
-import { NewTabIndicator } from "./NewTabIndicator";
-import { useLink } from "./useLink";
-import { useStyleProps } from "../../styling";
+import { InteractionProps, InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, mergeProps } from "../../shared/index.js";
+import { NewTabIndicator } from "./NewTabIndicator.js";
+import { useLink } from "./useLink.js";
+import { useStyleProps } from "../../styling/index.js";
 
 export type AbstractLinkProps<T extends ElementType> =
     // Keep it so it could be used with dynamic slots.
@@ -14,7 +14,7 @@ export type AbstractLinkProps<T extends ElementType> =
         /**
          * Whether or not the link should autoFocus on render.
          */
-        autoFocus?: boolean | number;
+        autoFocus?: boolean;
         /**
          * React children.
          */

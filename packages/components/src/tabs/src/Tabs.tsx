@@ -1,12 +1,12 @@
 import { useMemo, ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useControllableState, useEventCallback, useId } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { TabsContext, TabsOrientation, TabsVariant } from "./TabsContext";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useControllableState, useEventCallback, useId } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { TabsContext, TabsOrientation, TabsVariant } from "./TabsContext.js";
 
-import { Box } from "../../box";
-import { TabList } from "./TabList";
-import { TabPanels } from "./TabPanels";
-import { useTabsItems } from "./useTabsItems";
+import { Box } from "../../box/index.js";
+import { TabList } from "./TabList.js";
+import { TabPanels } from "./TabPanels.js";
+import { useTabsItems } from "./useTabsItems.js";
 
 const DefaultElement = "div";
 
@@ -18,7 +18,7 @@ export interface InnerTabsProps extends InternalProps, StyledComponentProps<type
     /**
      * Whether or not the first focusable tab should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * React children.
      */

@@ -1,10 +1,10 @@
 /**
  * @jest-environment node
  */
-import { Accordion } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { H3 } from "@components/typography";
-import { Item } from "@components/collection";
+import { Accordion } from "@components/accordion/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { H3 } from "@components/typography/index.js";
+import { Item } from "@components/collection/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,48 +1,48 @@
 // Constants
-export * from "./keys";
-export * from "./focusTarget";
+export * from "./keys.js";
+export * from "./focusTarget.js";
 
 // Utils
-export * from "./assertions";
-export * from "./size";
-export * from "./mergeProps";
-export * from "./mergeClasses";
-export * from "./cssModule";
-export * from "./augmentElement";
-export * from "./omitProps";
-export * from "./arrayify";
-export * from "./resolveChildren";
-export * from "./focusableTreeWalker";
-export * from "./as";
-export * from "./dom";
+export * from "./assertions.js";
+export * from "./size.js";
+export * from "./mergeProps.js";
+export * from "./mergeClasses.js";
+export * from "./cssModule.js";
+export * from "./augmentElement.js";
+export * from "./omitProps.js";
+export * from "./arrayify.js";
+export * from "./resolveChildren.js";
+export * from "./focusableTreeWalker.js";
+export * from "./as.js";
+export * from "./dom.js";
 
 // Hooks
-export * from "./useMergedRefs";
-export * from "./useFocusScope";
-export * from "./useFocusManager";
-export * from "./useAutoFocus";
-export * from "./useRovingFocus";
-export * from "./useEventListener";
-export * from "./useCommittedRef";
-export * from "./useEventCallback";
-export * from "./useChainedEventCallback";
-export * from "./useControllableState";
-export * from "./useForwardInputApi";
-export * from "./useId";
-export * from "./useKeyboardNavigation";
-export * from "./useHasChild";
-export * from "./useIsInitialRender";
-export * from "./useDisposables";
-export * from "./useForceRender";
-export * from "./useResizeObserver";
-export * from "./useRefState";
-export * from "./useFocusWithin";
-export * from "./useIsomorphicLayoutEffect";
+export * from "./useMergedRefs.js";
+export * from "./useFocusScope.js";
+export * from "./useFocusManager.js";
+export * from "./useAutoFocus.js";
+export * from "./useRovingFocus.js";
+export * from "./useEventListener.js";
+export * from "./useCommittedRef.js";
+export * from "./useEventCallback.js";
+export * from "./useChainedEventCallback.js";
+export * from "./useControllableState.js";
+export * from "./useForwardInputApi.js";
+export * from "./useId.js";
+export * from "./useKeyboardNavigation.js";
+export * from "./useHasChild.js";
+export * from "./useIsInitialRender.js";
+export * from "./useDisposables.js";
+export * from "./useForceRender.js";
+export * from "./useResizeObserver.js";
+export * from "./useRefState.js";
+export * from "./useFocusWithin.js";
+export * from "./useIsomorphicLayoutEffect.js";
 
 // Features
-export * from "./slots";
-export * from "./CheckableContext";
+export * from "./slots.js";
+export * from "./CheckableContext.js";
 
 // Types
-export * from "./types";
-export * from "./type-fest";
+export * from "./types.js";
+export * from "./type-fest.js";

@@ -1,5 +1,6 @@
 {
     "name": "@orbit-ui/transition-components",
+    "type": "module",
     "version": "5.2.0",
     "description": "Orbiter components",
     "repository": {

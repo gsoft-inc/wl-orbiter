@@ -1,4 +1,4 @@
-import { IconList, IconListProps } from "@components/icons";
+import { IconList, IconListProps } from "@components/icons/index.js";
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
@@ -46,7 +46,7 @@ test("using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Icons ref={handler} />

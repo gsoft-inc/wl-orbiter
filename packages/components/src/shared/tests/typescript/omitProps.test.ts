@@ -1,5 +1,5 @@
 import { expectAssignable } from "@test-utils";
-import { omitProps } from "@components/shared";
+import { omitProps } from "@components/shared/index.js";
 
 interface MyObject {
     a: string;

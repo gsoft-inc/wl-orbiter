@@ -1,9 +1,9 @@
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Accordion } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { H3 } from "@components/typography";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
+import { Accordion } from "@components/accordion/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { H3 } from "@components/typography/index.js";
+import { Item } from "@components/collection/index.js";
+import { Keys } from "@components/shared/index.js";
 import { createRef } from "react";
 
 // ***** Behaviors *****
@@ -85,7 +85,7 @@ test("when autofocus is true, accordion header is focused on render", async () =
 
 test("when autofocus is specified with a delay, accordion header is focused after the delay", async () => {
     renderWithTheme(
-        <Accordion autoFocus={10}>
+        <Accordion autoFocus>
             <Item data-testid="item-1">
                 <H3>Header</H3>
                 <Content>Content</Content>
@@ -128,7 +128,7 @@ test("when an id is provided, the accordion id attribute match the provided valu
 // ***** Api *****
 
 test("when single, call onExpansionChange when the expanded tab change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Accordion expansionMode="single" onExpansionChange={handler}>
@@ -158,7 +158,7 @@ test("when single, call onExpansionChange when the expanded tab change", async (
 });
 
 test("when multiple, call onExpansionChange when the expanded tabs change", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <Accordion expansionMode="multiple" onExpansionChange={handler}>

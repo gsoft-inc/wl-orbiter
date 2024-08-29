@@ -1,7 +1,7 @@
 import { ArrowRightIcon, InfoIcon } from "@hopper-ui/icons";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Text } from "@components/typography/index.js";
 import { cloneElement } from "react";
 
 function TextLink({ element, ...rest }) {

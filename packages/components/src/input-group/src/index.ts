@@ -1,3 +1,3 @@
-export * from "./InputGroup";
-export * from "./InputGroupContext";
-export * from "./TextAddon";
+export * from "./InputGroup.js";
+export * from "./InputGroupContext.js";
+export * from "./TextAddon.js";

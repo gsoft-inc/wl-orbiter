@@ -1,10 +1,10 @@
-import { Box } from "@components/box";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
+import { Box } from "@components/box/index.js";
+import { Div } from "@components/html/index.js";
+import { Illustration } from "@components/illustration/index.js";
+import { Image } from "@components/image/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Nasa } from "./assets";
+import { Nasa } from "./assets/index.js";
 
 export default {
     title: "Chromatic/Illustration",

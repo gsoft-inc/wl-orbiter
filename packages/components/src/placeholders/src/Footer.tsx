@@ -1,6 +1,6 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, slot } from "../../shared";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, slot } from "../../shared/index.js";
 
 const DefaultElement = "div";
 

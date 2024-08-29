@@ -1,6 +1,6 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 import { AddIcon } from "@hopper-ui/icons";
-import { IconButton } from "@components/button";
+import { IconButton } from "@components/button/index.js";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -40,7 +40,7 @@ test("when autofocus is true and the button is disabled, the button is not focus
 test("when autofocus is specified with a delay, the button is focused after the delay", async () => {
     renderWithTheme(
         <IconButton
-            autoFocus={10}
+            autoFocus
             variant="secondary"
             aria-label="Add"
             data-testid="button"
@@ -55,7 +55,7 @@ test("when autofocus is specified with a delay, the button is focused after the 
 });
 
 test("when loading is true, the button should prevent onClick", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <IconButton
@@ -157,7 +157,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <IconButton

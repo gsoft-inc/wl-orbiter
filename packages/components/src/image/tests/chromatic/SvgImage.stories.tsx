@@ -1,6 +1,6 @@
-import { Inline } from "@components/layout";
-import { NoResults } from "./assets";
-import { SvgImage } from "@components/image";
+import { Inline } from "@components/layout/index.js";
+import { NoResults } from "./assets/index.js";
+import { SvgImage } from "@components/image/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

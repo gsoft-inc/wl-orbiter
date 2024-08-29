@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 import { CheckmarkIcon } from "@hopper-ui/icons";
-import { IconList } from "@components/icons";
+import { IconList } from "@components/icons/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,6 +1,6 @@
-import { AccordionContext } from "./AccordionContext";
-import { AccordionItem } from "./AccordionItem";
-import { Box } from "../../box";
+import { AccordionContext } from "./AccordionContext.js";
+import { AccordionItem } from "./AccordionItem.js";
+import { Box } from "../../box/index.js";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     InternalProps,
@@ -19,8 +19,8 @@ import {
     useId,
     useKeyboardNavigation,
     useMergedRefs
-} from "../../shared";
-import { useAccordionItems } from "./useAccordionItems";
+} from "../../shared/index.js";
+import { useAccordionItems } from "./useAccordionItems.js";
 
 const DefaultElement = "div";
 
@@ -28,7 +28,7 @@ export interface InnerAccordionProps extends InternalProps, StyledComponentProps
     /**
      * Whether or not the first focusable accordion item should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * React children
      */

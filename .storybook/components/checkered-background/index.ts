@@ -1,1 +1,1 @@
-export * from "./CheckeredBackground";
+export * from "./CheckeredBackground.js";

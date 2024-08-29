@@ -1,9 +1,9 @@
 import { act, renderHook } from "@test-utils";
 import { createRef } from "react";
-import { useMergedRefs } from "@components/shared";
+import { useMergedRefs } from "@components/shared/index.js";
 
 test("when having a single ref, assign the ref on change", () => {
-    const ref = jest.fn();
+    const ref = vi.fn();
 
     const { result } = renderHook(() => useMergedRefs(ref));
 
@@ -15,8 +15,8 @@ test("when having a single ref, assign the ref on change", () => {
 });
 
 test("when having multiple refs, assign the ref on change", () => {
-    const ref1 = jest.fn();
-    const ref2 = jest.fn();
+    const ref1 = vi.fn();
+    const ref2 = vi.fn();
 
     const { result } = renderHook(() => useMergedRefs(ref1, ref2));
 
@@ -60,9 +60,9 @@ test("can assign to an object ref", () => {
 });
 
 test("assign to new ref when ref changes", () => {
-    const ref1 = jest.fn();
-    const ref2 = jest.fn();
-    const ref3 = jest.fn();
+    const ref1 = vi.fn();
+    const ref2 = vi.fn();
+    const ref3 = vi.fn();
 
     const { result, rerender } = renderHook(({ refs }) => useMergedRefs(...refs), {
         initialProps: {
@@ -84,8 +84,8 @@ test("assign to new ref when ref changes", () => {
 });
 
 test("support current prop", () => {
-    const ref1 = jest.fn();
-    const ref2 = jest.fn();
+    const ref1 = vi.fn();
+    const ref2 = vi.fn();
 
     const { result } = renderHook(() => useMergedRefs(ref1, ref2));
 
@@ -97,9 +97,9 @@ test("support current prop", () => {
 });
 
 test("support current prop when ref changes", () => {
-    const ref1 = jest.fn();
-    const ref2 = jest.fn();
-    const ref3 = jest.fn();
+    const ref1 = vi.fn();
+    const ref2 = vi.fn();
+    const ref3 = vi.fn();
 
     const { result, rerender } = renderHook(({ refs }) => useMergedRefs(...refs), {
         initialProps: {

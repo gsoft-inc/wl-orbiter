@@ -1,4 +1,4 @@
-import { H1, Heading } from "@components/typography";
+import { H1, Heading } from "@components/typography/index.js";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 
@@ -38,7 +38,7 @@ describe("Heading", () => {
     });
 
     test("set ref once", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <Heading
@@ -86,7 +86,7 @@ describe("H1", () => {
     });
 
     test("set ref once", async () => {
-        const handler = jest.fn();
+        const handler = vi.fn();
 
         renderWithTheme(
             <H1

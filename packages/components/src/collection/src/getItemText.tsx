@@ -1,5 +1,5 @@
-import { CollectionNode, isDivider, isItem } from "./useCollection";
-import { getRawSlots, isNil } from "../../shared";
+import { CollectionNode, isDivider, isItem } from "./useCollection.js";
+import { getRawSlots, isNil } from "../../shared/index.js";
 
 export function getItemText(item: CollectionNode): string {
     if (isDivider(item) || isItem(item)) {

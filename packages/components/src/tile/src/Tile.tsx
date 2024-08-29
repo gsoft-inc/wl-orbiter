@@ -1,4 +1,4 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.js";
 import { ComponentProps, MouseEvent, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     InteractionProps,
@@ -14,9 +14,9 @@ import {
     useControllableState,
     useEventCallback,
     useMergedRefs
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { TileOrientation, useTile } from "./useTile";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { TileOrientation, useTile } from "./useTile.js";
 
 const DefaultElement = "button";
 
@@ -24,7 +24,7 @@ export interface InnerTileProps extends InternalProps, InteractionProps, Omit<St
     /**
      * Whether or not the tile should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * A controlled checked value.
      */

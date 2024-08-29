@@ -1,7 +1,7 @@
-import { ThemeProvider, useColorSchemeContext } from "@components/styling";
+import { ThemeProvider, useColorSchemeContext } from "@components/styling/index.js";
 
-import { Box } from "@components/box";
-import { Inline } from "@components/layout";
+import { Box } from "@components/box/index.js";
+import { Inline } from "@components/layout/index.js";
 import { useEffect } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 

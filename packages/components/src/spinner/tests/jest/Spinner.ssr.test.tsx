@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Spinner } from "@components/spinner";
+import { Spinner } from "@components/spinner/index.js";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,10 +1,10 @@
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading, Paragraph } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Nasa } from "./assets";
+import { Content } from "@components/placeholders/index.js";
+import { Div } from "@components/html/index.js";
+import { Heading, Paragraph } from "@components/typography/index.js";
+import { Illustration } from "@components/illustration/index.js";
+import { Image } from "@components/image/index.js";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Nasa } from "./assets/index.js";
 import { cloneElement } from "react";
 
 function Tile({ element, ...rest }) {
@@ -13,13 +13,13 @@ function Tile({ element, ...rest }) {
 
 export function createTileTestSuite(element, stories) {
     return stories
-        .add("default", () =>
+        .add("default", () => (
             <Tile element={element}>
                 <Heading>Fuel</Heading>
                 <Content>Fuel configuration and level</Content>
             </Tile>
-        )
-        .add("illustration", () =>
+        ))
+        .add("illustration", () => (
             <Tile element={element}>
                 <Illustration color="neutral-weakest">
                     <Image src={Nasa} width="100px" alt="Nasa Logo" />
@@ -27,8 +27,8 @@ export function createTileTestSuite(element, stories) {
                 <Heading>Fuel</Heading>
                 <Content>Fuel configuration and level</Content>
             </Tile>
-        )
-        .add("all sections", () =>
+        ))
+        .add("all sections", () => (
             <Tile element={element}>
                 <Illustration color="neutral-weakest">
                     <Image src={Nasa} width="100px" alt="Nasa Logo" />
@@ -36,48 +36,84 @@ export function createTileTestSuite(element, stories) {
                 <Heading>Fuel</Heading>
                 <Content>Fuel configuration and level</Content>
             </Tile>
-        )
-        .add("heading overflow", () =>
+        ))
+        .add("heading overflow", () => (
             <Tile element={element}>
-                <Heading>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Heading>
+                <Heading>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus
+          dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum
+          lectus, non lobortis dui nulla sed nisi.
+                </Heading>
                 <Content>Fuel configuration and level</Content>
             </Tile>
-        )
-        .add("content overflow", () =>
+        ))
+        .add("content overflow", () => (
             <Tile element={element}>
                 <Heading>Fuel</Heading>
                 <Content>
                     <Paragraph>
-                        This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures
-                        led to the radio telescope's collapse. The 57-year old structure was once the largest radio dish telescope in the world, and researchers have used its capabilities to make significant breakthroughs in astronomy.
-                        The Arecibo Observatory also served as the dramatic backdrop to films like "Contact" and "Goldeneye."
+            This year, the National Science Foundation (NSF) said farewell to
+            the iconic Arecibo Observatory in Puerto Rico after two major cable
+            failures led to the radio telescope's collapse. The 57-year old
+            structure was once the largest radio dish telescope in the world,
+            and researchers have used its capabilities to make significant
+            breakthroughs in astronomy. The Arecibo Observatory also served as
+            the dramatic backdrop to films like "Contact" and "Goldeneye."
                     </Paragraph>
-                    <Paragraph>The facility suffered two cable failures this year, and then in early December, the suspended platform above the radio dish came crashing down.</Paragraph>
-                    <Paragraph>The news about Arecibo's structural damage and subsequent decommissioning was disheartening for the local community, too. Field trips to its visitors' center are a ''rite of passage'' for Puerto Rican children.</Paragraph>
+                    <Paragraph>
+            The facility suffered two cable failures this year, and then in
+            early December, the suspended platform above the radio dish came
+            crashing down.
+                    </Paragraph>
+                    <Paragraph>
+            The news about Arecibo's structural damage and subsequent
+            decommissioning was disheartening for the local community, too.
+            Field trips to its visitors' center are a ''rite of passage'' for
+            Puerto Rican children.
+                    </Paragraph>
                 </Content>
             </Tile>
-        )
-        .add("everything overflow", () =>
+        ))
+        .add("everything overflow", () => (
             <Tile element={element}>
-                <Heading>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Heading>
+                <Heading>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus
+          dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum
+          lectus, non lobortis dui nulla sed nisi.
+                </Heading>
                 <Content>
                     <Paragraph>
-                        This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures
-                        led to the radio telescope's collapse. The 57-year old structure was once the largest radio dish telescope in the world, and researchers have used its capabilities to make significant breakthroughs in astronomy.
-                        The Arecibo Observatory also served as the dramatic backdrop to films like "Contact" and "Goldeneye."
+            This year, the National Science Foundation (NSF) said farewell to
+            the iconic Arecibo Observatory in Puerto Rico after two major cable
+            failures led to the radio telescope's collapse. The 57-year old
+            structure was once the largest radio dish telescope in the world,
+            and researchers have used its capabilities to make significant
+            breakthroughs in astronomy. The Arecibo Observatory also served as
+            the dramatic backdrop to films like "Contact" and "Goldeneye."
                     </Paragraph>
-                    <Paragraph>The facility suffered two cable failures this year, and then in early December, the suspended platform above the radio dish came crashing down.</Paragraph>
-                    <Paragraph>The news about Arecibo's structural damage and subsequent decommissioning was disheartening for the local community, too. Field trips to its visitors' center are a ''rite of passage'' for Puerto Rican children.</Paragraph>
+                    <Paragraph>
+            The facility suffered two cable failures this year, and then in
+            early December, the suspended platform above the radio dish came
+            crashing down.
+                    </Paragraph>
+                    <Paragraph>
+            The news about Arecibo's structural damage and subsequent
+            decommissioning was disheartening for the local community, too.
+            Field trips to its visitors' center are a ''rite of passage'' for
+            Puerto Rican children.
+                    </Paragraph>
                 </Content>
             </Tile>
-        )
-        .add("default checked", () =>
+        ))
+        .add("default checked", () => (
             <Tile element={element} defaultChecked>
                 <Heading>Fuel</Heading>
                 <Content>Fuel configuration and level</Content>
             </Tile>
-        )
-        .add("states", () =>
+        ))
+        .add("states", () => (
             <Stack>
                 <Inline>
                     <Tile element={element} active>
@@ -116,8 +152,8 @@ export function createTileTestSuite(element, stories) {
                     </Tile>
                 </Inline>
             </Stack>
-        )
-        .add("zoom", () =>
+        ))
+        .add("zoom", () => (
             <Stack>
                 <Div className="zoom-in">
                     <Tile element={element}>
@@ -132,8 +168,8 @@ export function createTileTestSuite(element, stories) {
                     </Tile>
                 </Div>
             </Stack>
-        )
-        .add("styling", () =>
+        ))
+        .add("styling", () => (
             <Stack>
                 <Tile element={element} border="sunken-treasure-900">
                     <Heading>Map</Heading>
@@ -148,5 +184,5 @@ export function createTileTestSuite(element, stories) {
                     <Content>View space map</Content>
                 </Tile>
             </Stack>
-        );
+        ));
 }

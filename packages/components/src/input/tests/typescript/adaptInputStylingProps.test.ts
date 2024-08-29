@@ -1,5 +1,5 @@
-import { MarginTopProp } from "@components/styling";
-import { adaptInputStylingProps } from "@components/input";
+import { MarginTopProp } from "@components/styling/index.js";
+import { adaptInputStylingProps } from "@components/input/index.js";
 import { expectAssignable } from "@test-utils";
 
 const result = adaptInputStylingProps({

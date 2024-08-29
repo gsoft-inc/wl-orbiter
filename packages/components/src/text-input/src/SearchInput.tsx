@@ -1,4 +1,4 @@
-import { AbstractTextInputProps, TextInput } from "../../text-input";
+import { AbstractTextInputProps, TextInput } from "../../text-input/index.js";
 import { ChangeEvent, ComponentProps, KeyboardEvent, SyntheticEvent, forwardRef, useCallback } from "react";
 import {
     Keys,
@@ -11,11 +11,11 @@ import {
     useControllableState,
     useEventCallback,
     useMergedRefs
-} from "../../shared";
+} from "../../shared/index.js";
 
-import { CrossButton } from "../../button";
+import { CrossButton } from "../../button/index.js";
 import { SearchIcon } from "@hopper-ui/icons";
-import { useInputGroupTextInputProps } from "../../input-group";
+import { useInputGroupTextInputProps } from "../../input-group/index.js";
 
 const DefaultElement = "input";
 

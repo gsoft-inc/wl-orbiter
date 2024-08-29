@@ -1,5 +1,5 @@
-import { Box } from "../../box";
-import { ButtonVariant, useButton } from "./useButton";
+import { Box } from "../../box/index.js";
+import { ButtonVariant, useButton } from "./useButton.js";
 import { ComponentProps, ElementType, ReactNode, forwardRef, useMemo } from "react";
 import {
     InteractionProps,
@@ -14,19 +14,19 @@ import {
     omitProps,
     slot,
     useSlots
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling";
-import { Text } from "../../typography";
-import { useFormButton } from "../../form";
-import { useInputGroupButtonAddonProps } from "../../input-group";
-import { useToolbarProps } from "../../toolbar";
-import { Spinner } from "../../spinner";
+} from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.js";
+import { Text } from "../../typography/index.js";
+import { useFormButton } from "../../form/index.js";
+import { useInputGroupButtonAddonProps } from "../../input-group/index.js";
+import { useToolbarProps } from "../../toolbar/index.js";
+import { Spinner } from "../../spinner/index.js";
 
 export type AbstractButtonProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "autoFocus"> & {
     /**
      * Whether or not the button should autoFocus on render.
      */
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     /**
      * Whether or not the button take up the width of its container.
      */

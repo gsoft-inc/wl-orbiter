@@ -1,4 +1,4 @@
-import { isNil } from "@components/shared";
+import { isNil } from "@components/shared/index.js";
 
 class ParamsBuilder {
     _canvasLayout = {}

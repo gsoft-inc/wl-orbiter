@@ -1,6 +1,6 @@
 import { ComponentProps, ElementRef, ElementType, JSXElementConstructor, forwardRef } from "react";
-import { Merge } from "./type-fest";
-import { mergeProps } from "./mergeProps";
+import { Merge } from "./type-fest.js";
+import { mergeProps } from "./mergeProps.js";
 
 export interface AsOptions {
     normalizeStyles?: boolean;
@@ -18,7 +18,7 @@ export function as<A extends JSXElementConstructor<any>, B extends ElementType>(
                     className: normalizeStyles ? "o-ui-element" : undefined,
                     ref
                 }
-            )}
+            ) as any}
         />
     ));
 }

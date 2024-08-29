@@ -16,7 +16,7 @@ import {
     TextColorMapping,
     normalizeVariable,
     useStyledSystem
-} from "@components/styling";
+} from "@components/styling/index.js";
 
 import { ComponentProps } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";

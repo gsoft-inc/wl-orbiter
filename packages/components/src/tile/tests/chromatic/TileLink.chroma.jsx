@@ -1,7 +1,6 @@
-import { TileLink } from "@components/tile";
-import { createTileLinkTestSuite } from "./createTileLinkTestSuite";
+import { TileLink } from "@components/tile/index.js";
+import { createTileLinkTestSuite } from "./createTileLinkTestSuite.js";
 import { storiesOfBuilder } from "@stories/utils";
-
 
 function stories(segment) {
     return storiesOfBuilder(module, "Chromatic/TileLink")
@@ -9,6 +8,12 @@ function stories(segment) {
         .build();
 }
 
-createTileLinkTestSuite(<TileLink orientation="horizontal" width="600px" />, stories("/horizontal"));
+createTileLinkTestSuite(
+    <TileLink orientation="horizontal" width="600px" />,
+    stories("/horizontal"),
+);
 
-createTileLinkTestSuite(<TileLink orientation="vertical" width="300px" />, stories("/vertical"));
+createTileLinkTestSuite(
+    <TileLink orientation="vertical" width="300px" />,
+    stories("/vertical"),
+);

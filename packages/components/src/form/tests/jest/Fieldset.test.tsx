@@ -1,6 +1,6 @@
-import { Field, Label } from "@components/field";
-import { Fieldset, FieldsetProps } from "@components/form";
-import { TextInput } from "@components/text-input";
+import { Field, Label } from "@components/field/index.js";
+import { Fieldset, FieldsetProps } from "@components/form/index.js";
+import { TextInput } from "@components/text-input/index.js";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 
@@ -98,7 +98,7 @@ test("when using a callback ref, ref is a DOM element", async () => {
 });
 
 test("set ref once", async () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderWithTheme(
         <BasicFieldset ref={handler} />

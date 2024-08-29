@@ -1,7 +1,7 @@
 import { Children, ComponentType, ReactElement, ReactNode, useMemo } from "react";
-import { augmentElement } from "./augmentElement";
-import { isEmptyArray, isFunction, isNil, isString, isUndefined } from "./assertions";
-import { resolveChildren } from "./resolveChildren";
+import { augmentElement } from "./augmentElement.js";
+import { isEmptyArray, isFunction, isNil, isString, isUndefined } from "./assertions.js";
+import { resolveChildren } from "./resolveChildren.js";
 
 const SlotKey = "__slot__";
 

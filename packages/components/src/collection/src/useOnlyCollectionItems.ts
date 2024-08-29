@@ -1,4 +1,4 @@
-import { CollectionItem, CollectionNode, NodeType, isSection } from "./useCollection";
+import { CollectionItem, CollectionNode, NodeType, isSection } from "./useCollection.js";
 import { useMemo } from "react";
 
 // Extracts all the nodes of "item" type.

@@ -1,3 +1,3 @@
-export * from "./Disclosure";
-export * from "./DisclosureArrow";
-export * from "./DisclosureContext";
+export * from "./Disclosure.js";
+export * from "./DisclosureArrow.js";
+export * from "./DisclosureContext.js";

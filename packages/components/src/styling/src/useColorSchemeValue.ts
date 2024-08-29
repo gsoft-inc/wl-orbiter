@@ -1,4 +1,4 @@
-import { useColorSchemeContext } from "./ColorSchemeContext";
+import { useColorSchemeContext } from "./ColorSchemeContext.js";
 
 export function useColorSchemeValue(lightColor: string, darkColor: string) {
     const { colorScheme } = useColorSchemeContext();

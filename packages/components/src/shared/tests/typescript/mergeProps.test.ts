@@ -1,4 +1,4 @@
-import { TupleTypes, mergeProps } from "@components/shared";
+import { TupleTypes, mergeProps } from "@components/shared/index.js";
 import { expectAssignable } from "@test-utils";
 
 const a1: { a?: string; b?: string } = {};

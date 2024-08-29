@@ -1,7 +1,7 @@
-import { Alert, AlertTrigger } from "@components/alert";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
+import { Alert, AlertTrigger } from "@components/alert/index.js";
+import { Button } from "@components/button/index.js";
+import { Content } from "@components/placeholders/index.js";
+import { Heading } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

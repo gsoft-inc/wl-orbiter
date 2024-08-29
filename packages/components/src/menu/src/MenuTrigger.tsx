@@ -13,12 +13,12 @@ import {
     useEventCallback,
     useId,
     useRefState
-} from "../../shared";
-import { Overlay, PopupPosition, PopupProps, usePopup } from "../../overlay";
+} from "../../shared/index.js";
+import { Overlay, PopupPosition, PopupProps, usePopup } from "../../overlay/index.js";
 
-import { DisclosureContext } from "../../disclosure";
-import { MenuTriggerContext } from "./MenuTriggerContext";
-import { useInputGroupMenuAddonProps } from "../../input-group";
+import { DisclosureContext } from "../../disclosure/index.js";
+import { MenuTriggerContext } from "./MenuTriggerContext.js";
+import { useInputGroupMenuAddonProps } from "../../input-group/index.js";
 
 const DefaultElement = "div";
 

@@ -13,13 +13,13 @@ import {
     useMergedRefs,
     useRawSlots,
     useRefState
-} from "../../shared";
+} from "../../shared/index.js";
 import { KeyboardEvent, ReactNode, Ref, SyntheticEvent, useCallback, useMemo } from "react";
-import { OverlayProps, PopupAlignment, PopupDirection, PopupPosition, usePopup, useTriggerWidth } from "../../overlay";
-import { useCollection, useOnlyCollectionItems } from "../../collection";
+import { OverlayProps, PopupAlignment, PopupDirection, PopupPosition, usePopup, useTriggerWidth } from "../../overlay/index.js";
+import { useCollection, useOnlyCollectionItems } from "../../collection/index.js";
 
-import { OptionKeyProp } from "../../listbox";
-import { ValidationState } from "../../input";
+import { OptionKeyProp } from "../../listbox/index.js";
+import { ValidationState } from "../../input/index.js";
 
 export interface UseSelectOptions {
     align?: PopupAlignment;
@@ -29,7 +29,7 @@ export interface UseSelectOptions {
     ariaDescribedBy?: string;
     ariaLabel?: string;
     ariaLabelledBy?: string;
-    autoFocus?: boolean | number;
+    autoFocus?: boolean;
     defaultOpen?: boolean;
     defaultSelectedKey?: string;
     direction?: PopupDirection;

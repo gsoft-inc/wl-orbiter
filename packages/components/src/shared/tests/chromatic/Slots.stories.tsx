@@ -1,7 +1,7 @@
-import { Box, BoxProps } from "@components/box";
-import { TextLink } from "@components/link";
+import { Box, BoxProps } from "@components/box/index.js";
+import { TextLink } from "@components/link/index.js";
 import { forwardRef, useCallback, useMemo } from "react";
-import { isNil, slot, useSlots } from "@components/shared";
+import { isNil, slot, useSlots } from "@components/shared/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 //

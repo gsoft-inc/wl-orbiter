@@ -1,8 +1,8 @@
-import { Autocomplete } from "@components/autocomplete";
-import { Div } from "@components/html";
+import { Autocomplete } from "@components/autocomplete/index.js";
+import { Div } from "@components/html/index.js";
 import { TeamIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Item } from "@components/collection";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Item } from "@components/collection/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

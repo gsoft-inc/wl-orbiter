@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.js";
 import { forwardRef, useCallback, useRef, useState, ChangeEvent, ComponentProps, FocusEvent, KeyboardEvent, ReactElement, ReactNode, SyntheticEvent } from "react";
 import {
     Keys,
@@ -13,19 +13,19 @@ import {
     useId,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { Listbox, ListboxElement, OptionKeyProp } from "../../listbox";
-import { Overlay, OverlayProps, PopupPosition, PopupProps, isDevToolsBlurEvent, isTargetParent, usePopup, useTriggerWidth } from "../../overlay";
-import { ResponsiveProp, WidthProp } from "../../styling";
-import { UseFieldInputPropsReturn, useFieldInputProps } from "../../field";
-import { getItemText, useCollectionSearch, useOnlyCollectionItems } from "../../collection";
+} from "../../shared/index.js";
+import { Listbox, ListboxElement, OptionKeyProp } from "../../listbox/index.js";
+import { Overlay, OverlayProps, PopupPosition, PopupProps, isDevToolsBlurEvent, isTargetParent, usePopup, useTriggerWidth } from "../../overlay/index.js";
+import { ResponsiveProp, WidthProp } from "../../styling/index.js";
+import { UseFieldInputPropsReturn, useFieldInputProps } from "../../field/index.js";
+import { getItemText, useCollectionSearch, useOnlyCollectionItems } from "../../collection/index.js";
 
-import { AbstractInputProps } from "../../input";
-import { HiddenAutocomplete } from "./HiddenAutocomplete";
-import { SearchInput } from "../../text-input";
-import { useDebouncedCallback } from "./useDebouncedCallback";
-import { useDeferredValue } from "./useDeferredValue";
-import { useInputGroupTextInputProps } from "../../input-group";
+import { AbstractInputProps } from "../../input/index.js";
+import { HiddenAutocomplete } from "./HiddenAutocomplete.js";
+import { SearchInput } from "../../text-input/index.js";
+import { useDebouncedCallback } from "./useDebouncedCallback.js";
+import { useDeferredValue } from "./useDeferredValue.js";
+import { useInputGroupTextInputProps } from "../../input-group/index.js";
 
 const DefaultElement = "input";
 

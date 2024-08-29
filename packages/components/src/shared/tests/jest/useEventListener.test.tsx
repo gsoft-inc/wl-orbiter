@@ -1,5 +1,5 @@
 import { renderHook, fireEvent } from "@test-utils";
-import { useEventListener } from "@components/shared";
+import { useEventListener } from "@components/shared/index.js";
 
 function createButton() {
     const element = document.createElement("button");
@@ -17,7 +17,7 @@ function appendButton() {
 }
 
 test("handler is called when the specified event is triggered on the target element", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderHook(() => useEventListener(document, "click", handler));
 
@@ -29,7 +29,7 @@ test("handler is called when the specified event is triggered on the target elem
 });
 
 test("handler is not called when another event is triggered on the target element", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderHook(() => useEventListener(document, "click", handler));
 
@@ -41,7 +41,7 @@ test("handler is not called when another event is triggered on the target elemen
 });
 
 test("handler is not called when an event is trigerred on another target element", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const div = document.createElement("div");
     document.body.append(div);
@@ -56,7 +56,7 @@ test("handler is not called when an event is trigerred on another target element
 });
 
 test("handler can be a function", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderHook(() => useEventListener(() => document, "click", handler));
 
@@ -68,8 +68,8 @@ test("handler can be a function", () => {
 });
 
 test("can listen to multiple events on the same target element", () => {
-    const clickHandler = jest.fn();
-    const mouseOverHandler = jest.fn();
+    const clickHandler = vi.fn();
+    const mouseOverHandler = vi.fn();
 
     renderHook(() => useEventListener(document, "click", clickHandler));
     renderHook(() => useEventListener(document, "mouseover", mouseOverHandler));
@@ -84,7 +84,7 @@ test("can listen to multiple events on the same target element", () => {
 });
 
 test("doesn't call handler when not active", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     renderHook(() => useEventListener(document, "click", handler, false));
 
@@ -96,7 +96,7 @@ test("doesn't call handler when not active", () => {
 });
 
 test("doesn't call handler after transitioning from active to inactive", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { rerender } = renderHook(({ active }) => useEventListener(document, "click", handler, active), {
         initialProps: {
@@ -118,7 +118,7 @@ test("doesn't call handler after transitioning from active to inactive", () => {
 });
 
 test("call handler after transitioning from inactive to active", () => {
-    const handler = jest.fn();
+    const handler = vi.fn();
 
     const { rerender } = renderHook(({ active }) => useEventListener(document, "click", handler, active), {
         initialProps: {

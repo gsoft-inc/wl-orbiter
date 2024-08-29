@@ -1,14 +1,14 @@
-import { AbstractInputProps } from "../../input";
-import { Box } from "../../box";
-import { Span } from "../../html";
+import { AbstractInputProps } from "../../input/index.js";
+import { Box } from "../../box/index.js";
+import { Span } from "../../html/index.js";
 import { ChangeEvent, ChangeEventHandler, ComponentProps, ReactNode, forwardRef, useMemo } from "react";
-import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useSlots } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Text } from "../../typography";
-import { VisuallyHidden } from "../../visually-hidden";
-import { useCheckbox } from "../../checkbox";
-import { useFieldInputProps } from "../../field";
-import { useToolbarProps } from "../../toolbar";
+import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useSlots } from "../../shared/index.js";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.js";
+import { Text } from "../../typography/index.js";
+import { VisuallyHidden } from "../../visually-hidden/index.js";
+import { useCheckbox } from "../../checkbox/index.js";
+import { useFieldInputProps } from "../../field/index.js";
+import { useToolbarProps } from "../../toolbar/index.js";
 
 const DefaultElement = "label";
 

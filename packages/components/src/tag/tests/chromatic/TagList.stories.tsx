@@ -1,11 +1,11 @@
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Dot } from "@components/dot";
+import { Counter } from "@components/counter/index.js";
+import { Div } from "@components/html/index.js";
+import { Dot } from "@components/dot/index.js";
 import { QuestionIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Item } from "@components/collection";
-import { TagList } from "@components/tag";
-import { Text } from "@components/typography";
+import { Inline, Stack } from "@components/layout/index.js";
+import { Item } from "@components/collection/index.js";
+import { TagList } from "@components/tag/index.js";
+import { Text } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
@@ -114,7 +114,7 @@ export const WithClearButton: TagListStory = {
 export const WithClearButtonEmpty: TagListStory = {
     storyName: "with clear button & empty",
     render: () => (
-        <TagList onClear={() => {}}>
+        <TagList onClear={() => {}} children={null}>
         </TagList>
     )
 };

@@ -1,12 +1,12 @@
-import { OverlayPosition, useOverlayPosition } from "./useOverlayPosition";
-import { PopupType, usePopupAriaProps } from "./usePopupAriaProps";
+import { OverlayPosition, useOverlayPosition } from "./useOverlayPosition.js";
+import { PopupType, usePopupAriaProps } from "./usePopupAriaProps.js";
 import { SyntheticEvent, useCallback } from "react";
-import { isNil, mergeProps, useControllableState, useEventCallback, useFocusManager, useFocusScope, useMergedRefs } from "../../shared";
+import { isNil, mergeProps, useControllableState, useEventCallback, useFocusManager, useFocusScope, useMergedRefs } from "../../shared/index.js";
 
-import { ResponsiveProp } from "../../styling";
-import { useOverlayTrigger } from "./useOverlayTrigger";
-import { usePopupLightDismiss } from "./usePopupLightDismiss";
-import { useRestoreFocus } from "./useRestoreFocus";
+import { ResponsiveProp } from "../../styling/index.js";
+import { useOverlayTrigger } from "./useOverlayTrigger.js";
+import { usePopupLightDismiss } from "./usePopupLightDismiss.js";
+import { useRestoreFocus } from "./useRestoreFocus.js";
 
 export type PopupAlignment = "start" | "end";
 export type PopupDirection = "top" | "bottom";

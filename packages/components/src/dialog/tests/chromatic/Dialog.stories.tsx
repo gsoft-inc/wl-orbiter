@@ -1,12 +1,12 @@
-import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
-import { Content, Footer, Header } from "@components/placeholders";
-import { Heading, Paragraph } from "@components/typography";
-import { ButtonGroup, Button } from "@components/button";
-import { Dialog } from "@components/dialog";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { TextLink } from "@components/link";
+import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets/index.js";
+import { Content, Footer, Header } from "@components/placeholders/index.js";
+import { Heading, Paragraph } from "@components/typography/index.js";
+import { ButtonGroup, Button } from "@components/button/index.js";
+import { Dialog } from "@components/dialog/index.js";
+import { Div } from "@components/html/index.js";
+import { Illustration } from "@components/illustration/index.js";
+import { Image } from "@components/image/index.js";
+import { TextLink } from "@components/link/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

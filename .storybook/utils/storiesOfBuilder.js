@@ -1,4 +1,4 @@
-import { isNil, isPlainObject } from "@components/shared";
+import { isNil, isPlainObject } from "@components/shared/index.js";
 import { storiesOf } from "@storybook/react";
 
 class StoriesOfConfigurationBuilder {

@@ -1,6 +1,6 @@
-import { Radio, RadioGroup } from "@components/radio";
-import { Counter } from "@components/counter";
-import { Text } from "@components/typography";
+import { Radio, RadioGroup } from "@components/radio/index.js";
+import { Counter } from "@components/counter/index.js";
+import { Text } from "@components/typography/index.js";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

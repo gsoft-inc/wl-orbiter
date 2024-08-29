@@ -1,8 +1,8 @@
 // Copied from https://github.com/react-restart/hooks/blob/master/src/useEventCallback.ts.
 
-import { isNil } from "./assertions";
+import { isNil } from "./assertions.js";
 import { useCallback } from "react";
-import { useCommittedRef } from "./useCommittedRef";
+import { useCommittedRef } from "./useCommittedRef.js";
 
 export function useEventCallback<TCallback extends (...args: any[]) => void>(callback: TCallback | null): TCallback {
     const ref = useCommittedRef(callback);
