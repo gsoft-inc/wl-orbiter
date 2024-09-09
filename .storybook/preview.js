@@ -1,9 +1,9 @@
 import "@css/normalize.css";
 import "@components/index.css";
-import "./styles";
+import "./styles/index.js";
 
-import { isChromatic, isDocs } from "./env.js";
-import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators.js";
+import { isChromatic, isDocs } from "./env.cjs";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators/index.js";
 
 import { Code, Highlight } from "@stories/mdx";
 import { Themes } from "./styles/themes.js";

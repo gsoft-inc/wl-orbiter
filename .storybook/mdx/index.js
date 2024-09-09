@@ -1,2 +1,2 @@
-export * from "./highlight.js";
-export * from "./code.js";
+export * from "./highlight/index.js";
+export * from "./code/index.js";

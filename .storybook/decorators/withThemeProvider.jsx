@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@components/styling/index.js";
 
-import { isChromatic } from "../env/index.js";
+import { isChromatic } from "../env.cjs";
 import { getGlobals } from "../utils/index.js";
 
 export function withThemeProvider(story, context) {

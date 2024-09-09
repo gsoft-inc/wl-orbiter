@@ -58,13 +58,61 @@ function ignorePrettierParsers(config) {
     }));
 }
 
+// This plugin is used to import `.ts` files from `.js` specifiers.
+function addResolvePlugin(config) {
+    config.resolve ??= {};
+    config.resolve.plugins ??= [];
+    config.resolve.plugins.push(new ExtensionAliasPlugin({
+        ".js": [".js", ".jsx", ".ts", ".tsx"],
+    }));
+}
+
 module.exports = {
     customizeWebpack: async config => {
         addWebpackAliases(config);
         supportPackagesWithDependencyOnNodeFileSystem(config);
         ignoreJarleWarning(config);
         ignorePrettierParsers(config);
+        addResolvePlugin(config);
 
         return config;
     }
 };
+
+class ExtensionAliasPlugin {
+    constructor(aliases = {}) {
+        this.aliases = aliases;
+    }
+    apply(resolver) {
+        const target = resolver.ensureHook("file");
+        for (const [extension, alias] of Object.entries(this.aliases)) {
+            for (const aliasExtension of alias) {
+                resolver
+                    .getHook("raw-file")
+                    .tapAsync("ExtensionAliasPlugin", (request, resolveContext, callback) => {
+                        if ( typeof request.path !== "string" || request.path.match(/(^|[\\/])node_modules($|[\\/])/u) != null) {
+                            callback();
+                            return;
+                        }
+
+                        const path = request.path.replace(extension, aliasExtension);
+                        if (path === request.path) {
+                            callback();
+                        } else {
+                            resolver.doResolve(
+                                target,
+                                {
+                                    ...request,
+                                    path,
+                                    relativePath: request.relativePath?.replace(extension, aliasExtension)
+                                },
+                                `using path: ${path}`,
+                                resolveContext,
+                                callback
+                            );
+                        }
+                    });
+            }
+        }
+    }
+}
