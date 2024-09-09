@@ -1,5 +1,6 @@
 {
     "name": "@orbit-ui/transition-components",
+    "type": "module",
     "version": "5.2.0",
     "description": "Orbiter components",
     "repository": {
@@ -25,7 +26,7 @@
     "scripts": {
         "prebuild": "yarn clean",
         "build": "run-s build:* copy-files",
-        "build:js": "tsc --build ./tsconfig.build.json",
+        "build:js": "vite build",
         "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
         "clean": "rimraf dist tsconfig.build.tsbuildinfo"
     },
@@ -37,14 +38,18 @@
     },
     "dependencies": {
         "@hopper-ui/icons": "^2.1.0",
-        "@popperjs/core": "2.11.2",
-        "react-is": "17.0.2",
-        "text-mask-core": "5.1.2",
-        "use-debounce": "7.0.1"
+        "react-is": "17.0.2"
     },
     "devDependencies": {
         "@hopper-ui/styled-system": "^2.2.0",
-        "react-aria-components": "^1.1.1"
+        "@popperjs/core": "2.11.2",
+        "@vitejs/plugin-react": "^4.3.1",
+        "react-aria-components": "^1.1.1",
+        "text-mask-core": "5.1.2",
+        "use-debounce": "7.0.1",
+        "vite": "^5.4.3",
+        "vite-plugin-dts": "^4.2.1",
+        "vite-plugin-externalize-deps": "^0.8.0"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }
