@@ -26,30 +26,29 @@
     "scripts": {
         "prebuild": "yarn clean",
         "build": "run-s build:* copy-files",
-        "build:js": "vite build",
+        "build:js": "tsup",
+        "build:types": "tsc --build ./tsconfig.build.json",
         "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
         "clean": "rimraf dist tsconfig.build.tsbuildinfo"
     },
     "peerDependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
         "@hopper-ui/styled-system": "*",
-        "react-aria-components": "*"
+        "react": "^18.0.0",
+        "react-aria-components": "*",
+        "react-dom": "^18.0.0"
     },
     "dependencies": {
         "@hopper-ui/icons": "^2.1.0",
+        "react-aria-components": "^1.1.1",
         "react-is": "17.0.2"
     },
     "devDependencies": {
         "@hopper-ui/styled-system": "^2.2.0",
         "@popperjs/core": "2.11.2",
         "@vitejs/plugin-react": "^4.3.1",
-        "react-aria-components": "^1.1.1",
         "text-mask-core": "5.1.2",
-        "use-debounce": "7.0.1",
-        "vite": "^5.4.3",
-        "vite-plugin-dts": "^4.2.1",
-        "vite-plugin-externalize-deps": "^0.8.0"
+        "tsup": "^8.2.4",
+        "use-debounce": "7.0.1"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }
