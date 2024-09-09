@@ -1,5 +1,3 @@
-import "./CrossButton.css";
-
 import { AbstractIconButtonProps, IconButton, InnerIconButton } from "./IconButton.js";
 import { ComponentProps, forwardRef } from "react";
 import { DismissIcon } from "@hopper-ui/icons";
