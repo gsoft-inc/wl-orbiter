@@ -1,5 +1,6 @@
 {
     "name": "@orbit-ui/transition-css",
+    "type": "module",
     "version": "2.3.0",
     "description": "Orbiter CSS bootstrap",
     "repository": {
