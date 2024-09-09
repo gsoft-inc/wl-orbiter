@@ -45,7 +45,6 @@
     "devDependencies": {
         "@hopper-ui/styled-system": "^2.2.0",
         "@popperjs/core": "2.11.2",
-        "@vitejs/plugin-react": "^4.3.1",
         "text-mask-core": "5.1.2",
         "tsup": "^8.2.4",
         "use-debounce": "7.0.1"
