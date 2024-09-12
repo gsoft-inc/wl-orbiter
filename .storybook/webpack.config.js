@@ -58,12 +58,32 @@ function ignorePrettierParsers(config) {
     }));
 }
 
+/*
+ * Webpack v4 and Storybook v6 use MD4 for hashing, which cannot be overriden.
+ *
+ * The MD4 algorithm is not available anymore in Node.js 17+ (because of library SSL 3).
+ * So, we silently replace MD4 by the MD5 algorithm.
+ */
+function monkeyPatchHashFunction() {
+    const crypto = require('crypto');
+
+    const _createHash = crypto.createHash;
+
+    crypto.createHash = (algorithm, options) => {
+        return _createHash(
+            algorithm === 'md4' ? 'md5' : algorithm,
+            options
+        );
+      };
+}
+
 module.exports = {
     customizeWebpack: async config => {
         addWebpackAliases(config);
         supportPackagesWithDependencyOnNodeFileSystem(config);
         ignoreJarleWarning(config);
         ignorePrettierParsers(config);
+        monkeyPatchHashFunction();
 
         return config;
     }
