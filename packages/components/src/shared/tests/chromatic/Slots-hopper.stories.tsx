@@ -7,7 +7,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 //
 // eslint-disable-next-line storybook/csf-component
 export default {
-    title: "Chromatic/Slots"
+    title: "Chromatic/Slots-hopper"
 } as ComponentMeta<any>;
 
 type SlotStory = ComponentStoryObj<any>;

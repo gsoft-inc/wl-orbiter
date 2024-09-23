@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/ThemeProvider",
+    title: "Chromatic/ThemeProvider-hopper",
     component: ThemeProvider,
     parameters: {
         chromatic: {

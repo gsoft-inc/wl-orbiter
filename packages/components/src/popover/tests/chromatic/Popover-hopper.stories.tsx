@@ -13,7 +13,7 @@ import { TextLink } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Popover",
+    title: "Chromatic/Popover-hopper",
     component: Popover
 } as ComponentMeta<typeof Popover>;
 

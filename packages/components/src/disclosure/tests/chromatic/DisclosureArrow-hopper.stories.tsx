@@ -3,7 +3,7 @@ import { Inline } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/DisclosureArrow",
+    title: "Chromatic/DisclosureArrow-hopper",
     component: DisclosureArrow,
     parameters: {
         chromatic: {

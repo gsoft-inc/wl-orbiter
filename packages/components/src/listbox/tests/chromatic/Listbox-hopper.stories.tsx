@@ -9,7 +9,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Listbox",
+    title: "Chromatic/Listbox-hopper",
     component: Listbox,
     parameters: {
         chromatic: {

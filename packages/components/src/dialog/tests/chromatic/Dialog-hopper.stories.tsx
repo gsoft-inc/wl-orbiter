@@ -10,7 +10,7 @@ import { TextLink } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Dialog",
+    title: "Chromatic/Dialog-hopper",
     component: Dialog
 } as ComponentMeta<typeof Dialog>;
 

@@ -6,7 +6,7 @@ import { Tile, TileGroup, TileLink } from "@components/tile";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/TileGroup",
+    title: "Chromatic/TileGroup-hopper",
     component: TileGroup
 } as ComponentMeta<typeof TileGroup>;
 

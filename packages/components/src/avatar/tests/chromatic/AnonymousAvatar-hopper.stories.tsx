@@ -17,7 +17,7 @@ export default {
             }
         }
     },
-    title: "Chromatic/Avatar - Anonymous"
+    title: "Chromatic/Avatar-hopper - Anonymous"
 } as ComponentMeta<typeof AnonymousAvatar>;
 
 type AnonymousAvatarStory = ComponentStoryObj<typeof AnonymousAvatar>;

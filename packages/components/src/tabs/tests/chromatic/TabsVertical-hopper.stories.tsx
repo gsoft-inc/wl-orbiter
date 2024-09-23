@@ -9,7 +9,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Tabs/vertical",
+    title: "Chromatic/Tabs-hopper/vertical",
     component: Tabs,
     parameters: {
         chromatic: {

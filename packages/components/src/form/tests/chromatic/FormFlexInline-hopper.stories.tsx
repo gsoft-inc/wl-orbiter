@@ -9,7 +9,7 @@ import { TextLinkAsButton } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Form/flex inline",
+    title: "Chromatic/Form-hopper/flex inline",
     component: Form
 } as ComponentMeta<typeof Form>;
 

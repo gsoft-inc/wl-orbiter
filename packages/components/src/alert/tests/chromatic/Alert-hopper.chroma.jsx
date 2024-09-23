@@ -5,7 +5,7 @@ import { createTestSuite } from "./createTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Alert")
+    return storiesOfBuilder(module, "Chromatic/Alert-hopper")
         .segment(segment)
         .build();
 }

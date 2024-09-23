@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { Launch, Mars } from "./assets";
 
 export default {
-    title: "Chromatic/Image",
+    title: "Chromatic/Image-hopper",
     component: Image
 } as ComponentMeta<typeof Image>;
 

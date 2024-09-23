@@ -8,7 +8,7 @@ import { useCheckableProps } from "@components/shared";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/CheckboxGroup",
+    title: "Chromatic/CheckboxGroup-hopper",
     component: CheckboxGroup,
     parameters: {
         chromatic: {

@@ -4,7 +4,7 @@ import { Inline, Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Dot",
+    title: "Chromatic/Dot-hopper",
     component: Dot
 } as ComponentMeta<typeof Dot>;
 

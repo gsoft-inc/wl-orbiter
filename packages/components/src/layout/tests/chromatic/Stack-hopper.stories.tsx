@@ -3,7 +3,7 @@ import { Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Stack",
+    title: "Chromatic/Stack-hopper",
     component: Stack
 } as ComponentMeta<typeof Stack>;
 

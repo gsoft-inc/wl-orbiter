@@ -4,7 +4,7 @@ import { Inline, Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/CheckboxGroup/vertical",
+    title: "Chromatic/CheckboxGroup-hopper/vertical",
     component: CheckboxGroup,
     parameters: {
         chromatic: {

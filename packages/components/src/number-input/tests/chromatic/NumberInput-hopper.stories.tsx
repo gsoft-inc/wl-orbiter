@@ -5,7 +5,7 @@ import { NumberInput } from "@components/number-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/NumberInput",
+    title: "Chromatic/NumberInput-hopper",
     component: NumberInput,
     parameters: {
         chromatic: {

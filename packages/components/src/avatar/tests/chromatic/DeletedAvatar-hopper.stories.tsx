@@ -17,7 +17,7 @@ export default {
             }
         }
     },
-    title: "Chromatic/Avatar - Deleted"
+    title: "Chromatic/Avatar-hopper - Deleted"
 } as ComponentMeta<typeof DeletedAvatar>;
 
 type DeletedAvatarStory = ComponentStoryObj<typeof DeletedAvatar>;

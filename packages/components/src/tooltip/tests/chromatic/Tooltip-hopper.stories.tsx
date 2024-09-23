@@ -7,7 +7,7 @@ import { Tooltip, TooltipTrigger } from "@components/tooltip";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Tooltip",
+    title: "Chromatic/Tooltip-hopper",
     component: Tooltip,
     decorators: [
         Story => (

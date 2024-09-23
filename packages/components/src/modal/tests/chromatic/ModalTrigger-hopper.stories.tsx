@@ -5,7 +5,7 @@ import { Content } from "@components/placeholders";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/ModalTrigger",
+    title: "Chromatic/ModalTrigger-hopper",
     component: ModalTrigger
 } as ComponentMeta<typeof ModalTrigger>;
 

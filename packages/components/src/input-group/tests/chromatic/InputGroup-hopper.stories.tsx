@@ -16,7 +16,7 @@ import { subMonths, subWeeks } from "date-fns";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/InputGroup",
+    title: "Chromatic/InputGroup-hopper",
     component: InputGroup
 } as ComponentMeta<typeof InputGroup>;
 

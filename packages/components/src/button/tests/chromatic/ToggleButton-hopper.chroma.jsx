@@ -4,7 +4,7 @@ import { createToggleButtonTestSuite } from "./createToggleButtonTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/ToggleButton")
+    return storiesOfBuilder(module, "Chromatic/ToggleButton-hopper")
         .segment(segment)
         .build();
 }

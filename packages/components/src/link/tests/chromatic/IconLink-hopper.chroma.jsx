@@ -5,7 +5,7 @@ import { createIconLinkTestSuite } from "./createIconLinkTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/IconLink")
+    return storiesOfBuilder(module, "Chromatic/IconLink-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

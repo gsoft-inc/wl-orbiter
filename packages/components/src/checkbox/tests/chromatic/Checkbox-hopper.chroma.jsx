@@ -4,7 +4,7 @@ import { createCheckboxTestSuite } from "./createCheckboxTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Checkbox")
+    return storiesOfBuilder(module, "Chromatic/Checkbox-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

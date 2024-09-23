@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
     component: Loader,
-    title: "Chromatic/Loader",
+    title: "Chromatic/Loader-hopper",
     parameters: {
         chromatic: {
             delay: 100,

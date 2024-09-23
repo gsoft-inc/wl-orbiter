@@ -5,7 +5,7 @@ import { TextLink } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Label",
+    title: "Chromatic/Label-hopper",
     component: Label
 } as ComponentMeta<typeof Label>;
 

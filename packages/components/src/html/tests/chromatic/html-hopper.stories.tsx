@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { PropsWithChildren } from "react";
 
 export default {
-    title: "Chromatic/Html",
+    title: "Chromatic/Html-hopper",
     component: StyleProvider
 } as ComponentMeta<typeof StyleProvider>;
 

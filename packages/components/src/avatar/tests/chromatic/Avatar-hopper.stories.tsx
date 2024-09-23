@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { Astronaut, Person } from "./assets";
 
 export default {
-    title: "Chromatic/Avatar",
+    title: "Chromatic/Avatar-hopper",
     component: Avatar,
     parameters: {
         a11y: {

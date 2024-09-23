@@ -4,7 +4,7 @@ import { createTagTestSuite } from "./createTagTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Tag")
+    return storiesOfBuilder(module, "Chromatic/Tag-hopper")
         .segment(segment)
         .build();
 }

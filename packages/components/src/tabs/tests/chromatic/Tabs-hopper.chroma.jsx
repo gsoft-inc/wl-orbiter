@@ -10,7 +10,7 @@ import { createTabsTestSuite } from "./createTabsTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Tabs")
+    return storiesOfBuilder(module, "Chromatic/Tabs-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

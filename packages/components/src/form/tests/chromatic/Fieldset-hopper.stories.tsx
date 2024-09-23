@@ -7,7 +7,7 @@ import { TextInput } from "@components/text-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Fieldset",
+    title: "Chromatic/Fieldset-hopper",
     component: Fieldset
 } as ComponentMeta<typeof Fieldset>;
 

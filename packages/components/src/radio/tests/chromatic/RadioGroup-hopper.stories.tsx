@@ -12,7 +12,7 @@ import { as, useCheckableProps } from "@components/shared";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/RadioGroup",
+    title: "Chromatic/RadioGroup-hopper",
     component: RadioGroup,
     parameters: {
         chromatic: {

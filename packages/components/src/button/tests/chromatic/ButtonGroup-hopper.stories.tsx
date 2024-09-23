@@ -6,7 +6,7 @@ import { TextLinkAsButton } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/ButtonGroup",
+    title: "Chromatic/ButtonGroup-hopper",
     component: ButtonGroup
 } as ComponentMeta<typeof ButtonGroup>;
 

@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
     component: Badge,
-    title: "Chromatic/Badge/dot"
+    title: "Chromatic/Badge-hopper/dot"
 } as ComponentMeta<typeof Badge>;
 
 type BadgeStory = ComponentStoryObj<typeof Badge>;

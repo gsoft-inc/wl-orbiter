@@ -18,7 +18,7 @@ export default {
             }
         }
     },
-    title: "Chromatic/AvatarGroup"
+    title: "Chromatic/AvatarGroup-hopper"
 } as ComponentMeta<typeof AvatarGroup>;
 
 type AvatarGroupStory = ComponentStoryObj<typeof AvatarGroup>;

@@ -6,7 +6,7 @@ import { TextArea } from "@components/text-area";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/TextArea",
+    title: "Chromatic/TextArea-hopper",
     component: TextArea,
     parameters: {
         chromatic: {

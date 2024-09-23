@@ -10,7 +10,7 @@ import { Overlay } from "@components/overlay";
 import { createTestSuite } from "./createTestSuite";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Select")
+    return storiesOfBuilder(module, "Chromatic/Select-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

@@ -10,7 +10,7 @@ import { createTestSuite } from "./createTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Card")
+    return storiesOfBuilder(module, "Chromatic/Card-hopper")
         .segment(segment)
         .build();
 }

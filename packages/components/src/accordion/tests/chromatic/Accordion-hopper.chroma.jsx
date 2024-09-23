@@ -7,7 +7,7 @@ import { createAccordionTestSuite } from "./createAccordionTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Accordion")
+    return storiesOfBuilder(module, "Chromatic/Accordion-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

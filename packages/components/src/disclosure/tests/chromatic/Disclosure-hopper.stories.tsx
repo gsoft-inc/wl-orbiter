@@ -7,7 +7,7 @@ import { TextLinkAsButton } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Disclosure",
+    title: "Chromatic/Disclosure-hopper",
     component: Disclosure
 } as ComponentMeta<typeof Disclosure>;
 

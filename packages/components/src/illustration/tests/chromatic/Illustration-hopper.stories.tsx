@@ -7,7 +7,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { Nasa } from "./assets";
 
 export default {
-    title: "Chromatic/Illustration",
+    title: "Chromatic/Illustration-hopper",
     component: Illustration
 } as ComponentMeta<typeof Illustration>;
 

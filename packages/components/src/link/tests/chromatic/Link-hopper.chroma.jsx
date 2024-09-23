@@ -8,7 +8,7 @@ import { createLinkTestSuite } from "./createLinkTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Link")
+    return storiesOfBuilder(module, "Chromatic/Link-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

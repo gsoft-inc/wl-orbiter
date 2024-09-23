@@ -3,7 +3,7 @@ import { Inline } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Inline",
+    title: "Chromatic/Inline-hopper",
     component: Inline
 } as ComponentMeta<typeof Inline>;
 

@@ -7,7 +7,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Lozenge",
+    title: "Chromatic/Lozenge-hopper",
     component: Lozenge
 } as ComponentMeta<typeof Lozenge>;
 

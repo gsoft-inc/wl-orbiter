@@ -13,7 +13,7 @@ import { Toolbar } from "@components/toolbar";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Toolbar",
+    title: "Chromatic/Toolbar-hopper",
     component: Toolbar,
     parameters: {
         chromatic: {

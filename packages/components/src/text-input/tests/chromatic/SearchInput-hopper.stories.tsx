@@ -6,7 +6,7 @@ import { SearchInput } from "@components/text-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/SearchInput",
+    title: "Chromatic/SearchInput-hopper",
     component: SearchInput
 } as ComponentMeta<typeof SearchInput>;
 

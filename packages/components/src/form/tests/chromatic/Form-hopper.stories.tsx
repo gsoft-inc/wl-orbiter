@@ -11,7 +11,7 @@ import { TextLinkAsButton } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Form",
+    title: "Chromatic/Form-hopper",
     component: Form
 } as ComponentMeta<typeof Form>;
 

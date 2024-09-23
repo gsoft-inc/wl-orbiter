@@ -4,7 +4,7 @@ import { Stack } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/IconList",
+    title: "Chromatic/IconList-hopper",
     component: IconList
 } as ComponentMeta<typeof IconList>;
 

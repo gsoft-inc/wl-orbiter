@@ -6,7 +6,7 @@ import { Item } from "@components/collection";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Autocomplete",
+    title: "Chromatic/Autocomplete-hopper",
     component: Autocomplete,
     parameters: {
         chromatic: {

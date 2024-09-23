@@ -5,7 +5,7 @@ import { Radio } from "@components/radio";
 import { createRadioTestSuite } from "./createRadioTestSuite";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Radio")
+    return storiesOfBuilder(module, "Chromatic/Radio-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

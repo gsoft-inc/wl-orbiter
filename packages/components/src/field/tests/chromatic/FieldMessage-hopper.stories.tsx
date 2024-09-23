@@ -8,7 +8,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { ReactNode } from "react";
 
 export default {
-    title: "Chromatic/FieldMessage",
+    title: "Chromatic/FieldMessage-hopper",
     component: HelpMessage
 } as ComponentMeta<typeof HelpMessage>;
 

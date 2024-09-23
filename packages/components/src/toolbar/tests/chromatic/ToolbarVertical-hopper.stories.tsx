@@ -7,7 +7,7 @@ import { Toolbar } from "@components/toolbar";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Toolbar/vertical",
+    title: "Chromatic/Toolbar-hopper/vertical",
     component: Toolbar,
     parameters: {
         chromatic: {

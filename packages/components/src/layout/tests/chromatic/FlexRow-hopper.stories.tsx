@@ -3,7 +3,7 @@ import { Flex, Inline } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Flex/Row",
+    title: "Chromatic/Flex-hopper/Row",
     component: Flex
 } as ComponentMeta<typeof Flex>;
 

@@ -9,7 +9,7 @@ import { Nasa } from "./assets";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/IllustratedMessage",
+    title: "Chromatic/IllustratedMessage-hopper",
     component: IllustratedMessage
 } as ComponentMeta<typeof IllustratedMessage>;
 

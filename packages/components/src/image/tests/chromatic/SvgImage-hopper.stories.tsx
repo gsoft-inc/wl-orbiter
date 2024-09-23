@@ -4,7 +4,7 @@ import { SvgImage } from "@components/image";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/SvgImage",
+    title: "Chromatic/SvgImage-hopper",
     component: SvgImage
 } as ComponentMeta<typeof SvgImage>;
 

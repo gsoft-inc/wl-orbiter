@@ -6,7 +6,7 @@ import { createButtonTestSuite } from "./createButtonTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Button")
+    return storiesOfBuilder(module, "Chromatic/Button-hopper")
         .segment(segment)
         .build();
 }

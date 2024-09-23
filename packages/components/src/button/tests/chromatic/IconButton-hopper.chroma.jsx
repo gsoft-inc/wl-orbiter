@@ -5,7 +5,7 @@ import { createIconButtonTestSuite } from "./createIconButtonTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/IconButton")
+    return storiesOfBuilder(module, "Chromatic/IconButton-hopper")
         .segment(segment)
         .build();
 }

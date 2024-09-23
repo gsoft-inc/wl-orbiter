@@ -7,7 +7,7 @@ import { TextLink } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Divider/vertical",
+    title: "Chromatic/Divider-hopper/vertical",
     component: Divider
 } as ComponentMeta<typeof Divider>;
 

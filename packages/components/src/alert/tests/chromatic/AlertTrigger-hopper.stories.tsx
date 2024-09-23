@@ -5,7 +5,7 @@ import { Heading } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/AlertTrigger",
+    title: "Chromatic/AlertTrigger-hopper",
     component: AlertTrigger
 } as ComponentMeta<typeof AlertTrigger>;
 

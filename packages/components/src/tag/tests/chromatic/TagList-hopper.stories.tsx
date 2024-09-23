@@ -9,7 +9,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/TagList",
+    title: "Chromatic/TagList-hopper",
     component: TagList
 } as ComponentMeta<typeof TagList>;
 

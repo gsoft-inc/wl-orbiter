@@ -10,7 +10,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Menu",
+    title: "Chromatic/Menu-hopper",
     component: Menu,
     parameters: {
         chromatic: {

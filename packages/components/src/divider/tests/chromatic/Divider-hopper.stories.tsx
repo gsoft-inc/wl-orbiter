@@ -5,7 +5,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Divider",
+    title: "Chromatic/Divider-hopper",
     component: Divider
 } as ComponentMeta<typeof Divider>;
 

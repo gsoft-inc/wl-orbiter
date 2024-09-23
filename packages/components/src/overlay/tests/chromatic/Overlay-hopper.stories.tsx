@@ -6,7 +6,7 @@ import { forwardRef, ReactElement, useState } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Overlay",
+    title: "Chromatic/Overlay-hopper",
     component: Overlay,
     parameters: {
         chromatic: {

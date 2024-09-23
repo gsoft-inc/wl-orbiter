@@ -6,7 +6,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
     component: ButtonGroup,
-    title: "Chromatic/ButtonGroup/vertical"
+    title: "Chromatic/ButtonGroup-hopper/vertical"
 } as ComponentMeta<typeof ButtonGroup>;
 
 type ButtonGroupStory = ComponentStoryObj<typeof ButtonGroup>;

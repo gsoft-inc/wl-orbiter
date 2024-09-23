@@ -9,7 +9,7 @@ import { createTileTestSuite } from "./createTileTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Tile")
+    return storiesOfBuilder(module, "Chromatic/Tile-hopper")
         .segment(segment)
         .build();
 }

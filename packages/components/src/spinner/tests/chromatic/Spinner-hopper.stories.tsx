@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
     component: Spinner,
-    title: "Chromatic/Spinner",
+    title: "Chromatic/Spinner-hopper",
     parameters: {
         chromatic: {
             delay: 100,

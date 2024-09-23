@@ -3,7 +3,7 @@ import { TextLink } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Paragraph",
+    title: "Chromatic/Paragraph-hopper",
     component: Paragraph
 } as ComponentMeta<typeof Paragraph>;
 

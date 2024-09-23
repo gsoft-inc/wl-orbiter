@@ -4,7 +4,7 @@ import { createTestSuite } from "./createTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Switch")
+    return storiesOfBuilder(module, "Chromatic/Switch-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

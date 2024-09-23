@@ -7,7 +7,7 @@ import { Radio, RadioGroup } from "@components/radio";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/GroupField",
+    title: "Chromatic/GroupField-hopper",
     component: GroupField
 } as ComponentMeta<typeof GroupField>;
 

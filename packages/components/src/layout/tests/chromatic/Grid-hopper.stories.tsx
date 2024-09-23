@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 const viewports = [640, 768, 1024, 1280, 1440];
 
 export default {
-    title: "Chromatic/Grid",
+    title: "Chromatic/Grid-hopper",
     component: Grid
 } as ComponentMeta<typeof Grid>;
 

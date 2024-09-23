@@ -4,7 +4,7 @@ import { createButtonTestSuite } from "./createButtonTestSuite";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/ButtonAsLink")
+    return storiesOfBuilder(module, "Chromatic/ButtonAsLink-hopper")
         .segment(segment)
         .build();
 }

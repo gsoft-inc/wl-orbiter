@@ -5,7 +5,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Counter",
+    title: "Chromatic/Counter-hopper",
     component: Counter
 } as ComponentMeta<typeof Counter>;
 

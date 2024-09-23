@@ -4,7 +4,7 @@ import { storiesOfBuilder } from "@stories/utils";
 
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/TileLink")
+    return storiesOfBuilder(module, "Chromatic/TileLink-hopper")
         .segment(segment)
         .build();
 }

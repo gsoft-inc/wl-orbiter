@@ -2,7 +2,7 @@ import { Underlay } from "@components/overlay";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Underlay",
+    title: "Chromatic/Underlay-hopper",
     component: Underlay,
     parameters: {
         chromatic: {

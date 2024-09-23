@@ -7,7 +7,7 @@ import { TextInput } from "@components/text-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/TextInput",
+    title: "Chromatic/TextInput-hopper",
     component: TextInput
 } as ComponentMeta<typeof TextInput>;
 

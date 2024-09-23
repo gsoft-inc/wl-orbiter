@@ -4,7 +4,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Text",
+    title: "Chromatic/Text-hopper",
     component: Text
 } as ComponentMeta<typeof Text>;
 

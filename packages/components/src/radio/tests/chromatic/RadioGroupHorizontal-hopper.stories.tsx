@@ -4,7 +4,7 @@ import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/RadioGroup/horizontal",
+    title: "Chromatic/RadioGroup-hopper/horizontal",
     component: RadioGroup,
     parameters: {
         chromatic: {

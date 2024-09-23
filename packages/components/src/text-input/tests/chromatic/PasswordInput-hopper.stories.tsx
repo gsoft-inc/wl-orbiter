@@ -4,7 +4,7 @@ import { PasswordInput } from "@components/text-input";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/PasswordInput",
+    title: "Chromatic/PasswordInput-hopper",
     component: PasswordInput
 } as ComponentMeta<typeof PasswordInput>;
 

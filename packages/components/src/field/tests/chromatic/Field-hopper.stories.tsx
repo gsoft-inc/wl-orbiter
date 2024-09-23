@@ -16,7 +16,7 @@ import { TextArea } from "@components/text-area";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Field",
+    title: "Chromatic/Field-hopper",
     component: Field
 } as ComponentMeta<typeof Field>;
 

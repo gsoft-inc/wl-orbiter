@@ -4,7 +4,7 @@ import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 import { subMonths, subWeeks } from "date-fns";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/DateRangeInput")
+    return storiesOfBuilder(module, "Chromatic/DateRangeInput-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

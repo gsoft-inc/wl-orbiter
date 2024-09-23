@@ -6,7 +6,7 @@ import { Heading } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/PopoverTrigger",
+    title: "Chromatic/PopoverTrigger-hopper",
     component: PopoverTrigger,
     decorators: [
         Story => (

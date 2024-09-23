@@ -18,7 +18,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-    title: "Chromatic/Sharegate"
+    title: "Chromatic/Sharegate-hopper"
 } as ComponentMeta<any>;
 
 type ShareGateStory = ComponentStoryObj<any>;

@@ -10,7 +10,7 @@ import { forwardRef } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/MenuTrigger",
+    title: "Chromatic/MenuTrigger-hopper",
     component: MenuTrigger,
     parameters: {
         chromatic: {

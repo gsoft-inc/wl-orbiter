@@ -4,7 +4,7 @@ import { createTextLinkTestSuite } from "./createTextLinkTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/TextLink")
+    return storiesOfBuilder(module, "Chromatic/TextLink-hopper")
         .segment(segment)
         .parameters(paramsBuilder()
             .chromaticDelay(100)

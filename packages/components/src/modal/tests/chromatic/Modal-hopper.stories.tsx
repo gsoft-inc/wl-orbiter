@@ -11,7 +11,7 @@ import { Modal } from "@components/modal";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Modal",
+    title: "Chromatic/Modal-hopper",
     component: Modal
 } as ComponentMeta<typeof Modal>;
 

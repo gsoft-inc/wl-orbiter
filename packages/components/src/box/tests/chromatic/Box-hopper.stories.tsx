@@ -3,7 +3,7 @@ import { Inline } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
-    title: "Chromatic/Box",
+    title: "Chromatic/Box-hopper",
     component: Box,
     parameters: {
         chromatic: { delay: 100 }
