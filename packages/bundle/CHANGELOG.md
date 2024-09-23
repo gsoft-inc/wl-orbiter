@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.2.1
+
+### Patch Changes
+
+- cbff3a462: Made sure counter is aligned properly inside Tag by match the font-size.
+
 ## 5.2.0
 
 ### Patch Changes
