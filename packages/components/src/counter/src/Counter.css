@@ -27,12 +27,14 @@
 
 /* BASIC */
 .o-ui-counter-basic {
-    display: inline-block;
+    align-items: center;
+    display: inline-flex;
 }
 
 /* DIVIDER */
 .o-ui-counter-divider {
-    display: inline-block;
+    align-items: center;
+    display: inline-flex;
     position: relative;
     padding-left: var(--hop-space-inset-sm);
 }

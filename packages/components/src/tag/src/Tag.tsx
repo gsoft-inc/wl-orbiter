@@ -48,6 +48,11 @@ const textSize = createSizeAdapter({
     "md": "sm"
 });
 
+const counterSize = createSizeAdapter({
+    "sm": "xs",
+    "md": "sm"
+});
+
 const embedIconButton = createEmbeddableAdapter({
     "sm": "2xs",
     "md": "2xs"
@@ -93,7 +98,7 @@ export function InnerTag(props: InnerTagProps) {
             color: "inherit",
             disabled,
             pushed: true,
-            size: sizeValue
+            size: counterSize(sizeValue)
         },
         dot: {
             className: "o-ui-tag-dot",
