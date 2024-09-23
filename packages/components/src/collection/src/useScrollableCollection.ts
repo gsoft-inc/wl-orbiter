@@ -71,10 +71,10 @@ export function useScrollableCollection(containerRef: RefObject<Element>, nodes:
 
                     const { y: containerY } = containerRef.current.getBoundingClientRect();
 
-                    // If the container and direction is bottom is overflowing the boundary, adjust the height
+                    // If the direction is `bottom` and the container is overflowing the boundary, adjust the height.
                     if (height + containerY > boundaryHeight) {
                         height = boundaryHeight - containerY;
-                        // If the container and direction is top is overflowing the boundary, adjust the height
+                        // If the direction is `top` and the container is overflowing the boundary, adjust the height
                     } else if (containerY < 0) {
                         height = height + containerY;
                     }
