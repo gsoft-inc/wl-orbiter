@@ -48,6 +48,10 @@ export interface InnerListboxProps extends InternalProps, StyledComponentProps<t
      */
     autoFocusTarget?: string;
     /**
+     * This describes the area that the element will be checked for overflow relative to.
+     */
+    boundaryElement?: HTMLElement;
+    /**
      * The initial value of `selectedKeys` when uncontrolled.
      */
     defaultSelectedKeys?: string[];
@@ -161,6 +165,7 @@ export function InnerListbox({
     autoFocus,
     // TODO: Could it be removed now that useImperativeHandle expose the focus? If yes, also remove from Menu (which might not event need the useImperativeHandle)
     autoFocusTarget,
+    boundaryElement,
     children,
     defaultSelectedKeys,
     fluid,
@@ -366,6 +371,7 @@ export function InnerListbox({
 
     const scrollableProps = useScrollableCollection(containerRef, nodes, {
         borderHeight: 2,
+        boundaryElement,
         itemSelector: ".o-ui-listbox-option",
         maxHeight: 12 * ListboxItemHeight + 2 * ListboxItemHeight,
         paddingHeight: 16,

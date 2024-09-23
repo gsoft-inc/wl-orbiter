@@ -31,6 +31,10 @@ const DefaultElement = "input";
 
 export interface InnerAutocompleteProps extends PopupProps, Omit<AbstractInputProps<typeof DefaultElement>, "zIndex"> {
     /**
+     * This describes the area that the element will be checked for overflow relative to.
+     */
+    boundaryElement?: HTMLElement;
+    /**
      * React children.
      */
     children: ReactNode;
@@ -110,6 +114,7 @@ export function InnerAutocomplete(props: InnerAutocompleteProps) {
         "aria-labelledby": ariaLabelledBy,
         as = DefaultElement,
         autoFocus,
+        boundaryElement,
         children,
         clearOnSelect,
         defaultOpen,
@@ -369,6 +374,7 @@ export function InnerAutocomplete(props: InnerAutocompleteProps) {
             // An autocomplete doesn't support any persisted selected keys.
             aria-label={ariaLabel}
             aria-labelledby={isNil(ariaLabel) ? ariaLabelledBy ?? triggerId : undefined}
+            boundaryElement={boundaryElement}
             className="o-ui-autocomplete-listbox"
             fluid
             focusOnHover

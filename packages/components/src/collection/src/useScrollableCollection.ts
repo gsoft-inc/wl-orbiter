@@ -4,6 +4,7 @@ import { isNil, useIsomorphicLayoutEffect } from "../../shared";
 
 interface UseScrollableCollectionOptions {
     borderHeight?: number;
+    boundaryElement?: HTMLElement;
     disabled?: boolean;
     dividerSelector?: string;
     itemSelector?: string;
@@ -34,6 +35,7 @@ function getOuterHeight(element: HTMLElement) {
 export function useScrollableCollection(containerRef: RefObject<Element>, nodes: CollectionNode[],
     {
         borderHeight = 0,
+        boundaryElement,
         disabled,
         dividerSelector,
         itemSelector,
@@ -63,6 +65,20 @@ export function useScrollableCollection(containerRef: RefObject<Element>, nodes:
 
                     height += outerHeight;
                 });
+
+                if (boundaryElement) {
+                    const { offsetHeight: boundaryHeight } = boundaryElement;
+
+                    const { y: containerY } = containerRef.current.getBoundingClientRect();
+
+                    // If the container and direction is bottom is overflowing the boundary, adjust the height
+                    if (height + containerY > boundaryHeight) {
+                        height = boundaryHeight - containerY;
+                        // If the container and direction is top is overflowing the boundary, adjust the height
+                    } else if (containerY < 0) {
+                        height = height + containerY;
+                    }
+                }
 
                 setCollectionHeight(`${height}px`);
             }
