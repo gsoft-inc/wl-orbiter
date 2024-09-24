@@ -19,6 +19,9 @@
         "!/dist/**/tests/*",
         "index.css"
     ],
+    "sideEffects": [
+        "*.css"
+    ],
     "publishConfig": {
         "access": "public",
         "provenance": true

@@ -18,5 +18,8 @@
     "publishConfig": {
         "access": "public",
         "provenance": true
-    }
+    },
+    "sideEffects": [
+        "*.css"
+    ]
 }

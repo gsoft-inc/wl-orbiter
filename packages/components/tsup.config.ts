@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-    entry: ["./src/index.ts"],
+    entry: ["./src/**/*.(ts|tsx)", "!./src/**/(tests|docs)/**/*"],
     format: "esm",
     noExternal: [
         "@popperjs/core",
