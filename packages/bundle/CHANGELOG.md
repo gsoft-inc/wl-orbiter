@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.2.2
+
+### Patch Changes
+
+- 7ad7c976b: Add boundaryElement to Autocomplete and Listbox
+
 ## 5.2.1
 
 ### Patch Changes
