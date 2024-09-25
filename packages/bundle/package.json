@@ -1,5 +1,6 @@
 {
     "name": "@workleap/orbiter-ui",
+    "type": "module",
     "version": "5.2.2",
     "description": "Orbiter design system",
     "repository": {
@@ -17,6 +18,9 @@
         "!/dist/**/docs/*",
         "!/dist/**/tests/*",
         "index.css"
+    ],
+    "sideEffects": [
+        "*.css"
     ],
     "publishConfig": {
         "access": "public",
