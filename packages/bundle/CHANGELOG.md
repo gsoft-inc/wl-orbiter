@@ -1,5 +1,18 @@
 # @workleap/orbiter-ui
 
+## 5.3.0
+
+### Minor Changes
+
+- 140b20eba: Output is now proper ESM format
+- 4a8c84283: Add support for SSR in Node.js
+
+### Patch Changes
+
+- Updated dependencies [140b20eba]
+- Updated dependencies [4a8c84283]
+  - @orbit-ui/transition-components@5.3.0
+
 ## 5.2.2
 
 ### Patch Changes
