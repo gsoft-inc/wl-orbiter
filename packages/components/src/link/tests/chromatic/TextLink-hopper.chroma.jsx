@@ -1,6 +1,6 @@
 import { Inline } from "@components/layout";
 import { TextLink, TextLinkAsButton } from "@components/link";
-import { createTextLinkTestSuite } from "./createTextLinkTestSuite";
+import { createTextLinkTestSuite } from "./createTextLinkTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

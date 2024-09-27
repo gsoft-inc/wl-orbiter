@@ -5,7 +5,7 @@ import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
 import { Inline, Stack } from "@components/layout";
 import { Tile } from "@components/tile";
-import { createTileTestSuite } from "./createTileTestSuite";
+import { createTileTestSuite } from "./createTileTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

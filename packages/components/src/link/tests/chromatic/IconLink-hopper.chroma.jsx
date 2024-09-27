@@ -1,7 +1,7 @@
 import { AddIcon } from "@hopper-ui/icons";
 import { IconLink, IconLinkAsButton } from "@components/link";
 import { Inline } from "@components/layout";
-import { createIconLinkTestSuite } from "./createIconLinkTestSuite";
+import { createIconLinkTestSuite } from "./createIconLinkTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

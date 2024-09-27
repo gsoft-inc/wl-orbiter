@@ -7,7 +7,7 @@ import { Div } from "@components/html";
 import { Item } from "@components/collection";
 import { Listbox } from "@components/listbox";
 import { Overlay } from "@components/overlay";
-import { createTestSuite } from "./createTestSuite";
+import { createTestSuite } from "./createTestSuite-hopper";
 
 function stories(segment) {
     return storiesOfBuilder(module, "Chromatic/Select-hopper")

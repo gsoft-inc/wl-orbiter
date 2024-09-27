@@ -1,7 +1,7 @@
 import { Badge } from "@components/badge";
 import { Div } from "@components/html";
 import { Inline } from "@components/layout";
-import { CircleBadge, IconBadge, SquareBadge } from "./BadgeUtils";
+import { CircleBadge, IconBadge, SquareBadge } from "./BadgeUtils-hopper";
 import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 

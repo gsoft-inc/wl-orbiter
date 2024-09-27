@@ -4,7 +4,7 @@ import { Image } from "@components/image";
 import { Inline } from "@components/layout";
 import { Launch } from "./assets";
 import { Link } from "@components/link";
-import { createLinkTestSuite } from "./createLinkTestSuite";
+import { createLinkTestSuite } from "./createLinkTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

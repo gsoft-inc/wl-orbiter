@@ -1,6 +1,6 @@
 import { SparklesIcon } from "@hopper-ui/icons";
 import { Badge } from "@components/badge";
-import { CircleBadge, IconBadge, SquareBadge, TextBadge } from "./BadgeUtils";
+import { CircleBadge, IconBadge, SquareBadge, TextBadge } from "./BadgeUtils-hopper";
 import { Inline } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
