@@ -1,7 +1,7 @@
 import { AddIcon } from "@hopper-ui/icons";
 import { Button, ButtonGroup, IconButton } from "@components/button";
 import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@hopper-ui/components";
 import { TextLinkAsButton } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -33,7 +33,7 @@ export const Default: ButtonGroupStory = {
 export const ButtonGroupIconButton: ButtonGroupStory = {
     storyName: "icon button",
     render: () => (
-        <Inline gap={800}>
+        <Inline gap="core_800">
             <Stack>
                 <ButtonGroup size="sm">
                     <IconButton variant="secondary" aria-label="Add"><AddIcon /></IconButton>

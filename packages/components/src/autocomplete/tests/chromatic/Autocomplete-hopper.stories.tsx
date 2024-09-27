@@ -1,7 +1,7 @@
 import { Autocomplete } from "@components/autocomplete";
 import { Div } from "@components/html";
 import { TeamIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@hopper-ui/components";
 import { Item } from "@components/collection";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
@@ -373,7 +373,7 @@ export const TriggerStates: AutocompleteStory = {
 export const NoResults: AutocompleteStory = {
     storyName: "no results",
     render: () => (
-        <Stack gap={800}>
+        <Stack gap="core_800">
             <Inline>
                 <Autocomplete defaultOpen placeholder="Select a planet" aria-label="Planets">
                     <Item key="earth">Earth</Item>

@@ -1,15 +1,12 @@
-import { Button, ButtonGroup } from "@components/button";
 import { Content, Header } from "@components/placeholders";
 import { Div, LI, UL } from "@components/html";
-import { Heading, Paragraph } from "@components/typography";
+import { Paragraph } from "@components/typography";
 import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack, Heading, Button, ButtonGroup, Switch, Link } from "@hopper-ui/components";
 import { Item } from "@components/collection";
 import { Nasa } from "./assets";
-import { Switch } from "@components/switch";
 import { Tabs } from "@components/tabs";
-import { TextLink } from "@components/link";
 import { cloneElement } from "react";
 
 function Card({ element, ...rest }) {
@@ -233,21 +230,21 @@ export function createTestSuite(element, stories) {
                     <Card size="xs" element={element}>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
                     <Card size="sm" element={element}>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
                     <Card element={element}>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
@@ -256,14 +253,14 @@ export function createTestSuite(element, stories) {
                     <Card size="lg" element={element}>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
                     <Card size="xl" element={element}>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                     </Card>
@@ -271,7 +268,7 @@ export function createTestSuite(element, stories) {
                 <Card fluid element={element}>
                     <Heading>Nasa</Heading>
                     <Header>
-                        <TextLink href="https://www.nasa.gov">Website</TextLink>
+                        <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                     </Header>
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
@@ -284,7 +281,7 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <Link variant="secondary" href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -296,7 +293,7 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <Link variant="secondary" href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -308,7 +305,7 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <Link variant="secondary" href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -322,7 +319,7 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <Link variant="secondary" href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -334,7 +331,7 @@ export function createTestSuite(element, stories) {
                         <Heading>Nasa</Heading>
                         <Content>
                             <Paragraph>
-                                <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                                <Link variant="secondary" href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
                             </Paragraph>
                             <UL>
                                 <LI>Space Shuttle program</LI>
@@ -347,7 +344,7 @@ export function createTestSuite(element, stories) {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <TextLink href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -457,7 +454,7 @@ export function createTestSuite(element, stories) {
                     <Card size="xs" element={element}>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                         <ButtonGroup>
@@ -471,7 +468,7 @@ export function createTestSuite(element, stories) {
                         </Illustration>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                         <ButtonGroup>
@@ -485,7 +482,7 @@ export function createTestSuite(element, stories) {
                         </Illustration>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                         <ButtonGroup>
@@ -501,7 +498,7 @@ export function createTestSuite(element, stories) {
                         </Illustration>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                         <ButtonGroup>
@@ -515,7 +512,7 @@ export function createTestSuite(element, stories) {
                         </Illustration>
                         <Heading>Nasa</Heading>
                         <Header>
-                            <TextLink href="https://www.nasa.gov">Website</TextLink>
+                            <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                         </Header>
                         <Content>The National Aeronautics and Space Administration</Content>
                         <ButtonGroup>
@@ -533,7 +530,7 @@ export function createTestSuite(element, stories) {
                 </Illustration>
                 <Heading>Nasa</Heading>
                 <Header>
-                    <TextLink href="https://www.nasa.gov">Website</TextLink>
+                    <Link variant="secondary" href="https://www.nasa.gov">Website</Link>
                 </Header>
                 <Content>The National Aeronautics and Space Administration</Content>
                 <ButtonGroup>
