@@ -42,11 +42,12 @@
     },
     "dependencies": {
         "@hopper-ui/icons": "^2.1.0",
-        "react-aria-components": "^1.1.1",
+        "react-aria-components": "^1.2.1",
+        "@hopper-ui/components": "1.3.11",
         "react-is": "17.0.2"
     },
     "devDependencies": {
-        "@hopper-ui/styled-system": "^2.2.0",
+        "@hopper-ui/styled-system": "^2.4.0",
         "@popperjs/core": "2.11.2",
         "text-mask-core": "5.1.2",
         "tsup": "^8.2.4",

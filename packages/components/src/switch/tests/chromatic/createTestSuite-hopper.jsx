@@ -1,9 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
-import { IconList } from "@components/icons";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { IconList, Inline, Stack, Text } from "@hopper-ui/components";
 import { cloneElement } from "react";
 
 function Switch({ element, ...rest }) {

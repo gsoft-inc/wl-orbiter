@@ -1,12 +1,11 @@
 import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
-import { Content, Footer, Header } from "@components/placeholders";
-import { Heading, Paragraph } from "@components/typography";
-import { ButtonGroup, Button } from "@components/button";
+import { Footer, Header, Heading, ButtonGroup, Button, Link } from "@hopper-ui/components";
+import { Content } from "@components/placeholders";
+import { Paragraph } from "@components/typography";
 import { Dialog } from "@components/dialog";
 import { Div } from "@components/html";
 import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
-import { TextLink } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
@@ -51,7 +50,7 @@ export const LinkHeader: DialogStory = {
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Header>
-                <TextLink href="https://www.nature.com/articles/d41586-020-03421-y" external>View the whole story</TextLink>
+                <Link variant="secondary" href="https://www.nature.com/articles/d41586-020-03421-y" isExternal>View the whole story</Link>
             </Header>
             <Content>
                 <Paragraph>This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures led to the radio telescope's collapse. The 57-year old structure was once the largest radio dish telescope in the world, and researchers have used its capabilities to make significant breakthroughs in astronomy. The Arecibo Observatory also served as the dramatic backdrop to films like "Contact" and "Goldeneye."</Paragraph>
@@ -88,7 +87,7 @@ export const LinkFooter: DialogStory = {
                 <Paragraph>The news about Arecibo's structural damage and subsequent decommissioning was disheartening for the local community, too. Field trips to its visitors' center are a ''rite of passage'' for Puerto Rican children.</Paragraph>
             </Content>
             <Footer>
-                <TextLink href="https://www.nature.com/articles/d41586-020-03421-y" external>View the whole story</TextLink>
+                <Link variant="secondary" href="https://www.nature.com/articles/d41586-020-03421-y" isExternal>View the whole story</Link>
             </Footer>
         </Dialog>
     )
@@ -203,7 +202,7 @@ export const AllSections: DialogStory = {
             </Illustration>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Header>
-                <TextLink href="https://www.nature.com/articles/d41586-020-03421-y" external>View the whole story</TextLink>
+                <Link variant="secondary" href="https://www.nature.com/articles/d41586-020-03421-y" isExternal>View the whole story</Link>
             </Header>
             <Content>
                 <Paragraph>This year, the National Science Foundation (NSF) said farewell to the iconic Arecibo Observatory in Puerto Rico after two major cable failures led to the radio telescope's collapse. The 57-year old structure was once the largest radio dish telescope in the world, and researchers have used its capabilities to make significant breakthroughs in astronomy. The Arecibo Observatory also served as the dramatic backdrop to films like "Contact" and "Goldeneye."</Paragraph>

@@ -1,13 +1,13 @@
 import { Apollo11Poster, BlueOrigin, Nasa, SpaceX } from "./assets";
-import { Heading, Paragraph } from "@components/typography";
+import { Paragraph } from "@components/typography";
 
-import { Button } from "@components/button";
 import { Card } from "@components/card";
 import { Content } from "@components/placeholders";
 import { Div } from "@components/html";
 import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
 import { Modal } from "@components/modal";
+import { Button, Heading } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
