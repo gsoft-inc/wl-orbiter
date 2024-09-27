@@ -5,7 +5,6 @@ import { Box } from "../../box";
 import { TabType } from "./useTabsItems";
 import { Text } from "../../typography";
 import { useTabsContext } from "./TabsContext";
-import { TagContext } from "@hopper-ui/components";
 
 export const TabKeyProp = "data-o-ui-key";
 
