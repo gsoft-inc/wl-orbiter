@@ -1,5 +1,5 @@
 import { DateInput } from "@components/date-input";
-import { createDateInputTestSuite } from "./createDateInputTestSuite";
+import { createDateInputTestSuite } from "./createDateInputTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 import { subMonths, subWeeks } from "date-fns";
 

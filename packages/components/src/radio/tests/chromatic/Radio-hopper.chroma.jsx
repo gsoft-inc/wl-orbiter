@@ -2,7 +2,7 @@ import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 import { Inline } from "@components/layout";
 import { Radio } from "@components/radio";
-import { createRadioTestSuite } from "./createRadioTestSuite";
+import { createRadioTestSuite } from "./createRadioTestSuite-hopper";
 
 function stories(segment) {
     return storiesOfBuilder(module, "Chromatic/Radio-hopper")

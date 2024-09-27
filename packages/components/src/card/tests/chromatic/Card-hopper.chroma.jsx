@@ -6,7 +6,7 @@ import { Div } from "@components/html";
 import { Flex, Inline, Stack } from "@components/layout";
 import { Heading } from "@components/typography";
 import { Image } from "@components/image";
-import { createTestSuite } from "./createTestSuite";
+import { createTestSuite } from "./createTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

@@ -1,6 +1,6 @@
 import { Inline } from "@components/layout";
 import { Tag } from "@components/tag";
-import { createTagTestSuite } from "./createTagTestSuite";
+import { createTagTestSuite } from "./createTagTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
