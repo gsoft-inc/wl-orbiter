@@ -1,9 +1,10 @@
 import { AccordionHeader, useAccordionContext } from "@components/accordion";
+import { Content } from "@components/placeholders";
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
 import { H1, H3 } from "@components/typography";
 import { InfoIcon } from "@hopper-ui/icons";
-import { Text, Content } from "@hopper-ui/components";
+import { Text } from "@hopper-ui/components";
 import { Item } from "@components/collection";
 import { Stack } from "@components/layout";
 import { cloneElement } from "react";
