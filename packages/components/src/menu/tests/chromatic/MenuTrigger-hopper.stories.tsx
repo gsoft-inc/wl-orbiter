@@ -4,7 +4,7 @@ import { Menu, MenuProps, MenuTrigger } from "@components/menu";
 import { DisclosureArrow } from "@components/disclosure";
 import { Divider } from "@components/divider";
 import { HtmlButton, HtmlButtonProps } from "@components/html";
-import { Text } from "@components/typography";
+import { Text } from "@hopper-ui/components";
 import { KebabIcon } from "@hopper-ui/icons";
 import { forwardRef } from "react";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";

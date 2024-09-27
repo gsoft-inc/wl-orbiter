@@ -1,6 +1,6 @@
 import { ButtonAsLink } from "@components/button";
-import { Inline } from "@components/layout";
-import { createButtonTestSuite } from "./createButtonTestSuite";
+import { Inline } from "@hopper-ui/components";
+import { createButtonTestSuite } from "./createButtonTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

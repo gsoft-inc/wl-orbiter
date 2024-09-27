@@ -3,7 +3,7 @@ import { Content } from "@components/placeholders";
 import { H3 } from "@components/typography";
 import { Inline } from "@components/layout";
 import { Item } from "@components/collection";
-import { createAccordionTestSuite } from "./createAccordionTestSuite";
+import { createAccordionTestSuite } from "./createAccordionTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

@@ -21,6 +21,7 @@ import { useOverlayFocusRing, useTrapFocus } from "../../overlay";
 
 import { Box } from "../../box";
 import { Text } from "../../typography";
+import { HeadingContext } from "@hopper-ui/components";
 
 const DefaultElement = "section";
 
@@ -125,7 +126,9 @@ export function InnerPopover({
 
     const headerSectionMarkup = heading && (
         <header className="o-ui-popover-header-section">
-            {heading}
+            <HeadingContext.Provider value={{ level: 3 }} >
+                {heading}
+            </HeadingContext.Provider>
         </header>
     );
 

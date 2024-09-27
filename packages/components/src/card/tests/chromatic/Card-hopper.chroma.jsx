@@ -1,12 +1,10 @@
 import { ApolloBanner, ApolloPoster } from "./assets";
 import { Box } from "@components/box";
 import { Card } from "@components/card";
-import { Content } from "@components/placeholders";
 import { Div } from "@components/html";
-import { Flex, Inline, Stack } from "@components/layout";
-import { Heading } from "@components/typography";
+import { Inline, Flex, Stack, Content, Heading } from "@hopper-ui/components";
 import { Image } from "@components/image";
-import { createTestSuite } from "./createTestSuite";
+import { createTestSuite } from "./createTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {
@@ -108,7 +106,7 @@ stories()
     )
     .add("flex layout", () =>
         <Stack>
-            <Flex gap={160}>
+            <Flex gap="core_160">
                 <Card>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>
@@ -124,7 +122,7 @@ stories()
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Flex>
-            <Flex gap={160}>
+            <Flex gap="core_160">
                 <Card fluid>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>

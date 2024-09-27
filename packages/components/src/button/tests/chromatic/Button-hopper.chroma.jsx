@@ -2,7 +2,7 @@ import { Button } from "@components/button";
 import { Div } from "@components/html";
 import { Inline } from "@components/layout";
 import { cloneElement } from "react";
-import { createButtonTestSuite } from "./createButtonTestSuite";
+import { createButtonTestSuite } from "./createButtonTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

@@ -1,12 +1,11 @@
 import { SparklesIcon, DismissIcon } from "@hopper-ui/icons";
 import { Content, Header } from "@components/placeholders";
-import { Inline, Stack } from "@components/layout";
 import { Tab, TabPanel, Tabs, useTabsContext } from "@components/tabs";
 
 import { Div } from "@components/html";
 import { Item } from "@components/collection";
-import { Text } from "@components/typography";
-import { createTabsTestSuite } from "./createTabsTestSuite";
+import { Inline, Stack, Text } from "@hopper-ui/components";
+import { createTabsTestSuite } from "./createTabsTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

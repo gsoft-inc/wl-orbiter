@@ -1,15 +1,14 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Content, Footer } from "@components/placeholders";
+import { Content } from "@components/placeholders";
 import { Field, Label } from "@components/field";
 
 import { Div } from "@components/html";
 import { Form } from "@components/form";
-import { Heading } from "@components/typography";
 import { Image } from "@components/image";
 import { Launch } from "./assets";
 import { Popover } from "@components/popover";
 import { TextInput } from "@components/text-input";
 import { TextLink } from "@components/link";
+import { Button, ButtonGroup, Footer, Heading } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
