@@ -373,7 +373,7 @@ export const TriggerStates: AutocompleteStory = {
 export const NoResults: AutocompleteStory = {
     storyName: "no results",
     render: () => (
-        <Stack gap="core_800">
+        <Stack gap={800}>
             <Inline>
                 <Autocomplete defaultOpen placeholder="Select a planet" aria-label="Planets">
                     <Item key="earth">Earth</Item>

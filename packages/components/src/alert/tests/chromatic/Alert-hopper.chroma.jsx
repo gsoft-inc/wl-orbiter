@@ -1,5 +1,6 @@
 import { Alert } from "@components/alert";
-import { Content, Heading } from "@hopper-ui/components";
+import { Content } from "@components/placeholders";
+import { Heading } from "@hopper-ui/components";
 import { createTestSuite } from "./createTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 

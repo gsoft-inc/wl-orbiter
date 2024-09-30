@@ -33,7 +33,7 @@ export const Default: ButtonGroupStory = {
 export const ButtonGroupIconButton: ButtonGroupStory = {
     storyName: "icon button",
     render: () => (
-        <Inline gap="core_800">
+        <Inline gap={800}>
             <Stack>
                 <ButtonGroup size="sm">
                     <IconButton variant="secondary" aria-label="Add"><AddIcon /></IconButton>
