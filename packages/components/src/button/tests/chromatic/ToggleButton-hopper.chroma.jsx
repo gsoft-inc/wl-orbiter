@@ -1,4 +1,4 @@
-import { Inline } from "@components/layout";
+import { Inline } from "@hopper-ui/components";
 import { ToggleButton } from "@components/button";
 import { createToggleButtonTestSuite } from "./createToggleButtonTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";

@@ -1,11 +1,9 @@
-import { Avatar } from "@components/avatar";
 import { IconList } from "@components/icons";
+import { Avatar, Inline, Stack, Text } from "@hopper-ui/components";
 import { SparklesIcon, DismissIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
 import { CollectionItem, Item, Section } from "@components/collection";
 import { useListboxContext, Listbox, ListboxOption, ListboxOptionProps } from "@components/listbox";
-import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

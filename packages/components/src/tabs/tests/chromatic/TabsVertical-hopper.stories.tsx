@@ -4,8 +4,7 @@ import { Inline } from "@components/layout";
 import { Tabs } from "@components/tabs";
 
 import { Item } from "@components/collection";
-import { Lozenge } from "@components/lozenge";
-import { Text } from "@components/typography";
+import { Text, Tag, TagList, TagGroup } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
@@ -86,7 +85,7 @@ export const TabWithLozenge: TabsStory = {
             <Item>
                 <Header>
                     <Text>Mars</Text>
-                    <Lozenge>New</Lozenge>
+                    <TagGroup slot="lozenge" aria-label="New"><TagList><Tag>New</Tag></TagList></TagGroup>
                 </Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
             </Item>
@@ -94,7 +93,7 @@ export const TabWithLozenge: TabsStory = {
                 <Header>
                     <NotificationIcon />
                     <Text>Jupiter</Text>
-                    <Lozenge>New</Lozenge>
+                    <TagGroup slot="lozenge" aria-label="New"><TagList><Tag>New</Tag></TagList></TagGroup>
                 </Header>
                 <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
             </Item>

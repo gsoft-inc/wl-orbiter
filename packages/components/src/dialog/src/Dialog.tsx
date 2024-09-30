@@ -30,6 +30,7 @@ import { CrossButton } from "../../button";
 import { Div } from "../../html";
 import { Text } from "../../typography";
 import { useDialogTriggerContext } from "./DialogTriggerContext";
+import { HeadingContext } from "@hopper-ui/components";
 
 export type AbstractDialogProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "role" | "zIndex"> & {
     /**
@@ -281,7 +282,9 @@ export function InnerDialog({
 
     const headerSectionMarkup = (!isNil(heading) || !isNil(headerMarkup)) && (
         <Div className="o-ui-dialog-header-section">
-            {heading}
+            <HeadingContext.Provider value={{ level: 3 }} >
+                {heading}
+            </HeadingContext.Provider>
             {headerMarkup}
         </Div>
     );

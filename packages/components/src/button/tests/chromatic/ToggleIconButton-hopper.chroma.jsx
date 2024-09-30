@@ -1,5 +1,5 @@
 import { CheckmarkIcon } from "@hopper-ui/icons";
-import { Inline } from "@components/layout";
+import { Inline } from "@hopper-ui/components";
 import { ToggleIconButton } from "@components/button";
 import { createToggleIconButtonTestSuite } from "./createToggleIconButtonTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";

@@ -1,6 +1,5 @@
-import { Content } from "@components/placeholders";
 import { Div } from "@components/html";
-import { Heading } from "@components/typography";
+import { Content, Heading } from "@hopper-ui/components";
 import { cloneElement } from "react";
 
 function Alert({ element, ...rest }) {

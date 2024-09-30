@@ -1,9 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
-import { IconList } from "@components/icons";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Flex, Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Inline, Flex, Stack, Text, IconList } from "@hopper-ui/components";
 import { cloneElement } from "react";
 
 function Checkbox({ element, ...rest }) {

@@ -1,5 +1,5 @@
-import { Inline } from "@components/layout";
 import { Switch } from "@components/switch";
+import { Inline } from "@hopper-ui/components";
 import { createTestSuite } from "./createTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
