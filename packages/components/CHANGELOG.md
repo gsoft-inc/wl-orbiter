@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.4.0
+
+### Minor Changes
+
+- cdb78b27b: Updated the disclosureArrow size to match Hopper / Listbox options hover state fix
+
 ## 5.3.0
 
 ### Minor Changes
