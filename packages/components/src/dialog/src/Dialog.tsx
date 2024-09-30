@@ -30,7 +30,7 @@ import { CrossButton } from "../../button";
 import { Div } from "../../html";
 import { Text } from "../../typography";
 import { useDialogTriggerContext } from "./DialogTriggerContext";
-import { HeadingContext } from "@hopper-ui/components";
+import { ButtonGroupContext, HeadingContext } from "@hopper-ui/components";
 
 export type AbstractDialogProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "role" | "zIndex"> & {
     /**
@@ -293,7 +293,9 @@ export function InnerDialog({
         <Div className="o-ui-dialog-footer-section">
             {footerMarkup}
             {button}
-            {buttonGroup}
+            <ButtonGroupContext.Provider value={{ align: "end" }}>
+                {buttonGroup}
+            </ButtonGroupContext.Provider>
         </Div>
     );
 

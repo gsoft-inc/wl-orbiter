@@ -126,7 +126,7 @@ export function InnerPopover({
 
     const headerSectionMarkup = heading && (
         <header className="o-ui-popover-header-section">
-            <HeadingContext.Provider value={{ level: 3 }} >
+            <HeadingContext.Provider value={{ className: "o-ui-heading-md", level: 3 }} >
                 {heading}
             </HeadingContext.Provider>
         </header>
