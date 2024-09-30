@@ -35,6 +35,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 .o-ui-listbox-option {
     color: var(--hop-neutral-text);
     border-radius: var(--hop-shape-rounded-md);
+    cursor: pointer;
     height: var(--o-ui-listbox-option-height);
     padding-right: var(--o-ui-listbox-option-padding-right);
     padding-left: var(--hop-space-inset-md);
@@ -46,7 +47,6 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 
 /* LABEL */
 .o-ui-listbox-option-label {
-    cursor: default;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

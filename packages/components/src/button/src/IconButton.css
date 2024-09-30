@@ -54,14 +54,3 @@
 .o-ui-icon-button .o-ui-button-icon {
     color: inherit;
 }
-
-/* ICON */
-.o-ui-button-sm.o-ui-icon-button .o-ui-button-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.o-ui-button-md.o-ui-icon-button .o-ui-button-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-}

@@ -37,7 +37,7 @@ export function InnerDisclosureArrow(props: InnerDisclosureArrowProps) {
                         isOpen ? "up" : "down"
                     ),
                     ref: forwardedRef,
-                    size: "md"
+                    size: "sm"
                 } as const
             )}
         />
