@@ -1,6 +1,6 @@
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { Div } from "@components/html";
-import { Inline, Stack } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
 import { cloneElement } from "react";
 
 function ToggleIconButton({ element, ...rest }) {

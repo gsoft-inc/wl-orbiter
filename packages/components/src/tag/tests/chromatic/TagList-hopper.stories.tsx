@@ -4,7 +4,8 @@ import { Dot } from "@components/dot";
 import { QuestionIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Item } from "@components/collection";
 import { TagList } from "@components/tag";
-import { Inline, Stack, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { Text } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

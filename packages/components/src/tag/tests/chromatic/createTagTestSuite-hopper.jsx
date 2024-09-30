@@ -4,7 +4,8 @@ import { Div } from "@components/html";
 import { Dot } from "@components/dot";
 import { cloneElement } from "react";
 import { Field, Label } from "@components/field";
-import { Avatar, IconList, Inline, Stack, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { Avatar, IconList, Text } from "@hopper-ui/components";
 
 function Tag({ element, ...rest }) {
     return cloneElement(element, rest);

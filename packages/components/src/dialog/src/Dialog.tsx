@@ -282,7 +282,7 @@ export function InnerDialog({
 
     const headerSectionMarkup = (!isNil(heading) || !isNil(headerMarkup)) && (
         <Div className="o-ui-dialog-header-section">
-            <HeadingContext.Provider value={{ level: 3 }} >
+            <HeadingContext.Provider value={{ level: 3 }}>
                 {heading}
             </HeadingContext.Provider>
             {headerMarkup}

@@ -1,6 +1,6 @@
 import { AddIcon } from "@hopper-ui/icons";
 import { IconButtonAsLink } from "@components/button";
-import { Inline } from "@hopper-ui/components";
+import { Inline } from "@components/layout";
 import { createIconButtonTestSuite } from "./createIconButtonTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 

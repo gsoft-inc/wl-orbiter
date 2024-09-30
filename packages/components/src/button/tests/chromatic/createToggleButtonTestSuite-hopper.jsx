@@ -1,5 +1,6 @@
 import { Div } from "@components/html";
-import { Inline, Stack, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { Text } from "@hopper-ui/components";
 import { LightbulbIcon } from "@hopper-ui/icons";
 import { cloneElement } from "react";
 

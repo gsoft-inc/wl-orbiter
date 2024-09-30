@@ -1,7 +1,7 @@
 import { AddIcon } from "@hopper-ui/icons";
 import { Button, ButtonGroup, IconButton } from "@components/button";
 import { Div } from "@components/html";
-import { Inline, Stack } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
 import { TextLinkAsButton } from "@components/link";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 

@@ -1,7 +1,8 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
+import { Inline, Stack } from "@components/layout";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Flex, IconList, Inline, Stack, Text } from "@hopper-ui/components";
+import { Flex, IconList, Text } from "@hopper-ui/components";
 import { cloneElement } from "react";
 
 function Radio({ element, ...rest }) {

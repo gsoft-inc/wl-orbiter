@@ -1,5 +1,6 @@
 import { IconList } from "@components/icons";
-import { Avatar, Inline, Stack, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { Avatar, Text } from "@hopper-ui/components";
 import { SparklesIcon, DismissIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Div } from "@components/html";
 import { CollectionItem, Item, Section } from "@components/collection";

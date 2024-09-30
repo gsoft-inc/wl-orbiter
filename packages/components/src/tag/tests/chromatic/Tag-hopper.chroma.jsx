@@ -1,5 +1,5 @@
 import { Tag } from "@components/tag";
-import { Inline } from "@hopper-ui/components";
+import { Inline } from "@components/layout";
 import { createTagTestSuite } from "./createTagTestSuite-hopper";
 import { storiesOfBuilder } from "@stories/utils";
 

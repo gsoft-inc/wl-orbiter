@@ -1,6 +1,7 @@
 import { Counter } from "@components/counter";
 import { Div } from "@components/html";
-import { Inline, Stack, IconList, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { IconList, Text } from "@hopper-ui/components";
 import { StartOverIcon } from "@hopper-ui/icons";
 import { cloneElement } from "react";
 

@@ -1,6 +1,7 @@
 import { Div } from "@components/html";
 import { Divider } from "@components/divider";
-import { Avatar, IconList, Inline, Stack, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { Avatar, IconList, Text } from "@hopper-ui/components";
 import { LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Item, Section, NodeType } from "@components/collection";
 import { Menu, MenuItem, MenuItemProps } from "@components/menu";

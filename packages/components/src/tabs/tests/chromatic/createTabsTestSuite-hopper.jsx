@@ -3,7 +3,8 @@ import { Content, Header } from "@components/placeholders";
 import { Item } from "@components/collection";
 import { cloneElement } from "react";
 import { Div } from "@components/html";
-import { Stack, Text, Tag, TagList, TagGroup } from "@hopper-ui/components";
+import { Stack } from "@components/layout";
+import { Text, Tag, TagList, TagGroup } from "@hopper-ui/components";
 
 function Tabs({ element, ...rest }) {
     return cloneElement(element, rest);

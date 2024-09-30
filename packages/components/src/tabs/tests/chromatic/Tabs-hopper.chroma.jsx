@@ -4,7 +4,8 @@ import { Tab, TabPanel, Tabs, useTabsContext } from "@components/tabs";
 
 import { Div } from "@components/html";
 import { Item } from "@components/collection";
-import { Inline, Stack, Text } from "@hopper-ui/components";
+import { Inline, Stack } from "@components/layout";
+import { Text } from "@hopper-ui/components";
 import { createTabsTestSuite } from "./createTabsTestSuite-hopper";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 

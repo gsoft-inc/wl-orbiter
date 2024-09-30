@@ -1,5 +1,5 @@
 import { CrossButton } from "@components/button";
-import { Inline } from "@hopper-ui/components";
+import { Inline } from "@components/layout";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
