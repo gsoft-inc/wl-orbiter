@@ -139,7 +139,6 @@
 /* DIALOG | FOOTER SECTION | BUTTONS */
 .o-ui-dialog-button,
 .o-ui-dialog-button-group {
-    justify-content: flex-end;
     margin-left: auto;
 }
 

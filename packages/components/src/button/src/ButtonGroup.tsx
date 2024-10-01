@@ -34,7 +34,7 @@ export function InnerButtonGroup(props: InnerButtonGroupProps) {
     const [fieldProps, isInField] = useFieldInputProps();
 
     const {
-        align,
+        align = "start",
         as = DefaultElement,
         children,
         disabled,
@@ -57,7 +57,7 @@ export function InnerButtonGroup(props: InnerButtonGroupProps) {
             {...mergeProps(
                 rest,
                 {
-                    align,
+                    align: orientation === "vertical" ? "center" : align,
                     as,
                     className: cssModule(
                         "o-ui-button-group",

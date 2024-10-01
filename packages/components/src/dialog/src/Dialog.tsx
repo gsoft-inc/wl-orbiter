@@ -222,7 +222,8 @@ export function InnerDialog({
             className: "o-ui-dialog-button"
         },
         "button-group": {
-            className: "o-ui-dialog-button-group"
+            className: "o-ui-dialog-button-group",
+            justifyContent: "end"
         },
         content: {
             as: Text,
