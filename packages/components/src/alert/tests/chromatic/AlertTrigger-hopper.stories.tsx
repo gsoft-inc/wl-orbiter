@@ -1,7 +1,6 @@
 import { Content } from "@components/placeholders";
 import { Alert, AlertTrigger } from "@components/alert";
-import { Heading } from "@hopper-ui/components";
-import { Button } from "@components/button";
+import { Button, Heading } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

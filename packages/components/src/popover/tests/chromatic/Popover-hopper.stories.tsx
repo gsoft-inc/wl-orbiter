@@ -1,14 +1,10 @@
 import { Content } from "@components/placeholders";
-import { Field, Label } from "@components/field";
 
 import { Div } from "@components/html";
-import { Form } from "@components/form";
 import { Image } from "@components/image";
 import { Launch } from "./assets";
 import { Popover } from "@components/popover";
-import { TextInput } from "@components/text-input";
-import { TextLink } from "@components/link";
-import { Button, ButtonGroup, Footer, Heading } from "@hopper-ui/components";
+import { Button, ButtonGroup, Footer, Form, Heading, Label, Link, TextField } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
@@ -46,7 +42,7 @@ export const LinkFooter: PopoverStory = {
             <Heading>Space News</Heading>
             <Content>SpaceX designs, manufactures, and launches the world's most advanced rockets and spacecraft. The company was founded in 2002 by Elon Musk to revolutionize space transportation, with the ultimate goal of making life multiplanetary.</Content>
             <Footer>
-                <TextLink href="https://www.google.com" external>Step 2/4</TextLink>
+                <Link href="https://www.google.com" variant="secondary" isExternal>Step 2/4</Link>
             </Footer>
         </Popover>
     )
@@ -98,15 +94,13 @@ export const PopoverForm: PopoverStory = {
         <Popover>
             <Heading>Space News</Heading>
             <Content>
-                <Form fluid>
-                    <Field>
+                <Form isFluid>
+                    <TextField name="first-name">
                         <Label>First Name</Label>
-                        <TextInput name="first-name" />
-                    </Field>
-                    <Field>
+                    </TextField>
+                    <TextField name="last-name">
                         <Label>Last Name</Label>
-                        <TextInput name="last-name" />
-                    </Field>
+                    </TextField>
                 </Form>
             </Content>
             <ButtonGroup>
