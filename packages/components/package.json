@@ -42,7 +42,7 @@
         "react-dom": "^18.0.0"
     },
     "dependencies": {
-        "@hopper-ui/icons": "^2.8.1",
+        "@hopper-ui/icons": "^2.8.2",
         "react-is": "17.0.2"
     },
     "devDependencies": {

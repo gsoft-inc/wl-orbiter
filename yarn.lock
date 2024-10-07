@@ -1701,18 +1701,10 @@
     "@react-types/shared" "^3.24.1"
     clsx "^2.1.1"
 
-"@hopper-ui/icons@2.8.2":
+"@hopper-ui/icons@2.8.2", "@hopper-ui/icons@^2.8.2":
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/@hopper-ui/icons/-/icons-2.8.2.tgz#6a08f43d3b150a8bcb653213329e2ccfafc7bfab"
   integrity sha512-Sf1Bt78pzQicGUOYCi5QhftDWPMJLQBLf5Ebyeqg17Lg4i54vdz9MY5ZAA2MCAEbgmo7YbywDfO1NW8Q+TJ7Ug==
-  dependencies:
-    "@react-aria/utils" "^3.25.2"
-    clsx "^2.1.1"
-
-"@hopper-ui/icons@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/icons/-/icons-2.8.1.tgz#6f74f9a543ffabb6a4700577a26b7af23510680d"
-  integrity sha512-x7jTQ8M6b2BdJrg1wskVIUQeikD/qL1vRREQ8BdsBAYOA2+oJbd8HvXnQVoqvW9xU8DAkeToTcYXsJSKiUqhrw==
   dependencies:
     "@react-aria/utils" "^3.25.2"
     clsx "^2.1.1"
