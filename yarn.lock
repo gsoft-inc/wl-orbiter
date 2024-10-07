@@ -1690,18 +1690,26 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@hopper-ui/components@1.3.11":
-  version "1.3.11"
-  resolved "https://registry.yarnpkg.com/@hopper-ui/components/-/components-1.3.11.tgz#b45fe89431f4d7486f5f07c48316ffc789992983"
-  integrity sha512-3SanRy2zvLfbE22jH2hPJlHZNB8/3zlurCrqgrIyNiuOlJ3VuWxSbLpsXJh3iPGU9k9ykJ09mEk+4teER7wTHA==
+"@hopper-ui/components@^1.3.19":
+  version "1.3.19"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/components/-/components-1.3.19.tgz#3979fbb4a62232d9d61280b8cfd2bb40450bd776"
+  integrity sha512-uAYQCOtboi9HCLsaK94e5x8R66Yu3TFU6T35C+O7tb39m1bWB6ThkpOkpX0Lq+S/FLsQxwWXK9iQ/8syaZIjxA==
   dependencies:
-    "@hopper-ui/icons" "2.8.1"
+    "@hopper-ui/icons" "2.8.2"
     "@react-aria/utils" "^3.25.2"
     "@react-stately/utils" "^3.10.3"
     "@react-types/shared" "^3.24.1"
     clsx "^2.1.1"
 
-"@hopper-ui/icons@2.8.1", "@hopper-ui/icons@^2.8.1":
+"@hopper-ui/icons@2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@hopper-ui/icons/-/icons-2.8.2.tgz#6a08f43d3b150a8bcb653213329e2ccfafc7bfab"
+  integrity sha512-Sf1Bt78pzQicGUOYCi5QhftDWPMJLQBLf5Ebyeqg17Lg4i54vdz9MY5ZAA2MCAEbgmo7YbywDfO1NW8Q+TJ7Ug==
+  dependencies:
+    "@react-aria/utils" "^3.25.2"
+    clsx "^2.1.1"
+
+"@hopper-ui/icons@^2.8.1":
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/@hopper-ui/icons/-/icons-2.8.1.tgz#6f74f9a543ffabb6a4700577a26b7af23510680d"
   integrity sha512-x7jTQ8M6b2BdJrg1wskVIUQeikD/qL1vRREQ8BdsBAYOA2+oJbd8HvXnQVoqvW9xU8DAkeToTcYXsJSKiUqhrw==
