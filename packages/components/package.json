@@ -36,7 +36,7 @@
         "react-aria-components": "*"
     },
     "dependencies": {
-        "@hopper-ui/icons": "^2.1.0",
+        "@hopper-ui/icons": "^2.8.2",
         "@popperjs/core": "2.11.2",
         "react-is": "17.0.2",
         "text-mask-core": "5.1.2",
