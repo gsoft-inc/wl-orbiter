@@ -1,12 +1,10 @@
-import { Avatar } from "@components/avatar";
 import { Div } from "@components/html";
 import { Divider } from "@components/divider";
-import { IconList } from "@components/icons";
-import { LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Inline, Stack } from "@components/layout";
+import { Avatar, IconList, Text } from "@hopper-ui/components";
+import { LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
 import { Item, Section, NodeType } from "@components/collection";
 import { Menu, MenuItem, MenuItemProps } from "@components/menu";
-import { Text } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

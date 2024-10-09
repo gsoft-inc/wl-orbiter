@@ -2,10 +2,10 @@ import { Counter } from "@components/counter";
 import { Div } from "@components/html";
 import { Dot } from "@components/dot";
 import { QuestionIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
 import { Item } from "@components/collection";
 import { TagList } from "@components/tag";
-import { Text } from "@components/typography";
+import { Inline, Stack } from "@components/layout";
+import { Text } from "@hopper-ui/components";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {
@@ -115,6 +115,7 @@ export const WithClearButtonEmpty: TagListStory = {
     storyName: "with clear button & empty",
     render: () => (
         <TagList onClear={() => {}}>
+            {[]}
         </TagList>
     )
 };
