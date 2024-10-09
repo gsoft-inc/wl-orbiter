@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.5.0
+
+### Minor Changes
+
+- 7bc64199f: Converted the code back to ESM in order to fix import paths issues
+
 ## 5.4.0
 
 ### Minor Changes

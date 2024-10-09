@@ -1,5 +1,18 @@
 # @workleap/orbiter-ui
 
+## 5.5.0
+
+### Minor Changes
+
+- 02a1d066d: Added hopper components and css. Passed props to Hopper through context for components such as Dialog.
+- 7bc64199f: Converted the code back to ESM in order to fix import paths issues
+
+### Patch Changes
+
+- Updated dependencies [7bc64199f]
+  - @orbit-ui/transition-components@5.5.0
+  - @orbit-ui/transition-css@2.4.0
+
 ## 5.4.0
 
 ### Patch Changes
