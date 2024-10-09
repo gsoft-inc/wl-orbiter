@@ -21,6 +21,7 @@ function addWebpackAliases(config) {
         "./@hopper-ui/icons/index.css": path.resolve(__dirname, "../node_modules/@hopper-ui/icons/dist/index.css"),
         "./@hopper-ui/tokens/fonts.css": path.resolve(__dirname, "../node_modules/@hopper-ui/tokens/dist/fonts.css"),
         "./@hopper-ui/styled-system/index.css": path.resolve(__dirname, "../node_modules/@hopper-ui/styled-system/dist/index.css"),
+        "./@hopper-ui/components/index.css": path.resolve(__dirname, "../node_modules/@hopper-ui/components/dist/index.css"),
     };
 }
 

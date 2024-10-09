@@ -30,9 +30,10 @@
         "clean": "rimraf dist tsconfig.build.tsbuildinfo"
     },
     "peerDependencies": {
+        "@hopper-ui/components": "*",
+        "@hopper-ui/styled-system": "*",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
-        "@hopper-ui/styled-system": "*",
         "react-aria-components": "*"
     },
     "dependencies": {
@@ -43,8 +44,10 @@
         "use-debounce": "7.0.1"
     },
     "devDependencies": {
-        "@hopper-ui/styled-system": "^2.2.0",
-        "react-aria-components": "^1.1.1"
+        "@hopper-ui/components": "^1.3.20",
+        "@hopper-ui/styled-system": "^2.4.0",
+        "react-aria-components": "^1.2.1",
+        "tsup": "^8.2.4"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }

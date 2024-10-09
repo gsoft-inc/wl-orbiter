@@ -1,6 +1,6 @@
 import { Checkbox } from "@components/checkbox";
 import { Inline } from "@components/layout";
-import { createCheckboxTestSuite } from "./createCheckboxTestSuite-hopper";
+import { createCheckboxTestSuite } from "./createCheckboxTestSuite";
 import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
 function stories(segment) {

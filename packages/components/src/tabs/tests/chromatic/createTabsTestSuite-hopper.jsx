@@ -1,11 +1,10 @@
 import { NotificationIcon } from "@hopper-ui/icons";
 import { Content, Header } from "@components/placeholders";
 import { Item } from "@components/collection";
-import { Stack } from "@components/layout";
 import { cloneElement } from "react";
-import { Lozenge } from "@components/lozenge";
 import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Stack } from "@components/layout";
+import { Text, Tag, TagList, TagGroup } from "@hopper-ui/components";
 
 function Tabs({ element, ...rest }) {
     return cloneElement(element, rest);
@@ -153,7 +152,7 @@ export function createTabsTestSuite(element, stories) {
                 <Item>
                     <Header>
                         <Text>Mars</Text>
-                        <Lozenge>New</Lozenge>
+                        <TagGroup slot="lozenge" aria-label="New"><TagList><Tag>New</Tag></TagList></TagGroup>
                     </Header>
                     <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
                 </Item>
@@ -161,7 +160,7 @@ export function createTabsTestSuite(element, stories) {
                     <Header>
                         <NotificationIcon />
                         <Text>Jupiter</Text>
-                        <Lozenge>New</Lozenge>
+                        <TagGroup slot="lozenge" aria-label="New"><TagList><Tag>New</Tag></TagList></TagGroup>
                     </Header>
                     <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
                 </Item>
@@ -327,7 +326,7 @@ export function createTabsTestSuite(element, stories) {
                     <Item key="earth">
                         <Header>
                             <Text>Earth</Text>
-                            <Lozenge>Home</Lozenge>
+                            <TagGroup slot="lozenge" aria-label="Home"><TagList><Tag>Home</Tag></TagList></TagGroup>
                         </Header>
                         <Content>Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.</Content>
                     </Item>
@@ -349,7 +348,7 @@ export function createTabsTestSuite(element, stories) {
                         <Header>
                             <NotificationIcon />
                             <Text>Neptune</Text>
-                            <Lozenge>New</Lozenge>
+                            <TagGroup slot="lozenge" aria-label="New"><TagList><Tag>New</Tag></TagList></TagGroup>
                         </Header>
                         <Content>Neptune—the eighth and most distant major planet orbitering our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.</Content>
                     </Item>
@@ -374,7 +373,7 @@ export function createTabsTestSuite(element, stories) {
                     <Item key="earth">
                         <Header>
                             <Text>Earth</Text>
-                            <Lozenge>Home</Lozenge>
+                            <TagGroup slot="lozenge" aria-label="Home"><TagList><Tag>Home</Tag></TagList></TagGroup>
                         </Header>
                         <Content>Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.</Content>
                     </Item>
@@ -411,7 +410,7 @@ export function createTabsTestSuite(element, stories) {
                     <Item key="earth">
                         <Header>
                             <Text>Earth</Text>
-                            <Lozenge>Home</Lozenge>
+                            <TagGroup slot="lozenge" aria-label="Home"><TagList><Tag>Home</Tag></TagList></TagGroup>
                         </Header>
                         <Content>Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.</Content>
                     </Item>

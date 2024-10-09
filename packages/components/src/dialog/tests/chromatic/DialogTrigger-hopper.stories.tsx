@@ -1,7 +1,7 @@
-import { Button } from "@components/button";
+import { Heading, Button } from "@hopper-ui/components";
 import { Content } from "@components/placeholders";
 import { Dialog, DialogTrigger } from "@components/dialog";
-import { Heading, Paragraph } from "@components/typography";
+import { Paragraph } from "@components/typography";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 export default {

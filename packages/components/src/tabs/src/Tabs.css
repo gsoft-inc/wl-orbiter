@@ -132,7 +132,7 @@
     display: flex;
     align-items: center;
     justify-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     position: relative;
     width: 100%;
 }
@@ -239,7 +239,7 @@
 
 .o-ui-tabs-vertical .o-ui-tab {
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .o-ui-tabs-vertical .o-ui-tab:last-child {

@@ -1,10 +1,10 @@
 import { Box } from "@components/box";
 import { Content } from "@components/placeholders";
 import { Div } from "@components/html";
-import { Heading } from "@components/typography";
 import { IllustratedMessage } from "@components/illustrated-message";
 import { Image } from "@components/image";
 import { Inline, Stack } from "@components/layout";
+import { Heading } from "@hopper-ui/components";
 import { Nasa } from "./assets";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
