@@ -1,6 +1,5 @@
 {
     "name": "@orbit-ui/transition-components",
-    "type": "module",
     "version": "5.4.0",
     "description": "Orbiter components",
     "repository": {
@@ -19,9 +18,6 @@
         "!/dist/**/tests/*",
         "index.css"
     ],
-    "sideEffects": [
-        "*.css"
-    ],
     "publishConfig": {
         "access": "public",
         "provenance": true
@@ -29,8 +25,7 @@
     "scripts": {
         "prebuild": "yarn clean",
         "build": "run-s build:* copy-files",
-        "build:js": "tsup",
-        "build:types": "tsc --build ./tsconfig.build.json",
+        "build:js": "tsc --build ./tsconfig.build.json",
         "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
         "clean": "rimraf dist tsconfig.build.tsbuildinfo"
     },
@@ -38,21 +33,20 @@
         "@hopper-ui/components": "*",
         "@hopper-ui/styled-system": "*",
         "react": "^18.0.0",
-        "react-aria-components": "*",
-        "react-dom": "^18.0.0"
+        "react-dom": "^18.0.0",
+        "react-aria-components": "*"
     },
     "dependencies": {
         "@hopper-ui/icons": "^2.8.2",
-        "react-is": "17.0.2"
+        "@popperjs/core": "2.11.2",
+        "react-is": "17.0.2",
+        "text-mask-core": "5.1.2",
+        "use-debounce": "7.0.1"
     },
     "devDependencies": {
         "@hopper-ui/components": "^1.3.20",
         "@hopper-ui/styled-system": "^2.4.0",
-        "@popperjs/core": "2.11.2",
-        "react-aria-components": "^1.2.1",
-        "text-mask-core": "5.1.2",
-        "tsup": "^8.2.4",
-        "use-debounce": "7.0.1"
+        "react-aria-components": "^1.2.1"
     },
     "gitHead": "f8b5019bdc53f68abe27e931387aeec7f0747d85"
 }
