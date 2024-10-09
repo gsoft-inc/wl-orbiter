@@ -1,5 +1,11 @@
 # @orbit-ui/transition-css
 
+## 2.4.0
+
+### Minor Changes
+
+- 7bc64199f: Converted the code back to ESM in order to fix import paths issues
+
 ## 2.3.0
 
 ### Minor Changes
