@@ -1,8 +1,8 @@
 import "./Preview.css";
 
-import { CodeTheme, useFormattedCode } from "@stories/components";
+import { CodeTheme, useFormattedCode, Snippet } from "@stories/components";
 import { Div, Span } from "@components/html";
-import { DocsContext, DocsContextProps, SourceContext, getSourceProps, storyBlockIdFromId } from "@storybook/addon-docs";
+import { Canvas, DocsContext, DocsContextProps, SourceContext, getSourceProps, storyBlockIdFromId } from "@storybook/addon-docs";
 import { Editor as JarleEditor, Error as JarleError, Preview as JarlePreview, Provider as JarleProvider } from "jarle";
 import { applyHooks, defaultDecorateStory } from "@storybook/client-api";
 import { as, isNil } from "@components/shared";
@@ -185,33 +185,19 @@ export function Preview({
 }: PreviewProps) {
     if (!isNil(filePath)) {
         return (
-            <FilePreview
-                {...rest}
-                filePath={filePath}
-                language={language}
-                scope={scope}
-            />
-        );
-    }
-
-    if (!isNil(mdxSource)) {
-        return (
-            <MdxSourcePreview
-                {...rest}
-                mdxSource={mdxSource}
-                language={language}
-                scope={scope}
-            />
+        <Snippet
+            filePath={filePath}
+            theme={CodeTheme}
+            language={language as any}
+            code=""
+        />
         );
     }
 
     return (
-        <StoryPreview
-            {...rest}
-            language={language}
-            scope={scope}
-        >
+        <Canvas>
             {children}
-        </StoryPreview>
-    );
+        </Canvas>
+    )
+
 }
