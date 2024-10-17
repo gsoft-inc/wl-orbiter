@@ -15,13 +15,23 @@ import type { Preview } from "@storybook/react";
 
 import "@hopper-ui/tokens/fonts.css";
 import "./stories.css";
+import { isChromatic } from "./env";
+import { Themes } from "./styles/themes";
+
+if (!isChromatic) {
+    // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
+    import("@css/fonts.css");
+} else {
+    import("./styles/chromatic.css");
+}
 
 const preview: Preview = {
     parameters: {
         backgrounds: {
             disable: true
         },
-        layout: "fullscreen", // removes the padding around the preview
+        // TODO: this has been commented as this was not present in orbiter before. Changing this affects all screenshots
+        // layout: "fullscreen", // This removes the padding around the preview
         controls: {
             matchers: {
                 color: /(background|color)$/i,
@@ -29,6 +39,14 @@ const preview: Preview = {
             }
         },
         viewport,
+
+        docs: {
+            theme: Themes.docs,
+            inlineStories: true,
+            components: {
+                blockquote: Highlight
+            },
+        },
         // docs: { // only needed while the documentation is not available
         //     page: () => {
         //         return (
@@ -43,16 +61,31 @@ const preview: Preview = {
         // },
         options: {
             storySort: {
+                method: "alphabetical",
                 order: [
-                    "Docs",
-                    "Docs-parts",
+                    "Installation",
+                    "Platforms",
+                    "Features", [
+                        "Style props",
+                        "Responsive styles",
+                        "Theming",
+                        "Color schemes",
+                        "Slots",
+                        "As"
+                    ],
+                    "Materials", [
+                        "Icons",
+                        "Motion"
+                    ],
+                    "Layout",
                     "Components",
-                    "Styled System",
-                    "Icons",
-                    "Tokens"
+                    "Content",
+                    "Placeholders",
+                    "Html elements",
+                    "Chromatic"
                 ]
             }
-        }
+        },
     },
     globalTypes: {
         locale: {
@@ -82,7 +115,7 @@ const preview: Preview = {
             }
         }
     },
-    decorators: [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme]
+    decorators: [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme],
 };
 
 export default preview;

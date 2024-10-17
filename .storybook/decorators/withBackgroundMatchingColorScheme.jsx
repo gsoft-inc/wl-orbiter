@@ -1,8 +1,6 @@
 import { isNil } from "@components/shared";
 import { useEffect } from "react";
 
-import { getGlobals } from "../utils";
-
 const StyleElementId = "story-background-color";
 
 const BackgroundColors = {
@@ -11,7 +9,7 @@ const BackgroundColors = {
 };
 
 export function withBackgroundMatchingColorScheme(story, context) {
-    const { colorScheme } = getGlobals(context);
+    const colorScheme = (context.globals.theme ? context.globals.theme : "light");
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {

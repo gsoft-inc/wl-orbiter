@@ -12,7 +12,12 @@
             "@components/*": ["packages/components/src/*"],
             "@orbit-ui/transition-components": ["packages/components/src"],
             "@workleap/orbiter-ui": ["packages/bundle/src"],
-            "@stories/components": [".storybook/components"]
+            "@stories/components": [".storybook/components"],
+
+            "@root": [""],
+            "@css/*": ["packages/css/src/*"],
+            "@stories/mdx": [".storybook/mdx"],
+            "@stories/utils": [".storybook/utils"],
         }
     }
 }

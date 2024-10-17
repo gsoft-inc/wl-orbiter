@@ -1,6 +1,6 @@
 import { Div } from "@components/html";
 import { Flex } from "@components/layout";
-import { isChromatic } from "../oldddddd/env";
+import { isChromatic } from "../env";
 
 export function withCenteredCanvas(story, context) {
     const { parameters, viewMode } = context;

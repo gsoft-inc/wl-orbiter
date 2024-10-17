@@ -1,6 +1,11 @@
 import { addons } from "@storybook/manager-api";
+import { Themes } from "./styles/themes";
 
 addons.setConfig({
+    theme: Themes.manager,
+    panelPosition: "right",
+    enableShortcuts: false,
+    showToolbar: true,
     sidebar: {
         filters: {
             patterns: item => {

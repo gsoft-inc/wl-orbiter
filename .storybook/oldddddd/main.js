@@ -1,6 +1,6 @@
 import { dirname, join } from "path";
 const { customizeWebpack } = require("./webpack.config");
-const { includeChromatic, includeDocs, printEnvironment, isChromatic, isDebug } = require("./env");
+const { includeChromatic, includeDocs, printEnvironment, isChromatic, isDebug } = require("../env");
 
 printEnvironment();
 
