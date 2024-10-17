@@ -3,9 +3,9 @@ import { Inline, Stack } from "@components/layout";
 import { CrossButton } from "@components/button";
 import { Div } from "@components/html";
 import { TextArea } from "@components/text-area";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/TextArea-hopper",
     component: TextArea,
     parameters: {
@@ -13,12 +13,14 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof TextArea>;
+} as Meta<typeof TextArea>;
 
-type TextAreaStory = ComponentStoryObj<typeof TextArea>;
+export default meta;
+
+type TextAreaStory = StoryObj<typeof meta>;
 
 export const Default: TextAreaStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <TextArea aria-label="Label" />
@@ -36,7 +38,7 @@ export const Default: TextAreaStory = {
 
 
 export const Placeholder: TextAreaStory = {
-    storyName: "placeholder",
+    name: "placeholder",
     render: () => (
         <Stack>
             <TextArea placeholder="Where to?" />
@@ -53,7 +55,7 @@ export const Placeholder: TextAreaStory = {
 };
 
 export const Value: TextAreaStory = {
-    storyName: "value",
+    name: "value",
     render: () => (
         <Stack>
             <TextArea defaultValue="SpaceX will win the race!" aria-label="Label" />
@@ -74,7 +76,7 @@ export const Value: TextAreaStory = {
 };
 
 export const Button: TextAreaStory = {
-    storyName: "button",
+    name: "button",
     render: () => (
         <Stack>
             <TextArea button={<CrossButton aria-label="Clear value" />} placeholder="Where to?" />
@@ -87,7 +89,7 @@ export const Button: TextAreaStory = {
 };
 
 export const Validation: TextAreaStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline>
             <TextArea validationState="invalid" placeholder="Where to?" />
@@ -97,7 +99,7 @@ export const Validation: TextAreaStory = {
 };
 
 export const States: TextAreaStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Stack>
             <Inline alignY="end">
@@ -130,7 +132,7 @@ export const States: TextAreaStory = {
 };
 
 export const Autosize: TextAreaStory = {
-    storyName: "autosize",
+    name: "autosize",
     render: () => (
         <Inline alignX="start">
             <TextArea defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros nec urna mollis sollicitudin id et lacus. Nam in feugiat urna, eget volutpat sem. Duis ornare, eros nec accumsan consectetur, nunc nisi elementum quam, egestas posuere elit purus a neque. Nunc risus mi, interdum id nisl et, tempor pulvinar elit." aria-label="Label" />
@@ -140,7 +142,7 @@ export const Autosize: TextAreaStory = {
 };
 
 export const NoResize: TextAreaStory = {
-    storyName: "no resize",
+    name: "no resize",
     render: () => (
         <TextArea resize="none" aria-label="Label" />
     )
@@ -148,14 +150,14 @@ export const NoResize: TextAreaStory = {
 
 
 export const Rows: TextAreaStory = {
-    storyName: "rows",
+    name: "rows",
     render: () => (
         <TextArea rows={12} aria-label="Label" />
     )
 };
 
 export const Zoom: TextAreaStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -169,7 +171,7 @@ export const Zoom: TextAreaStory = {
 };
 
 export const Styling: TextAreaStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <TextArea border="amanita-600" aria-label="Label" />

@@ -12,7 +12,7 @@ export interface InnerTagListProps extends InternalProps, StyledComponentProps<t
     /**
      * React children.
      */
-    children: ReactNode;
+    children?: ReactNode;
     /**
      * Called when all items are cleared from the list.
      * @param {SyntheticEvent} event - React's original event.

@@ -1,5 +1,5 @@
-import { Themes } from "./styles/themes";
-import { addons } from "@storybook/addons";
+import { Themes } from "../styles/themes";
+import { addons } from "@storybook/manager-api";
 
 addons.setConfig({
     theme: Themes.manager,

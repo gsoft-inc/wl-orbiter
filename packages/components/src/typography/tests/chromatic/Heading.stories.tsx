@@ -1,15 +1,17 @@
 import { H1, H2, H3, H4, H5, H6, Heading } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Heading",
     component: Heading
-} as ComponentMeta<typeof Heading>;
+} as Meta<typeof Heading>;
 
-type HeadingStory = ComponentStoryObj<typeof Heading>;
+export default meta;
+
+type HeadingStory = StoryObj<typeof meta>;
 
 export const Size: HeadingStory = {
-    storyName: "size",
+    name: "size",
     render: () => (
         <>
             <Heading size="3xl">I see Earth!<br /> It is so beautiful!</Heading>
@@ -24,7 +26,7 @@ export const Size: HeadingStory = {
 };
 
 export const Styling: HeadingStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <>
             <Heading border="warning">I see Earth!<br /> It is so beautiful!</Heading>
@@ -35,7 +37,7 @@ export const Styling: HeadingStory = {
 };
 
 export const HeadingH1: HeadingStory = {
-    storyName: "h1",
+    name: "h1",
     render: () => (
         <>
             <H1 size="3xl">I see Earth!<br /> It is so beautiful!</H1>
@@ -50,7 +52,7 @@ export const HeadingH1: HeadingStory = {
 };
 
 export const HeadingH2: HeadingStory = {
-    storyName: "h2",
+    name: "h2",
     render: () => (
         <>
             <H2 size="3xl">I see Earth!<br /> It is so beautiful!</H2>
@@ -65,7 +67,7 @@ export const HeadingH2: HeadingStory = {
 };
 
 export const HeadingH3: HeadingStory = {
-    storyName: "h3",
+    name: "h3",
     render: () => (
         <>
             <H3 size="3xl">I see Earth!<br /> It is so beautiful!</H3>
@@ -80,7 +82,7 @@ export const HeadingH3: HeadingStory = {
 };
 
 export const HeadingH4: HeadingStory = {
-    storyName: "h4",
+    name: "h4",
     render: () => (
         <>
             <H4 size="3xl">I see Earth!<br /> It is so beautiful!</H4>
@@ -95,7 +97,7 @@ export const HeadingH4: HeadingStory = {
 };
 
 export const HeadingH5: HeadingStory = {
-    storyName: "h5",
+    name: "h5",
     render: () => (
         <>
             <H5 size="3xl">I see Earth!<br /> It is so beautiful!</H5>
@@ -110,7 +112,7 @@ export const HeadingH5: HeadingStory = {
 };
 
 export const HeadingH6: HeadingStory = {
-    storyName: "h6",
+    name: "h6",
     render: () => (
         <>
             <H6 size="3xl">I see Earth!<br /> It is so beautiful!</H6>

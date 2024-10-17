@@ -1,8 +1,8 @@
 import { Spinner } from "@components/spinner";
 import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: Spinner,
     title: "Chromatic/Spinner",
     parameters: {
@@ -11,12 +11,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Spinner>;
+} as Meta<typeof Spinner>;
 
-type SpinnerStory = ComponentStoryObj<typeof Spinner>;
+export default meta;
+
+type SpinnerStory = StoryObj<typeof meta>;
 
 export const Default: SpinnerStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="end">
             <Spinner size="sm" aria-label="Crawling in progress" />
@@ -27,7 +29,7 @@ export const Default: SpinnerStory = {
 };
 
 export const InheritColor: SpinnerStory = {
-    storyName: "inherit color",
+    name: "inherit color",
     render: () => (
         <Inline alignY="end" backgroundColor="primary-strong">
             <Spinner color="samoyed" aria-label="Crawling in progress" />
@@ -37,7 +39,7 @@ export const InheritColor: SpinnerStory = {
 };
 
 export const Styling: SpinnerStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Spinner color="red">Crawling in progress</Spinner>
@@ -48,7 +50,7 @@ export const Styling: SpinnerStory = {
 };
 
 export const Zoom: SpinnerStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Inline alignY="end" className="zoom-in">
@@ -66,7 +68,7 @@ export const Zoom: SpinnerStory = {
 };
 
 export const Label: SpinnerStory = {
-    storyName: "label",
+    name: "label",
     render: () => (
         <Inline alignY="end" >
             <Spinner size="sm">Crawling in progress</Spinner>
@@ -77,7 +79,7 @@ export const Label: SpinnerStory = {
 };
 
 export const Overflow: SpinnerStory = {
-    storyName: "overflow",
+    name: "overflow",
     render: () => (
         <Stack width="4.5rem">
             <Spinner size="sm">Crawling in progress</Spinner>

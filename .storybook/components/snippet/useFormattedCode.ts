@@ -15,7 +15,7 @@ export function useFormattedCode(code: string, language: string) {
         const parser = PrettierParser[language];
 
         if (!isNil(parser)) {
-            return prettier
+            const prettyCode = prettier
                 .format(code, {
                     parser: parser,
                     plugins: [prettierBabel, prettierPostCss],
@@ -26,6 +26,10 @@ export function useFormattedCode(code: string, language: string) {
                 })
                 .replace(">;", ">")
                 .trim();
+
+            console.log("useFormattedCode", code, prettyCode);
+
+            return prettyCode;
         }
 
         return code.trim();

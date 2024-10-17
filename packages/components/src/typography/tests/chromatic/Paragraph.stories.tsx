@@ -1,16 +1,18 @@
 import { Paragraph } from "@components/typography";
 import { TextLink } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Paragraph",
     component: Paragraph
-} as ComponentMeta<typeof Paragraph>;
+} as Meta<typeof Paragraph>;
 
-type ParagraphStory = ComponentStoryObj<typeof Paragraph>;
+export default meta;
+
+type ParagraphStory = StoryObj<typeof meta>;
 
 export const Default: ParagraphStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <>
             <Paragraph size="2xl">If two pieces of the same type of metal touch<br />in space they will permanently bond.</Paragraph>
@@ -24,7 +26,7 @@ export const Default: ParagraphStory = {
 };
 
 export const AsDiv: ParagraphStory = {
-    storyName: "as div",
+    name: "as div",
     render: () => (
         <>
             <Paragraph as="div" size="2xl">If two pieces of the same type of metal touch<br />in space they will permanently bond.</Paragraph>
@@ -38,7 +40,7 @@ export const AsDiv: ParagraphStory = {
 };
 
 export const Link: ParagraphStory = {
-    storyName: "link",
+    name: "link",
     render: () => (
         <>
             <Paragraph size="2xl">If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.</Paragraph>
@@ -52,7 +54,7 @@ export const Link: ParagraphStory = {
 };
 
 export const Styling: ParagraphStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <>
             <Paragraph border="warning">If two pieces of the same type of metal touch<br />in space they will permanently bond.</Paragraph>

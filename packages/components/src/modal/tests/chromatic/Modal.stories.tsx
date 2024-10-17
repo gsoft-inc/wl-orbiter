@@ -8,17 +8,19 @@ import { Div } from "@components/html";
 import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
 import { Modal } from "@components/modal";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Modal",
     component: Modal
-} as ComponentMeta<typeof Modal>;
+} as Meta<typeof Modal>;
 
-type ModalStory = ComponentStoryObj<typeof Modal>;
+export default meta;
+
+type ModalStory = StoryObj<typeof meta>;
 
 export const Default: ModalStory = {
-    storyName: "default",
+    name: "default",
     render:  () => (
         <Modal>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -32,7 +34,7 @@ export const Default: ModalStory = {
 };
 
 export const ModalImage: ModalStory = {
-    storyName: "image",
+    name: "image",
     render:  () => (
         <Modal>
             <Image src={Apollo11Poster} alt="Apollo 11" />
@@ -47,7 +49,7 @@ export const ModalImage: ModalStory = {
 };
 
 export const ModalIllustration: ModalStory = {
-    storyName: "illustration",
+    name: "illustration",
     render:  () => (
         <Modal>
             <Illustration color="sunken-treasure-100">
@@ -64,7 +66,7 @@ export const ModalIllustration: ModalStory = {
 };
 
 export const ModalChoice: ModalStory = {
-    storyName: "choice",
+    name: "choice",
     render:  () => (
         <Modal>
             <Heading>Space agencies</Heading>
@@ -87,7 +89,7 @@ export const ModalChoice: ModalStory = {
 };
 
 export const ChoiceWithText: ModalStory = {
-    storyName: "choice with text",
+    name: "choice with text",
     render:  () => (
         <Modal>
             <Heading>Space agencies</Heading>
@@ -111,7 +113,7 @@ export const ChoiceWithText: ModalStory = {
 };
 
 export const ChoiceWithContentBetweenCards: ModalStory = {
-    storyName: "choice with content between cards",
+    name: "choice with content between cards",
     render:  () => (
         <Modal>
             <Heading>Space agencies</Heading>
@@ -136,7 +138,7 @@ export const ChoiceWithContentBetweenCards: ModalStory = {
 };
 
 export const StyledSystemStyleProp: ModalStory = {
-    storyName: "styled system styleProp",
+    name: "styled system styleProp",
     render:  () => (
         <Modal border="warning">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -150,7 +152,7 @@ export const StyledSystemStyleProp: ModalStory = {
 };
 
 export const ClassName: ModalStory = {
-    storyName: "className",
+    name: "className",
     render:  () => (
         <Modal className="border-red">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -164,7 +166,7 @@ export const ClassName: ModalStory = {
 };
 
 export const ZoomIn: ModalStory = {
-    storyName: "zoom in",
+    name: "zoom in",
     render:  () => (
         <Div className="zoom-in">
             <Modal>
@@ -180,7 +182,7 @@ export const ZoomIn: ModalStory = {
 };
 
 export const ZoomOut: ModalStory = {
-    storyName: "zoom out",
+    name: "zoom out",
     render:  () => (
         <Div className="zoom-out">
             <Modal>
@@ -195,7 +197,7 @@ export const ZoomOut: ModalStory = {
     ) };
 
 export const StyledSystem: ModalStory = {
-    storyName: "styled system",
+    name: "styled system",
     render:  () => (
         <Modal style={{ border: "1px solid red" }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>

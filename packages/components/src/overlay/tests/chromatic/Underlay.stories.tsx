@@ -1,7 +1,7 @@
 import { Underlay } from "@components/overlay";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Underlay",
     component: Underlay,
     parameters: {
@@ -10,33 +10,35 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Underlay>;
+} as Meta<typeof Underlay>;
 
-type UnderlayStory = ComponentStoryObj<typeof Underlay>;
+export default meta;
+
+type UnderlayStory = StoryObj<typeof meta>;
 
 export const Default: UnderlayStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Underlay />
     )
 };
 
 export const StyledSystem: UnderlayStory = {
-    storyName: "styled system",
+    name: "styled system",
     render: () => (
         <Underlay border="warning" />
     )
 };
 
 export const ClassName: UnderlayStory = {
-    storyName: "className",
+    name: "className",
     render: () => (
         <Underlay className="border-red" />
     )
 };
 
 export const Style: UnderlayStory = {
-    storyName: "style",
+    name: "style",
     render: () => (
         <Underlay style={{ border: "1px solid red" }} />
     )

@@ -1,0 +1,88 @@
+// import { viewport, withHopperProvider } from "./storybook-addon/index";
+import { viewport } from "./storybook-addon/index";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators";
+
+import "@components/index.css";
+import "./styles";
+
+import {
+    Description,
+    Stories,
+    Subtitle,
+    Title
+} from "@storybook/blocks";
+import type { Preview } from "@storybook/react";
+
+import "@hopper-ui/tokens/fonts.css";
+import "./stories.css";
+
+const preview: Preview = {
+    parameters: {
+        backgrounds: {
+            disable: true
+        },
+        layout: "fullscreen", // removes the padding around the preview
+        controls: {
+            matchers: {
+                color: /(background|color)$/i,
+                date: /Date$/
+            }
+        },
+        viewport,
+        // docs: { // only needed while the documentation is not available
+        //     page: () => {
+        //         return (
+        //             <>
+        //                 <Title />
+        //                 <Subtitle />
+        //                 <Description />
+        //                 <Stories title="Usage" />
+        //             </>
+        //         );
+        //     }
+        // },
+        options: {
+            storySort: {
+                order: [
+                    "Docs",
+                    "Docs-parts",
+                    "Components",
+                    "Styled System",
+                    "Icons",
+                    "Tokens"
+                ]
+            }
+        }
+    },
+    globalTypes: {
+        locale: {
+            description: "Internationalization locale",
+            defaultValue: "en-US",
+            toolbar: {
+                title: "Locale",
+                icon: "globe",
+                items: [
+                    { value: "en-US", right: "US", title: "English" },
+                    { value: "fr-CA", right: "FR", title: "Français" }
+                ],
+                dynamicTitle: true
+            }
+        },
+        theme: {
+            description: "Global theme for components",
+            defaultValue: "light",
+            toolbar: {
+                title: "Theme",
+                icon: "circlehollow",
+                items: [
+                    { value: "light", title: "Light" },
+                    { value: "dark", title: "Dark" }
+                ],
+                dynamicTitle: true
+            }
+        }
+    },
+    decorators: [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme]
+};
+
+export default preview;

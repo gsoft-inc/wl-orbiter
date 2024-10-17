@@ -130,7 +130,7 @@ export function InnerTileGroup({
 
     return (
         <As
-            {...mergeProps(
+            {...mergeProps<any>(
                 rest,
                 {
                     alignItems: "stretch",

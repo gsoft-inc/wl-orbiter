@@ -4,17 +4,19 @@ import { CrossButton } from "@components/button";
 import { Div } from "@components/html";
 import { SearchIcon } from "@hopper-ui/icons";
 import { TextInput } from "@components/text-input";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/TextInput",
     component: TextInput
-} as ComponentMeta<typeof TextInput>;
+} as Meta<typeof TextInput>;
 
-type TextInputStory = ComponentStoryObj<typeof TextInput>;
+export default meta;
+
+type TextInputStory = StoryObj<typeof meta>;
 
 export const Default: TextInputStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -38,7 +40,7 @@ export const Default: TextInputStory = {
 };
 
 export const Placeholder: TextInputStory = {
-    storyName: "placeholder",
+    name: "placeholder",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -59,7 +61,7 @@ export const Placeholder: TextInputStory = {
 };
 
 export const Value: TextInputStory = {
-    storyName: "value",
+    name: "value",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -84,7 +86,7 @@ export const Value: TextInputStory = {
 };
 
 export const Icon: TextInputStory = {
-    storyName: "icon",
+    name: "icon",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -105,7 +107,7 @@ export const Icon: TextInputStory = {
 };
 
 export const Button: TextInputStory = {
-    storyName: "button",
+    name: "button",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -124,7 +126,7 @@ export const Button: TextInputStory = {
 };
 
 export const Validation: TextInputStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline>
             <TextInput validationState="invalid" placeholder="Where to?" />
@@ -134,7 +136,7 @@ export const Validation: TextInputStory = {
 };
 
 export const States: TextInputStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Stack>
             <Inline alignY="end">
@@ -167,7 +169,7 @@ export const States: TextInputStory = {
 };
 
 export const Zoom: TextInputStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -187,7 +189,7 @@ export const Zoom: TextInputStory = {
 };
 
 export const Styling: TextInputStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <TextInput border="amanita-600" aria-label="Label" />

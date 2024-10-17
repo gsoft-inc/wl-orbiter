@@ -13,3 +13,5 @@ storybook-static
 .stylelintcache
 build-storybook.log
 .idea
+migration-storybook.log
+storybook.log

@@ -3,9 +3,9 @@ import { Div } from "@components/html";
 import { TeamIcon } from "@hopper-ui/icons";
 import { Inline, Stack } from "@components/layout";
 import { Item } from "@components/collection";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Autocomplete",
     component: Autocomplete,
     parameters: {
@@ -14,12 +14,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Autocomplete>;
+} as Meta<typeof Autocomplete>;
 
-type AutocompleteStory = ComponentStoryObj<typeof Autocomplete>;
+export default meta;
+
+type AutocompleteStory = StoryObj<typeof meta>;
 
 export const Default: AutocompleteStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <Autocomplete aria-label="Planets">
@@ -87,7 +89,7 @@ export const Default: AutocompleteStory = {
 };
 
 export const Placeholder: AutocompleteStory = {
-    storyName: "placeholder",
+    name: "placeholder",
     render: () => (
         <Stack>
             <Autocomplete placeholder="Select a planet" aria-label="Planets">
@@ -155,7 +157,7 @@ export const Placeholder: AutocompleteStory = {
 };
 
 export const DefaultValue: AutocompleteStory = {
-    storyName: "default value",
+    name: "default value",
     render: () => (
         <Stack>
             <Autocomplete defaultValue="Mars" aria-label="Planets">
@@ -211,7 +213,7 @@ export const DefaultValue: AutocompleteStory = {
 };
 
 export const DefaultValueNotMatching: AutocompleteStory = {
-    storyName: "default value not matching any item",
+    name: "default value not matching any item",
     render: () => (
         <Autocomplete defaultValue="Toto" placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -222,7 +224,7 @@ export const DefaultValueNotMatching: AutocompleteStory = {
 };
 
 export const Size: AutocompleteStory = {
-    storyName: "size",
+    name: "size",
     render: () => (
         <Autocomplete size="sm" placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -233,7 +235,7 @@ export const Size: AutocompleteStory = {
 };
 
 export const TriggerIcon: AutocompleteStory = {
-    storyName: "trigger icon",
+    name: "trigger icon",
     render: () => (
         <Stack>
             <Autocomplete icon={<TeamIcon />} placeholder="Select a planet" aria-label="Planets">
@@ -270,7 +272,7 @@ export const TriggerIcon: AutocompleteStory = {
 };
 
 export const CanClearValue: AutocompleteStory = {
-    storyName: "can clear value",
+    name: "can clear value",
     render: () => (
         <Autocomplete defaultValue="Mars" placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -281,7 +283,7 @@ export const CanClearValue: AutocompleteStory = {
 };
 
 export const Validation: AutocompleteStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline>
             <Autocomplete validationState="invalid" placeholder="Select a planet" aria-label="Planets">
@@ -299,7 +301,7 @@ export const Validation: AutocompleteStory = {
 };
 
 export const OverflowingValue: AutocompleteStory = {
-    storyName: "overflowing value",
+    name: "overflowing value",
     render: () => (
         <Autocomplete defaultValue="Lorem Ipsum is simply dummy text of the printing and typesetting industry." placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -310,7 +312,7 @@ export const OverflowingValue: AutocompleteStory = {
 };
 
 export const TriggerStates: AutocompleteStory = {
-    storyName: "trigger states",
+    name: "trigger states",
     render: () => (
         <Stack>
             <Inline>
@@ -371,7 +373,7 @@ export const TriggerStates: AutocompleteStory = {
 };
 
 export const NoResults: AutocompleteStory = {
-    storyName: "no results",
+    name: "no results",
     render: () => (
         <Stack gap={800}>
             <Inline>
@@ -410,7 +412,7 @@ export const NoResults: AutocompleteStory = {
 };
 
 export const CustomTriggerWidth: AutocompleteStory = {
-    storyName: "custom trigger width",
+    name: "custom trigger width",
     render: () => (
         <Autocomplete width="20rem" placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -422,7 +424,7 @@ export const CustomTriggerWidth: AutocompleteStory = {
 
 
 export const CustomMenuWidth: AutocompleteStory = {
-    storyName: "custom menu width",
+    name: "custom menu width",
     render: () => (
         <Autocomplete overlayProps={{ width: "500px" }} defaultOpen placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -434,7 +436,7 @@ export const CustomMenuWidth: AutocompleteStory = {
 
 
 export const DirectionBottom: AutocompleteStory = {
-    storyName: "direction bottom",
+    name: "direction bottom",
     render: () => (
         <Autocomplete direction="bottom" defaultOpen placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -445,7 +447,7 @@ export const DirectionBottom: AutocompleteStory = {
 };
 
 export const DirectionTop: AutocompleteStory = {
-    storyName: "direction top",
+    name: "direction top",
     render: () => (
         <Autocomplete direction="top" defaultOpen placeholder="Select a planet" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -456,7 +458,7 @@ export const DirectionTop: AutocompleteStory = {
 };
 
 export const AlignStart: AutocompleteStory = {
-    storyName: "align start",
+    name: "align start",
     decorators: [Story => <div style={{ paddingLeft: "200px" }}><Story /></div>],
     render: () => (
         <Autocomplete align="start" overlayProps={{ style: { width: "500px" } }} defaultOpen placeholder="Select a planet" aria-label="Planets">
@@ -468,7 +470,7 @@ export const AlignStart: AutocompleteStory = {
 };
 
 export const AlignEnd: AutocompleteStory = {
-    storyName: "align end",
+    name: "align end",
     decorators: [Story => <div style={{ paddingLeft: "400px" }}><Story /></div>],
     render: () => (
         <Autocomplete align="end" overlayProps={{ style: { width: "500px" } }} defaultOpen placeholder="Select a planet" aria-label="Planets">
@@ -480,7 +482,7 @@ export const AlignEnd: AutocompleteStory = {
 };
 
 export const ConditionnalRendering: AutocompleteStory = {
-    storyName: "conditional rendering",
+    name: "conditional rendering",
     render: () => (
         <Autocomplete placeholder="Select a planet" aria-label="Planets">
             {false && <Item key="earth">Earth</Item>}
@@ -491,7 +493,7 @@ export const ConditionnalRendering: AutocompleteStory = {
 };
 
 export const Zoom: AutocompleteStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -513,7 +515,7 @@ export const Zoom: AutocompleteStory = {
 };
 
 export const Styling: AutocompleteStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Autocomplete border="warning" placeholder="Select a planet" aria-label="Planets">

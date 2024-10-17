@@ -1,14 +1,16 @@
 import { IconList, IconListProps } from "@components/icons";
 import { CatIcon, SparklesIcon, RocketIcon } from "@hopper-ui/icons";
 import { Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/IconList",
     component: IconList
-} as ComponentMeta<typeof IconList>;
+} as Meta<typeof IconList>;
 
-type IconListStory = ComponentStoryObj<typeof IconList>;
+export default meta;
+
+type IconListStory = StoryObj<typeof meta>;
 
 function Icons(props: Omit<IconListProps, "children">) {
     return (
@@ -21,14 +23,14 @@ function Icons(props: Omit<IconListProps, "children">) {
 }
 
 export const Default: IconListStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Icons />
     )
 };
 
 export const Styling: IconListStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Icons border="warning" />

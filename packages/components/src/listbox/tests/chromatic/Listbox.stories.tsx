@@ -6,9 +6,9 @@ import { Inline, Stack } from "@components/layout";
 import { CollectionItem, Item, Section } from "@components/collection";
 import { useListboxContext, Listbox, ListboxOption, ListboxOptionProps } from "@components/listbox";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Listbox",
     component: Listbox,
     parameters: {
@@ -16,12 +16,14 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof Listbox>;
+} as Meta<typeof Listbox>;
 
-type ListboxStory = ComponentStoryObj<typeof Listbox>;
+export default meta;
+
+type ListboxStory = StoryObj<typeof meta>;
 
 export const OnlyItems: ListboxStory = {
-    storyName: "only items",
+    name: "only items",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -36,7 +38,7 @@ export const OnlyItems: ListboxStory = {
 };
 
 export const GeneratedKeys: ListboxStory = {
-    storyName: "generated keys",
+    name: "generated keys",
     render: () => (
         <Listbox aria-label="Planets">
             <Item>Earth</Item>
@@ -47,7 +49,7 @@ export const GeneratedKeys: ListboxStory = {
 };
 
 export const Sections: ListboxStory = {
-    storyName: "sections",
+    name: "sections",
     render: () => (
         <Listbox aria-label="Planets">
             <Section title="Visited">
@@ -76,7 +78,7 @@ export const Sections: ListboxStory = {
 };
 
 export const MixedSectionsAndItems: ListboxStory = {
-    storyName: "mixed sections and items",
+    name: "mixed sections and items",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -102,7 +104,7 @@ export const MixedSectionsAndItems: ListboxStory = {
 };
 
 export const SelectedKeys: ListboxStory = {
-    storyName: "selected keys",
+    name: "selected keys",
     render: () => (
         <Inline>
             <Listbox defaultSelectedKeys={["mars"]} aria-label="Planets">
@@ -128,7 +130,7 @@ export const SelectedKeys: ListboxStory = {
 };
 
 export const ItemWithStartIcon: ListboxStory = {
-    storyName: "item with start icon",
+    name: "item with start icon",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -164,7 +166,7 @@ export const ItemWithStartIcon: ListboxStory = {
 };
 
 export const ItemWithStartIconAndDescription: ListboxStory = {
-    storyName: "item with start icon and description",
+    name: "item with start icon and description",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -187,7 +189,7 @@ export const ItemWithStartIconAndDescription: ListboxStory = {
 };
 
 export const ItemWithEndIcon: ListboxStory = {
-    storyName: "item with end icon",
+    name: "item with end icon",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -211,7 +213,7 @@ export const ItemWithEndIcon: ListboxStory = {
 };
 
 export const ItemWithAvatar: ListboxStory = {
-    storyName: "item with avatar",
+    name: "item with avatar",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -231,7 +233,7 @@ export const ItemWithAvatar: ListboxStory = {
 };
 
 export const ItemWithAvatarAndDescription: ListboxStory = {
-    storyName: "item with avatar and description",
+    name: "item with avatar and description",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -254,7 +256,7 @@ export const ItemWithAvatarAndDescription: ListboxStory = {
 };
 
 export const ItemWithDescription: ListboxStory = {
-    storyName: "item with description",
+    name: "item with description",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -275,7 +277,7 @@ export const ItemWithDescription: ListboxStory = {
 };
 
 export const ItemOverflow: ListboxStory = {
-    storyName: "item overflow",
+    name: "item overflow",
     render: () => (
         <Inline>
             <Listbox aria-label="Planets">
@@ -293,7 +295,7 @@ export const ItemOverflow: ListboxStory = {
 };
 
 export const ItemWithDescriptionOverflow: ListboxStory = {
-    storyName: "item with description overflow",
+    name: "item with description overflow",
     render: () => (
         <Inline>
             <Listbox aria-label="Planets">
@@ -333,7 +335,7 @@ export const ItemWithDescriptionOverflow: ListboxStory = {
 };
 
 export const ItemWithDescriptionOverflowWhenFluid: ListboxStory = {
-    storyName: "item with description overflow when fluid",
+    name: "item with description overflow when fluid",
     render: () => (
         <Inline>
             <Listbox fluid width="16rem" aria-label="Planets">
@@ -371,7 +373,7 @@ export const ItemWithDescriptionOverflowWhenFluid: ListboxStory = {
 };
 
 export const Fluid: ListboxStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Listbox fluid aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -382,7 +384,7 @@ export const Fluid: ListboxStory = {
 };
 
 export const Validation: ListboxStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Stack>
             <Inline>
@@ -446,7 +448,7 @@ export const Validation: ListboxStory = {
 };
 
 export const States: ListboxStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Inline>
             <Listbox selectedKeys={["earth"]} aria-label="Planets">
@@ -476,7 +478,7 @@ export const States: ListboxStory = {
 };
 
 export const ArrayMap: ListboxStory = {
-    storyName: "array map",
+    name: "array map",
     render: () => (
         <Listbox aria-label="Planets">
             {["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus"].map(x => (
@@ -503,7 +505,7 @@ const ActiveOption = ({ item, children, ...rest }: Omit<ListboxOptionProps, "ite
 
 
 export const CustomItemComponent: ListboxStory = {
-    storyName: "custom item component",
+    name: "custom item component",
     render: () => (
         <Listbox aria-label="Planets">
             <ActiveOption key="earth">Earth</ActiveOption>
@@ -514,7 +516,7 @@ export const CustomItemComponent: ListboxStory = {
 };
 
 export const ScrollingWithTooManyOptions: ListboxStory = {
-    storyName: "scrolling with too many options",
+    name: "scrolling with too many options",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="ceres">Ceres</Item>
@@ -536,7 +538,7 @@ export const ScrollingWithTooManyOptions: ListboxStory = {
 };
 
 export const ScrollingWithSections: ListboxStory = {
-    storyName: "scrolling with sections",
+    name: "scrolling with sections",
     render: () => (
         <Listbox aria-label="Planets">
             <Section title="Visited">
@@ -571,7 +573,7 @@ export const ScrollingWithSections: ListboxStory = {
 };
 
 export const ScrollingWithDescriptions: ListboxStory = {
-    storyName: "scrolling with descriptions",
+    name: "scrolling with descriptions",
     render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
@@ -615,7 +617,7 @@ export const ScrollingWithDescriptions: ListboxStory = {
 };
 
 export const ScrollingMixMmatch: ListboxStory = {
-    storyName: "scrolling mix & match",
+    name: "scrolling mix & match",
     render: () => (
         <Listbox aria-label="Planets">
             <Section title="Visited">
@@ -647,7 +649,7 @@ export const ScrollingMixMmatch: ListboxStory = {
 };
 
 export const ScrollingWithCustomStyleHeight: ListboxStory = {
-    storyName: "scrolling with custom style height",
+    name: "scrolling with custom style height",
     render: () => (
         <Listbox height={960} aria-label="Planets">
             <Item key="ceres">Ceres</Item>
@@ -669,7 +671,7 @@ export const ScrollingWithCustomStyleHeight: ListboxStory = {
 };
 
 export const CustomMenuWidth: ListboxStory = {
-    storyName: "custom menu width",
+    name: "custom menu width",
     render: () => (
         <Listbox width="20rem" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -680,7 +682,7 @@ export const CustomMenuWidth: ListboxStory = {
 };
 
 export const Zoom: ListboxStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -704,7 +706,7 @@ export const Zoom: ListboxStory = {
 };
 
 export const Styling: ListboxStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Listbox border="warning" aria-label="Planets">

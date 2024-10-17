@@ -4,17 +4,19 @@ import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
 import { Lozenge } from "@components/lozenge";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Lozenge",
     component: Lozenge
-} as ComponentMeta<typeof Lozenge>;
+} as Meta<typeof Lozenge>;
 
-type LozengeStory = ComponentStoryObj<typeof Lozenge>;
+export default meta;
+
+type LozengeStory = StoryObj<typeof meta>;
 
 export const Default: LozengeStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="end">
             <Lozenge size="sm">New</Lozenge>
@@ -24,7 +26,7 @@ export const Default: LozengeStory = {
 };
 
 export const Variants: LozengeStory = {
-    storyName: "variants",
+    name: "variants",
     render: () => (
         <Inline alignY="end">
             <Lozenge size="sm">New</Lozenge>
@@ -84,7 +86,7 @@ export const Variants: LozengeStory = {
 };
 
 export const Icon: LozengeStory = {
-    storyName: "icon",
+    name: "icon",
     render: () => (
         <Stack>
             <Inline alignY="end">
@@ -110,7 +112,7 @@ export const Icon: LozengeStory = {
 };
 
 export const HighlightAndVariant: LozengeStory = {
-    storyName: "highlight and variant",
+    name: "highlight and variant",
     render: () => (
         <Stack>
             <Inline alignY="end">
@@ -172,7 +174,7 @@ export const HighlightAndVariant: LozengeStory = {
 };
 
 export const InheritParentProperties: LozengeStory = {
-    storyName: "inherit parent properties",
+    name: "inherit parent properties",
     render: () => (
         <Inline alignY="end">
             <Lozenge textTransform="uppercase">New</Lozenge>
@@ -185,7 +187,7 @@ export const InheritParentProperties: LozengeStory = {
 };
 
 export const Fluid: LozengeStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Div width="500px">
             <Inline>
@@ -201,7 +203,7 @@ export const Fluid: LozengeStory = {
 
 
 export const Zoom: LozengeStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Inline>
             <Div className="zoom-in">
@@ -215,7 +217,7 @@ export const Zoom: LozengeStory = {
 };
 
 export const Styling: LozengeStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Lozenge border="warning">New</Lozenge>

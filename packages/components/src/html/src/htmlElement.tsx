@@ -28,7 +28,7 @@ export function htmlElement<T extends ElementType>(name: string, elementType: T)
 
         return (
             <As
-                {...mergeProps(
+                {...mergeProps<any>(
                     rest,
                     {
                         className: "o-ui-element",

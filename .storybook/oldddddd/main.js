@@ -1,3 +1,4 @@
+import { dirname, join } from "path";
 const { customizeWebpack } = require("./webpack.config");
 const { includeChromatic, includeDocs, printEnvironment, isChromatic, isDebug } = require("./env");
 
@@ -8,8 +9,8 @@ let stories = [];
 if (includeDocs) {
     stories = [
         // TODO simplify imports for any pkgs /docs/**/*.stories.mdx
-        "../docs/**/*.stories.mdx",
-        "../packages/components/src/**/docs/**/*.stories.mdx"
+        // "../docs/**/*.stories.mdx",
+        // "../packages/components/src/**/docs/**/*.stories.mdx"
     ];
 }
 
@@ -17,37 +18,56 @@ if (includeChromatic) {
     stories = [
         ...stories,
         // TODO remove chroma and simplify imports
-        "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
+        // "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
         "../packages/components/**/tests/chromatic/**/*.stories.tsx"
     ];
 }
 
 const config = {
-    stories: stories,
-    addons: [
-        {
-            name: "@storybook/addon-essentials",
-            options: {
-                actions: false,
-                backgrounds: false,
-                controls: false,
-                measure: false,
-                outline: false
-            }
-        },
-        {
-            name: "@storybook/addon-a11y",
-            options: {
-                runOnly: {
-                    type: "tag",
-                    values: ["wcag2a", "wcag2aa"]
-                }
+    stories: [
+        // "../docs/**/*.mdx",
+        // "../packages/components/src/**/docs/**/*.mdx",
+        // "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
+        "../packages/components/**/tests/chromatic/**/*.stories.tsx"
+    ],
+
+    addons: [{
+        name: "@storybook/addon-essentials",
+        options: {
+            actions: false,
+            backgrounds: false,
+            controls: false,
+            measure: false,
+            outline: false
+        }
+    }, {
+        name: "@storybook/addon-a11y",
+        options: {
+            runOnly: {
+                type: "tag",
+                values: ["wcag2a", "wcag2aa"]
             }
         }
-    ],
+    }, getAbsolutePath("@storybook/addon-mdx-gfm"), getAbsolutePath("@storybook/addon-webpack5-compiler-swc")],
+
     webpackFinal: customizeWebpack,
+
     reactOptions: {
         strictMode: true
+    },
+
+    framework: {
+        name: getAbsolutePath("@storybook/react-webpack5"),
+
+        options: {
+            strictMode: true
+        }
+    },
+
+    docs: {},
+
+    typescript: {
+        reactDocgen: "react-docgen-typescript"
     }
 };
 
@@ -84,3 +104,7 @@ if (!isChromatic && !isDebug) {
 }
 
 module.exports = config;
+
+function getAbsolutePath(value) {
+    return dirname(require.resolve(join(value, "package.json")));
+}

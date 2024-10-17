@@ -1,16 +1,18 @@
 import { Div } from "@components/html";
 import { Flex } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Flex",
     component: Flex
-} as ComponentMeta<typeof Flex>;
+} as Meta<typeof Flex>;
 
-type FlexStory = ComponentStoryObj<typeof Flex>;
+export default meta;
+
+type FlexStory = StoryObj<typeof meta>;
 
 export const Default: FlexStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Flex>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -21,7 +23,7 @@ export const Default: FlexStory = {
 };
 
 export const FlexInline: FlexStory = {
-    storyName: "inline",
+    name: "inline",
     render: () => (
         <>
             <Flex inline>
@@ -39,7 +41,7 @@ export const FlexInline: FlexStory = {
 };
 
 export const Nesting: FlexStory = {
-    storyName: "nesting",
+    name: "nesting",
     render: () => (
         <Flex direction="row" gap={400}>
             <Flex direction="row" gap={40}>
@@ -57,7 +59,7 @@ export const Nesting: FlexStory = {
 };
 
 export const Gap: FlexStory = {
-    storyName: "gap",
+    name: "gap",
     render: () => (
         <Flex gap={160}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -68,7 +70,7 @@ export const Gap: FlexStory = {
 };
 
 export const ColumnGap: FlexStory = {
-    storyName: "column gap",
+    name: "column gap",
     render: () => (
         <Flex columnGap={160}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -79,7 +81,7 @@ export const ColumnGap: FlexStory = {
 };
 
 export const RowGap: FlexStory = {
-    storyName: "row gap",
+    name: "row gap",
     render: () => (
         <Flex rowGap={160} direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>

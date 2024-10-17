@@ -3,17 +3,19 @@ import { Div } from "@components/html";
 import { Inline } from "@components/layout";
 import { CircleBadge, IconBadge, SquareBadge } from "./BadgeUtils";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: Badge,
     title: "Chromatic/Badge/count"
-} as ComponentMeta<typeof Badge>;
+} as Meta<typeof Badge>;
 
-type BadgeStory = ComponentStoryObj<typeof Badge>;
+export default meta;
+
+type BadgeStory = StoryObj<typeof meta>;
 
 export const Default: BadgeStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline gap={400}>
             <SquareBadge>
@@ -36,7 +38,7 @@ export const Default: BadgeStory = {
 };
 
 export const Overlap: BadgeStory = {
-    storyName: "overlap",
+    name: "overlap",
     render: () => (
         <Inline gap={400}>
             <SquareBadge>
@@ -53,7 +55,7 @@ export const Overlap: BadgeStory = {
 };
 
 export const Zoom: BadgeStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Inline gap={400}>
             <Div className="zoom-in">
@@ -71,7 +73,7 @@ export const Zoom: BadgeStory = {
 };
 
 export const Styling: BadgeStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline gap={400}>
             <SquareBadge border="warning">

@@ -2,17 +2,19 @@ import { SparklesIcon } from "@hopper-ui/icons";
 import { Badge } from "@components/badge";
 import { CircleBadge, IconBadge, SquareBadge, TextBadge } from "./BadgeUtils";
 import { Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: Badge,
     title: "Chromatic/Badge/icon"
-} as ComponentMeta<typeof Badge>;
+} as Meta<typeof Badge>;
 
-type BadgeStory = ComponentStoryObj<typeof Badge>;
+export default meta;
+
+type BadgeStory = StoryObj<typeof meta>;
 
 export const Default: BadgeStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <SquareBadge variant="icon">
             <SparklesIcon />
@@ -21,7 +23,7 @@ export const Default: BadgeStory = {
 };
 
 export const Overlap: BadgeStory = {
-    storyName: "overlap",
+    name: "overlap",
     render: () => (
         <Inline gap={400}>
             <SquareBadge variant="icon">
@@ -41,7 +43,7 @@ export const Overlap: BadgeStory = {
 };
 
 export const Styling: BadgeStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <SquareBadge border="warning" variant="icon">

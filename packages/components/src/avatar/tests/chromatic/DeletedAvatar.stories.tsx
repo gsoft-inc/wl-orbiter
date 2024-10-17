@@ -1,9 +1,9 @@
 import { DeletedAvatar } from "@components/avatar";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: DeletedAvatar,
     parameters: {
         a11y: {
@@ -18,12 +18,14 @@ export default {
         }
     },
     title: "Chromatic/Avatar - Deleted"
-} as ComponentMeta<typeof DeletedAvatar>;
+} as Meta<typeof DeletedAvatar>;
 
-type DeletedAvatarStory = ComponentStoryObj<typeof DeletedAvatar>;
+export default meta;
+
+type DeletedAvatarStory = StoryObj<typeof meta>;
 
 export const Default: DeletedAvatarStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="center">
             <DeletedAvatar size="xs" aria-label="Neil Armstrong" />
@@ -36,7 +38,7 @@ export const Default: DeletedAvatarStory = {
 };
 
 export const Zoom: DeletedAvatarStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -50,7 +52,7 @@ export const Zoom: DeletedAvatarStory = {
 };
 
 export const Styling: DeletedAvatarStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <DeletedAvatar aria-label="Sally Ride" border="warning" />

@@ -6,18 +6,20 @@ import { IllustratedMessage } from "@components/illustrated-message";
 import { Image } from "@components/image";
 import { Inline, Stack } from "@components/layout";
 import { Nasa } from "./assets";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/IllustratedMessage",
     component: IllustratedMessage
-} as ComponentMeta<typeof IllustratedMessage>;
+} as Meta<typeof IllustratedMessage>;
 
-type IllustratedMessageStory = ComponentStoryObj<typeof IllustratedMessage>;
+export default meta;
+
+type IllustratedMessageStory = StoryObj<typeof meta>;
 
 
 export const Default: IllustratedMessageStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <IllustratedMessage>
             <Image src={Nasa} alt="Nasa" width="150px" />
@@ -28,7 +30,7 @@ export const Default: IllustratedMessageStory = {
 };
 
 export const Horizontal: IllustratedMessageStory = {
-    storyName: "horizontal",
+    name: "horizontal",
     render: () => (
         <Stack>
             <IllustratedMessage orientation="horizontal" width="700px" height="200px">
@@ -48,7 +50,7 @@ export const Horizontal: IllustratedMessageStory = {
 };
 
 export const Vertical: IllustratedMessageStory = {
-    storyName: "vertical",
+    name: "vertical",
     render: () => (
         <Inline>
             <IllustratedMessage orientation="vertical" width="200px" height="500px">
@@ -68,7 +70,7 @@ export const Vertical: IllustratedMessageStory = {
 };
 
 export const VeryLongTitle: IllustratedMessageStory = {
-    storyName: "very long title",
+    name: "very long title",
     render: () => (
         <IllustratedMessage width="700px" height="200px">
             <Image src={Nasa} alt="Nasa" />
@@ -79,7 +81,7 @@ export const VeryLongTitle: IllustratedMessageStory = {
 };
 
 export const VeryLongContent: IllustratedMessageStory = {
-    storyName: "very long content",
+    name: "very long content",
     render: () => (
         <IllustratedMessage width="700px" height="200px" orientation="horizontal">
             <Image src={Nasa} alt="Nasa" />
@@ -90,7 +92,7 @@ export const VeryLongContent: IllustratedMessageStory = {
 };
 
 export const NoTitle: IllustratedMessageStory = {
-    storyName: "no title",
+    name: "no title",
     render: () => (
         <IllustratedMessage width="700px" height="200px">
             <Image src={Nasa} alt="Nasa" />
@@ -100,7 +102,7 @@ export const NoTitle: IllustratedMessageStory = {
 };
 
 export const NoDimensions: IllustratedMessageStory = {
-    storyName: "no dimensions",
+    name: "no dimensions",
     render: () => (
         <Stack>
             <IllustratedMessage>
@@ -118,7 +120,7 @@ export const NoDimensions: IllustratedMessageStory = {
 };
 
 export const Zoom: IllustratedMessageStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -140,7 +142,7 @@ export const Zoom: IllustratedMessageStory = {
 };
 
 export const Styling: IllustratedMessageStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <IllustratedMessage border="warning" width="700px" height="200px" orientation="horizontal">

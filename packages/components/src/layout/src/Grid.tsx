@@ -16,7 +16,7 @@ import {
     getSizingValue,
     useResponsiveValue
 } from "../../styling";
-import { Box } from "../../box";
+import { Box, type BoxProps } from "../../box";
 import { ComponentProps, ReactNode, forwardRef } from "react";
 import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isArray, isNil, mergeProps } from "../../shared";
 import { useFormContext } from "../../form";
@@ -56,7 +56,8 @@ export interface InnerGridProps extends
     | "gridTemplateRows"
     | "justifyContent"
     | "justifyItems"
-    | "rowGap"> {
+    | "rowGap"
+    | "ref"> {
     /**
      * See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content).
      */
@@ -155,7 +156,7 @@ export function InnerGrid({
 
     return (
         <Box
-            {...mergeProps(
+            {...mergeProps<Partial<BoxProps>[]>(
                 rest,
                 {
                     as,

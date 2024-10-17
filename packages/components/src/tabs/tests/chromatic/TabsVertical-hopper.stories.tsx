@@ -5,9 +5,9 @@ import { Tabs } from "@components/tabs";
 
 import { Item } from "@components/collection";
 import { Text, Tag, TagList, TagGroup } from "@hopper-ui/components";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Tabs-hopper/vertical",
     component: Tabs,
     parameters: {
@@ -15,12 +15,14 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof Tabs>;
+} as Meta<typeof Tabs>;
 
-type TabsStory = ComponentStoryObj<typeof Tabs>;
+export default meta;
+
+type TabsStory = StoryObj<typeof meta>;
 
 export const Default: TabsStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Tabs orientation="vertical" aria-label="Planets">
             <Item>
@@ -40,7 +42,7 @@ export const Default: TabsStory = {
 };
 
 export const Fluid: TabsStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Tabs orientation="vertical" fluid height="12rem" aria-label="Planets">
             <Item>
@@ -60,7 +62,7 @@ export const Fluid: TabsStory = {
 };
 
 export const TabWithIcon: TabsStory = {
-    storyName: "tab with icon",
+    name: "tab with icon",
     render: () => (
         <Tabs orientation="vertical" aria-label="Planets">
             <Item>
@@ -79,7 +81,7 @@ export const TabWithIcon: TabsStory = {
 };
 
 export const TabWithLozenge: TabsStory = {
-    storyName: "tab with lozenge",
+    name: "tab with lozenge",
     render: () => (
         <Tabs orientation="vertical" aria-label="Planets">
             <Item>
@@ -102,7 +104,7 @@ export const TabWithLozenge: TabsStory = {
 };
 
 export const InCard: TabsStory = {
-    storyName: "in card",
+    name: "in card",
     render: () => (
         <Tabs orientation="vertical" variant="in-card" aria-label="Planets">
             <Item>
@@ -121,7 +123,7 @@ export const InCard: TabsStory = {
 };
 
 export const Heading: TabsStory = {
-    storyName: "heading",
+    name: "heading",
     render: () => (
         <Tabs orientation="vertical" variant="heading" aria-label="Planets">
             <Item>
@@ -140,7 +142,7 @@ export const Heading: TabsStory = {
 };
 
 export const States: TabsStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Inline>
             <Tabs orientation="vertical" aria-label="Planets">

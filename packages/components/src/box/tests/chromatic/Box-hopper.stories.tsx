@@ -1,26 +1,28 @@
 import { Box } from "@components/box";
 import { Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Box-hopper",
     component: Box,
     parameters: {
         chromatic: { delay: 100 }
     }
-} as ComponentMeta<typeof Box>;
+} as Meta<typeof Box>;
 
-type BoxStory = ComponentStoryObj<typeof Box>;
+export default meta;
+
+type BoxStory = StoryObj<typeof meta>;
 
 export const Default: BoxStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Box>The Universe is under no obligation to make sense to you.</Box>
     )
 };
 
 export const Styling: BoxStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Box border="warning">The Universe is under no obligation to make sense to you.</Box>
