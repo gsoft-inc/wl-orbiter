@@ -22,7 +22,7 @@ const DefaultElement = "div";
 
 export interface InnerToolbarProps extends
     InternalProps,
-    Omit<StyledComponentProps<typeof DefaultElement>, "display" | "alignItems" | "flex" | "flexDirection" | "flexWrap" | "justifyContent"> {
+    Omit<StyledComponentProps<typeof DefaultElement>, "display" | "alignItems" | "flex" | "flexDirection" | "flexWrap" | "justifyContent" | "autoFocus"> {
     /**
      * The horizontal alignment of the elements.
      */

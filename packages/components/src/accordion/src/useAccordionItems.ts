@@ -43,18 +43,18 @@ export class AccordionBuilder {
 
             const key = !isNil(element.key) ? element.key.toString().replace(".", "").replace("$", "") : index.toString();
 
-            const headerProps = {
+            const headerProps: AccordionBuilderItem["header"] = {
                 // elementType: isHeading(header.type) ? undefined : header.type,
                 elementType: header.type,
                 props: mergeProps(header.props, element.props),
-                ref: (header as RefAttributes<any>).ref
+                ref: (header as RefAttributes<any>).ref as Ref<any>
             };
 
-            const panelProps = {
+            const panelProps: AccordionBuilderItem["header"] = {
                 // Use a custom type if available otherwise let the AccordionPanel component choose his default type.
                 elementType: content.type !== Content ? content.type : undefined,
                 props: content.props,
-                ref: (content as RefAttributes<any>).ref
+                ref: (content as RefAttributes<any>).ref as Ref<any>
             };
 
             return {

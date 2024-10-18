@@ -66,9 +66,8 @@ export interface SlotOptions {
     };
 }
 
-type GetSlotsReturn<T extends SlotOptions> = {
-    [key in keyof Omit<T, "_">]?: ReactElement;
-};
+type GetSlotsReturn<T extends SlotOptions> = Partial<Record<keyof Omit<T, "_">, ReactElement>>;
+
 
 export function getSlots<T extends SlotOptions>(children: ReactNode, { _ = {}, ...slots }: T): GetSlotsReturn<T> {
     if (isNil(children)) {

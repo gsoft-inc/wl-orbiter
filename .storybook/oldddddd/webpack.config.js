@@ -1,5 +1,4 @@
 const path = require("path");
-const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
 const webpack = require("webpack");
 
 function addWebpackAliases(config) {

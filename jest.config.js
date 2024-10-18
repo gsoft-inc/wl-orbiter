@@ -2,6 +2,7 @@ const { pathsToModuleNameMapper } = require("ts-jest");
 const { compilerOptions } = require("./tsconfig");
 
 module.exports = {
+    testEnvironment: "jsdom",
     roots: ["<rootDir>"],
     testMatch: [
         "**/tests/jest/*.test.ts?(x)"
@@ -14,10 +15,8 @@ module.exports = {
         ...pathsToModuleNameMapper(compilerOptions.paths)
     },
     setupFilesAfterEnv: [
-        "@testing-library/jest-dom/extend-expect",
-        "<rootDir>/setupTests.js"
+        "<rootDir>/setupTests.ts"
     ],
-    testEnvironment: "jsdom",
     verbose: true
 };
 

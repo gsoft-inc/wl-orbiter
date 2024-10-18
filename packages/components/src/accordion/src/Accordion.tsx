@@ -24,7 +24,7 @@ import { useAccordionItems } from "./useAccordionItems";
 
 const DefaultElement = "div";
 
-export interface InnerAccordionProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerAccordionProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     /**
      * Whether or not the first focusable accordion item should autoFocus on render.
      */

@@ -19,7 +19,7 @@ export type AbstractInputProps<T extends ElementType> = InternalProps & Interact
     validationState?: ValidationState;
 };
 
-export type AbstractGroupInputProps<T extends ElementType, V> = Omit<AbstractGroupProps<T>, "onChange"> & {
+export type AbstractGroupInputProps<T extends ElementType, V> = Omit<AbstractGroupProps<T>, "onChange" | "autoFocus"> & {
     /**
      * Whether or not the first input of the group should autoFocus on render.
      */

@@ -57,7 +57,7 @@ export interface InnerTileGroupProps extends Omit<AbstractGroupProps<typeof Defa
     value?: string[] | null;
 }
 
-export interface UnselectableGroupProps extends AbstractGroupProps<typeof DefaultElement> {
+export interface UnselectableGroupProps extends Omit<AbstractGroupProps<typeof DefaultElement>, "autoFocus"> {
     autoFocus?: boolean | number;
 }
 
