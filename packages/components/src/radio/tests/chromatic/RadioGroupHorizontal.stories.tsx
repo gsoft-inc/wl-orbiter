@@ -1,9 +1,9 @@
 import { Radio, RadioGroup } from "@components/radio";
 import { Counter } from "@components/counter";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/RadioGroup/horizontal",
     component: RadioGroup,
     parameters: {
@@ -11,12 +11,14 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof RadioGroup>;
+} as Meta<typeof RadioGroup>;
 
-type RadioGroupStory = ComponentStoryObj<typeof RadioGroup>;
+export default meta;
+
+type RadioGroupStory = StoryObj<typeof meta>;
 
 export const Default: RadioGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <RadioGroup orientation="horizontal">
             <Radio value="1">1</Radio>
@@ -30,7 +32,7 @@ export const Default: RadioGroupStory = {
 };
 
 export const Reverse: RadioGroupStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <RadioGroup reverse orientation="horizontal">
             <Radio value="1">1</Radio>

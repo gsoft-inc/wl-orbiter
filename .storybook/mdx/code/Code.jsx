@@ -1,4 +1,3 @@
-import { Snippet } from "@stories/components";
 import { components } from "@storybook/components";
 
 const StorybookCode = components.code;
@@ -12,10 +11,15 @@ export function Code({ className, children, ...rest }) {
     const language = className && className.split("-");
 
     return (
-        <Snippet
-            language={(language && language[1]) || "markup"}
-            code={children}
-            {...rest}
-        />
-    );
+        <pre>
+            {children}
+        </pre>
+    )
+    // return (
+    //     <Snippet
+    //         language={(language && language[1]) || "markup"}
+    //         code={children}
+    //         {...rest}
+    //     />
+    // );
 }

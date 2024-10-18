@@ -3,17 +3,19 @@ import { Div } from "@components/html";
 import { Heading } from "@components/typography";
 import { Stack } from "@components/layout";
 import { Tile, TileGroup, TileLink } from "@components/tile";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/TileGroup",
     component: TileGroup
-} as ComponentMeta<typeof TileGroup>;
+} as Meta<typeof TileGroup>;
 
-type TileGroupStory = ComponentStoryObj<typeof TileGroup>;
+export default meta;
+
+type TileGroupStory = StoryObj<typeof meta>;
 
 export const Selection: TileGroupStory = {
-    storyName: "selection",
+    name: "selection",
     render: () => (
         <Stack>
             <TileGroup defaultValue={["fuel"]} selectionMode="single" rowSize={3}>
@@ -49,7 +51,7 @@ export const Selection: TileGroupStory = {
 };
 
 export const OnePerRow: TileGroupStory = {
-    storyName: "1 per row",
+    name: "1 per row",
     render: () => (
         <TileGroup rowSize={1}>
             <TileLink href="https://www.google.com">
@@ -69,7 +71,7 @@ export const OnePerRow: TileGroupStory = {
 };
 
 export const TwoPerRow: TileGroupStory = {
-    storyName: "2 per row",
+    name: "2 per row",
     render: () => (
         <TileGroup rowSize={2}>
             <TileLink href="https://www.google.com">
@@ -89,7 +91,7 @@ export const TwoPerRow: TileGroupStory = {
 };
 
 export const ThreePerRow: TileGroupStory = {
-    storyName: "3 per row",
+    name: "3 per row",
     render: () => (
         <TileGroup rowSize={3}>
             <TileLink href="https://www.google.com">
@@ -109,7 +111,7 @@ export const ThreePerRow: TileGroupStory = {
 };
 
 export const Wrap: TileGroupStory = {
-    storyName: "wrap",
+    name: "wrap",
     render: () => (
         <TileGroup rowSize={6}>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map(x => (
@@ -123,7 +125,7 @@ export const Wrap: TileGroupStory = {
 };
 
 export const Disabled: TileGroupStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <Stack>
             <TileGroup selectionMode="none" disabled rowSize={3}>
@@ -173,7 +175,7 @@ export const Disabled: TileGroupStory = {
 };
 
 export const Zoom: TileGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -213,7 +215,7 @@ export const Zoom: TileGroupStory = {
 };
 
 export const Styling: TileGroupStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <TileGroup border="warning" rowSize={3}>

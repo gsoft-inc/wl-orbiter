@@ -11,7 +11,7 @@ export function as<A extends JSXElementConstructor<any>, B extends ElementType>(
 
     return forwardRef<ElementRef<B>, Merge<ComponentProps<A>, ComponentProps<B>>>((props, ref) => (
         <Component
-            {...mergeProps(
+            {...mergeProps<any>(
                 props,
                 {
                     as: asProp,

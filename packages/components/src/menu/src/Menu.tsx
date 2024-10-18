@@ -36,7 +36,7 @@ export const ItemKeyProp = "data-o-ui-key";
 
 const DefaultElement = "ul";
 
-export interface InnerMenuProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerMenuProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     /**
      * Whether or not the menu should autofocus on render.
      */

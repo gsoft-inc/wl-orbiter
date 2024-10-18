@@ -1,8 +1,8 @@
 import { Loader } from "@components/loader";
 import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: Loader,
     title: "Chromatic/Loader",
     parameters: {
@@ -11,19 +11,21 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Loader>;
+} as Meta<typeof Loader>;
 
-type LoaderStory = ComponentStoryObj<typeof Loader>;
+export default meta;
+
+type LoaderStory = StoryObj<typeof meta>;
 
 export const Default: LoaderStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Loader aria-label="Loading..." />
     )
 };
 
 export const Styling: LoaderStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline alignY="end" >
             <Loader className="border-red" aria-label="Loading..." />
@@ -33,7 +35,7 @@ export const Styling: LoaderStory = {
 };
 
 export const Zoom: LoaderStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Inline alignY="end" className="zoom-in">

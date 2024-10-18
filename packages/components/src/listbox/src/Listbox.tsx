@@ -38,7 +38,7 @@ export type ListboxSelectionMode = "none" | "single" | "multiple";
 
 const DefaultElement = "div";
 
-export interface InnerListboxProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerListboxProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     /**
      * Whether or not the listbox should autofocus on render.
      */
@@ -390,12 +390,12 @@ export function InnerListbox({
         tooltip
     }: CollectionItem) => (
         <As
+            key={key}
             {...mergeProps(
                 props,
                 {
                     id: `${rootId}-option-${index + 1}`,
                     item: { key: key, tooltip },
-                    key,
                     ref
                 }
             )}

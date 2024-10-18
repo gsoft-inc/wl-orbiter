@@ -1,10 +1,10 @@
 import { Avatar } from "@components/avatar";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { Astronaut, Person } from "./assets";
 
-export default {
+const meta = {
     title: "Chromatic/Avatar",
     component: Avatar,
     parameters: {
@@ -19,12 +19,14 @@ export default {
             }
         }
     }
-} as ComponentMeta<typeof Avatar>;
+} as Meta<typeof Avatar>;
 
-type AvatarStory = ComponentStoryObj<typeof Avatar>;
+export default meta;
+
+type AvatarStory = StoryObj<typeof meta>;
 
 export const LocalImage: AvatarStory = {
-    storyName: "local image",
+    name: "local image",
     render: () => (
         <Inline alignY="center">
             <Avatar src={Person} size="xs" name="Neil Armstrong" />
@@ -38,7 +40,7 @@ export const LocalImage: AvatarStory = {
 };
 
 export const LocalImageRectangle: AvatarStory = {
-    storyName: "local image rectangle",
+    name: "local image rectangle",
     render: () => (
         <Inline alignY="center">
             <Avatar src={Astronaut} size="xs" name="Neil Armstrong" />
@@ -52,7 +54,7 @@ export const LocalImageRectangle: AvatarStory = {
 };
 
 export const RemoteImage: AvatarStory = {
-    storyName: "remote image",
+    name: "remote image",
     parameters: {
         chromatic: { delay: 500 }
     },
@@ -62,7 +64,7 @@ export const RemoteImage: AvatarStory = {
 };
 
 export const FailingRemoteSrc: AvatarStory = {
-    storyName: "failing remote src",
+    name: "failing remote src",
     render: () => (
         <Inline alignY="center">
             <Avatar size="xs" src="https://www.google.com" name="Neil Armstrong" />
@@ -76,7 +78,7 @@ export const FailingRemoteSrc: AvatarStory = {
 };
 
 export const Initials: AvatarStory = {
-    storyName: "initials",
+    name: "initials",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -98,7 +100,7 @@ export const Initials: AvatarStory = {
 };
 
 export const EmptySrc: AvatarStory = {
-    storyName: "empty src",
+    name: "empty src",
     render: () => (
         <Inline alignY="center">
             <Avatar src="" size="xs" name="Neil Armstrong" />
@@ -111,7 +113,7 @@ export const EmptySrc: AvatarStory = {
 };
 
 export const Zoom: AvatarStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -125,7 +127,7 @@ export const Zoom: AvatarStory = {
 };
 
 export const Styling: AvatarStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Avatar name="Sally Ride" border="warning" />

@@ -1,5 +1,4 @@
 const path = require("path");
-const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
 const webpack = require("webpack");
 
 function addWebpackAliases(config) {
@@ -25,23 +24,6 @@ function addWebpackAliases(config) {
     };
 }
 
-// Currently required for:
-//   - https://github.com/reworkcss/css
-function supportPackagesWithDependencyOnNodeFileSystem(config) {
-    const existingNode = config.node || {};
-
-    config.node = {
-        ...existingNode,
-        fs: "empty"
-    };
-}
-
-function ignoreJarleWarning(config) {
-    config.plugins.push(new FilterWarningsPlugin({
-        exclude: /Module not found: Error: Can't resolve 'holderjs'/
-    }));
-}
-
 function ignorePrettierParsers(config) {
     config.plugins.push(new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/parser-standalone$/,
@@ -62,8 +44,6 @@ function ignorePrettierParsers(config) {
 module.exports = {
     customizeWebpack: async config => {
         addWebpackAliases(config);
-        supportPackagesWithDependencyOnNodeFileSystem(config);
-        ignoreJarleWarning(config);
         ignorePrettierParsers(config);
 
         return config;

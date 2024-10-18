@@ -2,9 +2,9 @@ import { Inline, Stack } from "@components/layout";
 import { Div } from "@components/html";
 import { EditIcon } from "@hopper-ui/icons";
 import { NumberInput } from "@components/number-input";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/NumberInput",
     component: NumberInput,
     parameters: {
@@ -12,12 +12,14 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof NumberInput>;
+} as Meta<typeof NumberInput>;
 
-type NumberInputStory = ComponentStoryObj<typeof NumberInput>;
+export default meta;
+
+type NumberInputStory = StoryObj<typeof meta>;
 
 export const Default: NumberInputStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <NumberInput placeholder="Age" />
@@ -38,21 +40,21 @@ export const Default: NumberInputStory = {
 };
 
 export const IntegerValue: NumberInputStory = {
-    storyName: "integer value",
+    name: "integer value",
     render: () => (
         <NumberInput defaultValue={12} step={1} placeholder="Age" />
     )
 };
 
 export const DecimalValue: NumberInputStory = {
-    storyName: "decimal value",
+    name: "decimal value",
     render: () => (
         <NumberInput defaultValue={12.10} step={0.1} placeholder="Grams" />
     )
 };
 
 export const Icon: NumberInputStory = {
-    storyName: "icon",
+    name: "icon",
     render: () => (
         <Stack>
             <NumberInput icon={<EditIcon />} placeholder="Age" />
@@ -70,7 +72,7 @@ export const Icon: NumberInputStory = {
 
 
 export const Validation: NumberInputStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline>
             <NumberInput validationState="invalid" placeholder="Age" />
@@ -80,7 +82,7 @@ export const Validation: NumberInputStory = {
 };
 
 export const Zoom: NumberInputStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -94,7 +96,7 @@ export const Zoom: NumberInputStory = {
 };
 
 export const Styling: NumberInputStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <NumberInput border="warning" placeholder="Age" />

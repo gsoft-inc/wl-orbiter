@@ -1,16 +1,18 @@
 import { CrossButton } from "@components/button";
 import { Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/CrossButton-hopper",
     component: CrossButton
-} as ComponentMeta<typeof CrossButton>;
+} as Meta<typeof CrossButton>;
 
-type CrossButtonStory = ComponentStoryObj<typeof CrossButton>;
+export default meta;
+
+type CrossButtonStory = StoryObj<typeof meta>;
 
 export const Default: CrossButtonStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="end">
             <CrossButton size="sm" aria-label="Clear" />

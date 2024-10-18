@@ -6,17 +6,19 @@ import { Form } from "@components/form";
 import { Inline } from "@components/layout";
 import { TextInput } from "@components/text-input";
 import { TextLinkAsButton } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Form/flex inline",
     component: Form
-} as ComponentMeta<typeof Form>;
+} as Meta<typeof Form>;
 
-type FormStory = ComponentStoryObj<typeof Form>;
+export default meta;
+
+type FormStory = StoryObj<typeof meta>;
 
 export const Default: FormStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Form>
             <Field>
@@ -63,7 +65,7 @@ export const Default: FormStory = {
 };
 
 export const Fluid: FormStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Form fluid>
             <Field>
@@ -111,7 +113,7 @@ export const Fluid: FormStory = {
 
 
 export const FluidFixWidthContainer: FormStory = {
-    storyName: "fluid with fix width container",
+    name: "fluid with fix width container",
     render: () => (
         <Div width="24rem">
             <Form fluid>
@@ -160,7 +162,7 @@ export const FluidFixWidthContainer: FormStory = {
 };
 
 export const Messages: FormStory = {
-    storyName: "messages",
+    name: "messages",
     render: () => (
         <Form>
             <Inline>
