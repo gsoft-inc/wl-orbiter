@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.5.1
+
+### Patch Changes
+
+- 5b96aca65: Heading is now optional in Popover
+
 ## 5.5.0
 
 ### Minor Changes
