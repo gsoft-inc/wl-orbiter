@@ -92,7 +92,7 @@ export function InnerPopover({
 
     const { button, "button-group": buttonGroup, content, footer, heading } = useSlots(children, useMemo(() => ({
         _: {
-            required: ["heading", "content"]
+            required: ["content"]
         },
         button: {
             className: "o-ui-popover-button",
