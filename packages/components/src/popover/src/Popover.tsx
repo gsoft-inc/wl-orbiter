@@ -118,6 +118,10 @@ export function InnerPopover({
         }
     }), [popoverId]));
 
+    if (isNil(heading) && isNil(ariaLabel)) {
+        console.error("A popover must either have a heading or an \"aria-label\" attribute.");
+    }
+
     const headingId = heading?.props?.id;
 
     const footerMarkup = isString(footer?.props?.children)
