@@ -43,10 +43,6 @@
 .o-ui-switch-label {
     grid-area: label;
     margin-left: var(--hop-space-inline-sm);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: inline;
 }
 
 /* LABEL | REVERSE */

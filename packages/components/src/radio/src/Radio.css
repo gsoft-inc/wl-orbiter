@@ -51,9 +51,6 @@
 /* CONTENT | LABEL */
 .o-ui-radio-label {
     margin-left: var(--hop-space-inline-sm);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 /* CONTENT | LABEL | REVERSE */
