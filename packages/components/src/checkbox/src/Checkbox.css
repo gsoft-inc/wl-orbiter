@@ -3,6 +3,7 @@
 }
 
 .o-ui-checkbox {
+    --_checkbox-size: 1.5rem;
     outline: transparent;
     display: inline-flex;
     align-items: flex-start;
@@ -19,7 +20,6 @@
 
 /* BOX */
 .o-ui-checkbox-box {
-    --_checkbox-size: 1.5rem;
     --_checkbox-border-radius: var(--hop-shape-rounded-sm);
     --_checkbox-border-color: var(--hop-neutral-border);
     --_checkbox-background-color: var(--hop-neutral-surface);
@@ -206,7 +206,7 @@
 /* SIZING */
 /* SIZING | SMALL */
 /* SIZING | SMALL | LABEL */
-.o-ui-checkbox-sm .o-ui-checkbox-box {
+.o-ui-checkbox-sm {
     --_checkbox-size: 1rem;
 }
 
