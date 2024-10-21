@@ -98,8 +98,11 @@
 
 /* CONTENT | LABEL */
 .o-ui-checkbox-label {
-    margin-block-start: calc((1.5rem - (var(--hop-body-md-line-height) * var(--hop-body-md-font-size))) / 2);
     margin-left: var(--hop-space-inline-sm);
+}
+
+.o-ui-checkbox-counter, .o-ui-checkbox-label {
+    margin-top: calc((var(--_checkbox-size) - (var(--hop-body-md-line-height) * var(--hop-body-md-font-size))) / 2);
 }
 
 /* CONTENT | LABEL | REVERSE */
@@ -212,8 +215,9 @@
     height: var(--_checkbox-size);
 }
 
-.o-ui-checkbox-sm .o-ui-checkbox-label {
-    margin-block-start: calc((1rem - (var(--hop-body-sm-line-height) * var(--hop-body-sm-font-size))) / 2);
+.o-ui-checkbox-sm .o-ui-checkbox-label,
+.o-ui-checkbox-sm .o-ui-checkbox-counter {
+    margin-top: calc((var(--_checkbox-size) - (var(--hop-body-sm-line-height) * var(--hop-body-sm-font-size))) / 2);
 }
 
 /* SIZING | SMALL | BOX | CHECKED */
