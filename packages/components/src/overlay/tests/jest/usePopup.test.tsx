@@ -408,9 +408,7 @@ test("closing the popup with esc keypress return the focus to the trigger", asyn
 
     await userEvent.click(screen.getByTestId("trigger"));
 
-    act(() => {
-        screen.getByTestId("overlay").focus();
-    });
+    (await screen.findByTestId("overlay")).focus();
 
     await waitFor(() => expect(screen.getByTestId("trigger")).not.toHaveFocus());
 
