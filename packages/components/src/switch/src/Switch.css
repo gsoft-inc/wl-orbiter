@@ -5,8 +5,9 @@
     --o-ui-switch-background-focus: var(--hop-neutral-surface-hover);
     --o-ui-switch-border-focus: var(--hop-neutral-border-hover);
     --o-ui-switch-dot-background-focus: var(--hop-neutral-icon-hover);
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     cursor: pointer;
     max-width: 100%;
     width: max-content;
@@ -41,7 +42,6 @@
 
 /* LABEL */
 .o-ui-switch-label {
-    grid-area: label;
     margin-left: var(--hop-space-inline-sm);
 }
 
@@ -147,6 +147,10 @@
     transform: translate(calc(2rem - 0.75rem - var(--o-ui-switch-control-before-transform-translate-value)), -50%);
 }
 
+.o-ui-switch-sm .o-ui-switch-label {
+    margin-block-start: calc((1rem - (var(--hop-body-sm-line-height) * var(--hop-body-sm-font-size))) / 2);
+}
+
 /* MEDIUM */
 .o-ui-switch-md .o-ui-switch-control {
     width: 3rem;
@@ -160,4 +164,8 @@
 
 .o-ui-switch-md.o-ui-switch-checked .o-ui-switch-control::before {
     transform: translate(calc(3rem - 1rem - var(--o-ui-switch-control-before-transform-translate-value)), -50%);
+}
+
+.o-ui-switch-md .o-ui-switch-label {
+    margin-block-start: calc((1.5rem - (var(--hop-body-md-line-height) * var(--hop-body-md-font-size))) / 2);
 }

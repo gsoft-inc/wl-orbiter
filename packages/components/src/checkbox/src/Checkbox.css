@@ -4,8 +4,9 @@
 
 .o-ui-checkbox {
     outline: transparent;
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     cursor: pointer;
     color: var(--hop-neutral-text);
     line-height: var(--hop-body-sm-line-height);
@@ -97,6 +98,7 @@
 
 /* CONTENT | LABEL */
 .o-ui-checkbox-label {
+    margin-block-start: calc((1.5rem - (var(--hop-body-md-line-height) * var(--hop-body-md-font-size))) / 2);
     margin-left: var(--hop-space-inline-sm);
 }
 
@@ -208,6 +210,10 @@
 .o-ui-checkbox-sm .o-ui-checkbox-box:before {
     width: var(--_checkbox-size);
     height: var(--_checkbox-size);
+}
+
+.o-ui-checkbox-sm .o-ui-checkbox-label {
+    margin-block-start: calc((1rem - (var(--hop-body-sm-line-height) * var(--hop-body-sm-font-size))) / 2);
 }
 
 /* SIZING | SMALL | BOX | CHECKED */
