@@ -5,7 +5,7 @@
     --o-ui-switch-background-focus: var(--hop-neutral-surface-hover);
     --o-ui-switch-border-focus: var(--hop-neutral-border-hover);
     --o-ui-switch-dot-background-focus: var(--hop-neutral-icon-hover);
-    display: flex;
+    display: inline-flex;
     align-items: flex-start;
     justify-content: flex-start;
     cursor: pointer;

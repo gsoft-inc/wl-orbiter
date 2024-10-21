@@ -1,7 +1,7 @@
 .o-ui-radio {
     --o-ui-radio-background-color: var(--hop-neutral-icon-selected);
     --o-ui-radio-border-color: var(--hop-neutral-border);
-    display: flex;
+    display: inline-flex;
     align-items: flex-start;
     justify-content: flex-start;
     cursor: pointer;
@@ -13,11 +13,10 @@
 
 /* BUTTON */
 .o-ui-radio-button {
-    align-self: baseline;
+    display: inline-block;
     background-color: var(--o-ui-radio-background-color);
     border-radius: var(--hop-shape-circle);
     border: 1px solid var(--o-ui-radio-border-color);
-    margin-top: 1.5px;
     position: relative;
     width: 1.5rem;
     height: 1.5rem;
@@ -42,7 +41,6 @@
 
 /* BUTTON | SMALL */
 .o-ui-radio-sm .o-ui-radio-button {
-    margin-top: 2px;
     width: 1rem;
     height: 1rem;
 }
