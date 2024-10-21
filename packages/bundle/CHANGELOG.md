@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.5.2
+
+### Patch Changes
+
+- f92bbbc22: Align Checkbox, Switch and Radio to top instead of centering
+
 ## 5.5.1
 
 ### Patch Changes
