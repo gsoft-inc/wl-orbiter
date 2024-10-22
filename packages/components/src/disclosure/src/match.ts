@@ -15,9 +15,5 @@ export function match<TValue extends string | number = string, TReturnValue = un
             .join(", ")}.`
     );
 
-    if (Error.captureStackTrace) {
-        Error.captureStackTrace(error, match);
-    }
-
     throw error;
 }
