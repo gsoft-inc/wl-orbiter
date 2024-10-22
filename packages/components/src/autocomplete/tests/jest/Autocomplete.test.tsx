@@ -341,9 +341,7 @@ test("when a value is selected, leaving the autocomplete without selecting a val
 
     await waitFor(() => expect(screen.getByTestId("autocomplete")).toHaveValue("Earth"));
 
-    await userEvent.clear(screen.getByTestId("autocomplete"));
-
-    await userEvent.type(screen.getByTestId("autocomplete"), "m");
+    await userEvent.type(screen.getByTestId("autocomplete"), `${"{backspace}".repeat("Earth".length)}m`);
 
     await waitFor(() => expect(screen.getByTestId("autocomplete")).toHaveValue("m"));
 

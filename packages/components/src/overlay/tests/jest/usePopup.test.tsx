@@ -204,9 +204,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         fireEvent.keyDown(screen.getByTestId("overlay"), { key: Keys.esc });
 
@@ -227,9 +225,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         fireEvent.keyDown(screen.getByTestId("overlay"), { key: Keys.esc });
 
@@ -304,9 +300,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         await userEvent.click(document.body);
 
@@ -327,9 +321,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         await userEvent.click(document.body);
 
