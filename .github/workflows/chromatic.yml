@@ -5,6 +5,9 @@ name: Chromatic
 
 on:
     pull_request:
+        # Opened, synchronize, or reopened are the default types
+        # We added ready_for_review to trigger the workflow is passed from draft to ready_for_review
+        types: ["opened", "synchronize", "reopened", "ready_for_review"]
         branches-ignore:
           - changeset-release/*
 
