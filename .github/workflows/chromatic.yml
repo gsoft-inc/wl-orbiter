@@ -24,15 +24,28 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version-file: ".nvmrc"
-                  cache: "yarn"
+                  cache: "pnpm"
+
+            - name: Cache pnpm store
+              uses: actions/cache@v3
+              with:
+                  path: |
+                    node_modules
+                    ~/.pnpm-store
+                  key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                    ${{ runner.os }}-pnpm-
+
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+              run: |
+                corepack enable
+                pnpm install --frozen-lockfile
+
             - name: Build Packages
-              run: yarn build
+              run: pnpm run build
+
             - name: Publish to Chromatic
               uses: chromaui/action@v11.4.0
               with:
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   buildScriptName: build-sb-chroma
-
-

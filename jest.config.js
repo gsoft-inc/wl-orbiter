@@ -8,7 +8,12 @@ module.exports = {
         "**/tests/jest/*.test.ts?(x)"
     ],
     preset: "ts-jest/presets/js-with-ts",
-    transformIgnorePatterns: ["/node_modules/(?!(@hopper-ui)/)"], // make sure to transpile esm code to cjs
+    transformIgnorePatterns: [
+        "/node_modules/(?!(@hopper-ui)/)",
+        "/packages/bundle/node_modules/(?!(@hopper-ui)/)",
+        "/packages/components/node_modules/(?!(@hopper-ui)/)",
+        "/packages/css/node_modules/(?!(@hopper-ui)/)"
+    ], // make sure to transpile esm code to cjs
     modulePaths: [compilerOptions.baseUrl],
     moduleNameMapper: {
         "\\.css$": "identity-obj-proxy",
