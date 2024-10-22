@@ -92,7 +92,7 @@ export function InnerPopover({
 
     const { button, "button-group": buttonGroup, content, footer, heading } = useSlots(children, useMemo(() => ({
         _: {
-            required: ["heading", "content"]
+            required: ["content"]
         },
         button: {
             className: "o-ui-popover-button",
@@ -117,6 +117,10 @@ export function InnerPopover({
             size: "md"
         }
     }), [popoverId]));
+
+    if (isNil(heading) && isNil(ariaLabel)) {
+        console.error("A popover must either have a heading or an \"aria-label\" attribute.");
+    }
 
     const headingId = heading?.props?.id;
 

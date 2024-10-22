@@ -1,5 +1,19 @@
 # @workleap/orbiter-ui
 
+## 5.5.2
+
+### Patch Changes
+
+- f92bbbc22: Align Checkbox, Switch and Radio to top instead of centering
+
+## 5.5.1
+
+### Patch Changes
+
+- 5b96aca65: Heading is now optional in Popover
+- c53858d1a: Switch, Checkbox and Radio label will now wrap instead of having an ellipsis by default
+- d57682110: Add a warning when user doesn't add a Heading or an aria-label attribute to a Popover
+
 ## 5.5.0
 
 ### Minor Changes

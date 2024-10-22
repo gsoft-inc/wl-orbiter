@@ -1,8 +1,10 @@
 .o-ui-radio {
     --o-ui-radio-background-color: var(--hop-neutral-icon-selected);
     --o-ui-radio-border-color: var(--hop-neutral-border);
+    --o-ui-radio-size: 1.5rem;
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     cursor: pointer;
     max-width: 100%;
     width: max-content;
@@ -39,27 +41,38 @@
 }
 
 /* BUTTON | SMALL */
+.o-ui-radio-sm {
+    --o-ui-radio-size: 1rem;
+}
+
 .o-ui-radio-sm .o-ui-radio-button {
-    width: 1rem;
-    height: 1rem;
+    width: var(--o-ui-radio-size);
+    height: var(--o-ui-radio-size);
 }
 
 .o-ui-radio-sm .o-ui-radio-button::before {
     --o-ui-radio-button-size: 0.5rem;
 }
 
-/* CONTENT | LABEL */
+/* CONTENT | LABEL | SMALL */
 .o-ui-radio-label {
     margin-left: var(--hop-space-inline-sm);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+}
+
+.o-ui-radio-counter, .o-ui-radio-label {
+    margin-top: calc((var(--o-ui-radio-size) - (var(--hop-body-md-line-height) * var(--hop-body-md-font-size))) / 2);
 }
 
 /* CONTENT | LABEL | REVERSE */
 .o-ui-radio-reverse .o-ui-radio-label {
     margin-left: 0;
     margin-right: var(--hop-space-inline-sm);
+}
+
+/* CONTENT | LABEL | SMALL */
+.o-ui-radio-sm .o-ui-radio-label,
+.o-ui-radio-sm .o-ui-radio-counter {
+    margin-top: calc((var(--o-ui-radio-size) - (var(--hop-body-sm-line-height) * var(--hop-body-sm-font-size))) / 2);
 }
 
 /* CONTENT | ICON */
