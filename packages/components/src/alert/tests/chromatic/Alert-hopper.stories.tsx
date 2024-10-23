@@ -1,21 +1,24 @@
 import { Alert } from "@components/alert";
 import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { createTestSuite } from "./createTestSuite";
-import { storiesOfBuilder } from "@stories/utils";
+import { Heading } from "@hopper-ui/components";
+import { Meta, StoryObj } from "@storybook/react";
 
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Alert")
-        .segment(segment)
-        .build();
-}
+const meta = {
+    title: "Chromatic/Alert-hopper",
+    component: Alert
+} as Meta<typeof Alert>;
 
-createTestSuite(<Alert variant="confirmation" />, stories("/confirmation"));
+export default meta;
 
-createTestSuite(<Alert variant="destructive" />, stories("/destructive"));
+type AlertHopperStory = StoryObj<typeof meta>;
 
-stories()
-    .add("styled system", () =>
+// createTestSuite(<Alert variant="confirmation" />, stories("/confirmation"));
+
+// createTestSuite(<Alert variant="destructive" />, stories("/destructive"));
+
+export const StyledSystem: AlertHopperStory = {
+    name: "styled system",
+    render: () => (
         <Alert
             primaryButtonLabel="Yes"
             border="warning"
@@ -24,7 +27,11 @@ stories()
             <Content border="warning">Are you sure you want to launch the space shuttle?</Content>
         </Alert>
     )
-    .add("className", () =>
+};
+
+export const ClassName: AlertHopperStory = {
+    name: "className",
+    render: () => (
         <Alert
             primaryButtonLabel="Yes"
             className="border-red"
@@ -33,7 +40,11 @@ stories()
             <Content className="border-red">Are you sure you want to launch the space shuttle?</Content>
         </Alert>
     )
-    .add("styles", () =>
+};
+
+export const Styles: AlertHopperStory = {
+    name: "styles",
+    render: () => (
         <Alert
             primaryButtonLabel="Yes"
             style={{ border: "1px solid red" }}
@@ -41,4 +52,5 @@ stories()
             <Heading style={{ border: "1px solid red" }}>Launch</Heading>
             <Content style={{ border: "1px solid red" }}>Are you sure you want to launch the space shuttle?</Content>
         </Alert>
-    );
+    )
+};

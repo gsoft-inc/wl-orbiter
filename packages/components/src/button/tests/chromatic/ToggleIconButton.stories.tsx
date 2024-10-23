@@ -1,24 +1,25 @@
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { Inline } from "@components/layout";
 import { ToggleIconButton } from "@components/button";
-import { createToggleIconButtonTestSuite } from "./createToggleIconButtonTestSuite-hopper";
-import { storiesOfBuilder } from "@stories/utils";
 
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/ToggleIconButton-hopper")
-        .segment(segment)
-        .build();
-}
+import { Meta, StoryObj } from "@storybook/react";
 
-createToggleIconButtonTestSuite(<ToggleIconButton variant="primary" />, stories("/primary"));
+const meta = {
+    title: "Chromatic/ToggleIconButton",
+    component: ToggleIconButton
+} as Meta<typeof ToggleIconButton>;
 
-createToggleIconButtonTestSuite(<ToggleIconButton variant="secondary" />, stories("/secondary"));
+export default meta;
 
-stories()
-    .add("styling", () =>
+type ToggleIconButtonStory = StoryObj<typeof meta>;
+
+export const Styling: ToggleIconButtonStory = {
+    name: "styling",
+    render: () => (
         <Inline>
             <ToggleIconButton border="sunken-treasure-600" variant="secondary" aria-label="Activate"><CheckmarkIcon /></ToggleIconButton>
             <ToggleIconButton className="bg-red" variant="secondary" aria-label="Activate"><CheckmarkIcon /></ToggleIconButton>
             <ToggleIconButton style={{ backgroundColor: "red" }} variant="secondary" aria-label="Activate"><CheckmarkIcon /></ToggleIconButton>
         </Inline>
-    );
+    )
+};
