@@ -2,14 +2,11 @@
 
 ## Bump NPM packages versions
 
-To udpate our packages use a package called ![npm-check-updates](https://www.npmjs.com/package/npm-check-updates). Dont install it locally, use `npx`.
-
 In a terminal, use the followings commands
 
-- To list the available updates, type `npx --yes npm-check-updates`
+- To list the available updates, type `pnpm list-outdated-deps`
 - If you want to proceed with the updates, your must first delete `pnpm-lock.yaml`
-- Then type `npx --yes npm-check-updates -u` to bump the versions in the `package.json` file
-- Install the new packages with `pnpm update`
+- Then type `pnpm update-outdated-deps` to bump the versions in the `package.json` file
 
 ## ESLint
 
