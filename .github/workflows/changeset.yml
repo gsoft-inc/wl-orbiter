@@ -15,22 +15,28 @@ jobs:
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-            node-version-file: ".nvmrc"
-      - name: Cache yarn dependencies
+          node-version-file: ".nvmrc"
+
+      - name: Cache pnpm store
         uses: actions/cache@v3
         id: cache-dependencies
         with:
-            path: node_modules
-            key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-            restore-keys: |
-              ${{ runner.ox }}-yarn-
-      - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+          path: |
+            node_modules
+            ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install pnpm
         run: |
-          yarn install --frozen-lockfile
+          corepack enable
+          pnpm install --frozen-lockfile
+
       - name: Create release Pull Request or publish to NPM
         id: changesets
         uses: changesets/action@v1

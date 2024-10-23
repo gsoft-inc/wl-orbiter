@@ -4,7 +4,7 @@ import { Div } from "@components/html";
 import { Image } from "@components/image";
 import { Launch } from "./assets";
 import { Popover } from "@components/popover";
-import { Button, ButtonGroup, Footer, Form, Heading, Label, Link, TextField } from "@hopper-ui/components";
+import { Button, ButtonGroup, Footer, Form, Heading, Link, TextField } from "@hopper-ui/components";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
@@ -97,12 +97,8 @@ export const PopoverForm: PopoverStory = {
             <Heading>Space News</Heading>
             <Content>
                 <Form isFluid>
-                    <TextField name="first-name">
-                        <Label>First Name</Label>
-                    </TextField>
-                    <TextField name="last-name">
-                        <Label>Last Name</Label>
-                    </TextField>
+                    <TextField label="First Name" name="first-name" />
+                    <TextField label="Last Name" name="last-name" />
                 </Form>
             </Content>
             <ButtonGroup>
