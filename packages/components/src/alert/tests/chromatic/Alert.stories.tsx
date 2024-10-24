@@ -1,21 +1,20 @@
 import { Alert } from "@components/alert";
 import { Content } from "@components/placeholders";
-import { Heading } from "@hopper-ui/components";
-import { createTestSuite } from "./createTestSuite-hopper";
-import { storiesOfBuilder } from "@stories/utils";
+import { Heading } from "@components/typography";
+import { Meta, StoryObj } from "@storybook/react";
 
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Alert-hopper")
-        .segment(segment)
-        .build();
-}
+const meta = {
+    title: "Chromatic/Alert",
+    component: Alert
+} as Meta<typeof Alert>;
 
-createTestSuite(<Alert variant="confirmation" />, stories("/confirmation"));
+export default meta;
 
-createTestSuite(<Alert variant="destructive" />, stories("/destructive"));
+type AlertStory = StoryObj<typeof meta>;
 
-stories()
-    .add("styled system", () =>
+export const StyledSystem: AlertStory = {
+    name: "styled system",
+    render: () => (
         <Alert
             primaryButtonLabel="Yes"
             border="warning"
@@ -24,7 +23,11 @@ stories()
             <Content border="warning">Are you sure you want to launch the space shuttle?</Content>
         </Alert>
     )
-    .add("className", () =>
+};
+
+export const ClassName: AlertStory = {
+    name: "className",
+    render: () => (
         <Alert
             primaryButtonLabel="Yes"
             className="border-red"
@@ -33,7 +36,11 @@ stories()
             <Content className="border-red">Are you sure you want to launch the space shuttle?</Content>
         </Alert>
     )
-    .add("styles", () =>
+};
+
+export const Styles: AlertStory = {
+    name: "styles",
+    render: () => (
         <Alert
             primaryButtonLabel="Yes"
             style={{ border: "1px solid red" }}
@@ -41,4 +48,5 @@ stories()
             <Heading style={{ border: "1px solid red" }}>Launch</Heading>
             <Content style={{ border: "1px solid red" }}>Are you sure you want to launch the space shuttle?</Content>
         </Alert>
-    );
+    )
+};

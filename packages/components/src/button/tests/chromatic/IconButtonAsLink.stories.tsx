@@ -1,0 +1,24 @@
+import { AddIcon } from "@hopper-ui/icons";
+import { IconButtonAsLink } from "@components/button";
+import { Inline } from "@components/layout";
+import { Meta, StoryObj } from "@storybook/react";
+
+const meta = {
+    title: "Chromatic/IconButtonAsLink",
+    component: IconButtonAsLink
+} as Meta<typeof IconButtonAsLink>;
+
+export default meta;
+
+type IconButtonAsLinkStory = StoryObj<typeof meta>;
+
+export const Styling: IconButtonAsLinkStory = {
+    name: "styling",
+    render: () => (
+        <Inline>
+            <IconButtonAsLink border="sunken-treasure-600" variant="secondary"><AddIcon /></IconButtonAsLink>
+            <IconButtonAsLink className="bg-red" variant="secondary"><AddIcon /></IconButtonAsLink>
+            <IconButtonAsLink style={{ backgroundColor: "red" }} variant="secondary"><AddIcon /></IconButtonAsLink>
+        </Inline>
+    )
+};
