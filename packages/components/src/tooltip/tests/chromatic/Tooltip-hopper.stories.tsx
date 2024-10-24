@@ -4,9 +4,9 @@ import { Image } from "@components/image";
 import { Launch } from "./assets";
 import { TextLink } from "@components/link";
 import { Tooltip, TooltipTrigger } from "@components/tooltip";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Tooltip-hopper",
     component: Tooltip,
     decorators: [
@@ -22,12 +22,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Tooltip>;
+} as Meta<typeof Tooltip>;
 
-type TooltipStory = ComponentStoryObj<typeof Tooltip>;
+export default meta;
+
+type TooltipStory = StoryObj<typeof meta>;
 
 export const Default: TooltipStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <TooltipTrigger>
             <Button variant="secondary">Trigger</Button>
@@ -37,7 +39,7 @@ export const Default: TooltipStory = {
 };
 
 export const Open: TooltipStory = {
-    storyName: "open",
+    name: "open",
     render: () => (
         <TooltipTrigger open>
             <Button variant="secondary">Trigger</Button>
@@ -47,7 +49,7 @@ export const Open: TooltipStory = {
 };
 
 export const OpenOnFocus: TooltipStory = {
-    storyName: "open on focus",
+    name: "open on focus",
     render: () => (
         <TooltipTrigger>
             <Button autoFocus variant="secondary">Trigger</Button>
@@ -57,7 +59,7 @@ export const OpenOnFocus: TooltipStory = {
 };
 
 export const IconButtonTrigger: TooltipStory = {
-    storyName: "icon button trigger",
+    name: "icon button trigger",
     render: () => (
         <TooltipTrigger open>
             <IconButton variant="secondary" aria-label="Email">
@@ -69,7 +71,7 @@ export const IconButtonTrigger: TooltipStory = {
 };
 
 export const LinkTrigger: TooltipStory = {
-    storyName: "link trigger",
+    name: "link trigger",
     render: () => (
         <TooltipTrigger open>
             <TextLink>Trigger</TextLink>
@@ -79,7 +81,7 @@ export const LinkTrigger: TooltipStory = {
 };
 
 export const ImageTrigger: TooltipStory = {
-    storyName: "image trigger",
+    name: "image trigger",
     render: () => (
         <TooltipTrigger open>
             <Image src={Launch} width="400px" alt="SpaceX launch" />
@@ -89,7 +91,7 @@ export const ImageTrigger: TooltipStory = {
 };
 
 export const VeryLongContent: TooltipStory = {
-    storyName: "very long content",
+    name: "very long content",
     render: () => (
         <TooltipTrigger open>
             <Button variant="secondary">Trigger</Button>
@@ -99,7 +101,7 @@ export const VeryLongContent: TooltipStory = {
 };
 
 export const LinkInContent: TooltipStory = {
-    storyName: "link in content",
+    name: "link in content",
     render: () => (
         <TooltipTrigger open>
             <Button variant="secondary">Trigger</Button>
@@ -109,7 +111,7 @@ export const LinkInContent: TooltipStory = {
 };
 
 export const PositionAuto: TooltipStory = {
-    storyName: "position auto",
+    name: "position auto",
     render: () => (
         <TooltipTrigger position="auto" open>
             <Button variant="secondary">Trigger</Button>
@@ -119,7 +121,7 @@ export const PositionAuto: TooltipStory = {
 };
 
 export const PositionAutoStart: TooltipStory = {
-    storyName: "position auto-start",
+    name: "position auto-start",
     render: () => (
         <TooltipTrigger position="auto-start" open>
             <Button variant="secondary">Trigger</Button>
@@ -129,7 +131,7 @@ export const PositionAutoStart: TooltipStory = {
 };
 
 export const PositionAutoEnd: TooltipStory = {
-    storyName: "position auto-end",
+    name: "position auto-end",
     render: () => (
         <TooltipTrigger position="auto-end" open>
             <Button variant="secondary">Trigger</Button>
@@ -139,7 +141,7 @@ export const PositionAutoEnd: TooltipStory = {
 };
 
 export const PositionTop: TooltipStory = {
-    storyName: "position top",
+    name: "position top",
     render: () => (
         <TooltipTrigger position="top" open>
             <Button variant="secondary">Trigger</Button>
@@ -149,7 +151,7 @@ export const PositionTop: TooltipStory = {
 };
 
 export const PositionTopStart: TooltipStory = {
-    storyName: "position top-start",
+    name: "position top-start",
     render: () => (
         <TooltipTrigger position="top-start" open>
             <Button variant="secondary">Trigger</Button>
@@ -159,7 +161,7 @@ export const PositionTopStart: TooltipStory = {
 };
 
 export const PositionTopEnd: TooltipStory = {
-    storyName: "position top-end",
+    name: "position top-end",
     render: () => (
         <TooltipTrigger position="top-end" open>
             <Button variant="secondary">Trigger</Button>
@@ -169,7 +171,7 @@ export const PositionTopEnd: TooltipStory = {
 };
 
 export const PositionBottom: TooltipStory = {
-    storyName: "position bottom",
+    name: "position bottom",
     render: () => (
         <TooltipTrigger position="bottom" open>
             <Button variant="secondary">Trigger</Button>
@@ -179,7 +181,7 @@ export const PositionBottom: TooltipStory = {
 };
 
 export const PositionBottomStart: TooltipStory = {
-    storyName: "position bottom-start",
+    name: "position bottom-start",
     render: () => (
         <TooltipTrigger position="bottom-start" open>
             <Button variant="secondary">Trigger</Button>
@@ -189,7 +191,7 @@ export const PositionBottomStart: TooltipStory = {
 };
 
 export const PositionBottomEnd: TooltipStory = {
-    storyName: "position bottom-end",
+    name: "position bottom-end",
     render: () => (
         <TooltipTrigger position="bottom-end" open>
             <Button variant="secondary">Trigger</Button>
@@ -199,7 +201,7 @@ export const PositionBottomEnd: TooltipStory = {
 };
 
 export const PositionRight: TooltipStory = {
-    storyName: "position right",
+    name: "position right",
     render: () => (
         <TooltipTrigger position="right" open>
             <Button variant="secondary">Trigger</Button>
@@ -209,7 +211,7 @@ export const PositionRight: TooltipStory = {
 };
 
 export const PositionRightStart: TooltipStory = {
-    storyName: "position right-start",
+    name: "position right-start",
     render: () => (
         <TooltipTrigger position="right-start" open>
             <Button variant="secondary">Trigger</Button>
@@ -219,7 +221,7 @@ export const PositionRightStart: TooltipStory = {
 };
 
 export const PositionRightEnd: TooltipStory = {
-    storyName: "position right-end",
+    name: "position right-end",
     render: () => (
         <TooltipTrigger position="right-end" open>
             <Button variant="secondary">Trigger</Button>
@@ -229,7 +231,7 @@ export const PositionRightEnd: TooltipStory = {
 };
 
 export const PositionLeft: TooltipStory = {
-    storyName: "position left",
+    name: "position left",
     render: () => (
         <TooltipTrigger position="left" open>
             <Button variant="secondary">Trigger</Button>
@@ -239,7 +241,7 @@ export const PositionLeft: TooltipStory = {
 };
 
 export const PositionLeftStart: TooltipStory = {
-    storyName: "position left-start",
+    name: "position left-start",
     render: () => (
         <TooltipTrigger position="left-start" open>
             <Button variant="secondary">Trigger</Button>
@@ -249,7 +251,7 @@ export const PositionLeftStart: TooltipStory = {
 };
 
 export const PositionLeftEnd: TooltipStory = {
-    storyName: "position left-end",
+    name: "position left-end",
     render: () => (
         <TooltipTrigger position="left-end" open>
             <Button variant="secondary">Trigger</Button>
@@ -259,7 +261,7 @@ export const PositionLeftEnd: TooltipStory = {
 };
 
 export const TooltipTriggerStyledSystem: TooltipStory = {
-    storyName: "tooltip trigger styled system",
+    name: "tooltip trigger styled system",
     render: () => (
         <TooltipTrigger border="warning" open>
             <Button variant="secondary">Trigger</Button>
@@ -269,7 +271,7 @@ export const TooltipTriggerStyledSystem: TooltipStory = {
 };
 
 export const TooltipTriggerClassName: TooltipStory = {
-    storyName: "tooltip trigger className",
+    name: "tooltip trigger className",
     render: () => (
         <TooltipTrigger className="border-red" open>
             <Button variant="secondary">Trigger</Button>
@@ -279,7 +281,7 @@ export const TooltipTriggerClassName: TooltipStory = {
 };
 
 export const TooltipTriggerStyle: TooltipStory = {
-    storyName: "tooltip trigger style",
+    name: "tooltip trigger style",
     render: () => (
         <TooltipTrigger style={{ border: "1px solid red" }} open>
             <Button variant="secondary">Trigger</Button>
@@ -289,7 +291,7 @@ export const TooltipTriggerStyle: TooltipStory = {
 };
 
 export const TooltipStyledSystem: TooltipStory = {
-    storyName: "tooltip styled system",
+    name: "tooltip styled system",
     render: () => (
         <TooltipTrigger border="warning" open>
             <Button variant="secondary">Trigger</Button>
@@ -299,7 +301,7 @@ export const TooltipStyledSystem: TooltipStory = {
 };
 
 export const TooltipClassName: TooltipStory = {
-    storyName: "tooltip className",
+    name: "tooltip className",
     render: () => (
         <TooltipTrigger open>
             <Button variant="secondary">Trigger</Button>
@@ -309,7 +311,7 @@ export const TooltipClassName: TooltipStory = {
 };
 
 export const TooltipStyle: TooltipStory = {
-    storyName: "tooltip style",
+    name: "tooltip style",
     render: () => (
         <TooltipTrigger open>
             <Button variant="secondary">Trigger</Button>

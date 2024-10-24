@@ -10,7 +10,7 @@ import { useTabsItems } from "./useTabsItems";
 
 const DefaultElement = "div";
 
-export interface InnerTabsProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerTabsProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     /**
      * See [WCAG](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html).
      */

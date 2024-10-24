@@ -1,9 +1,9 @@
 import { Checkbox, CheckboxGroup } from "@components/checkbox";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/CheckboxGroup/vertical",
     component: CheckboxGroup,
     parameters: {
@@ -11,13 +11,15 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof CheckboxGroup>;
+} as Meta<typeof CheckboxGroup>;
 
-type CheckboxGroupStory = ComponentStoryObj<typeof CheckboxGroup>;
+export default meta;
+
+type CheckboxGroupStory = StoryObj<typeof meta>;
 
 
 export const Default: CheckboxGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <CheckboxGroup orientation="vertical">
             <Checkbox value="1">1</Checkbox>
@@ -28,7 +30,7 @@ export const Default: CheckboxGroupStory = {
 };
 
 export const Size: CheckboxGroupStory = {
-    storyName: "size",
+    name: "size",
     render: () => (
         <Inline alignY="end" gap={800}>
             <CheckboxGroup size="sm" orientation="vertical">
@@ -46,7 +48,7 @@ export const Size: CheckboxGroupStory = {
 };
 
 export const Reverse: CheckboxGroupStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <CheckboxGroup reverse orientation="vertical">
             <Checkbox value="1">1</Checkbox>
@@ -57,7 +59,7 @@ export const Reverse: CheckboxGroupStory = {
 };
 
 export const Zoom: CheckboxGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">

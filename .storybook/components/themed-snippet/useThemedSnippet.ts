@@ -3,7 +3,7 @@ import { isNil, isString } from "@components/shared";
 import { useContext, useMemo } from "react";
 
 export function useThemedSnippet(snippets: string | Record<string, string>) {
-    const { globals } = useContext(DocsContext);
+    const { globals } = useContext(DocsContext) as any;
 
     return useMemo(() => {
         if (isNil(snippets) || isString(snippets)) {

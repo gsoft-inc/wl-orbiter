@@ -1,12 +1,12 @@
 import "@css/normalize.css";
 import "@components/index.css";
-import "./styles";
+import "../styles";
 
 import { isChromatic, isDocs } from "./env";
-import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "../decorators";
 
 import { Code, Highlight } from "@stories/mdx";
-import { Themes } from "./styles/themes";
+import { Themes } from "../styles/themes";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
@@ -121,3 +121,4 @@ export const globalTypes = {
 };
 
 export const decorators = [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme];
+export const tags = ["autodocs"];

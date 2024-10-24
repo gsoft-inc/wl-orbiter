@@ -170,7 +170,7 @@ ref) => {
 
 const DefaultElement = "div";
 
-export interface InnerTabListProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerTabListProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     autoFocus?: boolean | number;
     forwardedRef: ForwardedRef<any>;
     tabs?: TabType[];

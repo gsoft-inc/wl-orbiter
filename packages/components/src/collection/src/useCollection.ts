@@ -75,7 +75,7 @@ export class CollectionBuilder {
             index,
             key: !isNil(element.key) ? element.key.toString().replace(".", "").replace("$", "") : index.toString(),
             props,
-            ref: (element as RefAttributes<any>).ref,
+            ref: (element as RefAttributes<any>).ref as Ref<any>,
             type: NodeType.item
         };
     }
@@ -97,7 +97,7 @@ export class CollectionBuilder {
             items,
             key: index.toString(),
             props,
-            ref: (element as RefAttributes<any>).ref,
+            ref: (element as RefAttributes<any>).ref as Ref<any>,
             type: NodeType.section
         };
     }
@@ -113,7 +113,7 @@ export class CollectionBuilder {
             index,
             key: index.toString(),
             props,
-            ref: (element as RefAttributes<any>).ref,
+            ref: (element as RefAttributes<any>).ref as Ref<any>,
             type: NodeType.divider
         };
     }

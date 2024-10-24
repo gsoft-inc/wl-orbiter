@@ -4,9 +4,9 @@ import { ToggleButton } from "@components/button";
 import { CheckboxGroup } from "@components/checkbox";
 import { TextInput } from "@components/text-input";
 import { Toolbar } from "@components/toolbar";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Toolbar-hopper/vertical",
     component: Toolbar,
     parameters: {
@@ -14,13 +14,15 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof Toolbar>;
+} as Meta<typeof Toolbar>;
 
-type ToolbarStory = ComponentStoryObj<typeof Toolbar>;
+export default meta;
+
+type ToolbarStory = StoryObj<typeof meta>;
 
 
 export const Default: ToolbarStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Toolbar orientation="vertical">
             <CheckboxGroup>
@@ -40,7 +42,7 @@ export const Default: ToolbarStory = {
 };
 
 export const Align: ToolbarStory = {
-    storyName: "align",
+    name: "align",
     render: () => (
         <Inline gap={800}>
             <Toolbar alignX="start" orientation="vertical">
@@ -90,7 +92,7 @@ export const Align: ToolbarStory = {
 };
 
 export const VerticalAlign: ToolbarStory = {
-    storyName: "vertical align",
+    name: "vertical align",
     render: () => (
         <Inline gap={800}>
             <Toolbar alignY="start" orientation="vertical" height="20rem">

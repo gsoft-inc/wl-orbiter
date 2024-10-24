@@ -2,9 +2,9 @@ import { Popover, PopoverTrigger } from "@components/popover";
 
 import { Content } from "@components/placeholders";
 import { Button, Heading } from "@hopper-ui/components";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/PopoverTrigger-hopper",
     component: PopoverTrigger,
     decorators: [
@@ -20,12 +20,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof PopoverTrigger>;
+} as Meta<typeof PopoverTrigger>;
 
-type PopoverTriggerStory = ComponentStoryObj<typeof PopoverTrigger>;
+export default meta;
+
+type PopoverTriggerStory = StoryObj<typeof meta>;
 
 export const Default: PopoverTriggerStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <PopoverTrigger>
             <Button variant="secondary">Toggle</Button>
@@ -38,7 +40,7 @@ export const Default: PopoverTriggerStory = {
 };
 
 export const DefaultOpen: PopoverTriggerStory = {
-    storyName: "default open",
+    name: "default open",
     render: () => (
         <PopoverTrigger defaultOpen>
             <Button variant="secondary">Toggle</Button>
@@ -51,7 +53,7 @@ export const DefaultOpen: PopoverTriggerStory = {
 };
 
 export const NotDismissable: PopoverTriggerStory = {
-    storyName: "not dismissable",
+    name: "not dismissable",
     render: () => (
         <PopoverTrigger defaultOpen dismissable={false}>
             <Button variant="secondary">Toggle</Button>
@@ -64,7 +66,7 @@ export const NotDismissable: PopoverTriggerStory = {
 };
 
 export const Position: PopoverTriggerStory = {
-    storyName: "position",
+    name: "position",
     render: () => (
         <PopoverTrigger position={{ md: "top", lg: "top" }}>
             <Button variant="secondary">Toggle</Button>
@@ -77,7 +79,7 @@ export const Position: PopoverTriggerStory = {
 };
 
 export const PositionAuto: PopoverTriggerStory = {
-    storyName: "position auto",
+    name: "position auto",
     render: () => (
         <PopoverTrigger position="auto" open>
             <Button variant="secondary">Toggle</Button>
@@ -90,7 +92,7 @@ export const PositionAuto: PopoverTriggerStory = {
 };
 
 export const PositionAutoStart: PopoverTriggerStory = {
-    storyName: "position auto-start",
+    name: "position auto-start",
     render: () => (
         <PopoverTrigger position="auto-start" open>
             <Button variant="secondary">Toggle</Button>
@@ -104,7 +106,7 @@ export const PositionAutoStart: PopoverTriggerStory = {
 
 
 export const PositionAutoEnd: PopoverTriggerStory = {
-    storyName: "position auto-end",
+    name: "position auto-end",
     render: () => (
         <PopoverTrigger position="auto-end" open>
             <Button variant="secondary">Toggle</Button>
@@ -117,7 +119,7 @@ export const PositionAutoEnd: PopoverTriggerStory = {
 };
 
 export const PositionTop: PopoverTriggerStory = {
-    storyName: "position top",
+    name: "position top",
     render: () => (
         <PopoverTrigger position="top" open>
             <Button variant="secondary">Toggle</Button>
@@ -130,7 +132,7 @@ export const PositionTop: PopoverTriggerStory = {
 };
 
 export const PositionTopStart: PopoverTriggerStory = {
-    storyName: "position top-start",
+    name: "position top-start",
     render: () => (
         <PopoverTrigger position="top-start" open>
             <Button variant="secondary">Toggle</Button>
@@ -143,7 +145,7 @@ export const PositionTopStart: PopoverTriggerStory = {
 };
 
 export const PositionTopEnd: PopoverTriggerStory = {
-    storyName: "position top-end",
+    name: "position top-end",
     render: () => (
         <PopoverTrigger position="top-end" open>
             <Button variant="secondary">Toggle</Button>
@@ -156,7 +158,7 @@ export const PositionTopEnd: PopoverTriggerStory = {
 };
 
 export const PositionBottom: PopoverTriggerStory = {
-    storyName: "position bottom",
+    name: "position bottom",
     render: () => (
         <PopoverTrigger position="bottom" open>
             <Button variant="secondary">Toggle</Button>
@@ -169,7 +171,7 @@ export const PositionBottom: PopoverTriggerStory = {
 };
 
 export const PositionBottomStart: PopoverTriggerStory = {
-    storyName: "position bottom-start",
+    name: "position bottom-start",
     render: () => (
         <PopoverTrigger position="bottom-start" open>
             <Button variant="secondary">Toggle</Button>
@@ -182,7 +184,7 @@ export const PositionBottomStart: PopoverTriggerStory = {
 };
 
 export const PositionBottomEnd: PopoverTriggerStory = {
-    storyName: "position bottom-end",
+    name: "position bottom-end",
     render: () => (
         <PopoverTrigger position="bottom-end" open>
             <Button variant="secondary">Toggle</Button>
@@ -195,7 +197,7 @@ export const PositionBottomEnd: PopoverTriggerStory = {
 };
 
 export const PositionRight: PopoverTriggerStory = {
-    storyName: "position right",
+    name: "position right",
     render: () => (
         <PopoverTrigger position="right" open>
             <Button variant="secondary">Toggle</Button>
@@ -208,7 +210,7 @@ export const PositionRight: PopoverTriggerStory = {
 };
 
 export const PositionRightStart: PopoverTriggerStory = {
-    storyName: "position right-start",
+    name: "position right-start",
     render: () => (
         <PopoverTrigger position="right-start" open>
             <Button variant="secondary">Toggle</Button>
@@ -221,7 +223,7 @@ export const PositionRightStart: PopoverTriggerStory = {
 };
 
 export const PositionRightEnd: PopoverTriggerStory = {
-    storyName: "position right-end",
+    name: "position right-end",
     render: () => (
         <PopoverTrigger position="right-end" open>
             <Button variant="secondary">Toggle</Button>
@@ -234,7 +236,7 @@ export const PositionRightEnd: PopoverTriggerStory = {
 };
 
 export const PositionLeft: PopoverTriggerStory = {
-    storyName: "position left",
+    name: "position left",
     render: () => (
         <PopoverTrigger position="left" open>
             <Button variant="secondary">Toggle</Button>
@@ -247,7 +249,7 @@ export const PositionLeft: PopoverTriggerStory = {
 };
 
 export const PositionLeftStart: PopoverTriggerStory = {
-    storyName: "position left-start",
+    name: "position left-start",
     render: () => (
         <PopoverTrigger position="left-start" open>
             <Button variant="secondary">Toggle</Button>
@@ -260,7 +262,7 @@ export const PositionLeftStart: PopoverTriggerStory = {
 };
 
 export const PositionLeftEnd: PopoverTriggerStory = {
-    storyName: "position left-end",
+    name: "position left-end",
     render: () => (
         <PopoverTrigger position="left-end" open>
             <Button variant="secondary">Toggle</Button>
@@ -273,7 +275,7 @@ export const PositionLeftEnd: PopoverTriggerStory = {
 };
 
 export const FunctionalContent: PopoverTriggerStory = {
-    storyName: "functional content",
+    name: "functional content",
     render: () => (
         <PopoverTrigger defaultOpen>
             {(() => {

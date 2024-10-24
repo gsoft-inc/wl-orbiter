@@ -2,24 +2,26 @@ import { Div } from "@components/html";
 import { Divider } from "@components/divider";
 import { Stack } from "@components/layout";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Divider",
     component: Divider
-} as ComponentMeta<typeof Divider>;
+} as Meta<typeof Divider>;
 
-type DividerStory = ComponentStoryObj<typeof Divider>;
+export default meta;
+
+type DividerStory = StoryObj<typeof meta>;
 
 export const Default: DividerStory = {
-    storyName: "default",
+    name: "default",
     render:() => (
         <Divider />
     )
 };
 
 export const Surrounded: DividerStory = {
-    storyName: "surrounded",
+    name: "surrounded",
     render:() => (
         <Div>
             <Text>Apollo 8 - 1968</Text>
@@ -30,7 +32,7 @@ export const Surrounded: DividerStory = {
 };
 
 export const MultipleSeparators: DividerStory = {
-    storyName: "multiple separators",
+    name: "multiple separators",
     render:() => (
         <Div>
             <Text>Apollo 8 - 1968</Text>
@@ -45,21 +47,21 @@ export const MultipleSeparators: DividerStory = {
 };
 
 export const Labelled: DividerStory = {
-    storyName: "labelled",
+    name: "labelled",
     render:() => (
         <Divider>Since 1978</Divider>
     )
 };
 
 export const LongLabel: DividerStory = {
-    storyName: "long label",
+    name: "long label",
     render:() => (
         <Divider height="20rem">Since 1978 there have been more than 10 space exploration missions.</Divider>
     )
 };
 
 export const LabelledSurrounded: DividerStory = {
-    storyName: "labelled surrounded",
+    name: "labelled surrounded",
     render:() => (
         <Div>
             <Text>Apollo 11 - 1969</Text>
@@ -70,7 +72,7 @@ export const LabelledSurrounded: DividerStory = {
 };
 
 export const Zoom: DividerStory = {
-    storyName: "zoom",
+    name: "zoom",
     render:() => (
         <Stack>
             <Div className="zoom-in">
@@ -84,7 +86,7 @@ export const Zoom: DividerStory = {
 };
 
 export const Styling: DividerStory = {
-    storyName: "styling",
+    name: "styling",
     render:() => (
         <Stack>
             <Divider border="warning" />

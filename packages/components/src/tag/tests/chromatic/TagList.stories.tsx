@@ -6,17 +6,19 @@ import { Inline, Stack } from "@components/layout";
 import { Item } from "@components/collection";
 import { TagList } from "@components/tag";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/TagList",
     component: TagList
-} as ComponentMeta<typeof TagList>;
+} as Meta<typeof TagList>;
 
-type TagListStory = ComponentStoryObj<typeof TagList>;
+export default meta;
+
+type TagListStory = StoryObj<typeof meta>;
 
 export const Default: TagListStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <TagList>
@@ -34,7 +36,7 @@ export const Default: TagListStory = {
 };
 
 export const ItemWithIicon: TagListStory = {
-    storyName: "item with an icon",
+    name: "item with an icon",
     render: () => (
         <TagList>
             <Item key="mercury">
@@ -54,7 +56,7 @@ export const ItemWithIicon: TagListStory = {
 };
 
 export const ItemWithDot: TagListStory = {
-    storyName: "item with a dot",
+    name: "item with a dot",
     render: () => (
         <TagList>
             <Item key="mercury">
@@ -74,7 +76,7 @@ export const ItemWithDot: TagListStory = {
 };
 
 export const ItemWithCounter: TagListStory = {
-    storyName: "item with a counter",
+    name: "item with a counter",
     render: () => (
         <TagList>
             <Item key="mercury">
@@ -94,7 +96,7 @@ export const ItemWithCounter: TagListStory = {
 };
 
 export const WithClearButton: TagListStory = {
-    storyName: "with clear button",
+    name: "with clear button",
     render: () => (
         <Stack>
             <TagList onClear={() => {}}>
@@ -112,7 +114,7 @@ export const WithClearButton: TagListStory = {
 };
 
 export const WithClearButtonEmpty: TagListStory = {
-    storyName: "with clear button & empty",
+    name: "with clear button & empty",
     render: () => (
         <TagList onClear={() => {}}>
         </TagList>
@@ -120,7 +122,7 @@ export const WithClearButtonEmpty: TagListStory = {
 };
 
 export const Readonly: TagListStory = {
-    storyName: "readonly",
+    name: "readonly",
     render: () => (
         <Stack>
             <TagList readOnly>
@@ -138,7 +140,7 @@ export const Readonly: TagListStory = {
 };
 
 export const Validation: TagListStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Stack>
             <TagList validationState="invalid">
@@ -161,7 +163,7 @@ export const Validation: TagListStory = {
 };
 
 export const MultipleRows: TagListStory = {
-    storyName: "multiple rows",
+    name: "multiple rows",
     render: () => (
         <Stack>
             <Div width="24rem">
@@ -201,7 +203,7 @@ export const MultipleRows: TagListStory = {
 };
 
 export const Styling: TagListStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <TagList border="warning">

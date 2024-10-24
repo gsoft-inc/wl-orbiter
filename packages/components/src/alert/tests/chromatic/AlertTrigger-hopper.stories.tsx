@@ -1,17 +1,19 @@
 import { Content } from "@components/placeholders";
 import { Alert, AlertTrigger } from "@components/alert";
 import { Button, Heading } from "@hopper-ui/components";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/AlertTrigger-hopper",
     component: AlertTrigger
-} as ComponentMeta<typeof AlertTrigger>;
+} as Meta<typeof AlertTrigger>;
 
-type AlertTriggerStory = ComponentStoryObj<typeof AlertTrigger>;
+export default meta;
+
+type AlertTriggerStory = StoryObj<typeof meta>;
 
 export const Default: AlertTriggerStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <AlertTrigger>
             <Button variant="secondary">Open</Button>
@@ -24,7 +26,7 @@ export const Default: AlertTriggerStory = {
 };
 
 export const DefaultOpen: AlertTriggerStory = {
-    storyName: "default open",
+    name: "default open",
     render: () => (
         <AlertTrigger defaultOpen>
             <Button variant="secondary">Open</Button>

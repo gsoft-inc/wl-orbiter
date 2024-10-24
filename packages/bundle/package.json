@@ -23,8 +23,8 @@
         "provenance": true
     },
     "scripts": {
-        "prebuild": "yarn clean",
-        "build": "run-s build:* copy-files",
+        "prebuild": "pnpm clean",
+        "build": "pnpm build:js & pnpm copy-files",
         "build:js": "tsc --build ./tsconfig.build.json",
         "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
         "clean": "rimraf dist tsconfig.build.tsbuildinfo"

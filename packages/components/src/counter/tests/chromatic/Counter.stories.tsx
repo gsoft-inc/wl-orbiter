@@ -2,17 +2,19 @@ import { Counter } from "@components/counter";
 import { Div } from "@components/html";
 import { Inline, Stack } from "@components/layout";
 import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Counter",
     component: Counter
-} as ComponentMeta<typeof Counter>;
+} as Meta<typeof Counter>;
 
-type CounterStory = ComponentStoryObj<typeof Counter>;
+export default meta;
+
+type CounterStory = StoryObj<typeof meta>;
 
 export const Default: CounterStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -38,7 +40,7 @@ export const Default: CounterStory = {
 };
 
 export const Divider: CounterStory = {
-    storyName: "divider",
+    name: "divider",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -64,7 +66,7 @@ export const Divider: CounterStory = {
 };
 
 export const Pushed: CounterStory = {
-    storyName: "pushed",
+    name: "pushed",
     render: () => (
         <Stack>
             <Div>
@@ -80,7 +82,7 @@ export const Pushed: CounterStory = {
 };
 
 export const Reverse: CounterStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <Stack>
             <Div>
@@ -96,7 +98,7 @@ export const Reverse: CounterStory = {
 };
 
 export const Color: CounterStory = {
-    storyName: "color",
+    name: "color",
     render: () => (
         <Inline color="sunken-treasure-700" backgroundColor="koi-25" alignY="center">
             <Counter color="inherit">15</Counter>
@@ -107,7 +109,7 @@ export const Color: CounterStory = {
 
 
 export const Highlight: CounterStory = {
-    storyName: "highlight",
+    name: "highlight",
     render: () => (
         <Inline alignY="center">
             <Counter highlight>15</Counter>
@@ -117,7 +119,7 @@ export const Highlight: CounterStory = {
 };
 
 export const Disabled: CounterStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <Inline alignY="center">
             <Counter disabled>15</Counter>
@@ -127,7 +129,7 @@ export const Disabled: CounterStory = {
 };
 
 export const Zoom: CounterStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -147,7 +149,7 @@ export const Zoom: CounterStory = {
 };
 
 export const Styling: CounterStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Inline alignY="center">

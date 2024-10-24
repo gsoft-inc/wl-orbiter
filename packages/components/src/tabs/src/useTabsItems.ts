@@ -56,7 +56,7 @@ export class TabsBuilder {
                 key,
                 panelId,
                 props: mergeProps(header.props, element.props),
-                ref: header.ref,
+                ref: header.ref as Ref<any>,
                 tabId
             });
 
@@ -69,7 +69,7 @@ export class TabsBuilder {
                 key,
                 panelId,
                 props: content.props,
-                ref: content.ref,
+                ref: content.ref as Ref<any>,
                 tabId
             });
         });

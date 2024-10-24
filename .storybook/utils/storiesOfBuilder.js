@@ -1,5 +1,5 @@
 import { isNil, isPlainObject } from "@components/shared";
-import { storiesOf } from "@storybook/react";
+// import { storiesOf } from "@storybook/react";
 
 class StoriesOfConfigurationBuilder {
     _module;
@@ -43,13 +43,14 @@ class StoriesOfConfigurationBuilder {
             name += this._segment;
         }
 
-        let storiesConfig = storiesOf(name, this._module);
+        return undefined;
+        // let storiesConfig = storiesOf(name, this._module);
 
-        if (!isNil(this._parameters)) {
-            storiesConfig = storiesConfig.addParameters(this._parameters);
-        }
+        // if (!isNil(this._parameters)) {
+        //     storiesConfig = storiesConfig.addParameters(this._parameters);
+        // }
 
-        return storiesConfig;
+        // return storiesConfig;
     }
 }
 
