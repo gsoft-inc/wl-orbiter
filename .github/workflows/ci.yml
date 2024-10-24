@@ -18,13 +18,13 @@ jobs:
         name: "Eslint"
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version-file: ".nvmrc"
             - name: Cache pnpm store
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: |
                     node_modules
@@ -43,13 +43,13 @@ jobs:
         name: "Stylelint"
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version-file: ".nvmrc"
             - name: Cache pnpm store
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: |
                     node_modules
@@ -68,13 +68,13 @@ jobs:
         name: "Build and Tests"
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version-file: ".nvmrc"
             - name: Cache pnpm store
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: |
                     node_modules
