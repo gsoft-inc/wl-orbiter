@@ -6,21 +6,21 @@ import { Inline, Stack } from "@components/layout";
 import { Content } from "@components/placeholders";
 import { Flex, Heading } from "@hopper-ui/components";
 import { Image } from "@components/image";
-import { createTestSuite } from "./createTestSuite-hopper";
-import { storiesOfBuilder } from "@stories/utils";
 
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Card-hopper")
-        .segment(segment)
-        .build();
-}
+import { Meta, StoryObj } from "@storybook/react";
 
-createTestSuite(<Card orientation="horizontal" />, stories("/horizontal"));
+const meta = {
+    title: "Chromatic/Card-hopper",
+    component: Card
+} as Meta<typeof Card>;
 
-createTestSuite(<Card orientation="vertical" />, stories("/vertical"));
+export default meta;
 
-stories()
-    .add("zoom", () =>
+type CardStory = StoryObj<typeof meta>;
+
+export const Zoom: CardStory = {
+    name: "zoom",
+    render: () => (
         <Inline>
             <Div className="zoom-in">
                 <Card>
@@ -28,7 +28,7 @@ stories()
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Div>
-            <Div className="zoom-out'">
+            <Div className="zoom-out">
                 <Card>
                     <Heading>Nasa</Heading>
                     <Content>The National Aeronautics and Space Administration</Content>
@@ -36,7 +36,11 @@ stories()
             </Div>
         </Inline>
     )
-    .add("styling", () =>
+};
+
+export const Styling: CardStory = {
+    name: "styling",
+    render: () => (
         <Inline>
             <Card border="warning">
                 <Heading>Nasa</Heading>
@@ -52,7 +56,11 @@ stories()
             </Card>
         </Inline>
     )
-    .add("horizontal & image", () =>
+};
+
+export const HorizontalAndImage: CardStory = {
+    name: "horizontal & image",
+    render: () => (
         <Stack>
             <Card orientation="horizontal">
                 <Image src={ApolloPoster} alt="Appolo 11" />
@@ -66,7 +74,11 @@ stories()
             </Card>
         </Stack>
     )
-    .add("vertical & image", () =>
+};
+
+export const VerticalAndImage: CardStory = {
+    name: "vertical & image",
+    render: () => (
         <Stack>
             <Card orientation="vertical">
                 <Image src={ApolloBanner} alt="Appolo 11" />
@@ -80,9 +92,13 @@ stories()
             </Card>
         </Stack>
     )
-    .add("grid layout", () =>
+};
+
+export const GridLayout: CardStory = {
+    name: "grid layout",
+    render: () => (
         <Stack>
-            <Box style={{ "display": "grid", "gap": "var(--o-ui-sp-7)", "gridTemplateColumns": "1fr 1fr" }}>
+            <Box style={{ display: "grid", gap: "var(--o-ui-sp-7)", gridTemplateColumns: "1fr 1fr" }}>
                 <Card>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>
@@ -93,7 +109,7 @@ stories()
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Box>
-            <Box style={{ "display": "grid", "gap": "var(--o-ui-sp-7)", "gridTemplateColumns": "1fr 1fr" }}>
+            <Box style={{ display: "grid", gap: "var(--o-ui-sp-7)", gridTemplateColumns: "1fr 1fr" }}>
                 <Card fluid>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>
@@ -106,9 +122,13 @@ stories()
             </Box>
         </Stack>
     )
-    .add("flex layout", () =>
+};
+
+export const FlexLayout: CardStory = {
+    name: "flex layout",
+    render: () => (
         <Stack>
-            <Flex gap="core_160">
+            <Flex gap={160}>
                 <Card>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>
@@ -124,7 +144,7 @@ stories()
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Flex>
-            <Flex gap="core_160">
+            <Flex gap={160}>
                 <Card fluid>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>
@@ -141,4 +161,5 @@ stories()
                 </Card>
             </Flex>
         </Stack>
-    );
+    )
+};

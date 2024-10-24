@@ -1,6 +1,6 @@
 import { Tag } from "@components/tag";
-import { Meta, StoryObj } from "@storybook/react";
 import { Inline } from "@components/layout";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Tag",
