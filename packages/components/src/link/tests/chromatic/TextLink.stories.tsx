@@ -1,5 +1,7 @@
-import { Inline } from "@components/layout";
+import { Inline, Stack } from "@components/layout";
 import { TextLink } from "@components/link";
+import { Div } from "@components/html";
+import { InfoIcon, ArrowRightIcon } from "@hopper-ui/icons";
 
 import { Meta, StoryObj } from "@storybook/react";
 
