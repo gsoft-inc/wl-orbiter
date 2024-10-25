@@ -7,7 +7,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/TileGroup",
-    component: TileGroup
+    component: TileGroup,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof TileGroup>;
 
 export default meta;

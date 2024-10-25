@@ -12,7 +12,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Accordion-hopper/borderless",
-    component: Accordion
+    component: Accordion,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Accordion>;
 
 export default meta;

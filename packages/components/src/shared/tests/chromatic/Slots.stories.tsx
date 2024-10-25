@@ -5,7 +5,12 @@ import { isNil, slot, useSlots } from "@components/shared";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-    title: "Chromatic/Slots"
+    title: "Chromatic/Slots",
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<any>;
 
 // eslint-disable-next-line storybook/csf-component
@@ -92,7 +97,7 @@ export const WrapStringContent: SlotStory = {
     name: "wrap string",
     render: () => (
         <Card>
-        Early this morning (Oct. 20), SpaceX lit up the three Raptor engines on its SN8 ("Serial No. 8") Starship prototype in a brief "static fire" test at the company's South Texas site, near the beachside village of Boca Chica.
+            Early this morning (Oct. 20), SpaceX lit up the three Raptor engines on its SN8 ("Serial No. 8") Starship prototype in a brief "static fire" test at the company's South Texas site, near the beachside village of Boca Chica.
         </Card>
     )
 };
@@ -101,7 +106,7 @@ export const WrapMixedContent: SlotStory = {
     name: "wrap mixed",
     render: () => (
         <Card>
-        Early this morning (Oct. 20), SpaceX lit up the three <TextLink href="#">Raptor engines</TextLink> on its SN8 ("Serial No. 8") Starship prototype in a brief "static fire" test at the company's South Texas site, near the beachside village of Boca Chica.
+            Early this morning (Oct. 20), SpaceX lit up the three <TextLink href="#">Raptor engines</TextLink> on its SN8 ("Serial No. 8") Starship prototype in a brief "static fire" test at the company's South Texas site, near the beachside village of Boca Chica.
         </Card>
     )
 };

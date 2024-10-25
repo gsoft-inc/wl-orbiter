@@ -6,7 +6,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/ModalTrigger-hopper",
-    component: ModalTrigger
+    component: ModalTrigger,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof ModalTrigger>;
 
 export default meta;

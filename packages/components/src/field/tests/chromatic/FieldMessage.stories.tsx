@@ -9,7 +9,12 @@ import { ReactNode } from "react";
 
 const meta = {
     title: "Chromatic/FieldMessage",
-    component: HelpMessage
+    component: HelpMessage,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof HelpMessage>;
 
 export default meta;
@@ -28,7 +33,7 @@ export const Default: HelpMessageStory = {
     name: "default",
     render: () => (
         <HelpMessage>
-        Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+            Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
         </HelpMessage>
     )
 };
@@ -50,7 +55,7 @@ export const FieldMessageParagraph: HelpMessageStory = {
     render: () => (
         <HelpMessage>
             <Paragraph>
-            If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+                If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
             </Paragraph>
         </HelpMessage>
     )
@@ -84,7 +89,7 @@ export const Wrappers: HelpMessageStory = {
         <HelpMessage>
             <Div>
                 <Div>
-                Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
                 </Div>
             </Div>
         </HelpMessage>
@@ -99,7 +104,7 @@ export const Complex: HelpMessageStory = {
                 <QuestionIcon /> Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
             </Align>
             <Paragraph>
-            If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+                If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
             </Paragraph>
             <UL>
                 <LI>Celestial</LI>
@@ -114,7 +119,7 @@ export const Fluid: HelpMessageStory = {
     name: "fluid",
     render: () => (
         <HelpMessage fluid>
-        If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+            If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
         </HelpMessage>
     )
 };
@@ -158,12 +163,12 @@ export const Zoom: HelpMessageStory = {
         <Stack>
             <Div className="zoom-in">
                 <HelpMessage>
-                Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
                 </HelpMessage>
             </Div>
             <Div className="zoom-out">
                 <HelpMessage>
-                Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
                 </HelpMessage>
             </Div>
         </Stack>

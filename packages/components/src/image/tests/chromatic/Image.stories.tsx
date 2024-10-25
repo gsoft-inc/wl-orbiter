@@ -6,7 +6,12 @@ import { Launch, Mars } from "./assets";
 
 const meta = {
     title: "Chromatic/Image",
-    component: Image
+    component: Image,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Image>;
 
 export default meta;

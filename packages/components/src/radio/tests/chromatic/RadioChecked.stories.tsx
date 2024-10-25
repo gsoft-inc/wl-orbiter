@@ -9,7 +9,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Radio/checked",
-    component: Radio
+    component: Radio,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Radio>;
 
 export default meta;

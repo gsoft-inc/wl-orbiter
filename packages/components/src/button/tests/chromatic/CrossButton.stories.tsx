@@ -4,7 +4,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/CrossButton",
-    component: CrossButton
+    component: CrossButton,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof CrossButton>;
 
 export default meta;

@@ -11,7 +11,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Dialog",
-    component: Dialog
+    component: Dialog,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Dialog>;
 
 export default meta;

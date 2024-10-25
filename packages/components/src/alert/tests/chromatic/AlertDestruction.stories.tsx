@@ -6,7 +6,12 @@ import { Div } from "@components/html";
 
 const meta = {
     title: "Chromatic/Alert/destructive",
-    component: Alert
+    component: Alert,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Alert>;
 
 export default meta;

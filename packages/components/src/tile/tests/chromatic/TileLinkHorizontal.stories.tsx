@@ -11,7 +11,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/TileLink/horizontal",
-    component: TileLink
+    component: TileLink,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof TileLink>;
 
 export default meta;

@@ -8,7 +8,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Lozenge",
-    component: Lozenge
+    component: Lozenge,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Lozenge>;
 
 export default meta;

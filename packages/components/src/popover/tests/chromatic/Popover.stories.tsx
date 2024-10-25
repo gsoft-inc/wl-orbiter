@@ -14,7 +14,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Popover",
-    component: Popover
+    component: Popover,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Popover>;
 
 export default meta;

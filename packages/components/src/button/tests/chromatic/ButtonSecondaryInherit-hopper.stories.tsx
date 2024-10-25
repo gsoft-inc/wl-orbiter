@@ -9,7 +9,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Button-hopper/secondary (inherit)",
-    component: Button
+    component: Button,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Button>;
 
 export default meta;

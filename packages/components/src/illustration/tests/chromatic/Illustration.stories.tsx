@@ -8,7 +8,12 @@ import { Nasa } from "./assets";
 
 const meta = {
     title: "Chromatic/Illustration",
-    component: Illustration
+    component: Illustration,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Illustration>;
 
 export default meta;

@@ -4,7 +4,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Paragraph",
-    component: Paragraph
+    component: Paragraph,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Paragraph>;
 
 export default meta;

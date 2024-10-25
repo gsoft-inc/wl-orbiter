@@ -9,7 +9,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Checkbox-hopper/indeterminate",
-    component: Checkbox
+    component: Checkbox,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Checkbox>;
 
 export default meta;

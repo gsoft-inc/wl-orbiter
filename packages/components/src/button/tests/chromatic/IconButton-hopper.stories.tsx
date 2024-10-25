@@ -3,15 +3,14 @@ import { IconButton } from "@components/button";
 import { Inline } from "@components/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
-// createIconButtonTestSuite(<IconButton variant="primary" />, stories("/primary"));
-// createIconButtonTestSuite(<IconButton variant="secondary" />, stories("/secondary"));
-// createIconButtonTestSuite(<IconButton variant="tertiary" />, stories("/tertiary"));
-// createIconButtonTestSuite(<IconButton variant="upsell" />, stories("/upsell"));
-// createIconButtonTestSuite(<IconButton variant="negative" />, stories("/negative"));
-
 const meta = {
     title: "Chromatic/IconButton-hopper",
-    component: IconButton
+    component: IconButton,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof IconButton>;
 
 export default meta;

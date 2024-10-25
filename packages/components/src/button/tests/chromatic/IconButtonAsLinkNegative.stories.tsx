@@ -7,7 +7,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/IconButtonAsLink/negative",
-    component: IconButtonAsLink
+    component: IconButtonAsLink,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof IconButtonAsLink>;
 
 export default meta;

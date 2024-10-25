@@ -10,7 +10,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Select/outline",
-    component: Select
+    component: Select,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Select>;
 
 export default meta;

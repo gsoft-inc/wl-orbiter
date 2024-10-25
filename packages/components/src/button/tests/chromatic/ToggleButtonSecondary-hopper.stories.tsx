@@ -7,7 +7,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/ToggleButton-hopper/secondary",
-    component: ToggleButton
+    component: ToggleButton,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof ToggleButton>;
 
 export default meta;

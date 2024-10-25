@@ -11,7 +11,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Tabs/in-card",
-    component: Tabs
+    component: Tabs,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Tabs>;
 
 export default meta;

@@ -6,7 +6,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/ToggleIconButton",
-    component: ToggleIconButton
+    component: ToggleIconButton,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof ToggleIconButton>;
 
 export default meta;

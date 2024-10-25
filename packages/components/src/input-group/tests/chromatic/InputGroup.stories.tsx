@@ -17,7 +17,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/InputGroup",
-    component: InputGroup
+    component: InputGroup,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof InputGroup>;
 
 export default meta;
