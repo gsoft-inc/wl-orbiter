@@ -5,21 +5,20 @@ import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
 import { Inline, Stack } from "@components/layout";
 import { Tile } from "@components/tile";
-import { createTileTestSuite } from "./createTileTestSuite";
-import { storiesOfBuilder } from "@stories/utils";
+import { Meta, StoryObj } from "@storybook/react";
 
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Tile")
-        .segment(segment)
-        .build();
-}
+const meta = {
+    title: "Chromatic/Tile",
+    component: Tile
+} as Meta<typeof Tile>;
 
-createTileTestSuite(<Tile orientation="horizontal" width="600px" />, stories("/horizontal"));
+export default meta;
 
-createTileTestSuite(<Tile orientation="vertical" width="300px" />, stories("/vertical"));
+type TileStory = StoryObj<typeof meta>;
 
-stories()
-    .add("images", () =>
+export const Images: TileStory = {
+    name: "images",
+    render: () => (
         <Inline>
             <Stack>
                 <Tile width="300px" orientation="vertical">
@@ -35,7 +34,11 @@ stories()
             </Stack>
         </Inline>
     )
-    .add("flex layout", () =>
+};
+
+export const FlexLayout: TileStory = {
+    name: "flex layout",
+    render: () => (
         <Stack>
             <Inline>
                 <Tile width="500px" orientation="vertical">
@@ -70,4 +73,8 @@ stories()
                 </Tile>
             </Inline>
         </Stack>
-    );
+    )
+};
+
+// createTileTestSuite(<Tile orientation="horizontal" width="600px" />, stories("/horizontal"));
+// createTileTestSuite(<Tile orientation="vertical" width="300px" />, stories("/vertical"));

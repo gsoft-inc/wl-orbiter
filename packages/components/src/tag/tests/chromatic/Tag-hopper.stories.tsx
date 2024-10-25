@@ -4,7 +4,7 @@ import { Inline } from "@components/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-    title: "Chromatic/Tag",
+    title: "Chromatic/Tag-hopper",
     component: Tag
 } as Meta<typeof Tag>;
 

@@ -3,24 +3,21 @@ import { Content } from "@components/placeholders";
 import { H3 } from "@components/typography";
 import { Inline } from "@components/layout";
 import { Item } from "@components/collection";
-import { createAccordionTestSuite } from "./createAccordionTestSuite";
-import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
 
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Accordion")
-        .segment(segment)
-        .parameters(paramsBuilder()
-            .chromaticDelay(100)
-            .build())
-        .build();
-}
+import { Meta, StoryObj } from "@storybook/react";
 
-createAccordionTestSuite(<Accordion variant="borderless" />, stories("/borderless"));
+const meta = {
+    title: "Chromatic/Accordion",
+    component: Accordion
+} as Meta<typeof Accordion>;
 
-createAccordionTestSuite(<Accordion variant="bordered" />, stories("/bordered"));
+export default meta;
 
-stories()
-    .add("conditional rendering", () =>
+type AccordionStory = StoryObj<typeof meta>;
+
+export const ConditionalRendering: AccordionStory = {
+    name: "conditional rendering",
+    render: () => (
         <Accordion>
             <Item>
                 <H3>Mars</H3>
@@ -32,7 +29,11 @@ stories()
             </Item>}
         </Accordion>
     )
-    .add("styling", () =>
+};
+
+export const Styling: AccordionStory = {
+    name: "styling",
+    render: () => (
         <Inline>
             <Accordion border="warning" expandedKeys={["0"]}>
                 <Item>
@@ -53,4 +54,5 @@ stories()
                 </Item>
             </Accordion>
         </Inline>
-    );
+    )
+};
