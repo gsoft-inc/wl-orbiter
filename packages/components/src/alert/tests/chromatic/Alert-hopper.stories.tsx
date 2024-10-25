@@ -12,10 +12,6 @@ export default meta;
 
 type AlertHopperStory = StoryObj<typeof meta>;
 
-// createTestSuite(<Alert variant="confirmation" />, stories("/confirmation"));
-
-// createTestSuite(<Alert variant="destructive" />, stories("/destructive"));
-
 export const StyledSystem: AlertHopperStory = {
     name: "styled system",
     render: () => (

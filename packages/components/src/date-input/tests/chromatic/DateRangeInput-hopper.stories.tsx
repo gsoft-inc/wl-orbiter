@@ -8,7 +8,9 @@ const meta = {
     title: "Chromatic/DateRangeInput-hopper/input",
     component: DateRangeInput,
     parameters: {
-        chromatic: { delay: 100 }
+        chromatic: {
+            delay: 100
+        }
     }
 } as Meta<typeof DateRangeInput>;
 

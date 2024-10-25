@@ -6,7 +6,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/DateInput-hopper/input",
-    component: DateInput
+    component: DateInput,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof DateInput>;
 
 export default meta;
