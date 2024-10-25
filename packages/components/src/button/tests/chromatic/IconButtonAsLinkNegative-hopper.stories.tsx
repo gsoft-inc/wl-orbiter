@@ -1,6 +1,8 @@
 import { AddIcon } from "@hopper-ui/icons";
 import { IconButtonAsLink } from "@components/button";
 import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
@@ -48,7 +50,7 @@ export const Default: IconButtonAsLinkStory = {
     )
 };
 
-export const States: IconButtonStory = {
+export const States: IconButtonAsLinkStory = {
     name: "states",
     render: () => (
         <Inline gap="4.5rem">
@@ -198,7 +200,7 @@ export const States: IconButtonStory = {
     )
 };
 
-export const Zoom: IconButtonStory = {
+export const Zoom: IconButtonAsLinkStory = {
     name: "zoom",
     render: () => (
         <Inline>

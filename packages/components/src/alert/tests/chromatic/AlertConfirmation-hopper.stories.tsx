@@ -1,6 +1,8 @@
 import { Alert } from "@components/alert";
 import { Content } from "@components/placeholders";
 import { Heading } from "@hopper-ui/components";
+import { Div } from "@components/html";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

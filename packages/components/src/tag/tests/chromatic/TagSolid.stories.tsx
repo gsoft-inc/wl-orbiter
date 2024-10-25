@@ -1,11 +1,13 @@
 import { IconList } from "@components/icons";
 import { Tag } from "@components/tag";
-import { Meta, StoryObj } from "@storybook/react";
 import { Inline, Stack } from "@components/layout";
 import { Div } from "@components/html";
 import { SparklesIcon } from "@hopper-ui/icons";
 import { Text } from "@components/typography";
 import { Dot } from "@components/dot";
+import { Field, Label } from "@components/field";
+
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Tag/solid",
