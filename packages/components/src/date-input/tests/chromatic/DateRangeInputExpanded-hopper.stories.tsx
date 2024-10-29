@@ -6,7 +6,7 @@ import { subMonths, subWeeks } from "date-fns";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-    title: "Chromatic/DateRangeInput-hopper/expanded",
+    title: "Chromatic/DateRangeInput-hopper/expanded presets",
     component: DateRangeInput,
     parameters: {
         chromatic: {
