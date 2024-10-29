@@ -542,14 +542,3 @@ export const AsDiv: SelectStory = {
         </Select>
     )
 };
-
-export const WithoutPlaceholder: SelectStory = {
-    name: "without placeholder",
-    render: () => (
-        <Select aria-label="Planets" variant="ghost">
-            <Item key="earth">Earth</Item>
-            <Item key="mars">Mars</Item>
-            <Item key="saturn">Saturn</Item>
-        </Select>
-    )
-};
