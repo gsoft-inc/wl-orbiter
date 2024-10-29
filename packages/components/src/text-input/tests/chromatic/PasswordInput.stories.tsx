@@ -5,7 +5,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/PasswordInput",
-    component: PasswordInput
+    component: PasswordInput,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof PasswordInput>;
 
 export default meta;

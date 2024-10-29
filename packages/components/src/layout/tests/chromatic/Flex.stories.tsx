@@ -4,7 +4,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Flex",
-    component: Flex
+    component: Flex,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Flex>;
 
 export default meta;

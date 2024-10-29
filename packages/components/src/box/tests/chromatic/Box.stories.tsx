@@ -6,7 +6,9 @@ const meta = {
     title: "Chromatic/Box",
     component: Box,
     parameters: {
-        chromatic: { delay: 100 }
+        chromatic: {
+            delay: 100
+        }
     }
 } as Meta<typeof Box>;
 

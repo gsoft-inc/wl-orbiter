@@ -6,7 +6,12 @@ import { PropsWithChildren } from "react";
 
 const meta = {
     title: "Chromatic/Html",
-    component: StyleProvider
+    component: StyleProvider,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof StyleProvider>;
 
 export default meta;

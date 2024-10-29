@@ -5,7 +5,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/SvgImage",
-    component: SvgImage
+    component: SvgImage,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof SvgImage>;
 
 export default meta;

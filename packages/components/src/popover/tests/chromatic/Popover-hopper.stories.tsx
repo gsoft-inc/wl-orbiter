@@ -1,15 +1,20 @@
 import { Content } from "@components/placeholders";
-
 import { Div } from "@components/html";
 import { Image } from "@components/image";
 import { Launch } from "./assets";
 import { Popover } from "@components/popover";
 import { Button, ButtonGroup, Footer, Form, Heading, Link, TextField } from "@hopper-ui/components";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Popover-hopper",
-    component: Popover
+    component: Popover,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Popover>;
 
 export default meta;
