@@ -8,14 +8,36 @@ import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 import { swcConfig as SwcBuildConfig } from "./swc.build";
 import { swcConfig as SwcDevConfig } from "./swc.dev";
 
+import { includeDocs, includeChromatic} from "./env";
+
 // We sometimes need to disable the lazyCompilation to properly run the test runner on stories
 const isLazyCompilation = !(process.env.STORYBOOK_NO_LAZY === "true");
 
-const storybookConfig: StorybookConfig = {
-    stories: [
-        // "../packages/**/*.stories.@(ts|tsx)"
+let stories: string[] = [];
+
+if (includeDocs) {
+    stories = [
+        // TODO simplify imports for any pkgs /docs/**/*.stories.mdx
+        // "../docs/**/*.stories.mdx",
+        // "../packages/**/docs/**/*.mdx",
+        // "!../packages/**/docs/**/*.stories.mdx",
+        "../packages/**/docs/Accordion.mdx",
+        "../packages/**/docs/Accordion.stories.tsx"
+    ];
+}
+
+if (includeChromatic) {
+    stories = [
+        ...stories,
+        // TODO remove chroma and simplify imports
+        // "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
         "../packages/components/**/tests/chromatic/**/*.stories.tsx"
-    ],
+    ];
+}
+
+
+const storybookConfig: StorybookConfig = {
+    stories: stories,
     addons: [
         "@storybook/addon-a11y",
         "@storybook/addon-links",

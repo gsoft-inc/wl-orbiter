@@ -28,7 +28,7 @@ function printEnvironment() {
     }
 }
 
-module.exports = {
+export {
     isDebug,
     isChromatic,
     isDocs,
