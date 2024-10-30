@@ -15,8 +15,8 @@ if (includeDocs) {
         // "../docs/**/*.stories.mdx",
         // "../packages/**/docs/**/*.mdx",
         // "!../packages/**/docs/**/*.stories.mdx",
-        "../packages/**/docs/Accordion.mdx",
-        "../packages/**/docs/Accordion.stories.tsx"
+        "../packages/**/docs/*(!.stories).mdx",
+        "../packages/**/docs/*.stories.tsx"
     ];
 }
 
