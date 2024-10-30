@@ -45,6 +45,10 @@
     column-gap: 8px;
 }
 
+.o-ui-sb-component-info-value ul li {
+    margin: 0;
+}
+
 .o-ui-sb-component-info code {
     white-space: nowrap;
 }

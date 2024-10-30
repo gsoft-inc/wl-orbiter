@@ -15,7 +15,7 @@ if (includeDocs) {
         // "../docs/**/*.stories.mdx",
         // "../packages/**/docs/**/*.mdx",
         // "!../packages/**/docs/**/*.stories.mdx",
-        "../packages/**/docs/*(!.stories).mdx",
+        "../packages/**/docs/!(*.stories|IndexFileUsage).mdx",
         "../packages/**/docs/*.stories.tsx"
     ];
 }
