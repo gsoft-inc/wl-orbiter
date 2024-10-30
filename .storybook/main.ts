@@ -1,14 +1,8 @@
 // import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
-import type { Options } from "@storybook/types";
-import type { Options as SwcOptions } from "@swc/core";
-import path from "path";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 
-import { swcConfig as SwcBuildConfig } from "./swc.build";
-import { swcConfig as SwcDevConfig } from "./swc.dev";
-
-import { includeDocs, includeChromatic} from "./env";
+import { includeDocs, includeChromatic } from "./env";
 
 // We sometimes need to disable the lazyCompilation to properly run the test runner on stories
 const isLazyCompilation = !(process.env.STORYBOOK_NO_LAZY === "true");
@@ -55,6 +49,14 @@ const storybookConfig: StorybookConfig = {
             }
         }
     },
+    typescript: {
+        reactDocgen: "react-docgen-typescript",
+        reactDocgenTypescriptOptions: {
+            shouldExtractLiteralValuesFromEnum: true,
+            // 👇 Default prop filter, which excludes props from node_modules
+            propFilter: prop => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true)
+        }
+    },
     docs: {
         autodocs: "tag"
     },
@@ -70,7 +72,7 @@ const storybookConfig: StorybookConfig = {
     // swc: (_: SwcOptions, { configType }: Options): SwcOptions => {
     //     return configType === "PRODUCTION" ? SwcBuildConfig : SwcDevConfig;
     // },
-    webpackFinal(config, { configType }) {
+    webpackFinal(config) {
         config.resolve = {
             ...config.resolve,
             plugins: [

@@ -5,3 +5,5 @@ dist
 *.svg
 package.json
 *.css
+!/.storybook
+!/**/.storybook

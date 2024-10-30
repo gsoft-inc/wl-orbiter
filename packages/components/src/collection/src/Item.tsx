@@ -13,12 +13,11 @@ export interface InnerItemProps extends InternalProps, InteractionProps, StyledH
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function InnerItem(props: InnerItemProps): JSX.Element {
+export function InnerItem(props: InnerItemProps): ReactNode {
     return null;
 }
 
 export const Item = forwardRef<any, OmitInternalProps<InnerItemProps>>((props, ref) => (
-    // @ts-ignore Not sure what is going on with the InnerItem.
     <InnerItem {...props} forwardedRef={ref} />
 ));
 

@@ -1,22 +1,15 @@
 // import { viewport, withHopperProvider } from "./storybook-addon/index";
 import { viewport } from "./storybook-addon/index";
-import { withBackgroundMatchingColorScheme, withCenteredCanvas, withDocsContainer, withThemeProvider } from "./decorators";
-
-import "@components/index.css";
-import "./styles";
-
-import {
-    Description,
-    Stories,
-    Subtitle,
-    Title
-} from "@storybook/blocks";
-import type { Preview } from "@storybook/react";
-
-import "@hopper-ui/tokens/fonts.css";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, withThemeProvider } from "./decorators";
 import "./stories.css";
 import { isChromatic } from "./env";
 import { Themes } from "./styles/themes";
+import { formatCode } from "./components/snippet/useFormattedCode";
+import type { Preview } from "@storybook/react";
+
+import "@components/index.css";
+import "./styles";
+import "@hopper-ui/tokens/fonts.css";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
@@ -39,26 +32,27 @@ const preview: Preview = {
             }
         },
         viewport,
-
         docs: {
             theme: Themes.docs,
             inlineStories: true,
+            canvas: {
+                sourceState: "shown"
+            },
             components: {
                 blockquote: Highlight
             },
+            source: {
+                type: "code",
+                language: "tsx",
+                transform: (src: string) => {
+                    console.log("formatCode", src);
+                    let newSource = src.match(/render:\s*\(\)\s*=>\s*([\s\S]*)}/)![1].trim();
+                    newSource = newSource.replace(/\breturn\b/g, "\nreturn").replace(/\bfunction\b/g, "\nfunction").replace(/^{\s*|\s*}$/g, "");
+
+                    return formatCode(newSource, "tsx");
+                }
+            }
         },
-        // docs: { // only needed while the documentation is not available
-        //     page: () => {
-        //         return (
-        //             <>
-        //                 <Title />
-        //                 <Subtitle />
-        //                 <Description />
-        //                 <Stories title="Usage" />
-        //             </>
-        //         );
-        //     }
-        // },
         options: {
             storySort: {
                 method: "alphabetical",
@@ -85,7 +79,7 @@ const preview: Preview = {
                     "Chromatic"
                 ]
             }
-        },
+        }
     },
     globalTypes: {
         locale: {
@@ -115,7 +109,7 @@ const preview: Preview = {
             }
         }
     },
-    decorators: [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme],
+    decorators: [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme]
 };
 
 export default preview;
