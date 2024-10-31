@@ -1,11 +1,9 @@
 import { A } from "@components/html";
-import { ComponentInfo, Link, Preview, Tagline } from "@stories/components";
-import { Meta, Story } from "@storybook/addon-docs";
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import * as AStories from "./anchor.stories.tsx";
 
-<Meta
-    title="Html elements/A"
-    id="html-anchor"
-/>
+<Meta of={AStories} />
 
 # Anchor
 
@@ -20,8 +18,4 @@ import { Meta, Story } from "@storybook/addon-docs";
 
 An anchor component accepts all the [anchor HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) and [Orbiter styled component props](?path=/docs/styling--page).
 
-<Preview>
-    <Story name="example">
-        <A href="https://www.cc.com/shows/futurama" color="neutral-weak">Futurama</A>
-    </Story>
-</Preview>
+<Canvas of={AStories.Example} />
