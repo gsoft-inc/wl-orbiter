@@ -1,11 +1,9 @@
-import { ComponentInfo, Link, Preview, Tagline } from "@stories/components";
+import { ComponentInfo, Link, Tagline } from "@stories/components";
 import { HtmlButton } from "@components/html";
-import { Meta, Story } from "@storybook/addon-docs";
+import { Canvas,  Meta } from "@storybook/addon-docs";
+import * as ButtonStories from "./button.stories.tsx";
 
-<Meta
-    title="Html elements/Button"
-    id="html-button"
-/>
+<Meta of={ButtonStories} />
 
 # Button
 
@@ -20,8 +18,4 @@ import { Meta, Story } from "@storybook/addon-docs";
 
 A button component accepts all the [button HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) and [Orbiter styled component props](?path=/docs/styling--page).
 
-<Preview>
-    <Story name="example">
-        <HtmlButton type="button" border="rock-900" padding={1}>Launch</HtmlButton>
-    </Story>
-</Preview>
+<Canvas of={ButtonStories.Example} />
