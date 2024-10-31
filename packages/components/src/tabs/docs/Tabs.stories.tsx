@@ -1,44 +1,26 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { Content, Header, InnerContent, InnerHeader } from "@components/placeholders";
+import { Tabs, useTabsContext } from "@components/tabs";
+import { Item, Content, Header } from "@components/placeholders";
 import { Div } from "@components/html";
-import { InnerItem, Item } from "@components/collection";
-import { InnerTab, InnerTabPanel, InnerTabs, Tabs } from "@components/tabs";
 import { Lozenge } from "@components/lozenge";
 import { SparklesIcon } from "@hopper-ui/icons";
+import { isNil } from "@components/shared";
 import { Text } from "@components/typography";
+import { useCallback, useEffect, useState } from "react";
 
-<Meta
-    title="Components/Tabs"
-    id="tabs"
-/>
+import { Meta, StoryObj } from "@storybook/react";
 
-# Tabs
+const meta = {
+    title: "Components/Tabs",
+    component: Tabs,
+    id: "tabs"
+} as Meta<typeof Tabs>;
 
-<Tagline>Tabs are used to organize content by grouping similar information on the same page.</Tagline>
+export default meta;
 
-<ComponentInfo
-    usage={"import { Tabs, Item, Header, Content, TabsContext, useTabsContext } from \"@workleap/orbiter-ui\";"}
-    ariaPath="tabpanel"
-    githubPath="/packages/components/src/tabs/src"
-/>
+type TabStory = StoryObj<typeof meta>;
 
-## Guidelines
-
-### Accessibility
-
-- An accessible title must be provided through [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) property.
-
-## Usage
-
-We recommend specifying a unique `key` prop for every `<Item>`. If you choose to omit the `key` prop, a key matching the `<Item>` position will be generated. For example, `"0"` would be the generated key for the first `<Item>` of a `<Tabs>` component without keys.
-
-### Default
-
-A default tab.
-
-<Preview>
-    <Story name="default">
+export const Default: TabStory = {
+    render: () => (
         <Tabs aria-label="Planets">
             <Item key="mars">
                 <Header>Mars</Header>
@@ -53,15 +35,11 @@ A default tab.
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Icon
-
-A tab can contain [icons](?path=/docs/icon-gallery--page).
-
-<Preview>
-    <Story name="icon">
+export const Icon: TabStory = {
+    render: () => (
         <Tabs aria-label="Planets">
             <Item key="mars">
                 <Header>Mars</Header>
@@ -79,15 +57,11 @@ A tab can contain [icons](?path=/docs/icon-gallery--page).
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Lozenge
-
-A tab can contains a [lozenge](?path=/docs/components-lozenge--default-story).
-
-<Preview>
-    <Story name="lozenge">
+export const LozengeStory: TabStory = {
+    render: () => (
         <Tabs aria-label="Planets">
             <Item key="mars">
                 <Header>Mars</Header>
@@ -105,42 +79,29 @@ A tab can contains a [lozenge](?path=/docs/components-lozenge--default-story).
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Dynamic tabs
-
-Tabs items can be rendered dynamically.
-
-<Preview>
-    <Story name="dynamic tabs">
+export const DynamicTabs: TabStory = {
+    render: () => (
         <Tabs aria-label="Planets">
             {[
                 { id: "mars", header: "Mars", content: "Mars is the fourth planet from the Sun and the second-smallest planet." },
                 { id: "jupiter", header: "Jupiter", content: "Jupiter is the fifth planet from the Sun and the largest in the Solar System." },
                 { id: "venus", header: "Venus", content: "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty." }
-            ]
-                .map(({ id, header, content }) =>
-                    <Item key={id}>
-                        <Header>{header}</Header>
-                        <Content>{content}</Content>
-                    </Item>
-                )}
+            ].map(({ id, header, content }) => (
+                <Item key={id}>
+                    <Header>{header}</Header>
+                    <Content>{content}</Content>
+                </Item>
+            ))}
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Manually activated tabs
-
-By default, tabs are activated automatically. This means when you use the arrow keys to change tabs, the tab is activated and focused.
-
-> The content of a tab should ideally be preloaded. However, if switching to a tab panel causes a network request and possibly a page refresh, there might be some notable latency and this might affect the experience for keyboard and screen reader users.
-
-In this scenario, you should use a manually activated tab, it moves focus without activating the tabs. With the focus on a specific tab, users can activate a tab by pressing ``Space`` or ``Enter``.
-
-<Preview>
-    <Story name="manual">
-        <Tabs manual aria-label="Planets">
+export const Manual: TabStory = {
+    render: () => (
+        <Tabs aria-label="Planets" manual>
             <Item key="mars">
                 <Header>Mars</Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -154,22 +115,12 @@ In this scenario, you should use a manually activated tab, it moves focus withou
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Async content
-
-A tab can use `useTabsContext` to load async content when a tab is selected.
-
-<Preview filePath="/tabs/docs/AsyncTabs" />
-
-### Orientation
-
-A tabs component can be rendered vertically.
-
-<Preview>
-    <Story name="orientation">
-        <Tabs orientation="vertical" aria-label="Planets">
+export const Orientation: TabStory = {
+    render: () => (
+        <Tabs aria-label="Planets" orientation="vertical">
             <Item key="mars">
                 <Header>Mars</Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -183,16 +134,12 @@ A tabs component can be rendered vertically.
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### In Card
-
-A tabs component can be rendered as an in-card variant.
-
-<Preview>
-    <Story name="in-card">
-        <Tabs variant="in-card" aria-label="Planets">
+export const InCard: TabStory = {
+    render: () => (
+        <Tabs aria-label="Planets" variant="in-card">
             <Item key="mars">
                 <Header>Mars</Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -206,16 +153,12 @@ A tabs component can be rendered as an in-card variant.
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Heading
-
-A tabs component can be rendered as a heading variant.
-
-<Preview>
-    <Story name="heading">
-        <Tabs variant="heading" aria-label="Planets">
+export const Heading: TabStory = {
+    render: () => (
+        <Tabs aria-label="Planets" variant="heading">
             <Item key="mars">
                 <Header>Mars</Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -229,16 +172,12 @@ A tabs component can be rendered as a heading variant.
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Fluid
-
-A tabs component can split the width of its container equally between its tabs.
-
-<Preview>
-    <Story name="fluid">
-        <Tabs fluid aria-label="Planets">
+export const Fluid: TabStory = {
+    render: () => (
+        <Tabs aria-label="Planets" fluid>
             <Item key="mars">
                 <Header>Mars</Header>
                 <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
@@ -256,17 +195,13 @@ A tabs component can split the width of its container equally between its tabs.
                 <Content>Earth is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Collapsible
-
-A tabs component can handle horizontal overflow by collapsing the overflowing tabs in a popup.
-
-<Preview>
-    <Story name="collapsible">
+export const Collapsible: TabStory = {
+    render: () => (
         <Div width={{ base: "100%", sm: "700px" }}>
-            <Tabs fluid aria-label="Planets">
+            <Tabs aria-label="Planets" fluid>
                 <Item key="mars">
                     <Header>Mars</Header>
                     <Content>Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was—billions of years ago—wetter and warmer, with a thicker atmosphere.</Content>
@@ -324,15 +259,11 @@ A tabs component can handle horizontal overflow by collapsing the overflowing ta
                 </Item>
             </Tabs>
         </Div>
-    </Story>
-</Preview>
+    )
+};
 
-### Disabled
-
-A tab can be disabled.
-
-<Preview>
-    <Story name="disabled tab">
+export const DisabledTab: TabStory = {
+    render: () => (
         <Tabs aria-label="Planets">
             <Item key="mars">
                 <Header>Mars</Header>
@@ -347,74 +278,97 @@ A tab can be disabled.
                 <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
             </Item>
         </Tabs>
-    </Story>
-</Preview>
+    )
+};
 
-### Controlled
+/* eslint-disable react-hooks/rules-of-hooks */
+export const Controlled: TabStory = {
+    render: () => {
+        const [selectedKey, setSelectedKey] = useState("mars");
 
-The `selectedKey` state can be handled in a controlled mode.
+        const handleSelectionChange = useCallback((event, newKey) => {
+            setSelectedKey(newKey);
+            console.log(newKey);
+        }, [setSelectedKey]);
 
-<Preview filePath="/tabs/docs/ControlledTabs" />
+        return (
+            <Tabs
+                aria-label="Planets"
+                onSelectionChange={handleSelectionChange}
+                selectedKey={selectedKey}
+            >
+                <Item key="mars">
+                    <Header>Mars</Header>
+                    <Content>Mars is the fourth planet from the Sun and the second-smallest planet.</Content>
+                </Item>
+                <Item key="jupiter">
+                    <Header>Jupiter</Header>
+                    <Content>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</Content>
+                </Item>
+                <Item key="venus">
+                    <Header>Venus</Header>
+                    <Content>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</Content>
+                </Item>
+            </Tabs>
+        );
+    }
+};
 
-## API
+/* eslint-disable react-hooks/rules-of-hooks */
+export const Async: TabStory = {
+    render: () => {
+        function AsyncText({ id, children, ...rest }) {
+            const [text, setText] = useState(null);
 
-### Tabs
+            const { selectedKey } = useTabsContext();
 
-<ComponentInfo
-    usage={"import { Tabs } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerTabs.defaultElement, "styled-component"]}
-    compact
-/>
+            useEffect(() => {
+                let timeoutId;
 
-<ArgsTable of={InnerTabs} sort="alpha" />
+                if (id === selectedKey) {
+                    timeoutId = setTimeout(() => {
+                        setText(children);
+                    }, 2000);
+                } else {
+                    setText(null);
+                }
 
-### Item
+                return () => {
+                    if (!isNil(timeoutId)) {
+                        clearTimeout(timeoutId);
+                    }
+                };
+            }, [id, selectedKey, children]);
 
-<ComponentInfo
-    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
-    compact
-/>
+            return (
+                <Div {...rest}>
+                    {isNil(text) ? (
+                        <Div padding={10} position="relative">
+                            <Div className="o-ui-sb-loading"></Div>
+                        </Div>
+                    ) : text}
+                </Div>
+            );
+        }
 
-<ArgsTable of={InnerItem} sort="alpha" />
-
-### Header
-
-<ComponentInfo
-    usage={"import { Header } from \"@workleap/orbiter-ui\";"}
-    slots={["icon", "text", "lozenge"]}
-    inherits={[InnerHeader.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerHeader} sort="alpha" />
-
-### Content
-
-<ComponentInfo
-    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerContent.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerContent} sort="alpha" />
-
-### Tab
-
-<ComponentInfo
-    usage={"import { Tab } from \"@workleap/orbiter-ui\";"}
-    slots={["icon", "text", "lozenge"]}
-    inherits={[InnerTab.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerTab} sort="alpha" />
-
-### TabPanel
-
-<ComponentInfo
-    usage={"import { TabPanel } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerTabPanel.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerTabPanel} sort="alpha" />
+        return (
+            <Tabs aria-label="Planets" manual>
+                {[
+                    { id: "mars", header: "Mars", content: "Mars is the fourth planet from the Sun and the second-smallest planet." },
+                    { id: "jupiter", header: "Jupiter", content: "Jupiter is the fifth planet from the Sun and the largest in the Solar System." },
+                    { id: "venus", header: "Venus", content: "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty." }
+                ]
+                    .map(({ id, header, content }) =>
+                        <Item key={id}>
+                            <Header>{header}</Header>
+                            <Content>
+                                <AsyncText id={id}>
+                                    {content}
+                                </AsyncText>
+                            </Content>
+                        </Item>
+                    )}
+            </Tabs>
+        );
+    }
+};

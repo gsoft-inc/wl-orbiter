@@ -1,0 +1,177 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerContent, InnerHeader } from "@components/placeholders";
+import { InnerItem } from "@components/collection";
+import { InnerTab, InnerTabs, InnerTabPanel } from "@components/tabs";
+import { Lozenge } from "@components/lozenge";
+import { SparklesIcon } from "@hopper-ui/icons";
+import { Text } from "@components/typography";
+
+import * as TabStories from "./Tabs.stories.tsx"
+
+<Meta of={TabStories} />
+
+# Tabs
+
+<Tagline>Tabs are used to organize content by grouping similar information on the same page.</Tagline>
+
+<ComponentInfo
+    usage={"import { Tabs, Item, Header, Content, TabsContext, useTabsContext } from \"@workleap/orbiter-ui\";"}
+    ariaPath="tabpanel"
+    githubPath="/packages/components/src/tabs/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- An accessible title must be provided through [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) property.
+
+## Usage
+
+We recommend specifying a unique `key` prop for every `<Item>`. If you choose to omit the `key` prop, a key matching the `<Item>` position will be generated. For example, `"0"` would be the generated key for the first `<Item>` of a `<Tabs>` component without keys.
+
+### Default
+
+A default tab.
+
+<Canvas of={TabStories.Default} />
+
+### Icon
+
+A tab can contain [icons](?path=/docs/icon-gallery--page).
+
+<Canvas of={TabStories.Icon} />
+
+### Lozenge
+
+A tab can contain a [lozenge](?path=/docs/components-lozenge--default-story).
+
+<Canvas of={TabStories.LozengeStory} />
+
+### Dynamic Tabs
+
+Tabs items can be rendered dynamically.
+
+<Canvas of={TabStories.DynamicTabs} />
+
+### Manually Activated Tabs
+
+By default, tabs are activated automatically. This means when you use the arrow keys to change tabs, the tab is activated and focused.
+
+> The content of a tab should ideally be preloaded. However, if switching to a tab panel causes a network request and possibly a page refresh, there might be some notable latency and this might affect the experience for keyboard and screen reader users.
+
+In this scenario, you should use a manually activated tab, which moves focus without activating the tabs. With the focus on a specific tab, users can activate a tab by pressing `Space` or `Enter`.
+
+<Canvas of={TabStories.Manual} />
+
+### Async content
+
+A tab can use `useTabsContext` to load async content when a tab is selected.
+
+<Canvas of={TabStories.Async} />
+
+### Orientation
+
+A tabs component can be rendered vertically.
+
+<Canvas of={TabStories.Orientation} />
+
+### In Card
+
+A tabs component can be rendered as an in-card variant.
+
+<Canvas of={TabStories.InCard} />
+
+### Heading
+
+A tabs component can be rendered as a heading variant.
+
+<Canvas of={TabStories.Heading} />
+
+### Fluid
+
+A tabs component can split the width of its container equally between its tabs.
+
+<Canvas of={TabStories.Fluid} />
+
+### Collapsible
+
+A tabs component can handle horizontal overflow by collapsing the overflowing tabs in a popup.
+
+<Canvas of={TabStories.Collapsible} />
+
+### Disabled
+
+A tab can be disabled.
+
+<Canvas of={TabStories.DisabledTab} />
+
+### Controlled
+
+The `selectedKey` state can be handled in a controlled mode.
+
+<Canvas of={TabStories.Controlled} />
+
+## API
+
+### Tabs
+
+<ComponentInfo
+    usage={"import { Tabs } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTabs.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTabs} sort="alpha" />
+
+### Item
+
+<ComponentInfo
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
+    compact
+/>
+
+<ArgTypes of={InnerItem} sort="alpha" />
+
+### Header
+
+<ComponentInfo
+    usage={"import { Header } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "text", "lozenge"]}
+    inherits={[InnerHeader.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHeader} sort="alpha" />
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />
+
+### Tab
+
+<ComponentInfo
+    usage={"import { Tab } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "text", "lozenge"]}
+    inherits={[InnerTab.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTab} sort="alpha" />
+
+### TabPanel
+
+<ComponentInfo
+    usage={"import { TabPanel } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTabPanel.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTabPanel} sort="alpha" />

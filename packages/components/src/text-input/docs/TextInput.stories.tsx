@@ -9,7 +9,7 @@ import { Meta, StoryObj } from "@storybook/react";
 const meta = {
     title: "Components/TextInput",
     component: TextInput,
-    id: "TextInput"
+    id: "textInput"
 } as Meta<typeof TextInput>;
 
 export default meta;
