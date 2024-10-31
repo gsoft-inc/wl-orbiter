@@ -1,5 +1,5 @@
 import { SparklesIcon } from "@hopper-ui/icons";
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
+import { ArgTypes, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { ComponentInfo, Preview, Tagline } from "@stories/components";
 import { GalaxyLargeImage } from "./assets";
 import { IconLink, IconLinkAsButton, InnerIconLink, InnerLink, InnerTextLink, Link, TextLink, TextLinkAsButton } from "@components/link";
@@ -7,11 +7,9 @@ import { Image } from "@components/image";
 import { Inline } from "@components/layout";
 import { RouterLink } from "./RouterLink";
 import { Text } from "@components/typography";
+import * as LinkStories from "./Link.stories.tsx";
 
-<Meta
-    title="Components/Link"
-    id="link"
-/>
+<Meta of={LinkStories} />
 
 # Link
 
@@ -27,43 +25,19 @@ import { Text } from "@components/typography";
 
 A link style can optimized for text.
 
-<Preview>
-    <Story name="default">
-        <TextLink href="#">Flight details</TextLink>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.Default} />
 
 ### Icon
 
 A text link can contain [icons](#).
 
-<Preview>
-    <Story name="icon">
-        <Inline alignY="center">
-            <TextLink size="sm" href="#">
-                <Text>Flight details</Text>
-                <SparklesIcon />
-            </TextLink>
-            <TextLink href="#">
-                <Text>Flight details</Text>
-                <SparklesIcon />
-            </TextLink>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.Icon} />
 
 ### Start icon
 
 *Non standard* start [icons](#) can be provided to handle special cases. However, think twice before adding *start* icons, *end* icons should be your go to.
 
-<Preview>
-    <Story name="start icon">
-        <TextLink href="#">
-            <SparklesIcon slot="start-icon" />
-            <Text>Flight details</Text>
-        </TextLink>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.StartIcon} />
 
 ### External
 
@@ -71,63 +45,37 @@ An external text link will render by default with `rel="noopener noreferrer"` at
 
 You should avoid opening an external link in a new window or tab since it can be disorienting for people. Only do it when it's necessary. For more information, [see W3C recommendation](https://www.w3.org/TR/WCAG20-TECHS/G200.html).
 
-<Preview>
-    <Story name="external">
-        <TextLink external href="#">Flight details</TextLink>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.External} />
 
 ### Variants
 
 A link can use a different style.
 
-<Preview>
-    <Story name="variants">
-        <Inline>
-            <TextLink variant="accent" href="#">Accent</TextLink>
-            <TextLink variant="negative" href="#">Negative</TextLink>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.Variants} />
 
 ### Disabled
 
 A link can have *disabled* style, it's your responsability to make sure the link doesn't navigate anywhere when activated.
 
-<Preview>
-    <Story name="disabled">
-        <TextLink disabled href="#">Flight details</TextLink>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.Disabled} />
 
 ### Size
 
 A link can vary in size.
 
-<Preview>
-    <Story name="size">
-        <Inline alignY="center">
-            <TextLink size="sm" href="#">Flight details</TextLink>
-            <TextLink href="#">Flight details</TextLink>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.Size} />
 
 ### Button
 
 A link can behave like a button by using the `TextLinkAsButton` component.
 
-<Preview>
-    <Story name="button">
-        <TextLinkAsButton>Flight details</TextLinkAsButton>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.Button} />
 
 ### React router
 
 To integrate with a third-party routing library like [React Router](https://reactrouter.com) any link component can be rendered as a [React Router Link](https://reactrouter.com/web/api/Link) or as any other custom component.
 
-<Preview filePath="/link/docs/ReactRouter" scope={{ RouterLink }} />
+<Canvas of={LinkStories.ReactRouter} />
 
 ## Icon link
 
@@ -135,23 +83,13 @@ A link content can be a single icon.
 
 > When using this variant, an accessible name must be provided through `aria-label` prop. See [WCAG practices](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html).
 
-<Preview>
-    <Story name="icon link">
-        <Inline alignY="center">
-            <IconLink aria-label="Add" href="#"><SparklesIcon /></IconLink>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.IconLink} />
 
 ### Button
 
 An icon link can behave like a button by using the `IconLinkAsButton` component.
 
-<Preview>
-    <Story name="icon link button">
-        <IconLinkAsButton><SparklesIcon /></IconLinkAsButton>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.IconLinkButton} />
 
 ## Basic link
 
@@ -161,33 +99,13 @@ A link can have a more subtle appareance and only be noticeable when focused.
 
 A link content can be an image element.
 
-<Preview scope={{ GalaxyLargeImage }}>
-    <Story name="basic link image">
-        <Link href="#">
-            <Image src={GalaxyLargeImage} alt="SpaceX launch" />
-        </Link>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.BasicLinkImage} />
 
 ### Shape
 
 A link can use a different shape to match his content shape on focus state.
 
-<Preview scope={{ GalaxyLargeImage }}>
-    <Story name="basic link shape">
-        <Inline>
-            <Link shape="rounded" focus href="#">
-                <Image src={GalaxyLargeImage} alt="SpaceX launch" width="100px" height="100px" />
-            </Link>
-            <Link shape="circular" focus href="#">
-                <Image src={GalaxyLargeImage} alt="SpaceX launch" width="100px" height="100px" />
-            </Link>
-            <Link shape="box" focus href="#">
-                <Image src={GalaxyLargeImage} alt="SpaceX launch" width="100px" height="100px" />
-            </Link>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LinkStories.BasicLinkShape} />
 
 ## API
 
@@ -200,7 +118,7 @@ A link can use a different shape to match his content shape on focus state.
     compact
 />
 
-<ArgsTable of={InnerTextLink} sort="alpha" />
+<ArgTypes of={InnerTextLink} sort="alpha" />
 
 ### IconLink
 
@@ -210,7 +128,7 @@ A link can use a different shape to match his content shape on focus state.
     compact
 />
 
-<ArgsTable of={InnerIconLink} sort="alpha" />
+<ArgTypes of={InnerIconLink} sort="alpha" />
 
 ### Link
 
@@ -220,7 +138,7 @@ A link can use a different shape to match his content shape on focus state.
     compact
 />
 
-<ArgsTable of={InnerLink} sort="alpha" />
+<ArgTypes of={InnerLink} sort="alpha" />
 
 ### TextLinkAsButton
 
@@ -230,7 +148,7 @@ A link can use a different shape to match his content shape on focus state.
     compact
 />
 
-<ArgsTable of={InnerTextLink} sort="alpha" />
+<ArgTypes of={InnerTextLink} sort="alpha" />
 
 ### IconLinkAsButton
 
@@ -240,4 +158,4 @@ A link can use a different shape to match his content shape on focus state.
     compact
 />
 
-<ArgsTable of={InnerIconLink} sort="alpha" />
+<ArgTypes of={InnerIconLink} sort="alpha" />
