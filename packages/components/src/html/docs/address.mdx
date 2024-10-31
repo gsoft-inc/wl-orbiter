@@ -1,12 +1,10 @@
 import { Address } from "@components/html";
 import { ComponentInfo, Link, Preview, Tagline } from "@stories/components";
-import { Meta, Story } from "@storybook/addon-docs";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { TextLink } from "@components/link";
+import * as AddressStories from "./address.stories.tsx";
 
-<Meta
-    title="Html elements/Address"
-    id="html-address"
-/>
+<Meta of={AddressStories} />
 
 # Address
 
@@ -21,12 +19,4 @@ import { TextLink } from "@components/link";
 
 An address component accepts all the [address HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address) and [Orbiter styled component props](?path=/docs/styling--page).
 
-<Preview>
-    <Story name="example">
-        <Address color="neutral-weak">
-            <TextLink href="mailto:media@spacex.com">media@spacex.com</TextLink>
-            <br />
-            <TextLink href="tel:+13103636000">(310) 363-6000</TextLink>
-        </Address>
-    </Story>
-</Preview>
+<Canvas of={AddressStories.Example} />
