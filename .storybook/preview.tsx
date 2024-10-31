@@ -10,6 +10,7 @@ import type { Preview } from "@storybook/react";
 import "@components/index.css";
 import "./styles";
 import "@hopper-ui/tokens/fonts.css";
+import { Highlight } from "./mdx";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
