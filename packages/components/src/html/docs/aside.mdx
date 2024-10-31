@@ -1,10 +1,8 @@
 import { ComponentInfo, Link, Tagline } from "@stories/components";
-import { Meta } from "@storybook/addon-docs";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as AsideStories from "./aside.stories.tsx";
 
-<Meta
-    title="Html elements/Aside"
-    id="html-aside"
-/>
+<Meta of={AsideStories} />
 
 # Aside
 
@@ -19,8 +17,4 @@ import { Meta } from "@storybook/addon-docs";
 
 An aside component accepts all the [aside HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside) and [Orbiter styled component props](?path=/docs/styling--page).
 
-```jsx
-<Aside color="neutral-weak">
-    <Paragraph>The Universe is under no obligation to make sense to you. The Earth is the cradle of humanity, but mankind cannot stay in the cradle forever.</Paragraph>
-</Aside>
-```
+<Canvas of={AsideStories.Example} />
