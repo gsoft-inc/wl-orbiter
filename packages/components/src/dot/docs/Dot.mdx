@@ -1,12 +1,10 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
+import { ArgTypes, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { ComponentInfo, Preview } from "@stories/components";
 import { Dot, InnerDot } from "@components/dot";
 import { Inline } from "@components/layout";
+import * as DotStories from "./Dot.stories.tsx";
 
-<Meta
-    title="Components/Dot"
-    id="dot"
-/>
+<Meta of={DotStories} />
 
 # Dot
 
@@ -21,21 +19,13 @@ import { Inline } from "@components/layout";
 
 A default dot.
 
-<Preview>
-    <Story name="default">
-        <Dot color="primary" />
-    </Story>
-</Preview>
+<Canvas of={DotStories.Default} />
 
 ### Label
 
 A dot can have a label.
 
-<Preview>
-    <Story name="label">
-        <Dot color="neutral-weakest">Habitable</Dot>
-    </Story>
-</Preview>
+<Canvas of={DotStories.Label} />
 
 ### Color
 
@@ -43,15 +33,7 @@ A dot color can vary.
 
 You can use a color name from our Orbiter design system (e.g. `moss-200`, `--o-ui-accent-6`), an hexadecimal color code (e.g. `#c5cac8`), an `hsl`, an `hsla`, a `rgb` or a `rgba` color code.
 
-<Preview>
-    <Story name="color">
-        <Inline>
-            <Dot color="neutral-weakest">Habitable</Dot>
-            <Dot color="hsl(25, 69%, 41%)">Uninhabitable</Dot>
-            <Dot color="--hop-sapphire-600">Clean</Dot>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={DotStories.Color} />
 
 ## API
 
@@ -63,4 +45,4 @@ You can use a color name from our Orbiter design system (e.g. `moss-200`, `--o-u
     compact
 />
 
-<ArgsTable of={InnerDot} sort="alpha" />
+<ArgTypes of={InnerDot} sort="alpha" />
