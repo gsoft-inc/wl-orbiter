@@ -182,12 +182,10 @@ export const ControlledAccordion: AccordionStory = {
     render: () => {
         const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
 
-
         const handleExpansionChange = useCallback((event: SyntheticEvent, keys: string[]) => {
             setExpandedKeys(keys);
             console.log(keys);
         }, [setExpandedKeys]);
-
 
         return (
             <Accordion
