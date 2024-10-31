@@ -8,7 +8,7 @@ import { Inline, Stack } from "@components/layout";
 import { Item } from "@components/collection";
 import { Planet, SpaceLandscape } from "./assets";
 import { Tabs as OrbiterTabs } from "@components/tabs";
-import { Meta, StoryObj } from "@storybook/react/*";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Components/Card",

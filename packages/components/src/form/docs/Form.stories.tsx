@@ -1,44 +1,24 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
 import { Button, ButtonGroup } from "@components/button";
 import { Checkbox } from "@components/checkbox";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { Field, HelpMessage, Label } from "@components/field";
-import { Fieldset, Form, InnerFieldset, InnerForm } from "@components/form";
+import { ErrorMessage, Field, HelpMessage, Label } from "@components/field";
+import { Fieldset as OrbiterFieldset, Form } from "@components/form";
 import { Flex, Grid, Inline, repeat } from "@components/layout";
 import { PasswordInput, TextInput } from "@components/text-input";
+import { Meta, StoryObj } from "@storybook/react";
+import { useFormik } from "formik";
 
-<Meta
-    title="Components/Form"
-    id="form"
-/>
+const meta = {
+    title: "Components/Form",
+    component: Form,
+    id: "form"
+} as Meta<typeof Form>;
 
-# Form
+export default meta;
 
-<Tagline>Forms are commonly used to provide user interaction in web applications.</Tagline>
+type Story = StoryObj<typeof Form>;
 
-<ComponentInfo
-    usage={"import { Form, Fieldset, FormContext, useFormField, useFormButton } from \"@workleap/orbiter-ui\";"}
-    githubPath="/packages/components/src/form/src"
-/>
-
-## Guidelines
-
-### Accessibility
-
-- When combined with [field](?path=/story/field--input) components, a form component follows the [WAI specifications for forms](https://www.w3.org/WAI/tutorials/forms/).
-
-## Usage
-
-In additional to wrapping a form element, a form component provide layout for fields and buttons.
-
-> To apply the layout correctly, every inputs must be wrapped in a field component.
-
-### Vertical layout
-
-A form can stack fields vertically.
-
-<Preview>
-    <Story name="vertical layout">
+export const VerticalLayout: Story = {
+    render: () => (
         <Form>
             <Field required>
                 <Label>Username</Label>
@@ -54,15 +34,11 @@ A form can stack fields vertically.
             </Field>
             <Button type="submit" variant="secondary">Login</Button>
         </Form>
-    </Story>
-</Preview>
+    )
+};
 
-### Inline layout
-
-Multiple form fields can be inlined on the same row either with a [flex](?path=/docs/flex--horizontal) component:
-
-<Preview>
-    <Story name="inline layout flex">
+export const InlineLayoutFlex: Story = {
+    render: () => (
         <Form fluid>
             <Inline>
                 <Field>
@@ -97,13 +73,11 @@ Multiple form fields can be inlined on the same row either with a [flex](?path=/
             </Field>
             <Button type="submit" variant="secondary">Submit</Button>
         </Form>
-    </Story>
-</Preview>
+    )
+};
 
-Or a [grid](?path=/docs/grid--areas) component:
-
-<Preview>
-    <Story name="inline layout grid">
+export const InlineLayoutGrid: Story = {
+    render: () => (
         <Form fluid>
             <Grid templateColumns={{ base: "1fr", md: repeat(3, "1fr") }}>
                 <Field>
@@ -138,19 +112,15 @@ Or a [grid](?path=/docs/grid--areas) component:
             </Field>
             <Button type="submit" variant="secondary">Submit</Button>
         </Form>
-    </Story>
-</Preview>
+    )
+};
 
-### Fieldset
-
-Form fields can be grouped together within fieldsets.
-
-<Preview>
-    <Story name="fieldset">
+export const Fieldset: Story = {
+    render: () => (
         <Form>
-            <Fieldset label="Shipping Address">
+            <OrbiterFieldset label="Shipping Address">
                 <Flex
-                    flexDirection={{
+                    direction={{
                         base: "column",
                         sm: "row"
                     }}
@@ -165,7 +135,7 @@ Form fields can be grouped together within fieldsets.
                     </Field>
                 </Flex>
                 <Flex
-                    flexDirection={{
+                    direction={{
                         base: "column",
                         sm: "row"
                     }}
@@ -183,10 +153,10 @@ Form fields can be grouped together within fieldsets.
                     <Label>Postal code</Label>
                     <TextInput />
                 </Field>
-            </Fieldset>
-            <Fieldset label="Billing Address">
+            </OrbiterFieldset>
+            <OrbiterFieldset label="Billing Address">
                 <Flex
-                    flexDirection={{
+                    direction={{
                         base: "column",
                         sm: "row"
                     }}
@@ -201,7 +171,7 @@ Form fields can be grouped together within fieldsets.
                     </Field>
                 </Flex>
                 <Flex
-                    flexDirection={{
+                    direction={{
                         base: "column",
                         sm: "row"
                     }}
@@ -219,18 +189,14 @@ Form fields can be grouped together within fieldsets.
                     <Label>Postal code</Label>
                     <TextInput />
                 </Field>
-            </Fieldset>
+            </OrbiterFieldset>
             <Button variant="secondary">Submit</Button>
         </Form>
-    </Story>
-</Preview>
+    )
+};
 
-### Fluid
-
-Form fields can take the witdh of their container.
-
-<Preview>
-    <Story name="fluid">
+export const Fluid: Story = {
+    render: () => (
         <Form fluid>
             <Field>
                 <Label>Where to?</Label>
@@ -238,15 +204,11 @@ Form fields can take the witdh of their container.
             </Field>
             <Button variant="secondary">Submit</Button>
         </Form>
-    </Story>
-</Preview>
+    )
+};
 
-### Disabled
-
-Form fields and buttons can be disabled.
-
-<Preview>
-    <Story name="disabled">
+export const Disabled: Story = {
+    render: () => (
         <Form disabled>
             <Field>
                 <Label>Where to?</Label>
@@ -254,15 +216,11 @@ Form fields and buttons can be disabled.
             </Field>
             <Button variant="secondary">Submit</Button>
         </Form>
-    </Story>
-</Preview>
+    )
+};
 
-### Button alignment
-
-Form buttons can be aligned horizontally.
-
-<Preview>
-    <Story name="button alignment">
+export const ButtonAlignment: Story = {
+    render: () => (
         <Inline gap={480}>
             <Form>
                 <Field>
@@ -284,34 +242,68 @@ Form buttons can be aligned horizontally.
                 </ButtonGroup>
             </Form>
         </Inline>
-    </Story>
-</Preview>
+    )
+};
 
-### Formik
+export const Formik: Story = {
+    render: () => {
+        const formik = useFormik({
+            initialValues: {
+                firstName: "",
+                lastName: "",
+                userName: "",
+                agreeTerms: false
+            },
+            validate: values => {
+                return Object.keys(values).reduce((acc, x) => {
+                    if (!values[x]) {
+                        acc[x] = `${x} is required.`;
+                    }
 
-The form state and validation could be managed by an external library like [Formik](https://formik.org/).
+                    return acc;
+                }, {});
+            },
+            onSubmit: (values, actions) => {
+                setTimeout(() => {
+                    console.log(JSON.stringify(values, null, 2));
 
-<Preview filePath="/form/docs/RegistrationForm" />
+                    actions.setSubmitting(false);
+                    actions.resetForm();
+                }, 10000);
+            }
+        });
 
-## API
+        const getValidationState = fieldId => {
+            return formik.touched[fieldId]
+                ? formik.errors[fieldId] ? "invalid" : "valid"
+                : null;
+        };
 
-### Form
-
-<ComponentInfo
-    usage={"import { Form } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerForm.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerForm} sort="alpha" />
-
-### Fieldset
-
-<ComponentInfo
-    usage={"import { Fieldset } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerFieldset.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerFieldset} sort="alpha" />
-
+        return (
+            <Form onSubmit={formik.handleSubmit} >
+                <Field id="firstName" validationState={getValidationState("firstName")}>
+                    <Label required>First name</Label>
+                    <TextInput onChange={event => { console.log(event.target.value); formik.handleChange(event); }} value={formik.values.firstName} />
+                    <ErrorMessage>{formik.errors.firstName}</ErrorMessage>
+                </Field>
+                <Field id="lastName" validationState={getValidationState("lastName")}>
+                    <Label required>Last name</Label>
+                    <TextInput onChange={formik.handleChange} value={formik.values.lastName} />
+                    <ErrorMessage>{formik.errors.lastName}</ErrorMessage>
+                </Field>
+                <Field id="userName" validationState={getValidationState("userName")}>
+                    <Label required>Username</Label>
+                    <TextInput onChange={formik.handleChange} value={formik.values.userName} />
+                    <ErrorMessage>{formik.errors.userName}</ErrorMessage>
+                </Field>
+                <Field id="agreeTerms" validationState={getValidationState("agreeTerms")} >
+                    <Checkbox checked={formik.values.agreeTerms} onChange={formik.handleChange}>Agree to terms and conditions</Checkbox>
+                </Field>
+                <ButtonGroup align="end">
+                    <Button onClick={() => formik.resetForm()} variant="secondary">Reset</Button>
+                    <Button loading={formik.isSubmitting} type="submit">Submit</Button>
+                </ButtonGroup>
+            </Form >
+        );
+    }
+};
