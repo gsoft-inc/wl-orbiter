@@ -1,42 +1,31 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
 import { Avatar } from "@components/avatar";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { IconList } from "@components/icons";
-import { CatIcon, SparklesIcon, RocketIcon, SearchIcon } from "@hopper-ui/icons";
-import { HiddenSelect, InnerHiddenSelect, InnerSelect, Select } from "@components/select";
-import { InnerItem, InnerSection, Item, Section } from "@components/collection";
+import { Select, useSelect } from "@components/select";
+import { Button } from "@components/button";
+import { DisclosureArrow } from "@components/disclosure";
+import { Overlay } from "@components/overlay";
+import { Section, Item } from "@components/collection";
+import { CatIcon, RocketIcon, SearchIcon, SparklesIcon } from "@hopper-ui/icons";
+import { TooltipTrigger, Tooltip } from "@components/tooltip";
 import { Text } from "@components/typography";
-import { Tooltip, TooltipTrigger } from "@components/tooltip";
+import { Listbox } from "@components/listbox";
+import { IconList } from "@components/icons";
+import { isNil } from "@components/shared";
+import { useCallback, useState } from "react";
 
-<Meta
-    title="Components/Select"
-    id="select"
-/>
+import { Meta, StoryObj } from "@storybook/react";
 
-# Select
+const meta = {
+    title: "Components/Select",
+    component: Select,
+    id: "select"
+} as Meta<typeof Select>;
 
-<Tagline>A select allow users to choose a single option from a collapsible list of options.</Tagline>
+export default meta;
 
-<ComponentInfo
-    usage={"import { Select, Item, Section, HiddenSelect, useSelect } from \"@workleap/orbiter-ui\";"}
-    ariaPath="listbox"
-    githubPath="/packages/components/src/select/src"
-/>
+type SelectStory = StoryObj<typeof meta>;
 
-## Guidelines
-
-### Accessibility
-
-- If you provide an [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, make sure its value is in sync with the selected item, otherwise screen readers won't be able to anounce the new selected item.
-
-## Usage
-
-### Default
-
-A default select.
-
-<Preview>
-    <Story name="default">
+export const Default: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -46,15 +35,11 @@ A default select.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Sections
-
-A select items can be group by sections.
-
-<Preview>
-    <Story name="sections">
+export const Sections: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Section title="Visited">
                 <Item key="earth">Earth</Item>
@@ -68,15 +53,11 @@ A select items can be group by sections.
                 <Item key="uranus">Uranus</Item>
             </Section>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Item icon
-
-A select item can have [icons](?path=/docs/icon-gallery--page).
-
-<Preview>
-    <Story name="item icon">
+export const ItemIcon: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item key="earth">
                 <SparklesIcon />
@@ -91,15 +72,11 @@ A select item can have [icons](?path=/docs/icon-gallery--page).
                 <Text>Mars</Text>
             </Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Item end icon
-
-A select item can have *non standard* end [icons](?path=/docs/icon-gallery--page) can be provided to handle special cases like displaying a list of icons. However, think twice before adding *end* icons, *start* icons should be your go to.
-
-<Preview>
-    <Story name="item end icon">
+export const ItemEndIcon: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item key="earth">
                 <Text>Earth</Text>
@@ -122,15 +99,11 @@ A select item can have *non standard* end [icons](?path=/docs/icon-gallery--page
                 </IconList>
             </Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Item description
-
-A select item can have a description.
-
-<Preview>
-    <Story name="item description">
+export const ItemDescription: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item key="earth">
                 <Text>Earth</Text>
@@ -145,13 +118,11 @@ A select item can have a description.
                 <Text slot="description">See you in 2026</Text>
             </Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-A description can be paired with an [icon](?path=/docs/icon-gallery--page).
-
-<Preview>
-    <Story name="item description + icon">
+export const ItemDescriptionIcon: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item key="earth">
                 <SparklesIcon />
@@ -169,13 +140,11 @@ A description can be paired with an [icon](?path=/docs/icon-gallery--page).
                 <Text slot="description">See you in 2026</Text>
             </Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-A description can be paired with an [avatar](?path=/docs/avatar--default-story).
-
-<Preview>
-    <Story name="item description + avatar">
+export const ItemDescriptionAvatar: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item key="earth">
                 <Avatar name="Earth" />
@@ -193,15 +162,11 @@ A description can be paired with an [avatar](?path=/docs/avatar--default-story).
                 <Text slot="description">See you in 2026</Text>
             </Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Item tooltip
-
-A select can have a basic tooltip.
-
-<Preview>
-    <Story name="item tooltip">
+export const ItemTooltip: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <TooltipTrigger>
                 <Item key="earth">Earth</Item>
@@ -216,15 +181,11 @@ A select can have a basic tooltip.
                 <Tooltip>See you in 2026</Tooltip>
             </TooltipTrigger>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Disabled item
-
-A select item can be disabled.
-
-<Preview>
-    <Story name="disabled item">
+export const DisabledItem: SelectStory = {
+    render: () => (
         <Select placeholder="Planets">
             <Item disabled key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -234,15 +195,11 @@ A select item can be disabled.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Trigger icon
-
-A select trigger can have an icon.
-
-<Preview>
-    <Story name="trigger icon">
+export const TriggerIcon: SelectStory = {
+    render: () => (
         <Select icon={<SearchIcon />} placeholder="Planets">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -252,13 +209,11 @@ A select trigger can have an icon.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Disabled
-
-<Preview>
-    <Story name="disabled">
+export const Disabled: SelectStory = {
+    render: () => (
         <Select disabled placeholder="Planets">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -268,14 +223,12 @@ A select trigger can have an icon.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Readonly
-
-<Preview>
-    <Story name="readonly">
-        <Select readOnly placeholder="Planets">
+export const Readonly: SelectStory = {
+    render: () => (
+        <Select placeholder="Planets" readOnly>
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
             <Item key="mars">Mars</Item>
@@ -284,15 +237,11 @@ A select trigger can have an icon.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Fluid
-
-A select can take the width of it's container.
-
-<Preview>
-    <Story name="fluid">
+export const Fluid: SelectStory = {
+    render: () => (
         <Select fluid placeholder="Planets">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -302,23 +251,11 @@ A select can take the width of it's container.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Validation
-
-A select can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the select via the `validationState` prop.
-
-The example below illustrates how one would validate that a specific value have been selected.
-
-<Preview filePath="/select/docs/SelectedValueValidation" />
-
-### Form
-
-A select can be part of a form. To submit the value of a select, make sure you specify the `name` property.
-
-<Preview>
-    <Story name="form">
+export const Form: SelectStory = {
+    render: () => (
         <form>
             <Select name="planet" placeholder="Planets">
                 <Item key="earth">Earth</Item>
@@ -330,36 +267,22 @@ A select can be part of a form. To submit the value of a select, make sure you s
                 <Item key="uranus">Uranus</Item>
             </Select>
         </form>
-    </Story>
-</Preview>
+    )
+};
 
-### Dynamic items
-
-A select items can be rendered dynamically.
-
-<Preview>
-    <Story name="dynamic items">
-        <Select placeholder="Planets" aria-label="Planets">
+export const DynamicItems: SelectStory = {
+    render: () => (
+        <Select aria-label="Planets" placeholder="Planets">
             {["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus"].map(x => (
                 <Item key={x.toLowerCase()}>{x}</Item>
             ))}
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Controlled
-
-The `selectedKey` and `open` state can be handled in controlled mode.
-
-<Preview filePath="/select/docs/ControlledSelect" />
-
-### Ghost
-
-A select can be more discrete.
-
-<Preview>
-    <Story name="ghost">
-        <Select variant="ghost" placeholder="Planets">
+export const Ghost: SelectStory = {
+    render: () => (
+        <Select placeholder="Planets" variant="ghost">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
             <Item key="mars">Mars</Item>
@@ -368,56 +291,119 @@ A select can be more discrete.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Select>
-    </Story>
-</Preview>
+    )
+};
 
-### Headless select
+/* eslint-disable react-hooks/rules-of-hooks */
+export const SelectedValueValidation: SelectStory = {
+    render: () => {
+        const [isValid, setIsValid] = useState(true);
 
-For advanced customization use cases, Orbiter helps by providing an headless `useSelect` hook.
+        const handleSelectionChange = useCallback((event, newValue) => {
+            setIsValid(newValue === "earth");
+            console.log(newValue);
+        }, [setIsValid]);
 
-Make sure your trigger accepts a `ref` and any other props returned by the hook.
+        return (
+            <Select
+                onSelectionChange={handleSelectionChange}
+                placeholder="Planets"
+                validationState={isValid ? "valid" : "invalid"}
+            >
+                <Item key="earth">Earth</Item>
+                <Item key="jupiter">Jupiter</Item>
+                <Item key="mars">Mars</Item>
+                <Item key="mercury">Mercury</Item>
+                <Item key="neptune">Neptune</Item>
+                <Item key="saturn">Saturn</Item>
+                <Item key="uranus">Uranus</Item>
+            </Select>
+        );
+    }
+};
 
-<Preview filePath="/select/docs/CustomSelect" />
+/* eslint-disable react-hooks/rules-of-hooks */
+export const ControlledSelect: SelectStory = {
+    render: () => {
+        const [isOpen, setIsOpen] = useState(false);
+        const [selectedKey, setSelectedKey] = useState("earth");
 
-## API
+        const handleSelectionChange = useCallback((event, newValue) => {
+            setSelectedKey(newValue);
+            console.log(newValue);
+        }, [setSelectedKey]);
 
-### Select
+        const handleOpenChange = useCallback((event, newValue) => {
+            setIsOpen(newValue);
+            console.log(newValue);
+        }, [setIsOpen]);
 
-<ComponentInfo
-    usage={"import { Select } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerSelect.defaultElement, "styled-component"]}
-    compact
-/>
+        return (
+            <Select
+                onOpenChange={handleOpenChange}
+                onSelectionChange={handleSelectionChange}
+                open={isOpen}
+                placeholder="Planets"
+                selectedKey={selectedKey}
+            >
+                <Item key="earth">Earth</Item>
+                <Item key="jupiter">Jupiter</Item>
+                <Item key="mars">Mars</Item>
+                <Item key="mercury">Mercury</Item>
+                <Item key="neptune">Neptune</Item>
+                <Item key="saturn">Saturn</Item>
+                <Item key="uranus">Uranus</Item>
+            </Select>
+        );
+    }
+};
 
-<ArgsTable of={InnerSelect} sort="alpha" />
+/* eslint-disable react-hooks/rules-of-hooks */
+export const CustomSelectStory: SelectStory = {
+    render: () => {
+        function CustomSelect({
+            placeholder,
+            children,
+            ...rest
+        }) {
+            const { selectedItem, isOpen, triggerProps, overlayProps, listboxProps, valueProps } = useSelect(children);
 
-### Item
+            return (
+                <>
+                    <Button
+                        {...rest}
+                        {...triggerProps}
+                        variant="secondary"
+                        width={{
+                            base: "100%",
+                            sm: "320px"
+                        }}
+                    >
+                        <Text {...valueProps}>
+                            {!isNil(selectedItem) ? selectedItem.text : placeholder}
+                        </Text>
+                        <DisclosureArrow
+                            open={isOpen}
+                            slot="end-icon"
+                        />
+                    </Button>
+                    <Overlay {...overlayProps}>
+                        <Listbox {...listboxProps} />
+                    </Overlay>
+                </>
+            );
+        }
 
-<ComponentInfo
-    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
-    slots={["icon", "avatar", "text", "description", "end-icon"]}
-    compact
-/>
-
-<ArgsTable of={InnerItem} sort="alpha" />
-
-### Section
-
-<ComponentInfo
-    usage={"import { Section } from \"@workleap/orbiter-ui\";"}
-    compact
-/>
-
-<ArgsTable of={InnerSection} sort="alpha" />
-
-### HiddenSelect
-
-<ComponentInfo
-    usage={"import { HiddenSelect } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerHiddenSelect.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerHiddenSelect} sort="alpha" />
-
-
+        return (
+            <CustomSelect placeholder="Select a planet">
+                <Item key="earth">Earth</Item>
+                <Item key="jupiter">Jupiter</Item>
+                <Item key="mars">Mars</Item>
+                <Item key="mercury">Mercury</Item>
+                <Item key="neptune">Neptune</Item>
+                <Item key="saturn">Saturn</Item>
+                <Item key="uranus">Uranus</Item>
+            </CustomSelect>
+        );
+    }
+};
