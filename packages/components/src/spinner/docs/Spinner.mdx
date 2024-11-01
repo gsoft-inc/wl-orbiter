@@ -1,12 +1,10 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { Inline } from "@components/layout";
-import { InnerSpinner, Spinner } from "@components/spinner";
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerSpinner } from "@components/spinner";
 
-<Meta
-    title="Components/Spinner"
-    id="spinner"
-/>
+import * as SpinnerStories from "./Spinner.stories.tsx";
+
+<Meta of={SpinnerStories} />
 
 # Spinner
 
@@ -39,53 +37,25 @@ import { InnerSpinner, Spinner } from "@components/spinner";
 
 A simple spinner.
 
-<Preview>
-    <Story name="default">
-        <Spinner aria-label="Loading..." />
-    </Story>
-</Preview>
+<Canvas of={SpinnerStories.Default} />
 
 ### Size
 
 A spinner can vary in size.
 
-<Preview>
-    <Story name="size">
-        <Inline alignY="end">
-            <Spinner size="sm" aria-label="Loading..."/>
-            <Spinner aria-label="Loading..."/>
-            <Spinner size="lg" aria-label="Loading..."/>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={SpinnerStories.Size} />
 
 ### Label
 
 A spinner can have a label.
 
-<Preview>
-    <Story name="label">
-        <Inline alignY="end">
-            <Spinner size="sm">Loading...</Spinner>
-            <Spinner>Loading...</Spinner>
-            <Spinner size="lg">Loading...</Spinner>
-        </Inline>
-    </Story>
-</Preview>
-
+<Canvas of={SpinnerStories.Label} />
 
 ### Over background
 
 You can change a spinner style when over a background by setting a color property on the spinner.
 
-<Preview>
-    <Story name="over background">
-        <Div backgroundColor="primary-strong" padding={160}>
-            <Spinner color="#FFFFFF">Loading...</Spinner>
-        </Div>
-    </Story>
-</Preview>
-
+<Canvas of={SpinnerStories.OverBackground} />
 
 ## API
 
@@ -97,4 +67,4 @@ You can change a spinner style when over a background by setting a color propert
     compact
 />
 
-<ArgsTable of={InnerSpinner} sort="alpha" />
+<ArgTypes of={InnerSpinner} sort="alpha" />

@@ -1,0 +1,43 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Preview, Tagline } from "@stories/components";
+import { InnerIllustratedMessage } from "@components/illustrated-message";
+
+import * as IllustratedMessageStories from "./IllustratedMessage.stories.tsx";
+
+<Meta of={IllustratedMessageStories}/>
+
+# IllustratedMessage
+
+<Tagline>An illustrated message display an image and a message, usually for an empty state or an error page.</Tagline>
+
+<ComponentInfo
+    usage={"import { IllustratedMessage } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/illustrated-message/src"
+/>
+
+## Usage
+
+### Default
+
+An illustrated message renders vertically by default.
+
+<Canvas of={IllustratedMessageStories.NoResultsStory} />
+
+### Horizontal
+
+An illustrated message can render horizontally.
+
+<Canvas of={IllustratedMessageStories.Horizontal} />
+
+## API
+
+### IllustratedMessage
+
+<ComponentInfo
+    usage={"import { IllustratedMessage } from \"@workleap/orbiter-ui\";"}
+    slots={["image", "heading", "content"]}
+    inherits={[InnerIllustratedMessage.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerIllustratedMessage} sort="alpha" />
