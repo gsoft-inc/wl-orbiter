@@ -1,15 +1,13 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
 import { Counter } from "@components/counter";
 import { SparklesIcon } from "@hopper-ui/icons";
 import { Inline } from "@components/layout";
-import { InnerSwitch, Switch } from "@components/switch";
-import { Text } from "@components/typography";
+import { InnerSwitch } from "@components/switch";
 
-<Meta
-    title="Components/Switch"
-    id="switch"
-/>
+import * as SwitchStories from "./Switch.stories.tsx"
+
+<Meta of={SwitchStories} />
 
 # Switch
 
@@ -47,100 +45,55 @@ import { Text } from "@components/typography";
 
 A default switch.
 
-<Preview>
-    <Story name="default">
-        <Switch>Engines</Switch>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.Default} />
 
 ### Checked
 
 A switch can be checked.
 
-<Preview>
-    <Story name="checked">
-        <Switch defaultChecked>Engines</Switch>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.Checked} />
 
 ### No label
 
 A switch can be rendered without a label.
 
-<Preview>
-    <Story name="no label">
-        <Switch aria-label="Engines" />
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.NoLabel} />
 
 ### Disabled
 
 A switch can be disabled.
 
-<Preview>
-    <Story name="disabled">
-        <Switch disabled>Engines</Switch>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.Disabled} />
 
 ### Icon
 
 A switch can have [icons](?path=/docs/icon-gallery--page) after his text.
 
-<Preview>
-    <Story name="icon">
-        <Switch>
-            <Text>Pressurization</Text>
-            <SparklesIcon />
-        </Switch>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.IconStory} />
 
 ### Counter
 
 A switch can have a [counter](?path=/docs/counter--default-story) after his text.
 
-<Preview>
-    <Story name="counter">
-        <Switch>
-            <Text>Engines</Text>
-            <Counter>6</Counter>
-        </Switch>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.CounterStory} />
 
 ### Size
 
 A switch can vary in size.
 
-<Preview>
-    <Story name="size">
-        <Inline alignY="center">
-            <Switch size="sm">Engines</Switch>
-            <Switch>Engines</Switch>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.Size} />
 
 ### Reverse
 
 A checkbox checkmark can be to the left or to the right of his label.
 
-<Preview>
-    <Story name="reverse">
-        <Switch reverse>
-            <SparklesIcon />
-            <Text>Engines</Text>
-            <Counter variant="divider">6</Counter>
-        </Switch>
-    </Story>
-</Preview>
+<Canvas of={SwitchStories.Reverse} />
 
 ### Controlled
 
 A switch can handle `checked` state in controlled mode.
 
-<Preview filePath="/switch/docs/ControlledSwitch" />
+<Canvas of={SwitchStories.Controlled} />
 
 ## API
 
@@ -153,5 +106,4 @@ A switch can handle `checked` state in controlled mode.
     compact
 />
 
-<ArgsTable of={InnerSwitch} sort="alpha"/>
-
+<ArgTypes of={InnerSwitch} sort="alpha"/>
