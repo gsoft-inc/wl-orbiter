@@ -1,0 +1,189 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerContent } from "@components/placeholders";
+import { InnerHeading } from "@components/typography";
+import { InnerTile, InnerTileGroup, InnerTileLink } from "@components/tile";
+
+import * as TileStories from "./Tile.stories.tsx";
+
+<Meta of={TileStories} />
+
+# Tile
+
+<Tagline>A tile groups information into an interactive element to let users browse and take action on a group of related items.</Tagline>
+
+<ComponentInfo
+    usage={"import { Tile, TileLink, TileGroup, Heading, Content } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/tile/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To let the user make a choice while giving more context than with a [radio group](?path=/docs/radio-group--default-story) or a [checkbox](?path=/docs/checkbox--default-story).
+- To let the user navigate to another page while giving more context than with a [link](?path=/docs/link--default-story).
+
+### Content
+
+- Have an heading and a content.
+
+## Usage
+
+Tiles behaves like a radio button or a checkbox depending if it's used in a [single or multiple selection context](?path=/docs/tile--tile#tilegroup).
+
+### Basic
+
+A tile consists of minimally an heading and some content.
+
+<Canvas of={TileStories.Default} />
+
+### Image
+
+A tile can have an [image](?path=/story/chromatic-image--default).
+
+<Canvas of={TileStories.ImageStory} />
+
+Or an [illustration](?path=/docs/illustration--horizontal) with a background color.
+
+<Canvas of={TileStories.IllustrationStory} />
+
+### Checked
+
+A tile can be checked.
+
+<Canvas of={TileStories.Checked} />
+
+### Disabled
+
+A tile can be disabled.
+
+<Canvas of={TileStories.Disabled} />
+
+### Orientation
+
+A tile can render horizontally.
+
+<Canvas of={TileStories.Orientation} />
+
+### Controlled
+
+A tite can handle `checked` state in controlled mode.
+
+<Canvas of={TileStories.Controlled} />
+
+## TileLink
+
+A tile can also be navigable. It is similar to a [link](?path=/docs/link--default-story) and it does share the same props.
+
+<Canvas of={TileStories.TileLinkStory} />
+
+### React router
+
+To integrate with a third-party routing library like [React Router](https://reactrouter.com) any link component can be rendered as a [React Router Link](https://reactrouter.com/en/main/components/link) or as any other custom component.
+
+```jsx
+import { Link } from "react-router-dom";
+
+const RouterTileLink = as(TileLink, Link);
+
+() => {
+    return (
+        <RouterTileLink to="/buy">
+            <Heading>Buy a ticket</Heading>
+            <Content>Purchase a ticket for any of our space travel adventure.</Content>
+        </RouterTileLink>
+    );
+};
+
+```
+
+## TileGroup
+
+Related tiles can be grouped together. By default a tile group doesn't allow any selection. This is usually what you want if you need to group together navigable tiles.
+
+<Canvas of={TileStories.TileGroupNoSelection} />
+
+### Single selection
+
+A tile group can allow a single selection. This is a behavior similar to a [radio group](?path=/docs/radio-group--default-story).
+
+<Canvas of={TileStories.TileGroupSingleSelection} />
+
+### Multiple selection
+
+A tile group can allow a multiple selection. This is a behavior similar to a [checkbox group](?path=/docs/checkbox--default-story#checkbox-group).
+
+<Canvas of={TileStories.TileGroupMultipleSelection} />
+
+### Row size
+
+A tile group can have multiple tiles on the same row.
+
+<Canvas of={TileStories.TileGroupRowSize} />
+
+### Wrap
+
+A tile group tiles will wrap on multiple lines automatically.
+
+<Canvas of={TileStories.TileGroupWrap} />
+
+### Controlled
+
+A tile group with selection can handle `value` state in controlled mode.
+
+<Canvas of={TileStories.TileGroupControlled} />
+
+## API
+
+### Tile
+
+<ComponentInfo
+    usage={"import { Tile } from \"@workleap/orbiter-ui\";"}
+    slots={["image", "illustration", "heading", "content"]}
+    inherits={[InnerTile.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTile} sort="alpha" />
+
+### TileLink
+
+<ComponentInfo
+    usage={"import { TileLink } from \"@workleap/orbiter-ui\";"}
+    slots={["image", "illustration", "heading", "content"]}
+    inherits={[InnerTileLink.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTileLink} sort="alpha" />
+
+### TileGroup
+
+<ComponentInfo
+    usage={"import { TileGroup } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTileGroup.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTileGroup} sort="alpha" />
+
+### Heading
+
+<ComponentInfo
+    usage={"import { Heading } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHeading.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHeading} sort="alpha" />
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />
