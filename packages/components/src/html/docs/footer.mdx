@@ -1,10 +1,8 @@
 import { ComponentInfo, Link, Tagline } from "@stories/components";
-import { Meta } from "@storybook/addon-docs";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as FooterStories from "./footer.stories.tsx";
 
-<Meta
-    title="Html elements/Footer"
-    id="html-footer"
-/>
+<Meta of={FooterStories} />
 
 # Footer
 
@@ -19,16 +17,4 @@ import { Meta } from "@storybook/addon-docs";
 
 A footer component accepts all the [footer HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer) and [Orbiter styled component props](?path=/docs/styling--page).
 
-```jsx
-<HtmlArticle>
-    <H1>What does an aerospace engineer do?</H1>
-    <UL>
-        <LI>Research and development</LI>
-        <LI>Testing</LI>
-        <LI>Production and maintenance</LI>
-    </UL>
-    <HtmlFooter color="neutral-weak">
-        <Paragraph>© 2021 Orbiter</Paragraph>
-    </HtmlFooter>
-</HtmlArticle>
-```
+<Canvas of={FooterStories.Example} />
