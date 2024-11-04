@@ -1,10 +1,8 @@
 import { ComponentInfo, Link, Tagline } from "@stories/components";
-import { Meta } from "@storybook/addon-docs";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as HeaderStories from "./header.stories.tsx";
 
-<Meta
-    title="Html elements/Header"
-    id="html-header"
-/>
+<Meta of={HeaderStories} />
 
 # Header
 
@@ -19,13 +17,4 @@ import { Meta } from "@storybook/addon-docs";
 
 An header component accepts all the [header HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header) and [Orbiter styled component props](?path=/docs/styling--page).
 
-```jsx
-<body>
-    <Header>
-        <H1>Walking On The Moon</H1>
-    </Header>
-    <Main color="neutral-weak">
-        <Paragraph>Walking on the Moon is classic Sting moment, with his band The Police turning out one of their most groovy reggae-inspired hits to the background of space exploration.</Paragraph>
-    </Main>
-</body>
-```
+<Canvas of={HeaderStories.Example} />
