@@ -1,62 +1,29 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { Button } from "@components/button";
-import { ButtonGroup } from "@components/button";
+import { Button, ButtonGroup } from "@components/button";
 import { Card } from "@components/card";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { Content, Footer, Header, InnerContent, InnerFooter, InnerHeader } from "@components/placeholders";
+import { Overlay } from "@components/overlay";
+import { Content, Footer, Header } from "@components/placeholders";
 import { ET, Planet, SpacePortrait, SpacePortraitHorizontal, TheMartian } from "./assets";
-import { Heading, InnerHeading, Paragraph } from "@components/typography";
+import { Heading, Paragraph } from "@components/typography";
 import { Illustration } from "@components/illustration";
 import { Image } from "@components/image";
-import { InnerModal, InnerModalTrigger, Modal, ModalTrigger } from "@components/modal";
+import { Modal, ModalTrigger, useModalTriggerContext } from "@components/modal";
 import { TextLink } from "@components/link";
+import { forwardRef, useCallback, useState } from "react";
 
-<Meta
-    title="Components/Modal"
-    id="modal"
-/>
+import { Meta, StoryObj } from "@storybook/react";
 
-# Modal
+const meta = {
+    title: "Components/Modal",
+    component: Modal,
+    id: "modal"
+} as Meta<typeof Modal>;
 
-<Tagline>A modal focus the user’s attention exclusively on one task or piece of information via a dialog that sits on top of the page content.</Tagline>
+export default meta;
 
-<ComponentInfo
-    usage={"import { Modal, ModalTrigger, Heading, Header, Content, Footer, ModalTriggerContext, useModalTriggerContext } from \"@workleap/orbiter-ui\";"}
-    ariaPath="dialogmodal"
-    githubPath="/packages/components/src/modal/src"
-/>
+type ModalStory = StoryObj<typeof meta>;
 
-## Guidelines
-
-### When to use
-
-- To let a user interact with the application without jumping to a new page and interrupting the user's workflow.
-
-### Content
-
-- Provide enough information for the user to be able to take a decision in the spot, or a way to come back to the choice later.
-- Not use complex layouts, modals are not pages. Consider using a page when a modal layout is getting too complex.
-- Not rely on images or illustrations in order to provide essential information to the user.
-- Not ask the user a question right above the button(s).
-
-### Accessibility
-
-- Make sure to autofocus on the first interactive element in the modal, except if it’s a destructive action as it could trigger unwanted behavior.
-- Prioritize dismissible modals whenever possible in order to give control to the user.
-- Use modals sparingly as it disrupt the user's flow.
-
-### Modal vs Alert
-
-If your modal has no way to be dismissed and requires the user to make a choice use an [Alert](?path=/docs/alert--default-story).
-
-## Usage
-
-### Default
-
-A modal must have an heading and a content.
-
-<Preview>
-    <Story name="default">
+export const Default: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
@@ -67,19 +34,15 @@ A modal must have an heading and a content.
                 </Content>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-### Image
-
-A modal can have a side banner [image](?path=/story/chromatic-image--default). Make sure the image has no essential information as it could be cropped in mobile view. Images should not prevent a user from seeing the close button, be conscious of this.
-
-<Preview scope={{ SpacePortrait, SpacePortraitHorizontal }}>
-    <Story name="image">
+export const ModalStory: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
-                <Image src={{ base: SpacePortraitHorizontal, sm: SpacePortrait }} alt="City over clouds" />
+                <Image alt="City over clouds" src={{ base: SpacePortraitHorizontal, sm: SpacePortrait }} />
                 <Heading>Cloud City</Heading>
                 <Content>
                     <Paragraph size="sm">Cloud City was a completely man-made tibanna gas mining colony staff hovering over the gas giant Bespin, occupied by millions of workers, tourists and support staff. Located in Bespin's Life Zone, the station had no need for airlocks or life support systems, with the atmosphere comprised mostly of oxygen and acceptable levels of gravity and temperature.</Paragraph>
@@ -87,18 +50,16 @@ A modal can have a side banner [image](?path=/story/chromatic-image--default). M
                 </Content>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-Or an [illustration](?path=/docs/illustration--horizontal). Prefer 1:1 ratio for illustrations to prevent them to render a Modal too high on small resolutions, alternatively in mobile use another illustration that has a 1:1 ratio.
-
-<Preview scope={{ Planet }}>
-    <Story name="illustration centered">
+export const IllustrationStory: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
                 <Illustration backgroundColor="primary-weak">
-                    <Image src={Planet} alt="Planet Logo" />
+                    <Image alt="Planet Logo" src={Planet} />
                 </Illustration>
                 <Heading>Cloud City</Heading>
                 <Content>
@@ -107,28 +68,24 @@ Or an [illustration](?path=/docs/illustration--horizontal). Prefer 1:1 ratio for
                 </Content>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-### Choice
-
-A modal can offer a choice between 2 options. Keep the copy not too long in order to help the user quickly make his choice.
-
-<Preview scope={{ ET, TheMartian }}>
-    <Story name="choice">
+export const Choice: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
                 <Heading>Which of the following movie is the greatest space movie?</Heading>
                 <Content>
                     <Card>
-                        <Image src={ET} alt="E.T. poster" />
+                        <Image alt="E.T. poster" src={ET} />
                         <Heading>E.T.</Heading>
                         <Content>"E.T. phone home,"" mutters the titular character as he attempts to contact his home planet, and audiences around the world fell in love. The timeless story of an intimate friendship between a boy and his alien friend, “E.T.” has resonated with generations of families, and is widely considered one of the greatest films of all time.</Content>
                         <Button variant="secondary" >Choose</Button>
                     </Card>
                     <Card>
-                        <Image src={TheMartian} alt="The Martian poster" />
+                        <Image alt="The Martian poster" src={TheMartian} />
                         <Heading>The Martian</Heading>
                         <Content>Based on the popular novel, “The Martian” is about mankind joining for a singular mission: save astronaut Mark Watney, who was abandoned on Mars after the rest of his crew made an emergency exit during a dust storm.</Content>
                         <Button variant="secondary" >Choose</Button>
@@ -136,21 +93,17 @@ A modal can offer a choice between 2 options. Keep the copy not too long in orde
                 </Content>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-### Header
-
-Use an header to provide additional information usually in the form of a link or a tooltip that provides more context to the task at hand. Links should open in a new window.
-
-<Preview>
-    <Story name="header">
+export const HeaderStory: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
                 <Heading>Cloud City</Heading>
                 <Header>
-                    <TextLink href="https://en.wikipedia.org/wiki/Floating_cities_and_islands_in_fiction" external size="sm">Wikipedia</TextLink>
+                    <TextLink external href="https://en.wikipedia.org/wiki/Floating_cities_and_islands_in_fiction" size="sm">Wikipedia</TextLink>
                 </Header>
                 <Content>
                     <Paragraph size="sm">Cloud City was a completely man-made tibanna gas mining colony staff hovering over the gas giant Bespin, occupied by millions of workers, tourists and support staff. Located in Bespin's Life Zone, the station had no need for airlocks or life support systems, with the atmosphere comprised mostly of oxygen and acceptable levels of gravity and temperature.</Paragraph>
@@ -158,15 +111,11 @@ Use an header to provide additional information usually in the form of a link or
                 </Content>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-### Footer
-
-Use a footer to provide trivial information about content present in the modal, like a step : 1/3.
-
-<Preview>
-    <Story name="footer">
+export const FooterStory: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
@@ -178,15 +127,11 @@ Use a footer to provide trivial information about content present in the modal, 
                 <Footer>Copyright 2021</Footer>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-### Buttons
-
-A modal can have a single [button](?path=/docs/button--default-story). Use a primary [button](?path=/docs/button--default-story) to provide the main action.
-
-<Preview>
-    <Story name="button">
+export const ButtonStory: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
@@ -198,13 +143,11 @@ A modal can have a single [button](?path=/docs/button--default-story). Use a pri
                 <Button>Choose</Button>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-Or a [group of button](?path=/docs/button--default-story#button-group). A maximum of 3 buttons are allowed in a modal, when necessary. The secondary and tertiary actions should be using a secondary variant.
-
-<Preview>
-    <Story name="button group">
+export const ButtonGroupStory: ModalStory = {
+    render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
             <Modal>
@@ -219,99 +162,147 @@ Or a [group of button](?path=/docs/button--default-story#button-group). A maximu
                 </ButtonGroup>
             </Modal>
         </ModalTrigger>
-    </Story>
-</Preview>
+    )
+};
 
-### Modal context
+export const Context: ModalStory = {
+    render: () => {
+        const ApolloModal = forwardRef(({ ...rest }, ref) => {
+            const { close } = useModalTriggerContext();
 
-A modal `isOpen` state or `close` function can be retrieved from `useModalTriggerContext`.
+            return (
+                <Modal
+                    {...rest}
+                    ref={ref}
+                >
+                    <Heading>Apollo 11 movie</Heading>
+                    <Content>
+                        <Paragraph>Apollo 11 is a 2019 American documentary film edited, produced and directed by Todd Douglas Miller. It focuses on the 1969 Apollo 11 mission, the first spaceflight from which men walked on the Moon.</Paragraph>
+                        <Paragraph>
+                            The film consists solely of archival footage, including 70 mm film previously unreleased to the public, and does not feature narration, interviews or modern recreations.
+                            The Saturn V rocket, Apollo crew consisting of Buzz Aldrin, Neil Armstrong, and Michael Collins, and Apollo program Earth-based mission operations engineers are prominently featured in the film.
+                        </Paragraph>
+                    </Content>
+                    <Button onClick={close} variant="secondary">
+                        Close
+                    </Button>
+                </Modal>
+            );
+        });
 
-<Preview filePath="/modal/docs/ModalContext" />
+        return (
+            <ModalTrigger>
+                <Button variant="secondary">Open</Button>
+                <ApolloModal />
+            </ModalTrigger>
+        );
+    }
+};
 
-### Dismissable
+export const CustomClose: ModalStory = {
+    render: () => {
+        const CustomCloseModal = forwardRef(({ ...rest }, ref) => {
+            const { close } = useModalTriggerContext();
 
-By default, a modal will dismiss on outside interactions and `esc` keydown. However, in some cases, you might want to force the user to explicitly dismiss the modal with a targeted call to action. This is what the dismissable prop is for.
+            return (
+                <Modal
+                    {...rest}
+                    ref={ref}
+                >
+                    <Heading>Apollo 11 movie</Heading>
+                    <Content>
+                        <Paragraph>Apollo 11 is a 2019 American documentary film edited, produced and directed by Todd Douglas Miller. It focuses on the 1969 Apollo 11 mission, the first spaceflight from which men walked on the Moon.</Paragraph>
+                        <Paragraph>
+                            The film consists solely of archival footage, including 70 mm film previously unreleased to the public, and does not feature narration, interviews or modern recreations.
+                            The Saturn V rocket, Apollo crew consisting of Buzz Aldrin, Neil Armstrong, and Michael Collins, and Apollo program Earth-based mission operations engineers are prominently featured in the film.
+                        </Paragraph>
+                    </Content>
+                    <Button onClick={close} variant="secondary">
+                        Close
+                    </Button>
+                </Modal>
+            );
+        });
 
-You can set the `dismissable` prop to `false` and render a call to action which will manually dismiss the popover by calling a `close` function retrieved from the `useModalTriggerContext` hook.
+        return (
+            <ModalTrigger dismissable={false}>
+                <Button variant="secondary">Trigger</Button>
+                <CustomCloseModal />
+            </ModalTrigger>
+        );
+    }
+};
 
-> Inlining the call to `useModalTriggerContext` in `ModalTrigger` will not work.
+/* eslint-disable react-hooks/rules-of-hooks */
+export const Controlled: ModalStory = {
+    render: () => {
+        const [isOpen, setIsOpen] = useState(false);
 
-<Preview filePath="/modal/docs/ModalCustomClose" />
+        const handleOpenChange = useCallback((event, newValue) => {
+            setIsOpen(newValue);
+            console.log(newValue);
+        }, [setIsOpen]);
 
-### Controlled
+        const handleClose = useCallback(() => {
+            setIsOpen(false);
+        }, [setIsOpen]);
 
-The `open` state can be handled in controlled mode.
+        return (
+            <ModalTrigger
+                onOpenChange={handleOpenChange}
+                open={isOpen}
+            >
+                <Button variant="secondary">Open</Button>
+                <Modal>
+                    <Heading>Apollo 11 movie</Heading>
+                    <Content>
+                        <Paragraph>Apollo 11 is a 2019 American documentary film edited, produced and directed by Todd Douglas Miller. It focuses on the 1969 Apollo 11 mission, the first spaceflight from which men walked on the Moon.</Paragraph>
+                        <Paragraph>
+                            The film consists solely of archival footage, including 70 mm film previously unreleased to the public, and does not feature narration, interviews or modern recreations.
+                            The Saturn V rocket, Apollo crew consisting of Buzz Aldrin, Neil Armstrong, and Michael Collins, and Apollo program Earth-based mission operations engineers are prominently featured in the film.
+                        </Paragraph>
+                    </Content>
+                    <Button onClick={handleClose} variant="secondary">Close</Button>
+                </Modal>
+            </ModalTrigger>
+        );
+    }
+};
 
-<Preview filePath="/modal/docs/ControlledModal" />
+/* eslint-disable react-hooks/rules-of-hooks */
+export const CustomTrigger: ModalStory = {
+    render: () => {
+        const [isOpen, setIsOpen] = useState(false);
 
-### Custom trigger
+        const handleTriggerClick = useCallback(() => {
+            setIsOpen(true);
+        }, [setIsOpen]);
 
-You don't have to use a `ModalTrigger` component if it doesn't fit your needs. A modal component can be used on it's own with any custom trigger which follow a few rules:
+        const handleModalClose = useCallback(() => {
+            setIsOpen(false);
+        }, [setIsOpen]);
 
-- The custom trigger provide a valid `<DialogTriggerContext>` with a `close` function.
-- The custom trigger is responsible of show/hide the modal. This is usually done in combination with an [overlay](?path=/docs/overlay--page) component.
-
-<Preview filePath="/modal/docs/CustomTrigger" />
-
-## API
-
-### ModalTrigger
-
-<ComponentInfo
-    usage={"import { ModalTrigger } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerModalTrigger.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerModalTrigger} sort="alpha" />
-
-### Modal
-
-<ComponentInfo
-    usage={"import { Modal } from \"@workleap/orbiter-ui\";"}
-    slots={["image", "illustration", "heading", "header", "content", "footer", "button", "button-group"]}
-    inherits={[InnerModal.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerModal} sort="alpha" />
-
-### Heading
-
-<ComponentInfo
-    usage={"import { Heading } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerHeading.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerHeading} sort="alpha" />
-
-### Header
-
-<ComponentInfo
-    usage={"import { Header } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerHeader.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerHeader} sort="alpha" />
-
-### Content
-
-<ComponentInfo
-    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerContent.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerContent} sort="alpha" />
-
-### Footer
-
-<ComponentInfo
-    usage={"import { Footer } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerFooter.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerFooter} sort="alpha" />
+        return (
+            <>
+                <Button
+                    onClick={handleTriggerClick}
+                    variant="secondary"
+                >
+                    Open
+                </Button>
+                <Overlay show={isOpen}>
+                    <Modal onClose={handleModalClose}>
+                        <Heading>Apollo 11 movie</Heading>
+                        <Content>
+                            <Paragraph>Apollo 11 is a 2019 American documentary film edited, produced and directed by Todd Douglas Miller. It focuses on the 1969 Apollo 11 mission, the first spaceflight from which men walked on the Moon.</Paragraph>
+                            <Paragraph>
+                                The film consists solely of archival footage, including 70 mm film previously unreleased to the public, and does not feature narration, interviews or modern recreations. The Saturn V rocket, Apollo crew consisting
+                                of Buzz Aldrin, Neil Armstrong, and Michael Collins, and Apollo program Earth-based mission operations engineers are prominently featured in the film.
+                            </Paragraph>
+                        </Content>
+                    </Modal>
+                </Overlay>
+            </>
+        );
+    }
+};
