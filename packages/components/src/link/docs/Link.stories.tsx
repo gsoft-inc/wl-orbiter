@@ -1,6 +1,6 @@
 import { SparklesIcon } from "@hopper-ui/icons";
 import { GalaxyLargeImage } from "./assets";
-import { IconLink as OrbiterIconLink, IconLinkAsButton, Link, TextLink, TextLinkAsButton } from "@components/link";
+import { IconLink, IconLinkAsButton, Link, TextLink, TextLinkAsButton } from "@components/link";
 import { Image } from "@components/image";
 import { Inline } from "@components/layout";
 import { Text } from "@components/typography";
@@ -91,10 +91,10 @@ export const ReactRouter: Story = {
     }
 };
 
-export const IconLink: Story = {
+export const LinkIconLink: Story = {
     render: () => (
         <Inline alignY="center">
-            <OrbiterIconLink aria-label="Add" href="#" ><SparklesIcon /></OrbiterIconLink>
+            <IconLink aria-label="Add" href="#" ><SparklesIcon /></IconLink>
         </Inline >
     )
 };

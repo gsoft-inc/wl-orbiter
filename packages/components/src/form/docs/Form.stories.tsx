@@ -1,7 +1,7 @@
 import { Button, ButtonGroup } from "@components/button";
 import { Checkbox } from "@components/checkbox";
 import { ErrorMessage, Field, HelpMessage, Label } from "@components/field";
-import { Fieldset as OrbiterFieldset, Form } from "@components/form";
+import { Fieldset, Form } from "@components/form";
 import { Flex, Grid, Inline, repeat } from "@components/layout";
 import { PasswordInput, TextInput } from "@components/text-input";
 import { Meta, StoryObj } from "@storybook/react";
@@ -115,10 +115,10 @@ export const InlineLayoutGrid: Story = {
     )
 };
 
-export const Fieldset: Story = {
+export const FormFieldset: Story = {
     render: () => (
         <Form>
-            <OrbiterFieldset label="Shipping Address">
+            <Fieldset label="Shipping Address">
                 <Flex
                     direction={{
                         base: "column",
@@ -153,8 +153,8 @@ export const Fieldset: Story = {
                     <Label>Postal code</Label>
                     <TextInput />
                 </Field>
-            </OrbiterFieldset>
-            <OrbiterFieldset label="Billing Address">
+            </Fieldset>
+            <Fieldset label="Billing Address">
                 <Flex
                     direction={{
                         base: "column",
@@ -189,7 +189,7 @@ export const Fieldset: Story = {
                     <Label>Postal code</Label>
                     <TextInput />
                 </Field>
-            </OrbiterFieldset>
+            </Fieldset>
             <Button variant="secondary">Submit</Button>
         </Form>
     )

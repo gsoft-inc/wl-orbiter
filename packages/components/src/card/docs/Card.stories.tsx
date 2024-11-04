@@ -1,13 +1,13 @@
-import { Button as OrbiterButton, ButtonGroup } from "@components/button";
+import { Button, ButtonGroup } from "@components/button";
 import { Card } from "@components/card";
-import { Content, Header as OrbiterHeader } from "@components/placeholders";
+import { Content, Header } from "@components/placeholders";
 import { Heading, Paragraph } from "@components/typography";
-import { Illustration as OrbiterIllustration } from "@components/illustration";
-import { Image as OrbiterImage } from "@components/image";
+import { Illustration } from "@components/illustration";
+import { Image } from "@components/image";
 import { Inline, Stack } from "@components/layout";
 import { Item } from "@components/collection";
 import { Planet, SpaceLandscape } from "./assets";
-import { Tabs as OrbiterTabs } from "@components/tabs";
+import { Tabs } from "@components/tabs";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
@@ -42,10 +42,10 @@ export const Elevated: Story = {
     )
 };
 
-export const Image: Story = {
+export const CardImage: Story = {
     render: () => (
         <Card>
-            <OrbiterImage alt="Planet over another one" src={SpaceLandscape} />
+            <Image alt="Planet over another one" src={SpaceLandscape} />
             <Heading>NASA Headquarters</Heading>
             <Content>
                 <Paragraph>NASA Headquarters, officially known as Mary W. Jackson NASA Headquarters or NASA HQ and formerly named Two Independence Square, is a low-rise office building in the two-building Independence Square complex at 300 E Street SW in Washington, D.C.</Paragraph>
@@ -54,12 +54,12 @@ export const Image: Story = {
     )
 };
 
-export const Illustration: Story = {
+export const CardIllustration: Story = {
     render: () => (
         <Card >
-            <OrbiterIllustration backgroundColor="primary-weak">
-                <OrbiterImage alt="Planet over another one" src={Planet} width="100px" />
-            </OrbiterIllustration>
+            <Illustration backgroundColor="primary-weak">
+                <Image alt="Planet over another one" src={Planet} width="100px" />
+            </Illustration>
             <Heading>NASA Headquarters</Heading>
             <Content>
                 <Paragraph>NASA Headquarters, officially known as Mary W. Jackson NASA Headquarters or NASA HQ and formerly named Two Independence Square, is a low-rise office building in the two-building Independence Square complex at 300 E Street SW in Washington, D.C.</Paragraph>
@@ -68,11 +68,11 @@ export const Illustration: Story = {
     )
 };
 
-export const Header: Story = {
+export const CardHeader: Story = {
     render: () => (
         <Card>
             <Heading>NASA Headquarters</Heading>
-            <OrbiterHeader>No visitors allowed.</OrbiterHeader>
+            <Header>No visitors allowed.</Header>
             <Content>
                 <Paragraph>NASA Headquarters, officially known as Mary W. Jackson NASA Headquarters or NASA HQ and formerly named Two Independence Square, is a low-rise office building in the two-building Independence Square complex at 300 E Street SW in Washington, D.C.</Paragraph>
             </Content>
@@ -80,15 +80,15 @@ export const Header: Story = {
     )
 };
 
-export const Button: Story = {
+export const CardButton: Story = {
     render: () => (
         <Card>
             <Heading>NASA Headquarters</Heading>
-            <OrbiterHeader>No visitors allowed.</OrbiterHeader>
+            <Header>No visitors allowed.</Header>
             <Content>
                 <Paragraph>NASA Headquarters, officially known as Mary W. Jackson NASA Headquarters or NASA HQ and formerly named Two Independence Square, is a low-rise office building in the two-building Independence Square complex at 300 E Street SW in Washington, D.C.</Paragraph>
             </Content>
-            <OrbiterButton variant="secondary">Plan a visit</OrbiterButton>
+            <Button variant="secondary">Plan a visit</Button>
         </Card>
     )
 };
@@ -109,8 +109,8 @@ export const Buttons: Story = {
                 </Paragraph>
             </Content>
             <ButtonGroup>
-                <OrbiterButton variant="secondary">Plan a visit</OrbiterButton>
-                <OrbiterButton variant="secondary">Cancel a booking</OrbiterButton>
+                <Button variant="secondary">Plan a visit</Button>
+                <Button variant="secondary">Cancel a booking</Button>
             </ButtonGroup>
         </Card>
     )
@@ -119,9 +119,9 @@ export const Buttons: Story = {
 export const Orientation: Story = {
     render: () => (
         <Card orientation="horizontal">
-            <OrbiterIllustration backgroundColor="primary-weak">
-                <OrbiterImage alt="Planet over another one" src={Planet} />
-            </OrbiterIllustration>
+            <Illustration backgroundColor="primary-weak">
+                <Image alt="Planet over another one" src={Planet} />
+            </Illustration>
             <Heading>NASA</Heading>
             <Content>
                 <Paragraph>
@@ -197,9 +197,9 @@ export const Size: Story = {
 export const Fluid: Story = {
     render: () => (
         <Card fluid orientation="horizontal">
-            <OrbiterIllustration backgroundColor="primary-weak" width={1280}>
-                <OrbiterImage alt="Planet over another one" src={Planet} />
-            </OrbiterIllustration>
+            <Illustration backgroundColor="primary-weak" width={1280}>
+                <Image alt="Planet over another one" src={Planet} />
+            </Illustration>
             <Heading>NASA</Heading>
             <Content>
                 <Paragraph>
@@ -216,22 +216,22 @@ export const Fluid: Story = {
     )
 };
 
-export const Tabs: Story = {
+export const CardTabs: Story = {
     render: () => (
         <Card>
             <Heading>NASA</Heading>
             <Content>
                 <Paragraph>The National Aeronautics and Space Administration is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research.</Paragraph>
-                <OrbiterTabs aria-label="NASA">
+                <Tabs aria-label="NASA">
                     <Item key="vision">
-                        <OrbiterHeader>Vision</OrbiterHeader>
+                        <Header>Vision</Header>
                         <Content>We reach for new heights and reveal the unknown for the benefit of humankind</Content>
                     </Item>
                     <Item key="mission">
-                        <OrbiterHeader>Mission</OrbiterHeader>
+                        <Header>Mission</Header>
                         <Content>Drive advances in science, technology, aeronautics, and space exploration to enhance knowledge, education, innovation, economic vitality and stewardship of Earth</Content>
                     </Item>
-                </OrbiterTabs>
+                </Tabs>
             </Content>
         </Card>
     )
