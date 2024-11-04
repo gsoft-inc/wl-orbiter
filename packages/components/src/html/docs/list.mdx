@@ -1,11 +1,8 @@
-import { ComponentInfo, Link, Preview, Tagline } from "@stories/components";
-import { LI, UL } from "@components/html";
-import { Meta, Story } from "@storybook/addon-docs";
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as ListStories from "./list.stories.tsx";
 
-<Meta
-    title="Html elements/List"
-    id="html-list"
-/>
+<Meta of={ListStories} />
 
 # List
 
@@ -20,12 +17,4 @@ import { Meta, Story } from "@storybook/addon-docs";
 
 Accepts all the HTML attributes of [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul), [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) and [li](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li) elements with the addition of [Orbiter styled component props](?path=/docs/styling--page).
 
-<Preview>
-    <Story name="example">
-        <UL color="neutral-weak">
-            <LI>Explore</LI>
-            <LI>Discover</LI>
-            <LI color="sapphire-600">Colonize</LI>
-        </UL>
-    </Story>
-</Preview>
+<Canvas of={ListStories.Example} />
