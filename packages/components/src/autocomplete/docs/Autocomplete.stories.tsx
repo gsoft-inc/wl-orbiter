@@ -51,7 +51,6 @@ export const Sections: Story = {
     )
 };
 
-
 export const ItemIcon: Story = {
     render: () => (
         <Autocomplete aria-label="Planets" placeholder="Planets">
