@@ -1,11 +1,9 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
-import { Footer, InnerFooter } from "@components/placeholders";
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerFooter } from "@components/placeholders";
+import * as FooterStories from "./Footer.stories.tsx";
 
-<Meta
-    title="Placeholders/Footer"
-    id="footer"
-/>
+<Meta of={FooterStories} />
 
 # Footer
 
@@ -20,11 +18,7 @@ import { Footer, InnerFooter } from "@components/placeholders";
 
 A folder placeholder component *provides no specific styling by itself, but receives styling from the parent container*. In addition, a footer placeholder will be automatically placed within the container's layout according to Orbiter guidelines.
 
-<Preview>
-    <Story name="example">
-        <Footer>&copy; All rights reserved.</Footer>
-    </Story>
-</Preview>
+<Canvas of={FooterStories.Example} />
 
 ## API
 
@@ -36,4 +30,4 @@ A folder placeholder component *provides no specific styling by itself, but rece
     compact
 />
 
-<ArgsTable of={InnerFooter} sort="alpha" />
+<ArgTypes of={InnerFooter} sort="alpha" />
