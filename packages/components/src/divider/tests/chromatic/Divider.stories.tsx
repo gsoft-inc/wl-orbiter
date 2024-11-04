@@ -6,7 +6,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Divider",
-    component: Divider
+    component: Divider,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Divider>;
 
 export default meta;
@@ -15,14 +20,14 @@ type DividerStory = StoryObj<typeof meta>;
 
 export const Default: DividerStory = {
     name: "default",
-    render:() => (
+    render: () => (
         <Divider />
     )
 };
 
 export const Surrounded: DividerStory = {
     name: "surrounded",
-    render:() => (
+    render: () => (
         <Div>
             <Text>Apollo 8 - 1968</Text>
             <Divider />
@@ -33,7 +38,7 @@ export const Surrounded: DividerStory = {
 
 export const MultipleSeparators: DividerStory = {
     name: "multiple separators",
-    render:() => (
+    render: () => (
         <Div>
             <Text>Apollo 8 - 1968</Text>
             <Divider />
@@ -48,21 +53,21 @@ export const MultipleSeparators: DividerStory = {
 
 export const Labelled: DividerStory = {
     name: "labelled",
-    render:() => (
+    render: () => (
         <Divider>Since 1978</Divider>
     )
 };
 
 export const LongLabel: DividerStory = {
     name: "long label",
-    render:() => (
+    render: () => (
         <Divider height="20rem">Since 1978 there have been more than 10 space exploration missions.</Divider>
     )
 };
 
 export const LabelledSurrounded: DividerStory = {
     name: "labelled surrounded",
-    render:() => (
+    render: () => (
         <Div>
             <Text>Apollo 11 - 1969</Text>
             <Divider>Since 1978</Divider>
@@ -73,7 +78,7 @@ export const LabelledSurrounded: DividerStory = {
 
 export const Zoom: DividerStory = {
     name: "zoom",
-    render:() => (
+    render: () => (
         <Stack>
             <Div className="zoom-in">
                 <Divider>Since 1978</Divider>
@@ -87,7 +92,7 @@ export const Zoom: DividerStory = {
 
 export const Styling: DividerStory = {
     name: "styling",
-    render:() => (
+    render: () => (
         <Stack>
             <Divider border="warning" />
             <Divider className="border-red" />

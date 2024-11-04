@@ -6,7 +6,12 @@ const viewports = [640, 768, 1024, 1280, 1440];
 
 const meta = {
     title: "Chromatic/Grid",
-    component: Grid
+    component: Grid,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Grid>;
 
 export default meta;

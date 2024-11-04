@@ -17,7 +17,12 @@ import { Inline, Stack } from "@components/layout";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-    title: "Chromatic/Sharegate-hopper"
+    title: "Chromatic/Sharegate-hopper",
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<any>;
 
 // eslint-disable-next-line storybook/csf-component

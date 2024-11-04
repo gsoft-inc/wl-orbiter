@@ -8,7 +8,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Divider/vertical",
-    component: Divider
+    component: Divider,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Divider>;
 
 export default meta;
@@ -17,7 +22,7 @@ type DividerStory = StoryObj<typeof meta>;
 
 export const Default: DividerStory = {
     name: "default",
-    render:() => (
+    render: () => (
         <Div height="20rem">
             <Divider orientation="vertical" />
         </Div>
@@ -26,7 +31,7 @@ export const Default: DividerStory = {
 
 export const DividerDot: DividerStory = {
     name: "dot",
-    render:() => (
+    render: () => (
         <Flex>
             <Dot color="primary">Engines ready</Dot>
             <Divider orientation="vertical" />
@@ -37,7 +42,7 @@ export const DividerDot: DividerStory = {
 
 export const MultipleSeparators: DividerStory = {
     name: "multiple separators",
-    render:() => (
+    render: () => (
         <Flex>
             <Dot color="primary">Starlink</Dot>
             <Divider orientation="vertical" />
@@ -50,7 +55,7 @@ export const MultipleSeparators: DividerStory = {
 
 export const Labelled: DividerStory = {
     name: "labelled",
-    render:() => (
+    render: () => (
         <Div height="20rem">
             <Divider orientation="vertical">Since 1978</Divider>
         </Div>
@@ -59,7 +64,7 @@ export const Labelled: DividerStory = {
 
 export const LongLabel: DividerStory = {
     name: "long label",
-    render:() => (
+    render: () => (
         <Div height="20rem">
             <Divider orientation="vertical">Since 1978 there have been more than 10 space exploration missions.</Divider>
         </Div>
@@ -68,7 +73,7 @@ export const LongLabel: DividerStory = {
 
 export const LabelledSurrounded: DividerStory = {
     name: "labelled surrounded",
-    render:() => (
+    render: () => (
         <Flex height="20rem">
             <Text>Mission goals</Text>
             <Divider orientation="vertical">Since 1978</Divider>
@@ -79,7 +84,7 @@ export const LabelledSurrounded: DividerStory = {
 
 export const AlignItems: DividerStory = {
     name: "align items",
-    render:() => (
+    render: () => (
         <Flex alignItems="center">
             <Text>Mission goals</Text>
             <Divider orientation="vertical" />
@@ -90,7 +95,7 @@ export const AlignItems: DividerStory = {
 
 export const Zoom: DividerStory = {
     name: "zoom",
-    render:() => (
+    render: () => (
         <Inline height="20rem">
             <Div className="zoom-in">
                 <Divider orientation="vertical">Since 1978</Divider>
@@ -104,7 +109,7 @@ export const Zoom: DividerStory = {
 
 export const Styling: DividerStory = {
     name: "styling",
-    render:() => (
+    render: () => (
         <Inline height="20rem">
             <Divider border="warning" orientation="vertical" />
             <Divider className="border-red" orientation="vertical" />

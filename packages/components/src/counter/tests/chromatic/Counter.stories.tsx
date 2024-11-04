@@ -6,7 +6,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Counter",
-    component: Counter
+    component: Counter,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Counter>;
 
 export default meta;

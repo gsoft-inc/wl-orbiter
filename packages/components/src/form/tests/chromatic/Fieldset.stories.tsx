@@ -8,7 +8,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Fieldset",
-    component: Fieldset
+    component: Fieldset,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Fieldset>;
 
 export default meta;

@@ -12,7 +12,12 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
     title: "Chromatic/Modal",
-    component: Modal
+    component: Modal,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
 } as Meta<typeof Modal>;
 
 export default meta;
@@ -21,7 +26,7 @@ type ModalStory = StoryObj<typeof meta>;
 
 export const Default: ModalStory = {
     name: "default",
-    render:  () => (
+    render: () => (
         <Modal>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Content>
@@ -35,7 +40,7 @@ export const Default: ModalStory = {
 
 export const ModalImage: ModalStory = {
     name: "image",
-    render:  () => (
+    render: () => (
         <Modal>
             <Image src={Apollo11Poster} alt="Apollo 11" />
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -50,7 +55,7 @@ export const ModalImage: ModalStory = {
 
 export const ModalIllustration: ModalStory = {
     name: "illustration",
-    render:  () => (
+    render: () => (
         <Modal>
             <Illustration color="sunken-treasure-100">
                 <Image src={Nasa} alt="Nasa" />
@@ -67,7 +72,7 @@ export const ModalIllustration: ModalStory = {
 
 export const ModalChoice: ModalStory = {
     name: "choice",
-    render:  () => (
+    render: () => (
         <Modal>
             <Heading>Space agencies</Heading>
             <Content>
@@ -90,7 +95,7 @@ export const ModalChoice: ModalStory = {
 
 export const ChoiceWithText: ModalStory = {
     name: "choice with text",
-    render:  () => (
+    render: () => (
         <Modal>
             <Heading>Space agencies</Heading>
             <Content>
@@ -114,7 +119,7 @@ export const ChoiceWithText: ModalStory = {
 
 export const ChoiceWithContentBetweenCards: ModalStory = {
     name: "choice with content between cards",
-    render:  () => (
+    render: () => (
         <Modal>
             <Heading>Space agencies</Heading>
             <Content>
@@ -139,7 +144,7 @@ export const ChoiceWithContentBetweenCards: ModalStory = {
 
 export const StyledSystemStyleProp: ModalStory = {
     name: "styled system styleProp",
-    render:  () => (
+    render: () => (
         <Modal border="warning">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Content>
@@ -153,7 +158,7 @@ export const StyledSystemStyleProp: ModalStory = {
 
 export const ClassName: ModalStory = {
     name: "className",
-    render:  () => (
+    render: () => (
         <Modal className="border-red">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Content>
@@ -167,7 +172,7 @@ export const ClassName: ModalStory = {
 
 export const ZoomIn: ModalStory = {
     name: "zoom in",
-    render:  () => (
+    render: () => (
         <Div className="zoom-in">
             <Modal>
                 <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -183,7 +188,7 @@ export const ZoomIn: ModalStory = {
 
 export const ZoomOut: ModalStory = {
     name: "zoom out",
-    render:  () => (
+    render: () => (
         <Div className="zoom-out">
             <Modal>
                 <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -194,11 +199,12 @@ export const ZoomOut: ModalStory = {
                 </Content>
             </Modal>
         </Div>
-    ) };
+    )
+};
 
 export const StyledSystem: ModalStory = {
     name: "styled system",
-    render:  () => (
+    render: () => (
         <Modal style={{ border: "1px solid red" }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
             <Content>

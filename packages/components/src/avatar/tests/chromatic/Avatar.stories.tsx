@@ -17,6 +17,9 @@ const meta = {
                     }
                 ]
             }
+        },
+        chromatic: {
+            delay: 100
         }
     }
 } as Meta<typeof Avatar>;

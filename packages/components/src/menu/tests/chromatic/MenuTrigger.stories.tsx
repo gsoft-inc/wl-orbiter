@@ -7,6 +7,7 @@ import { HtmlButton, HtmlButtonProps } from "@components/html";
 import { Text } from "@components/typography";
 import { KebabIcon } from "@hopper-ui/icons";
 import { forwardRef } from "react";
+
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
@@ -288,7 +289,7 @@ export const StyledSystem: MenuTriggerStory = {
 
 export const ClassName: MenuTriggerStory = {
     name: "className",
-    render:  () => (
+    render: () => (
         <MenuTrigger className="border-red" defaultOpen>
             <Button variant="secondary">Trigger</Button>
             <Menu>
@@ -302,7 +303,7 @@ export const ClassName: MenuTriggerStory = {
 
 export const Style: MenuTriggerStory = {
     name: "style",
-    render:  () => (
+    render: () => (
         <MenuTrigger style={{ border: "1px solid red" }} defaultOpen>
             <Button variant="secondary">Trigger</Button>
             <Menu>
