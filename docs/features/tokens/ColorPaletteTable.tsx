@@ -1,17 +1,7 @@
-import { arrayOf, shape, string } from "prop-types";
-
 import { Div } from "@components/html";
 import { Table } from "@stories/components";
 
-const propTypes = {
-    colors: arrayOf(shape({
-        value: string.isRequired,
-        variable: string.isRequired,
-        color: string.isRequired
-    })).isRequired
-};
-
-function toRowValues({ value, variable, color }) {
+function toRowValues({ value, variable, color }: Color) {
     return [
         value,
         variable,
@@ -19,8 +9,17 @@ function toRowValues({ value, variable, color }) {
         <Div backgroundColor={value} height={400}></Div>
     ];
 }
+interface Color {
+    value: string;
+    variable: string;
+    color: string;
+}
 
-export function ColorPaletteTable({ colors }) {
+interface ColorPaletteTableProps {
+    colors: Color[];
+}
+
+export function ColorPaletteTable({ colors }: ColorPaletteTableProps) {
     return (
         <Table
             columns={[
@@ -33,5 +32,3 @@ export function ColorPaletteTable({ colors }) {
         />
     );
 }
-
-ColorPaletteTable.propTypes = propTypes;

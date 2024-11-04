@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Source } from "@storybook/addon-docs";
 
 <Meta
     title="Features/As"
@@ -13,24 +13,24 @@ This function allows you to change the *underlying element type* of a component 
 
 To specify a new underlying type:
 
-```jsx
+<Source dark code={`
 import { as, TextLink } from "@workleap/orbiter-ui";
 
 const TextLinkAsButton = as(TextLink, "button");
 
 <TextLinkAsButton onClick={() => window.location.href = "/home"}>Home</TextLinkAsButton>
-```
+`} language="tsx" />
 
 To integrate with a third party:
 
-```jsx
+<Source dark code={`
 import { as, TextLink } from "@workleap/orbiter-ui";
 import { Link as ReactRouterLink } from "react-router-dom";
 
 const RouterTextLink = as(TextLink, ReactRouterLink, { normalizeStyles: true });
 
 <RouterTextLink to="/home">Home</RouterTextLink>
-```
+`} language="tsx" />
 
 ## How it works
 

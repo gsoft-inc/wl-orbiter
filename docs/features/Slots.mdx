@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Source } from "@storybook/addon-docs";
 
 <Meta
     title="Features/Slots"
@@ -15,12 +15,12 @@ In Orbiter, component placeholders are fulfilled through his children and slots 
 
 In the following example, the `<Text>` component *implicitly* fulfill the `text` slot of the button and the `<LightbulbIcon>` component *explicitly* fulfill the `end-icon` slot of the button.
 
-```jsx
+<Source dark code={`
 <Button variant="secondary">
     <Text>Cutoff</Text>
     <LightbulbIcon slot="end-icon" />
 </Button>
-```
+`} language="tsx" />
 
 To identify which slots placeholders are available for a component, refer to the [API section of a component](?path=/docs/button--default-story#button-1).
 
@@ -30,43 +30,45 @@ Some of Orbiter components which are considered *slotables* are defined to autom
 
 For example, an `<Icon>` component will implicitly fulfill the `icon` slot of a `<Button>` when defined as his child.
 
-```jsx
+<Source dark code={`
 <Button variant="secondary">
     <LightbulbIcon />
     <Text>Cutoff</Text>
 </Button>
-```
+`} language="tsx" />
+
 
 An implicit slot can be defined on a custom component by using the `slot` function.
 
-```jsx
+<Source dark code={`
 import { slot } from "@workleap/orbiter-ui";
 
 export const MyComponent = slot("name-of-the-slot-to-fulfill-by-default", () => (
     <Div>A custom component</Div>
 ));
-```
+`} language="tsx" />
 
 ### Explicit slots
 
 Sometimes, we want to force a component into a specific placeholder of a component. To do so, an *explicit* slot can be specified on a child component with the `slot` prop. *Explicit slots will have precedence over implicit slots*.
 
-```jsx
+<Source dark code={`
 <Button variant="secondary">
     <Text>Cutoff</Text>
     <LightbulbIcon slot="end-icon" />
 </Button>
-```
+`} language="tsx" />
+
 
 For native HTML elements, instead of specifying an explicit slot directly on the native element, we recommend using [Orbiter HTML elements](?path=/docs/html-anchor--example).
 
-```jsx
+<Source dark code={`
 <Card>
     <H1>SpaceX delays launch of South Korean military satellite</H1>
     <Div slot="content">SpaceX postponed the upcoming launch of a South Korean military satellite Monday (July 13), due to hardware issues with the Falcon 9 rocket.</Div>
     <Div slot="footer">Copyright @2021</Div>
 </Card>
-```
+`} language="tsx" />
 
 ## Other resources
 

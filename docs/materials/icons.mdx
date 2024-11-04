@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Source } from "@storybook/addon-docs";
 import { Table } from "@stories/components";
 import { Preview } from "@stories/components";
 
@@ -25,9 +25,9 @@ Hopper provides two methods for creating your custom icons:
 
 The `createIcon` function is a convenience wrapper around the process of generating icons with Icon, allowing you to achieve the same functionality with less effort.
 
-```jsx
+<Source dark language="tsx" code={`
 import { Icon, createIcon } from "@hopper-ui/icons"
-```
+`} />
 
 Both `Icon` and `createIcon` enable you to style the icon using the styled system.
 
@@ -35,7 +35,7 @@ Both `Icon` and `createIcon` enable you to style the icon using the styled syste
 
 The `createIcon` function is a convenience wrapper around the process of generating icons with Icon, allowing you to achieve the same functionality with less effort.
 
-```jsx
+<Source dark language="tsx" code={`
 import { ReactComponent as MyIcon16 } from "./path/to/my-icon-16.svg";
 import { ReactComponent as MyIcon24 } from "./path/to/my-icon-24.svg";
 import { ReactComponent as MyIcon32 } from "./path/to/my-icon-32.svg";
@@ -44,11 +44,11 @@ import { createIcon } from "@hopper-ui/icons";
 
 const MyIcon = createIcon(MyIcon16, MyIcon24, MyIcon32, "MyIcon")
 const MyIconWithOnlyOneSize = createIcon(MyIconWithOnlyOneSizeSource, MyIconWithOnlyOneSizeSource, MyIconWithOnlyOneSizeSource, "MyIconWithOnlyOneSize")
-```
+`} />
 
 ### Using the Icon component
 
-```jsx
+<Source dark language="tsx" code={`
 import { ReactComponent as MyIcon16 } from "./path/to/my-icon-16.svg"
 import { ReactComponent as MyIcon24 } from "./path/to/my-icon-24.svg"
 import { ReactComponent as MyIcon32 } from "./path/to/my-icon-32.svg"
@@ -63,7 +63,7 @@ function MyIcon(props: CreatedIconProps) {
         {...props} />
   )
 }
-```
+`} />
 
 
 ## Usage
@@ -72,20 +72,20 @@ function MyIcon(props: CreatedIconProps) {
 
 Icons support t-shirt sizing. When used inside another Hopper component, they'll generally be sized automatically, but if you use icons standalone, you can use the size prop to control the sizing. The default size is "md".
 
-```
+<Source dark language="tsx" code={`
 <MyIcon size="sm" />
 <MyIcon size="md" />
 <MyIcon size="lg" />
-```
+`} />
 
 ## Styling
 
 The color of the icon can be change using the `fill` prop.
 All the styled system props are also available.
 
-```jsx
+<Source dark language="tsx" code={`
 <MyIcon fill="primary" />
-```
+`} />
 
 ## Guidelines
 

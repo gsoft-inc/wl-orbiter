@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Source, Story } from "@storybook/addon-docs";
 import {
     TextColors,
     BackgroundColors,
@@ -16,35 +16,29 @@ import {
     Sizing
     } from "./Tokens";
 import { TokenTable } from "./TokenTable";
+import * as TokensStories from "./Tokens.stories";
 
-<Meta
-    title="Features/Tokens"
-    id="tokens"
-/>
+<Meta of={TokensStories} />
 
 # Tokens
 
 Tokens are Orbiter's reusable values to provide a common language between developers and designers.
 
-
 > If you are looking for a list of available CSS tokens, please refer to the [Hopper tokens page](https://hopper.workleap.design/tokens/getting-started/introduction).
-
 
 ## Usage
 
 Tokens can be used as [style props](/docs/style-props--page) values:
 
-```jsx
-<Div backgroundColor="neutral-weak">...</Div>
-```
+<Source dark of={TokensStories.Usage} />
 
 Or `CSS` variables:
 
-```css
+<Source dark code={`
 .item {
     background-color: var(--hop-neutral-surface-weak);
 }
-```
+`} language="css" />
 
 ## Aliased tokens
 

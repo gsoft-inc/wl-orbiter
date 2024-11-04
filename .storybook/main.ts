@@ -15,6 +15,8 @@ if (includeDocs) {
         // "../docs/**/*.stories.mdx",
         // "../packages/**/docs/**/*.mdx",
         // "!../packages/**/docs/**/*.stories.mdx",
+        "../docs/**/!(*.stories).mdx",
+        "../docs/**/*.stories.tsx",
         "../packages/**/docs/!(*.stories|IndexFileUsage).mdx",
         "../packages/**/docs/*.stories.tsx"
     ];
@@ -52,7 +54,9 @@ const storybookConfig: StorybookConfig = {
     typescript: {
         reactDocgen: "react-docgen-typescript",
         reactDocgenTypescriptOptions: {
-            shouldExtractLiteralValuesFromEnum: true,
+            skipChildrenPropWithoutDoc: false,
+            // shouldExtractLiteralValuesFromEnum: true,
+            // shouldExtractValuesFromUnion: true,
             // 👇 Default prop filter, which excludes props from node_modules
             propFilter: prop => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true)
         }

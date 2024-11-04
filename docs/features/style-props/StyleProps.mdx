@@ -1,14 +1,11 @@
 import { Table } from "@stories/components";
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Canvas, Source } from "@storybook/addon-docs";
 import { Div } from "@components/html";
-import { Preview } from "@stories/components";
 import { Paragraph } from "@components/typography";
 import { PropsReferenceTable } from "./PropsReferenceTable";
+import * as StylePropsStories from  "./StyleProps.stories";
 
-<Meta
-    title="Features/Style props"
-    id="style-props"
-/>
+<Meta of={StylePropsStories} />
 
 # Style props
 
@@ -18,7 +15,7 @@ An Orbiter style property is a mapping of a [CSS property](https://developer.moz
 
 To apply a style value, set a value to any [style property](#properties) of an Orbiter component.
 
-```jsx
+<Source dark language="tsx" code={`
 <Div
     fontSize="1.375rem"
     fontWeight={680}
@@ -30,19 +27,19 @@ To apply a style value, set a value to any [style property](#properties) of an O
     backgroundColor="primary">
     Lost in space.
 </Div>
-```
+`} />
 
 ## Shorthands
 
 Props like `border` and `paddingX` are also provided to help you save keystrokes. An exhaustive list of all the supported props is available in the [reference](#properties) section.
 
-```jsx
+<Source dark language="tsx" code={`
 <Div
     paddingY={80}
     border="primary">
     Lost in space.
 </Div>
-```
+`} />
 
 ## TypeScript Intellisense
 
@@ -52,11 +49,7 @@ Inspired by [Styled System](https://styled-system.com/), Orbiter's style props a
 
 To help achieve a consistent user interface, Orbiter style props are based on scales and values defined in a customizable [theme](?path=/docs/theming--page).
 
-<Preview>
-    <Div width="30rem" backgroundColor="primary-weak" padding={160} borderRadius="rounded-md" maxWidth="100%">
-        <Paragraph fontSize={160}>Lost in space.</Paragraph>
-    </Div>
-</Preview>
+<Canvas of={StylePropsStories.ScaleValues} />
 
 ## Pseudo-classes
 
@@ -83,11 +76,7 @@ Since the following user action pseudo-classes are often used, some style props 
 
 > Not all style props supports user action pseudo-classes. Find out which props support user action pseudo-classes in the [reference](#properties) section.
 
-<Preview>
-    <Div backgroundColorHover="status-positive" backgroundColor="warning-weak" padding={160} width="30rem" maxWidth="100%" borderRadius="rounded-md">
-        <Paragraph fontSize={160}>Lost in space.</Paragraph>
-    </Div>
-</Preview>
+<Canvas of={StylePropsStories.PseudoClasses} />
 
 ## HTML elements
 
@@ -105,14 +94,14 @@ To facilitate layouts, Orbiter provides specialized components for [grid](https:
 
 When applicable, always prefer using a [`<Grid>`](?path=/docs/grid--areas) or [`<Flex>`](?path=/docs/flex--horizontal) component instead of a [`<Div>`](?path=/docs/html-div--example) component.
 
-```jsx
+<Source dark language="tsx" code={`
 <Grid templateColumns="1fr 1fr" gap={80} height={800}>
     <Div backgroundColor="sapphire-500" />
     <Div backgroundColor="amanita-500" />
     <Div backgroundColor="moss-500" />
     <Div backgroundColor="rock-500" />
 </Grid>
-```
+`} />
 
 ## Custom components
 
@@ -120,7 +109,7 @@ Any component can accept style properties. To accept style properties, the compo
 
 Passing the style props to an Orbiter component:
 
-```jsx
+<Source dark language="tsx" code={`
 import { HtmlButton, StyledComponentProps } from "@workleap/orbiter-ui";
 
 interface CustomButtonProps extends StyledComponentProps {
@@ -132,11 +121,11 @@ function CustomButton(props: CustomButtonProps) {
         <HtmlButton {...props} />
     );
 }
-```
+`} />
 
 Using the `useStyledSystem` hook:
 
-```jsx
+<Source dark language="tsx" code={`
 import { StyledComponentProps, useStyledSystem } from "@workleap/orbiter-ui";
 
 interface CustomButtonProps extends StyledComponentProps {
@@ -154,7 +143,7 @@ function CustomButton({ onClick, ...rest }: CustomButtonProps) {
         />
     );
 }
-```
+`} />
 
 ## Properties
 
@@ -162,11 +151,11 @@ The following tables provide a list of all available style props by category.
 
 ### Space
 
-```jsx
+<Source dark language="tsx" code={`
 <Div padding={160}>
     Galaxy
 </Div>
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -190,11 +179,11 @@ The following tables provide a list of all available style props by category.
 
 ### Color
 
-```jsx
+<Source dark language="tsx" code={`
 <Text backgroundColor="primary-weak" color="#FFFFFF">
     Galaxy
 </Text>
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -209,11 +198,11 @@ The following tables provide a list of all available style props by category.
 
 ### Typography
 
-```jsx
+<Source dark language="tsx" code={`
 <Header letterSpacing="0.3rem">
     Halleys Comet
 </Header>
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -232,11 +221,11 @@ The following tables provide a list of all available style props by category.
 
 ### Layout
 
-```jsx
+<Source dark language="tsx" code={`
 <Div width="30rem">
     Galaxy
 </Div>
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -266,12 +255,12 @@ The following tables provide a list of all available style props by category.
 
 ### Flex Layout
 
-```jsx
+<Source dark language="tsx" code={`
 <Div alignItems="center">
     <Text>Andromeda</Text>
     <Text>Batuu</Text>
 </Div>
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -290,12 +279,12 @@ The following tables provide a list of all available style props by category.
 
 ### Grid Layout
 
-```jsx
+<Source dark language="tsx" code={`
 <Div gridAutoFlow="row dense">
     <Text>Andromeda</Text>
     <Text>Batuu</Text>
 </Div>
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -323,13 +312,13 @@ The following tables provide a list of all available style props by category.
 
 ### Background
 
-```jsx
+<Source dark language="tsx" code={`
 <Div
   backgroundImage="url('/images/dog.png')"
   backgroundPosition="center"
   backgroundRepeat="no-repeat"
 />
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -342,14 +331,14 @@ The following tables provide a list of all available style props by category.
 
 ### Border
 
-```jsx
+<Source dark language="tsx" code={`
 <Div
     border="primary"
     borderRadius="rounded-md"
 >
     Rocket
 </Div>
-```
+`} />
 
 Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an implicit style (solid) and width(1px). These properties only accepts colors for value.
 
@@ -371,12 +360,12 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ### Position
 
-```jsx
+<Source dark language="tsx" code={`
 <Div
     top="12px"
     position="absolute"
 />
-```
+`} />
 
 <PropsReferenceTable
     rows={[
@@ -393,11 +382,11 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ### Shadow
 
-```jsx
+<Source dark language="tsx" code={`
 <Div
     boxShadow="lifted"
 />
-```
+`} />
 
 <PropsReferenceTable
     rows={[

@@ -1,9 +1,4 @@
-import { Table, Link } from "@stories/components";
-import { array, arrayOf } from "prop-types";
-
-const propTypes = {
-    rows: arrayOf(array).isRequired
-};
+import { Table, TableProps, Link } from "@stories/components";
 
 const ScaleLinks = {
     "box-shadow-scale": <Link href="?path=/docs/tokens--page#box-shadows" target="_blank">shadows</Link>,
@@ -12,7 +7,7 @@ const ScaleLinks = {
     "spacing-scale": <Link href="?path=/docs/tokens--page#spacings" target="_blank">dimensions</Link>
 };
 
-function toScaleLink(scale) {
+function toScaleLink(scale: keyof typeof ScaleLinks) {
     return ScaleLinks[scale] ?? scale;
 }
 
@@ -26,7 +21,11 @@ function toRowValues([propName, cssProperty, themeKey, scale, supports]) {
     ];
 }
 
-export function PropsReferenceTable({ rows }) {
+export interface PropsReferenceTableProps {
+    rows: TableProps["rows"];
+}
+
+export function PropsReferenceTable({ rows }: PropsReferenceTableProps) {
     return (
         <Table
             columns={[
@@ -40,5 +39,3 @@ export function PropsReferenceTable({ rows }) {
         />
     );
 }
-
-PropsReferenceTable.propTypes = propTypes;

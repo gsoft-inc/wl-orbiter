@@ -5,6 +5,7 @@ import { useContext, useMemo } from "react";
 export function useThemedSnippet(snippets: string | Record<string, string>) {
     const { globals } = useContext(DocsContext) as any;
     const theme = globals?.theme;
+
     return useMemo(() => {
         if (isNil(snippets) || isString(snippets)) {
             return snippets;

@@ -1,0 +1,418 @@
+:root {
+    /* Use this var only when the element is not affected by the font-family specified in Storybook docs theme */
+    --orbiter-font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* LAYOUT */
+.sbdocs.sbdocs-wrapper {
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.sbdocs.sbdocs-content {
+    max-width: 1280px;
+    font-size: var(--hop-body-md-font-size);
+}
+
+/* STORY */
+.docs-story div + div > button {
+    font-weight: 550;
+    font-size: var(--hop-body-xs-font-size);
+}
+
+/* ARGS TABLE */
+.docblock-argstable {
+    min-width: 220px;
+    margin-bottom: 0;
+}
+
+/* ARGS TABLE | HEADER */
+.docblock-argstable-head,
+.docblock-argstable-body {
+    font-size: var(--hop-body-sm-font-size) !important;
+}
+
+.docblock-argstable-head tr th {
+    font-weight: 550 !important;
+    color: var(--hop-neutral-text) !important;
+}
+
+/* ARGS TABLE | HEADER | RESET */
+.docblock-argstable-head button {
+    background-color: var(--hop-primary-surface) !important;
+    box-shadow: none;
+}
+
+.docblock-argstable-head button:focus {
+    box-shadow: none;
+}
+
+.docblock-argstable-head button:hover {
+    background-color: var(--hop-primary-surface-hover) !important;
+}
+
+.docblock-argstable-head button svg path {
+    fill: var(--hop-neutral-surface) !important;
+}
+
+/* ARGS TABLE | BODY  */
+.docblock-argstable-body td > span {
+    font-weight: 550 !important;
+}
+
+.docblock-argstable-body td > label > span {
+    font-weight: 550 !important;
+}
+
+.docblock-argstable-body td label input[type=radio] {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+}
+
+.docblock-argstable-body td label input[type=radio]:focus {
+    outline-offset: 1px;
+}
+
+.docblock-argstable-body td label span {
+    font-size: var(--hop-body-xs-font-size) !important;
+}
+
+.docblock-argstable-body td label input[type="radio"] {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.docblock-argstable-body td input[type="number"],
+.docblock-argstable-body td input[type="text"],
+.docblock-argstable-body td textarea {
+    font-size: var(--hop-body-xs-font-size);
+}
+
+.docblock-argstable-body a {
+    color: var(--hop-primary-text) !important;
+}
+
+.docblock-argstable-body button {
+    color: var(--hop-primary-text) !important;
+    font-family: var(--hop-body-xs-font-family) !important;
+    font-size: var(--hop-body-xs-font-size) !important;
+    padding-left: 2px !important;
+}
+
+/* EMPTY BLOCK */
+.docblock-emptyblock {
+    color: var(--hop-neutral-text-weak) !important;
+    border: 1px dashed var(--hop-neutral-border-weakest) !important;
+}
+
+.docblock-emptyblock a {
+    color: var(--hop-primary-text) !important;
+}
+
+/* SOURCE BLOCK */
+.docblock-source {
+    margin-top: var(--hop-space-stack-xl) !important;
+    margin-bottom: 35px !important;
+}
+
+.preview,
+pre {
+    border: none;
+    border-radius: var(--hop-shape-rounded-md) !important;
+    box-shadow: var(--hop-elevation-lifted);
+}
+
+.preview {
+    overflow: hidden;
+}
+
+.preview > div > div {
+    overflow: visible;
+}
+
+.preview div[scale] {
+    transform: none !important;
+}
+
+/* ELEMENTS | TEXT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: var(--hop-neutral-text);
+}
+
+/* ELEMENTS | HEADER */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 550;
+    /* fixing the default position relative on all titles in shared.tsx */
+    position: initial;
+}
+
+h1 {
+    font-size: var(--hop-heading-3xl-font-size);
+    line-height: var(--hop-heading-3xl-line-height);
+}
+
+h1,
+.sbdocs .sbdocs-title {
+    font-weight: 550;
+}
+
+h2 {
+    border-bottom: 1px solid var(--hop-neutral-border-weakest);
+}
+
+h2,
+h2:first-of-type {
+    margin: 1.5rem 0 !important;
+    font-size: var(--hop-heading-xl-font-size);
+}
+
+h3 {
+    margin: var(--hop-space-stack-xl) 0 var(--hop-space-stack-md);
+    font-size: var(--hop-heading-md-font-size);
+    line-height: var(--hop-heading-md-line-height);
+}
+
+h4 {
+    font-size: var(--hop-heading-sm-font-size);
+    line-height: var(--hop-heading-sm-line-height);
+    margin: var(--hop-space-stack-lg) 0 var(--hop-space-stack-sm);
+}
+
+h2 + p,
+h3 + p,
+h4 + p {
+    margin: 0 0 1rem 0;
+}
+
+p {
+    max-width: 75ch;
+}
+
+/* ELEMENTS | CODE | IN PARAGRAPH */
+p code,
+li code {
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    font-size: 15px !important;
+}
+
+/* ELEMENTS | LINK */
+a {
+    font-size: var(--hop-body-md-font-size);
+    color: var(--hop-primary-text) !important;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    outline: transparent;
+}
+
+/* ELEMENTS | LINK | IN PARAGRAGH */
+p a {
+    font-size: inherit;
+}
+
+a:focus {
+    border-radius: var(--hop-shape-rounded-md);
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+}
+
+a code {
+    color: var(--hop-primary-text);
+}
+
+/* ELEMENTS | TYPOGRAPHY */
+p,
+span {
+    font-size: var(--hop-body-md-font-size);
+    line-height: var(--hop-body-md-line-height);
+    max-width: 90ch;
+}
+
+/* ELEMENTS | TABLE */
+table tr {
+    border-top: 1px solid var(--hop-neutral-border-weakest);
+}
+
+table thead tr th {
+    background-color: var(--hop-neutral-surface-weak);
+    color: inherit;
+}
+
+table thead tr {
+    border-top: 1px solid var(--hop-neutral-border-weakest);
+    border-left: 1px solid var(--hop-neutral-border-weakest);
+    border-right: 1px solid var(--hop-neutral-border-weakest);
+    color: var(--hop-neutral-text);
+}
+
+table tr th {
+    font-weight: 600;
+    font-size: var(--hop-body-md-font-size);
+}
+
+table td {
+    font-size: var(--hop-body-sm-medium-font-size);
+}
+
+table tr td,
+table tr th {
+    border-top: 1px solid var(--hop-neutral-border-weakest);
+    border-bottom: 1px solid var(--hop-neutral-border-weakest);
+    border-left: 0;
+    border-right: 0;
+    color: var(--hop-neutral-text);
+    background-color: var(--hop-neutral-surface);
+}
+
+table tbody {
+    border: 1px solid var(--hop-neutral-border-weakest);
+}
+
+table a {
+    font-size: var(--hop-body-sm-medium-font-size) !important;
+}
+
+table .code a {
+    font-family: Consolas, monaco, monospace !important;
+}
+
+table .example {
+    color: var(--hop-neutral-text);
+}
+
+table b,
+table strong {
+    font-weight: 400;
+}
+
+table img {
+    max-width: none;
+}
+
+/* ELEMENTS | SUMMARY */
+.sb-show-main summary {
+    font-size: var(--hop-body-md-font-size);
+    cursor: pointer;
+    line-height: var(--hop-body-md-line-height);
+}
+
+.sb-show-main details {
+    padding: 8px;
+    border-radius: var(--hop-shape-rounded-md);
+    background-color: var(--hop-primary-surface-weak);
+}
+
+.sb-show-main details + details {
+    margin-top: var(--hop-space-stack-md);
+}
+
+.sbdocs details .docblock-source {
+    box-shadow: none !important;
+    border: none !important;
+    margin: var(--hop-space-stack-md) 0 !important;
+}
+
+/* ELEMENTS | KBD */
+.sbdocs kbd {
+    line-height: 1;
+    margin: 0 2px;
+    padding: 3px 5px;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 13px;
+    border: 1px solid #EEEEEE;
+    color: rgba(51, 51, 51, 0.9);
+    background-color: #F8F8F8;
+}
+
+/* ELEMENTS | LIST */
+li {
+    font-size: var(--hop-body-md-font-size) !important;
+}
+
+/* ELEMENTS | STRONG */
+.sbdocs strong {
+    font-weight: 400;
+}
+
+/* ELEMENTS | LINK ICON */
+h1 a {
+    margin-left: -28px;
+}
+
+h1 a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.code {
+    font-family: Consolas, monaco, monospace !important;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* LOADER */
+.o-ui-sb-loading {
+    position: absolute;
+    background-color: var(--hop-neutral-surface-weak);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.o-ui-sb-loading:before {
+    width: 1.5rem;
+    height: 1.5rem;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    border: 2px solid var(--hop-neutral-border-weak);
+    border-top-color: #FFFFFF;
+    animation: o-ui-sb-spinner 1s linear infinite;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@keyframes o-ui-sb-spinner {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Token Specific Styles */
+.token-table tr td:last-child {
+    padding: 0 0 0 13px !important;
+}
+
+/* HACK OVERRIDES - INPUT */
+@media screen and (max-width: 420px) {
+    .sbdocs .o-ui .o-ui-input {
+        width: 100%;
+    }
+    .sbdocs .o-ui .o-ui-form {
+        width: 100%;
+    }
+}

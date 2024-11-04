@@ -1,6 +1,6 @@
 // import { viewport, withHopperProvider } from "./storybook-addon/index";
 import { viewport } from "./storybook-addon/index";
-import { withBackgroundMatchingColorScheme, withCenteredCanvas, withThemeProvider } from "./decorators";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators";
 import "./stories.css";
 import { isChromatic } from "./env";
 import { Themes } from "./styles/themes";
@@ -11,6 +11,7 @@ import "@components/index.css";
 import "./styles";
 import "@hopper-ui/tokens/fonts.css";
 import { Highlight } from "./mdx";
+import { Code } from "./components/code";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
@@ -35,6 +36,7 @@ const preview: Preview = {
         viewport,
         docs: {
             theme: Themes.docs,
+            container: ThemedDocsContainer,
             inlineStories: true,
             canvas: {
                 sourceState: "shown"
@@ -46,7 +48,6 @@ const preview: Preview = {
                 type: "code",
                 language: "tsx",
                 transform: (src: string) => {
-                    console.log("formatCode", src);
                     let newSource = src.match(/render:\s*\(\)\s*=>\s*([\s\S]*)}/)![1].trim();
                     newSource = newSource.replace(/\breturn\b/g, "\nreturn").replace(/\bfunction\b/g, "\nfunction").replace(/^{\s*|\s*}$/g, "");
 
@@ -110,7 +111,11 @@ const preview: Preview = {
             }
         }
     },
-    decorators: [withCenteredCanvas, withThemeProvider, withBackgroundMatchingColorScheme]
+    decorators: [
+        withCenteredCanvas,
+        withThemeProvider,
+        withBackgroundMatchingColorScheme
+    ]
 };
 
 export default preview;
