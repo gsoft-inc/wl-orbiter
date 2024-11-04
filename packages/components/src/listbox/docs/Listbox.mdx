@@ -1,0 +1,167 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Preview, Tagline } from "@stories/components";
+import { InnerItem, InnerSection } from "@components/collection";
+import { InnerListbox, InnerListboxOption, InnerListboxSection } from "@components/listbox";
+import * as ListboxStories from "./Listbox.stories.tsx";
+
+<Meta of={ListboxStories} />
+
+# Listbox
+
+<Tagline>A listbox presents a list of options and allows a user to select one or more of them</Tagline>
+
+<ComponentInfo
+    usage={"import { Listbox, Item, Section, ListboxContext, useListboxContext } from \"@workleap/orbiter-ui\";"}
+    ariaPath="listbox"
+    githubPath="/packages/components/src/listbox/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- A listbox should have an [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) property describing the content of the list.
+
+## Usage
+
+### Default
+
+A default listbox.
+
+<Canvas of={ListboxStories.Default} />
+
+### Selection mode
+
+A listbox support `single` and `multiple` selection mode.
+
+<Canvas of={ListboxStories.Selection} />
+
+### Sections
+
+A listbox items can be group by sections.
+
+<Canvas of={ListboxStories.Sections} />
+
+### Item icon
+
+A listbox item can have [icons](?path=/docs/icon-gallery--page).
+
+<Canvas of={ListboxStories.ItemIcon} />
+
+### Item end icon
+
+A listbox item can have *non standard* end [icons](?path=/docs/icon-gallery--page) can be provided to handle special cases like displaying a list of icons.
+
+However, think twice before adding *end* icons, *start* icons should be your go to.
+
+<Canvas of={ListboxStories.ItemEndIcon} />
+
+### Item description
+
+A listbox item can have a **single line** description.
+
+<Canvas of={ListboxStories.ItemDescription} />
+
+A description can be paired with an [icon](?path=/docs/icon-gallery--page).
+
+<Canvas of={ListboxStories.ItemDescriptionIcon} />
+
+A description can also be paired with an [avatar](?path=/docs/avatar--default-story).
+
+<Canvas of={ListboxStories.ItemDescriptionAvatar} />
+
+### Item tooltip
+
+A listbox item can have a basic tooltip.
+
+<Canvas of={ListboxStories.ItemTooltip} />
+
+### Array map
+
+A listbox items can be rendered with an array map.
+
+<Canvas of={ListboxStories.ArrayMap} />
+
+### Listbox context
+
+The `selectedKeys` state can be retrieved from `useListboxContext`.
+
+<Canvas of={ListboxStories.ListboxContext} />
+
+### Disabled item
+
+A listbox item can be disabled.
+
+<Canvas of={ListboxStories.DisabledItem} />
+
+### Fluid
+
+A listbox can take the width of it's container.
+
+<Canvas of={ListboxStories.Fluid} />
+
+### Validation
+
+A listbox can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the listbox via the `validationState` prop.
+
+<Canvas of={ListboxStories.Validation} />
+
+### Controlled
+
+The `selectedKeys` state can be handled in controlled mode.
+
+<Canvas of={ListboxStories.Controlled} />
+
+## API
+
+### Listbox
+
+<ComponentInfo
+    usage={"import { Listbox } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerListbox.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerListbox} sort="alpha" />
+
+### Item
+
+<ComponentInfo
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "avatar", "text", "description", "end-icon"]}
+    inherits={[InnerItem.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerItem} sort="alpha" />
+
+### Section
+
+<ComponentInfo
+    usage={"import { Section } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerSection.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerSection} sort="alpha" />
+
+### ListboxOption
+
+<ComponentInfo
+    usage={"import { ListboxOption } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "avatar", "text", "description", "end-icon"]}
+    inherits={[InnerListboxOption.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerListboxOption} sort="alpha" />
+
+### ListboxSection
+
+<ComponentInfo
+    usage={"import { ListboxSection } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerListboxSection.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerListboxSection} sort="alpha" />
