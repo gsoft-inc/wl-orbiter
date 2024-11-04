@@ -1,12 +1,11 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
 import { InnerLoader, Loader } from "@components/loader";
 import { Stack } from "@components/layout";
 
-<Meta
-    title="Components/Loader"
-    id="loader"
-/>
+import * as LoaderStories from "./Loader.stories.tsx";
+
+<Meta of={LoaderStories} />
 
 # Loader
 
@@ -46,26 +45,14 @@ import { Stack } from "@components/layout";
 
 This is the default loader.
 
-<Preview>
-    <Story name="default">
-        <Loader aria-label="Loading..." />
-    </Story>
-</Preview>
+<Canvas of={LoaderStories.Default} />
 
 ### Delay
 
 A loader can appears after a short delay. This is to prevent the loader from appearing when the action is very fast.
 By settings `delay` to `true`, the loader will appear after 300ms. You can also set a custom delay in milliseconds.
 
-<Preview>
-    <Story name="delay">
-        <Stack>
-            <Loader delay aria-label="Loading..."/>
-            <Loader delay={800} aria-label="Loading..."/>
-        </Stack>
-    </Story>
-</Preview>
-
+<Canvas of={LoaderStories.Delay} />
 
 ## API
 
@@ -77,4 +64,4 @@ By settings `delay` to `true`, the loader will appear after 300ms. You can also 
     compact
 />
 
-<ArgsTable of={InnerLoader} sort="alpha" />
+<ArgTypes of={InnerLoader} sort="alpha" />
