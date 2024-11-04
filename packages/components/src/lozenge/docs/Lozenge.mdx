@@ -1,14 +1,13 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
+import { ComponentInfo, Tagline } from "@stories/components";
 import { Inline } from "@components/layout";
 import { InnerLozenge, Lozenge } from "@components/lozenge";
 import { Text } from "@components/typography";
 
-<Meta
-    title="Components/Lozenge"
-    id="lozenge"
-/>
+import * as LozengeStories from "./Lozenge.stories.tsx";
+
+<Meta of={LozengeStories}/>
 
 # Lozenge
 
@@ -43,87 +42,43 @@ import { Text } from "@components/typography";
 
 This is the lozenge that should be used in most situations.
 
-<Preview>
-    <Story name="default">
-        <Lozenge>New</Lozenge>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.Default} />
 
 ### Icon
 
 An [icon](?path=/docs/icon-gallery--page) is used to make it easier for the user to understand the intent of the Lozenge. It is strongly recommended to use a Minor Icon in this particular use case.
 
-<Preview>
-    <Story name="icon">
-        <Lozenge>
-            <SparklesIcon />
-            <Text>New</Text>
-        </Lozenge>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.IconStory} />
 
 ### Size
 
 The lozenge can be used in small version to accommodate smaller spaces, such as a column row. When used in small format, the lozenge should not contain an icon, and text is automatically set to uppercase.
 
-<Preview>
-    <Story name="size">
-        <Inline alignY="center">
-            <Lozenge size="sm">New</Lozenge>
-            <Lozenge>New release</Lozenge>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.Size} />
 
 ### Highlight
 
 A lozenge can be highlighted to bring more attention to it when required. This version should be used sparingly to avoid overloading the user interface.
 
-<Preview>
-    <Story name="highlight">
-        <Inline alignY="center">
-            <Lozenge size="sm" highlight>New</Lozenge>
-            <Lozenge highlight>New</Lozenge>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.Highlight} />
 
 ### Fluid
 
 A lozenge can take all the available space.
 
-<Preview>
-    <Story name="fluid">
-        <Lozenge fluid>New</Lozenge>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.Fluid} />
 
 ### Warning
 
 A lozenge can use a warning color. This version is useful when we need to warn the user of an action that need to be taken in the near future but not immediately.
 
-<Preview>
-    <Story name="warning">
-        <Inline alignY="center">
-            <Lozenge variant="warning">Expires soon</Lozenge>
-            <Lozenge variant="warning" highlight>Expires soon</Lozenge>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.Warning} />
 
 ### Positive
 
 This version can be used to highlight a positive message.
 
-<Preview>
-    <Story name="positive">
-        <Inline alignY="center">
-            <Lozenge variant="positive">Active</Lozenge>
-            <Lozenge variant="positive" highlight>Active</Lozenge>
-        </Inline>
-    </Story>
-</Preview>
-
+<Canvas of={LozengeStories.Positive} />
 
 ### Negative
 
@@ -131,14 +86,7 @@ This version is used to represent a state or an element that is either in a nega
 
 As an example, it can be used to highlight a blocked user or an element that has been deleted but still visible. This should be used with caution as this color scheme can trigger a negative reaction from a user.
 
-<Preview>
-    <Story name="negative">
-        <Inline alignY="center">
-            <Lozenge variant="negative">Blocked</Lozenge>
-            <Lozenge variant="negative" highlight>Blocked</Lozenge>
-        </Inline>
-    </Story>
-</Preview>
+<Canvas of={LozengeStories.Negative} />
 
 ## API
 
@@ -151,5 +99,4 @@ As an example, it can be used to highlight a blocked user or an element that has
     compact
 />
 
-<ArgsTable of={InnerLozenge} sort="alpha" />
-
+<ArgTypes of={InnerLozenge} sort="alpha" />
