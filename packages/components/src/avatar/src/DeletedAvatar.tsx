@@ -23,7 +23,7 @@ export interface InnerDeletedAvatarProps extends SlotProps, InternalProps, Style
     /**
      * An avatar can vary in size.
      */
-    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl">;
 }
 
 export function InnerDeletedAvatar({

@@ -1,0 +1,33 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerContent } from "@components/placeholders";
+import * as ContentStories from "./Content.stories.tsx";
+
+<Meta of={ContentStories} />
+
+# Content
+
+<Tagline>A placeholder for a content section.</Tagline>
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/placeholders/src"
+/>
+
+## Usage
+
+A content placeholder component *provides no specific styling by itself, but receives styling from the parent container*. In addition, a content placeholder will be automatically placed within the container's layout according to Orbiter guidelines.
+
+<Canvas of={ContentStories.Example} />
+
+## API
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />

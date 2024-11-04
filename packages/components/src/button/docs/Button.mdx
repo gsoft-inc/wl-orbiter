@@ -1,0 +1,262 @@
+import { SparklesIcon } from "@hopper-ui/icons";
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import {
+    InnerButton,
+    InnerButtonGroup,
+    InnerIconButton,
+    InnerToggleButton,
+    InnerToggleIconButton
+} from "@components/button";
+import { ComponentInfo, Preview, Tagline } from "@stories/components";
+import * as ButtonStories from "./Button.stories.tsx";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<Tagline>A button indicates a possible user action.</Tagline>
+
+<ComponentInfo
+    usage={"import { Button, IconButton, ToggleButton, ToggleIconButton, ButtonGroup, ButtonAsLink } from \"@workleap/orbiter-ui\";"}
+    ariaPath="button"
+    githubPath="/packages/components/src/button/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To trigger an action such as submitting a form, exporting data.
+- To trigger a new UI element to appear on the page such as a modal.
+- Progressing or regressing a user through a step.
+
+### Content
+
+- Use strong, actionable verbs.
+- Avoid using "click here" or "start here" as copy.
+
+### Button vs Link
+
+- When you need to link to another page, use a [link](?path=/docs/link--default-story) component.
+
+### ToggleButton vs Switch
+
+- To activate or deactivate a feature, use the [switch](?path=/docs/switch--default-story) instead of a single [toggle button](?path=/docs/button--default-story#toggle-button).
+
+## Usage
+
+### Default
+
+A default button.
+
+<Canvas of={ButtonStories.Default} />
+
+### Icon
+
+A button can contain [icons](?path=/docs/icon-gallery--page).
+
+<Canvas of={ButtonStories.Icon} />
+
+### End icon
+
+*Non standard* end [icons](?path=/docs/icon-gallery--page) can be provided to handle special cases. However, think twice before adding *end* icons, *start* icons should be your go to.
+
+<Canvas of={ButtonStories.EndIcon} />
+
+### Counter
+
+A button can contain a [counter](?path=/docs/counter--default-story).
+
+<Canvas of={ButtonStories.CounterStory} />
+
+### Size
+
+A button can vary in size.
+
+<Canvas of={ButtonStories.Size} />
+
+### Disabled
+
+A button can be disabled.
+
+<Canvas of={ButtonStories.Disabled} />
+
+### Loading
+
+A button can show a loading indicator. The button text is hidden but the button maintains the width that it would have if the text were visible.
+
+<Canvas of={ButtonStories.Loading} />
+
+### Fluid
+
+A button can be expanded to full width to fill its parent container.
+
+<Canvas of={ButtonStories.Fluid} />
+
+### Variants
+
+A button can use different variants.
+
+#### Primary
+
+Used to indicate the main action of a page or a section. This is usually the action we want the user to take.
+
+In a button group, there can be only 1 primary button. This will be reserved for the suggested action.
+
+<Canvas of={ButtonStories.Primary} />
+
+#### Secondary
+
+Secondary buttons are used for user actions that need less prominence in the page or the section. It’s also the button used when there are no suggested actions to the user.
+
+<Canvas of={ButtonStories.Secondary} />
+
+#### Tertiary
+
+Tertiary buttons are used for actions that need to be there but that we don't want to encourage. A common use case would be a Cancel button in a message or an alert.
+
+<Canvas of={ButtonStories.Tertiary} />
+
+#### Upsell
+
+<Canvas of={ButtonStories.Upsell} />
+
+#### Negative
+
+Negative buttons are used for actions that would result in a deletion or another non recoverable negative action. These are mostly useful in modals.
+
+<Canvas of={ButtonStories.Negative} />
+
+### Link
+
+A button can be rendered as a link by using the `ButtonAsLink` component.
+
+<Canvas of={ButtonStories.AsAnchor} />
+
+## Icon button
+
+The content of a button can be a single icon. An accessible name must be provided through [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) prop. See also [WCAG practices](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html).
+
+<Canvas of={ButtonStories.IconButtonStory} />
+
+### Icon link
+
+An icon button can be rendered as a link by using the IconButtonAsLink component.
+
+<Canvas of={ButtonStories.IconLinkButton} />
+
+## Button group
+
+Buttons whose actions are related to each other can be grouped together.
+
+<Canvas of={ButtonStories.ButtonGroupStory} />
+
+### Orientation
+
+A button group can render his items vertically.
+
+<Canvas of={ButtonStories.ButtonGroupVertical} />
+
+### Alignment
+
+A button group can change the alignment of his items.
+
+<Canvas of={ButtonStories.ButtonGroupAlignment} />
+
+## Toggle button
+
+Offer a similar experience as a checkbox or radio with the appearance of a button.
+
+<Canvas of={ButtonStories.ToggleButtonStory} />
+
+### Toggle icon button
+
+A toggle button content can be a single icon. An accessible name must be provided through `aria-label` prop. See [WCAG practices](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html).
+
+<Canvas of={ButtonStories.ToggleIconButtonStory} />
+
+### Toggle button group
+
+Related toggle buttons can be group together in a [group](#button-group), a [checkbox group](?path=/docs/checkbox--default-story) or a [radio group](?path=/docs/radio-group--default-story):
+
+<Canvas of={ButtonStories.ToggleButtonGroup} />
+
+### Controlled
+
+A toggle button can handle `checked` state in controlled mode.
+
+<Canvas of={ButtonStories.Controlled} />
+
+## API
+
+### Button
+
+<ComponentInfo
+    usage={"import { Button } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "text", "end-icon", "counter"]}
+    inherits={[InnerButton.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerButton} sort="alpha" />
+
+### IconButton
+
+<ComponentInfo
+    usage={"import { IconButton } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerIconButton.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerIconButton} sort="alpha" />
+
+### ToggleButton
+
+<ComponentInfo
+    usage={"import { ToggleButton } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "text", "end-icon"]}
+    inherits={[InnerToggleButton.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerToggleButton} sort="alpha" />
+
+### ToggleIconButton
+
+<ComponentInfo
+    usage={"import { ToggleIconButton } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerToggleIconButton.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerToggleIconButton} sort="alpha" />
+
+### ButtonGroup
+
+<ComponentInfo
+    usage={"import { ButtonGroup } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerButtonGroup.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerButtonGroup} sort="alpha" />
+
+### ButtonAsLink
+
+<ComponentInfo
+    usage={"import { ButtonAsLink } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerButton.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerButton} sort="alpha" />
+
+### IconButtonAsLink
+
+<ComponentInfo
+    usage={"import { IconButtonAsLink } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerIconButton.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerIconButton} sort="alpha" />

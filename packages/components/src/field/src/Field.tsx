@@ -16,6 +16,10 @@ export interface InnerFieldProps extends InternalProps, StyledComponentProps<typ
      */
     children: ReactNode;
     /**
+     * Whether or not the field is disabled.
+     */
+    disabled?: boolean;
+    /**
      * Whether or not the field take up the width of its container.
      */
     fluid?: ResponsiveProp<boolean>;

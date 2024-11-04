@@ -1,0 +1,52 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerOverlay, InnerOverlayArrow } from "@components/overlay";
+
+<Meta
+    title="Components/Overlay"
+    id="overlay"
+/>
+
+# Overlay
+
+<Tagline>Container for overlays such as dialogs, popups, and menus.</Tagline>
+
+<ComponentInfo
+    usage={"import { Overlay, OverlayArrow } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/overlay/src"
+/>
+
+## Usage
+
+An overlay takes care of rendering a container for your component with Orbiter's *enter* & *leave* default animations and enables theme support for the overlay content.
+
+The visibility of the overlay can be toggled by providing a `show` prop.
+
+```jsx
+<Overlay show>
+    SpaceX designs, manufactures, and launches the world’s most advanced rockets and spacecraft.
+    The company was founded in 2002 by Elon Musk to revolutionize space transportation, with the ultimate goal of making life multiplanetary.
+</Overlay>
+```
+
+## API
+
+### Overlay
+
+<ComponentInfo
+    usage={"import { Overlay } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerOverlay.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerOverlay} sort="alpha" />
+
+### OverlayArrow
+
+<ComponentInfo
+    usage={"import { OverlayArrow } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerOverlayArrow.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerOverlayArrow} sort="alpha" />

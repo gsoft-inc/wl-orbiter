@@ -1,0 +1,83 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerGrid } from "@components/layout";
+import * as GridStories from "./Grid.stories.tsx";
+
+<Meta of={GridStories} />
+
+# Grid
+
+<Tagline>A layout container using grid.</Tagline>
+
+<ComponentInfo
+    usage={"import { Grid, repeat, minmax, fitContent } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/layout/src"
+/>
+
+## Usage
+
+Grid layout offer a lot of options to solve a bunch of use cases. This page only showcase a few use cases. For a thorough documentation, please have a look at [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids).
+
+### Areas
+
+A grid can define explicit sections with areas.
+
+<Canvas of={GridStories.Areas} />
+
+### Template columns
+
+A grid can define explicit columns (and rows). A value can be a grid length value or an Orbiter spacing scale value.
+
+<Canvas of={GridStories.TemplateColumns} />
+
+### Auto columns
+
+A grid can define the size of implicitly created columns. A value can be a grid length value or an Orbiter spacing scale value.
+
+<Canvas of={GridStories.AutoColumns} />
+
+### Gap
+
+A grid layout can have a gap between his columns and rows. `columnGap` and `rowGap` are also available to specify a gap for a single axis.
+
+<Canvas of={GridStories.Gap} />
+
+### Column spanning
+
+A grid item can span over multiple columns.
+
+<Canvas of={GridStories.ColumnSpan} />
+
+### Nesting
+
+Grids can be nested.
+
+<Canvas of={GridStories.Nesting} />
+
+### Repeat
+
+A custom `repeat` function is available to support Orbiter spacing scale values. However, if you prefer, you can use the [native CSS repeat function](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat())
+
+<Canvas of={GridStories.RepeatFunction} />
+
+### Minmax
+
+A custom `minmax` function is available to support Orbiter spacing scalue values. However, if you prefer, you can use the [native CSS minmax function](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax())
+
+<Canvas of={GridStories.MinMaxFunction} />
+
+### Fit-content
+
+<Canvas of={GridStories.FitContentFunction} />
+
+## API
+
+### Grid
+
+<ComponentInfo
+    usage={"import { Grid } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerGrid.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerGrid} sort="alpha" />

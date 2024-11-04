@@ -1,0 +1,20 @@
+import { ComponentInfo, Link, Preview, Tagline } from "@stories/components";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as TableStories from "./table.stories.tsx";
+
+<Meta of={TableStories} />
+
+# Table
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML table element.</Tagline>
+
+<ComponentInfo
+    usage={"import { Table, THead, TBody, TFoot, TH, TR, TD } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+A table component accepts all the [table HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) and [Orbiter styled component props](?path=/docs/styling--page).
+
+<Canvas of={TableStories.Example} />
