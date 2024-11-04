@@ -1,10 +1,8 @@
 import { ComponentInfo, Link, Tagline } from "@stories/components";
-import { Meta } from "@storybook/addon-docs";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as MainStories from "./main.stories.tsx";
 
-<Meta
-    title="Html elements/Main"
-    id="html-main"
-/>
+<Meta of={MainStories} />
 
 # Main
 
@@ -19,13 +17,4 @@ import { Meta } from "@storybook/addon-docs";
 
 A main component accepts all the [main HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main) and [Orbiter styled component props](?path=/docs/styling--page).
 
-```jsx
-<body>
-    <Header>
-        <H1>Walking On The Moon</H1>
-    </Header>
-    <Main color="neutral-weak">
-        <Paragraph>Walking on the Moon is classic Sting moment, with his band The Police turning out one of their most groovy reggae-inspired hits to the background of space exploration.</Paragraph>
-    </Main>
-</body>
-```
+<Canvas of={MainStories.Example} />
