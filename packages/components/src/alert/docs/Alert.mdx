@@ -1,0 +1,121 @@
+import { Alert, AlertTrigger, InnerAlert } from "@components/alert";
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerContent } from "@components/placeholders";
+import { InnerHeading } from "@components/typography";
+
+import * as AlertStories from "./Alert.stories.tsx";
+
+<Meta of={AlertStories} />
+
+# Alert
+
+<Tagline>An alert is a modal dialog that interrupts the user's workflow to communicate an important message and acquire a response.</Tagline>
+
+<ComponentInfo
+    usage={"import { Alert, Heading, Content, useAlertTriggerContext } from \"@workleap/orbiter-ui\";"}
+    ariaPath="alertdialog"
+    githubPath="/packages/components/src/alert/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To display a confirmation message, an error, or a warning.
+
+### Accessibility
+
+#### Announcement
+
+- [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-describedby`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) defaults to the alert `<Heading>` and `<Content>` values.
+- You can overwrite them by setting `aria-label` and `aria-describedby` props on the alert.
+
+#### Focus
+
+- If the alert calls for an action, make sure to set the focus correctly to avoid any unwanted action.
+- You can use the `autoFocusButton` prop on the alert to specify which control should have the initial focus.
+- If your alert is destructive, you can offer a secondary button _Cancel_ and set the focus to the secondary button with `autoFocusButton="secondary"`.
+
+## Usage
+
+### Default
+
+An alert must have a heading, some content and a primary button label.
+
+<Canvas of={AlertStories.Default} />
+
+### Secondary button
+
+An alert can have a secondary button.
+
+<Canvas of={AlertStories.SecondaryButton} />
+
+### Cancel button
+
+An alert can have a cancel button.
+
+<Canvas of={AlertStories.CancelButton} />
+
+### Disabled buttons
+
+An alert primary and secondary buttons can be disabled.
+
+<Canvas of={AlertStories.DisabledButton} />
+
+### Confirmation
+
+Use a confirmation alert when a non-destructive action is required from a user.
+
+<Canvas of={AlertStories.Confirmation} />
+
+### Destructive
+
+Use a destructive alert to confirm a permanent change, like deleting data.
+
+<Canvas of={AlertStories.Destructive} />
+
+### Not Dismissable
+
+An alert can be undismissable.
+
+<Canvas of={AlertStories.Undismissable} />
+
+### Controlled
+
+The `open` state can be handled in controlled mode.
+
+<Canvas of={AlertStories.Controlled} />
+
+## API
+
+### Alert
+
+<ComponentInfo
+    usage={"import { Alert } from \"@workleap/orbiter-ui\";"}
+    slots={["heading", "content"]}
+    inherits={[InnerAlert.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAlert} sort="alpha" />
+
+### Heading
+
+<ComponentInfo
+    usage={"import { Heading } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHeading.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHeading} sort="alpha" />
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />
