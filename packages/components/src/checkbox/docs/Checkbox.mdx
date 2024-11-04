@@ -1,0 +1,152 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { InnerCheckbox, InnerCheckboxGroup } from "@components/checkbox";
+import { ComponentInfo, Preview, Tagline } from "@stories/components";
+
+import * as CheckboxStories from "./Checkbox.stories.tsx"
+
+<Meta of={CheckboxStories}/>
+
+# Checkbox
+
+<Tagline>A checkbox allows the user to toggle between 2 or 3 (indeterminate) choices.</Tagline>
+
+<ComponentInfo
+    usage={"import { Checkbox, CheckboxGroup } from \"@workleap/orbiter-ui\";"}
+    ariaPath="checkbox"
+    githubPath="/packages/components/src/checkbox/src"
+/>
+
+## Usage
+
+### Default
+
+A default checkbox.
+
+<Canvas of={CheckboxStories.Default} />
+
+### No label
+
+A checkbox can be rendered without a label.
+
+<Canvas of={CheckboxStories.NoLabel} />
+
+### Checked
+
+A checkbox can be checked.
+
+<Canvas of={CheckboxStories.Checked} />
+
+### Indeterminate
+
+A checkbox can be indeterminate.
+
+<Canvas of={CheckboxStories.Indeterminate} />
+
+### Disabled
+
+A checkbox can be disabled.
+
+<Canvas of={CheckboxStories.Disabled} />
+
+### Icon
+
+A checkbox can have [icons](?path=/docs/icon-gallery--page) after his label.
+
+<Canvas of={CheckboxStories.Icon} />
+
+### Counter
+
+A checkbox can have a [counter](?path=/docs/counter--default-story) after his label.
+
+<Canvas of={CheckboxStories.CounterStory} />
+
+### Size
+
+A checkbox can vary in size.
+
+<Canvas of={CheckboxStories.Size} />
+
+### Reverse
+
+A checkbox checkmark can be to the left or to the right of his label.
+
+<Canvas of={CheckboxStories.Reverse} />
+
+### Validation
+
+A checkbox can display a validation state to communicate to the user whether the current value is valid or invalid.
+
+Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate if the user has checked the checkbox.
+
+<Canvas of={CheckboxStories.CheckedValidation} />
+
+### Controlled
+
+A checkbox can handle `checked` state in controlled mode.
+
+<Canvas of={CheckboxStories.Controlled} />
+
+## Checkbox group
+
+Related checkboxes can be group together.
+
+<Canvas of={CheckboxStories.CheckboxGroupStory} />
+
+### Orientation
+
+A checkbox group can render his elements vertically.
+
+<Canvas of={CheckboxStories.Orientation} />
+
+### Reverse
+
+A checkbox group elements can be reversed.
+
+<Canvas of={CheckboxStories.ReverseStory} />
+
+### Validation
+
+A checkbox group can display a validation state to communicate to the user whether the current value is valid or invalid.
+
+Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate if the user has checked all the checkbox.
+
+<Canvas of={CheckboxStories.AllCheckedValidation} />
+
+### Custom components
+
+Any component implementing the `CheckableContext` can behave like a checkbox group. This is usually done by using the `useCheckableProps` hook.
+
+<Canvas of={CheckboxStories.CustomGroup} />
+
+### Controlled
+
+A checkbox group can handle `value` state in controlled mode.
+
+<Canvas of={CheckboxStories.ControlledCheckboxGroup} />
+
+## API
+
+### Checkbox
+
+<ComponentInfo
+    usage={"import { Checkbox } from \"@workleap/orbiter-ui\";"}
+    slots={["label", "icon", "counter"]}
+    inherits={[InnerCheckbox.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerCheckbox} sort="alpha" />
+
+### CheckboxGroup
+
+<ComponentInfo
+    usage={"import { CheckboxGroup } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerCheckboxGroup.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerCheckboxGroup} sort="alpha" />
