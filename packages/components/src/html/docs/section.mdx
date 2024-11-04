@@ -1,10 +1,8 @@
 import { ComponentInfo, Link, Tagline } from "@stories/components";
-import { Meta } from "@storybook/addon-docs";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as SectionStories from "./section.stories.tsx";
 
-<Meta
-    title="Html elements/Section"
-    id="html-section"
-/>
+<Meta of={SectionStories} />
 
 # Section
 
@@ -19,12 +17,4 @@ import { Meta } from "@storybook/addon-docs";
 
 A section component accepts all the [section HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) and [Orbiter styled component props](?path=/docs/styling--page).
 
-```jsx
-<body>
-    <H1>Blue Origin</H1>
-    <HtmlSection color="neutral-weak">
-        <H2>Our vision</H2>
-        <Pararaph>Blue Origin was founded by Jeff Bezos with the vision of enabling a future where millions of people are living and working in space to benefit Earth.</Pararaph>
-    </HtmlSection>
-</body>
-```
+<Canvas of={SectionStories.Example} />
