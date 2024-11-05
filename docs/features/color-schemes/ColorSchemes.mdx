@@ -11,11 +11,11 @@ Orbiter supports by default a *light* and a *dark* color scheme for all componen
 
 A color scheme can either be enforced by providing a specific `light` or `dark` value to a [theme provider](?path=/story/theme-provider--default-story):
 
-<Source dark of={ColorSchemesStories.Apply} language="tsx" />
+<Source dark language="tsx" of={ColorSchemesStories.Apply} />
 
 or be selected according to the [user's operating system setting](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) by providing the `system` value:
 
-<Source dark of={ColorSchemesStories.ApplySystem} language="tsx" />
+<Source dark language="tsx" of={ColorSchemesStories.ApplySystem} />
 
 > When the `system` value is provided, an additional *fallback* color scheme must be specified to `defaultColorScheme` in case the theme provider is not able to access the user setting.
 
@@ -35,4 +35,4 @@ Some features requires the usage of custom colors. Those colors aren't like Orbi
 
 To help with that, Orbiter offer the `useColorSchemeValue` hook which will return the value matching the current color scheme of the closest [theme provider](?path=/story/theme-provider--default-story).
 
-<Source dark of={ColorSchemesStories.UseColorSchemeValueStory} language="tsx" />
+<Source dark language="tsx" of={ColorSchemesStories.UseColorSchemeValueStory} />
