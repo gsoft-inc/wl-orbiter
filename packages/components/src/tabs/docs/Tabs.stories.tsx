@@ -344,7 +344,7 @@ export const Async: TabStory = {
             return (
                 <Div {...rest}>
                     {isNil(text) ? (
-                        <Div padding="inline-md" position="relative">
+                        <Div padding="inset-md" position="relative">
                             <Div className="o-ui-sb-loading"></Div>
                         </Div>
                     ) : text}
