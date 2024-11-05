@@ -1,43 +1,27 @@
-import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
+/* eslint-disable react-hooks/rules-of-hooks */
+import { Meta, StoryObj } from "@storybook/react";
 import { Avatar } from "@components/avatar";
-import { ComponentInfo, Preview, Tagline } from "@stories/components";
 import { IconList } from "@components/icons";
 import { CatIcon, RocketIcon, SparklesIcon } from "@hopper-ui/icons";
 import { Inline } from "@components/layout";
-import { InnerItem, InnerSection, Item, Section } from "@components/collection";
-import { InnerListbox, InnerListboxOption, InnerListboxSection, Listbox } from "@components/listbox";
+import { Item, Section } from "@components/collection";
+import { Listbox, ListboxOption, useListboxContext } from "@components/listbox";
 import { Text } from "@components/typography";
 import { Tooltip, TooltipTrigger } from "@components/tooltip";
+import { useState, useCallback } from "react";
 
-<Meta
-    title="Components/Listbox"
-    id="listbox"
-/>
+const meta = {
+    title: "Components/Listbox",
+    component: Listbox,
+    id: "listbox"
+} as Meta<typeof Listbox>;
 
-# Listbox
+export default meta;
 
-<Tagline>A listbox presents a list of options and allows a user to select one or more of them</Tagline>
+type Story = StoryObj<typeof Listbox>;
 
-<ComponentInfo
-    usage={"import { Listbox, Item, Section, ListboxContext, useListboxContext } from \"@workleap/orbiter-ui\";"}
-    ariaPath="listbox"
-    githubPath="/packages/components/src/listbox/src"
-/>
-
-## Guidelines
-
-### Accessibility
-
-- A listbox should have an [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) property describing the content of the list.
-
-## Usage
-
-### Default
-
-A default listbox.
-
-<Preview>
-    <Story name="default">
+export const Default: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -47,15 +31,11 @@ A default listbox.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Selection mode
-
-A listbox support `single` and `multiple` selection mode.
-
-<Preview>
-    <Story name="selection">
+export const Selection: Story = {
+    render: () => (
         <Inline gap={480}>
             <Listbox aria-label="Planets">
                 <Item key="earth">Earth</Item>
@@ -66,7 +46,7 @@ A listbox support `single` and `multiple` selection mode.
                 <Item key="saturn">Saturn</Item>
                 <Item key="uranus">Uranus</Item>
             </Listbox>
-            <Listbox selectionMode="multiple" aria-label="Planets">
+            <Listbox aria-label="Planets" selectionMode="multiple">
                 <Item key="earth">Earth</Item>
                 <Item key="jupiter">Jupiter</Item>
                 <Item key="mars">Mars</Item>
@@ -76,15 +56,11 @@ A listbox support `single` and `multiple` selection mode.
                 <Item key="uranus">Uranus</Item>
             </Listbox>
         </Inline>
-    </Story>
-</Preview>
+    )
+};
 
-### Sections
-
-A listbox items can be group by sections.
-
-<Preview>
-    <Story name="sections">
+export const Sections: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Section title="Visited">
                 <Item key="earth">Earth</Item>
@@ -98,15 +74,11 @@ A listbox items can be group by sections.
                 <Item key="uranus">Uranus</Item>
             </Section>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Item icon
-
-A listbox item can have [icons](?path=/docs/icon-gallery--page).
-
-<Preview>
-    <Story name="item icon">
+export const ItemIcon: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
                 <SparklesIcon />
@@ -121,17 +93,11 @@ A listbox item can have [icons](?path=/docs/icon-gallery--page).
                 <Text>Mars</Text>
             </Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Item end icon
-
-A listbox item can have *non standard* end [icons](?path=/docs/icon-gallery--page) can be provided to handle special cases like displaying a list of icons.
-
-However, think twice before adding *end* icons, *start* icons should be your go to.
-
-<Preview>
-    <Story name="item end icon">
+export const ItemEndIcon: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
                 <Text>Earth</Text>
@@ -154,15 +120,11 @@ However, think twice before adding *end* icons, *start* icons should be your go 
                 </IconList>
             </Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Item description
-
-A listbox item can have a **single line** description.
-
-<Preview>
-    <Story name="item description">
+export const ItemDescription: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
                 <Text>Earth</Text>
@@ -177,13 +139,11 @@ A listbox item can have a **single line** description.
                 <Text slot="description">See you in 2026</Text>
             </Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-A description can be paired with an [icon](?path=/docs/icon-gallery--page).
-
-<Preview>
-    <Story name="item description + icon">
+export const ItemDescriptionIcon: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
                 <SparklesIcon />
@@ -201,13 +161,11 @@ A description can be paired with an [icon](?path=/docs/icon-gallery--page).
                 <Text slot="description">See you in 2026</Text>
             </Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-A description can also be paired with an [avatar](?path=/docs/avatar--default-story).
-
-<Preview>
-    <Story name="item description + avatar">
+export const ItemDescriptionAvatar: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item key="earth">
                 <Avatar name="Earth" />
@@ -225,15 +183,11 @@ A description can also be paired with an [avatar](?path=/docs/avatar--default-st
                 <Text slot="description">See you in 2026</Text>
             </Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Item tooltip
-
-A listbox item can have a basic tooltip.
-
-<Preview>
-    <Story name="item tooltip">
+export const ItemTooltip: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <TooltipTrigger>
                 <Item key="earth">Earth</Item>
@@ -248,35 +202,48 @@ A listbox item can have a basic tooltip.
                 <Tooltip>See you in 2026</Tooltip>
             </TooltipTrigger>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Array map
-
-A listbox items can be rendered with an array map.
-
-<Preview>
-    <Story name="array map">
+export const ArrayMap: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             {["Earth", "Jupiter", "Mars"].map(x => (
                 <Item key={x.toLowerCase()}>{x}</Item>
             ))}
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Listbox context
+export const ListboxContext: Story = {
+    render: () => {
+        function CustomOption({ item, children, ...rest }) {
+            const { selectedKeys } = useListboxContext();
+            const { key } = item;
 
-The `selectedKeys` state can be retrieved from `useListboxContext`.
+            return (
+                <ListboxOption
+                    {...rest}
+                    color={selectedKeys.includes(key) ? "primary" : undefined}
+                    item={item}
+                >
+                    {children}
+                </ListboxOption>
+            );
+        }
 
-<Preview filePath="/listbox/docs/ListboxContext" />
+        return (
+            <Listbox aria-label="Planets">
+                {["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus"].map(x => (
+                    <CustomOption item={x} key={x.toLowerCase()}>{x}</CustomOption>
+                ))}
+            </Listbox>
+        );
+    }
+};
 
-### Disabled item
-
-A listbox item can be disabled.
-
-<Preview>
-    <Story name="disabled item">
+export const DisabledItem: Story = {
+    render: () => (
         <Listbox aria-label="Planets">
             <Item disabled key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
@@ -286,16 +253,12 @@ A listbox item can be disabled.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Fluid
-
-A listbox can take the width of it's container.
-
-<Preview>
-    <Story name="fluid">
-        <Listbox fluid aria-label="Planets">
+export const Fluid: Story = {
+    render: () => (
+        <Listbox aria-label="Planets" fluid>
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
             <Item key="mars">Mars</Item>
@@ -304,16 +267,12 @@ A listbox can take the width of it's container.
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Validation
-
-A listbox can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the listbox via the `validationState` prop.
-
-<Preview>
-    <Story name="validation">
-        <Listbox validationState="invalid" defaultSelectedKeys={["mars"]} aria-label="Planets">
+export const Validation: Story = {
+    render: () => (
+        <Listbox aria-label="Planets" defaultSelectedKeys={["mars"]} validationState="invalid">
             <Item key="earth">Earth</Item>
             <Item key="jupiter">Jupiter</Item>
             <Item key="mars">Mars</Item>
@@ -322,65 +281,32 @@ A listbox can display a validation state to communicate to the user whether the 
             <Item key="saturn">Saturn</Item>
             <Item key="uranus">Uranus</Item>
         </Listbox>
-    </Story>
-</Preview>
+    )
+};
 
-### Controlled
+export const Controlled: Story = {
+    render: () => {
+        const [selectedKeys, setSelectedKeys] = useState([]);
 
-The `selectedKeys` state can be handled in controlled mode.
+        const handleSelectionChange = useCallback((event, newKeys) => {
+            setSelectedKeys(newKeys);
+            console.log(newKeys);
+        }, [setSelectedKeys]);
 
-<Preview filePath="/listbox/docs/ControlledListbox" />
-
-## API
-
-### Listbox
-
-<ComponentInfo
-    usage={"import { Listbox } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerListbox.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerListbox} sort="alpha" />
-
-### Item
-
-<ComponentInfo
-    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
-    slots={["icon", "avatar", "text", "description", "end-icon"]}
-    inherits={[InnerItem.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerItem} sort="alpha" />
-
-### Section
-
-<ComponentInfo
-    usage={"import { Section } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerSection.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerSection} sort="alpha" />
-
-### ListboxOption
-
-<ComponentInfo
-    usage={"import { ListboxOption } from \"@workleap/orbiter-ui\";"}
-    slots={["icon", "avatar", "text", "description", "end-icon"]}
-    inherits={[InnerListboxOption.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerListboxOption} sort="alpha" />
-
-### ListboxSection
-
-<ComponentInfo
-    usage={"import { ListboxSection } from \"@workleap/orbiter-ui\";"}
-    inherits={[InnerListboxSection.defaultElement, "styled-component"]}
-    compact
-/>
-
-<ArgsTable of={InnerListboxSection} sort="alpha" />
+        return (
+            <Listbox
+                aria-label="Planets"
+                onSelectionChange={handleSelectionChange}
+                selectedKeys={selectedKeys}
+            >
+                <Item key="earth">Earth</Item>
+                <Item key="jupiter">Jupiter</Item>
+                <Item key="mars">Mars</Item>
+                <Item key="mercury">Mercury</Item>
+                <Item key="neptune">Neptune</Item>
+                <Item key="saturn">Saturn</Item>
+                <Item key="uranus">Uranus</Item>
+            </Listbox>
+        );
+    }
+};

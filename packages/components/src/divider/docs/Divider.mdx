@@ -1,0 +1,51 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerDivider } from "@components/divider";
+import * as DividerStories from "./Divider.stories.tsx";
+
+<Meta of={DividerStories} />
+
+# Divider
+
+<Tagline>A divider to separates and distinguishes sections of content or groups of menu items.</Tagline>
+
+<ComponentInfo
+    usage={"import { Divider } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/divider/src"
+/>
+
+## Usage
+
+### Default
+
+By default a divider render horizontally which takes the width of it's container.
+
+<Canvas of={DividerStories.Horizontal} />
+
+### Vertical
+
+A divider can change his orientation to vertical.
+
+<Canvas of={DividerStories.Vertical} />
+
+### Labelled
+
+A divider can have a label when it's render horizontally:
+
+<Canvas of={DividerStories.LabelledHorizontally} />
+
+Or vertically:
+
+<Canvas of={DividerStories.LabelledVertically} />
+
+## API
+
+### Divider
+
+<ComponentInfo
+    usage={"import { Divider } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerDivider.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerDivider} sort="alpha" />

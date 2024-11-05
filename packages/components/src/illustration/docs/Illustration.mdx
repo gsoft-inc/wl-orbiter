@@ -1,0 +1,48 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerIllustration } from "@components/illustration";
+import * as IllustrationStories from "./Illustration.stories.tsx";
+
+<Meta of={IllustrationStories} />
+
+# Illustration
+
+<Tagline>An illustration compose an image with a background color. Use an illustration as an hero in a modal.</Tagline>
+
+<ComponentInfo
+    usage={"import { Illustration } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/illustration/src"
+/>
+
+## Usage
+
+### Default
+
+An illustration renders horizontally by default.
+
+<Canvas of={IllustrationStories.Default} />
+
+### Vertical
+
+An illustration can render vertically.
+
+<Canvas of={IllustrationStories.Vertical} />
+
+### Shape
+
+An illustration can have a `rounded` shape.
+
+<Canvas of={IllustrationStories.Shape} />
+
+## API
+
+### Illustration
+
+<ComponentInfo
+    usage={"import { Illustration } from \"@workleap/orbiter-ui\";"}
+    slots={["image"]}
+    inherits={[InnerIllustration.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerIllustration} sort="alpha" />
