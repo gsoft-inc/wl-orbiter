@@ -68,7 +68,7 @@ export const DisabledToolbar: ToolbarStory = {
 
 export const Gap: ToolbarStory = {
     render: () => (
-        <Toolbar gap={9}>
+        <Toolbar gap="inline-md">
             <TextInput placeholder="Destination" />
             <RadioGroup>
                 <Radio value="roscosmos">Roscosmos</Radio>

@@ -1,7 +1,8 @@
 import { TextArea } from "@components/text-area";
-import { useCallback, useState, useMemo } from "react";
+import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
+import { ErrorMessage, Field, HelpMessage } from "@components/field";
 
 const meta = {
     title: "Components/TextArea",
@@ -68,21 +69,26 @@ export const LengthValidation: TextAreaStory = {
 
         const [value, setValue] = useState("");
 
-        const handleValueChange = useCallback(event => {
-            setValue(event.target.value);
-            console.log(event.target.value);
-        }, [setValue]);
+        const handleValueChange = useCallback(
+            event => {
+                setValue(event.target.value);
+                console.log(event.target.value);
+            },
+            [setValue]
+        );
 
-        const isValid = useMemo(() => value.length <= MaxValue, [value]);
+        const isValid = value.length <= MaxValue;
 
         return (
-            <TextArea
-                help={`${MaxValue - value.length} characters left.`}
-                onValueChange={handleValueChange}
-                placeholder={`Why should you go to space? (max ${MaxValue} characters)`}
-                validationState={isValid ? "valid" : "invalid"}
-                value={value}
-            />
+            <Field validationState={isValid ? undefined : "invalid"}>
+                <TextArea
+                    value={value}
+                    placeholder={`Why should you go to space? (max ${MaxValue} characters)`}
+                    onValueChange={handleValueChange}
+                />
+                <HelpMessage>{`${MaxValue - value.length} characters left.`}</HelpMessage>
+                <ErrorMessage>Maximum characters exceeded</ErrorMessage>
+            </Field>
         );
     }
 };

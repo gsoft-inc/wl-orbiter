@@ -90,7 +90,7 @@ export const CounterStory: RadioGroupStory = {
 
 export const Size: RadioGroupStory = {
     render: () => (
-        <Inline alignY="start" gap={50}>
+        <Inline alignY="start" gap="inline-md">
             <RadioGroup defaultValue="jupiter" size="md">
                 <Radio value="mars">Mars</Radio>
                 <Radio value="jupiter">Jupiter</Radio>
