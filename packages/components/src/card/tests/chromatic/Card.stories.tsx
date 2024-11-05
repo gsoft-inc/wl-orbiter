@@ -91,7 +91,7 @@ export const VerticalAndImage: CardStory = {
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
             <Card fluid orientation="vertical">
-                <Image src={ApolloBanner} alt="Appolo 11" fit="cover" height="200px" />
+                <Image src={ApolloBanner} alt="Appolo 11" objectFit="cover" height="200px" />
                 <Heading>Nasa</Heading>
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
