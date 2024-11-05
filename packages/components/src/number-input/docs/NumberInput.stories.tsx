@@ -71,7 +71,7 @@ export const Fluid: NumberInputStory = {
 /* eslint-disable react-hooks/rules-of-hooks */
 export const RequiredAgeValidation: NumberInputStory = {
     render: () => {
-        const [value, setValue] = useState(18);
+        const [value, setValue] = useState<number | null>(18);
 
         const handleValueChange = useCallback((event, newValue) => {
             setValue(newValue);
