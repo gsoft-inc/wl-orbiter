@@ -27,15 +27,14 @@
         "build": "pnpm build:js & pnpm copy-files",
         "build:js": "tsc --build ./tsconfig.build.json",
         "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
-        "clean": "rimraf dist tsconfig.build.tsbuildinfo"
+        "clean": "pnpm dlx rimraf dist tsconfig.build.tsbuildinfo"
     },
     "peerDependencies": {
         "react": "*",
         "react-dom": "*"
     },
     "dependencies": {
-        "@orbit-ui/transition-components": "5.5.0",
-        "@orbit-ui/transition-css": "2.4.0",
-        "@orbit-ui/transition-icons": "2.0.0"
+        "@orbit-ui/transition-components": "workspace:*",
+        "@orbit-ui/transition-css": "workspace:*"
     }
 }

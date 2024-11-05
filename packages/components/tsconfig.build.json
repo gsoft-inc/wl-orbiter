@@ -10,6 +10,7 @@
         "../../@types/*"
     ],
     "exclude": [
-        "**/tests/*"
+        "**/tests/*",
+        "**/docs/*",
     ]
 }
