@@ -26,7 +26,7 @@
     "lint": "pnpm run \"/^lint:.*/\"",
     "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx,.mdx . --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:style": "stylelint \"**/*.css\" --allow-empty-input --cache",
-    "lint:typecheck": "tsc",
+    "lint:typecheck": "cross-env NODE_OPTIONS=--max-old-space-size=8192 tsc",
     "lint-ci-eslint": "eslint --ext .js,.jsx,.ts,.tsx,.mdx . --max-warnings=0",
     "lint-ci-style": "stylelint \"**/*.css\" --allow-empty-input",
     "lint-ci-typecheck": "tsc",
