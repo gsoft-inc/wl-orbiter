@@ -44,7 +44,7 @@ const ActiveHeader = ({ tab, children, onSelect, ...rest }) => {
 const ColoredHeader = ({ children, tab, onSelect, ...rest }) => {
     return (
         <Tab onSelect={onSelect} tab={tab} {...rest} >
-            <Text color="red">{children}</Text>
+            <Text UNSAFE_color="red">{children}</Text>
         </Tab>
     );
 };

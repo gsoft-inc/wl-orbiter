@@ -1,7 +1,7 @@
 import { Menu, MenuTrigger, useMenuTriggerContext } from "@components/menu";
 import { Button, IconButton } from "@components/button";
 import { IconList } from "@components/icons";
-import { Content, Item, Section } from "@components/collection";
+import { Item, Section } from "@components/collection";
 import { Divider } from "@components/divider";
 import { DisclosureArrow } from "@components/disclosure";
 import { TooltipTrigger, Tooltip } from "@components/tooltip";
@@ -13,6 +13,7 @@ import { CatIcon, KebabIcon, RocketIcon, SparklesIcon } from "@hopper-ui/icons";
 import { useCallback, useState, forwardRef } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
+import { Content } from "@components/placeholders";
 
 const meta = {
     title: "Components/Menu",
@@ -339,7 +340,7 @@ export const ModalStory: MenuStory = {
     render: () => {
         const [isOpen, setIsOpen] = useState(false);
 
-        const handleSelectionChange = useCallback((event, keys) => {
+        const handleSelectionChange = useCallback(() => {
             setIsOpen(true);
         }, [setIsOpen]);
 
@@ -409,7 +410,7 @@ export const Selection: MenuStory = {
 /* eslint-disable react-hooks/rules-of-hooks */
 export const CustomTriggerStory: MenuStory = {
     render: () => {
-        const CustomTrigger = forwardRef((props, ref) => {
+        const CustomTrigger = forwardRef<HTMLButtonElement>((props, ref) => {
             const { isOpen } = useMenuTriggerContext();
 
             return (

@@ -58,7 +58,7 @@ export const Disabled: TooltipStory = {
 
 export const CustomTriggerStory: TooltipStory = {
     render: () => {
-        const CustomTrigger = forwardRef((props, ref) => {
+        const CustomTrigger = forwardRef<HTMLButtonElement>((props, ref) => {
             const { isOpen } = useTooltipTriggerContext();
 
             return (

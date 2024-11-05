@@ -7,6 +7,4 @@ export * from "./tagline";
 export * from "./component-info";
 export * from "./snippet";
 export * from "./themed-snippet";
-export * from "./package-installation-snippet";
-export * from "./preview";
 export * from "./banner";

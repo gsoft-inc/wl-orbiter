@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Meta, StoryObj } from "@storybook/react";
 import { Div, ThemeProvider } from "@components";
-import { TokenTable } from "./TokenTable";
-import { BackgroundColors } from "./Tokens";
 
 const meta = {
     title: "Features/Tokens",

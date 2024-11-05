@@ -86,6 +86,8 @@ jobs:
               run: |
                 corepack enable
                 pnpm install --frozen-lockfile
+            - name: Typecheck
+              run: pnpm run lint-ci-eslint
             - name: Build Packages
               run: pnpm run build
             - name: Run Jest

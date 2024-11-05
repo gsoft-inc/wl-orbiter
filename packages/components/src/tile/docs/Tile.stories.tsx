@@ -202,9 +202,9 @@ export const TileGroupMultipleSelection: TileStory = {
 export const TileGroupRowSize: TileStory = {
     render: () => (
         <TileGroup rowSize={{
-            base: "1",
-            md: "2",
-            lg: "3"
+            base: 1,
+            md: 2,
+            lg: 3
         }}
         >
             <TileLink href="https://www.virgingalactic.com">
@@ -256,9 +256,9 @@ export const TileGroupControlled: TileStory = {
             <TileGroup
                 onChange={handleChange}
                 rowSize={{
-                    base: "1",
-                    md: "2",
-                    lg: "3"
+                    base: 1,
+                    md: 2,
+                    lg: 3
                 }}
                 selectionMode="multiple"
                 value={value}

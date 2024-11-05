@@ -6,7 +6,7 @@ import { IconList } from "@components/icons";
 import { CatIcon, RocketIcon, SearchIcon, SparklesIcon } from "@hopper-ui/icons";
 import { Item, Section, useAsyncSearch } from "@components/collection";
 import { Text } from "@components/typography";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { isNil } from "@components/shared";
 import { Inline } from "@components/layout";
 
@@ -333,7 +333,7 @@ export const RemoteItems: Story = {
 
 export const CustomSearch: Story = {
     render: () => {
-        const planets = [
+        const planets = useMemo(() => ([
             { key: "earth", value: "Earth", canShow: true },
             { key: "jupiter", value: "Jupiter", canShow: true },
             { key: "mars", value: "Mars", canShow: true },
@@ -341,13 +341,13 @@ export const CustomSearch: Story = {
             { key: "neptune", value: "Neptune", canShow: false },
             { key: "saturn", value: "Saturn", canShow: false },
             { key: "uranus", value: "Uranus", canShow: false }
-        ];
+        ]), []);
 
         const [selectedPlanets, setSelectedPlanets] = useState(planets);
 
         const handleSearch = useCallback((event, query) => {
             setSelectedPlanets(planets.filter(x => x.value.toLowerCase().startsWith(query.toLowerCase()) && x.canShow));
-        }, [setSelectedPlanets]);
+        }, [setSelectedPlanets, planets]);
 
         return (
             <Autocomplete

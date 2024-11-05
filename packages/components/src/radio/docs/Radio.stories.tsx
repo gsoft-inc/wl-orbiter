@@ -13,7 +13,7 @@ const meta = {
     title: "Components/RadioGroup",
     component: RadioGroup,
     id: "radio-group"
-} as Meta<typeof Radio>;
+} as Meta<typeof RadioGroup>;
 
 export default meta;
 

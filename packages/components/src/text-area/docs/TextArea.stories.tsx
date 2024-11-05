@@ -33,7 +33,7 @@ export const MaxRows: TextAreaStory = {
 
 export const ReadOnly: TextAreaStory = {
     render: () => (
-        <TextArea placeholder="Why should you go to space?" readonly />
+        <TextArea placeholder="Why should you go to space?" readOnly />
     )
 };
 

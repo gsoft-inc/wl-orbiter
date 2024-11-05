@@ -1,4 +1,4 @@
-import { Accordion, AccordionHeader, useAccordionContext } from "@components/accordion";
+import { Accordion, AccordionHeader, useAccordionContext, type AccordionHeaderProps } from "@components/accordion";
 import { Content } from "@components/placeholders";
 import { H3, H1, Text } from "@components/typography";
 import { Stack } from "@components/layout";
@@ -283,7 +283,13 @@ export const DynamicItems: AccordionStory = {
     )
 };
 
-const ActiveHeader = ({ header, children, ...rest }) => {
+interface ActiveHeaderProps extends Omit<AccordionHeaderProps, "headingType"> {
+    header?: {
+        key:string;
+    };
+}
+
+const ActiveHeader = ({ header, children, ...rest }: ActiveHeaderProps) => {
     const { expandedKeys } = useAccordionContext();
     const { key } = header;
 

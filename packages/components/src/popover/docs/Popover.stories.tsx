@@ -85,7 +85,7 @@ export const Position: PopoverStory = {
 
 export const Context: PopoverStory = {
     render: () => {
-        const HighlightedTrigger = forwardRef(({ ...rest }, ref) => {
+        const HighlightedTrigger = forwardRef<HTMLButtonElement>(({ ...rest }, ref) => {
             const { isOpen } = usePopoverTriggerContext();
 
             return (

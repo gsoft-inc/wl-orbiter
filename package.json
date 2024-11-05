@@ -29,6 +29,7 @@
     "lint:typecheck": "tsc",
     "lint-ci-eslint": "eslint --ext .js,.jsx,.ts,.tsx,.mdx . --max-warnings=0",
     "lint-ci-style": "stylelint \"**/*.css\" --allow-empty-input",
+    "lint-ci-typecheck": "tsc",
     "list-outdated-deps": "pnpm outdated -r --format list",
     "update-outdated-deps": "pnpm update -r --latest \"!eslint\"",
     "test": "jest",

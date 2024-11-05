@@ -1,5 +1,6 @@
 import { Tabs, useTabsContext } from "@components/tabs";
-import { Item, Content, Header } from "@components/placeholders";
+import { Content, Header } from "@components/placeholders";
+import { Item } from "@components/collection";
 import { Div } from "@components/html";
 import { Lozenge } from "@components/lozenge";
 import { SparklesIcon } from "@hopper-ui/icons";

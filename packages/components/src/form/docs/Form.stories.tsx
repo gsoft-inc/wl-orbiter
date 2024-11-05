@@ -247,6 +247,7 @@ export const ButtonAlignment: Story = {
 
 export const Formik: Story = {
     render: () => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         const formik = useFormik({
             initialValues: {
                 firstName: "",

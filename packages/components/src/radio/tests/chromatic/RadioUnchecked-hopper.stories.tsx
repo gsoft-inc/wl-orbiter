@@ -204,10 +204,10 @@ export const Overflow: RadioStory = {
     name: "overflow",
     render: () => (
         <Stack>
-            <Flex alignItems="end" maxWidth="16rem">
+            <Flex alignItems="end" UNSAFE_maxWidth="16rem">
                 <Radio value="any">PA-99-N2 event and possible exoplanet in galaxy</Radio>
             </Flex>
-            <Flex alignItems="end" maxWidth="16rem">
+            <Flex alignItems="end" UNSAFE_maxWidth="16rem">
                 <Radio value="any">
                     <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                     <IconList>
@@ -215,7 +215,7 @@ export const Overflow: RadioStory = {
                     </IconList>
                 </Radio>
             </Flex>
-            <Flex alignItems="end" maxWidth="16rem">
+            <Flex alignItems="end" UNSAFE_maxWidth="16rem">
                 <Radio value="any">
                     <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                     <Counter>60</Counter>

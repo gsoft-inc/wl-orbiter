@@ -323,7 +323,7 @@ export const RichContent: CardStory = {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <Link href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
+                            <Link href="https://www.nasa.gov" isExternal>The National Aeronautics and Space Administration</Link>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -335,7 +335,7 @@ export const RichContent: CardStory = {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <Link href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
+                            <Link href="https://www.nasa.gov" isExternal>The National Aeronautics and Space Administration</Link>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -347,7 +347,7 @@ export const RichContent: CardStory = {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <Link href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
+                            <Link href="https://www.nasa.gov" isExternal>The National Aeronautics and Space Administration</Link>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -361,7 +361,7 @@ export const RichContent: CardStory = {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <Link href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
+                            <Link href="https://www.nasa.gov" isExternal>The National Aeronautics and Space Administration</Link>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -373,7 +373,7 @@ export const RichContent: CardStory = {
                     <Heading>Nasa</Heading>
                     <Content>
                         <Paragraph>
-                            <Link href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
+                            <Link href="https://www.nasa.gov" isExternal>The National Aeronautics and Space Administration</Link>
                         </Paragraph>
                         <UL>
                             <LI>Space Shuttle program</LI>
@@ -386,7 +386,7 @@ export const RichContent: CardStory = {
                 <Heading>Nasa</Heading>
                 <Content>
                     <Paragraph>
-                        <Link href="https://www.nasa.gov" external>The National Aeronautics and Space Administration</Link>
+                        <Link href="https://www.nasa.gov" isExternal>The National Aeronautics and Space Administration</Link>
                     </Paragraph>
                     <UL>
                         <LI>Space Shuttle program</LI>
