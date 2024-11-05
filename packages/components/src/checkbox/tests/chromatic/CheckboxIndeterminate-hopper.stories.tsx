@@ -248,10 +248,10 @@ export const Overflow: CheckboxStory = {
     name: "overflow",
     render: () => (
         <Stack>
-            <Flex alignItems="end" UNSAFE_maxWidth={320}>
+            <Flex alignItems="end" UNSAFE_maxWidth="320px">
                 <Checkbox indeterminate>PA-99-N2 event and possible exoplanet in galaxy</Checkbox>
             </Flex>
-            <Flex alignItems="end" UNSAFE_maxWidth={320}>
+            <Flex alignItems="end" UNSAFE_maxWidth="320px">
                 <Checkbox indeterminate>
                     <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                     <IconList>
@@ -259,7 +259,7 @@ export const Overflow: CheckboxStory = {
                     </IconList>
                 </Checkbox>
             </Flex>
-            <Flex alignItems="end" UNSAFE_maxWidth={320}>
+            <Flex alignItems="end" UNSAFE_maxWidth="320px">
                 <Checkbox indeterminate>
                     <Text>PA-99-N2 event and possible exoplanet in galaxy</Text>
                     <Counter>60</Counter>
