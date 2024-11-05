@@ -25,7 +25,7 @@ export const Default: CheckboxStory = {
     )
 };
 
-export const Label: CheckboxStory = {
+export const NoLabel: CheckboxStory = {
     render: () => (
         <Checkbox aria-label="Milky Way" />
     )
@@ -141,7 +141,7 @@ export const CheckboxGroupStory: CheckboxStory = {
     )
 };
 
-export const Orentation: CheckboxStory = {
+export const Orientation: CheckboxStory = {
     render: () => (
         <CheckboxGroup orientation="vertical">
             <Checkbox value="milky-way" >Milky Way</Checkbox>
