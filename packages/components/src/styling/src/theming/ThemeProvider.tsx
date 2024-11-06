@@ -62,7 +62,7 @@ export function InnerThemeProvider(props: InnerThemeProviderProps) {
                                 "o-ui",
                                 `o-ui-${computedColorScheme}`,
                                 "o-ui-orbiter",
-                                `o-ui-orbiter-${computedColorScheme}`,
+                                `o-ui-orbiter-${computedColorScheme}`
                             )
                         }
                     )}

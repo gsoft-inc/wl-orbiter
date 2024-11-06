@@ -1,4 +1,4 @@
-import { type ColorScheme } from "@hopper-ui/components";
+import { ColorScheme } from "@hopper-ui/components";
 import { makeDecorator } from "@storybook/preview-api";
 import { ThemeProvider } from "../../packages/components/src/styling";
 

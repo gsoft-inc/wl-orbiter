@@ -152,6 +152,7 @@ test("when the root element is focusable, the scope includes the root element", 
     const textInputRef = createRef<HTMLInputElement>();
 
     render(
+        // eslint-disable-next-line jsx-a11y/tabindex-no-positive
         <Container tabIndex={1} ref={rootRef} onInitialScope={scope => { focusScope = scope; }}>
             <Div>Decoy 1</Div>
             <Button ref={buttonRef}>Button</Button>

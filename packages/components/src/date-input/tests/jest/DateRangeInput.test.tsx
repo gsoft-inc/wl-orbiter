@@ -17,6 +17,7 @@ function type(element: HTMLElement, text: string) {
 function backspace(element: HTMLElement, times = 1) {
     const promises: Promise<void>[] = [];
     for (let x = 0; x < times; x += 1) {
+        // eslint-disable-next-line testing-library/await-async-events
         promises.push(userEvent.type(element, "{backspace}"));
     }
 

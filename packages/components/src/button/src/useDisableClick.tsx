@@ -12,7 +12,7 @@ export function useDisableClick<T = Element>(disabled: boolean, handleClick: Mou
                 event.stopPropagation();
             }
         },
-        [disabled],
+        [disabled]
     );
 
     if (!disabled) {

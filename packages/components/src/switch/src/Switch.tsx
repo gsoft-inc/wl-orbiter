@@ -86,7 +86,7 @@ export function InnerSwitch(props: InnerSwitchProps) {
     } = mergeProps(
         props,
         omitProps(toolbarProps, ["orientation"]),
-        omitProps(fieldProps, ["fluid"]),
+        omitProps(fieldProps, ["fluid"])
     );
 
     if (isNil(children) && isNil(ariaLabel) && isNil(ariaLabelledBy)) {
