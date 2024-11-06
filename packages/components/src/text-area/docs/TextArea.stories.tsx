@@ -82,9 +82,9 @@ export const LengthValidation: TextAreaStory = {
         return (
             <Field validationState={isValid ? undefined : "invalid"}>
                 <TextArea
-                    value={value}
-                    placeholder={`Why should you go to space? (max ${MaxValue} characters)`}
                     onValueChange={handleValueChange}
+                    placeholder={`Why should you go to space? (max ${MaxValue} characters)`}
+                    value={value}
                 />
                 <HelpMessage>{`${MaxValue - value.length} characters left.`}</HelpMessage>
                 <ErrorMessage>Maximum characters exceeded</ErrorMessage>

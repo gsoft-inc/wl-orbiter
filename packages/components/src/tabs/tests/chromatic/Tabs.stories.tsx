@@ -23,7 +23,7 @@ export default meta;
 
 type TabsStory = StoryObj<typeof meta>;
 
-interface ActiveHeaderProps extends Omit<TabProps,"tab" | "onSelect"> {
+interface ActiveHeaderProps extends Omit<TabProps, "tab" | "onSelect"> {
     tab?: TabProps["tab"];
     onSelect?: TabProps["onSelect"];
 }

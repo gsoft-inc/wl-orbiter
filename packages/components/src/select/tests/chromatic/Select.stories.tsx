@@ -91,8 +91,6 @@ export const Styling: SelectStory = {
     )
 };
 
-
-
 function CustomSelect({
     open,
     placeholder,
