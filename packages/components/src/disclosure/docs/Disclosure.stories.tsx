@@ -1,11 +1,11 @@
-import { Button } from "@components/button";
-import { Disclosure, DisclosureArrow, useDisclosureContext } from "@components/disclosure";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Button } from "@components/button/index.ts";
+import { Disclosure, DisclosureArrow, useDisclosureContext } from "@components/disclosure/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { TextLinkAsButton } from "@components/link";
+import { TextLinkAsButton } from "@components/link/index.ts";
 import { AngleDownIcon } from "@hopper-ui/icons";
 
 const meta = {

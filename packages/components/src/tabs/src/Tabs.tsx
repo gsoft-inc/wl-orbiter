@@ -1,9 +1,9 @@
 import { useMemo, ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useControllableState, useEventCallback, useId } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useControllableState, useEventCallback, useId } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
 import { TabsContext, TabsOrientation, TabsVariant } from "./TabsContext";
 
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts"
 import { TabList } from "./TabList";
 import { TabPanels } from "./TabPanels";
 import { useTabsItems } from "./useTabsItems";

@@ -1,6 +1,6 @@
 import { ForwardedRef } from "react";
-import { MergedRef, cssModule, isNil, mergeClasses, useHasChildren, useId, useIsInitialRender, useMergedRefs } from "../../shared";
-import { ValidationState } from "../../input";
+import { MergedRef, cssModule, isNil, mergeClasses, useHasChildren, useId, useIsInitialRender, useMergedRefs } from "../../shared/index.ts"
+import { ValidationState } from "../../input/index.ts"
 import type { FieldContextType } from "./FieldContext";
 
 export interface UseGroupFieldProps {

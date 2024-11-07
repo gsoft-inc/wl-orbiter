@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { TextInput } from "@components/text-input";
+import { TextInput } from "@components/text-input/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

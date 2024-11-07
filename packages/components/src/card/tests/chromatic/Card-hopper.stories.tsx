@@ -1,11 +1,11 @@
 import { ApolloBanner, ApolloPoster } from "./assets";
-import { Box } from "@components/box";
-import { Card } from "@components/card";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Content } from "@components/placeholders";
+import { Box } from "@components/box/index.ts";
+import { Card } from "@components/card/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Content } from "@components/placeholders/index.ts";
 import { Flex, Heading } from "@hopper-ui/components";
-import { Image } from "@components/image";
+import { Image } from "@components/image/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

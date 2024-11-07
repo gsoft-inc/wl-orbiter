@@ -1,5 +1,5 @@
-import { Dot } from "@components/dot";
-import { Inline } from "@components/layout";
+import { Dot } from "@components/dot/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react/*";
 
 const meta = {

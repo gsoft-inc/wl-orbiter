@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.ts"
 import { ComponentProps, ElementType, MouseEvent, ReactNode, SyntheticEvent, cloneElement, forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
     FocusScopeContext,
@@ -22,13 +22,13 @@ import {
     useRefState,
     useResizeObserver,
     useSlots
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Underlay, isElementInViewport, useOverlayFocusRing, useOverlayLightDismiss, useRestoreFocus, useTrapFocus } from "../../overlay";
+} from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
+import { Underlay, isElementInViewport, useOverlayFocusRing, useOverlayLightDismiss, useRestoreFocus, useTrapFocus } from "../../overlay/index.ts"
 
-import { CrossButton } from "../../button";
-import { Div } from "../../html";
-import { Text } from "../../typography";
+import { CrossButton } from "../../button/index.ts"
+import { Div } from "../../html/index.ts"
+import { Text } from "../../typography/index.ts"
 import { useDialogTriggerContext } from "./DialogTriggerContext";
 import { ButtonGroupContext, HeadingContext } from "@hopper-ui/components";
 

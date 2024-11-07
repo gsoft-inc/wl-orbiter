@@ -1,6 +1,6 @@
 import { ButtonVariant } from "./useButton";
 import { FormEvent, ForwardedRef, MouseEvent } from "react";
-import { isNil, useControllableState, useEventCallback } from "../../shared";
+import { isNil, useControllableState, useEventCallback } from "../../shared/index.ts"
 
 export type ToggleButtonVariant = Exclude<ButtonVariant, "negative">;
 

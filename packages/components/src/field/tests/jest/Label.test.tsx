@@ -1,4 +1,4 @@
-import { Label, LabelProps } from "@components/field";
+import { Label, LabelProps } from "@components/field/index.ts";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

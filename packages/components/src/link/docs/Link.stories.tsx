@@ -1,9 +1,9 @@
 import { SparklesIcon } from "@hopper-ui/icons";
 import { GalaxyLargeImage } from "./assets";
-import { IconLink, IconLinkAsButton, Link, TextLink, TextLinkAsButton } from "@components/link";
-import { Image } from "@components/image";
-import { Inline } from "@components/layout";
-import { Text } from "@components/typography";
+import { IconLink, IconLinkAsButton, Link, TextLink, TextLinkAsButton } from "@components/link/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 import { RouterLink } from "./RouterLink";
 

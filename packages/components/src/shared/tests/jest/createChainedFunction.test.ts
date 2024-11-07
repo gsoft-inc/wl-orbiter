@@ -1,4 +1,4 @@
-import { createChainedFunction } from "@components/shared";
+import { createChainedFunction } from "@components/shared/index.ts";
 
 test("return func when no arguments", () => {
     expect(typeof (createChainedFunction())).toBe("function");

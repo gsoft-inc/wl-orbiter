@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { TBody, TD, TFoot, TH, THead, TR, Table } from "@components/html";
+import { TBody, TD, TFoot, TH, THead, TR, Table } from "@components/html/index.ts";
 
 const meta = {
     title: "Html elements/Table",

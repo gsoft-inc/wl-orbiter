@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@components/styling";
+import { ThemeProvider } from "@components/styling/index.ts";
 import { DocsContainer } from "@storybook/blocks";
 
 

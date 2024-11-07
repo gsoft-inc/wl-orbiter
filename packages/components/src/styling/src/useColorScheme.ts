@@ -1,4 +1,4 @@
-import { isNil } from "../../shared";
+import { isNil } from "../../shared/index.ts"
 import { useEffect } from "react";
 import { useMediaQuery } from "./useMediaQuery";
 

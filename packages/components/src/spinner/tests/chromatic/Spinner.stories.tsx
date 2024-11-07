@@ -1,5 +1,5 @@
-import { Spinner } from "@components/spinner";
-import { Inline, Stack } from "@components/layout";
+import { Spinner } from "@components/spinner/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,10 +1,10 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Avatar, IconList, Text } from "@hopper-ui/components";
 import { LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Item, Section, NodeType } from "@components/collection";
-import { Menu, MenuItem, MenuItemProps } from "@components/menu";
+import { Item, Section, NodeType } from "@components/collection/index.ts";
+import { Menu, MenuItem, MenuItemProps } from "@components/menu/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

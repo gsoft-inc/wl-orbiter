@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { expectAssignable } from "@test-utils";
-import { getSlots } from "@components/shared";
+import { getSlots } from "@components/shared/index.ts";
 
 const node: ReactNode = null;
 

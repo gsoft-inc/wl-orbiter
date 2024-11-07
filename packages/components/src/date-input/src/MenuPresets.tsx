@@ -1,9 +1,9 @@
-import { DisclosureArrow } from "../../disclosure";
-import { IconButton } from "../../button";
-import { Item } from "../../collection";
-import { Menu, MenuTrigger } from "../../menu";
+import { DisclosureArrow } from "../../disclosure/index.ts"
+import { IconButton } from "../../button/index.ts"
+import { Item } from "../../collection/index.ts"
+import { Menu, MenuTrigger } from "../../menu/index.ts"
 import { SyntheticEvent, useRef } from "react";
-import { useEventCallback } from "../../shared";
+import { useEventCallback } from "../../shared/index.ts"
 
 export interface MenuPresetsProps {
     onSelectionChange: (event: SyntheticEvent, index: number) => void;

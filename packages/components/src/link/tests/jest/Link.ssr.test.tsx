@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 import { AddIcon } from "@hopper-ui/icons";
-import { Link } from "@components/link";
+import { Link } from "@components/link/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,5 +1,5 @@
 import { FocusEvent, KeyboardEvent, RefObject, SyntheticEvent } from "react";
-import { FocusScope, Keys, isNil, mergeProps, useEventCallback, useRefState } from "../../shared";
+import { FocusScope, Keys, isNil, mergeProps, useEventCallback, useRefState } from "../../shared/index.ts"
 import { UseOverlayLightDismissOptions, useOverlayLightDismiss } from "./useOverlayLightDismiss";
 
 import { isDevToolsBlurEvent } from "./isDevtoolsBlurEvent";

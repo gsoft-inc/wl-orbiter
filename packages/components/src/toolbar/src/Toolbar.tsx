@@ -1,5 +1,5 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout";
+import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout/index.ts"
 import {
     InternalProps,
     Keys,
@@ -14,8 +14,8 @@ import {
     useMergedRefs,
     useRovingFocus,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
 import { ToolbarContext } from "./ToolbarContext";
 
 const DefaultElement = "div";

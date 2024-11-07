@@ -1,8 +1,8 @@
 // import { viewport, withHopperProvider } from "./storybook-addon/index";
 import { viewport } from "./storybook-addon/index";
-import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators";
+import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators/index.ts";
 import "./stories.css";
-import { isChromatic } from "./env";
+import { isChromatic } from "./env.ts";
 import { Themes } from "./styles/themes";
 import { formatCode } from "./components/snippet/useFormattedCode";
 import type { Preview } from "@storybook/react";
@@ -10,7 +10,7 @@ import type { Preview } from "@storybook/react";
 import "@components/index.css";
 import "./styles";
 import "@hopper-ui/tokens/fonts.css";
-import { Highlight } from "./mdx";
+import { Highlight } from "./mdx/index.ts";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.

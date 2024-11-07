@@ -1,5 +1,5 @@
-import { Box } from "../../box";
-import { InternalProps, StyledComponentProps, mergeProps } from "../../shared";
+import { Box } from "../../box/index.ts"
+import { InternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts"
 import { PanelType } from "./useTabsItems";
 import { Ref } from "react";
 import { TabPanel } from "./TabPanel";

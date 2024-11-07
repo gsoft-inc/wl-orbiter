@@ -1,5 +1,5 @@
-import { Inline } from "@components/layout";
-import { Radio } from "@components/radio";
+import { Inline } from "@components/layout/index.ts";
+import { Radio } from "@components/radio/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

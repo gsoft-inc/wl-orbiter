@@ -1,7 +1,7 @@
-import { TextInput, PasswordInput, SearchInput } from "@components/text-input";
+import { TextInput, PasswordInput, SearchInput } from "@components/text-input/index.ts";
 import { EditIcon } from "@hopper-ui/icons";
-import { CrossButton } from "@components/button";
-import { Inline } from "@components/layout";
+import { CrossButton } from "@components/button/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { useCallback, useMemo, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

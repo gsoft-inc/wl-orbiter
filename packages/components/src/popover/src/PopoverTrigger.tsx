@@ -7,9 +7,9 @@ import {
     isNil,
     mergeProps,
     resolveChildren
-} from "../../shared";
-import { Overlay, OverlayArrow, PopupPositionProp, PopupProps, usePopup } from "../../overlay";
-import { useResponsiveValue } from "../../styling";
+} from "../../shared/index.ts"
+import { Overlay, OverlayArrow, PopupPositionProp, PopupProps, usePopup } from "../../overlay/index.ts"
+import { useResponsiveValue } from "../../styling/index.ts"
 
 import { PopoverTriggerContext } from "./PopoverTriggerContext";
 

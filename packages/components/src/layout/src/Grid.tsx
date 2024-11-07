@@ -15,11 +15,11 @@ import {
     SpacingValue,
     getSizingValue,
     useResponsiveValue
-} from "../../styling";
-import { Box, type BoxProps } from "../../box";
+} from "../../styling/index.ts"
+import { Box, type BoxProps } from "../../box/index.ts"
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isArray, isNil, mergeProps } from "../../shared";
-import { useFormContext } from "../../form";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, isArray, isNil, mergeProps } from "../../shared/index.ts"
+import { useFormContext } from "../../form/index.ts"
 
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/repeat.
 export function repeat(count: number | "auto-fill" | "auto-fit", repetition: SpacingValue | SpacingValue[]) {

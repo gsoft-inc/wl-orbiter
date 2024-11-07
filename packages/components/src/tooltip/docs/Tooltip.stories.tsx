@@ -1,7 +1,7 @@
-import { Button, IconButton } from "@components/button";
+import { Button, IconButton } from "@components/button/index.ts";
 import { CalendarIcon, SparklesIcon } from "@hopper-ui/icons";
-import { Inline } from "@components/layout";
-import { Tooltip, TooltipTrigger, useTooltipTriggerContext } from "@components/tooltip";
+import { Inline } from "@components/layout/index.ts";
+import { Tooltip, TooltipTrigger, useTooltipTriggerContext } from "@components/tooltip/index.ts";
 import { forwardRef, useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

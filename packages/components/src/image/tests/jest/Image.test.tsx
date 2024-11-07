@@ -1,4 +1,4 @@
-import { Image } from "@components/image";
+import { Image } from "@components/image/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

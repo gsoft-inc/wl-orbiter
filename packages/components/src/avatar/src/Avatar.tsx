@@ -1,7 +1,7 @@
-import { AsyncImage } from "../../image";
-import { Box } from "../../box";
+import { AsyncImage } from "../../image/index.ts"
+import { Box } from "../../box/index.ts"
 import { ComponentProps, forwardRef, useMemo } from "react";
-import { Img } from "../../html";
+import { Img } from "../../html/index.ts"
 import {
     InternalProps,
     OmitInternalProps,
@@ -16,9 +16,9 @@ import {
     normalizeSize,
     omitProps,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Text } from "../../typography";
+} from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
+import { Text } from "../../typography/index.ts"
 
 const DefaultElement = "div";
 

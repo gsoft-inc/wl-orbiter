@@ -1,9 +1,9 @@
 import { NotificationIcon } from "@hopper-ui/icons";
-import { Content, Header } from "@components/placeholders";
-import { Inline } from "@components/layout";
-import { Tabs } from "@components/tabs";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Tabs } from "@components/tabs/index.ts";
 
-import { Item } from "@components/collection";
+import { Item } from "@components/collection/index.ts";
 import { Text, Tag, TagList, TagGroup } from "@hopper-ui/components";
 import { Meta, StoryObj } from "@storybook/react";
 

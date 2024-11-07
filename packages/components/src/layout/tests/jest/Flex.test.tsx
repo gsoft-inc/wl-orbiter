@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { Flex, FlexProps } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Flex, FlexProps } from "@components/layout/index.ts";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

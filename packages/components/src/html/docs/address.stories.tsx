@@ -1,5 +1,5 @@
-import { Address } from "@components/html";
-import { TextLink } from "@components/link";
+import { Address } from "@components/html/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

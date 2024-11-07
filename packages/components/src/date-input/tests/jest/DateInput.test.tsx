@@ -1,6 +1,6 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.ts";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { DateInput } from "@components/date-input";
+import { DateInput } from "@components/date-input/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 

@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "@components/box";
+import { Box, BoxProps } from "@components/box/index.ts";
 
 interface RouterLinkProps extends Omit<BoxProps, "href"> {
     to?: BoxProps["href"];

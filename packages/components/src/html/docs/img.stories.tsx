@@ -1,4 +1,4 @@
-import { Img } from "@components/html";
+import { Img } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 import { Planet } from "./assets";
 

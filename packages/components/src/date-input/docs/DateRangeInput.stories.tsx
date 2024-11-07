@@ -1,4 +1,4 @@
-import { DateRangeInput } from "@components/date-input";
+import { DateRangeInput } from "@components/date-input/index.ts";
 import { subMonths, subWeeks } from "date-fns";
 import { useCallback, useMemo, useState } from "react";
 

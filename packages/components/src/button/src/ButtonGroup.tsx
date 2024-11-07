@@ -1,8 +1,8 @@
-import { AbstractGroupProps, Group } from "../../group";
+import { AbstractGroupProps, Group } from "../../group/index.ts"
 import { Children, ComponentProps, ReactElement, forwardRef } from "react";
-import { OmitInternalProps, SlotProps, augmentElement, cssModule, mergeProps, normalizeSize, omitProps, slot } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { useFieldInputProps } from "../../field";
+import { OmitInternalProps, SlotProps, augmentElement, cssModule, mergeProps, normalizeSize, omitProps, slot } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
+import { useFieldInputProps } from "../../field/index.ts"
 
 const DefaultElement = "div";
 

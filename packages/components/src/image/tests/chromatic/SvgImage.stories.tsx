@@ -1,6 +1,6 @@
-import { Inline } from "@components/layout";
+import { Inline } from "@components/layout/index.ts";
 import { NoResults } from "./assets";
-import { SvgImage } from "@components/image";
+import { SvgImage } from "@components/image/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

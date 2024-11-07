@@ -1,4 +1,4 @@
-import { ThemeProvider, ColorScheme } from "@components/styling";
+import { ThemeProvider, ColorScheme } from "@components/styling/index.ts";
 import { ReactElement, ReactNode } from "react";
 import { RenderHookOptions, renderHook, render, RenderOptions } from "@testing-library/react";
 

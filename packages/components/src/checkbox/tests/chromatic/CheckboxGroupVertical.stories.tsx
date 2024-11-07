@@ -1,6 +1,6 @@
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

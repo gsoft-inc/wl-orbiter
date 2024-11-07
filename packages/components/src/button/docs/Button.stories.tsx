@@ -9,11 +9,11 @@ import {
     IconButtonAsLink,
     ToggleButton,
     ToggleIconButton
-} from "@components/button";
-import { Counter } from "@components/counter";
-import { Inline } from "@components/layout";
-import { RadioGroup } from "@components/radio";
-import { Text } from "@components/typography";
+} from "@components/button/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { RadioGroup } from "@components/radio/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { useCallback, useState } from "react";
 
 const meta = {

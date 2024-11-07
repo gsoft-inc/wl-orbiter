@@ -1,5 +1,5 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledHtmlAttributes } from "../../shared";
+import { InternalProps, OmitInternalProps, StyledHtmlAttributes } from "../../shared/index.ts"
 
 export interface InnerSectionProps extends InternalProps, StyledHtmlAttributes {
     /**

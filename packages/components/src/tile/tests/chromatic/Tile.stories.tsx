@@ -1,10 +1,10 @@
 import { Apollo11Banner, Apollo11Poster, Nasa } from "./assets";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Tile } from "@components/tile";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Tile } from "@components/tile/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

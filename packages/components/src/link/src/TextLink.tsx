@@ -1,12 +1,12 @@
 import { AbstractLinkProps } from "./Link";
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts"
 import { ComponentProps, ReactNode, forwardRef, useMemo } from "react";
 import { LinkVariant, useLink } from "./useLink";
 import { NewTabIndicator } from "./NewTabIndicator";
-import { OmitInternalProps, as, augmentElement, normalizeSize, cssModule, mergeProps, useSlots } from "../../shared";
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling";
-import { Text } from "../../typography";
-import { useFormButton } from "../../form";
+import { OmitInternalProps, as, augmentElement, normalizeSize, cssModule, mergeProps, useSlots } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.ts"
+import { Text } from "../../typography/index.ts"
+import { useFormButton } from "../../form/index.ts"
 
 const DefaultElement = "a";
 

@@ -1,12 +1,12 @@
 import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
-import { Content, Footer, Header } from "@components/placeholders";
-import { Heading, Paragraph } from "@components/typography";
-import { ButtonGroup, Button } from "@components/button";
-import { Dialog } from "@components/dialog";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { TextLink } from "@components/link";
+import { Content, Footer, Header } from "@components/placeholders/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { ButtonGroup, Button } from "@components/button/index.ts";
+import { Dialog } from "@components/dialog/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

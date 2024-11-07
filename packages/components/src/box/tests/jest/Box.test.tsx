@@ -1,4 +1,4 @@
-import { Box } from "@components/box";
+import { Box } from "@components/box/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

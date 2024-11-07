@@ -1,7 +1,7 @@
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Dialog, DialogTrigger } from "@components/dialog";
-import { Heading, Paragraph } from "@components/typography";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Dialog, DialogTrigger } from "@components/dialog/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

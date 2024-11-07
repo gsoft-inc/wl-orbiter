@@ -1,9 +1,9 @@
-import { Disclosure, useDisclosureContext } from "@components/disclosure";
-import { Flex, FlexProps, Stack } from "@components/layout";
+import { Disclosure, useDisclosureContext } from "@components/disclosure/index.ts";
+import { Flex, FlexProps, Stack } from "@components/layout/index.ts";
 import { ArrowDownIcon, ArrowRightIcon } from "@hopper-ui/icons";
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { TextLinkAsButton } from "@components/link";
+import { Button } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

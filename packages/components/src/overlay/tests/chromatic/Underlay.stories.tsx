@@ -1,4 +1,4 @@
-import { Underlay } from "@components/overlay";
+import { Underlay } from "@components/overlay/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

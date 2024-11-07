@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Header } from "@components/placeholders";
+import { Header } from "@components/placeholders/index.ts";
 
 const meta = {
     title: "Placeholders/Header",

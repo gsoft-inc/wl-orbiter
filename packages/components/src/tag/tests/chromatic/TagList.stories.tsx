@@ -1,11 +1,11 @@
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Dot } from "@components/dot";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Dot } from "@components/dot/index.ts";
 import { QuestionIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Item } from "@components/collection";
-import { TagList } from "@components/tag";
-import { Text } from "@components/typography";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { TagList } from "@components/tag/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

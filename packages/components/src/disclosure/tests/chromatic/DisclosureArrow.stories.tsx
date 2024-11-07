@@ -1,5 +1,5 @@
-import { DisclosureArrow, DisclosureContext } from "@components/disclosure";
-import { Inline } from "@components/layout";
+import { DisclosureArrow, DisclosureContext } from "@components/disclosure/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

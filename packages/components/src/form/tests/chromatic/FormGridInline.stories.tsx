@@ -1,10 +1,10 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox } from "@components/checkbox";
-import { ErrorMessage, Field, HelpMessage, Label } from "@components/field";
-import { Form } from "@components/form";
-import { Grid, repeat } from "@components/layout";
-import { TextInput } from "@components/text-input";
-import { TextLinkAsButton } from "@components/link";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { ErrorMessage, Field, HelpMessage, Label } from "@components/field/index.ts";
+import { Form } from "@components/form/index.ts";
+import { Grid, repeat } from "@components/layout/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

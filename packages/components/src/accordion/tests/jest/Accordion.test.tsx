@@ -1,9 +1,9 @@
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Accordion } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { H3 } from "@components/typography";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
+import { Accordion } from "@components/accordion/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { H3 } from "@components/typography/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Keys } from "@components/shared/index.ts";
 import { createRef } from "react";
 
 // ***** Behaviors *****

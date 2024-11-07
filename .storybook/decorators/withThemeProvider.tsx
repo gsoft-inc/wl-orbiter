@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@components/styling";
+import { ThemeProvider } from "@components/styling/index.ts";
 import { isChromatic } from "../env";
 import { useEffect, useState, ReactNode } from "react";
 

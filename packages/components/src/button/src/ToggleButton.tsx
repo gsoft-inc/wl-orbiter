@@ -1,6 +1,6 @@
 import { AbstractButtonProps, Button } from "./Button";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef } from "react";
-import { OmitInternalProps, mergeProps, resolveChildren, useCheckableProps } from "../../shared";
+import { OmitInternalProps, mergeProps, resolveChildren, useCheckableProps } from "../../shared/index.ts"
 import { ToggleButtonVariant, useToggleButton } from "./useToggleButton";
 
 const DefaultElement = "button";

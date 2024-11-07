@@ -3,7 +3,7 @@
 // This restore focus hook only works because we use an animation to fade away the overlay. Without an animation, the active element will always be the body which
 // will be out of scope. To fix this, it would probably requires this code to become a React element instead of a React hook.
 
-import { FocusScope, Keys, createFocusableTreeWalker, getBodyElement, isNil, useEventCallback, useIsomorphicLayoutEffect, useRefState } from "../../shared";
+import { FocusScope, Keys, createFocusableTreeWalker, getBodyElement, isNil, useEventCallback, useIsomorphicLayoutEffect, useRefState } from "../../shared/index.ts"
 import { KeyboardEvent } from "react";
 
 import { isElementInViewport } from "./isElementInViewport";

@@ -1,10 +1,10 @@
-import { Switch } from "@components/switch";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { IconList } from "@components/icons";
+import { Switch } from "@components/switch/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

@@ -1,5 +1,5 @@
 import { RefObject, useCallback, useEffect, useReducer } from "react";
-import { isNil, useCommittedRef, useDisposables, useIsInitialRender } from "../../shared";
+import { isNil, useCommittedRef, useDisposables, useIsInitialRender } from "../../shared/index.ts"
 
 import { match } from "./match";
 

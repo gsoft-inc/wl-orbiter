@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Dot } from "@components/dot";
-import { Flex } from "@components/layout";
-import { TextLink } from "@components/link";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Flex } from "@components/layout/index.ts";
+import { TextLink } from "@components/link/index.ts";
 
 const meta = {
     title: "Components/Divider",

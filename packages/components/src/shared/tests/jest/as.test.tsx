@@ -1,9 +1,9 @@
 import { createRef, forwardRef } from "react";
 import { render, waitFor } from "@test-utils";
 
-import { Div } from "@components/html";
-import { TextLink } from "@components/link";
-import { as } from "@components/shared";
+import { Div } from "@components/html/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { as } from "@components/shared/index.ts";
 
 const RouterLink = forwardRef<HTMLDivElement, { to: string }>((props, ref) => {
     return <Div ref={ref}>{props.to}</Div>;

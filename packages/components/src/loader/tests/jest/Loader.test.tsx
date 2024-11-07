@@ -1,4 +1,4 @@
-import { Loader } from "@components/loader";
+import { Loader } from "@components/loader/index.ts";
 import { createRef } from "react";
 import { renderWithTheme } from "@test-utils";
 import { screen, waitFor } from "@testing-library/react";

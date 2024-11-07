@@ -1,4 +1,4 @@
-import { LI, UL } from "@components/html";
+import { LI, UL } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

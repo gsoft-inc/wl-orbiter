@@ -1,7 +1,7 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts"
 import { ButtonVariant, useButton } from "./useButton";
 import { Children, ComponentProps, ElementType, ReactElement, ReactNode, forwardRef } from "react";
-import { Spinner } from "../../spinner";
+import { Spinner } from "../../spinner/index.ts"
 
 import {
     InteractionProps,
@@ -16,10 +16,10 @@ import {
     mergeProps,
     omitProps,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { useInputGroupButtonAddonProps } from "../../input-group";
-import { useToolbarProps } from "../../toolbar";
+} from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
+import { useInputGroupButtonAddonProps } from "../../input-group/index.ts"
+import { useToolbarProps } from "../../toolbar/index.ts"
 
 export type AbstractIconButtonProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "autoFocus"> & {
     /**

@@ -1,8 +1,8 @@
-import { Button } from "@components/button";
-import { Div } from "@components/html";
+import { Button } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
 import { ReactNode } from "react";
 import { render, screen, waitFor } from "@test-utils";
-import { useFocusScope, useKeyedRovingFocus } from "@components/shared";
+import { useFocusScope, useKeyedRovingFocus } from "@components/shared/index.ts";
 
 interface RovingFocusProps {
     currentValue?: string;

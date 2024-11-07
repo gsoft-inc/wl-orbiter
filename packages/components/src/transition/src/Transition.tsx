@@ -1,7 +1,7 @@
 import { ComponentProps, ReactNode, forwardRef, useEffect, useMemo, useState } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, isNilOrEmpty, mergeProps, useCommittedRef, useEventCallback, useIsInitialRender } from "../../shared";
+import { InternalProps, OmitInternalProps, StyledComponentProps, isNilOrEmpty, mergeProps, useCommittedRef, useEventCallback, useIsInitialRender } from "../../shared/index.ts"
 
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts"
 
 const DefaultElement = "div";
 

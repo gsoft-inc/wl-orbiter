@@ -1,6 +1,6 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { IconButton } from "@components/button";
-import { Inline } from "@components/layout";
+import { IconButton } from "@components/button/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

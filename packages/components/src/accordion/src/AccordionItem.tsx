@@ -2,9 +2,9 @@ import { AccordionBuilderHeader, AccordionBuilderPanel } from "./useAccordionIte
 import { AccordionHeader } from "./AccordionHeader";
 import { AccordionPanel } from "./AccordionPanel";
 import { ComponentProps, ElementType, SyntheticEvent, forwardRef } from "react";
-import { Disclosure } from "../../disclosure";
-import { H1, H2, H3, H4, H5, H6 } from "../../typography";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps, useEventCallback } from "../../shared";
+import { Disclosure } from "../../disclosure/index.ts"
+import { H1, H2, H3, H4, H5, H6 } from "../../typography/index.ts"
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps, useEventCallback } from "../../shared/index.ts"
 import { useAccordionContext } from "./AccordionContext";
 
 const DefaultElement = "div";

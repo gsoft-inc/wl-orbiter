@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.ts"
 import {
     ChangeEvent,
     ComponentProps,
@@ -9,15 +9,15 @@ import {
     useMemo,
     useRef
 } from "react";
-import { InputGroup, useInputGroupProps } from "../../input-group";
-import { OmitInternalProps, augmentElement, cssModule, isNil, mergeClasses, mergeProps, useControllableState, useEventCallback } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { InputGroup, useInputGroupProps } from "../../input-group/index.ts"
+import { OmitInternalProps, augmentElement, cssModule, isNil, mergeClasses, mergeProps, useControllableState, useEventCallback } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
 import { areEqualDates, toMidnightDate } from "./dateUtils";
 
-import { AbstractInputProps } from "../../input";
+import { AbstractInputProps } from "../../input/index.ts"
 import { ButtonPresets } from "./ButtonPresets";
 import { MenuPresets } from "./MenuPresets";
-import { TextInput } from "../../text-input";
+import { TextInput } from "../../text-input/index.ts"
 import { useDateInput } from "./useDateInput";
 
 export interface DatePreset {

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@components/styling";
+import { ThemeProvider } from "@components/styling/index.ts";
 import { Button } from "@components";
 
 const meta = {

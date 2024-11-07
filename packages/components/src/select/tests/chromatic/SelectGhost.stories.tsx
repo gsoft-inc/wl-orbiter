@@ -1,10 +1,10 @@
 import { NotificationIcon, TeamIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Item, Section } from "@components/collection";
-import { Select } from "@components/select";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Item, Section } from "@components/collection/index.ts";
+import { Select } from "@components/select/index.ts";
 
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

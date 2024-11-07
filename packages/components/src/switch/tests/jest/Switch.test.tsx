@@ -1,6 +1,6 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Switch } from "@components/switch";
+import { Switch } from "@components/switch/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 

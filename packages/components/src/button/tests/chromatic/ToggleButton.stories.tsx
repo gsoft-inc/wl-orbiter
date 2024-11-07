@@ -1,5 +1,5 @@
-import { Inline } from "@components/layout";
-import { ToggleButton } from "@components/button";
+import { Inline } from "@components/layout/index.ts";
+import { ToggleButton } from "@components/button/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

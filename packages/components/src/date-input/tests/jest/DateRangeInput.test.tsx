@@ -1,8 +1,8 @@
 import { act, fireEvent, screen, waitFor, within, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField } from "@components/field";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.ts";
+import { DateRangeInput } from "@components/date-input/index.ts";
+import { GroupField } from "@components/field/index.ts";
+import { Keys } from "@components/shared/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 

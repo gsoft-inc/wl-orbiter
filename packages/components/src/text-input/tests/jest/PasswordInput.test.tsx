@@ -1,4 +1,4 @@
-import { PasswordInput } from "@components/text-input";
+import { PasswordInput } from "@components/text-input/index.ts";
 import { act, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 

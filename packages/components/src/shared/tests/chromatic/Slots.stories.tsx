@@ -1,7 +1,7 @@
-import { Box, BoxProps } from "@components/box";
-import { TextLink } from "@components/link";
+import { Box, BoxProps } from "@components/box/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { forwardRef, useCallback, useMemo } from "react";
-import { isNil, slot, useSlots } from "@components/shared";
+import { isNil, slot, useSlots } from "@components/shared/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

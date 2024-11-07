@@ -44,7 +44,7 @@ import {
     ComplexMarginMapping,
     SemanticComplexMarginSpace,
     SizingMapping
-} from "@components/styling";
+} from "@components/styling/index.ts";
 
 function toTokenValue(key, value) {
     return {

@@ -1,4 +1,4 @@
-import { CompositeKeyWeakMap, mergeProps } from "@components/shared";
+import { CompositeKeyWeakMap, mergeProps } from "@components/shared/index.ts";
 
 describe("CompositeKeyWeakMap", () => {
     test("can store single key value", () => {

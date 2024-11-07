@@ -1,10 +1,10 @@
-import { ThemeProvider, ThemeComputedStyle, type FontWeightProp, type PaddingProp, type ColorSchemeOrSystem } from "@components/styling";
-import { Div, Span } from "@components/html";
-import { Flex } from "@components/layout";
+import { ThemeProvider, ThemeComputedStyle, type FontWeightProp, type PaddingProp, type ColorSchemeOrSystem } from "@components/styling/index.ts";
+import { Div, Span } from "@components/html/index.ts";
+import { Flex } from "@components/layout/index.ts";
 import { DocsContext } from "@storybook/addon-docs";
 import { InfoIcon, type CreatedIconProps } from "@hopper-ui/icons";
 import { Table } from "@stories/components";
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.ts";
 import { useEffect, useContext, useRef, useState, type ReactNode } from "react";
 
 function toRowValues({ token, variable, itemRenderer }, docsContext, themeComputedStyle) {

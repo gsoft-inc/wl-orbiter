@@ -1,4 +1,4 @@
-import { FocusScope } from "../../shared";
+import { FocusScope } from "../../shared/index.ts"
 
 export function isDevToolsBlurEvent(focusScope: FocusScope) {
     // This is a fix to prevent an overlay from closing when the dev tools opens.

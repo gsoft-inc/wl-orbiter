@@ -1,4 +1,4 @@
-import { AvatarProps } from "@components/avatar";
+import { AvatarProps } from "@components/avatar/index.ts";
 import { LaunchImage } from "./assets";
 import { expectAssignable } from "@test-utils";
 

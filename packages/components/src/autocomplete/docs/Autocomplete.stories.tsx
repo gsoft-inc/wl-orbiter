@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Meta, StoryObj } from "@storybook/react";
-import { Autocomplete } from "@components/autocomplete";
-import { Avatar } from "@components/avatar";
-import { IconList } from "@components/icons";
+import { Autocomplete } from "@components/autocomplete/index.ts";
+import { Avatar } from "@components/avatar/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { CatIcon, RocketIcon, SearchIcon, SparklesIcon } from "@hopper-ui/icons";
-import { Item, Section, useAsyncSearch } from "@components/collection";
-import { Text } from "@components/typography";
+import { Item, Section, useAsyncSearch } from "@components/collection/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { useCallback, useMemo, useState } from "react";
-import { isNil } from "@components/shared";
-import { Inline } from "@components/layout";
+import { isNil } from "@components/shared/index.ts";
+import { Inline } from "@components/layout/index.ts";
 
 const meta = {
     title: "Components/Autocomplete",

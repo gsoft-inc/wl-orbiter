@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Meta, StoryObj } from "@storybook/react";
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { ErrorMessage, Field, GroupField, HelpMessage, Label, useFieldInputProps, ValidMessage } from "@components/field";
-import { Inline } from "@components/layout";
-import { TextInput } from "@components/text-input";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { ErrorMessage, Field, GroupField, HelpMessage, Label, useFieldInputProps, ValidMessage } from "@components/field/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
 import { useCallback, useMemo, useState } from "react";
-import { HtmlInput } from "@components/html";
+import { HtmlInput } from "@components/html/index.ts";
 
 const meta = {
     title: "Components/Field",

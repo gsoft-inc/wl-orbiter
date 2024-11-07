@@ -1,4 +1,4 @@
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

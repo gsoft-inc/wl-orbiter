@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { isNil } from "../../shared";
+import { isNil } from "../../shared/index.ts"
 
 type StyleContextType = Record<string, any>;
 

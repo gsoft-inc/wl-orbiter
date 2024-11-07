@@ -1,5 +1,5 @@
-import { Content } from "@components/placeholders";
-import { Alert, AlertTrigger } from "@components/alert";
+import { Content } from "@components/placeholders/index.ts";
+import { Alert, AlertTrigger } from "@components/alert/index.ts";
 import { Button, Heading } from "@hopper-ui/components";
 import { Meta, StoryObj } from "@storybook/react";
 

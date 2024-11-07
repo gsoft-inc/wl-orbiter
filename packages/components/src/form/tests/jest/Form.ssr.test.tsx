@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Form } from "@components/form";
+import { Form } from "@components/form/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

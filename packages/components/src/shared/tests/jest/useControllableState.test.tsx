@@ -1,6 +1,6 @@
 import { ErrorBoundary, muteConsoleErrors, act, renderHook } from "@test-utils";
 import { ReactNode } from "react";
-import { useControllableState } from "@components/shared";
+import { useControllableState } from "@components/shared/index.ts";
 
 // Errors in useEffect are not catch by @test-utils-hooks error handling code. Therefore we must catch those errors with a custom ErrorBoundary.
 function withErrorBoundary(onError: (error: Error) => void) {

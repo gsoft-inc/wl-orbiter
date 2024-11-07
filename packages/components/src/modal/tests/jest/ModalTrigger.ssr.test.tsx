@@ -1,10 +1,10 @@
 /**
  * @jest-environment node
  */
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Modal, ModalTrigger } from "@components/modal";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Modal, ModalTrigger } from "@components/modal/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

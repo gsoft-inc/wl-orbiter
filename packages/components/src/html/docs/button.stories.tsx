@@ -1,5 +1,5 @@
 
-import { HtmlButton } from "@components/html";
+import { HtmlButton } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,4 +1,4 @@
-import { Divider } from "@components/divider";
+import { Divider } from "@components/divider/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

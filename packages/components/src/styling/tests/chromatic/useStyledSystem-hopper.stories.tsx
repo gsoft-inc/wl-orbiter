@@ -1,4 +1,4 @@
-import { Box } from "@components/box";
+import { Box } from "@components/box/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const viewports = [640, 768, 1024, 1280, 1440];

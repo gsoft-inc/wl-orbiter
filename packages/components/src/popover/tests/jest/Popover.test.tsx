@@ -1,10 +1,10 @@
-import { Content, Footer } from "@components/placeholders";
+import { Content, Footer } from "@components/placeholders/index.ts";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Heading } from "@components/typography";
-import { HtmlInput } from "@components/html";
-import { Popover } from "@components/popover";
-import { TextLink } from "@components/link";
+import { Button } from "@components/button/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { HtmlInput } from "@components/html/index.ts";
+import { Popover } from "@components/popover/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 

@@ -1,5 +1,5 @@
 import { FormContextType, useFormContext } from "./FormContext";
-import { omitProps } from "../../shared";
+import { omitProps } from "../../shared/index.ts"
 
 export type FormButtonProps = Omit<FormContextType, "fluid">;
 

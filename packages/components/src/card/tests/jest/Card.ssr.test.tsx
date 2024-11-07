@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { Card } from "@components/card";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
+import { Card } from "@components/card/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

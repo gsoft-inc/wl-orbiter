@@ -1,6 +1,6 @@
-import { Paragraph } from "@components/typography";
-import { Modal, ModalTrigger } from "@components/modal";
-import { Content } from "@components/placeholders";
+import { Paragraph } from "@components/typography/index.ts";
+import { Modal, ModalTrigger } from "@components/modal/index.ts";
+import { Content } from "@components/placeholders/index.ts";
 import { Button, Heading } from "@hopper-ui/components";
 import { Meta, StoryObj } from "@storybook/react";
 

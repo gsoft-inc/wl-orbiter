@@ -1,5 +1,5 @@
 import { Launch } from "./assets";
-import { Image } from "@components/image";
+import { Image } from "@components/image/index.ts";
 
 export default function LaunchImage() {
     return (

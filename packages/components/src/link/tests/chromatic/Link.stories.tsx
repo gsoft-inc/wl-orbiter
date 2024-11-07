@@ -1,5 +1,5 @@
-import { Inline } from "@components/layout";
-import { Link } from "@components/link";
+import { Inline } from "@components/layout/index.ts";
+import { Link } from "@components/link/index.ts";
 import LaunchImage from "./LaunchImage";
 
 import { Meta, StoryObj } from "@storybook/react";

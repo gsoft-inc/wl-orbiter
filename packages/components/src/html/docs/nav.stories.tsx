@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Nav, UL, LI } from "@components/html";
-import { TextLink } from "@components/link";
+import { Nav, UL, LI } from "@components/html/index.ts";
+import { TextLink } from "@components/link/index.ts";
 
 const meta = {
     title: "Html elements/Nav",

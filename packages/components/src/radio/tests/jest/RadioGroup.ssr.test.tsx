@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Radio, RadioGroup } from "@components/radio";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

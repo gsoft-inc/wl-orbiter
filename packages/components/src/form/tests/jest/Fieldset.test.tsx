@@ -1,6 +1,6 @@
-import { Field, Label } from "@components/field";
-import { Fieldset, FieldsetProps } from "@components/form";
-import { TextInput } from "@components/text-input";
+import { Field, Label } from "@components/field/index.ts";
+import { Fieldset, FieldsetProps } from "@components/form/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

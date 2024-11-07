@@ -1,10 +1,10 @@
-import { Button, IconButton } from "@components/button";
-import { Item, Section } from "@components/collection";
-import { Menu, MenuProps, MenuTrigger } from "@components/menu";
-import { DisclosureArrow } from "@components/disclosure";
-import { Divider } from "@components/divider";
-import { HtmlButton, HtmlButtonProps } from "@components/html";
-import { Text } from "@components/typography";
+import { Button, IconButton } from "@components/button/index.ts";
+import { Item, Section } from "@components/collection/index.ts";
+import { Menu, MenuProps, MenuTrigger } from "@components/menu/index.ts";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { HtmlButton, HtmlButtonProps } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { KebabIcon } from "@hopper-ui/icons";
 import { forwardRef } from "react";
 

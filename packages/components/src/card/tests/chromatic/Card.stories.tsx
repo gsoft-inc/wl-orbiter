@@ -1,11 +1,11 @@
 import { ApolloBanner, ApolloPoster } from "./assets";
-import { Box } from "@components/box";
-import { Card } from "@components/card";
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Flex, Inline, Stack } from "@components/layout";
-import { Heading } from "@components/typography";
-import { Image } from "@components/image";
+import { Box } from "@components/box/index.ts";
+import { Card } from "@components/card/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Flex, Inline, Stack } from "@components/layout/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Image } from "@components/image/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

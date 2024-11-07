@@ -1,10 +1,10 @@
-import { Accordion, InnerAccordion, InnerAccordionHeader, InnerAccordionPanel } from "@components/accordion";
+import { Accordion, InnerAccordion, InnerAccordionHeader, InnerAccordionPanel } from "@components/accordion/index.ts";
 import { Source, ArgTypes, Meta, Story, Canvas, SourceType } from "@storybook/addon-docs";
 import { ComponentInfo, Tagline } from "@stories/components";
-import { Content, InnerContent } from "@components/placeholders";
-import { H3, Text } from "@components/typography";
+import { Content, InnerContent } from "@components/placeholders/index.ts";
+import { H3, Text } from "@components/typography/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { InnerItem, Item } from "@components/collection";
+import { InnerItem, Item } from "@components/collection/index.ts";
 import * as AccordionStories from "./Accordion.stories.tsx";
 
 <Meta of={AccordionStories} />

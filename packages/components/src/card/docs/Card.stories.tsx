@@ -1,13 +1,13 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Card } from "@components/card";
-import { Content, Header } from "@components/placeholders";
-import { Heading, Paragraph } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Item } from "@components/collection";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Card } from "@components/card/index.ts";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Item } from "@components/collection/index.ts";
 import { Planet, SpaceLandscape } from "./assets";
-import { Tabs } from "@components/tabs";
+import { Tabs } from "@components/tabs/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

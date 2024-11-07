@@ -1,4 +1,4 @@
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

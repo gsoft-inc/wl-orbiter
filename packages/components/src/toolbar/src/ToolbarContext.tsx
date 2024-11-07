@@ -1,6 +1,6 @@
-import { FlexOrientation } from "../../layout";
+import { FlexOrientation } from "../../layout/index.ts"
 import { ReactNode, createContext, useContext } from "react";
-import { isNil } from "../../shared";
+import { isNil } from "../../shared/index.ts"
 
 export interface ToolbarContextType {
     disabled?: boolean;

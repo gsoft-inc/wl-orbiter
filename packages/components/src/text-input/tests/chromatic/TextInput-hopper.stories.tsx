@@ -1,9 +1,9 @@
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.ts";
 
-import { CrossButton } from "@components/button";
-import { Div } from "@components/html";
+import { CrossButton } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
 import { SearchIcon } from "@hopper-ui/icons";
-import { TextInput } from "@components/text-input";
+import { TextInput } from "@components/text-input/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

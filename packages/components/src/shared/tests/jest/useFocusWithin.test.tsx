@@ -1,8 +1,8 @@
 import { act, render, screen, waitFor } from "@test-utils";
 
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.ts";
 import { ReactNode } from "react";
-import { useFocusWithin } from "@components/shared";
+import { useFocusWithin } from "@components/shared/index.ts";
 import userEvent from "@testing-library/user-event";
 
 interface FocusWithinProps {

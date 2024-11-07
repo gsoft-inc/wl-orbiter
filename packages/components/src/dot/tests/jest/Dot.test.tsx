@@ -1,4 +1,4 @@
-import { Dot } from "@components/dot";
+import { Dot } from "@components/dot/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

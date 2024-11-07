@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import { isPlainObject, isString, mergeClasses } from "@components/shared";
+import { isPlainObject, isString, mergeClasses } from "@components/shared/index.ts";
 import { isElement } from "react-is";
 import { ComponentProps } from "react";
 

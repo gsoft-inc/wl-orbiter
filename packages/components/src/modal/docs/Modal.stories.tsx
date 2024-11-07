@@ -1,13 +1,13 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Card } from "@components/card";
-import { Overlay } from "@components/overlay";
-import { Content, Footer, Header } from "@components/placeholders";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Card } from "@components/card/index.ts";
+import { Overlay } from "@components/overlay/index.ts";
+import { Content, Footer, Header } from "@components/placeholders/index.ts";
 import { ET, Planet, SpacePortrait, SpacePortraitHorizontal, TheMartian } from "./assets";
-import { Heading, Paragraph } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Modal, ModalTrigger, useModalTriggerContext } from "@components/modal";
-import { TextLink } from "@components/link";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Modal, ModalTrigger, useModalTriggerContext } from "@components/modal/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { forwardRef, useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

@@ -1,4 +1,4 @@
-import { Div, DivProps } from "@components/html";
+import { Div, DivProps } from "@components/html/index.ts";
 import "./highlight.css";
 
 export function Highlight({ children, ...rest }: Omit<DivProps, "className">) {

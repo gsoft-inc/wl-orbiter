@@ -1,9 +1,9 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField, HelpMessage, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { DateRangeInput } from "@components/date-input/index.ts";
+import { GroupField, HelpMessage, Label } from "@components/field/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

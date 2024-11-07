@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { TextAddon } from "@components/input-group";
+import { TextAddon } from "@components/input-group/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

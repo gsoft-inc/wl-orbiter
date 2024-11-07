@@ -1,6 +1,6 @@
-import { AnonymousAvatar } from "@components/avatar";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { AnonymousAvatar } from "@components/avatar/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

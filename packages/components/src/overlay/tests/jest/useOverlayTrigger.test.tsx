@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
-import { mergeProps, Keys } from "@components/shared";
-import { UseOverlayTriggerOptions, useOverlayTrigger } from "@components/overlay";
+import { mergeProps, Keys } from "@components/shared/index.ts";
+import { UseOverlayTriggerOptions, useOverlayTrigger } from "@components/overlay/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import userEvent from "@testing-library/user-event";
 

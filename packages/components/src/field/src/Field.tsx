@@ -1,12 +1,12 @@
-import { Box } from "../../box";
-import { ClearToolbar, useToolbarProps } from "../../toolbar";
+import { Box } from "../../box/index.ts"
+import { ClearToolbar, useToolbarProps } from "../../toolbar/index.ts"
 import { ComponentProps, ReactNode, forwardRef } from "react";
 import { FieldContext } from "./FieldContext";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { ValidationState } from "../../input";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
+import { ValidationState } from "../../input/index.ts"
 import { useField } from "./useField";
-import { useFormField } from "../../form";
+import { useFormField } from "../../form/index.ts"
 
 const DefaultElement = "div";
 

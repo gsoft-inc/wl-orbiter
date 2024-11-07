@@ -1,8 +1,8 @@
 import { EditIcon } from "@hopper-ui/icons";
-import { Button } from "@components/button";
-import { Inline } from "@components/layout";
-import { NumberInput } from "@components/number-input";
-import { isNil } from "@components/shared";
+import { Button } from "@components/button/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { NumberInput } from "@components/number-input/index.ts";
+import { isNil } from "@components/shared/index.ts";
 import { useCallback, useMemo, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

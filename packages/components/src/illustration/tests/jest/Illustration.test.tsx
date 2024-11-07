@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
+import { Div } from "@components/html/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

@@ -1,8 +1,8 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts"
 import { ComponentProps, ReactNode, forwardRef } from "react";
 import { FormContext } from "./FormContext";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
 
 const DefaultElement = "form";
 

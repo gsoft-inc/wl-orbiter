@@ -1,5 +1,5 @@
-import { Switch } from "@components/switch";
-import { Inline } from "@components/layout";
+import { Switch } from "@components/switch/index.ts";
+import { Inline } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

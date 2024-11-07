@@ -1,7 +1,7 @@
 import { Heading, Button } from "@hopper-ui/components";
-import { Content } from "@components/placeholders";
-import { Dialog, DialogTrigger } from "@components/dialog";
-import { Paragraph } from "@components/typography";
+import { Content } from "@components/placeholders/index.ts";
+import { Dialog, DialogTrigger } from "@components/dialog/index.ts";
+import { Paragraph } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

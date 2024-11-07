@@ -1,8 +1,8 @@
 import { ColorScheme } from "@hopper-ui/components";
 import { makeDecorator } from "@storybook/preview-api";
-import { ThemeProvider } from "../../packages/components/src/styling";
+import { ThemeProvider } from "../../packages/components/src/styling/index.ts";
 
-import { DisableAnimations } from "./DisableAnimations";
+import { DisableAnimations } from "./DisableAnimations.tsx";
 import "./disableAnimations.css";
 
 const AddonName = "hopper";

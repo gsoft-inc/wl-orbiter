@@ -1,4 +1,4 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts"
 import { ButtonVariant, useButton } from "./useButton";
 import { ComponentProps, ElementType, ReactNode, forwardRef, useMemo } from "react";
 import {
@@ -14,13 +14,13 @@ import {
     omitProps,
     slot,
     useSlots
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling";
-import { Text } from "../../typography";
-import { useFormButton } from "../../form";
-import { useInputGroupButtonAddonProps } from "../../input-group";
-import { useToolbarProps } from "../../toolbar";
-import { Spinner } from "../../spinner";
+} from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.ts"
+import { Text } from "../../typography/index.ts"
+import { useFormButton } from "../../form/index.ts"
+import { useInputGroupButtonAddonProps } from "../../input-group/index.ts"
+import { useToolbarProps } from "../../toolbar/index.ts"
+import { Spinner } from "../../spinner/index.ts"
 
 export type AbstractButtonProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "autoFocus"> & {
     /**

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
 import { Planet } from "./assets";
 
 const meta = {

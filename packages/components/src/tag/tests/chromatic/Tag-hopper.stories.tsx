@@ -1,5 +1,5 @@
-import { Tag } from "@components/tag";
-import { Inline } from "@components/layout";
+import { Tag } from "@components/tag/index.ts";
+import { Inline } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

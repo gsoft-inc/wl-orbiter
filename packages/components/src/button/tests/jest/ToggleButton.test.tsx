@@ -1,5 +1,5 @@
 import { screen, waitFor, renderWithTheme } from "@test-utils";
-import { ToggleButton } from "@components/button";
+import { ToggleButton } from "@components/button/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 

@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Lozenge } from "@components/lozenge";
+import { Lozenge } from "@components/lozenge/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

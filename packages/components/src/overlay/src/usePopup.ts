@@ -1,9 +1,9 @@
 import { OverlayPosition, useOverlayPosition } from "./useOverlayPosition";
 import { PopupType, usePopupAriaProps } from "./usePopupAriaProps";
 import { SyntheticEvent, useCallback } from "react";
-import { isNil, mergeProps, useControllableState, useEventCallback, useFocusManager, useFocusScope, useMergedRefs } from "../../shared";
+import { isNil, mergeProps, useControllableState, useEventCallback, useFocusManager, useFocusScope, useMergedRefs } from "../../shared/index.ts"
 
-import { ResponsiveProp } from "../../styling";
+import { ResponsiveProp } from "../../styling/index.ts"
 import { useOverlayTrigger } from "./useOverlayTrigger";
 import { usePopupLightDismiss } from "./usePopupLightDismiss";
 import { useRestoreFocus } from "./useRestoreFocus";

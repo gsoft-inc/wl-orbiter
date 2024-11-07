@@ -1,10 +1,10 @@
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading, Paragraph } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Tile } from "@components/tile";
+import { Content } from "@components/placeholders/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Tile } from "@components/tile/index.ts";
 import { Nasa } from "./assets";
 
 import { Meta, StoryObj } from "@storybook/react";

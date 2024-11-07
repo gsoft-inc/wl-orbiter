@@ -1,5 +1,5 @@
-import { Loader } from "@components/loader";
-import { Stack } from "@components/layout";
+import { Loader } from "@components/loader/index.ts";
+import { Stack } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

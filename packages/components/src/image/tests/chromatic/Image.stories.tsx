@@ -1,6 +1,6 @@
-import { Div } from "@components/html";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 import { Launch, Mars } from "./assets";
 

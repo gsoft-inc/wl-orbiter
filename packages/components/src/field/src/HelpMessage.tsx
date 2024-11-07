@@ -1,6 +1,6 @@
 import { ComponentProps, forwardRef } from "react";
 import { FieldMessage, FieldMessageDefaultElement, SharedFieldMessageProps, getValidationProps } from "./FieldMessage";
-import { OmitInternalProps, mergeProps } from "../../shared";
+import { OmitInternalProps, mergeProps } from "../../shared/index.ts"
 import { useFieldMessageProps } from "./FieldContext";
 
 export function InnerHelpMessage(props: SharedFieldMessageProps) {

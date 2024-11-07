@@ -1,15 +1,15 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Content, Footer } from "@components/placeholders";
-import { Field, Label } from "@components/field";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Content, Footer } from "@components/placeholders/index.ts";
+import { Field, Label } from "@components/field/index.ts";
 
-import { Div } from "@components/html";
-import { Form } from "@components/form";
-import { Heading } from "@components/typography";
-import { Image } from "@components/image";
+import { Div } from "@components/html/index.ts";
+import { Form } from "@components/form/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Image } from "@components/image/index.ts";
 import { Launch } from "./assets";
-import { Popover } from "@components/popover";
-import { TextInput } from "@components/text-input";
-import { TextLink } from "@components/link";
+import { Popover } from "@components/popover/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,5 +1,5 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Radio } from "@components/radio";
+import { Radio } from "@components/radio/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 

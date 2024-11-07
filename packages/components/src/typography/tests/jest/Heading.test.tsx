@@ -1,4 +1,4 @@
-import { H1, Heading } from "@components/typography";
+import { H1, Heading } from "@components/typography/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

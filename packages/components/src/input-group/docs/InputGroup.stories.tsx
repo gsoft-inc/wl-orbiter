@@ -1,12 +1,12 @@
-import { InputGroup, useInputGroupProps, useInputGroupAddonProps } from "@components/input-group";
-import { Item } from "@components/collection";
-import { NumberInput } from "@components/number-input";
-import { Select } from "@components/select";
-import { Stack, Flex } from "@components/layout";
-import { Text } from "@components/typography";
-import { TextInput } from "@components/text-input";
-import { HtmlInput } from "@components/html";
-import { as, mergeProps } from "@components/shared";
+import { InputGroup, useInputGroupProps, useInputGroupAddonProps } from "@components/input-group/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { NumberInput } from "@components/number-input/index.ts";
+import { Select } from "@components/select/index.ts";
+import { Stack, Flex } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { HtmlInput } from "@components/html/index.ts";
+import { as, mergeProps } from "@components/shared/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

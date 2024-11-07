@@ -1,6 +1,6 @@
-import { Popover, PopoverTrigger } from "@components/popover";
+import { Popover, PopoverTrigger } from "@components/popover/index.ts";
 
-import { Content } from "@components/placeholders";
+import { Content } from "@components/placeholders/index.ts";
 import { Button, Heading } from "@hopper-ui/components";
 import { Meta, StoryObj } from "@storybook/react";
 

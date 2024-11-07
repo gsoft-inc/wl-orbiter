@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { GroupField, Label } from "@components/field";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { GroupField, Label } from "@components/field/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

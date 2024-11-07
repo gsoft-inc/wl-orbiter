@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Article } from "@components/html";
-import { H1, H2, Paragraph } from "@components/typography";
+import { Article } from "@components/html/index.ts";
+import { H1, H2, Paragraph } from "@components/typography/index.ts";
 
 const meta = {
     title: "Html elements/Article",

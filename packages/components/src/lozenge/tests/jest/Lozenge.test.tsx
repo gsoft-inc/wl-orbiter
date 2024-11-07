@@ -1,4 +1,4 @@
-import { Lozenge } from "@components/lozenge";
+import { Lozenge } from "@components/lozenge/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

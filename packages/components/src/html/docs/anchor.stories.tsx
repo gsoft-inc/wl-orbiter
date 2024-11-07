@@ -1,4 +1,4 @@
-import { A } from "@components/html";
+import { A } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

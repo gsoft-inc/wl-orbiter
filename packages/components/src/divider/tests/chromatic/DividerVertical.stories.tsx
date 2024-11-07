@@ -1,9 +1,9 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Dot } from "@components/dot";
-import { Flex, Inline } from "@components/layout";
-import { Text } from "@components/typography";
-import { TextLink } from "@components/link";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Flex, Inline } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextLink } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

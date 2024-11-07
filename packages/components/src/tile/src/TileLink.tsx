@@ -1,7 +1,7 @@
-import { AbstractLinkProps, Link } from "../../link";
+import { AbstractLinkProps, Link } from "../../link/index.ts"
 import { ComponentProps, forwardRef } from "react";
-import { OmitInternalProps, cssModule, mergeProps } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { OmitInternalProps, cssModule, mergeProps } from "../../shared/index.ts"
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
 import { TileOrientation, useTile } from "./useTile";
 
 const DefaultElement = "a";

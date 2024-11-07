@@ -1,5 +1,5 @@
-import { Badge, BadgeProps } from "@components/badge";
-import { Div } from "@components/html";
+import { Badge, BadgeProps } from "@components/badge/index.ts";
+import { Div } from "@components/html/index.ts";
 import { MailIcon } from "@hopper-ui/icons";
 import { PropsWithChildren } from "react";
 

@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useCallback, useContext, useEffect, useState } from "react";
-import { isNil } from "../../shared";
+import { isNil } from "../../shared/index.ts"
 import { supportsMatchMedia } from "./useMediaQuery";
 import { useDebouncedCallback } from "use-debounce";
 

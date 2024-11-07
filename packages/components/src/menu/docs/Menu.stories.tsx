@@ -1,19 +1,19 @@
-import { Menu, MenuTrigger, useMenuTriggerContext } from "@components/menu";
-import { Button, IconButton } from "@components/button";
-import { IconList } from "@components/icons";
-import { Item, Section } from "@components/collection";
-import { Divider } from "@components/divider";
-import { DisclosureArrow } from "@components/disclosure";
-import { TooltipTrigger, Tooltip } from "@components/tooltip";
-import { Avatar } from "@components/avatar";
-import { Modal } from "@components/modal";
-import { Heading, Paragraph, Text } from "@components/typography";
-import { Overlay } from "@components/overlay";
+import { Menu, MenuTrigger, useMenuTriggerContext } from "@components/menu/index.ts";
+import { Button, IconButton } from "@components/button/index.ts";
+import { IconList } from "@components/icons/index.ts";
+import { Item, Section } from "@components/collection/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
+import { TooltipTrigger, Tooltip } from "@components/tooltip/index.ts";
+import { Avatar } from "@components/avatar/index.ts";
+import { Modal } from "@components/modal/index.ts";
+import { Heading, Paragraph, Text } from "@components/typography/index.ts";
+import { Overlay } from "@components/overlay/index.ts";
 import { CatIcon, KebabIcon, RocketIcon, SparklesIcon } from "@hopper-ui/icons";
 import { useCallback, useState, forwardRef } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { Content } from "@components/placeholders";
+import { Content } from "@components/placeholders/index.ts";
 
 const meta = {
     title: "Components/Menu",

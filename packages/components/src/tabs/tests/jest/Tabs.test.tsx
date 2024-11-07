@@ -1,9 +1,9 @@
-import { Content, Header } from "@components/placeholders";
+import { Content, Header } from "@components/placeholders/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Tabs } from "@components/tabs";
+import { Item } from "@components/collection/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Tabs } from "@components/tabs/index.ts";
 import { createRef } from "react";
 import userEvent from "@testing-library/user-event";
 
