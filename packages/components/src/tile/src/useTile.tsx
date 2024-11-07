@@ -1,8 +1,8 @@
-import { Div } from "../../html/index.ts"
+import { Div } from "../../html/index.ts";
 import { CheckmarkIcon } from "@hopper-ui/icons";
-import { InteractionProps, cssModule, useSlots } from "../../shared/index.ts"
+import { InteractionProps, cssModule, useSlots } from "../../shared/index.ts";
 import { ReactNode, useMemo } from "react";
-import { Text } from "../../typography/index.ts"
+import { Text } from "../../typography/index.ts";
 
 export type TileOrientation = "horizontal" | "vertical";
 

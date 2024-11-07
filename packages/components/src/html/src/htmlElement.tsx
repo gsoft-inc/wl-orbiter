@@ -1,6 +1,6 @@
 import { ElementRef, ElementType, PropsWithChildren, forwardRef } from "react";
-import { SlotProps, StyledComponentProps, mergeProps } from "../../shared/index.ts"
-import { useStyleProps, useStyledSystem } from "../../styling/index.ts"
+import { SlotProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { useStyleProps, useStyledSystem } from "../../styling/index.ts";
 
 // Adding the "as" prop to the HTML element components is not an ideal solution but a necessary one for now until we completly remove "as" support from Orbiter.
 // We must do this, because a component like Button which support the "as" prop also need to use the HtmlButton component as a base element to benefit from our CSS normalizing.

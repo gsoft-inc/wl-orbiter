@@ -1,7 +1,7 @@
-import { Box } from "../../box/index.ts"
+import { Box } from "../../box/index.ts";
 import { ComponentProps, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, mergeProps, normalizeSize, slot } from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.ts"
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, mergeProps, normalizeSize, slot } from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.ts";
 
 const DefaultElement = "span";
 

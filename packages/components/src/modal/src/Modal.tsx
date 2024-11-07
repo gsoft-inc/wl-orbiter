@@ -1,9 +1,9 @@
-import { AbstractDialogProps, Dialog } from "../../dialog/index.ts"
+import { AbstractDialogProps, Dialog } from "../../dialog/index.ts";
 import { Children, ComponentProps, ReactElement, ReactNode, forwardRef, useMemo } from "react";
-import { Content } from "../../placeholders/index.ts"
-import { Div } from "../../html/index.ts"
-import { OmitInternalProps, augmentElement, getSlotKey, isNil, mergeProps, useSlots } from "../../shared/index.ts"
-import { StyleProvider } from "../../styling/index.ts"
+import { Content } from "../../placeholders/index.ts";
+import { Div } from "../../html/index.ts";
+import { OmitInternalProps, augmentElement, getSlotKey, isNil, mergeProps, useSlots } from "../../shared/index.ts";
+import { StyleProvider } from "../../styling/index.ts";
 
 const DefaultElement = "section";
 

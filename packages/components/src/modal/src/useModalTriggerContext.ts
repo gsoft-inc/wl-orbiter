@@ -1,4 +1,4 @@
-import { DialogTriggerContextType, useDialogTriggerContext } from "../../dialog/index.ts"
+import { DialogTriggerContextType, useDialogTriggerContext } from "../../dialog/index.ts";
 
 export type ModalTriggerContextType = DialogTriggerContextType;
 

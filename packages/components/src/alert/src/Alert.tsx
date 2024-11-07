@@ -1,7 +1,7 @@
-import { AbstractDialogProps, Dialog, useDialogTriggerContext } from "../../dialog/index.ts"
-import { Button, ButtonGroup } from "../../button/index.ts"
+import { AbstractDialogProps, Dialog, useDialogTriggerContext } from "../../dialog/index.ts";
+import { Button, ButtonGroup } from "../../button/index.ts";
 import { ComponentProps, MouseEvent, forwardRef, useMemo } from "react";
-import { OmitInternalProps, isNil, isNilOrEmpty, mergeProps, useChainedEventCallback, useSlots } from "../../shared/index.ts"
+import { OmitInternalProps, isNil, isNilOrEmpty, mergeProps, useChainedEventCallback, useSlots } from "../../shared/index.ts";
 
 const DefaultElement = "section";
 

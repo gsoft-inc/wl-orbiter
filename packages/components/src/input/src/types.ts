@@ -1,6 +1,6 @@
-import { AbstractGroupProps } from "../../group/index.ts"
+import { AbstractGroupProps } from "../../group/index.ts";
 import { ElementType, SyntheticEvent } from "react";
-import { InteractionProps, InternalProps, StyledComponentProps } from "../../shared/index.ts"
+import { InteractionProps, InternalProps, StyledComponentProps } from "../../shared/index.ts";
 
 export type ValidationState = "valid" | "invalid";
 

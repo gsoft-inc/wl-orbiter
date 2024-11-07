@@ -13,13 +13,13 @@ import {
     useMergedRefs,
     useRawSlots,
     useRefState
-} from "../../shared/index.ts"
+} from "../../shared/index.ts";
 import { KeyboardEvent, ReactNode, Ref, SyntheticEvent, useCallback, useMemo } from "react";
-import { OverlayProps, PopupAlignment, PopupDirection, PopupPosition, usePopup, useTriggerWidth } from "../../overlay/index.ts"
-import { useCollection, useOnlyCollectionItems } from "../../collection/index.ts"
+import { OverlayProps, PopupAlignment, PopupDirection, PopupPosition, usePopup, useTriggerWidth } from "../../overlay/index.ts";
+import { useCollection, useOnlyCollectionItems } from "../../collection/index.ts";
 
-import { OptionKeyProp } from "../../listbox/index.ts"
-import { ValidationState } from "../../input/index.ts"
+import { OptionKeyProp } from "../../listbox/index.ts";
+import { ValidationState } from "../../input/index.ts";
 
 export interface UseSelectOptions {
     align?: PopupAlignment;

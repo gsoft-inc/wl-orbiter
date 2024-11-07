@@ -1,8 +1,8 @@
-import { embedIconButton } from "../../button/index.ts"
-import { Spinner, SpinnerProps } from "../../spinner/index.ts"
+import { embedIconButton } from "../../button/index.ts";
+import { Spinner, SpinnerProps } from "../../spinner/index.ts";
 import { CreatedIconProps } from "@hopper-ui/icons";
 import { ReactElement } from "react";
-import { augmentElement } from "../../shared/index.ts"
+import { augmentElement } from "../../shared/index.ts";
 
 type UseInputIconProps = Omit<CreatedIconProps, "className" | "children">;
 

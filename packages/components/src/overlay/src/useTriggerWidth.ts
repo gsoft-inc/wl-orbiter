@@ -1,5 +1,5 @@
 import { RefCallback, useState } from "react";
-import { arrayify, useEventCallback, useResizeObserver } from "../../shared/index.ts"
+import { arrayify, useEventCallback, useResizeObserver } from "../../shared/index.ts";
 
 export interface UseTriggerWidthOptions {
     isDisabled?: boolean;

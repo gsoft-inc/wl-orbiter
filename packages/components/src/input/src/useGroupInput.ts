@@ -1,9 +1,9 @@
-import { FlexAlignment, FlexOrientation } from "../../layout/index.ts"
-import { GapProp } from "../../styling/index.ts"
+import { FlexAlignment, FlexOrientation } from "../../layout/index.ts";
+import { GapProp } from "../../styling/index.ts";
 import { Ref } from "react";
-import { ValidationState } from "../../input/index.ts"
-import { cssModule, normalizeSize } from "../../shared/index.ts"
-import { useFieldContext } from "../../field/index.ts"
+import { ValidationState } from "../../input/index.ts";
+import { cssModule, normalizeSize } from "../../shared/index.ts";
+import { useFieldContext } from "../../field/index.ts";
 
 /* eslint-disable sort-keys, sort-keys-fix/sort-keys-fix */
 const Gap = {

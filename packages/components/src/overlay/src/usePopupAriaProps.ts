@@ -1,4 +1,4 @@
-import { useId } from "../../shared/index.ts"
+import { useId } from "../../shared/index.ts";
 
 export type PopupType = "menu" | "listbox" | "dialog";
 

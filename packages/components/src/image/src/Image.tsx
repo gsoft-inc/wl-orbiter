@@ -1,7 +1,7 @@
-import { Box } from "../../box/index.ts"
+import { Box } from "../../box/index.ts";
 import { ComponentProps, ElementType, forwardRef } from "react";
-import { HeightProp, ObjectFitProp, ObjectPositionProp, ResponsiveProp, WidthProp, useResponsiveValue } from "../../styling/index.ts"
-import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, mergeProps, slot } from "../../shared/index.ts"
+import { HeightProp, ObjectFitProp, ObjectPositionProp, ResponsiveProp, WidthProp, useResponsiveValue } from "../../styling/index.ts";
+import { InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, cssModule, mergeProps, slot } from "../../shared/index.ts";
 
 export type AbstractImageProps<T extends ElementType> = SlotProps & InternalProps & Omit<StyledComponentProps<T>, "height" | "objectFit" | "objectPosition" | "src" | "width"> & {
     /**

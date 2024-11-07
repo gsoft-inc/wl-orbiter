@@ -1,11 +1,11 @@
-import { Box } from "../../box/index.ts"
+import { Box } from "../../box/index.ts";
 import { ComponentProps, ReactNode, SyntheticEvent, forwardRef, useMemo } from "react";
-import { CrossButton } from "../../button/index.ts"
-import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots, createEmbeddableAdapter, slot } from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { Text } from "../../typography/index.ts"
-import { useFieldInputProps } from "../../field/index.ts"
-import { ValidationState } from "../../input/index.ts"
+import { CrossButton } from "../../button/index.ts";
+import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, createSizeAdapter, cssModule, isNil, mergeProps, normalizeSize, useMergedRefs, useSlots, createEmbeddableAdapter, slot } from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { Text } from "../../typography/index.ts";
+import { useFieldInputProps } from "../../field/index.ts";
+import { ValidationState } from "../../input/index.ts";
 
 const DefaultElement = "div";
 

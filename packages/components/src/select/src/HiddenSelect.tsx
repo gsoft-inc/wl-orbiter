@@ -1,6 +1,6 @@
-import { HtmlInput } from "../../html/index.ts"
-import { StyledComponentProps, isNil, mergeProps, InternalProps, OmitInternalProps } from "../../shared/index.ts"
-import { ValidationState } from "../../input/index.ts"
+import { HtmlInput } from "../../html/index.ts";
+import { StyledComponentProps, isNil, mergeProps, InternalProps, OmitInternalProps } from "../../shared/index.ts";
+import { ValidationState } from "../../input/index.ts";
 import { ComponentProps, forwardRef } from "react";
 
 const DefaultElement = "input";

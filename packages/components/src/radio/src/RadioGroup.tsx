@@ -1,4 +1,4 @@
-import { AbstractGroupInputProps, useGroupInput } from "../../input/index.ts"
+import { AbstractGroupInputProps, useGroupInput } from "../../input/index.ts";
 import {
     CheckableContext,
     Keys,
@@ -17,13 +17,13 @@ import {
     useKeyboardNavigation,
     useKeyedRovingFocus,
     useMergedRefs
-} from "../../shared/index.ts"
+} from "../../shared/index.ts";
 import { Children, ComponentProps, ReactElement, SyntheticEvent, forwardRef, useCallback } from "react";
 
-import { Group } from "../../group/index.ts"
-import { useFieldInputProps } from "../../field/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { useToolbarProps } from "../../toolbar/index.ts"
+import { Group } from "../../group/index.ts";
+import { useFieldInputProps } from "../../field/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { useToolbarProps } from "../../toolbar/index.ts";
 
 const DefaultElement = "div";
 

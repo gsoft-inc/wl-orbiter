@@ -1,6 +1,6 @@
 import { AllHTMLAttributes, ComponentProps, ElementType, ForwardedRef } from "react";
 
-import { StyledSystemProps } from "../../styling/index.ts"
+import { StyledSystemProps } from "../../styling/index.ts";
 
 export interface SlotProps {
     /**

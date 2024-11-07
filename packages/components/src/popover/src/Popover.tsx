@@ -16,11 +16,11 @@ import {
     useId,
     useMergedRefs,
     useSlots
-} from "../../shared/index.ts"
-import { useOverlayFocusRing, useTrapFocus } from "../../overlay/index.ts"
+} from "../../shared/index.ts";
+import { useOverlayFocusRing, useTrapFocus } from "../../overlay/index.ts";
 
-import { Box } from "../../box/index.ts"
-import { Text } from "../../typography/index.ts"
+import { Box } from "../../box/index.ts";
+import { Text } from "../../typography/index.ts";
 import { HeadingContext } from "@hopper-ui/components";
 
 const DefaultElement = "section";

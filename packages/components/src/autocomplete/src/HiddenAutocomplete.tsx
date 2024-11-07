@@ -1,7 +1,7 @@
-import { HtmlInput } from "../../html/index.ts"
+import { HtmlInput } from "../../html/index.ts";
 import { Ref } from "react";
-import { StyledComponentProps, isNil, mergeProps } from "../../shared/index.ts"
-import { ValidationState } from "../../input/index.ts"
+import { StyledComponentProps, isNil, mergeProps } from "../../shared/index.ts";
+import { ValidationState } from "../../input/index.ts";
 
 export interface HiddenAutocompleteProps extends Omit<StyledComponentProps<"input">, "ref"> {
     /**

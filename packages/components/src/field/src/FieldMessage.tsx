@@ -1,8 +1,8 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared/index.ts"
-import { ResponsiveProp, StyleProvider, useResponsiveValue } from "../../styling/index.ts"
+import { InternalProps, StyledComponentProps, cssModule, mergeProps } from "../../shared/index.ts";
+import { ResponsiveProp, StyleProvider, useResponsiveValue } from "../../styling/index.ts";
 import { IconContext } from "@hopper-ui/icons";
-import { Text } from "../../typography/index.ts"
+import { Text } from "../../typography/index.ts";
 
 export const FieldMessageDefaultElement = "div";
 

@@ -1,11 +1,11 @@
-import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner, useInputButton, useInputHasFocus } from "../../input/index.ts"
-import { Box, BoxProps } from "../../box/index.ts"
+import { AbstractInputProps, adaptInputStylingProps, useInput, useInputIcon, useInputSpinner, useInputButton, useInputHasFocus } from "../../input/index.ts";
+import { Box, BoxProps } from "../../box/index.ts";
 import { ChangeEvent, ComponentProps, ElementType, ReactElement, forwardRef } from "react";
-import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group/index.ts"
-import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, omitProps, useChainedEventCallback, useControllableState } from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { useFieldInputProps } from "../../field/index.ts"
-import { useToolbarProps } from "../../toolbar/index.ts"
+import { ClearInputGroupContext, useInputGroupTextInputProps } from "../../input-group/index.ts";
+import { OmitInternalProps, cssModule, createSizeAdapter, isNil, mergeProps, omitProps, useChainedEventCallback, useControllableState } from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { useFieldInputProps } from "../../field/index.ts";
+import { useToolbarProps } from "../../toolbar/index.ts";
 
 export type AbstractTextInputProps<T extends ElementType> = AbstractInputProps<T> & {
     /**

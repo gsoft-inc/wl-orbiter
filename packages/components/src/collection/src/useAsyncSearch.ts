@@ -1,5 +1,5 @@
 import { SyntheticEvent, useCallback, useEffect, useState } from "react";
-import { isNil, isPromise, useRefState } from "../../shared/index.ts"
+import { isNil, isPromise, useRefState } from "../../shared/index.ts";
 
 export function useAsyncSearch<T>(load: (query: string, signal: AbortSignal) => Promise<T[]>) {
     const [isLoading, setIsLoading] = useState(false);

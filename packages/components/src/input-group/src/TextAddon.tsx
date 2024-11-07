@@ -1,7 +1,7 @@
-import { Box } from "../../box/index.ts"
+import { Box } from "../../box/index.ts";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts"
-import { useInputGroupAddonProps } from "../../input-group/index.ts"
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { useInputGroupAddonProps } from "../../input-group/index.ts";
 
 const DefaultElement = "div";
 

@@ -1,4 +1,4 @@
-import { useEventCallback } from "../../shared/index.ts"
+import { useEventCallback } from "../../shared/index.ts";
 import { useState } from "react";
 
 export function useInputHasFocus() {
