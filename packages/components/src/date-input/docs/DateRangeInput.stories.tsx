@@ -103,7 +103,7 @@ export const Form: DateRangeInputStory = {
     )
 };
 
-export const Condrolled: DateRangeInputStory = {
+export const Controlled: DateRangeInputStory = {
     render: () => {
         const [startDate, setStartDate] = useState(null);
         const [endDate, setEndDate] = useState(null);
