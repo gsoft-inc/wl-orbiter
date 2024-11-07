@@ -13,16 +13,16 @@ const PrettierParser = {
 
 
 export function useFormattedCode(code: string, language: string) {
-    return useMemo(() => {
-        formatCode(code, language);
+    return useMemo(async () => {
+        await formatCode(code, language);
     }, [code, language]);
 }
 
-export function formatCode(code: string, language: string) {
+export async function formatCode(code: string, language: string) {
     const parser = PrettierParser[language];
 
     if (!isNil(parser)) {
-        const prettyCode = prettier
+        const prettyCode = (await prettier
             .format(code, {
                 parser: parser,
                 plugins: [prettierBabel, prettierPostCss],
@@ -30,7 +30,7 @@ export function formatCode(code: string, language: string) {
                 arrowParens: "avoid",
                 printWidth: 100,
                 trailingComma: "none"
-            })
+            }))
             .replace(">;", ">")
             .trim();
 

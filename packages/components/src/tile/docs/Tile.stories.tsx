@@ -5,7 +5,7 @@ import { Tile, TileGroup, TileLink } from "@components/tile/index.ts";
 import { Content } from "@components/placeholders/index.ts";
 import { Div } from "@components/html/index.ts";
 import { Heading } from "@components/typography/index.ts";
-import { Planet, SpacePortraitHorizontal, SpacePortrait } from "./assets";
+import { Planet, SpacePortraitHorizontal, SpacePortrait } from "./assets/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

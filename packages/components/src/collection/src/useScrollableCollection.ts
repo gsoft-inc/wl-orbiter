@@ -1,6 +1,6 @@
-import { CollectionNode } from "./useCollection";
+import { CollectionNode } from "./useCollection.ts";
 import { RefObject, useState } from "react";
-import { isNil, useIsomorphicLayoutEffect } from "../../shared/index.ts"
+import { isNil, useIsomorphicLayoutEffect } from "../../shared/index.ts";
 
 interface UseScrollableCollectionOptions {
     borderHeight?: number;

@@ -1,7 +1,7 @@
-import { AbstractIconButtonProps, IconButton, InnerIconButton } from "./IconButton";
+import { AbstractIconButtonProps, IconButton, InnerIconButton } from "./IconButton.tsx";
 import { ComponentProps, forwardRef } from "react";
 import { DismissIcon } from "@hopper-ui/icons";
-import { OmitInternalProps, mergeClasses, slot } from "../../shared/index.ts"
+import { OmitInternalProps, mergeClasses, slot } from "../../shared/index.ts";
 
 export type InnerCrossButtonProps = Omit<AbstractIconButtonProps<"button">, "fluid" | "loading" | "onChange" | "type" | "variant">;
 

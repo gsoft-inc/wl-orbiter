@@ -1,15 +1,15 @@
-import { AbstractInputProps } from "../../input/index.ts"
-import { Box } from "../../box/index.ts"
+import { AbstractInputProps } from "../../input/index.ts";
+import { Box } from "../../box/index.ts";
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { ChangeEvent, ChangeEventHandler, ComponentProps, forwardRef, useMemo } from "react";
-import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useCheckableProps, useSlots } from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { Span } from "../../html/index.ts"
-import { Text } from "../../typography/index.ts"
-import { VisuallyHidden } from "../../visually-hidden/index.ts"
-import { useCheckbox } from "./useCheckbox";
-import { useFieldInputProps } from "../../field/index.ts"
-import { useToolbarProps } from "../../toolbar/index.ts"
+import { OmitInternalProps, isNil, mergeProps, omitProps, resolveChildren, useChainedEventCallback, useCheckableProps, useSlots } from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { Span } from "../../html/index.ts";
+import { Text } from "../../typography/index.ts";
+import { VisuallyHidden } from "../../visually-hidden/index.ts";
+import { useCheckbox } from "./useCheckbox.ts";
+import { useFieldInputProps } from "../../field/index.ts";
+import { useToolbarProps } from "../../toolbar/index.ts";
 
 const DefaultElement = "label";
 

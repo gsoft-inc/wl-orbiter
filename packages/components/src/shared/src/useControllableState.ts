@@ -1,6 +1,6 @@
-import { isFunction, isUndefined } from "./assertions";
+import { isFunction, isUndefined } from "./assertions.ts";
 import { useCallback, useRef } from "react";
-import { useRefState } from "./useRefState";
+import { useRefState } from "./useRefState.ts";
 
 function validatePrerequisites<T>(controlledValue: T, initialValue: T) {
     if (!isUndefined(controlledValue) && !isUndefined(initialValue)) {

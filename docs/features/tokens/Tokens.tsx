@@ -12,7 +12,7 @@ import {
     paddingRenderer,
     marginRenderer,
     sizingRenderer
-} from "./TokenTable";
+} from "./TokenTable.tsx";
 import {
     BackgroundColorMapping,
     TextColorMapping,

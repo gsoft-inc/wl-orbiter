@@ -7,7 +7,7 @@ import { Image } from "@components/image/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Heading, Button, ButtonGroup, Switch, Link } from "@hopper-ui/components";
 import { Item } from "@components/collection/index.ts";
-import { Nasa } from "./assets";
+import { Nasa } from "./assets/index.tsx";
 import { Tabs } from "@components/tabs/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";

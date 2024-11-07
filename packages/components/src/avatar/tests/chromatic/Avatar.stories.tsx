@@ -2,7 +2,7 @@ import { Avatar } from "@components/avatar/index.ts";
 import { Div } from "@components/html/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { Astronaut, Person } from "./assets";
+import { Astronaut, Person } from "./assets/index.ts";
 
 const meta = {
     title: "Chromatic/Avatar",

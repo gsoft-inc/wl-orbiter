@@ -1,10 +1,10 @@
-import { AbstractGroupProps, Group } from "../../group/index.ts"
-import { AvatarText } from "./Avatar";
-import { Box } from "../../box/index.ts"
+import { AbstractGroupProps, Group } from "../../group/index.ts";
+import { AvatarText } from "./Avatar.tsx";
+import { Box } from "../../box/index.ts";
 import { Children, ComponentProps, ReactElement, forwardRef } from "react";
-import { OmitInternalProps, augmentElement, cssModule, isNil, mergeClasses, mergeProps, normalizeSize } from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { Tooltip, TooltipTrigger } from "../../tooltip/index.ts"
+import { OmitInternalProps, augmentElement, cssModule, isNil, mergeClasses, mergeProps, normalizeSize } from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { Tooltip, TooltipTrigger } from "../../tooltip/index.ts";
 
 const DefaultElement = "div";
 

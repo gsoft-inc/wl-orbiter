@@ -1,4 +1,4 @@
-import { isFunction, isNil } from "../../shared/src/assertions";
+import { isFunction, isNil } from "../../shared/src/assertions.ts";
 
 // Took from https://github.com/tailwindlabs/headlessui/blob/develop/packages/%40headlessui-react/src/utils/match.ts
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

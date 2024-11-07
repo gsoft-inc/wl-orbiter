@@ -1,8 +1,8 @@
-import { Box } from "../../box/index.ts"
+import { Box } from "../../box/index.ts";
 import { Children, ComponentProps, ReactElement, ReactNode, forwardRef, useMemo } from "react";
-import { ClearFieldContext, useFieldInputProps } from "../../field/index.ts"
-import { ClearToolbar, useToolbarProps } from "../../toolbar/index.ts"
-import { InputGroupContext } from "./InputGroupContext";
+import { ClearFieldContext, useFieldInputProps } from "../../field/index.ts";
+import { ClearToolbar, useToolbarProps } from "../../toolbar/index.ts";
+import { InputGroupContext } from "./InputGroupContext.tsx";
 import {
     InternalProps,
     OmitInternalProps,
@@ -15,9 +15,9 @@ import {
     resolveChildren,
     useHasChild,
     useMergedRefs
-} from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { TextAddon } from "./TextAddon";
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { TextAddon } from "./TextAddon.tsx";
 
 const DefaultElement = "div";
 

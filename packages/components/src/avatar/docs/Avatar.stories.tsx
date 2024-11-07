@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Avatar, AvatarGroup, AnonymousAvatar, DeletedAvatar } from "@components/avatar/index.ts";
-import { ChrisHadfield } from "./assets";
+import { ChrisHadfield } from "./assets/index.ts";
 import { Inline } from "@components/layout/index.ts";
 
 const meta = {

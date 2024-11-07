@@ -6,7 +6,7 @@ import { Illustration } from "@components/illustration/index.ts";
 import { Image } from "@components/image/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Item } from "@components/collection/index.ts";
-import { Planet, SpaceLandscape } from "./assets";
+import { Planet, SpaceLandscape } from "./assets/index.ts";
 import { Tabs } from "@components/tabs/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 

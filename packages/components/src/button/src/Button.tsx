@@ -1,5 +1,5 @@
-import { Box } from "../../box/index.ts"
-import { ButtonVariant, useButton } from "./useButton";
+import { Box } from "../../box/index.ts";
+import { ButtonVariant, useButton } from "./useButton.ts";
 import { ComponentProps, ElementType, ReactNode, forwardRef, useMemo } from "react";
 import {
     InteractionProps,
@@ -14,13 +14,13 @@ import {
     omitProps,
     slot,
     useSlots
-} from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.ts"
-import { Text } from "../../typography/index.ts"
-import { useFormButton } from "../../form/index.ts"
-import { useInputGroupButtonAddonProps } from "../../input-group/index.ts"
-import { useToolbarProps } from "../../toolbar/index.ts"
-import { Spinner } from "../../spinner/index.ts"
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue, useStyleProps } from "../../styling/index.ts";
+import { Text } from "../../typography/index.ts";
+import { useFormButton } from "../../form/index.ts";
+import { useInputGroupButtonAddonProps } from "../../input-group/index.ts";
+import { useToolbarProps } from "../../toolbar/index.ts";
+import { Spinner } from "../../spinner/index.ts";
 
 export type AbstractButtonProps<T extends ElementType> = InternalProps & InteractionProps & Omit<StyledComponentProps<T>, "autoFocus"> & {
     /**

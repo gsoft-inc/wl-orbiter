@@ -1,9 +1,9 @@
 import { KeyboardEvent, KeyboardEventHandler } from "react";
 
-import { FocusManager } from "./useFocusManager";
-import { Keys } from "./keys";
-import { isNil } from "./assertions";
-import { useEventCallback } from "./useEventCallback";
+import { FocusManager } from "./useFocusManager.ts";
+import { Keys } from "./keys.ts";
+import { isNil } from "./assertions.ts";
+import { useEventCallback } from "./useEventCallback.ts";
 
 export interface KeyboardNavigationOptions {
     onCanSelect?: (event: KeyboardEvent, element: Element, key: Keys) => boolean;

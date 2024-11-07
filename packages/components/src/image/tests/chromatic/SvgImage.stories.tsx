@@ -1,5 +1,5 @@
 import { Inline } from "@components/layout/index.ts";
-import { NoResults } from "./assets";
+import { NoResults } from "./assets/index.ts";
 import { SvgImage } from "@components/image/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 

@@ -1,4 +1,4 @@
-import { FormContextType, useFormContext } from "./FormContext";
+import { FormContextType, useFormContext } from "./FormContext.ts";
 
 export interface FormFieldProps extends FormContextType {
     className?: string;

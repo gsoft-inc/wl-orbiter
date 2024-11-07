@@ -1,5 +1,5 @@
 import { SyntheticEvent, createContext, useContext } from "react";
-import type { MenuSelectionMode } from "./Menu";
+import type { MenuSelectionMode } from "./Menu.tsx";
 
 export interface MenuContextType {
     onSelect?: (event: SyntheticEvent, key: string) => void;

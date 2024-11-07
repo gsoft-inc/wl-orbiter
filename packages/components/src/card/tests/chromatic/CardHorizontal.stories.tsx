@@ -7,7 +7,7 @@ import { Illustration } from "@components/illustration/index.ts";
 import { Image } from "@components/image/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Item } from "@components/collection/index.ts";
-import { Nasa } from "./assets";
+import { Nasa } from "./assets/index.tsx";
 import { Switch } from "@components/switch/index.ts";
 import { Tabs } from "@components/tabs/index.ts";
 import { TextLink } from "@components/link/index.ts";

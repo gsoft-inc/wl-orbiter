@@ -1,11 +1,11 @@
 import { SparklesIcon } from "@hopper-ui/icons";
-import { GalaxyLargeImage } from "./assets";
+import { GalaxyLargeImage } from "./assets/index.ts";
 import { IconLink, IconLinkAsButton, Link, TextLink, TextLinkAsButton } from "@components/link/index.ts";
 import { Image } from "@components/image/index.ts";
 import { Inline } from "@components/layout/index.ts";
 import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { RouterLink } from "./RouterLink";
+import { RouterLink } from "./RouterLink.tsx";
 
 const meta = {
     title: "Components/Link",

@@ -5,7 +5,7 @@ import { IllustratedMessage } from "@components/illustrated-message/index.ts";
 import { Image } from "@components/image/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Heading } from "@hopper-ui/components";
-import { Nasa } from "./assets";
+import { Nasa } from "./assets/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,5 +1,5 @@
 import { ComponentProps, ForwardedRef, KeyboardEvent, RefObject, SyntheticEvent, forwardRef, useCallback, useState } from "react";
-import { Div, HtmlButton } from "../../html/index.ts"
+import { Div, HtmlButton } from "../../html/index.ts";
 import {
     FocusScopeContext,
     InternalProps,
@@ -18,14 +18,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared/index.ts"
-import { Overlay, OverlayProps, useOverlayPosition, useOverlayTrigger, usePopupAriaProps, usePopupLightDismiss } from "../../overlay/index.ts"
-import { Tab, TabKeyProp } from "./Tab";
+} from "../../shared/index.ts";
+import { Overlay, OverlayProps, useOverlayPosition, useOverlayTrigger, usePopupAriaProps, usePopupLightDismiss } from "../../overlay/index.ts";
+import { Tab, TabKeyProp } from "./Tab.tsx";
 
-import { Box } from "../../box/index.ts"
-import { TabType } from "./useTabsItems";
-import { useCollapsibleTabs } from "./useCollapsibleTabs";
-import { useTabsContext } from "./TabsContext";
+import { Box } from "../../box/index.ts";
+import { TabType } from "./useTabsItems.ts";
+import { useCollapsibleTabs } from "./useCollapsibleTabs.ts";
+import { useTabsContext } from "./TabsContext.ts";
 
 const TabGap = 8;
 const PopoverTriggerWidth = 48;

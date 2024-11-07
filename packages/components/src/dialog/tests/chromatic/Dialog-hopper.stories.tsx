@@ -1,4 +1,4 @@
-import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
+import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets/index.tsx";
 import { Footer, Header, Heading, ButtonGroup, Button, Link } from "@hopper-ui/components";
 import { Content } from "@components/placeholders/index.ts";
 import { Paragraph } from "@components/typography/index.ts";

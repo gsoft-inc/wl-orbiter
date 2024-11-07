@@ -1,4 +1,4 @@
-import { Box } from "../../box/index.ts"
+import { Box } from "../../box/index.ts";
 import { ComponentProps, forwardRef } from "react";
 import {
     InternalProps,
@@ -9,9 +9,9 @@ import {
     mergeProps,
     normalizeSize,
     slot
-} from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
-import { DeletedIcon } from "./svgs";
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { DeletedIcon } from "./svgs.tsx";
 
 const DefaultElement = "div";
 

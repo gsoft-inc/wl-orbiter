@@ -1,4 +1,4 @@
-import { Launch } from "./assets";
+import { Launch } from "./assets/index.ts";
 import { Image } from "@components/image/index.ts";
 
 export default function LaunchImage() {

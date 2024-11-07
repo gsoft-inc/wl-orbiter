@@ -1,8 +1,8 @@
-import { isFunction, isNil, isUndefined } from "./assertions";
-import { UnionToIntersection } from "./type-fest";
-import { createChainedFunction } from "./useChainedEventCallback";
-import { mergeClasses } from "./mergeClasses";
-import { mergeRefs } from "./useMergedRefs";
+import { isFunction, isNil, isUndefined } from "./assertions.ts";
+import { UnionToIntersection } from "./type-fest.ts";
+import { createChainedFunction } from "./useChainedEventCallback.ts";
+import { mergeClasses } from "./mergeClasses.ts";
+import { mergeRefs } from "./useMergedRefs.ts";
 
 export interface CompositeKeyWeakMapNode<T> {
     map: WeakMap<any, any>;

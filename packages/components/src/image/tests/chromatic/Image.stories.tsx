@@ -2,7 +2,7 @@ import { Div } from "@components/html/index.ts";
 import { Image } from "@components/image/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { Launch, Mars } from "./assets";
+import { Launch, Mars } from "./assets/index.ts";
 
 const meta = {
     title: "Chromatic/Image",

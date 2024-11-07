@@ -1,8 +1,8 @@
-import { Box } from "../../box/index.ts"
-import { InternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts"
-import { PanelType } from "./useTabsItems";
+import { Box } from "../../box/index.ts";
+import { InternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { PanelType } from "./useTabsItems.ts";
 import { Ref } from "react";
-import { TabPanel } from "./TabPanel";
+import { TabPanel } from "./TabPanel.tsx";
 
 const DefaultElement = "div";
 

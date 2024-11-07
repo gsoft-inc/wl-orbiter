@@ -1,6 +1,6 @@
 import { IllustratedMessage } from "@components/illustrated-message/index.ts";
 import { SvgImage } from "@components/image/index.ts";
-import { NoResults } from "./assets";
+import { NoResults } from "./assets/index.tsx";
 import { Heading } from "@components/typography/index.ts";
 import { Content } from "@components/placeholders/index.ts";
 

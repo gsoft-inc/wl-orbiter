@@ -1,4 +1,4 @@
-import { CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useOnlyCollectionItems, useScrollableCollection } from "../../collection/index.ts"
+import { CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useOnlyCollectionItems, useScrollableCollection } from "../../collection/index.ts";
 import { ComponentProps, KeyboardEvent, ReactNode, SyntheticEvent, forwardRef, useImperativeHandle, useMemo } from "react";
 import {
     FocusManager,
@@ -23,14 +23,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared/index.ts"
-import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts"
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
 
-import { Box } from "../../box/index.ts"
-import { ListboxContext } from "./ListboxContext";
-import { ListboxOption } from "./ListboxOption";
-import { ListboxSection } from "./ListboxSection";
-import { ValidationState } from "../../input/index.ts"
+import { Box } from "../../box/index.ts";
+import { ListboxContext } from "./ListboxContext.ts";
+import { ListboxOption } from "./ListboxOption.tsx";
+import { ListboxSection } from "./ListboxSection.tsx";
+import { ValidationState } from "../../input/index.ts";
 
 export const OptionKeyProp = "data-o-ui-key";
 

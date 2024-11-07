@@ -1,9 +1,8 @@
-import { FocusManager, FocusManagerHandlers, FocusManagerIterationOptions, FocusManagerScopeOptions } from "./useFocusManager";
+import { FocusManager, FocusManagerHandlers, FocusManagerIterationOptions, FocusManagerScopeOptions } from "./useFocusManager.ts";
 import { RefObject, useCallback, useEffect } from "react";
-
-import { FocusTarget } from "./focusTarget";
-import { createDisposables } from "./useDisposables";
-import { useChainedEventCallback } from "./useChainedEventCallback";
+import { FocusTarget } from "./focusTarget.ts";
+import { createDisposables } from "./useDisposables.ts";
+import { useChainedEventCallback } from "./useChainedEventCallback.ts";
 
 export interface AbstractAutoFocusOptions {
     delay?: number;

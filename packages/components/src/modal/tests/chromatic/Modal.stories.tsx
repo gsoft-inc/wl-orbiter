@@ -1,6 +1,5 @@
-import { Apollo11Poster, BlueOrigin, Nasa, SpaceX } from "./assets";
+import { Apollo11Poster, BlueOrigin, Nasa, SpaceX } from "./assets/index.ts";
 import { Heading, Paragraph } from "@components/typography/index.ts";
-
 import { Button } from "@components/button/index.ts";
 import { Card } from "@components/card/index.ts";
 import { Content } from "@components/placeholders/index.ts";

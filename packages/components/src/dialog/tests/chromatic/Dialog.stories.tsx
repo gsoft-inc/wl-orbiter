@@ -1,4 +1,4 @@
-import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
+import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets/index.tsx";
 import { Content, Footer, Header } from "@components/placeholders/index.ts";
 import { Heading, Paragraph } from "@components/typography/index.ts";
 import { ButtonGroup, Button } from "@components/button/index.ts";

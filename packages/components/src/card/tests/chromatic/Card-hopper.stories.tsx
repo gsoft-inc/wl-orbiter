@@ -1,4 +1,4 @@
-import { ApolloBanner, ApolloPoster } from "./assets";
+import { ApolloBanner, ApolloPoster } from "./assets/index.tsx";
 import { Box } from "@components/box/index.ts";
 import { Card } from "@components/card/index.ts";
 import { Div } from "@components/html/index.ts";

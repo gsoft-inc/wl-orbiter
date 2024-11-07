@@ -6,7 +6,7 @@ import { Div } from "@components/html/index.ts";
 import { Form } from "@components/form/index.ts";
 import { Heading } from "@components/typography/index.ts";
 import { Image } from "@components/image/index.ts";
-import { Launch } from "./assets";
+import { Launch } from "./assets/index.ts";
 import { Popover } from "@components/popover/index.ts";
 import { TextInput } from "@components/text-input/index.ts";
 import { TextLink } from "@components/link/index.ts";

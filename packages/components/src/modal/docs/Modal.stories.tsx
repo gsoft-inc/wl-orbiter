@@ -2,7 +2,7 @@ import { Button, ButtonGroup } from "@components/button/index.ts";
 import { Card } from "@components/card/index.ts";
 import { Overlay } from "@components/overlay/index.ts";
 import { Content, Footer, Header } from "@components/placeholders/index.ts";
-import { ET, Planet, SpacePortrait, SpacePortraitHorizontal, TheMartian } from "./assets";
+import { ET, Planet, SpacePortrait, SpacePortraitHorizontal, TheMartian } from "./assets/index.ts";
 import { Heading, Paragraph } from "@components/typography/index.ts";
 import { Illustration } from "@components/illustration/index.ts";
 import { Image } from "@components/image/index.ts";

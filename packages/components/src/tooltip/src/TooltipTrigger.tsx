@@ -12,12 +12,12 @@ import {
     useId,
     useMergedRefs,
     useFocusScope
-} from "../../shared/index.ts"
-import { Overlay, OverlayArrow, OverlayPositionProp, isTargetParent, useOverlayPosition, useOverlayTrigger, useOverlayLightDismiss } from "../../overlay/index.ts"
-import { useResponsiveValue } from "../../styling/index.ts"
+} from "../../shared/index.ts";
+import { Overlay, OverlayArrow, OverlayPositionProp, isTargetParent, useOverlayPosition, useOverlayTrigger, useOverlayLightDismiss } from "../../overlay/index.ts";
+import { useResponsiveValue } from "../../styling/index.ts";
 
-import { Div } from "../../html/index.ts"
-import { TooltipTriggerContext } from "./TooltipTriggerContext";
+import { Div } from "../../html/index.ts";
+import { TooltipTriggerContext } from "./TooltipTriggerContext.ts";
 
 const DefaultElement = "div";
 

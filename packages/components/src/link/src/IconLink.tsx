@@ -1,10 +1,10 @@
-import { AbstractLinkProps } from "./Link";
-import { Box } from "../../box/index.ts"
+import { AbstractLinkProps } from "./Link.tsx";
+import { Box } from "../../box/index.ts";
 import { Children, ComponentProps, ReactElement, ReactNode, forwardRef } from "react";
-import { LinkVariant, useLink } from "./useLink";
-import { NewTabIndicator } from "./NewTabIndicator";
-import { OmitInternalProps, as, mergeProps } from "../../shared/index.ts"
-import { useStyleProps } from "../../styling/index.ts"
+import { LinkVariant, useLink } from "./useLink.ts";
+import { NewTabIndicator } from "./NewTabIndicator.tsx";
+import { OmitInternalProps, as, mergeProps } from "../../shared/index.ts";
+import { useStyleProps } from "../../styling/index.ts";
 
 const DefaultElement = "a";
 

@@ -1,4 +1,4 @@
-import { isNil } from "./assertions";
+import { isNil } from "./assertions.ts";
 
 export function canUseDOM(): boolean {
     return (

@@ -1,10 +1,10 @@
 import { ComponentProps, KeyboardEvent, MouseEvent, ReactNode, SyntheticEvent, forwardRef, useMemo } from "react";
-import { InteractionProps, InternalProps, Keys, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots } from "../../shared/index.ts"
+import { InteractionProps, InternalProps, Keys, OmitInternalProps, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots } from "../../shared/index.ts";
 
-import { Box } from "../../box/index.ts"
-import { TabType } from "./useTabsItems";
-import { Text } from "../../typography/index.ts"
-import { useTabsContext } from "./TabsContext";
+import { Box } from "../../box/index.ts";
+import { TabType } from "./useTabsItems.ts";
+import { Text } from "../../typography/index.ts";
+import { useTabsContext } from "./TabsContext.ts";
 
 export const TabKeyProp = "data-o-ui-key";
 
