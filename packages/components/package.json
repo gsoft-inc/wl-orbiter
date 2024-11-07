@@ -33,10 +33,8 @@
     },
     "scripts": {
         "prebuild": "pnpm clean",
-        "build": "pnpm build:js & pnpm copy-files",
-        "build:js": "tsc --build ./tsconfig.build.json",
-        "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
-        "clean": "pnpm dlx rimraf dist tsconfig.build.tsbuildinfo"
+        "build": "tsup --config ./tsup.build.ts",
+        "clean": "pnpm dlx rimraf dist"
     },
     "peerDependencies": {
         "@hopper-ui/components": "*",
