@@ -5,7 +5,7 @@ import { Keys } from "@components/shared/index.ts";
 import { Menu } from "@components/menu/index.ts";
 import { Text } from "@components/typography/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

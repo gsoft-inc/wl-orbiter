@@ -3,7 +3,7 @@ import { UseOverlayLightDismissOptions, useOverlayLightDismiss } from "@componen
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { ComponentProps } from "react";
 import { Div } from "@components/html/index.ts";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 type OverlayProps = UseOverlayLightDismissOptions & ComponentProps<"div">;
 

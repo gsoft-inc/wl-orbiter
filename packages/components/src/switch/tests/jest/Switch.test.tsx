@@ -2,7 +2,7 @@ import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 
 import { Switch } from "@components/switch/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 function getInput(element: HTMLElement) {
     return element.querySelector("input") as HTMLInputElement;

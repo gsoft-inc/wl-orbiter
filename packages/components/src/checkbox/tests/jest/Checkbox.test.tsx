@@ -1,7 +1,7 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 import { Checkbox } from "@components/checkbox/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 function getInput(element: Element) {
     return element.querySelector("input");

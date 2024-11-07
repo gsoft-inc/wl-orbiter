@@ -3,7 +3,7 @@ import { Heading } from "@components/typography/index.ts";
 import { Tile, TileGroup } from "@components/tile/index.ts";
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

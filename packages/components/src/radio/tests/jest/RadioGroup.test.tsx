@@ -3,7 +3,7 @@ import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { Keys } from "@components/shared/index.ts";
 import { ToggleButton } from "@components/button/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 function getInput(element: Element) {
     return element.querySelector("input") as HTMLInputElement;

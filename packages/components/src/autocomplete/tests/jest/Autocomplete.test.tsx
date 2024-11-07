@@ -7,7 +7,7 @@ import { Item } from "@components/collection/index.ts";
 import { Keys } from "@components/shared/index.ts";
 import { Transition } from "@components/transition/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore

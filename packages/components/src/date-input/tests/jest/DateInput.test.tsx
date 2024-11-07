@@ -2,7 +2,7 @@ import { Field, Label } from "@components/field/index.ts";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 import { DateInput } from "@components/date-input/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // Using userEvent.type with a string having multiple characters doesn't work because of the mask. Only the last character ends up being typed.
 // Providing an option.delay fix the problem but we get the following warning: "You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one."

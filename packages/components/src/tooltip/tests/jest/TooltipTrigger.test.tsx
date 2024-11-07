@@ -3,7 +3,7 @@ import { Tooltip, TooltipTrigger } from "@components/tooltip/index.ts";
 import { Transition } from "@components/transition/index.ts";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore

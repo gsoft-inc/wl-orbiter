@@ -4,7 +4,7 @@ import { mergeProps, useFocusManager, useFocusScope } from "@components/shared/i
 import { Button } from "@components/button/index.ts";
 import { ComponentProps } from "react";
 import { Div } from "@components/html/index.ts";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 type TrapProps = UseTrapFocusOptions & ComponentProps<"div">;
 

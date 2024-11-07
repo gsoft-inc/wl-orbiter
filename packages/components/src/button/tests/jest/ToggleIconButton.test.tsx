@@ -2,7 +2,7 @@ import { AddIcon } from "@hopper-ui/icons";
 import { ToggleIconButton } from "@components/button/index.ts";
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Api *****
 

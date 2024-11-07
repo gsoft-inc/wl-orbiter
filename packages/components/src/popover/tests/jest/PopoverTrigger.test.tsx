@@ -6,7 +6,7 @@ import { Content } from "@components/placeholders/index.ts";
 import { Heading } from "@components/typography/index.ts";
 import { Keys } from "@components/shared/index.ts";
 import { Transition } from "@components/transition/index.ts";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore

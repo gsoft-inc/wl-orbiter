@@ -4,7 +4,7 @@ import { Content } from "@components/placeholders/index.ts";
 import { Heading } from "@components/typography/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

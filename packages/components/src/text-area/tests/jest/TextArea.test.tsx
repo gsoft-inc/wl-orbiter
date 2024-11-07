@@ -3,7 +3,7 @@ import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 
 import { TextArea } from "@components/text-area/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

@@ -6,7 +6,7 @@ import { Keys } from "@components/shared/index.ts";
 import { Select } from "@components/select/index.ts";
 import { Transition } from "@components/transition/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // Using "beforeEach" instead of "beforeAll" because the restore focus tests currently need the fade out animation to works properly.
 beforeEach(() => {

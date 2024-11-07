@@ -6,7 +6,7 @@ import { HtmlInput } from "@components/html/index.ts";
 import { Popover } from "@components/popover/index.ts";
 import { TextLink } from "@components/link/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

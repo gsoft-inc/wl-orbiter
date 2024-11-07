@@ -1,19 +1,10 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "./tsconfig.build.json",
+    "extends": ["./tsconfig.build.json", "./tsconfig.paths.json"],
     "compilerOptions": {
-        "baseUrl": ".",
         "noEmit": true,
         "allowJs": true,
-        "paths": {
-            "@test-utils": ["tooling/test-utils/index.ts"],
-            "@components": ["packages/components/src/index.ts"],
-            "@components/*": ["packages/components/src/*"],
-            "@orbit-ui/transition-components": ["packages/components/src/index.ts"],
-            "@workleap/orbiter-ui": ["packages/bundle/src/index.ts"],
-            "@stories/components": [".storybook/components/index.ts"],
-            "@css/*": ["packages/css/src/*"],
-            "@stories/mdx": [".storybook/mdx/index.ts"]
-        }
-    }
+    },
+    "exclude": ["**/dist/**", "node_modules", "packages", "apps"],
+    "include": ["**/*", ".storybook/**/*"],
 }

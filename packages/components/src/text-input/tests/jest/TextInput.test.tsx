@@ -3,7 +3,7 @@ import { screen, waitFor, renderWithTheme } from "@test-utils";
 
 import { TextInput } from "@components/text-input/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 test("when a className is provided, render the className on the input element", async () => {
     renderWithTheme(

@@ -1,10 +1,10 @@
 // import { viewport, withHopperProvider } from "./storybook-addon/index";
-import { viewport } from "./storybook-addon/index";
+import { viewport } from "./storybook-addon/index.ts";
 import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators/index.ts";
 import "./stories.css";
 import { isChromatic } from "./env.ts";
-import { Themes } from "./styles/themes";
-import { formatCode } from "./components/snippet/useFormattedCode";
+import { Themes } from "./styles/themes.ts";
+import { formatCode } from "./components/snippet/useFormattedCode.ts";
 import type { Preview } from "@storybook/react";
 
 import "@components/index.css";
