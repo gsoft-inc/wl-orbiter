@@ -37,7 +37,7 @@ export const Default: ModalStory = {
     )
 };
 
-export const ModalStory: ModalStory = {
+export const ImageStory: ModalStory = {
     render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
