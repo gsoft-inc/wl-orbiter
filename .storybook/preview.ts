@@ -1,4 +1,3 @@
-// import { viewport, withHopperProvider } from "./storybook-addon/index";
 import { viewport } from "./storybook-addon/index";
 import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators";
 import "./stories.css";
@@ -10,7 +9,6 @@ import type { Preview } from "@storybook/react";
 import "@components/index.css";
 import "./styles";
 import "@hopper-ui/tokens/fonts.css";
-import { Highlight } from "./mdx";
 
 if (!isChromatic) {
     // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
@@ -39,9 +37,6 @@ const preview: Preview = {
             inlineStories: true,
             canvas: {
                 sourceState: "shown"
-            },
-            components: {
-                blockquote: Highlight
             },
             source: {
                 type: "code",
