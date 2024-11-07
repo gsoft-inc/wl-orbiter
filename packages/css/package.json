@@ -12,6 +12,9 @@
     "license": "Apache-2.0",
     "main": "src/index.css",
     "style": "src/index.css",
+    "exports": {
+        "./index.css": "./dist/index.css"
+    },
     "dependencies": {
         "@hopper-ui/tokens": "^4.2.0"
     },
