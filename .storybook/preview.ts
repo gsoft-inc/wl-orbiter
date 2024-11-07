@@ -34,7 +34,7 @@ const preview: Preview = {
         docs: {
             theme: Themes.docs,
             container: ThemedDocsContainer,
-            inlineStories: true,
+            story: { inline: true },
             canvas: {
                 sourceState: "shown"
             },
