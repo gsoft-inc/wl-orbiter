@@ -1,1 +1,1 @@
-export * from "./highlight";
+export * from "./highlight/index.ts";

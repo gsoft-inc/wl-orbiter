@@ -1,3 +1,3 @@
-export * from "./Content";
-export * from "./Header";
-export * from "./Footer";
+export * from "./Content.tsx";
+export * from "./Header.tsx";
+export * from "./Footer.tsx";

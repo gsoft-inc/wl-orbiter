@@ -1,3 +1,3 @@
-export * from "./errorHandling";
-export * from "./renderWithTheme";
-export * from "./expect-assignable";
+export * from "./errorHandling.tsx";
+export * from "./renderWithTheme.tsx";
+export * from "./expect-assignable.ts";

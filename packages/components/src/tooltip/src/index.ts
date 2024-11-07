@@ -1,3 +1,3 @@
-export * from "./Tooltip";
-export * from "./TooltipTrigger";
-export * from "./TooltipTriggerContext";
+export * from "./Tooltip.tsx";
+export * from "./TooltipTrigger.tsx";
+export * from "./TooltipTriggerContext.ts";

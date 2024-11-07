@@ -1,4 +1,4 @@
-export * from "./Link";
-export * from "./TextLink";
-export * from "./IconLink";
-export type { LinkVariant } from "./useLink";
+export * from "./Link.tsx";
+export * from "./TextLink.tsx";
+export * from "./IconLink.tsx";
+export type { LinkVariant } from "./useLink.ts";

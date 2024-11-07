@@ -1,48 +1,48 @@
 // Constants
-export * from "./keys";
-export * from "./focusTarget";
+export * from "./keys.ts";
+export * from "./focusTarget.ts";
 
 // Utils
-export * from "./assertions";
-export * from "./size";
-export * from "./mergeProps";
-export * from "./mergeClasses";
-export * from "./cssModule";
-export * from "./augmentElement";
-export * from "./omitProps";
-export * from "./arrayify";
-export * from "./resolveChildren";
-export * from "./focusableTreeWalker";
-export * from "./as";
-export * from "./dom";
+export * from "./assertions.ts";
+export * from "./size.ts";
+export * from "./mergeProps.ts";
+export * from "./mergeClasses.ts";
+export * from "./cssModule.ts";
+export * from "./augmentElement.tsx";
+export * from "./omitProps.ts";
+export * from "./arrayify.ts";
+export * from "./resolveChildren.ts";
+export * from "./focusableTreeWalker.ts";
+export * from "./as.tsx";
+export * from "./dom.ts";
 
 // Hooks
-export * from "./useMergedRefs";
-export * from "./useFocusScope";
-export * from "./useFocusManager";
-export * from "./useAutoFocus";
-export * from "./useRovingFocus";
-export * from "./useEventListener";
-export * from "./useCommittedRef";
-export * from "./useEventCallback";
-export * from "./useChainedEventCallback";
-export * from "./useControllableState";
-export * from "./useForwardInputApi";
-export * from "./useId";
-export * from "./useKeyboardNavigation";
-export * from "./useHasChild";
-export * from "./useIsInitialRender";
-export * from "./useDisposables";
-export * from "./useForceRender";
-export * from "./useResizeObserver";
-export * from "./useRefState";
-export * from "./useFocusWithin";
-export * from "./useIsomorphicLayoutEffect";
+export * from "./useMergedRefs.ts";
+export * from "./useFocusScope.ts";
+export * from "./useFocusManager.ts";
+export * from "./useAutoFocus.ts";
+export * from "./useRovingFocus.ts";
+export * from "./useEventListener.ts";
+export * from "./useCommittedRef.ts";
+export * from "./useEventCallback.ts";
+export * from "./useChainedEventCallback.ts";
+export * from "./useControllableState.ts";
+export * from "./useForwardInputApi.ts";
+export * from "./useId.ts";
+export * from "./useKeyboardNavigation.ts";
+export * from "./useHasChild.ts";
+export * from "./useIsInitialRender.ts";
+export * from "./useDisposables.ts";
+export * from "./useForceRender.ts";
+export * from "./useResizeObserver.ts";
+export * from "./useRefState.ts";
+export * from "./useFocusWithin.ts";
+export * from "./useIsomorphicLayoutEffect.tsx";
 
 // Features
-export * from "./slots";
-export * from "./CheckableContext";
+export * from "./slots.tsx";
+export * from "./CheckableContext.ts";
 
 // Types
-export * from "./types";
-export * from "./type-fest";
+export * from "./types.ts";
+export * from "./type-fest.ts";

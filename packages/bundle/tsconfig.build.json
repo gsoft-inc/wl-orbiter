@@ -6,7 +6,7 @@
         "outDir": "./dist",
         "baseUrl": ".",
         "paths": {
-            "@orbit-ui/transition-components": ["../components/src"],
+            "@orbit-ui/transition-components": ["../components/src/index.ts"],
         }
     },
     "include": [
