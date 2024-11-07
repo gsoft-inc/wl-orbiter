@@ -41,6 +41,7 @@ interface TableRawProps extends ComponentProps<"table"> {
 
 function TableRaw({ fluid, className, children, ...rest }: TableRawProps) {
     const classes = mergeClasses(
+        "orbiter-doc-table",
         fluid && "w-100",
         className
     );

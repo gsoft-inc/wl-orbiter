@@ -249,6 +249,67 @@ p.orbiter-doc-p,
     max-width: 90ch;
 }
 
+/* ELEMENTS | TABLE */
+table.orbiter-doc-table tr {
+    border-top: 1px solid var(--hop-neutral-border-weakest);
+}
+
+table.orbiter-doc-table .thead tr th {
+    background-color: var(--hop-neutral-surface-weak);
+    color: inherit;
+}
+
+table.orbiter-doc-table thead tr {
+    border-top: 1px solid var(--hop-neutral-border-weakest);
+    border-left: 1px solid var(--hop-neutral-border-weakest);
+    border-right: 1px solid var(--hop-neutral-border-weakest);
+    color: var(--hop-neutral-text);
+}
+
+table.orbiter-doc-table tr th {
+    font-weight: 600;
+    font-size: var(--hop-body-md-font-size);
+}
+
+table.orbiter-doc-table td {
+    font-size: var(--hop-body-sm-medium-font-size);
+}
+
+table.orbiter-doc-table tr td,
+table.orbiter-doc-table tr th {
+    border-top: 1px solid var(--hop-neutral-border-weakest);
+    border-bottom: 1px solid var(--hop-neutral-border-weakest);
+    border-left: 0;
+    border-right: 0;
+    color: var(--hop-neutral-text);
+    background-color: var(--hop-neutral-surface);
+}
+
+table.orbiter-doc-table tbody {
+    border: 1px solid var(--hop-neutral-border-weakest);
+}
+
+table.orbiter-doc-table a {
+    font-size: var(--hop-body-sm-medium-font-size) !important;
+}
+
+table.orbiter-doc-table .code a {
+    font-family: Consolas, monaco, monospace !important;
+}
+
+table.orbiter-doc-table .example {
+    color: var(--hop-neutral-text);
+}
+
+table.orbiter-doc-table b,
+table.orbiter-doc-table strong {
+    font-weight: 400;
+}
+
+table.orbiter-doc-table .sbdocs.sbdocs-img {
+    max-width: none;
+}
+
 /* ELEMENTS | SUMMARY */
 .sb-show-main summary {
     font-size: var(--hop-body-md-font-size);
