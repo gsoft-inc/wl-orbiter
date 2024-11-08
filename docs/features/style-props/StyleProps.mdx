@@ -1,9 +1,9 @@
-import { Table } from "@stories/components";
-import { Meta, Canvas, Source } from "@storybook/addon-docs";
+import { Meta, Canvas } from "@storybook/addon-docs";
 import { Div } from "@components/html/index.ts";
 import { Paragraph } from "@components/typography/index.ts";
 import { PropsReferenceTable } from "./PropsReferenceTable.tsx";
 import * as StylePropsStories from  "./StyleProps.stories.tsx";
+import { Table, Source } from "@stories/components";
 
 <Meta of={StylePropsStories} />
 
@@ -15,7 +15,7 @@ An Orbiter style property is a mapping of a [CSS property](https://developer.moz
 
 To apply a style value, set a value to any [style property](#properties) of an Orbiter component.
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     fontSize="1.375rem"
     fontWeight={680}
@@ -33,7 +33,7 @@ To apply a style value, set a value to any [style property](#properties) of an O
 
 Props like `border` and `paddingX` are also provided to help you save keystrokes. An exhaustive list of all the supported props is available in the [reference](#properties) section.
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     paddingY={80}
     border="primary">
@@ -43,11 +43,11 @@ Props like `border` and `paddingX` are also provided to help you save keystrokes
 
 ## TypeScript Intellisense
 
-Inspired by [Styled System](https://styled-system.com/), Orbiter's style props are flexible and easy to discover with [TypeScript](https://www.typescriptlang.org/) intellisense. Style values intellisense will offer suggestions matching the values of the provided [theme](?path=/docs/theming--page) as well as native CSS values of the property. You won't have to guess or open external documentation to pick a value.
+Inspired by [Styled System](https://styled-system.com/), Orbiter's style props are flexible and easy to discover with [TypeScript](https://www.typescriptlang.org/) intellisense. Style values intellisense will offer suggestions matching the values of the provided [theme](?path=/docs/theming--docs) as well as native CSS values of the property. You won't have to guess or open external documentation to pick a value.
 
 ## Scale values
 
-To help achieve a consistent user interface, Orbiter style props are based on scales and values defined in a customizable [theme](?path=/docs/theming--page).
+To help achieve a consistent user interface, Orbiter style props are based on scales and values defined in a customizable [theme](?path=/docs/theming--docs).
 
 <Canvas of={StylePropsStories.ScaleValues} />
 
@@ -84,7 +84,7 @@ You might wonder how will you use Orbiter style props on your HTML elements?
 
 Orbiter provides a set of HTML elements components already configured with Orbiter styled system. You should chose these components over native HTML elements.
 
-[`<A>`](?path=/docs/html-anchor--example), [`<Address>`](?path=/docs/html-address--example), [`<Article>`](?path=/docs/html-article--page), [`<Aside>`](?path=/docs/html-aside--page), [`<Button>`](?path=/docs/html-button--example), [`<Div>`](?path=/docs/html-div--example), [`<Footer>`](?path=/docs/html-footer--page), [`<Header>`](?path=/docs/html-header--page), [`<Img>`](?path=/docs/html-img--example), [`<Input>`](?path=/docs/html-input--example), [`<List>`](?path=/docs/html-list--example), [`<Main>`](?path=/docs/html-main--page), [`<Nav>`](?path=/docs/html-nav--page), [`<Section>`](?path=/docs/html-section--page), [`<Span>`](?path=/docs/html-span--example), [`<Table>`](?path=/docs/html-table--example)
+[`<A>`](?path=/docs/html-anchor--example), [`<Address>`](?path=/docs/html-address--example), [`<Article>`](?path=/docs/html-article--docs), [`<Aside>`](?path=/docs/html-aside--docs), [`<Button>`](?path=/docs/html-button--example), [`<Div>`](?path=/docs/html-div--example), [`<Footer>`](?path=/docs/html-footer--docs), [`<Header>`](?path=/docs/html-header--docs), [`<Img>`](?path=/docs/html-img--example), [`<Input>`](?path=/docs/html-input--example), [`<List>`](?path=/docs/html-list--example), [`<Main>`](?path=/docs/html-main--docs), [`<Nav>`](?path=/docs/html-nav--docs), [`<Section>`](?path=/docs/html-section--docs), [`<Span>`](?path=/docs/html-span--example), [`<Table>`](?path=/docs/html-table--example)
 
 For text elements, prefer a [`<Text>`](?path=/docs/text--size) or [`<Paragraph>`](?path=/docs/paragraph--size) component rather than `<Span>` or a `<Div>`.
 
@@ -94,7 +94,7 @@ To facilitate layouts, Orbiter provides specialized components for [grid](https:
 
 When applicable, always prefer using a [`<Grid>`](?path=/docs/grid--areas) or [`<Flex>`](?path=/docs/flex--horizontal) component instead of a [`<Div>`](?path=/docs/html-div--example) component.
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Grid templateColumns="1fr 1fr" gap={80} height={800}>
     <Div backgroundColor="sapphire-500" />
     <Div backgroundColor="amanita-500" />
@@ -109,7 +109,7 @@ Any component can accept style properties. To accept style properties, the compo
 
 Passing the style props to an Orbiter component:
 
-<Source dark language="tsx" code={`
+<Source code={`
 import { HtmlButton, StyledComponentProps } from "@workleap/orbiter-ui";
 
 interface CustomButtonProps extends StyledComponentProps {
@@ -125,7 +125,7 @@ function CustomButton(props: CustomButtonProps) {
 
 Using the `useStyledSystem` hook:
 
-<Source dark language="tsx" code={`
+<Source code={`
 import { StyledComponentProps, useStyledSystem } from "@workleap/orbiter-ui";
 
 interface CustomButtonProps extends StyledComponentProps {
@@ -151,7 +151,7 @@ The following tables provide a list of all available style props by category.
 
 ### Space
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div padding={160}>
     Galaxy
 </Div>
@@ -179,7 +179,7 @@ The following tables provide a list of all available style props by category.
 
 ### Color
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Text backgroundColor="primary-weak" color="#FFFFFF">
     Galaxy
 </Text>
@@ -198,7 +198,7 @@ The following tables provide a list of all available style props by category.
 
 ### Typography
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Header letterSpacing="0.3rem">
     Halleys Comet
 </Header>
@@ -221,7 +221,7 @@ The following tables provide a list of all available style props by category.
 
 ### Layout
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div width="30rem">
     Galaxy
 </Div>
@@ -255,7 +255,7 @@ The following tables provide a list of all available style props by category.
 
 ### Flex Layout
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div alignItems="center">
     <Text>Andromeda</Text>
     <Text>Batuu</Text>
@@ -279,7 +279,7 @@ The following tables provide a list of all available style props by category.
 
 ### Grid Layout
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div gridAutoFlow="row dense">
     <Text>Andromeda</Text>
     <Text>Batuu</Text>
@@ -312,7 +312,7 @@ The following tables provide a list of all available style props by category.
 
 ### Background
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
   backgroundImage="url('/images/dog.png')"
   backgroundPosition="center"
@@ -331,7 +331,7 @@ The following tables provide a list of all available style props by category.
 
 ### Border
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     border="primary"
     borderRadius="rounded-md"
@@ -360,7 +360,7 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ### Position
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     top="12px"
     position="absolute"
@@ -382,7 +382,7 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ### Shadow
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     boxShadow="lifted"
 />

@@ -1,21 +1,22 @@
-import { Meta, Canvas, Source } from "@storybook/addon-docs";
+import { Meta, Canvas } from "@storybook/addon-docs";
 import * as ColorSchemesStories from  "./ColorSchemes.stories.tsx";
+import { Source } from "@stories/components";
 
 <Meta of={ColorSchemesStories} />
 
 # Color schemes
 
-Orbiter supports by default a *light* and a *dark* color scheme for all components and [tokens](?path=/story/tokens--page) where applicable.
+Orbiter supports by default a *light* and a *dark* color scheme for all components and [tokens](?path=/story/tokens--docs) where applicable.
 
 ## Apply a color scheme
 
 A color scheme can either be enforced by providing a specific `light` or `dark` value to a [theme provider](?path=/story/theme-provider--default-story):
 
-<Source dark language="tsx" of={ColorSchemesStories.Apply} />
+<Source of={ColorSchemesStories.Apply} />
 
 or be selected according to the [user's operating system setting](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) by providing the `system` value:
 
-<Source dark language="tsx" of={ColorSchemesStories.ApplySystem} />
+<Source of={ColorSchemesStories.ApplySystem} />
 
 > When the `system` value is provided, an additional *fallback* color scheme must be specified to `defaultColorScheme` in case the theme provider is not able to access the user setting.
 
@@ -31,8 +32,8 @@ The `ColorSchemeContext` of the closest [theme provider](?path=/story/theme-prov
 
 ## useColorSchemeValue
 
-Some features requires the usage of custom colors. Those colors aren't like Orbiter [tokens](?path=/story/tokens--page) and will not support color schemes out of the box.
+Some features requires the usage of custom colors. Those colors aren't like Orbiter [tokens](?path=/story/tokens--docs) and will not support color schemes out of the box.
 
 To help with that, Orbiter offer the `useColorSchemeValue` hook which will return the value matching the current color scheme of the closest [theme provider](?path=/story/theme-provider--default-story).
 
-<Source dark language="tsx" of={ColorSchemesStories.UseColorSchemeValueStory} />
+<Source of={ColorSchemesStories.UseColorSchemeValueStory} />

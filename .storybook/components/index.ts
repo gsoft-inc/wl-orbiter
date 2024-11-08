@@ -8,3 +8,4 @@ export * from "./component-info/index.ts";
 export * from "./snippet/index.ts";
 export * from "./themed-snippet/index.ts";
 export * from "./banner/index.ts";
+export * from "./source/index.ts";

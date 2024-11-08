@@ -1,10 +1,10 @@
 import { Table, TableProps, Link } from "@stories/components";
 
 const ScaleLinks = {
-    "box-shadow-scale": <Link href="?path=/docs/tokens--page#box-shadows" target="_blank">shadows</Link>,
-    "color-scale": <Link href="?path=/docs/tokens--page#background-colors" target="_blank">colors</Link>,
-    "sizing-scale": <Link href="?path=/docs/tokens--page#sizings" target="_blank">dimensions</Link>,
-    "spacing-scale": <Link href="?path=/docs/tokens--page#spacings" target="_blank">dimensions</Link>
+    "box-shadow-scale": <Link href="?path=/docs/tokens--docs#box-shadows" target="_blank">shadows</Link>,
+    "color-scale": <Link href="?path=/docs/tokens--docs#background-colors" target="_blank">colors</Link>,
+    "sizing-scale": <Link href="?path=/docs/tokens--docs#sizings" target="_blank">dimensions</Link>,
+    "spacing-scale": <Link href="?path=/docs/tokens--docs#spacings" target="_blank">dimensions</Link>
 };
 
 function toScaleLink(scale: keyof typeof ScaleLinks) {
