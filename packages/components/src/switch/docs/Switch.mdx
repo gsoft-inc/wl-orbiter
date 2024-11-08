@@ -1,0 +1,106 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerSwitch } from "@components/switch";
+
+import * as SwitchStories from "./Switch.stories.tsx"
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+<Tagline>A switch offers an on or off choice to a user.</Tagline>
+
+<ComponentInfo
+    usage={"import { Switch } from \"@workleap/orbiter-ui\";"}
+    ariaPath="checkbox"
+    githubPath="/packages/components/src/switch/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To trigger an immediate action such as an activation/deactivation.
+
+### Content
+
+- Have a short and descriptive label.
+- Be self explanatory without relying on an icon. Using an icon to carry information will render it non-accessible.
+
+### Accessibility
+
+- Do not change the label based on the state of the switch. The label should represent the "on/checked" state of the switch.
+
+### Checkbox, Radio or Switch
+
+- If the objective is to select multiples elements from a list, the [checkbox](?path=/docs/checkbox--default-story) should be used instead.
+- If the objective is to select one value out of a set of elements the [radio](?path=/docs/radio--default-story) should be used instead.
+
+## Usage
+
+### Default
+
+A default switch.
+
+<Canvas of={SwitchStories.Default} />
+
+### Checked
+
+A switch can be checked.
+
+<Canvas of={SwitchStories.Checked} />
+
+### No label
+
+A switch can be rendered without a label.
+
+<Canvas of={SwitchStories.NoLabel} />
+
+### Disabled
+
+A switch can be disabled.
+
+<Canvas of={SwitchStories.Disabled} />
+
+### Icon
+
+A switch can have [icons](?path=/docs/icon-gallery--docs) after his text.
+
+<Canvas of={SwitchStories.IconStory} />
+
+### Counter
+
+A switch can have a [counter](?path=/docs/counter--default-story) after his text.
+
+<Canvas of={SwitchStories.CounterStory} />
+
+### Size
+
+A switch can vary in size.
+
+<Canvas of={SwitchStories.Size} />
+
+### Reverse
+
+A checkbox checkmark can be to the left or to the right of his label.
+
+<Canvas of={SwitchStories.Reverse} />
+
+### Controlled
+
+A switch can handle `checked` state in controlled mode.
+
+<Canvas of={SwitchStories.Controlled} />
+
+## API
+
+### Switch
+
+<ComponentInfo
+    usage={"import { Switch } from \"@workleap/orbiter-ui\";"}
+    slots={["label", "icon", "counter"]}
+    inherits={[InnerSwitch.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerSwitch} sort="alpha"/>

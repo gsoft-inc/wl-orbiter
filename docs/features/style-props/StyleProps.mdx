@@ -1,0 +1,408 @@
+import { Table, Source } from "@stories/components";
+import { Meta, Canvas } from "@storybook/addon-docs";
+import { Div } from "@components/html";
+import { Paragraph } from "@components/typography";
+import { PropsReferenceTable } from "./PropsReferenceTable";
+import * as StylePropsStories from  "./StyleProps.stories";
+
+<Meta of={StylePropsStories} />
+
+# Style props
+
+An Orbiter style property is a mapping of a [CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference) to a component property. With style props, Orbiter styled system let you easily set style values for a [curated set of CSS properties](#properties) like [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size), [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin), [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), [width](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and many more.
+
+## Usage
+
+To apply a style value, set a value to any [style property](#properties) of an Orbiter component.
+
+<Source code={`
+<Div
+    fontSize="1.375rem"
+    fontWeight={680}
+    paddingTop={160}
+    paddingBottom={160}
+    marginBottom={160}
+    color="samoyed"
+    borderRadius="rounded-md"
+    backgroundColor="primary">
+    Lost in space.
+</Div>
+`} />
+
+## Shorthands
+
+Props like `border` and `paddingX` are also provided to help you save keystrokes. An exhaustive list of all the supported props is available in the [reference](#properties) section.
+
+<Source code={`
+<Div
+    paddingY={80}
+    border="primary">
+    Lost in space.
+</Div>
+`} />
+
+## TypeScript Intellisense
+
+Inspired by [Styled System](https://styled-system.com/), Orbiter's style props are flexible and easy to discover with [TypeScript](https://www.typescriptlang.org/) intellisense. Style values intellisense will offer suggestions matching the values of the provided [theme](?path=/docs/theming--docs) as well as native CSS values of the property. You won't have to guess or open external documentation to pick a value.
+
+## Scale values
+
+To help achieve a consistent user interface, Orbiter style props are based on scales and values defined in a customizable [theme](?path=/docs/theming--docs).
+
+<Canvas of={StylePropsStories.ScaleValues} />
+
+## Pseudo-classes
+
+Style props doesn't support every CSS pseudo-classes. [Location pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#location_pseudo-classes), [input pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#the_input_pseudo-classes), [tree-structural pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes), `::before` and `::after` are not supported and will most likely never be.
+
+When a CSS pseudo-class is not supported by Orbiter style props, we recommend using a CSS class.
+
+Since the following user action pseudo-classes are often used, some style props supports them. These behaves like their pseudo CSS counterparts.
+
+<Table
+    columns={[
+        { title: "Suffix", headerStyle: { width: "100px" } },
+        { title: "Pseudo state", headerStyle: { width: "250px" } } ]}
+    rows={[
+        ["active", ":active"],
+        ["hover", ":hover"],
+        ["focus", ":focus"]
+    ]}
+    style={{
+        marginTop: "24px",
+        marginBottom: "24px"
+    }}
+/>
+
+> Not all style props supports user action pseudo-classes. Find out which props support user action pseudo-classes in the [reference](#properties) section.
+
+<Canvas of={StylePropsStories.PseudoClasses} />
+
+## HTML elements
+
+You might wonder how will you use Orbiter style props on your HTML elements?
+
+Orbiter provides a set of HTML elements components already configured with Orbiter styled system. You should chose these components over native HTML elements.
+
+[`<A>`](?path=/docs/html-anchor--example), [`<Address>`](?path=/docs/html-address--example), [`<Article>`](?path=/docs/html-article--docs), [`<Aside>`](?path=/docs/html-aside--docs), [`<Button>`](?path=/docs/html-button--example), [`<Div>`](?path=/docs/html-div--example), [`<Footer>`](?path=/docs/html-footer--docs), [`<Header>`](?path=/docs/html-header--docs), [`<Img>`](?path=/docs/html-img--example), [`<Input>`](?path=/docs/html-input--example), [`<List>`](?path=/docs/html-list--example), [`<Main>`](?path=/docs/html-main--docs), [`<Nav>`](?path=/docs/html-nav--docs), [`<Section>`](?path=/docs/html-section--docs), [`<Span>`](?path=/docs/html-span--example), [`<Table>`](?path=/docs/html-table--example)
+
+For text elements, prefer a [`<Text>`](?path=/docs/text--size) or [`<Paragraph>`](?path=/docs/paragraph--size) component rather than `<Span>` or a `<Div>`.
+
+## Layout containers
+
+To facilitate layouts, Orbiter provides specialized components for [grid](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids) and [flex](https://developer.mozilla.org/en-US/docs/Glossary/Flex_Container) layout containers.
+
+When applicable, always prefer using a [`<Grid>`](?path=/docs/grid--areas) or [`<Flex>`](?path=/docs/flex--horizontal) component instead of a [`<Div>`](?path=/docs/html-div--example) component.
+
+<Source code={`
+<Grid templateColumns="1fr 1fr" gap={80} height={800}>
+    <Div backgroundColor="sapphire-500" />
+    <Div backgroundColor="amanita-500" />
+    <Div backgroundColor="moss-500" />
+    <Div backgroundColor="rock-500" />
+</Grid>
+`} />
+
+## Custom components
+
+Any component can accept style properties. To accept style properties, the component interface must extends the `StyledComponentProps` interface and either forward all the style props to an Orbiter components or call the `useStyledSystem` hook.
+
+Passing the style props to an Orbiter component:
+
+<Source code={`
+import { HtmlButton, StyledComponentProps } from "@workleap/orbiter-ui";
+
+interface CustomButtonProps extends StyledComponentProps {
+    onClick: () => void;
+}
+
+function CustomButton(props: CustomButtonProps) {
+    return (
+        <HtmlButton {...props} />
+    );
+}
+`} />
+
+Using the `useStyledSystem` hook:
+
+<Source code={`
+import { StyledComponentProps, useStyledSystem } from "@workleap/orbiter-ui";
+
+interface CustomButtonProps extends StyledComponentProps {
+    onClick: () => void;
+}
+
+function CustomButton({ onClick, ...rest }: CustomButtonProps) {
+    const styledSystemProps = useStyledSystem(rest);
+
+    return (
+        <button
+            {...rest}
+            onClick={onClick}
+            {...styledSystemProps}
+        />
+    );
+}
+`} />
+
+## Properties
+
+The following tables provide a list of all available style props by category.
+
+### Space
+
+<Source code={`
+<Div padding={160}>
+    Galaxy
+</Div>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["margin", "margin", "spacing", "spacing-scale", "breakpoints"],
+        ["marginTop", "margin-top", "spacing", "spacing-scale", "breakpoints"],
+        ["marginBottom", "margin-bottom", "spacing", "spacing-scale", "breakpoints"],
+        ["marginRight", "margin-right", "spacing", "spacing-scale", "breakpoints"],
+        ["marginLeft", "margin-left", "spacing", "spacing-scale", "breakpoints"],
+        ["marginX", "margin-left & margin-right", "spacing", "spacing-scale", "breakpoints"],
+        ["marginY", "margin-top & margin-bottom", "spacing", "spacing-scale", "breakpoints"],
+        ["padding", "padding", "spacing", "spacing-scale", "breakpoints"],
+        ["paddingTop", "padding-top", "spacing", "spacing-scale", "breakpoints"],
+        ["paddingBottom", "padding-bottom", "spacing", "spacing-scale", "breakpoints"],
+        ["paddingRight", "padding-right", "spacing", "spacing-scale", "breakpoints"],
+        ["paddingLeft", "padding-left", "spacing", "spacing-scale", "breakpoints"],
+        ["paddingX", "padding-left & padding-right", "spacing", "spacing-scale", "breakpoints"],
+        ["paddingY", "padding-top & padding-bottom", "spacing", "spacing-scale", "breakpoints"],
+        ["whiteSpace", "white-space", "none", "none", "breakpoints"],
+    ]}
+/>
+
+### Color
+
+<Source code={`
+<Text backgroundColor="primary-weak" color="#FFFFFF">
+    Galaxy
+</Text>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["color", "color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["backgroundColor", "background-color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["opacity", "opacity", "none", "none", "breakpoints & focus/hover/active"],
+        ["fill", "fill", "none", "color-scale", "breakpoints & focus/hover"],
+        ["stroke", "stroke", "none", "color-scale", "breakpoints"],
+        ["filter", "filter", "none", "none", "breakpoints"]
+    ]}
+/>
+
+### Typography
+
+<Source code={`
+<Header letterSpacing="0.3rem">
+    Halleys Comet
+</Header>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["fontSize", "font-size", "fontSizes", "1..11", "breakpoints"],
+        ["fontWeight", "font-weight", "fontWeights", "1..3", "breakpoints"],
+        ["lineHeight", "line-height", "lineHeights", "1..6", "breakpoints"],
+        ["letterSpacing", "letter-spacing", "none", "none", "breakpoints"],
+        ["textAlign", "text-align", "none", "none", "breakpoints"],
+        ["textTransform", "text-transform", "none", "none", "breakpoints"],
+        ["textDecoration", "text-decoration", "none", "none", "breakpoints"],
+        ["textOverflow", "text-overflow", "none", "none", "breakpoints"],
+        ["wordBreak", "word-break", "none", "none", "breakpoints"],
+        ["fontStyle", "font-style", "none", "none", "breakpoints"]
+    ]}
+/>
+
+### Layout
+
+<Source code={`
+<Div width="30rem">
+    Galaxy
+</Div>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["width", "width", "sizing", "sizing-scale", "breakpoints"],
+        ["height", "height", "sizing", "sizing-scale", "breakpoints"],
+        ["minWidth", "min-width", "sizing", "sizing-scale", "breakpoints"],
+        ["maxWidth", "max-width", "sizing", "sizing-scale", "breakpoints"],
+        ["minHeight", "min-height", "sizing", "sizing-scale", "breakpoints"],
+        ["maxHeight", "max-height", "sizing", "sizing-scale", "breakpoints"],
+        ["display", "display", "none", "none", "breakpoints"],
+        ["verticalAlign", "vertical-align", "none", "none", "breakpoints"],
+        ["overflow", "overflow", "none", "none", "breakpoints"],
+        ["overflowX", "overflow-x", "none", "none", "breakpoints"],
+        ["overflowY", "overflow-y", "none", "none", "breakpoints"],
+        ["gap", "gap", "none", "none", "breakpoints"],
+        ["alignSelf", "align-self" , "none" , "none", "breakpoints"],
+        ["aspectRatio", "aspect-ratio", "none", "none", "breakpoints"],
+        ["justifyContent", "justify-content", "none", "none", "breakpoints"],
+        ["justifyItems", "justify-items", "none", "none", "breakpoints"],
+        ["justifySelf", "justify-self", "none", "none", "breakpoints"],
+        ["contentVisibility", "content-visibility", "none", "none", "breakpoints"],
+        ["transform", "transform", "none", "none", "breakpoints"],
+        ["transformOrigin", "transform-origin", "none", "none", "breakpoints"],
+        ["transformStyle", "transform-style", "none", "none", "breakpoints"]
+    ]}
+/>
+
+### Flex Layout
+
+<Source code={`
+<Div alignItems="center">
+    <Text>Andromeda</Text>
+    <Text>Batuu</Text>
+</Div>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["alignItems", "align-items", "none", "none", "breakpoints"],
+        ["alignContent", "align-content", "none", "none", "breakpoints"],
+        ["flex", "flex (shorthand)", "none", "none", "breakpoints"],
+        ["flexBasis", "flex-basis", "none", "none", "breakpoints"],
+        ["flexDirection", "flex-direction", "none", "none", "breakpoints"],
+        ["flexFlow", "flex-flow", "none", "none", "breakpoints"],
+        ["flexGrow", "flex-grow", "none", "none", "breakpoints"],
+        ["flexShrink", "flex-shrink", "none", "none", "breakpoints"],
+        ["flexWrap", "flex-wrap", "none", "none", "breakpoints"],
+        ["order", "order", "none", "none", "breakpoints"]
+    ]}
+/>
+
+### Grid Layout
+
+<Source code={`
+<Div gridAutoFlow="row dense">
+    <Text>Andromeda</Text>
+    <Text>Batuu</Text>
+</Div>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["grid", "grid (shorthand)", "none","none",  "breakpoints"],
+        ["gridArea", "grid-area", "none", "none", "breakpoints"],
+        ["gridAutoColumns", "grid-auto-columns", "sizing", "sizing-scale", "breakpoints"],
+        ["gridAutoFlow", "grid-auto-flow", "none", "none", "breakpoints"],
+        ["gridAutoRows", "grid-auto-rows", "sizing", "sizing-scale", "breakpoints"],
+        ["gridColumn", "grid-column", "none", "none", "breakpoints"],
+        ["gridColumnEnd", "grid-column-end", "none", "none", "breakpoints"],
+        ["gridColumnSpan", "grid-column-span", "none", "none", "breakpoints"],
+        ["gridColumnStart", "grid-column-start", "none", "none", "breakpoints"],
+        ["gridRow", "grid-row", "none", "none", "breakpoints"],
+        ["gridRowEnd", "grid-row-end", "none", "none", "breakpoints"],
+        ["gridRowSpan", "grid-row-span", "none", "none", "breakpoints"],
+        ["gridRowStart", "grid-row-start", "none", "none", "breakpoints"],
+        ["gridTemplate", "grid-template", "none", "none", "breakpoints"],
+        ["gridTemplateAreas", "grid-template-areas", "none", "none", "breakpoints"],
+        ["gridTemplateColumns", "grid-template-columns", "sizing", "sizing-scale", "breakpoints"],
+        ["gridTemplateRows", "grid-template-rows", "sizing", "sizing-scale", "breakpoints"],
+        ["columnGap", "column-gap", "spacing", "spacing-scale", "breakpoints"],
+        ["rowGap", "row-gap", "spacing", "spacing-scale", "breakpoints"],
+    ]}
+/>
+
+### Background
+
+<Source code={`
+<Div
+  backgroundImage="url('/images/dog.png')"
+  backgroundPosition="center"
+  backgroundRepeat="no-repeat"
+/>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["backgroundImage", "background-image", "none", "none", "breakpoints"],
+        ["backgroundPosition", "background-position", "none", "none", "breakpoints"],
+        ["backgroundRepeat", "background-repeat", "none", "none", "breakpoints"],
+        ["backgroundSize", "background-size", "none", "none", "breakpoints"]
+    ]}
+/>
+
+### Border
+
+<Source code={`
+<Div
+    border="primary"
+    borderRadius="rounded-md"
+>
+    Rocket
+</Div>
+`} />
+
+Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an implicit style (solid) and width(1px). These properties only accepts colors for value.
+
+<PropsReferenceTable
+    rows={[
+        ["border", "border-color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["borderBottom", "border-bottom-color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["borderTop", "border-top-color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["borderLeft", "border-left-color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["borderRight", "border-right-color", "colors", "color-scale", "breakpoints & focus/hover/active"],
+        ["borderRadius", "border-radius", "borderRadii", "0..4", "breakpoints"],
+        ["borderTopLeftRadius", "border-top-left-radius", "borderRadii", "0..4", "breakpoints"],
+        ["borderTopRightRadius", "border-top-right-radius", "borderRadii","0..4",  "breakpoints"],
+        ["borderBottomLeftRadius", "border-bottom-left-radius", "borderRadii", "0..4", "breakpoints"],
+        ["borderBottomRightRadius", "border-bottom-right-radius", "borderRadii", "0..4", "breakpoints"],
+        ["outline", "outline", "none", "none", "breakpoints & focus"]
+    ]}
+/>
+
+### Position
+
+<Source code={`
+<Div
+    top="12px"
+    position="absolute"
+/>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["position", "position", "none", "none", "breakpoints"],
+        ["top", "top", "none", "none", "breakpoints"],
+        ["bottom", "bottom", "none", "none", "breakpoints"],
+        ["right", "right", "none", "none", "breakpoints"],
+        ["left", "left", "none", "none", "breakpoints"],
+        ["zIndex", "z-index", "none", "none", "breakpoints"],
+        ["objectFit", "object-fit", "none", "none", "breakpoints"],
+        ["objectPosition", "object-position", "none", "none", "breakpoints"]
+    ]}
+/>
+
+### Shadow
+
+<Source code={`
+<Div
+    boxShadow="lifted"
+/>
+`} />
+
+<PropsReferenceTable
+    rows={[
+        ["boxShadow", "box-shadow", "boxShadows", "box-shadow-scale", "breakpoints & focus/hover/active"],
+    ]}
+/>
+
+### Miscellaneous
+
+<PropsReferenceTable
+    rows={[
+        ["content", "content", "none", "none", "breakpoint"],
+        ["cursor", "cursor", "none", "none", "breakpoint & hover"],
+        ["pointerEvents", "pointer-events", "none", "none" ,"breakpoint"],
+        ["resize", "resize", "none", "none", "breakpoint"],
+        ["willChange", "will-change", "none", "none", "breakpoint"]
+    ]}
+/>
+

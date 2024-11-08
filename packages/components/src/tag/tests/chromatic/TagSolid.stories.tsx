@@ -6,8 +6,10 @@ import { SparklesIcon } from "@hopper-ui/icons";
 import { Text } from "@components/typography";
 import { Dot } from "@components/dot";
 import { Field, Label } from "@components/field";
-
 import { Meta, StoryObj } from "@storybook/react";
+import { as } from "@components/shared";
+import { Counter } from "@components/counter";
+import { Avatar } from "@components/avatar";
 
 const meta = {
     title: "Chromatic/Tag/solid",
@@ -151,7 +153,7 @@ export const DotStory: TagStory = {
     )
 };
 
-export const Avatar: TagStory = {
+export const AvatarStory: TagStory = {
     name: "avatar",
     render: () => (
         <Stack>
@@ -243,7 +245,7 @@ export const Alignment: TagStory = {
     )
 };
 
-export const Counter: TagStory = {
+export const CounterStory: TagStory = {
     name: "counter",
     render: () => (
         <Stack>
@@ -337,22 +339,24 @@ export const Zoom: TagStory = {
     )
 };
 
+const TagAsLink = as(Tag, "a");
+
 export const AsLink: TagStory = {
     name: "as link",
     render: () => (
         <Inline>
-            <Tag as="a" variant="solid" href="#">Falcon 9</Tag>
-            <Tag as="a" variant="solid" href="#" validationState="invalid">Falcon 9</Tag>
-            <Tag as="a" active variant="solid" href="#">Falcon 9</Tag>
-            <Tag as="a" active variant="solid" href="#" validationState="invalid">Falcon 9</Tag>
-            <Tag as="a" focus variant="solid" href="#">Falcon 9</Tag>
-            <Tag as="a" focus variant="solid" href="#" validationState="invalid">Falcon 9</Tag>
-            <Tag as="a" hover variant="solid" href="#">Falcon 9</Tag>
-            <Tag as="a" hover variant="solid" href="#" validationState="invalid">Falcon 9</Tag>
-            <Tag as="a" focus hover variant="solid" href="#">Falcon 9</Tag>
-            <Tag as="a" focus hover variant="solid" href="#" validationState="invalid">Falcon 9</Tag>
-            <Tag as="a" disabled variant="solid" href="#">Falcon 9</Tag>
-            <Tag as="a" disabled variant="solid" href="#" validationState="invalid">Falcon 9</Tag>
+            <TagAsLink variant="solid" href="#">Falcon 9</TagAsLink>
+            <TagAsLink variant="solid" href="#" validationState="invalid">Falcon 9</TagAsLink>
+            <TagAsLink active variant="solid" href="#">Falcon 9</TagAsLink>
+            <TagAsLink active variant="solid" href="#" validationState="invalid">Falcon 9</TagAsLink>
+            <TagAsLink focus variant="solid" href="#">Falcon 9</TagAsLink>
+            <TagAsLink focus variant="solid" href="#" validationState="invalid">Falcon 9</TagAsLink>
+            <TagAsLink hover variant="solid" href="#">Falcon 9</TagAsLink>
+            <TagAsLink hover variant="solid" href="#" validationState="invalid">Falcon 9</TagAsLink>
+            <TagAsLink focus hover variant="solid" href="#">Falcon 9</TagAsLink>
+            <TagAsLink focus hover variant="solid" href="#" validationState="invalid">Falcon 9</TagAsLink>
+            <TagAsLink disabled variant="solid" href="#">Falcon 9</TagAsLink>
+            <TagAsLink disabled variant="solid" href="#" validationState="invalid">Falcon 9</TagAsLink>
         </Inline>
     )
 };

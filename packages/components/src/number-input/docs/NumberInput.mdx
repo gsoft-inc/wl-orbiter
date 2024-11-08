@@ -1,0 +1,92 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerNumberInput } from "@components/number-input";
+
+import * as NumberInputStories from "./NumberInput.stories.tsx";
+
+<Meta of={NumberInputStories} />
+
+# NumberInput
+
+<Tagline>A number input is used to let the user enter a numeric value.</Tagline>
+
+<ComponentInfo
+    usage={"import { NumberInput } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/number-input/src"
+/>
+
+## Usage
+
+### Default
+
+A default number input.
+
+<Canvas of={NumberInputStories.Default} />
+
+### Value
+
+A number input can have a value.
+
+<Canvas of={NumberInputStories.Value} />
+
+### Min / Max
+
+A number input value can be forced between min & max boundaries.
+
+<Canvas of={NumberInputStories.MinMax} />
+
+### Icon
+
+A number input can have an [icon](?path=/docs/icon-gallery--docs).
+
+<Canvas of={NumberInputStories.Icon} />
+
+### Disabled
+
+A number input can be disabled.
+
+<Canvas of={NumberInputStories.Disabled} />
+
+### Readonly
+
+A number input can be readonly.
+
+<Canvas of={NumberInputStories.ReadOnly} />
+
+### Loading
+
+A number input can show that it is currently loading data.
+
+<Canvas of={NumberInputStories.Loading} />
+
+### Fluid
+
+A number input can take the width of its container.
+
+<Canvas of={NumberInputStories.Fluid} />
+
+### Validation
+
+A number input can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate a required age value.
+
+<Canvas of={NumberInputStories.RequiredAgeValidation} />
+
+### Controlled
+
+A number input `value` can be handled in controlled mode.
+
+<Canvas of={NumberInputStories.Controlled} />
+
+## API
+
+### NumberInput
+
+<ComponentInfo
+    usage={"import { NumberInput } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerNumberInput.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerNumberInput} sort="alpha" />

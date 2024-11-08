@@ -1,0 +1,36 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerText } from "@components/typography";
+
+import * as TextStories from "./Text.stories.tsx";
+
+<Meta of={TextStories} />
+
+# Text
+
+<Tagline>A primitive text component matching Orbiter typography type scale.</Tagline>
+
+<ComponentInfo
+    usage={"import { Text } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/text/src"
+/>
+
+## Usage
+
+> Use this component if more specific Orbiter typographic components like [span](?path=/docs/html-span--example) or [paragraph](?path=/docs/paragraph--size) doesn't meet your needs.
+
+### Size
+
+You can alter the size of the text by specifying a `size` prop. The available sizes match Orbiter typography type scale (a type scale is a set of [font-size](?path=/docs/tokens--docs#font-sizes) and [line-height](?path=/docs/tokens--docs#line-heights) pairs).
+
+<Canvas of={TextStories.Size} />
+
+## API
+
+<ComponentInfo
+    usage={"import { Text } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerText.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerText} sort="alpha" />

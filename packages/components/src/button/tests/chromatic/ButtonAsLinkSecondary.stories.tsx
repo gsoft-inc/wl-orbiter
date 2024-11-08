@@ -6,6 +6,7 @@ import { StartOverIcon } from "@hopper-ui/icons";
 import { Text } from "@components/typography";
 
 import { Meta, StoryObj } from "@storybook/react";
+import { Counter } from "@components/counter";
 
 const meta = {
     title: "Chromatic/ButtonAsLink/secondary",
@@ -160,7 +161,7 @@ export const EndIcon: ButtonAsLinkStory = {
     )
 };
 
-export const Counter: ButtonAsLinkStory = {
+export const CounterStory: ButtonAsLinkStory = {
     name: "counter",
     render: () => (
         <Stack>

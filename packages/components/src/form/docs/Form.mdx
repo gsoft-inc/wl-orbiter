@@ -1,0 +1,96 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerFieldset, InnerForm } from "@components/form";
+import * as FormStories from "./Form.stories.tsx";
+
+<Meta of={FormStories} />
+
+# Form
+
+<Tagline>Forms are commonly used to provide user interaction in web applications.</Tagline>
+
+<ComponentInfo
+    usage={"import { Form, Fieldset, FormContext, useFormField, useFormButton } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/form/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- When combined with [field](?path=/story/field--input) components, a form component follows the [WAI specifications for forms](https://www.w3.org/WAI/tutorials/forms/).
+
+## Usage
+
+In additional to wrapping a form element, a form component provide layout for fields and buttons.
+
+> To apply the layout correctly, every inputs must be wrapped in a field component.
+
+### Vertical layout
+
+A form can stack fields vertically.
+
+<Canvas of={FormStories.VerticalLayout} />
+
+### Inline layout
+
+Multiple form fields can be inlined on the same row either with a [flex](?path=/docs/flex--horizontal) component:
+
+<Canvas of={FormStories.InlineLayoutFlex} />
+
+Or a [grid](?path=/docs/grid--areas) component:
+
+<Canvas of={FormStories.InlineLayoutGrid} />
+
+### Fieldset
+
+Form fields can be grouped together within fieldsets.
+
+<Canvas of={FormStories.FormFieldset} />
+
+### Fluid
+
+Form fields can take the witdh of their container.
+
+<Canvas of={FormStories.Fluid} />
+
+### Disabled
+
+Form fields and buttons can be disabled.
+
+<Canvas of={FormStories.Disabled} />
+
+### Button alignment
+
+Form buttons can be aligned horizontally.
+
+<Canvas of={FormStories.ButtonAlignment} />
+
+### Formik
+
+The form state and validation could be managed by an external library like [Formik](https://formik.org/).
+
+<Canvas of={FormStories.Formik} />
+
+## API
+
+### Form
+
+<ComponentInfo
+    usage={"import { Form } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerForm.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerForm} sort="alpha" />
+
+### Fieldset
+
+<ComponentInfo
+    usage={"import { Fieldset } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerFieldset.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerFieldset} sort="alpha" />
+

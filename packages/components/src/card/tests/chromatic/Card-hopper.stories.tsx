@@ -91,7 +91,7 @@ export const VerticalAndImage: CardStory = {
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
             <Card fluid orientation="vertical">
-                <Image src={ApolloBanner} alt="Appolo 11" fit="cover" height="200px" />
+                <Image src={ApolloBanner} alt="Appolo 11" objectFit="cover" height="200px" />
                 <Heading>Nasa</Heading>
                 <Content>The National Aeronautics and Space Administration</Content>
             </Card>
@@ -133,7 +133,7 @@ export const FlexLayout: CardStory = {
     name: "flex layout",
     render: () => (
         <Stack>
-            <Flex gap={160}>
+            <Flex gap="core_160">
                 <Card>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>
@@ -149,7 +149,7 @@ export const FlexLayout: CardStory = {
                     <Content>The National Aeronautics and Space Administration</Content>
                 </Card>
             </Flex>
-            <Flex gap={160}>
+            <Flex gap="core_160">
                 <Card fluid>
                     <Image src={ApolloBanner} alt="Appolo 11 Banner" />
                     <Heading>Nasa</Heading>

@@ -1,0 +1,41 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerDisclosureArrow } from "@components/disclosure";
+
+import * as DisclosureArrowStories from "./DisclosureArrow.stories.tsx";
+
+<Meta of={DisclosureArrowStories} />
+
+# DisclosureArrow
+
+<Tagline>A top / bottom pointing arrow to hint that activating the trigger will display additional content.</Tagline>
+
+<ComponentInfo
+    usage={"import { DisclosureArrow } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/disclosure/src"
+/>
+
+## Usage
+
+### Disclosure context
+
+When a disclosure arrow is nested in a component implementing a `DisclosureContext`, the arrow will automatically change direction when `isOpen` state change.
+
+<Canvas of={DisclosureArrowStories.Default} />
+
+### Controlled
+
+A disclosure arrow can handle `open` state in controlled mode.
+
+<Canvas of={DisclosureArrowStories.Controlled} />
+## API
+
+### DisclosureArrow
+
+<ComponentInfo
+    usage={"import { DisclosureArrow } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerDisclosureArrow.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerDisclosureArrow} sort="alpha" />

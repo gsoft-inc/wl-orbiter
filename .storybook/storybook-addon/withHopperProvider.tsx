@@ -40,7 +40,7 @@ export const withHopperProvider = makeDecorator({
         const isDocStory = context.viewMode === "docs";
 
         const colorSchemes: ColorScheme[] = options.colorSchemes || (isDocStory && context.globals.theme ? [context.globals.theme] : ColorSchemes);
-        const locale: string = options.locale || (isDocStory && context.globals.locale ? context.globals.locale : "en-US");
+        // const locale: string = options.locale || (isDocStory && context.globals.locale ? context.globals.locale : "en-US");
         const disabled = options.disabled || false;
 
         if (disabled) {

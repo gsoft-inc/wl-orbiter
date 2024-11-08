@@ -210,12 +210,12 @@ export const Zoom: IconButtonStory = {
     render: () => (
         <Inline>
             <Div className="zoom-in">
-                <IconButton variant="tertiary">
+                <IconButton variant="tertiary" aria-label="add">
                     <AddIcon />
                 </IconButton>
             </Div>
             <Div className="zoom-out">
-                <IconButton variant="tertiary">
+                <IconButton variant="tertiary" aria-label="add">
                     <AddIcon />
                 </IconButton>
             </Div>

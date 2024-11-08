@@ -1,0 +1,20 @@
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as ListStories from "./list.stories.tsx";
+
+<Meta of={ListStories} />
+
+# List
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML ul/ol/li element.</Tagline>
+
+<ComponentInfo
+    usage={"import { UL, OL, LI } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+Accepts all the HTML attributes of [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul), [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) and [li](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li) elements with the addition of [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={ListStories.Example} />

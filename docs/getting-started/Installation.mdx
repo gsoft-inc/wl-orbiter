@@ -1,0 +1,94 @@
+import { Meta } from "@storybook/addon-docs";
+import { Banner, ExternalLink, Source } from "@stories/components";
+
+<Meta
+    title="Installation"
+    id="installation"
+/>
+
+# Installation
+
+<Banner>If you are working with Sharegate, you should use <ExternalLink href="https://orbit.sharegate.design/">Orbit</ExternalLink>.</Banner>
+
+Multiple [NPM packages](https://www.npmjs.com/settings/orbiter-ui/packages) compose Orbiter. By creating a bundle package named [@workleap/orbiter-ui](https://www.npmjs.com/package/@workleap/orbiter-ui), we simplify the installation process and allow you to install Orbiter with just a single package.
+
+> We assume you've already set up [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom). Otherwise, you'll get a warning at installation.
+
+## Install packages
+
+To install Orbiter, open a terminal at the root of your project workspace and run the following command:
+
+<Source language="bash" code={`
+pnpm install @workleap/orbiter-ui
+`} />
+
+## Import styles
+
+Orbiter styles include the ShareGate font, a [CSS bootstrap](https://github.com/gsoft-inc/wl-orbiter/tree/master/packages/css/src) and of course the component's styles.
+
+To import Orbiter styles, add the following import declaration to your root stylesheet:
+
+<Source language="css" code={`
+/* index.css */
+
+@import "@workleap/orbiter-ui/index.css";
+`} />
+
+## Set up your tooling environment
+
+Orbiter offer an ESLint plugin to see in-context help in your IDE. This includes accessibility pointers, deprecation notices, and other helpful tips.
+
+> This config is designed to complement the [suggested Workleap ESLint Configuration](https://github.com/gsoft-inc/wl-web-configs).
+
+First, add the ESlint plugin to your dependencies:
+
+<Source language="bash" code={`
+npm install @orbit-ui/eslint-plugin eslint
+`} />
+
+Then, add the plugin to your ESlint config. For example, your `.eslintrc.json` file may look like this:
+
+<Source language="json" code={`
+{
+    "$schema": "https://json.schemastore.org/eslintrc",
+    "plugins": ["@orbit-ui"],
+    "extends": [
+        "plugin:@orbit-ui/recommended"
+    ]
+}
+`} />
+
+More about [ESlint configuration](https://eslint.org/docs/latest/use/configure/configuration-files)
+
+## Configure your application
+
+Below is an example of how to configure an application:
+
+<Source code={`
+// index.ts
+
+import { ThemeProvider } from "@workleap/orbiter-ui";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+
+const root = createRoot(document.getElementById("root")!);
+root.render(
+    <ThemeProvider colorScheme="light">
+        <App />
+    </ThemeProvider>
+);
+`} />
+
+### Start creating components
+
+You're all set! You can start creating your application with Orbiter:
+
+<Source code={`
+import { Div, Text } from "@workleap/orbiter-ui";
+
+export const App = () => (
+  <Div backgroundColor="warning">
+    <Text color="neutral">Hello World!</Text>
+  </Div>
+);
+`} />

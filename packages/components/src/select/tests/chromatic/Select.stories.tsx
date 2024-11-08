@@ -1,5 +1,5 @@
 import { Inline, Stack } from "@components/layout";
-import { Select, useSelect } from "@components/select";
+import { Select, useSelect, type SelectProps } from "@components/select";
 
 import { Button } from "@components/button";
 import { Div } from "@components/html";
@@ -97,7 +97,7 @@ function CustomSelect({
     "aria-label": ariaLabel,
     children,
     ...rest
-}) {
+}: SelectProps) {
     const { selectedItem, triggerProps, overlayProps, listboxProps } = useSelect(children, {
         open,
         ariaLabel
@@ -110,7 +110,7 @@ function CustomSelect({
                 {...triggerProps}
                 variant="secondary"
             >
-                {selectedItem?.content ?? placeholder}
+                {selectedItem?.text ?? placeholder}
             </Button>
             <Overlay {...overlayProps}>
                 <Listbox {...listboxProps} />

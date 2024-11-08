@@ -1,0 +1,20 @@
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as SpanStories from "./span.stories.tsx";
+
+<Meta of={SpanStories} />
+
+# Span
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML span element.</Tagline>
+
+<ComponentInfo
+    usage={"import { Span } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+A span component accepts all the [HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={SpanStories.Example} />

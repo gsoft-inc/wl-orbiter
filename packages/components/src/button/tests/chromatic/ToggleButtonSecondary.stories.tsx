@@ -4,6 +4,7 @@ import { LightbulbIcon } from "@hopper-ui/icons";
 import { Div } from "@components/html";
 
 import { Meta, StoryObj } from "@storybook/react";
+import { Text } from "@components/typography";
 
 const meta = {
     title: "Chromatic/ToggleButton/secondary",

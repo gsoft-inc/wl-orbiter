@@ -1,0 +1,20 @@
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as HeaderStories from "./header.stories.tsx";
+
+<Meta of={HeaderStories} />
+
+# Header
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML header element.</Tagline>
+
+<ComponentInfo
+    usage={"import { HtmlHeader as Header } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+An header component accepts all the [header HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={HeaderStories.Example} />

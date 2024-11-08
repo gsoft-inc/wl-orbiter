@@ -14,8 +14,7 @@
             "@stories/components": [".storybook/components"],
             "@root": ["./"],
             "@css/*": ["packages/css/src/*"],
-            "@stories/mdx": [".storybook/mdx"],
-            "@stories/utils": [".storybook/utils"]
+            "@stories/mdx": [".storybook/mdx"]
         }
     }
 }

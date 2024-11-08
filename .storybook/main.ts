@@ -1,21 +1,39 @@
 // import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
-import type { Options } from "@storybook/types";
-import type { Options as SwcOptions } from "@swc/core";
-import path from "path";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 
-import { swcConfig as SwcBuildConfig } from "./swc.build";
-import { swcConfig as SwcDevConfig } from "./swc.dev";
+import { includeDocs, includeChromatic } from "./env";
 
 // We sometimes need to disable the lazyCompilation to properly run the test runner on stories
 const isLazyCompilation = !(process.env.STORYBOOK_NO_LAZY === "true");
 
-const storybookConfig: StorybookConfig = {
-    stories: [
-        // "../packages/**/*.stories.@(ts|tsx)"
+let stories: string[] = [];
+
+if (includeDocs) {
+    stories = [
+        // TODO simplify imports for any pkgs /docs/**/*.stories.mdx
+        // "../docs/**/*.stories.mdx",
+        // "../packages/**/docs/**/*.mdx",
+        // "!../packages/**/docs/**/*.stories.mdx",
+        "../docs/**/!(*.stories).mdx",
+        "../docs/**/*.stories.tsx",
+        "../packages/**/docs/!(*.stories|IndexFileUsage).mdx",
+        "../packages/**/docs/*.stories.tsx"
+    ];
+}
+
+if (includeChromatic) {
+    stories = [
+        ...stories,
+        // TODO remove chroma and simplify imports
+        // "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
         "../packages/components/**/tests/chromatic/**/*.stories.tsx"
-    ],
+    ];
+}
+
+
+const storybookConfig: StorybookConfig = {
+    stories: stories,
     addons: [
         "@storybook/addon-a11y",
         "@storybook/addon-links",
@@ -30,6 +48,27 @@ const storybookConfig: StorybookConfig = {
             name: "@storybook/builder-webpack5",
             options: {
                 lazyCompilation: isLazyCompilation
+            }
+        }
+    },
+    typescript: {
+        reactDocgen: "react-docgen-typescript",
+        reactDocgenTypescriptOptions: {
+            skipChildrenPropWithoutDoc: false,
+            shouldExtractLiteralValuesFromEnum: true,
+            shouldExtractValuesFromUnion: true,
+            shouldRemoveUndefinedFromOptional: true,
+            exclude: ["node_modules"],
+            propFilter: (prop, component) => {
+                if (prop.parent && /node_modules/.test(prop.parent.fileName)) {
+                    return false;
+                }
+
+                if (component && component.name && !component.name.startsWith("Inner")) {
+                    return false;
+                }
+
+                return true;
             }
         }
     },
@@ -48,7 +87,7 @@ const storybookConfig: StorybookConfig = {
     // swc: (_: SwcOptions, { configType }: Options): SwcOptions => {
     //     return configType === "PRODUCTION" ? SwcBuildConfig : SwcDevConfig;
     // },
-    webpackFinal(config, { configType }) {
+    webpackFinal(config) {
         config.resolve = {
             ...config.resolve,
             plugins: [

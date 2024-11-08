@@ -55,7 +55,7 @@ export const Default: IconButtonAsLinkStory = {
     )
 };
 
-export const States: IconButtonStory = {
+export const States: IconButtonAsLinkStory = {
     name: "states",
     render: () => (
         <Inline gap="4.5rem">
@@ -205,7 +205,7 @@ export const States: IconButtonStory = {
     )
 };
 
-export const Zoom: IconButtonStory = {
+export const Zoom: IconButtonAsLinkStory = {
     name: "zoom",
     render: () => (
         <Inline>

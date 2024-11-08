@@ -21,9 +21,9 @@ type LinkStory = StoryObj<typeof meta>;
 export const Default: LinkStory = {
     name: "default",
     render: () => (
-        <Card>
-            <Link href="#" />
-        </Card>
+        <Link href="#">
+            <Card />
+        </Link>
     )
 };
 
@@ -31,18 +31,18 @@ export const States: LinkStory = {
     name: "states",
     render: () => (
         <Inline wrap>
-            <Card>
-                <Link active href="#" />
-            </Card>
-            <Card>
-                <Link focus href="#" />
-            </Card>
-            <Card>
-                <Link hover href="#" />
-            </Card>
-            <Card>
-                <Link focus hover href="#" />
-            </Card>
+            <Link active href="#">
+                <Card />
+            </Link>
+            <Link focus href="#">
+                <Card />
+            </Link>
+            <Link hover href="#">
+                <Card />
+            </Link>
+            <Link focus hover href="#">
+                <Card />
+            </Link>
         </Inline>
     )
 };
@@ -51,21 +51,21 @@ export const DisabledStates: LinkStory = {
     name: "disabled states",
     render: () => (
         <Inline wrap>
-            <Card>
-                <Link disabled href="#" />
-            </Card>
-            <Card>
-                <Link disabled active href="#" />
-            </Card>
-            <Card>
-                <Link disabled focus href="#" />
-            </Card>
-            <Card>
-                <Link disabled hover href="#" />
-            </Card>
-            <Card>
-                <Link disabled focus hover href="#" />
-            </Card>
+            <Link disabled href="#">
+                <Card />
+            </Link>
+            <Link disabled active href="#">
+                <Card />
+            </Link>
+            <Link disabled focus href="#">
+                <Card />
+            </Link>
+            <Link disabled hover href="#">
+                <Card />
+            </Link>
+            <Link disabled focus hover href="#">
+                <Card />
+            </Link>
         </Inline>
     )
 };
@@ -73,17 +73,17 @@ export const DisabledStates: LinkStory = {
 export const External: LinkStory = {
     name: "external",
     render: () => (
-        <Card>
-            <Link external href="https://www.space.com/spacex-delays-south-korea-military-satellite-launch.html" />
-        </Card>
+        <Link external href="https://www.space.com/spacex-delays-south-korea-military-satellite-launch.html">
+            <Card />
+        </Link>
     )
 };
 
 export const NewTab: LinkStory = {
     name: "new tab",
     render: () => (
-        <Card>
-            <Link target="_blank" href="#" />
-        </Card>
+        <Link target="_blank" href="#">
+            <Card />
+        </Link>
     )
 };

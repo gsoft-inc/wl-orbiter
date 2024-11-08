@@ -1,0 +1,36 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerTransition } from "@components/transition";
+
+import * as TransitionStories from "./Transition.stories.tsx";
+
+<Meta of={TransitionStories} />
+
+# Transition
+
+<Tagline>A transition component allow enter/leave CSS transitions for React elements.</Tagline>
+
+<ComponentInfo
+    usage={"import { Transition } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/transition/src"
+/>
+
+## Usage
+
+> This is a not a component to handle all kind of generic transitions. This component is specialized for *enter* and *leave* transitions.
+
+By default, a transition will enter and leave instantly. To animate your enter/leave transition specify a CSS class for the `enter` and `leave` props.
+
+<Canvas of={TransitionStories.ControlledTransition} />
+
+## API
+
+### Transition
+
+<ComponentInfo
+    usage={"import { Transition } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTransition.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTransition} sort="alpha" />

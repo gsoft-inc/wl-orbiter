@@ -1,0 +1,118 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerRadio, InnerRadioGroup } from "@components/radio";
+
+import * as RadioGroupStories from "./Radio.stories.tsx";
+
+<Meta of={RadioGroupStories} />
+
+# RadioGroup
+
+<Tagline>A radio group is a set of checkable buttons, known as radio buttons, where no more than one of the buttons can be checked at a time.</Tagline>
+
+<ComponentInfo
+    usage={"import { RadioGroup, Radio } from \"@workleap/orbiter-ui\";"}
+    ariaPath="radiobutton"
+    githubPath="/packages/components/src/radio/src"
+/>
+
+## Usage
+
+### Default
+
+A default radio group.
+
+<Canvas of={RadioGroupStories.Default} />
+
+### Selected value
+
+A radio group can have a selected value.
+
+<Canvas of={RadioGroupStories.Selected} />
+
+### Disabled
+
+A single radio can be disabled.
+
+<Canvas of={RadioGroupStories.DisabledRadio} />
+
+Or the whole group.
+
+<Canvas of={RadioGroupStories.DisabledGroup} />
+
+### Icon
+
+A radio can have [icons](?path=/docs/icon-gallery--docs) after its text.
+
+<Canvas of={RadioGroupStories.Icon} />
+
+### Counter
+
+A radio can have a [counter](?path=/docs/counter--default-story) after its text.
+
+<Canvas of={RadioGroupStories.CounterStory} />
+
+### Size
+
+A radio group can vary in size.
+
+<Canvas of={RadioGroupStories.Size} />
+
+### Reverse
+
+A radio button can be to the left or to the right of its label.
+
+<Canvas of={RadioGroupStories.ReverseRadio} />
+
+Or the whole group.
+
+<Canvas of={RadioGroupStories.ReverseGroup} />
+
+### Orientation
+
+A radio group can render its elements horizontally.
+
+<Canvas of={RadioGroupStories.Orientation} />
+
+### Validation
+
+A radio group can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate if a specific value of the radio group has been selected.
+
+<Canvas of={RadioGroupStories.ValueSelectedValidation} />
+
+### Custom components
+
+Any component implementing the `CheckableContext` can behave like a radio group. This is usually done by using the `useCheckableProps` hook.
+
+<Canvas of={RadioGroupStories.CustomGroup} />
+
+### Controlled
+
+A radio group can handle `value` state in controlled mode.
+
+<Canvas of={RadioGroupStories.ControlledRadioGroup} />
+
+## API
+
+### RadioGroup
+
+<ComponentInfo
+    usage={"import { RadioGroup } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerRadioGroup.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerRadioGroup} sort="alpha" />
+
+### Radio
+
+<ComponentInfo
+    usage={"import { Radio } from \"@workleap/orbiter-ui\";"}
+    slots={["label", "icon", "counter"]}
+    inherits={[InnerRadio.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerRadio} sort="alpha" />

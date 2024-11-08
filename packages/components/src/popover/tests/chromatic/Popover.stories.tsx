@@ -216,7 +216,7 @@ export const Style: PopoverStory = {
 };
 
 export const NoHeading: PopoverStory = {
-    storyName: "no heading",
+    name: "no heading",
     render: () => (
         <Popover>
             <Content>SpaceX designs, manufactures, and launches the world's most advanced rockets and spacecraft.</Content>

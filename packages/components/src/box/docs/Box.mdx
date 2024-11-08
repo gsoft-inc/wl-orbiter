@@ -1,0 +1,35 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerBox } from "@components/box";
+import * as BoxStories from "./Box.stories.tsx";
+
+<Meta of={BoxStories} />
+
+# Box
+
+<Tagline>A box is a general purpose component that can be used to compose new components, use the slot system or render style props.</Tagline>
+
+<ComponentInfo
+    usage={"import { Box } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/box/src"
+/>
+
+## Usage
+
+> Box is a base component extended by Orbiter's HTML element. It's made available as a foundation component but shouldn't be used in most cases. Instead, use one of Orbiter's HTML element components like a [div](?path=/docs/html-div--example).
+
+### Default
+
+A default box.
+
+<Canvas of={BoxStories.Default} />
+
+## API
+
+<ComponentInfo
+    usage={"import { Box } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerBox.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerBox} sort="alpha" />

@@ -1,0 +1,20 @@
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import * as AStories from "./anchor.stories.tsx";
+
+<Meta of={AStories} />
+
+# Anchor
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML anchor element.</Tagline>
+
+<ComponentInfo
+    usage={"import { A } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+An anchor component accepts all the [anchor HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={AStories.Example} />

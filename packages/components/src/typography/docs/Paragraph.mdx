@@ -1,0 +1,35 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerParagraph } from "@components/typography";
+
+import * as ParagraphStories from "./Paragraph.stories.tsx";
+
+<Meta of={ParagraphStories} />
+
+# Paragraph
+
+<Tagline>A paragraph is used to render blocks of text.</Tagline>
+
+<ComponentInfo
+    usage={"import { Paragraph } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/paragraph/src"
+/>
+
+## Usage
+
+### Size
+
+You can alter the size of the paragraph by specifying a `size` prop.
+
+<Canvas of={ParagraphStories.Size} />
+
+## API
+
+<ComponentInfo
+    usage={"import { Paragraph } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerParagraph.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerParagraph} sort="alpha" />
+

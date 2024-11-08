@@ -1,0 +1,20 @@
+import { ComponentInfo, Link, Tagline } from "@stories/components";
+import { Canvas,  Meta } from "@storybook/addon-docs";
+import * as ButtonStories from "./button.stories.tsx";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML button element.</Tagline>
+
+<ComponentInfo
+    usage={"import { HtmlButton } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+A button component accepts all the [button HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={ButtonStories.Example} />

@@ -23,7 +23,7 @@ export interface InnerAnonymousAvatarProps extends SlotProps, InternalProps, Sty
     /**
      * An avatar can vary in size.
      */
-    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl">;
+    size?: ResponsiveProp<"xs" | "sm" | "md" | "lg" | "xl" | "2xl">;
 }
 
 export function InnerAnonymousAvatar({

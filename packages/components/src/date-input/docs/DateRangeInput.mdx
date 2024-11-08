@@ -1,0 +1,92 @@
+import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
+import { ComponentInfo, Tagline } from "@stories/components";
+import { InnerDateRangeInput } from "@components/date-input";
+
+import * as DateRangeInputStories from "./DateRangeInput.stories";
+
+<Meta of={DateRangeInputStories} />
+
+# DateRangeInput
+
+<Tagline>An specialized input to enter a range of dates.</Tagline>
+
+<ComponentInfo
+    usage={"import { DateRangeInput } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/date-input/src"
+/>
+
+## Usage
+
+### Default
+
+A default date range input.
+
+<Canvas of={DateRangeInputStories.Default} />
+
+### Value
+
+A date range input can have values.
+
+<Canvas of={DateRangeInputStories.Value} />
+
+### Presets
+
+A date range input can offer a predefined set of frequently used ranges:
+
+<Canvas of={DateRangeInputStories.Presets} />
+
+By default, presets are displayed as *compact* but they could also be displayed as *expanded*:
+
+<Canvas of={DateRangeInputStories.ExpandedPresets} />
+
+### Disabled
+
+A date range input can be disabled.
+
+<Canvas of={DateRangeInputStories.Disabled} />
+
+### Readonly
+
+A date range input can be readonly.
+
+<Canvas of={DateRangeInputStories.ReadOnly} />
+
+### Fluid
+
+A date range input can take the width of its container.
+
+<Canvas of={DateRangeInputStories.Fluid} />
+
+### Validation
+
+A date range input can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate if the date is between *05/01/1970* and *05/01/2021*.
+
+<Canvas of={DateRangeInputStories.DateRangeValidation} />
+
+### Form
+
+A date range input can be used in a form by providing a `name` prop. When doing so, the `name` attribute of each inputs will be prefixed by the specified `name` prop and will respectively be suffixed by `"-start-date"` and `"-end-date"`.
+
+For example, if the provided `name` prop is "filter" the start date input `name` attribute will be `"filter-start-date"` and the end date input `name` attribute will be `"filter-end-date"`.
+
+<Canvas of={DateRangeInputStories.Form} />
+
+### Controlled
+
+A date range input `startDate` and `endDate` can be handled in controlled mode.
+
+<Canvas of={DateRangeInputStories.Controlled} />
+
+## API
+
+### DateRangeInput
+
+<ComponentInfo
+    usage={"import { DateRangeInput } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerDateRangeInput.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerDateRangeInput} sort="alpha" />

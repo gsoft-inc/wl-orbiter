@@ -1,7 +1,7 @@
 import { SparklesIcon, DismissIcon } from "@hopper-ui/icons";
 import { Content, Header } from "@components/placeholders";
 import { Inline, Stack } from "@components/layout";
-import { Tab, TabPanel, Tabs, useTabsContext } from "@components/tabs";
+import { Tab, TabPanel, Tabs, useTabsContext, type TabPanelProps, type TabProps } from "@components/tabs";
 
 import { Div } from "@components/html";
 import { Item } from "@components/collection";
@@ -23,8 +23,13 @@ export default meta;
 
 type TabsStory = StoryObj<typeof meta>;
 
+interface ActiveHeaderProps extends Omit<TabProps, "tab" | "onSelect"> {
+    tab?: TabProps["tab"];
+    onSelect?: TabProps["onSelect"];
+}
+
 // set tab optional since its provided automatically by the parent component, and client code do not need to provide it
-const ActiveHeader = ({ tab, children, onSelect, ...rest }) => {
+const ActiveHeader = ({ tab, children, onSelect, ...rest }: ActiveHeaderProps) => {
     const { selectedKey } = useTabsContext();
     const { key } = tab;
 
@@ -41,7 +46,7 @@ const ActiveHeader = ({ tab, children, onSelect, ...rest }) => {
 };
 
 // set tab optional since its provided automatically by the parent component, and client code do not need to provide it
-const ColoredHeader = ({ children, tab, onSelect, ...rest }) => {
+const ColoredHeader = ({ children, tab, onSelect, ...rest }: ActiveHeaderProps) => {
     return (
         <Tab onSelect={onSelect} tab={tab} {...rest} >
             <Text color="red">{children}</Text>
@@ -50,7 +55,11 @@ const ColoredHeader = ({ children, tab, onSelect, ...rest }) => {
 };
 
 // set tab optional since its provided automatically by the parent component, and client code do not need to provide it
-const ColoredContent = ({ panel, children, ...rest }) => {
+interface ColoredContentProps extends Omit<TabPanelProps, "panel"> {
+    panel? : TabPanelProps["panel"];
+}
+
+const ColoredContent = ({ panel, children, ...rest }: ColoredContentProps) => {
     const { selectedKey } = useTabsContext();
     const { key } = panel;
 
