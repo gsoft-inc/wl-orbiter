@@ -1,7 +1,8 @@
-import { Meta, Canvas, Source } from "@storybook/addon-docs";
+import { Meta, Canvas } from "@storybook/addon-docs";
 import { Table } from "@stories/components";
 import { Preview } from "@stories/components";
 import * as ResponsiveStylesStories from "./ResponsiveStyles.stories";
+import { Source } from "@stories/components";
 
 <Meta of={ResponsiveStylesStories} />
 
@@ -25,7 +26,7 @@ Not all breakpoints must be explicitly defined. In the following example, `base`
 
 To resolve a responsive value within a React component, Orbiter provides the `useResponsiveValue` hook.
 
-<Source dark language="tsx" code={`
+<Source code={`
 import { useResponsiveValue } from "@workleap/orbiter-ui";
 
 const fluidValue = useResponsiveValue({ base: true, lg: false });

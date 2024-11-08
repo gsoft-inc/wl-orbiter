@@ -1,5 +1,5 @@
-import { Table } from "@stories/components";
-import { Meta, Canvas, Source } from "@storybook/addon-docs";
+import { Table, Source } from "@stories/components";
+import { Meta, Canvas } from "@storybook/addon-docs";
 import { Div } from "@components/html";
 import { Paragraph } from "@components/typography";
 import { PropsReferenceTable } from "./PropsReferenceTable";
@@ -15,7 +15,7 @@ An Orbiter style property is a mapping of a [CSS property](https://developer.moz
 
 To apply a style value, set a value to any [style property](#properties) of an Orbiter component.
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     fontSize="1.375rem"
     fontWeight={680}
@@ -33,7 +33,7 @@ To apply a style value, set a value to any [style property](#properties) of an O
 
 Props like `border` and `paddingX` are also provided to help you save keystrokes. An exhaustive list of all the supported props is available in the [reference](#properties) section.
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     paddingY={80}
     border="primary">
@@ -94,7 +94,7 @@ To facilitate layouts, Orbiter provides specialized components for [grid](https:
 
 When applicable, always prefer using a [`<Grid>`](?path=/docs/grid--areas) or [`<Flex>`](?path=/docs/flex--horizontal) component instead of a [`<Div>`](?path=/docs/html-div--example) component.
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Grid templateColumns="1fr 1fr" gap={80} height={800}>
     <Div backgroundColor="sapphire-500" />
     <Div backgroundColor="amanita-500" />
@@ -109,7 +109,7 @@ Any component can accept style properties. To accept style properties, the compo
 
 Passing the style props to an Orbiter component:
 
-<Source dark language="tsx" code={`
+<Source code={`
 import { HtmlButton, StyledComponentProps } from "@workleap/orbiter-ui";
 
 interface CustomButtonProps extends StyledComponentProps {
@@ -125,7 +125,7 @@ function CustomButton(props: CustomButtonProps) {
 
 Using the `useStyledSystem` hook:
 
-<Source dark language="tsx" code={`
+<Source code={`
 import { StyledComponentProps, useStyledSystem } from "@workleap/orbiter-ui";
 
 interface CustomButtonProps extends StyledComponentProps {
@@ -151,7 +151,7 @@ The following tables provide a list of all available style props by category.
 
 ### Space
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div padding={160}>
     Galaxy
 </Div>
@@ -179,7 +179,7 @@ The following tables provide a list of all available style props by category.
 
 ### Color
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Text backgroundColor="primary-weak" color="#FFFFFF">
     Galaxy
 </Text>
@@ -198,7 +198,7 @@ The following tables provide a list of all available style props by category.
 
 ### Typography
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Header letterSpacing="0.3rem">
     Halleys Comet
 </Header>
@@ -221,7 +221,7 @@ The following tables provide a list of all available style props by category.
 
 ### Layout
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div width="30rem">
     Galaxy
 </Div>
@@ -255,7 +255,7 @@ The following tables provide a list of all available style props by category.
 
 ### Flex Layout
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div alignItems="center">
     <Text>Andromeda</Text>
     <Text>Batuu</Text>
@@ -279,7 +279,7 @@ The following tables provide a list of all available style props by category.
 
 ### Grid Layout
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div gridAutoFlow="row dense">
     <Text>Andromeda</Text>
     <Text>Batuu</Text>
@@ -312,7 +312,7 @@ The following tables provide a list of all available style props by category.
 
 ### Background
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
   backgroundImage="url('/images/dog.png')"
   backgroundPosition="center"
@@ -331,7 +331,7 @@ The following tables provide a list of all available style props by category.
 
 ### Border
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     border="primary"
     borderRadius="rounded-md"
@@ -360,7 +360,7 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ### Position
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     top="12px"
     position="absolute"
@@ -382,7 +382,7 @@ Border props (border, borderBottom, borderTop, borderRight, borderLeft) uses an 
 
 ### Shadow
 
-<Source dark language="tsx" code={`
+<Source code={`
 <Div
     boxShadow="lifted"
 />

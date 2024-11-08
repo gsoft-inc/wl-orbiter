@@ -8,3 +8,4 @@ export * from "./component-info";
 export * from "./snippet";
 export * from "./themed-snippet";
 export * from "./banner";
+export * from "./source";

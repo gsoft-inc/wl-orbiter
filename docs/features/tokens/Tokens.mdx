@@ -1,4 +1,5 @@
-import { Meta, Source, Story } from "@storybook/addon-docs";
+import { Meta, Story } from "@storybook/addon-docs";
+import { Source } from "@stories/components";
 import {
     TextColors,
     BackgroundColors,
@@ -30,11 +31,11 @@ Tokens are Orbiter's reusable values to provide a common language between develo
 
 Tokens can be used as [style props](/docs/style-props--docs) values:
 
-<Source dark language="tsx" of={TokensStories.Usage} />
+<Source of={TokensStories.Usage} />
 
 Or `CSS` variables:
 
-<Source dark language="css" code={`
+<Source language="css" code={`
 .item {
     background-color: var(--hop-neutral-surface-weak);
 }
