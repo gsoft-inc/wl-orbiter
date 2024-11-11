@@ -98,6 +98,7 @@ const storybookConfig: StorybookConfig = {
                 })
             ]
         };
+        config.optimization.minimize = false;
         // TODO: set once in ESM
         // config.plugins = [
         //     ...(config.plugins ?? []),
