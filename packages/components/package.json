@@ -48,7 +48,6 @@
         "@hopper-ui/icons": "^2.8.2",
         "@popperjs/core": "2.11.8",
         "react-is": "18.3.1",
-        "text-mask-core": "5.1.2",
         "use-debounce": "10.0.4"
     },
     "devDependencies": {
@@ -82,8 +81,8 @@
         "react-aria-components": "^1.2.1",
         "react-test-renderer": "18.3.1",
         "resize-observer-polyfill": "1.5.1",
-        "ts-node": "10.9.2",
         "ts-jest": "29.2.5",
+        "ts-node": "10.9.2",
         "tsup": "8.3.0",
         "typescript": "5.4.5"
     },
