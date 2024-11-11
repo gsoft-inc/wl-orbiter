@@ -1,4 +1,4 @@
-// import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 
@@ -11,13 +11,9 @@ let stories: string[] = [];
 
 if (includeDocs) {
     stories = [
-        // TODO simplify imports for any pkgs /docs/**/*.stories.mdx
-        // "../docs/**/*.stories.mdx",
-        // "../packages/**/docs/**/*.mdx",
-        // "!../packages/**/docs/**/*.stories.mdx",
         "../docs/**/!(*.stories).mdx",
         "../docs/**/*.stories.tsx",
-        "../packages/**/docs/!(*.stories|IndexFileUsage).mdx",
+        "../packages/**/docs/*.mdx",
         "../packages/**/docs/*.stories.tsx"
     ];
 }
@@ -25,8 +21,6 @@ if (includeDocs) {
 if (includeChromatic) {
     stories = [
         ...stories,
-        // TODO remove chroma and simplify imports
-        // "../packages/components/**/tests/chromatic/**/*.chroma.jsx",
         "../packages/components/**/tests/chromatic/**/*.stories.tsx"
     ];
 }
@@ -99,15 +93,15 @@ const storybookConfig: StorybookConfig = {
             ]
         };
         config.optimization.minimize = false;
-        // TODO: set once in ESM
-        // config.plugins = [
-        //     ...(config.plugins ?? []),
-        //     configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
-        //         overlay: {
-        //             sockIntegration: "whm"
-        //         }
-        //     })
-        // ].filter(Boolean);
+
+        config.plugins = [
+            ...(config.plugins ?? []),
+            configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
+                overlay: {
+                    sockIntegration: "whm"
+                }
+            })
+        ].filter(Boolean);
 
         return config;
     }
