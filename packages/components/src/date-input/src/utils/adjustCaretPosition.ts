@@ -1,3 +1,8 @@
+// ********************************************
+// This file is copied from the "text-mask-core" repo: https://github.com/text-mask/text-mask
+// It was causing issue since we migrated to ESM, so we copied the file here to avoid the issue.
+// ********************************************
+
 const defaultArray = [];
 const emptyString = "";
 
@@ -11,7 +16,7 @@ export default function adjustCaretPosition({
     placeholder,
     indexesOfPipedChars = defaultArray,
     caretTrapIndexes = defaultArray
-}) {
+}: any) {
     if (currentCaretPosition === 0 || !rawValue.length) { return 0; }
 
     // Store lengths for faster performance?

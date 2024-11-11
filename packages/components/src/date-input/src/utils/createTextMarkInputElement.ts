@@ -1,7 +1,12 @@
-import adjustCaretPosition from "./adjustCaretPosition";
-import conformToMask from "./conformToMask";
-import { convertMaskToPlaceholder, isString, isNumber, processCaretTraps } from "./utilities";
-import { placeholderChar as defaultPlaceholderChar, strFunction } from "./constants";
+// ********************************************
+// This file is copied from the "text-mask-core" repo: https://github.com/text-mask/text-mask
+// It was causing issue since we migrated to ESM, so we copied the file here to avoid the issue.
+// ********************************************
+
+import adjustCaretPosition from "./adjustCaretPosition.ts";
+import conformToMask from "./conformToMask.ts";
+import { convertMaskToPlaceholder, isString, isNumber, processCaretTraps } from "./utilities.ts";
+import { placeholderChar as defaultPlaceholderChar, strFunction } from "./constants.ts";
 
 const emptyString = "";
 const strNone = "none";
@@ -115,7 +120,7 @@ export default function createTextMaskInputElement(config) {
             // The following few lines are to support the `pipe` feature.
             const piped = typeof pipe === strFunction;
 
-            let pipeResults = {};
+            let pipeResults: any = {};
 
             // If `pipe` is a function, we call it.
             if (piped) {
@@ -176,6 +181,7 @@ export default function createTextMaskInputElement(config) {
 function safeSetSelection(element, selectionPosition) {
     if (document.activeElement === element) {
         if (isAndroid) {
+            // @ts-ignore
             defer(() => element.setSelectionRange(selectionPosition, selectionPosition, strNone), 0);
         } else {
             element.setSelectionRange(selectionPosition, selectionPosition, strNone);

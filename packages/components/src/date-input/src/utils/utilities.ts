@@ -1,4 +1,9 @@
-import { placeholderChar as defaultPlaceholderChar } from "./constants";
+// ********************************************
+// This file is copied from the "text-mask-core" repo: https://github.com/text-mask/text-mask
+// It was causing issue since we migrated to ESM, so we copied the file here to avoid the issue.
+// ********************************************
+
+import { placeholderChar as defaultPlaceholderChar } from "./constants.ts";
 
 const emptyArray = [];
 
@@ -32,6 +37,7 @@ export function isString(value) {
 }
 
 export function isNumber(value) {
+    // @ts-ignore
     return typeof value === "number" && value.length === undefined && !isNaN(value);
 }
 

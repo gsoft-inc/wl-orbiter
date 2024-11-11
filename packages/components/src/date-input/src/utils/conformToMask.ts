@@ -1,10 +1,15 @@
-import { convertMaskToPlaceholder, isArray, processCaretTraps } from "./utilities";
-import { placeholderChar as defaultPlaceholderChar, strFunction } from "./constants";
+// ********************************************
+// This file is copied from the "text-mask-core" repo: https://github.com/text-mask/text-mask
+// It was causing issue since we migrated to ESM, so we copied the file here to avoid the issue.
+// ********************************************
+
+import { convertMaskToPlaceholder, isArray, processCaretTraps } from "./utilities.ts";
+import { placeholderChar as defaultPlaceholderChar, strFunction } from "./constants.ts";
 
 const emptyArray = [];
 const emptyString = "";
 
-export default function conformToMask(rawValue = emptyString, mask = emptyArray, config = {}) {
+export default function conformToMask(rawValue: any = emptyString, mask: any = emptyArray, config: any = {}) {
     if (!isArray(mask)) {
     // If someone passes a function as the mask property, we should call the
     // function to get the mask array - Normally this is handled by the
@@ -165,15 +170,15 @@ export default function conformToMask(rawValue = emptyString, mask = emptyArray,
                             // a placeholder character or a non-suitable spot, ie, a non-placeholder character that is not new.
                             // If we see a suitable spot first, we store its position and exit the loop. If we see a non-suitable
                             // spot first, we exit the loop and our `indexOfNextAvailablePlaceholderChar` will stay as `null`.
-                            for (let i = 0; i < rawValueArrLength; i++) {
-                                const charData = rawValueArr[i];
+                            for (let i2 = 0; i2 < rawValueArrLength; i2++) {
+                                const charData = rawValueArr[i2];
 
                                 if (charData.char !== placeholderChar && charData.isNew === false) {
                                     break;
                                 }
 
                                 if (charData.char === placeholderChar) {
-                                    indexOfNextAvailablePlaceholderChar = i;
+                                    indexOfNextAvailablePlaceholderChar = i2;
                                     break;
                                 }
                             }

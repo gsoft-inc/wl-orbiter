@@ -1,4 +1,4 @@
-import createTextMaskInputElement from "./utils/createTextMarkInputElement.js";
+import createTextMaskInputElement from "./utils/createTextMarkInputElement.ts";
 import { isNil } from "../../shared/index.ts";
 import { useCallback, useEffect, useRef } from "react";
 
