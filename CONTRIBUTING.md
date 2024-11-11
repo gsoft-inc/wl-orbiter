@@ -12,6 +12,7 @@ The following documentation is only for the maintainers of this repository.
 - [Testing](#testing)
 - [CI](#ci)
 - [Add a new package to the monorepo](#add-a-new-package-to-the-monorepo)
+- [Add a new Yarn script](#add-a-new-yarn-script)
 - [Gotchas to remember](#gotchas-to-remember)
 
 ## Monorepo setup
@@ -21,26 +22,50 @@ This repository is managed as a monorepo that is composed of many npm packages.
 For more information on monorepo:
 
 - [Babel Github](https://github.com/babel/babel/blob/master/doc/design/monorepo.md)
+- [Shopify Github](https://github.com/Shopify/quilt/blob/master/Decision%20records/00%20-%20Use%20a%20Lerna%20monorepo.md)
 - [Google](https://www.google.com/search?q=monorepo)
 
-### Pnpm workspace
+### Lerna
 
-This monorepo is using Pnpm workspace feature to handle the installation of the npm dependencies and manage the packages inter-dependencies.
+[Lerna](https://github.com/lerna/lerna) is used to manage this monorepo. The packages of the monorepo can be found in the [packages](/packages) directory.
+
+Since Yarn workspace feature offer native mono-repo capabilities and a seemless integration with Lerna this is our goto package manager for this project.
+
+When Lerna is configured to use Yarn, the installation of the npm dependencies and the management of the packages inter-dependencies will be delegated to Yarn. It result in an increase of performance and a more reliable experience than using the same features from Lerna. The native integration between Lerna and Yarn make it worthwill to switch from npm to Yarn for this project.
+
+So why do we use Lerna if Yarn workspace take care of everything?
+
+Lerna workflow greatly facilitate the release of the packages of a monorepo.
+
+For more information, read the following Lerna commands documentation:
+
+- [version](https://github.com/lerna/lerna/tree/master/commands/version)
+- [publish](https://github.com/lerna/lerna/tree/master/commands/publish)
+
+This monorepo is configured to release the packages independently. The decision to release or not a package is based on whether or not the code of the package has changed.
+
+### Yarn workspace
+
+This monorepo is using Yarn workspace feature to handle the installation of the npm dependencies and manage the packages inter-dependencies.
+
+It's important to note that Yarn workspace will **hoist** the npm dependencies at the root of the workspace. This means that there might not be a *node_modules* directory nested in the packages directories. The npm dependencies are installed in a *node_modules* directory at the root of the workspace and a single *yarn.lock* file is generated at the root of the workspace.
+
+Since Storybook is not handled by the monorepo tooling, the [.storybook](/.storybook) directory will contain a *node_modules* directory and a *yarn.lock* file.
 
 ## Installation
 
-This project use Pnpm as a package manager. Therefore, you must install Pnpm:
+This project use Yarn workspace. Therefore, you must install Yarn:
 
 ```
-npm install -g pnpm
+choco install yarn
 ```
 
-For more options to install Pnpm, view https://pnpm.io/installation.
+For more options to install Yarn, view https://yarnpkg.com/lang/en/docs/install/#windows-stable.
 
 To install the project, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
-pnpm i
+yarn
 ```
 
 The installation should take up to 5 minutes.
@@ -70,7 +95,7 @@ For more informations about automated visual tests, read the [Testings](#testing
 To start developing, [open a terminal in VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal#_managing-multiple-terminals) and execute the following command at the root of the workspace:
 
 ```bash
-pnpm start
+yarn start
 ```
 
 Any updates to the packages or Storybook's stories will automatically re-compile the packages and refresh the Storybook app accordingly.
@@ -80,7 +105,7 @@ Any updates to the packages or Storybook's stories will automatically re-compile
 To start developing in docs mode, [open a terminal in VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal#_managing-multiple-terminals) and execute the following command at the root of the workspace:
 
 ```bash
-pnpm start-sb-docs
+yarn start-sb-docs
 ```
 
 Basically the only difference is that the process will be start with the `--docs` arguments.
@@ -90,7 +115,7 @@ Any updates to the packages or Storybook's stories will automatically re-compile
 ## Release the packages
 
 When you are ready to release the packages, you must follow the following steps:
-1. Run `pnpm new-version` to bump the version of the packages that have been updated since the previous release. You will be prompted to select the type of release (major, minor or patch) for each package and to enter release notes. If you prefer writing the release notes in a text editor, enter a placeholder line in the command line, and the you can modify the file generated before committing it.
+1. Run `yarn new-version` to bump the version of the packages that have been updated since the previous release. You will be prompted to select the type of release (major, minor or patch) for each package and to enter release notes. If you prefer writing the release notes in a text editor, enter a placeholder line in the command line, and the you can modify the file generated before committing it.
 2. Commit the newly generated file in your branch and submit a new Pull Request(PR). Changesets will automatically detect the changes and post a message in your pull request telling you that once the PR closes, the versions will be released.
 3. Merge the Pull request into master. A Github action will automatically trigger and update the version of the packages and publish them to npm.
 4. Create a new Github release associated to the tag created previously
@@ -105,12 +130,12 @@ Before you release, make sure you are in the `master` branch or a branch with a 
 To release an alpha version, open a terminal at the root of the workspace and execute the following commands:
 
 ```bash
-pnpm release-alpha
+yarn release-alpha
 ```
 
-When Pnpm version prompt pop, you should pick a version number matching your future main version. E.g. if you plan on publishing your changes as version `19.0.0` once they are done, your alpha version should be `19.0.0-alpha.1`.
+When Lerna version prompt pop, you should pick a version number matching your future main version. E.g. if you plan on publishing your changes as version `19.0.0` once they are done, your alpha version should be `19.0.0-alpha.1`.
 
-If you need to publish a subsequent alpha package for the same version, do not select any Pnpm suggestion. Instead, select **"Custom Prelease"** and then enter **"alpha"**. By doing so, the new alpha package version will be `19.0.0-alpha.2`.
+If you need to publish a subsequent alpha package for the same version, do not select any Lerna suggestion. Instead, select **"Custom Prelease"** and then enter **"alpha"**. By doing so, the new alpha package version will be `19.0.0-alpha.2`.
 
 ### Troubleshooting
 
@@ -129,7 +154,7 @@ If you are using 2FA, make sure you specified a valid OTP.
 If the packages failed to compile, it's easier to debug without executing the full release flow everytime. To do so, instead, execute the following command:
 
 ```bash
-pnpm build
+yarn build
 ```
 
 By default, packages compilation output will be in their respective *dist* directory. For more details, read the [packages](/packages) README file.
@@ -162,7 +187,7 @@ A Netlify deploy can be started locally with a CLI command. This is useful if yo
 To deploy a draft to the **sg-storybook** site, open a terminal at the root of the workspace and execute the following commands:
 
 ```bash
-pnpm deploy-netlify-sb-preview
+yarn deploy-netlify-sb-preview
 ```
 
 The draft link will be available in the terminal (ex. https://616dab5c22680800ccd47d6f--sg-storybook.netlify.app).
@@ -178,7 +203,7 @@ All commands are available in the [package.json](package.json) file. Here's a li
 Compile all the packages & start Storybook.
 
 ```bash
-pnpm start
+yarn start
 ```
 
 ### start-sb-docs
@@ -186,7 +211,7 @@ pnpm start
 Compile all the packages & start Storybook in docs mode.
 
 ```bash
-pnpm start-sb-docs
+yarn start-sb-docs
 ```
 
 ### build
@@ -194,7 +219,7 @@ pnpm start-sb-docs
 Build all the packages and Storybook for production.
 
 ```bash
-pnpm build
+yarn build
 ```
 
 ### reset
@@ -202,11 +227,11 @@ pnpm build
 Reset the monorepo installation. The following will be deleted:
 
 - All the *node_modules* directories
-- All the *pnpm-lock.yaml* files
+- All the *yarn.lock* files
 - All the compiled & cache folders
 
 ```bash
-pnpm reset
+yarn reset
 ```
 
 If you encounter the following error:
@@ -226,7 +251,7 @@ Close & re-open VSCode and delete manually the *node_modules* folder at the root
 Execute all the linters & validate the TypeScript types.
 
 ```bash
-pnpm lint
+yarn lint
 ```
 
 ### typecheck
@@ -234,7 +259,7 @@ pnpm lint
 Validate the TypeScript types.
 
 ```bash
-pnpm lint:typecheck
+yarn typecheck
 ```
 
 ### jest
@@ -242,7 +267,7 @@ pnpm lint:typecheck
 Execute all the Jest tests.
 
 ```bash
-pnpm jest
+yarn jest
 ```
 
 ### deploy-sb-preview
@@ -250,7 +275,7 @@ pnpm jest
 Manually deploy Storybook to Netlify from any branch.
 
 ```bash
-pnpm deploy-sb-preview
+yarn deploy-sb-preview
 ```
 
 ### release-alpha
@@ -258,7 +283,7 @@ pnpm deploy-sb-preview
 Deploy an alpha version of the packages.
 
 ```bash
-pnpm release-alpha
+yarn release-alpha
 ```
 
 ## Testing
@@ -353,7 +378,7 @@ First, create a new folder matching the package name in the [packages](/packages
 Open a terminal, navigate to the newly created directory and execute the following command:
 
 ```bash
-pnpm init
+yarn init
 ```
 
 Answer the CLI questions.
@@ -382,11 +407,15 @@ Because packages hoisting is dangerous! When multiple packages of the monorepo r
 
 If you are uncertain wether or not you should add a *peerDependencies*, please read the post [dependencies-done-right](https://yarnpkg.com/blog/2018/04/18/dependencies-done-right/) on the Yarn website.
 
+### Scripts
+
+Before adding a script, make sure you read the following [gotcha](#lerna-and-npm-run-all).
+
 ### React components
 
 If you're package is a new component, please read the [React components documentation](/packages/components)
 
-## Add a new Pnpm script
+## Add a new Yarn script
 
 When adding a new script, there is a few rules to follow.
 
@@ -408,7 +437,7 @@ Do:
 
 ```javascript
 "scripts": {
-    "build": "pnpm delete & pnpm transpile",
+    "build": "run-s delete transpile",
     "delete": "rimraf dist",
     "transpile": "babel src -d dist"
 }
@@ -417,6 +446,20 @@ Do:
 ### A script should be executable from the root of the workspace
 
 Make sure you add a script entry in the [package.json](package.json) file at the root of the workspace even if your script is already define in a package or the website.
+
+### Lerna scripts should be executed from the root of the workspace
+
+Lerna provide the ability to [run](https://github.com/lerna/lerna/tree/master/commands/run) or [execute](https://github.com/lerna/lerna/tree/master/commands/exec) a script through all the packages of the monorepo.
+
+Those scripts must be added in the *package.json* file at the root of the workspace since Lerna is installed at the root.
+
+### Use run-p or run-s
+
+To run multiple commands simultaneously, use `run-p`.
+
+To run multiple commands sequentially, use `run-s`.
+
+Otherwise use `yarn`.
 
 ### Naming
 
@@ -448,21 +491,31 @@ Example:
 
 The Storybook configuration doesn't load the *Interphases* custom font if the app is started by the chromatic CLI because visual tests offer inconsistent results when a custom font is loaded. Not sure why.
 
+### How Lerna collect updated packages
+
+As a starting point to determine which packages changed, Lerna used the last [Git annotated tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) available. Without a tag, Lerna will infer that all the packages changed.
+
 ### cross-env
 
 The following will not work:
 
 ```bash
-"prepublishOnly": "cross-env NODE_ENV=production && pnpm build"
+"prepublishOnly": "cross-env NODE_ENV=production && yarn build"
 ```
 
 But the following work:
 
 ```bash
-"prepublishOnly": "cross-env NODE_ENV=production pnpm build"
+"prepublishOnly": "cross-env NODE_ENV=production yarn build"
 ```
 
 For other variables that need to be pass accross tasks, please read the following issue: https://github.com/kentcdodds/cross-env/issues/176
+
+### Lerna and npm-run-all
+
+Never use npm-run-all (run-s, run-p) in a lifecycle scripts of a leaf projects. Instead of running in the leaf project scope, it will run at the root project scope.
+
+For more information, read this issue: https://github.com/lerna/lerna/issues/2145#issuecomment-506801262
 
 ### react-testing-library and user actions side effects
 
@@ -493,11 +546,11 @@ It's straightforward to spot when a snapshot test fails after a bug has been int
 You can run the command
 
 ```bash
-pnpm jest --updateSnapshot -u FILENAME
+yarn jest --updateSnapshot -u FILENAME
 ```
 
 So if you want to update the useStyledSystem.test.tsx file
 
 ```bash
-pnpm jest --updateSnapshot -u useStyledSystem.test.tsx
+yarn jest --updateSnapshot -u useStyledSystem.test.tsx
 ```

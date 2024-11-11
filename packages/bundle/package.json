@@ -32,9 +32,11 @@
         "provenance": true
     },
     "scripts": {
-        "prebuild": "pnpm clean",
-        "build": "tsup --config ./tsup.build.ts",
-        "clean": "pnpm dlx rimraf dist"
+        "prebuild": "yarn clean",
+        "build": "run-s build:* copy-files",
+        "build:js": "tsc --build ./tsconfig.json",
+        "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
+        "clean": "rimraf dist tsconfig.build.tsbuildinfo"
     },
     "peerDependencies": {
         "react": "*",

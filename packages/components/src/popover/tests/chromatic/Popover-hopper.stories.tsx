@@ -3,7 +3,7 @@ import { Div } from "@components/html/index.ts";
 import { Image } from "@components/image/index.ts";
 import { Launch } from "./assets/index.ts";
 import { Popover } from "@components/popover/index.ts";
-import { Button, ButtonGroup, Footer, Form, Heading, Link, TextField } from "@hopper-ui/components";
+import { Button, ButtonGroup, Footer, Form, Heading, Label, Link, TextField } from "@hopper-ui/components";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -102,8 +102,12 @@ export const PopoverForm: PopoverStory = {
             <Heading>Space News</Heading>
             <Content>
                 <Form isFluid>
-                    <TextField label="First Name" name="first-name" />
-                    <TextField label="Last Name" name="last-name" />
+                    <TextField name="first-name">
+                        <Label>First Name</Label>
+                    </TextField>
+                    <TextField name="last-name">
+                        <Label>Last Name</Label>
+                    </TextField>
                 </Form>
             </Content>
             <ButtonGroup>
