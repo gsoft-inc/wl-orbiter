@@ -1,2 +1,3 @@
 [build.environment]
-  environment = { NODE_OPTIONS = "--max-old-space-size=8192" }
+  NODE_VERSION = "22.11"
+  NODE_OPTIONS = "--max-old-space-size=8192"
