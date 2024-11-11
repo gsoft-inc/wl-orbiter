@@ -1,13 +1,12 @@
 import { viewport } from "./storybook-addon/index.ts";
 import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators/index.ts";
-import "./stories.css";
 import { isChromatic } from "./env.ts";
 import { Themes } from "./styles/themes.ts";
 import { formatCode } from "./components/snippet/useFormattedCode.ts";
 import type { Preview } from "@storybook/react";
+import "./styles/index.ts";
 
 import "@components/index.css";
-import "./styles";
 import "@hopper-ui/tokens/fonts.css";
 
 if (!isChromatic) {
