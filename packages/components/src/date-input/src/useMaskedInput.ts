@@ -1,4 +1,4 @@
-import textMaskCore from "text-mask-core";
+import createTextMaskInputElement from "./utils/createTextMarkInputElement.ts";
 import { isNil } from "../../shared/index.ts";
 import { useCallback, useEffect, useRef } from "react";
 
@@ -15,7 +15,7 @@ export function useMaskedInput({
 
     useEffect(() => {
         if (!isNil(inputElement)) {
-            maskRef.current = textMaskCore.createTextMaskInputElement({
+            maskRef.current = createTextMaskInputElement({
                 guide: false,
                 inputElement,
                 mask
