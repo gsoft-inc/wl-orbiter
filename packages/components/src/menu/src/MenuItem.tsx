@@ -1,12 +1,12 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts";
 import { CheckmarkIcon } from "@hopper-ui/icons";
-import { CollectionItem } from "../../collection";
+import { CollectionItem } from "../../collection/index.ts";
 import { ComponentProps, MouseEvent, ReactElement, ReactNode, forwardRef, useMemo } from "react";
-import { InteractionProps, InternalProps, OmitInternalProps, SlotElements, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots } from "../../shared";
-import { MenuSelectionMode, ItemKeyProp } from "./Menu";
-import { Text } from "../../typography";
-import { TooltipTrigger } from "../../tooltip";
-import { useMenuContext } from "./MenuContext";
+import { InteractionProps, InternalProps, OmitInternalProps, SlotElements, StyledComponentProps, cssModule, isNil, mergeProps, useEventCallback, useSlots } from "../../shared/index.ts";
+import { MenuSelectionMode, ItemKeyProp } from "./Menu.tsx";
+import { Text } from "../../typography/index.ts";
+import { TooltipTrigger } from "../../tooltip/index.ts";
+import { useMenuContext } from "./MenuContext.ts";
 
 const DefaultElement = "li";
 

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { HtmlFooter, Article, UL, LI } from "@components/html";
-import { Paragraph, H1 } from "@components/typography";
+import { HtmlFooter, Article, UL, LI } from "@components/html/index.ts";
+import { Paragraph, H1 } from "@components/typography/index.ts";
 
 const meta = {
     title: "Html elements/Footer",

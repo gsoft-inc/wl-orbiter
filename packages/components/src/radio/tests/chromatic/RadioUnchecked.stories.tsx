@@ -1,10 +1,10 @@
-import { Radio } from "@components/radio";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { IconList } from "@components/icons";
+import { Radio } from "@components/radio/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Flex, Inline, Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Flex, Inline, Stack } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

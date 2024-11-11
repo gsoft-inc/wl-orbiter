@@ -1,6 +1,6 @@
-import { Alert } from "@components/alert";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
+import { Alert } from "@components/alert/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

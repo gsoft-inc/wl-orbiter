@@ -1,11 +1,11 @@
-import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme";
-import { StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps, omitProps } from "../../../shared";
+import { ColorScheme, ColorSchemeOrSystem, useColorScheme } from "../useColorScheme.ts";
+import { StyledComponentProps, mergeClasses, mergeProps, OmitInternalProps, omitProps } from "../../../shared/index.ts";
 import { ComponentProps, ForwardedRef, forwardRef, ReactNode, useCallback, useState } from "react";
 import { StyledSystemProvider } from "@hopper-ui/styled-system";
 
-import { BreakpointProvider } from "../BreakpointProvider";
-import { ColorSchemeContext } from "../ColorSchemeContext";
-import { useStyledSystem } from "..";
+import { BreakpointProvider } from "../BreakpointProvider.tsx";
+import { ColorSchemeContext } from "../ColorSchemeContext.ts";
+import { useStyledSystem } from "../styled-system/index.ts";
 
 const DefaultElement = "div";
 
@@ -62,7 +62,7 @@ export function InnerThemeProvider(props: InnerThemeProviderProps) {
                                 "o-ui",
                                 `o-ui-${computedColorScheme}`,
                                 "o-ui-orbiter",
-                                `o-ui-orbiter-${computedColorScheme}`,
+                                `o-ui-orbiter-${computedColorScheme}`
                             )
                         }
                     )}

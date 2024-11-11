@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Div } from "@components/html";
-import { Grid, fitContent, minmax, repeat } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Grid, fitContent, minmax, repeat } from "@components/layout/index.ts";
 
 const meta = {
     title: "Components/Grid",

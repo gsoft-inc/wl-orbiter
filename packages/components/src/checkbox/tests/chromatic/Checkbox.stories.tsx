@@ -1,5 +1,5 @@
-import { Checkbox } from "@components/checkbox";
-import { Inline } from "@components/layout";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { Inline } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

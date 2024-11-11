@@ -1,11 +1,11 @@
-import { Tabs, useTabsContext } from "@components/tabs";
-import { Content, Header } from "@components/placeholders";
-import { Item } from "@components/collection";
-import { Div } from "@components/html";
-import { Lozenge } from "@components/lozenge";
+import { Tabs, useTabsContext } from "@components/tabs/index.ts";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Lozenge } from "@components/lozenge/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { isNil } from "@components/shared";
-import { Text } from "@components/typography";
+import { isNil } from "@components/shared/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { useCallback, useEffect, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

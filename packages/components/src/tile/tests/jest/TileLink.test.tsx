@@ -1,6 +1,6 @@
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { TileLink } from "@components/tile";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { TileLink } from "@components/tile/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

@@ -1,12 +1,12 @@
-import { Avatar } from "@components/avatar";
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { IconList } from "@components/icons";
+import { Avatar } from "@components/avatar/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Item, Section, NodeType } from "@components/collection";
-import { Menu, MenuItem, MenuItemProps } from "@components/menu";
-import { Text } from "@components/typography";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Item, Section, NodeType } from "@components/collection/index.ts";
+import { Menu, MenuItem, MenuItemProps } from "@components/menu/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

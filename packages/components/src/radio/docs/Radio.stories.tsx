@@ -1,11 +1,11 @@
-import { Radio, RadioGroup } from "@components/radio";
-import { Counter } from "@components/counter";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { Counter } from "@components/counter/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Text } from "@components/typography";
-import { Tag } from "@components/tag";
-import { Inline } from "@components/layout";
+import { Text } from "@components/typography/index.ts";
+import { Tag } from "@components/tag/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { useCallback, useState } from "react";
-import { as, useCheckableProps } from "@components/shared";
+import { as, useCheckableProps } from "@components/shared/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

@@ -1,2 +1,2 @@
-export * from "./Tag";
-export * from "./TagList";
+export * from "./Tag.tsx";
+export * from "./TagList.tsx";

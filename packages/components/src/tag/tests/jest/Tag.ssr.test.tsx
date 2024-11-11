@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Tag } from "@components/tag";
+import { Tag } from "@components/tag/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

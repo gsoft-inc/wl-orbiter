@@ -1,4 +1,4 @@
-import { adaptInputStylingProps } from "@components/input";
+import { adaptInputStylingProps } from "@components/input/index.ts";
 
 test("when the input have a className prop, return the className value as a root prop", () => {
     const result = adaptInputStylingProps({ className: "earth" }, {});

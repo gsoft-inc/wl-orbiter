@@ -1,6 +1,6 @@
-import { Radio, RadioGroup } from "@components/radio";
-import { Counter } from "@components/counter";
-import { Text } from "@components/typography";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

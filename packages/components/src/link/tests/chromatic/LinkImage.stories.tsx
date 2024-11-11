@@ -1,8 +1,8 @@
-import { Image } from "@components/image";
-import { Launch } from "./assets";
-import { Link } from "@components/link";
-import { Inline } from "@components/layout";
-import LaunchImage from "./LaunchImage";
+import { Image } from "@components/image/index.ts";
+import { Launch } from "./assets/index.ts";
+import { Link } from "@components/link/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import LaunchImage from "./LaunchImage.tsx";
 
 import { Meta, StoryObj } from "@storybook/react";
 

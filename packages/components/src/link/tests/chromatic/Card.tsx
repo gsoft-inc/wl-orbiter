@@ -1,5 +1,5 @@
-import { Paragraph, H2 } from "@components/typography";
-import { Div } from "@components/html";
+import { Paragraph, H2 } from "@components/typography/index.ts";
+import { Div } from "@components/html/index.ts";
 
 export default function Card() {
     return (

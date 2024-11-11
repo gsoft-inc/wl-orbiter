@@ -1,7 +1,7 @@
-import { Heading, Paragraph } from "@components/typography";
-import { Modal, ModalTrigger } from "@components/modal";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Modal, ModalTrigger } from "@components/modal/index.ts";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,11 +1,11 @@
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline } from "@components/layout";
-import { Tile, TileGroup, TileLink } from "@components/tile";
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading } from "@components/typography";
-import { Planet, SpacePortraitHorizontal, SpacePortrait } from "./assets";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Tile, TileGroup, TileLink } from "@components/tile/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Planet, SpacePortraitHorizontal, SpacePortrait } from "./assets/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

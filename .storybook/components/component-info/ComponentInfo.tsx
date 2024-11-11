@@ -1,8 +1,8 @@
 import "./ComponentInfo.css";
 
 import { ExternalLink, GithubLink, Link, useThemedSnippet } from "@stories/components";
-import { cssModule, mergeClasses } from "@components/shared";
-import { Div } from "@components/html";
+import { cssModule, mergeClasses } from "@components/shared/index.ts";
+import { Div } from "@components/html/index.ts";
 import { ComponentProps } from "react";
 
 const ExtendLinks = {

@@ -1,10 +1,10 @@
-import { CheckboxGroup } from "@components/checkbox";
-import { Div, HtmlInput } from "@components/html";
-import { Toolbar, useToolbarProps } from "@components/toolbar";
-import { Radio, RadioGroup } from "@components/radio";
-import { TextInput } from "@components/text-input";
-import { ToggleButton } from "@components/button";
-import { omitProps } from "@components/shared";
+import { CheckboxGroup } from "@components/checkbox/index.ts";
+import { Div, HtmlInput } from "@components/html/index.ts";
+import { Toolbar, useToolbarProps } from "@components/toolbar/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { ToggleButton } from "@components/button/index.ts";
+import { omitProps } from "@components/shared/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

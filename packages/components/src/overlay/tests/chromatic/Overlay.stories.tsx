@@ -1,7 +1,7 @@
-import { Box, BoxProps } from "@components/box";
-import { Overlay } from "@components/overlay";
-import { ThemeProvider } from "@components/styling";
-import { augmentElement, mergeProps, useMergedRefs } from "@components/shared";
+import { Box, BoxProps } from "@components/box/index.ts";
+import { Overlay } from "@components/overlay/index.ts";
+import { ThemeProvider } from "@components/styling/index.ts";
+import { augmentElement, mergeProps, useMergedRefs } from "@components/shared/index.ts";
 import { forwardRef, ReactElement, useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 

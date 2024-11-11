@@ -1,3 +1,3 @@
-export * from "./Disclosure";
-export * from "./DisclosureArrow";
-export * from "./DisclosureContext";
+export * from "./Disclosure.tsx";
+export * from "./DisclosureArrow.tsx";
+export * from "./DisclosureContext.ts";

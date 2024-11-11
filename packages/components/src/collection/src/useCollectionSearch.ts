@@ -1,8 +1,8 @@
-import { CollectionItem, CollectionNode, useCollection } from "./useCollection";
+import { CollectionItem, CollectionNode, useCollection } from "./useCollection.ts";
 import { ReactNode, SyntheticEvent, useCallback, useState } from "react";
-import { getItemText } from "./getItemText";
-import { isNil } from "../../shared";
-import { reduceCollection } from "./reduceCollection";
+import { getItemText } from "./getItemText.tsx";
+import { isNil } from "../../shared/index.ts";
+import { reduceCollection } from "./reduceCollection.ts";
 
 function isQueryMatchingItem(query: string, item: CollectionItem) {
     const itemText = getItemText(item);

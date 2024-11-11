@@ -1,4 +1,4 @@
-import { isFunction, isNil } from "./assertions";
+import { isFunction, isNil } from "./assertions.ts";
 import { useCallback, useEffect } from "react";
 
 export function useEventListener(eventTarget: EventTarget | (() => EventTarget), eventName: string, listener: EventListenerOrEventListenerObject | null, active = true, options?: EventListenerOptions) {

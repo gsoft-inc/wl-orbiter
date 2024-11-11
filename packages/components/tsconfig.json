@@ -1,0 +1,20 @@
+{
+    "extends": "@workleap/typescript-configs/library.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "strict": false,
+        "noFallthroughCasesInSwitch": false,
+        "paths": {
+            "@test-utils": ["../../tooling/test-utils/index.ts"],
+            "@components": ["./src/index.ts"],
+            "@components/*": ["./src/*"],
+            "@stories/components": ["../../.storybook/components/index.ts"],
+            "@stories/mdx": ["../../.storybook/mdx/index.ts"]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../@types/*"
+    ],
+    "exclude": ["dist", "node_modules"]
+}

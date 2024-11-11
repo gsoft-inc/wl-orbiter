@@ -1,8 +1,8 @@
-import { Accordion } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { H3 } from "@components/typography";
-import { Inline } from "@components/layout";
-import { Item } from "@components/collection";
+import { Accordion } from "@components/accordion/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { H3 } from "@components/typography/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Item } from "@components/collection/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

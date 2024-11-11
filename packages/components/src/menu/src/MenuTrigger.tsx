@@ -13,12 +13,12 @@ import {
     useEventCallback,
     useId,
     useRefState
-} from "../../shared";
-import { Overlay, PopupPosition, PopupProps, usePopup } from "../../overlay";
+} from "../../shared/index.ts";
+import { Overlay, PopupPosition, PopupProps, usePopup } from "../../overlay/index.ts";
 
-import { DisclosureContext } from "../../disclosure";
-import { MenuTriggerContext } from "./MenuTriggerContext";
-import { useInputGroupMenuAddonProps } from "../../input-group";
+import { DisclosureContext } from "../../disclosure/index.ts";
+import { MenuTriggerContext } from "./MenuTriggerContext.ts";
+import { useInputGroupMenuAddonProps } from "../../input-group/index.ts";
 
 const DefaultElement = "div";
 

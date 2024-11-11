@@ -1,6 +1,6 @@
 import { act, renderHook } from "@test-utils";
 import { createRef } from "react";
-import { useMergedRefs } from "@components/shared";
+import { useMergedRefs } from "@components/shared/index.ts";
 
 test("when having a single ref, assign the ref on change", () => {
     const ref = jest.fn();

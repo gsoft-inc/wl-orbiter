@@ -9,11 +9,11 @@ import {
     SizingMapping,
     SpacingMapping,
     ThemeProvider
-} from "@components/styling";
-import { Box, BoxProps } from "@components/box";
+} from "@components/styling/index.ts";
+import { Box, BoxProps } from "@components/box/index.ts";
 import { IconColorMapping } from "@hopper-ui/styled-system";
 import { NoteIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

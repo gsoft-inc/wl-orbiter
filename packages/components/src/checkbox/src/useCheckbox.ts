@@ -1,6 +1,6 @@
 import { ChangeEvent, ElementType, ForwardedRef, Ref, useImperativeHandle, useRef } from "react";
-import { ValidationState } from "../../input";
-import { cssModule, isNil, isNumber, normalizeSize, useAutoFocus, useControllableState, useEventCallback, useForwardInputApi, useIsomorphicLayoutEffect } from "../../shared";
+import { ValidationState } from "../../input/index.ts";
+import { cssModule, isNil, isNumber, normalizeSize, useAutoFocus, useControllableState, useEventCallback, useForwardInputApi, useIsomorphicLayoutEffect } from "../../shared/index.ts";
 
 export interface UseCheckboxProps {
     active?: boolean;

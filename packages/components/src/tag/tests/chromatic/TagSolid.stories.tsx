@@ -1,15 +1,15 @@
-import { IconList } from "@components/icons";
-import { Tag } from "@components/tag";
-import { Inline, Stack } from "@components/layout";
-import { Div } from "@components/html";
+import { IconList } from "@components/icons/index.ts";
+import { Tag } from "@components/tag/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Text } from "@components/typography";
-import { Dot } from "@components/dot";
-import { Field, Label } from "@components/field";
+import { Text } from "@components/typography/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Field, Label } from "@components/field/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { as } from "@components/shared";
-import { Counter } from "@components/counter";
-import { Avatar } from "@components/avatar";
+import { as } from "@components/shared/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Avatar } from "@components/avatar/index.ts";
 
 const meta = {
     title: "Chromatic/Tag/solid",

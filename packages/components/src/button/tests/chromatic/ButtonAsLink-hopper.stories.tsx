@@ -1,5 +1,5 @@
-import { ButtonAsLink } from "@components/button";
-import { Inline } from "@components/layout";
+import { ButtonAsLink } from "@components/button/index.ts";
+import { Inline } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

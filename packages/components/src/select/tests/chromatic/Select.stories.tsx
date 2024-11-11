@@ -1,11 +1,11 @@
-import { Inline, Stack } from "@components/layout";
-import { Select, useSelect, type SelectProps } from "@components/select";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Select, useSelect, type SelectProps } from "@components/select/index.ts";
 
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { Item } from "@components/collection";
-import { Listbox } from "@components/listbox";
-import { Overlay } from "@components/overlay";
+import { Button } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Listbox } from "@components/listbox/index.ts";
+import { Overlay } from "@components/overlay/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

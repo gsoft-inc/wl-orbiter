@@ -111,7 +111,7 @@ import {
     WillChangeProp,
     WordBreakProp,
     ZIndexProp
-} from "@components/styling";
+} from "@components/styling/index.ts";
 import { expectAssignable } from "@test-utils";
 
 expectAssignable<ResponsiveValue<string>>({ base: "value" });

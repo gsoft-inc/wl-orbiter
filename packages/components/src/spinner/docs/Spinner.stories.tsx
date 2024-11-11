@@ -1,6 +1,6 @@
-import { Spinner } from "@components/spinner";
-import { Inline } from "@components/layout";
-import { Div } from "@components/html";
+import { Spinner } from "@components/spinner/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

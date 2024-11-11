@@ -1,1 +1,1 @@
-export * from "./useThemedSnippet";
+export * from "./useThemedSnippet.ts";

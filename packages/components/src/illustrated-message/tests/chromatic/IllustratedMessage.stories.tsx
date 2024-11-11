@@ -1,11 +1,11 @@
-import { Box } from "@components/box";
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading } from "@components/typography";
-import { IllustratedMessage } from "@components/illustrated-message";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { Nasa } from "./assets";
+import { Box } from "@components/box/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { IllustratedMessage } from "@components/illustrated-message/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Nasa } from "./assets/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

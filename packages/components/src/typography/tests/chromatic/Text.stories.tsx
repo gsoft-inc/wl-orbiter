@@ -1,6 +1,6 @@
-import { Div } from "@components/html";
-import { Stack } from "@components/layout";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

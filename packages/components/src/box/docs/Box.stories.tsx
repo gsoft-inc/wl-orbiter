@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Box } from "@components/box";
+import { Box } from "@components/box/index.ts";
 
 const meta = {
     title: "Components/Box",

@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@components/styling";
-import { isChromatic } from "../env";
+import { ThemeProvider } from "@components/styling/index.ts";
+import { isChromatic } from "../env.ts";
 import { useEffect, useState, ReactNode } from "react";
 
 export function withThemeProvider(story, context) {
@@ -17,7 +17,7 @@ interface ThemeProviderDecorator {
 }
 
 function ThemeProviderDecorator({ children, context }: ThemeProviderDecorator) {
-    const [colorScheme, setColorScheme] = useState("light");
+    const [colorScheme, setColorScheme] = useState<"light" | "dark">("light");
 
     useEffect(() => {
         setColorScheme(context.globals.theme);

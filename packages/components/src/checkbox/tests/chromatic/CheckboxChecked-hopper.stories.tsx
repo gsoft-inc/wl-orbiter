@@ -1,7 +1,7 @@
-import { Checkbox } from "@components/checkbox";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
 import { Flex, Text, IconList } from "@hopper-ui/components";
 

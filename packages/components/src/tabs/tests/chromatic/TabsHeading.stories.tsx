@@ -1,11 +1,11 @@
-import { Tabs } from "@components/tabs";
+import { Tabs } from "@components/tabs/index.ts";
 import { NotificationIcon } from "@hopper-ui/icons";
-import { Content, Header } from "@components/placeholders";
-import { Item } from "@components/collection";
-import { Stack } from "@components/layout";
-import { Lozenge } from "@components/lozenge";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Lozenge } from "@components/lozenge/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

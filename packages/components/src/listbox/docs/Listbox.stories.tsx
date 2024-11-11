@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Meta, StoryObj } from "@storybook/react";
-import { Avatar } from "@components/avatar";
-import { IconList } from "@components/icons";
+import { Avatar } from "@components/avatar/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { CatIcon, RocketIcon, SparklesIcon } from "@hopper-ui/icons";
-import { Inline } from "@components/layout";
-import { Item, Section } from "@components/collection";
-import { Listbox, ListboxOption, useListboxContext } from "@components/listbox";
-import { Text } from "@components/typography";
-import { Tooltip, TooltipTrigger } from "@components/tooltip";
+import { Inline } from "@components/layout/index.ts";
+import { Item, Section } from "@components/collection/index.ts";
+import { Listbox, ListboxOption, useListboxContext } from "@components/listbox/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Tooltip, TooltipTrigger } from "@components/tooltip/index.ts";
 import { useState, useCallback } from "react";
 
 const meta = {

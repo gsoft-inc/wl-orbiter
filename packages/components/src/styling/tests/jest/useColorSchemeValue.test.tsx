@@ -1,5 +1,5 @@
 import { renderHookWithTheme } from "@test-utils";
-import { useColorSchemeValue } from "@components/styling";
+import { useColorSchemeValue } from "@components/styling/index.ts";
 
 test("return the light color value when the color scheme is light", async () => {
     const { result } = renderHookWithTheme(() => useColorSchemeValue("light-color", "dark-color"), undefined, { colorScheme: "light" });

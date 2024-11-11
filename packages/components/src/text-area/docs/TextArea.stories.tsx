@@ -1,8 +1,8 @@
-import { TextArea } from "@components/text-area";
+import { TextArea } from "@components/text-area/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { ErrorMessage, Field, HelpMessage } from "@components/field";
+import { ErrorMessage, Field, HelpMessage } from "@components/field/index.ts";
 
 const meta = {
     title: "Components/TextArea",

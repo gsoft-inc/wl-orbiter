@@ -1,3 +1,3 @@
-export * from "./Heading";
-export * from "./ListItem";
-export * from "./Paragraph";
+export * from "./Heading.tsx";
+export * from "./ListItem.tsx";
+export * from "./Paragraph.tsx";

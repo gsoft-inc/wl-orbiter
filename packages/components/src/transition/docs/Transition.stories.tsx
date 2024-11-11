@@ -1,7 +1,7 @@
-import { Transition } from "@components/transition";
-import { Button } from "@components/button";
-import { Text } from "@components/typography";
-import { Div } from "@components/html";
+import { Transition } from "@components/transition/index.ts";
+import { Button } from "@components/button/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Div } from "@components/html/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

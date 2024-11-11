@@ -1,15 +1,15 @@
-import { Tag, TagList } from "@components/tag";
+import { Tag, TagList } from "@components/tag/index.ts";
 import { CatIcon, LightbulbIcon, MailIcon, NotificationIcon, ReportIcon, RocketIcon, SettingsIcon, SparklesIcon } from "@hopper-ui/icons";
-import { Flex, Inline, Stack } from "@components/layout";
-import { Section, Item } from "@components/collection";
-import { DisclosureArrow } from "@components/disclosure";
-import { Button } from "@components/button";
-import { Counter } from "@components/counter";
-import { Dot } from "@components/dot";
-import { Menu, MenuTrigger } from "@components/menu";
-import { IconList } from "@components/icons";
-import { Text } from "@components/typography";
-import { Avatar } from "@components/avatar";
+import { Flex, Inline, Stack } from "@components/layout/index.ts";
+import { Section, Item } from "@components/collection/index.ts";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
+import { Button } from "@components/button/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Menu, MenuTrigger } from "@components/menu/index.ts";
+import { IconList } from "@components/icons/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Avatar } from "@components/avatar/index.ts";
 import { useCallback, useMemo, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

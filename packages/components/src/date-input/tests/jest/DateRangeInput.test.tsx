@@ -1,10 +1,10 @@
 import { act, fireEvent, screen, waitFor, within, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField } from "@components/field";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.ts";
+import { DateRangeInput } from "@components/date-input/index.ts";
+import { GroupField } from "@components/field/index.ts";
+import { Keys } from "@components/shared/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // Using userEvent.type with a string having multiple characters doesn't work because of the mask. Only the last character ends up being typed.
 // Providing an option.delay fix the problem but we get the following warning: "You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one."
@@ -17,6 +17,7 @@ function type(element: HTMLElement, text: string) {
 function backspace(element: HTMLElement, times = 1) {
     const promises: Promise<void>[] = [];
     for (let x = 0; x < times; x += 1) {
+        // eslint-disable-next-line testing-library/await-async-events
         promises.push(userEvent.type(element, "{backspace}"));
     }
 

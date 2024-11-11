@@ -1,6 +1,6 @@
 import { CheckmarkIcon } from "@hopper-ui/icons";
-import { Inline } from "@components/layout";
-import { ToggleIconButton } from "@components/button";
+import { Inline } from "@components/layout/index.ts";
+import { ToggleIconButton } from "@components/button/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

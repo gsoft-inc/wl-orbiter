@@ -1,12 +1,12 @@
-import { Accordion, AccordionHeader, useAccordionContext, type AccordionHeaderProps } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { H3, H1, Text } from "@components/typography";
-import { Stack } from "@components/layout";
-import { Item } from "@components/collection";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
+import { Accordion, AccordionHeader, useAccordionContext, type AccordionHeaderProps } from "@components/accordion/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { H3, H1, Text } from "@components/typography/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
 import { InfoIcon } from "@hopper-ui/icons";
-import { mergeProps } from "@components/shared";
+import { mergeProps } from "@components/shared/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

@@ -1,15 +1,15 @@
-import { Dialog, DialogProps, DialogTrigger, useDialogTriggerContext } from "@components/dialog";
-import { Heading, Paragraph } from "@components/typography";
-import { Radio, RadioGroup } from "@components/radio";
+import { Dialog, DialogProps, DialogTrigger, useDialogTriggerContext } from "@components/dialog/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef, forwardRef } from "react";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Select } from "@components/select";
-import { Transition } from "@components/transition";
-import userEvent from "@testing-library/user-event";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Select } from "@components/select/index.ts";
+import { Transition } from "@components/transition/index.ts";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore

@@ -1,4 +1,4 @@
-import { Counter } from "@components/counter";
+import { Counter } from "@components/counter/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

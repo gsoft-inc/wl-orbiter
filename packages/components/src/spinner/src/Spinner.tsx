@@ -1,8 +1,8 @@
 import { ComponentProps, forwardRef } from "react";
-import { isNil, InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, normalizeSize } from "../../shared";
-import { Box } from "../../box";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { Text } from "../../typography";
+import { isNil, InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, normalizeSize } from "../../shared/index.ts";
+import { Box } from "../../box/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { Text } from "../../typography/index.ts";
 
 const DefaultElement = "div";
 

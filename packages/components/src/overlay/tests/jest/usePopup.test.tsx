@@ -1,9 +1,9 @@
-import { Overlay, UsePopupOptions, usePopup } from "@components/overlay";
+import { Overlay, UsePopupOptions, usePopup } from "@components/overlay/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Keys } from "@components/shared";
-import { Transition } from "@components/transition";
-import userEvent from "@testing-library/user-event";
+import { Button } from "@components/button/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Transition } from "@components/transition/index.ts";
+import { userEvent } from "@testing-library/user-event";
 
 type PopupProps = UsePopupOptions & {
     "data-triggertestid"?: string;

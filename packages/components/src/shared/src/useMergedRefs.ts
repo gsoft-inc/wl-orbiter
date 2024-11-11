@@ -1,5 +1,5 @@
 import { MutableRefObject, RefCallback, RefObject, SetStateAction, useCallback } from "react";
-import { isFunction, isNil } from "./assertions";
+import { isFunction, isNil } from "./assertions.ts";
 
 export type AssignableRef<T> = MutableRefObject<T> | RefCallback<T>;
 

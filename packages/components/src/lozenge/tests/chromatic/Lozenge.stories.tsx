@@ -1,9 +1,9 @@
-import { IconList } from "@components/icons";
+import { IconList } from "@components/icons/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Lozenge } from "@components/lozenge";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Lozenge } from "@components/lozenge/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

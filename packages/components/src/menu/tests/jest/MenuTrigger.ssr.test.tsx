@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { Button } from "@components/button";
-import { Item } from "@components/collection";
-import { Menu, MenuTrigger } from "@components/menu";
+import { Button } from "@components/button/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Menu, MenuTrigger } from "@components/menu/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

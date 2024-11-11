@@ -1,5 +1,5 @@
-import { AbstractGroupProps, Group } from "../../group";
-import { CheckboxGroup } from "../../checkbox";
+import { AbstractGroupProps, Group } from "../../group/index.ts";
+import { CheckboxGroup } from "../../checkbox/index.ts";
 import { Children, ComponentProps, ReactElement, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     OmitInternalProps,
@@ -13,9 +13,9 @@ import {
     useFocusManager,
     useFocusScope,
     useMergedRefs
-} from "../../shared";
-import { RadioGroup } from "../../radio";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.ts";
+import { RadioGroup } from "../../radio/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
 
 const DefaultElement = "div";
 

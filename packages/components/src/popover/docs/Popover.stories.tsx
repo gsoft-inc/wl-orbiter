@@ -1,7 +1,7 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Content, Footer } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Popover, PopoverTrigger, usePopoverTriggerContext } from "@components/popover";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Content, Footer } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Popover, PopoverTrigger, usePopoverTriggerContext } from "@components/popover/index.ts";
 import { useCallback, useState, forwardRef } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

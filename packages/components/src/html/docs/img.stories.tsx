@@ -1,6 +1,6 @@
-import { Img } from "@components/html";
+import { Img } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { Planet } from "./assets";
+import { Planet } from "./assets/index.ts";
 
 const meta = {
     title: "Html elements/Img",

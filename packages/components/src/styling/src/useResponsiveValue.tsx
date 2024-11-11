@@ -1,5 +1,5 @@
-import { Breakpoint, Breakpoints, useMatchedBreakpoints } from "./BreakpointProvider";
-import { isNil, isObject } from "../../shared";
+import { Breakpoint, Breakpoints, useMatchedBreakpoints } from "./BreakpointProvider.tsx";
+import { isNil, isObject } from "../../shared/index.ts";
 
 export type ResponsiveValue<T> = Partial<Record<Breakpoint, T>> & { base?: T };
 

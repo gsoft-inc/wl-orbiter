@@ -12,7 +12,7 @@ import {
     paddingRenderer,
     marginRenderer,
     sizingRenderer
-} from "./TokenTable";
+} from "./TokenTable.tsx";
 import {
     BackgroundColorMapping,
     TextColorMapping,
@@ -44,7 +44,7 @@ import {
     ComplexMarginMapping,
     SemanticComplexMarginSpace,
     SizingMapping
-} from "@components/styling";
+} from "@components/styling/index.ts";
 
 function toTokenValue(key, value) {
     return {

@@ -1,11 +1,11 @@
 import { SparklesIcon, DismissIcon } from "@hopper-ui/icons";
-import { Content, Header } from "@components/placeholders";
-import { Inline, Stack } from "@components/layout";
-import { Tab, TabPanel, Tabs, useTabsContext, type TabPanelProps, type TabProps } from "@components/tabs";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Tab, TabPanel, Tabs, useTabsContext, type TabPanelProps, type TabProps } from "@components/tabs/index.ts";
 
-import { Div } from "@components/html";
-import { Item } from "@components/collection";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Text } from "@components/typography/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

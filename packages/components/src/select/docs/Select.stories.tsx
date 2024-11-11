@@ -1,15 +1,15 @@
-import { Avatar } from "@components/avatar";
-import { Select, useSelect } from "@components/select";
-import { Button } from "@components/button";
-import { DisclosureArrow } from "@components/disclosure";
-import { Overlay } from "@components/overlay";
-import { Section, Item } from "@components/collection";
+import { Avatar } from "@components/avatar/index.ts";
+import { Select, useSelect } from "@components/select/index.ts";
+import { Button } from "@components/button/index.ts";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
+import { Overlay } from "@components/overlay/index.ts";
+import { Section, Item } from "@components/collection/index.ts";
 import { CatIcon, RocketIcon, SearchIcon, SparklesIcon } from "@hopper-ui/icons";
-import { TooltipTrigger, Tooltip } from "@components/tooltip";
-import { Text } from "@components/typography";
-import { Listbox } from "@components/listbox";
-import { IconList } from "@components/icons";
-import { isNil } from "@components/shared";
+import { TooltipTrigger, Tooltip } from "@components/tooltip/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Listbox } from "@components/listbox/index.ts";
+import { IconList } from "@components/icons/index.ts";
+import { isNil } from "@components/shared/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

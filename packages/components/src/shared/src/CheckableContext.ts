@@ -1,5 +1,5 @@
 import { SyntheticEvent, createContext, useContext } from "react";
-import { isArray, isNil } from "./assertions";
+import { isArray, isNil } from "./assertions.ts";
 
 export interface CheckableContextType {
     checkedValue?: string | string[];

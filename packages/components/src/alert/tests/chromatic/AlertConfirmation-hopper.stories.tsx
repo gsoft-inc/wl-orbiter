@@ -1,7 +1,7 @@
-import { Alert } from "@components/alert";
-import { Content } from "@components/placeholders";
+import { Alert } from "@components/alert/index.ts";
+import { Content } from "@components/placeholders/index.ts";
 import { Heading } from "@hopper-ui/components";
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

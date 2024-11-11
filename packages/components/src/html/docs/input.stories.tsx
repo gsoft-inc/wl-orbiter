@@ -1,4 +1,4 @@
-import { HtmlInput } from "@components/html";
+import { HtmlInput } from "@components/html/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

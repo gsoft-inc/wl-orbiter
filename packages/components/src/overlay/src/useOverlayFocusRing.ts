@@ -1,4 +1,4 @@
-import { cssModule } from "../../shared";
+import { cssModule } from "../../shared/index.ts";
 
 interface UseOverlayFocusRingProps {
     focus?: boolean;

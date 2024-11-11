@@ -1,8 +1,8 @@
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Heading } from "@components/typography";
-import { Stack } from "@components/layout";
-import { Tile, TileGroup, TileLink } from "@components/tile";
+import { Content } from "@components/placeholders/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Tile, TileGroup, TileLink } from "@components/tile/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

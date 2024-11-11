@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { HtmlHeader as Header, Main } from "@components/html";
-import { Paragraph, H1 } from "@components/typography";
+import { HtmlHeader as Header, Main } from "@components/html/index.ts";
+import { Paragraph, H1 } from "@components/typography/index.ts";
 
 const meta = {
     title: "Html elements/Header",

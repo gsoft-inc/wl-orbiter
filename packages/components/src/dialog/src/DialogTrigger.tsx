@@ -9,10 +9,10 @@ import {
     resolveChildren,
     useControllableState,
     useEventCallback
-} from "../../shared";
-import { Overlay, useOverlayTrigger } from "../../overlay";
+} from "../../shared/index.ts";
+import { Overlay, useOverlayTrigger } from "../../overlay/index.ts";
 
-import { DialogTriggerContext } from "./DialogTriggerContext";
+import { DialogTriggerContext } from "./DialogTriggerContext.ts";
 
 const DefaultElement = "div";
 

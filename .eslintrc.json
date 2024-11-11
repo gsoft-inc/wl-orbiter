@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json.schemastore.org/eslintrc",
+    "root": true,
+    "extends": ["plugin:@workleap/react-library"],
+    "rules": {
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        "react/destructuring-assignment": "off",
+        "no-param-reassign": "off",
+
+        // New Workleap rules that we don't want to enforce yet
+        "@typescript-eslint/consistent-type-imports": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "react/no-unused-prop-types": "off"
+
+    },
+    "overrides": [
+        {
+            "files": ["*.mdx"],
+            "rules":{
+                "react/jsx-no-undef": "off"
+            }
+        },
+        {
+            "files": [
+                ".storybook/*",
+                "**/scripts/*.js"
+            ],
+            "rules":{
+                "no-console": "off"
+            }
+        }
+    ]
+}

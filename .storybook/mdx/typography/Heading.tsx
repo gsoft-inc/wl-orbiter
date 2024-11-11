@@ -1,5 +1,4 @@
-import React from "react";
-import { mergeProps } from "../../../packages/components/src/shared";
+import { mergeProps } from "@components/shared/index.ts";
 
 export const H1 = ({ children, ...props }) => <h1 {...mergeProps(props, { className: "orbiter-doc-h1" })}>{children}</h1>;
 export const H2 = ({ children, ...props }) => <h2 {...mergeProps(props, { className: "orbiter-doc-h2" })}>{children}</h2>;

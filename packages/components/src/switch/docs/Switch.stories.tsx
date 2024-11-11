@@ -1,7 +1,7 @@
-import { Switch } from "@components/switch";
-import { Text } from "@components/typography";
-import { Counter } from "@components/counter";
-import { Inline } from "@components/layout";
+import { Switch } from "@components/switch/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
 import { useCallback, useState } from "react";
 

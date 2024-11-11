@@ -1,7 +1,7 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { IconButtonAsLink } from "@components/button";
-import { Inline, Stack } from "@components/layout";
-import { Div } from "@components/html";
+import { IconButtonAsLink } from "@components/button/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

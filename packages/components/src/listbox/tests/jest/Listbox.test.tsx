@@ -1,10 +1,10 @@
-import { Item, Section } from "@components/collection";
-import { Listbox, ListboxElement } from "@components/listbox";
+import { Item, Section } from "@components/collection/index.ts";
+import { Listbox, ListboxElement } from "@components/listbox/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Keys } from "@components/shared";
-import { Text } from "@components/typography";
+import { Keys } from "@components/shared/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

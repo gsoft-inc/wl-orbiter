@@ -1,6 +1,6 @@
-import { Badge, BadgeProps } from "@components/badge";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Badge, BadgeProps } from "@components/badge/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { forwardRef, createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

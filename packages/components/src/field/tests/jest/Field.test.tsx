@@ -1,5 +1,5 @@
-import { Field, HelpMessage, Label } from "@components/field";
-import { TextInput } from "@components/text-input";
+import { Field, HelpMessage, Label } from "@components/field/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

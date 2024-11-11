@@ -1,6 +1,6 @@
 import { Instance, Placement, createPopper } from "@popperjs/core";
-import { ResponsiveProp } from "../../styling";
-import { getBodyElement, isNil, useMergedRefs, useRefState } from "../../shared";
+import { ResponsiveProp } from "../../styling/index.ts";
+import { getBodyElement, isNil, useMergedRefs, useRefState } from "../../shared/index.ts";
 import { useCallback } from "react";
 
 export type OverlayPosition = Placement;

@@ -1,4 +1,4 @@
-import { AnonymousAvatar } from "@components/avatar";
+import { AnonymousAvatar } from "@components/avatar/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

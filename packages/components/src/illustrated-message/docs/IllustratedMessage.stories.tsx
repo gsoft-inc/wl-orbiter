@@ -1,8 +1,8 @@
-import { IllustratedMessage } from "@components/illustrated-message";
-import { SvgImage } from "@components/image";
-import { NoResults } from "./assets";
-import { Heading } from "@components/typography";
-import { Content } from "@components/placeholders";
+import { IllustratedMessage } from "@components/illustrated-message/index.ts";
+import { SvgImage } from "@components/image/index.ts";
+import { NoResults } from "./assets/index.tsx";
+import { Heading } from "@components/typography/index.ts";
+import { Content } from "@components/placeholders/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

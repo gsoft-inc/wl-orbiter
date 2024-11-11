@@ -1,3 +1,3 @@
-export * from "./InputGroup";
-export * from "./InputGroupContext";
-export * from "./TextAddon";
+export * from "./InputGroup.tsx";
+export * from "./InputGroupContext.tsx";
+export * from "./TextAddon.tsx";

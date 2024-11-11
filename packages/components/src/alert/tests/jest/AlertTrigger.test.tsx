@@ -1,10 +1,10 @@
-import { Alert, AlertTrigger } from "@components/alert";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
+import { Alert, AlertTrigger } from "@components/alert/index.ts";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

@@ -1,8 +1,8 @@
-import { Popover, PopoverTrigger } from "@components/popover";
+import { Popover, PopoverTrigger } from "@components/popover/index.ts";
 
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

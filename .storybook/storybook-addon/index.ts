@@ -1,4 +1,3 @@
-export * from "./withHopperProvider";
-export * from "./viewports";
-export * from "./a11y";
+export * from "./withHopperProvider.tsx";
+export * from "./viewports.ts";
 

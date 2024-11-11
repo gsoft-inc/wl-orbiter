@@ -1,9 +1,9 @@
-import { Badge } from "@components/badge";
-import { Circle } from "./Circle";
+import { Badge } from "@components/badge/index.ts";
+import { Circle } from "./Circle.tsx";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Inline } from "@components/layout";
-import { Square } from "./Square";
-import { Text } from "@components/typography";
+import { Inline } from "@components/layout/index.ts";
+import { Square } from "./Square.tsx";
+import { Text } from "@components/typography/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

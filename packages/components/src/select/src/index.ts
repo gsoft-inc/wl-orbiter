@@ -1,3 +1,3 @@
-export * from "./Select";
-export * from "./HiddenSelect";
-export * from "./useSelect";
+export * from "./Select.tsx";
+export * from "./HiddenSelect.tsx";
+export * from "./useSelect.tsx";

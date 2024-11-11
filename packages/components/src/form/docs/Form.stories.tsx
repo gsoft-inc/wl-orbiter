@@ -1,9 +1,9 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox } from "@components/checkbox";
-import { ErrorMessage, Field, HelpMessage, Label } from "@components/field";
-import { Fieldset, Form } from "@components/form";
-import { Flex, Grid, Inline, repeat } from "@components/layout";
-import { PasswordInput, TextInput } from "@components/text-input";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { ErrorMessage, Field, HelpMessage, Label } from "@components/field/index.ts";
+import { Fieldset, Form } from "@components/form/index.ts";
+import { Flex, Grid, Inline, repeat } from "@components/layout/index.ts";
+import { PasswordInput, TextInput } from "@components/text-input/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 import { useFormik } from "formik";
 

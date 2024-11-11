@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup } from "@components/avatar";
+import { Avatar, AvatarGroup } from "@components/avatar/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

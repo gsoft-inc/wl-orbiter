@@ -1,6 +1,6 @@
-import { DateInput } from "@components/date-input";
-import { Div } from "@components/html";
-import { Stack } from "@components/layout";
+import { DateInput } from "@components/date-input/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Stack } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

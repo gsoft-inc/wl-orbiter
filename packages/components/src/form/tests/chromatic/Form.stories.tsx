@@ -1,13 +1,13 @@
-import { Button, ButtonGroup } from "@components/button";
-import { DateInput } from "@components/date-input";
-import { Div } from "@components/html";
-import { Field, GroupField, HelpMessage, Label } from "@components/field";
-import { Form } from "@components/form";
-import { Inline } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-import { TextArea } from "@components/text-area";
-import { TextInput } from "@components/text-input";
-import { TextLinkAsButton } from "@components/link";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { DateInput } from "@components/date-input/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Field, GroupField, HelpMessage, Label } from "@components/field/index.ts";
+import { Form } from "@components/form/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { TextArea } from "@components/text-area/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

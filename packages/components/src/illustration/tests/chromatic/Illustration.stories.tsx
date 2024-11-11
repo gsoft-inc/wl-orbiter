@@ -1,10 +1,10 @@
-import { Box } from "@components/box";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
+import { Box } from "@components/box/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { Nasa } from "./assets";
+import { Nasa } from "./assets/index.ts";
 
 const meta = {
     title: "Chromatic/Illustration",

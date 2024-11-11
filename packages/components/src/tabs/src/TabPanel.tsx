@@ -1,8 +1,8 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { PanelType } from "./useTabsItems";
-import { Text } from "../../typography";
-import { useTabsContext } from "./TabsContext";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { PanelType } from "./useTabsItems.ts";
+import { Text } from "../../typography/index.ts";
+import { useTabsContext } from "./TabsContext.ts";
 
 const DefaultElement = "div";
 

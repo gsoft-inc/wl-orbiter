@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { IllustratedMessage } from "@components/illustrated-message";
+import { Div } from "@components/html/index.ts";
+import { IllustratedMessage } from "@components/illustrated-message/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

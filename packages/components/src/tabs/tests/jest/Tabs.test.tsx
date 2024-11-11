@@ -1,11 +1,11 @@
-import { Content, Header } from "@components/placeholders";
+import { Content, Header } from "@components/placeholders/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Tabs } from "@components/tabs";
+import { Item } from "@components/collection/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Tabs } from "@components/tabs/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // It's very hard to setup jest with a specific width & height to be able to test collapsed tabs because jsdom doesn't support layout.
 // This means that all DOM elements measurements will always return 0 (except for window which will be 1024x768).

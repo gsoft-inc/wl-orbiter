@@ -1,5 +1,5 @@
-import { Aside } from "@components/html";
-import { Paragraph } from "@components/typography";
+import { Aside } from "@components/html/index.ts";
+import { Paragraph } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

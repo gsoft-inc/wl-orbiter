@@ -2,7 +2,7 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 
-import { includeDocs, includeChromatic } from "./env";
+import { includeDocs, includeChromatic } from "./env.ts";
 
 // We sometimes need to disable the lazyCompilation to properly run the test runner on stories
 const isLazyCompilation = !(process.env.STORYBOOK_NO_LAZY === "true");

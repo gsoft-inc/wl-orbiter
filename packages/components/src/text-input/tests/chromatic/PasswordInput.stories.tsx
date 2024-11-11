@@ -1,6 +1,6 @@
-import { Inline, Stack } from "@components/layout";
-import { Div } from "@components/html";
-import { PasswordInput } from "@components/text-input";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
+import { PasswordInput } from "@components/text-input/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

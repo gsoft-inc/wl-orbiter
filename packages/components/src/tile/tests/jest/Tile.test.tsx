@@ -1,11 +1,11 @@
 import { screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { CheckableContext } from "@components/shared";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Tile } from "@components/tile";
+import { CheckableContext } from "@components/shared/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Tile } from "@components/tile/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

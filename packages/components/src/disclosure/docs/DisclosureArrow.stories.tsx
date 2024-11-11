@@ -1,8 +1,8 @@
-import { Button } from "@components/button";
-import { Disclosure, DisclosureArrow } from "@components/disclosure";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
-import { TextLinkAsButton } from "@components/link";
+import { Button } from "@components/button/index.ts";
+import { Disclosure, DisclosureArrow } from "@components/disclosure/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

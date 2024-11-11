@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, ButtonGroupProps } from "@components/button";
+import { Button, ButtonGroup, ButtonGroupProps } from "@components/button/index.ts";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

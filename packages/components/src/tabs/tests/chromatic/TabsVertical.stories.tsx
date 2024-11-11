@@ -1,11 +1,11 @@
 import { NotificationIcon } from "@hopper-ui/icons";
-import { Content, Header } from "@components/placeholders";
-import { Inline } from "@components/layout";
-import { Tabs } from "@components/tabs";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Tabs } from "@components/tabs/index.ts";
 
-import { Item } from "@components/collection";
-import { Lozenge } from "@components/lozenge";
-import { Text } from "@components/typography";
+import { Item } from "@components/collection/index.ts";
+import { Lozenge } from "@components/lozenge/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

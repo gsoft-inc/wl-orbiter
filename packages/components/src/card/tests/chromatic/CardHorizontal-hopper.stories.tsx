@@ -1,14 +1,14 @@
-import { Card } from "@components/card";
-import { Content, Header } from "@components/placeholders";
-import { Div, LI, UL } from "@components/html";
-import { Paragraph } from "@components/typography";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
+import { Card } from "@components/card/index.ts";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Div, LI, UL } from "@components/html/index.ts";
+import { Paragraph } from "@components/typography/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Heading, Button, ButtonGroup, Switch, Link } from "@hopper-ui/components";
-import { Item } from "@components/collection";
-import { Nasa } from "./assets";
-import { Tabs } from "@components/tabs";
+import { Item } from "@components/collection/index.ts";
+import { Nasa } from "./assets/index.tsx";
+import { Tabs } from "@components/tabs/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,10 +1,10 @@
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { Counter } from "@components/counter";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { Counter } from "@components/counter/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Inline } from "@components/layout";
-import { Text } from "@components/typography";
-import { Tag } from "@components/tag";
-import { as, useCheckableProps } from "@components/shared";
+import { Inline } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Tag } from "@components/tag/index.ts";
+import { as, useCheckableProps } from "@components/shared/index.ts";
 import { useCallback, useState } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";

@@ -1,4 +1,4 @@
-import { Spinner } from "@components/spinner";
+import { Spinner } from "@components/spinner/index.ts";
 import { createRef } from "react";
 import { renderWithTheme } from "@test-utils";
 import { waitFor } from "@testing-library/react";

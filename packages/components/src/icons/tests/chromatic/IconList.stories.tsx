@@ -1,6 +1,6 @@
-import { IconList, IconListProps } from "@components/icons";
+import { IconList, IconListProps } from "@components/icons/index.ts";
 import { CatIcon, SparklesIcon, RocketIcon } from "@hopper-ui/icons";
-import { Stack } from "@components/layout";
+import { Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

@@ -1,14 +1,14 @@
-import { Tag } from "@components/tag";
-import { Inline, Stack } from "@components/layout";
+import { Tag } from "@components/tag/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { SparklesIcon } from "@hopper-ui/icons";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Dot } from "@components/dot";
-import { Field, Label } from "@components/field";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Field, Label } from "@components/field/index.ts";
 import { Avatar, IconList, Text } from "@hopper-ui/components";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { as } from "@components/shared";
+import { as } from "@components/shared/index.ts";
 
 const meta = {
     title: "Chromatic/Tag-hopper/outline",

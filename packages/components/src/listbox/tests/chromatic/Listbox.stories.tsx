@@ -1,11 +1,11 @@
-import { Avatar } from "@components/avatar";
-import { IconList } from "@components/icons";
+import { Avatar } from "@components/avatar/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { SparklesIcon, DismissIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { CollectionItem, Item, Section } from "@components/collection";
-import { useListboxContext, Listbox, ListboxOption, ListboxOptionProps } from "@components/listbox";
-import { Text } from "@components/typography";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { CollectionItem, Item, Section } from "@components/collection/index.ts";
+import { useListboxContext, Listbox, ListboxOption, ListboxOptionProps } from "@components/listbox/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

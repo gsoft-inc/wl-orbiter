@@ -1,5 +1,5 @@
-import { TextInput } from "@components/text-input";
-import { augmentElement } from "@components/shared";
+import { TextInput } from "@components/text-input/index.ts";
+import { augmentElement } from "@components/shared/index.ts";
 
 describe("augmentElement", () => {
     test("augment existing element props", () => {

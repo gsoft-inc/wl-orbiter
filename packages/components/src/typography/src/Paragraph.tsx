@@ -1,7 +1,7 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, normalizeSize } from "../../shared";
-import { ResponsiveProp, StyleProvider, useResponsiveValue, useStyleProps } from "../../styling";
-import { Text } from "../../typography";
+import { InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, normalizeSize } from "../../shared/index.ts";
+import { ResponsiveProp, StyleProvider, useResponsiveValue, useStyleProps } from "../../styling/index.ts";
+import { Text } from "../../typography/index.ts";
 
 const DefaultElement = "p";
 

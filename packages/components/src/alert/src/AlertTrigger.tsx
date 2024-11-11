@@ -1,6 +1,6 @@
 import { ComponentProps, forwardRef } from "react";
-import { DialogTrigger, InnerDialogTrigger, InnerDialogTriggerProps } from "../../dialog";
-import { OmitInternalProps } from "../../shared";
+import { DialogTrigger, InnerDialogTrigger, InnerDialogTriggerProps } from "../../dialog/index.ts";
+import { OmitInternalProps } from "../../shared/index.ts";
 
 export type InnerAlertTriggerProps = Omit<InnerDialogTriggerProps, "dismissable">;
 

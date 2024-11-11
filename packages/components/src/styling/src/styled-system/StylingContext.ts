@@ -1,6 +1,6 @@
-import { Breakpoint } from "../BreakpointProvider";
+import { Breakpoint } from "../BreakpointProvider.tsx";
 import { CSSProperties } from "react";
-import { isNil } from "../../../shared";
+import { isNil } from "../../../shared/index.ts";
 
 export class StylingContext {
     private classes: string[];

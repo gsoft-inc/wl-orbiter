@@ -1,11 +1,11 @@
-import { Content, Footer, Header } from "@components/placeholders";
+import { Content, Footer, Header } from "@components/placeholders/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Dialog } from "@components/dialog";
-import { Heading } from "@components/typography";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.ts";
+import { Dialog } from "@components/dialog/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Keys } from "@components/shared/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

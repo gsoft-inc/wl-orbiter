@@ -1,7 +1,7 @@
-import { Alert } from "@components/alert";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Div } from "@components/html";
+import { Alert } from "@components/alert/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Div } from "@components/html/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

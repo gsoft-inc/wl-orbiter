@@ -1,7 +1,7 @@
-import { Inline, Stack } from "@components/layout";
-import { Div } from "@components/html";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
 import { EditIcon } from "@hopper-ui/icons";
-import { NumberInput } from "@components/number-input";
+import { NumberInput } from "@components/number-input/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

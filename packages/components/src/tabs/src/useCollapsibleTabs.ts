@@ -1,9 +1,9 @@
 // Inspired by: https://codesandbox.io/s/ariakit-collapsible-tab-835t8?file=/src/tab-popover.tsx
 
-import { createDisposables, isNil, useIsomorphicLayoutEffect, useMergedRefs, useRefState, useResizeObserver } from "../../shared";
+import { createDisposables, isNil, useIsomorphicLayoutEffect, useMergedRefs, useRefState, useResizeObserver } from "../../shared/index.ts";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { TabType } from "./useTabsItems";
+import { TabType } from "./useTabsItems.ts";
 
 export interface UseCollapsibleTabsOptions {
     gap?: number;

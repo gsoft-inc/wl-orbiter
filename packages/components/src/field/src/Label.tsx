@@ -1,7 +1,7 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { Text } from "../../typography";
-import { useFieldLabelProps } from "./FieldContext";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { Text } from "../../typography/index.ts";
+import { useFieldLabelProps } from "./FieldContext.tsx";
 
 const DefaultElement = "label";
 

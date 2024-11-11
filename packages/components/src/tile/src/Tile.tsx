@@ -1,4 +1,4 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts";
 import { ComponentProps, MouseEvent, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     InteractionProps,
@@ -14,9 +14,9 @@ import {
     useControllableState,
     useEventCallback,
     useMergedRefs
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { TileOrientation, useTile } from "./useTile";
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { TileOrientation, useTile } from "./useTile.tsx";
 
 const DefaultElement = "button";
 

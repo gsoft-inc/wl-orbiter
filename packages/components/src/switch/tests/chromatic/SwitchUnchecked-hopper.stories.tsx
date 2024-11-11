@@ -1,7 +1,7 @@
-import { Switch } from "@components/switch";
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
+import { Switch } from "@components/switch/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { MailIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
 import { IconList, Text } from "@hopper-ui/components";
 

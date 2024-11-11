@@ -1,5 +1,5 @@
 import { ForwardedRef } from "react";
-import { InteractionProps, cssModule, isNumber, mergeClasses, useAutoFocus, useMergedRefs } from "../../shared";
+import { InteractionProps, cssModule, isNumber, mergeClasses, useAutoFocus, useMergedRefs } from "../../shared/index.ts";
 
 export type LinkVariant = "primary" | "negative" | "accent";
 

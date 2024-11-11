@@ -1,6 +1,6 @@
-import { GalaxyImage, GalaxyImage2x, GalaxyImageLg, NoResults } from "./assets";
-import { Image, SvgImage } from "@components/image";
-import { Inline } from "@components/layout";
+import { GalaxyImage, GalaxyImage2x, GalaxyImageLg, NoResults } from "./assets/index.ts";
+import { Image, SvgImage } from "@components/image/index.ts";
+import { Inline } from "@components/layout/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
 

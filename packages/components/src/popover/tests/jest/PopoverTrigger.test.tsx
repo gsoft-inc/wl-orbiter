@@ -1,12 +1,12 @@
-import { Popover, PopoverProps, PopoverTrigger, usePopoverTriggerContext } from "@components/popover";
+import { Popover, PopoverProps, PopoverTrigger, usePopoverTriggerContext } from "@components/popover/index.ts";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef, forwardRef } from "react";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Keys } from "@components/shared";
-import { Transition } from "@components/transition";
-import userEvent from "@testing-library/user-event";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Transition } from "@components/transition/index.ts";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore

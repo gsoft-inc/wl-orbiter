@@ -1,9 +1,9 @@
-import { Inline } from "@components/layout";
-import { RadioGroup } from "@components/radio";
-import { ToggleButton } from "@components/button";
-import { CheckboxGroup } from "@components/checkbox";
-import { TextInput } from "@components/text-input";
-import { Toolbar } from "@components/toolbar";
+import { Inline } from "@components/layout/index.ts";
+import { RadioGroup } from "@components/radio/index.ts";
+import { ToggleButton } from "@components/button/index.ts";
+import { CheckboxGroup } from "@components/checkbox/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { Toolbar } from "@components/toolbar/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

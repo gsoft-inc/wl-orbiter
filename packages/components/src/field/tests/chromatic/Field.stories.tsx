@@ -1,18 +1,18 @@
-import { DateInput, DateRangeInput } from "@components/date-input";
-import { ErrorMessage, Field, HelpMessage, Label, ValidMessage } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { PasswordInput, TextInput } from "@components/text-input";
+import { DateInput, DateRangeInput } from "@components/date-input/index.ts";
+import { ErrorMessage, Field, HelpMessage, Label, ValidMessage } from "@components/field/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { PasswordInput, TextInput } from "@components/text-input/index.ts";
 
-import { Autocomplete } from "@components/autocomplete";
-import { Checkbox } from "@components/checkbox";
-import { Div } from "@components/html";
-import { InputGroup } from "@components/input-group";
-import { Item } from "@components/collection";
-import { NumberInput } from "@components/number-input";
-import { Select } from "@components/select";
-import { Switch } from "@components/switch";
-import { Text } from "@components/typography";
-import { TextArea } from "@components/text-area";
+import { Autocomplete } from "@components/autocomplete/index.ts";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { Div } from "@components/html/index.ts";
+import { InputGroup } from "@components/input-group/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { NumberInput } from "@components/number-input/index.ts";
+import { Select } from "@components/select/index.ts";
+import { Switch } from "@components/switch/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextArea } from "@components/text-area/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

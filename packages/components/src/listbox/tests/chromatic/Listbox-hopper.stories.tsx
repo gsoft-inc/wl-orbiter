@@ -1,10 +1,10 @@
-import { IconList } from "@components/icons";
-import { Inline, Stack } from "@components/layout";
+import { IconList } from "@components/icons/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Avatar, Text } from "@hopper-ui/components";
 import { SparklesIcon, DismissIcon, LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Div } from "@components/html";
-import { CollectionItem, Item, Section } from "@components/collection";
-import { useListboxContext, Listbox, ListboxOption, ListboxOptionProps } from "@components/listbox";
+import { Div } from "@components/html/index.ts";
+import { CollectionItem, Item, Section } from "@components/collection/index.ts";
+import { useListboxContext, Listbox, ListboxOption, ListboxOptionProps } from "@components/listbox/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

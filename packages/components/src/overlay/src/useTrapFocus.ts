@@ -1,4 +1,4 @@
-import { FocusManager, Keys, isNil, useDocumentListener, useEventCallback, useRefState } from "../../shared";
+import { FocusManager, Keys, isNil, useDocumentListener, useEventCallback, useRefState } from "../../shared/index.ts";
 
 export interface UseTrapFocusOptions {
     isDisabled?: boolean;

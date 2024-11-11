@@ -1,8 +1,8 @@
-import { useMatchedBreakpoints } from "../BreakpointProvider";
+import { useMatchedBreakpoints } from "../BreakpointProvider.tsx";
 import { useMemo } from "react";
-import { isNil } from "../../../shared";
-import { StylingContext } from "./StylingContext";
-import { PropsHandlers, StyledSystemProps } from "./props-handler";
+import { isNil } from "../../../shared/index.ts";
+import { StylingContext } from "./StylingContext.ts";
+import { PropsHandlers, StyledSystemProps } from "./props-handler.ts";
 
 /*
 SYNTAX:

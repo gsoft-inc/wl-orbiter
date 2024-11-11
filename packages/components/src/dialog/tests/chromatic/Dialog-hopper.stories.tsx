@@ -1,11 +1,11 @@
-import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
+import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets/index.tsx";
 import { Footer, Header, Heading, ButtonGroup, Button, Link } from "@hopper-ui/components";
-import { Content } from "@components/placeholders";
-import { Paragraph } from "@components/typography";
-import { Dialog } from "@components/dialog";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
+import { Content } from "@components/placeholders/index.ts";
+import { Paragraph } from "@components/typography/index.ts";
+import { Dialog } from "@components/dialog/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

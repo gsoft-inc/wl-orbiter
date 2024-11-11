@@ -1,12 +1,12 @@
-import { ButtonAsLink } from "@components/button";
-import { Inline, Stack } from "@components/layout";
-import { Div } from "@components/html";
-import { IconList } from "@components/icons";
+import { ButtonAsLink } from "@components/button/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
+import { IconList } from "@components/icons/index.ts";
 import { StartOverIcon } from "@hopper-ui/icons";
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.ts";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { Counter } from "@components/counter";
+import { Counter } from "@components/counter/index.ts";
 
 const meta = {
     title: "Chromatic/ButtonAsLink/upsell",

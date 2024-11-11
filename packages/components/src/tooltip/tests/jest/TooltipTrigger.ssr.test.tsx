@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Button } from "@components/button";
-import { Tooltip, TooltipTrigger } from "@components/tooltip";
+import { Button } from "@components/button/index.ts";
+import { Tooltip, TooltipTrigger } from "@components/tooltip/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

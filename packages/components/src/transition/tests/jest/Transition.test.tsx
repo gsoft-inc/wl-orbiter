@@ -1,4 +1,4 @@
-import { Transition } from "@components/transition";
+import { Transition } from "@components/transition/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

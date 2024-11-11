@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Span } from "@components/html";
+import { Span } from "@components/html/index.ts";
 
 const meta = {
     title: "Html elements/Span",

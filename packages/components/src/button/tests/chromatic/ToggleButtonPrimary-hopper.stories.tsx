@@ -1,10 +1,10 @@
-import { Inline, Stack } from "@components/layout";
-import { ToggleButton } from "@components/button";
-import { Div } from "@components/html";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { ToggleButton } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
 import { LightbulbIcon } from "@hopper-ui/icons";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.ts";
 
 const meta = {
     title: "Chromatic/ToggleButton-hopper/primary",

@@ -1,6 +1,6 @@
-import { Link } from "@components/link";
-import { Inline } from "@components/layout";
-import Card from "./Card";
+import { Link } from "@components/link/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import Card from "./Card.tsx";
 
 import { Meta, StoryObj } from "@storybook/react";
 

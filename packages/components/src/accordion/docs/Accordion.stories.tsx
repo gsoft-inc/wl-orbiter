@@ -1,7 +1,7 @@
-import { H3, Text } from "@components/typography";
-import { Accordion, AccordionHeader, useAccordionContext, type AccordionHeaderProps } from "@components/accordion";
-import { Content } from "@components/placeholders";
-import { Item } from "@components/collection";
+import { H3, Text } from "@components/typography/index.ts";
+import { Accordion, AccordionHeader, useAccordionContext, type AccordionHeaderProps } from "@components/accordion/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Item } from "@components/collection/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
 import { SparklesIcon } from "@hopper-ui/icons";
 import { useCallback, useState, type SyntheticEvent } from "react";

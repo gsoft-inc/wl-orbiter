@@ -1,4 +1,4 @@
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.ts";
 import { Table } from "@stories/components";
 
 function toRowValues({ value, variable, color }: Color) {

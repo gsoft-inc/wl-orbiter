@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Avatar, AvatarGroup } from "@components/avatar";
+import { Avatar, AvatarGroup } from "@components/avatar/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

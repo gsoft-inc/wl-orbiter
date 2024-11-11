@@ -1,7 +1,7 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts";
 import { ComponentProps, ElementType, SVGProps, forwardRef, useCallback } from "react";
-import { FillProp, HeightProp, ResponsiveProp, StrokeProp, StyledSystemProps, WidthProp, useResponsiveValue } from "../../styling";
-import { InternalProps, OmitInternalProps, SlotProps, isNil, mergeProps, slot, useMergedRefs } from "../../shared";
+import { FillProp, HeightProp, ResponsiveProp, StrokeProp, StyledSystemProps, WidthProp, useResponsiveValue } from "../../styling/index.ts";
+import { InternalProps, OmitInternalProps, SlotProps, isNil, mergeProps, slot, useMergedRefs } from "../../shared/index.ts";
 
 type OverlappingStyleProps = "fill" | "height" | "stroke" | "width";
 

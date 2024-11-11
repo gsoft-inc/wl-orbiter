@@ -1,7 +1,7 @@
 import { ExternalLink, ExternalLinkProps } from "@stories/components";
-import { Flex } from "@components/layout";
-import { Img } from "@components/html";
-import { getGithubUrl } from "./getGithubUrl";
+import { Flex } from "@components/layout/index.ts";
+import { Img } from "@components/html/index.ts";
+import { getGithubUrl } from "./getGithubUrl.ts";
 import GithubLogo from "./assets/logo-github-32.png";
 
 interface GithubLinkProps extends Omit<ExternalLinkProps, "href"> {

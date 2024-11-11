@@ -1,8 +1,8 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.ts";
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
-import { NumberInput } from "@components/number-input";
+import { NumberInput } from "@components/number-input/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

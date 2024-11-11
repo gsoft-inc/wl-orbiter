@@ -1,7 +1,7 @@
 import { ComponentProps, ElementType } from "react";
 
-import { htmlElement } from "./htmlElement";
-import { isNil } from "../../shared";
+import { htmlElement } from "./htmlElement.tsx";
+import { isNil } from "../../shared/index.ts";
 
 // Sectioning & Content sectioning
 

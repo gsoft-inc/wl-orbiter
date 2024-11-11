@@ -1,10 +1,10 @@
-import { Inline, Stack } from "@components/layout";
-import { TextLink } from "@components/link";
-import { Div } from "@components/html";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { Div } from "@components/html/index.ts";
 import { InfoIcon, ArrowRightIcon } from "@hopper-ui/icons";
 
 import { Meta, StoryObj } from "@storybook/react";
-import { Text } from "@components/typography";
+import { Text } from "@components/typography/index.ts";
 
 const meta = {
     title: "Chromatic/TextLink",

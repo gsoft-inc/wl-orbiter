@@ -1,8 +1,8 @@
-import { Content } from "@components/placeholders";
-import { Div } from "@components/html";
-import { Image } from "@components/image";
-import { Launch } from "./assets";
-import { Popover } from "@components/popover";
+import { Content } from "@components/placeholders/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Launch } from "./assets/index.ts";
+import { Popover } from "@components/popover/index.ts";
 import { Button, ButtonGroup, Footer, Form, Heading, Link, TextField } from "@hopper-ui/components";
 
 import { Meta, StoryObj } from "@storybook/react";
