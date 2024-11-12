@@ -1,5 +1,5 @@
 import { ArgTypes, Meta } from "@storybook/addon-docs";
-import { ComponentInfo, Tagline } from "@stories/components";
+import { ComponentInfo, Tagline, Source } from "@stories/components";
 import { InnerOverlay, InnerOverlayArrow } from "@components/overlay/index.ts";
 
 <Meta
@@ -22,12 +22,12 @@ An overlay takes care of rendering a container for your component with Orbiter's
 
 The visibility of the overlay can be toggled by providing a `show` prop.
 
-```jsx
+<Source code={`
 <Overlay show>
     SpaceX designs, manufactures, and launches the world’s most advanced rockets and spacecraft.
     The company was founded in 2002 by Elon Musk to revolutionize space transportation, with the ultimate goal of making life multiplanetary.
 </Overlay>
-```
+`} />
 
 ## API
 

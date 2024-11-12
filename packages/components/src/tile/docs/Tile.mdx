@@ -1,5 +1,5 @@
 import { ArgTypes, Meta, Canvas } from "@storybook/addon-docs";
-import { ComponentInfo, Tagline } from "@stories/components";
+import { ComponentInfo, Tagline, Source } from "@stories/components";
 import { InnerContent } from "@components/placeholders/index.ts";
 import { InnerHeading } from "@components/typography/index.ts";
 import { InnerTile, InnerTileGroup, InnerTileLink } from "@components/tile/index.ts";
@@ -82,7 +82,7 @@ A tile can also be navigable. It is similar to a [link](?path=/docs/link--defaul
 
 To integrate with a third-party routing library like [React Router](https://reactrouter.com) any link component can be rendered as a [React Router Link](https://reactrouter.com/en/main/components/link) or as any other custom component.
 
-```jsx
+<Source code={`
 import { Link } from "react-router-dom";
 
 const RouterTileLink = as(TileLink, Link);
@@ -95,8 +95,7 @@ const RouterTileLink = as(TileLink, Link);
         </RouterTileLink>
     );
 };
-
-```
+`} />
 
 ## TileGroup
 
