@@ -98,7 +98,7 @@
     "jest-environment-jsdom": "29.7.0",
     "meow": "9.0.0",
     "netlify-cli": "17.37.2",
-    "prettier": "2.5.1",
+    "prettier-local": "npm:prettier@2.5.1",
     "prism-react-renderer": "1.2.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -109,8 +109,8 @@
     "storybook": "8.4.2",
     "stylelint": "^16.10.0",
     "svgo": "3.3.2",
-    "ts-node": "10.9.2",
     "ts-jest": "29.2.5",
+    "ts-node": "10.9.2",
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "tsup": "8.3.5",
     "typescript": "5.4.5"

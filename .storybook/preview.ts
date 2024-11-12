@@ -2,7 +2,7 @@ import { viewport } from "./storybook-addon/index.ts";
 import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators/index.ts";
 import { isChromatic } from "./env.ts";
 import { Themes } from "./styles/themes.ts";
-import { formatCode } from "./components/snippet/useFormattedCode.ts";
+import { formatCode } from "./components/snippet/index.ts";
 import type { Preview } from "@storybook/react";
 import "./styles/index.ts";
 

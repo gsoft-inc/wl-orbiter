@@ -1,7 +1,7 @@
 import { isNil } from "@components/shared/index.ts";
-import prettier from "prettier/standalone";
-import prettierBabel from "prettier/parser-babel";
-import prettierPostCss from "prettier/parser-postcss";
+import * as prettier from "prettier-local/standalone";
+import babel from "prettier-local/parser-babel";
+import postcss from "prettier-local/parser-postcss";
 
 const PrettierParser = {
     "javascript": "babel",
@@ -16,7 +16,7 @@ export function formatCode(code: string, language: string) {
     if (!isNil(parser)) {
         return prettier.format(code, {
             parser: parser,
-            plugins: [prettierBabel, prettierPostCss],
+            plugins: [babel, postcss],
             tabWidth: 4,
             arrowParens: "avoid",
             printWidth: 100,

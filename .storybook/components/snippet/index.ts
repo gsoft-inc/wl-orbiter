@@ -1,1 +1,1 @@
-export * from "./useFormattedCode.ts";
+export * from "./formatCode.ts";
