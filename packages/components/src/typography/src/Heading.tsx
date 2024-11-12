@@ -82,34 +82,28 @@ function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
 */
 export const H1 = createHeading("h1");
-H1.displayName = "H1";
 
 /**
  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
 */
 export const H2 = createHeading("h2");
-H2.displayName = "H2";
 
-/**
- * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
-*/
+// /**
+//  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
+// */
 export const H3 = createHeading("h3");
-H3.displayName = "H3";
 
 /**
  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
 */
 export const H4 = createHeading("h4");
-H4.displayName = "H4";
 
-/**
- * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
-*/
+// /**
+//  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
+// */
 export const H5 = createHeading("h5");
-H5.displayName = "H5";
 
 /**
  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
 */
 export const H6 = createHeading("h6");
-H6.displayName = "H6";
