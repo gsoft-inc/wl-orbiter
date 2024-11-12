@@ -1,8 +1,8 @@
 import { isNil } from "@components/shared/index.ts";
-import { useMemo } from "react";
-import prettier from "prettier/standalone";
-import prettierBabel from "prettier/parser-babel";
-import prettierPostCss from "prettier/parser-postcss";
+import * as prettier from "prettier/standalone";
+import prettierBabel from "prettier/plugins/babel";
+import prettierPostCss from "prettier/plugins/postcss";
+import prettierEstree from "prettier/plugins/estree";
 
 const PrettierParser = {
     "javascript": "babel",
@@ -11,28 +11,27 @@ const PrettierParser = {
     "css": "css"
 };
 
-
-export function useFormattedCode(code: string, language: string) {
-    return useMemo(async () => {
-        await formatCode(code, language);
-    }, [code, language]);
-}
-
-export async function formatCode(code: string, language: string) {
+export function formatCode(code: string, language: string) {
     const parser = PrettierParser[language];
 
     if (!isNil(parser)) {
-        const prettyCode = (await prettier
+        let prettyCode = code;
+
+        prettier
             .format(code, {
                 parser: parser,
-                plugins: [prettierBabel, prettierPostCss],
+                plugins: [prettierBabel, prettierPostCss, prettierEstree],
                 tabWidth: 4,
                 arrowParens: "avoid",
                 printWidth: 100,
                 trailingComma: "none"
-            }))
-            .replace(">;", ">")
-            .trim();
+            })
+            .then(result => {
+                prettyCode = result.replace(">;", ">").trim();
+            })
+            .catch(() => {
+                prettyCode = code.trim();
+            });
 
         return prettyCode;
     }
