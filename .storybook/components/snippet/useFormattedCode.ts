@@ -1,8 +1,7 @@
 import { isNil } from "@components/shared/index.ts";
-import * as prettier from "prettier/standalone";
-import prettierBabel from "prettier/plugins/babel";
-import prettierPostCss from "prettier/plugins/postcss";
-import prettierEstree from "prettier/plugins/estree";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import prettierPostCss from "prettier/parser-postcss";
 
 const PrettierParser = {
     "javascript": "babel",
@@ -15,25 +14,14 @@ export function formatCode(code: string, language: string) {
     const parser = PrettierParser[language];
 
     if (!isNil(parser)) {
-        let prettyCode = code;
-
-        prettier
-            .format(code, {
-                parser: parser,
-                plugins: [prettierBabel, prettierPostCss, prettierEstree],
-                tabWidth: 4,
-                arrowParens: "avoid",
-                printWidth: 100,
-                trailingComma: "none"
-            })
-            .then(result => {
-                prettyCode = result.replace(">;", ">").trim();
-            })
-            .catch(() => {
-                prettyCode = code.trim();
-            });
-
-        return prettyCode;
+        return prettier.format(code, {
+            parser: parser,
+            plugins: [prettierBabel, prettierPostCss],
+            tabWidth: 4,
+            arrowParens: "avoid",
+            printWidth: 100,
+            trailingComma: "none"
+        }).replace(">;", ">").trim();
     }
 
     return code.trim();
