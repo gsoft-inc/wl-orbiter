@@ -1,4 +1,4 @@
-// import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 import type { Options } from "@storybook/types";
@@ -74,7 +74,7 @@ const storybookConfig: StorybookConfig = {
     swc: (_: SwcOptions, { configType }: Options): SwcOptions => {
         return configType === "PRODUCTION" ? SwcBuildConfig : SwcDevConfig;
     },
-    webpackFinal(config/*, { configType }*/) {
+    webpackFinal(config, { configType }) {
         config.resolve = {
             ...config.resolve,
             plugins: [
@@ -88,14 +88,14 @@ const storybookConfig: StorybookConfig = {
         config.devtool = false;
         config.optimization.minimize = false;
 
-        // config.plugins = [
-        //     ...(config.plugins ?? []),
-        //     configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
-        //         overlay: {
-        //             sockIntegration: "whm"
-        //         }
-        //     })
-        // ].filter(Boolean);
+        config.plugins = [
+            ...(config.plugins ?? []),
+            configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
+                overlay: {
+                    sockIntegration: "whm"
+                }
+            })
+        ].filter(Boolean);
 
         return config;
     }
