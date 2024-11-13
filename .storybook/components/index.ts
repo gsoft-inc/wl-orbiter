@@ -1,3 +1,4 @@
+export * from "./canvas/index.ts";
 export * from "./checkered-background/index.ts";
 export * from "./external-link/index.ts";
 export * from "./github-link/index.ts";
