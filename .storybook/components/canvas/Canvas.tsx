@@ -8,7 +8,7 @@ export const Canvas = (props: Props) => (
         {...props}
         additionalActions={[
             {
-                title: "Open in Stackblitz",
+                title: "Open Orbiter Sandbox",
                 onClick: () => {
                     window.open(
                         "https://stackblitz.com/edit/orbiter-sandbox?file=src%2FComponent.tsx",
