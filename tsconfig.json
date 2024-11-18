@@ -12,9 +12,7 @@
             "@components": ["packages/components/src/index.ts"],
             "@components/*": ["packages/components/src/*"],
             "@stories/components": [".storybook/components/index.ts"],
-            "@stories/mdx": [".storybook/mdx/index.ts"],
-            "prettier-parser-babel": ["node_modules/.pnpm/prettier@2.8.8/node_modules/prettier/esm/parser-babel.mjs"],
-            "prettier-parser-postcss": ["node_modules/.pnpm/prettier@2.8.8/node_modules/prettier/esm/parser-postcss.mjs"]
+            "@stories/mdx": [".storybook/mdx/index.ts"]
         }
     },
     "exclude": ["**/dist/**", "node_modules", "packages", "apps"],
