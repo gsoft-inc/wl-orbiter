@@ -1,7 +1,7 @@
 import { isNil } from "@components/shared/index.ts";
-import * as prettier from "prettier-local/standalone";
-import babel from "prettier-local/parser-babel";
-import postcss from "prettier-local/parser-postcss";
+import prettier from "prettier-local";
+import babel from "prettier-parser-babel";
+import postcss from "prettier-parser-postcss";
 
 const PrettierParser = {
     "javascript": "babel",
