@@ -2,7 +2,6 @@ import { viewport } from "./storybook-addon/index.ts";
 import { withBackgroundMatchingColorScheme, withCenteredCanvas, ThemedDocsContainer, withThemeProvider } from "./decorators/index.ts";
 import { isChromatic } from "./env.ts";
 import { Themes } from "./styles/themes.ts";
-import { formatCode } from "./components/snippet/index.ts";
 import type { Preview } from "@storybook/react";
 import "./styles/index.ts";
 
@@ -44,7 +43,7 @@ const preview: Preview = {
                     let newSource = src.match(/render:\s*\(\)\s*=>\s*([\s\S]*)}/)![1].trim();
                     newSource = newSource.replace(/\breturn\b/g, "\nreturn").replace(/\bfunction\b/g, "\nfunction").replace(/^{\s*|\s*}$/g, "");
 
-                    return formatCode(newSource, "tsx");
+                    return newSource;
                 }
             }
         },
