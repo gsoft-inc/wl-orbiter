@@ -88,9 +88,9 @@ export const H1 = createHeading("h1");
 */
 export const H2 = createHeading("h2");
 
-// /**
-//  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
-// */
+/**
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
+*/
 export const H3 = createHeading("h3");
 
 /**
@@ -98,9 +98,9 @@ export const H3 = createHeading("h3");
 */
 export const H4 = createHeading("h4");
 
-// /**
-//  * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
-// */
+/**
+ * [Documentation](https://wl-orbiter-website.netlify.app/?path=/docs/heading--default-story)
+*/
 export const H5 = createHeading("h5");
 
 /**
