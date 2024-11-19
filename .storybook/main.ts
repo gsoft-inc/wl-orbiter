@@ -97,7 +97,6 @@ const storybookConfig: StorybookConfig = {
          * Minimize the bundle size to prevent Netlify from hanging at the "Sealing asset processing TerserPlugin" step.
          */
         config.optimization = {
-            ...config.optimization,
             minimize: false
         };
 
