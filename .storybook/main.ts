@@ -85,10 +85,12 @@ const storybookConfig: StorybookConfig = {
                 })
             ]
         };
-        config.devtool = false;
+
+        config.devtool = configType !== "PRODUCTION" ? "false" : "inline-source-map";
 
         config.optimization = {
             ...config.optimization,
+            minimize: false,
             splitChunks: {
                 minSize: 10000,
                 maxSize: 250000
