@@ -92,21 +92,10 @@ const storybookConfig: StorybookConfig = {
          * This block of code addresses build process issues.
          *
          * Minimize the bundle size to prevent Netlify from hanging at the "Sealing asset processing TerserPlugin" step.
-         * Also added performance optimization to ensure successful deployment to Chromatic.
          */
         config.optimization = {
             ...config.optimization,
-            minimize: false,
-            splitChunks: {
-                minSize: 10000,
-                maxSize: 250000
-            }
-        };
-        config.performance = {
-            ...config.performance,
-            hints: false,
-            maxEntrypointSize: 512000,
-            maxAssetSize: 512000
+            minimize: false
         };
 
         config.plugins = [
