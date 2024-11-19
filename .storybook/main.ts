@@ -67,6 +67,15 @@ const storybookConfig: StorybookConfig = {
     docs: {
         autodocs: "tag"
     },
+    swc: () => ({
+        jsc: {
+            transform: {
+                react: {
+                    runtime: "automatic"
+                }
+            }
+        }
+    }),
     webpackFinal(config, { configType }) {
         config.resolve = {
             ...config.resolve,
