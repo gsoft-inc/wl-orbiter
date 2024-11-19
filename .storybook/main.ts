@@ -1,11 +1,7 @@
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
-import type { Options } from "@storybook/types";
-import type { Options as SwcOptions } from "@swc/core";
 import { includeDocs, includeChromatic } from "./env.ts";
-import { swcConfig as SwcBuildConfig } from "./swc.build.ts";
-import { swcConfig as SwcDevConfig } from "./swc.dev.ts";
 
 // We sometimes need to disable the lazyCompilation to properly run the test runner on stories
 const isLazyCompilation = !(process.env.STORYBOOK_NO_LAZY === "true");
@@ -70,9 +66,6 @@ const storybookConfig: StorybookConfig = {
     },
     docs: {
         autodocs: "tag"
-    },
-    swc: (_: SwcOptions, { configType }: Options): SwcOptions => {
-        return configType === "PRODUCTION" ? SwcBuildConfig : SwcDevConfig;
     },
     webpackFinal(config, { configType }) {
         config.resolve = {
