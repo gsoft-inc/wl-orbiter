@@ -86,7 +86,7 @@ const storybookConfig: StorybookConfig = {
             ]
         };
 
-        config.devtool = configType !== "PRODUCTION" ? "false" : "inline-source-map";
+        config.devtool = false;
 
         /**
          * This block of code addresses build process issues.
