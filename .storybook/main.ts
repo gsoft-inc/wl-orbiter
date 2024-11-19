@@ -88,6 +88,12 @@ const storybookConfig: StorybookConfig = {
 
         config.devtool = configType !== "PRODUCTION" ? "false" : "inline-source-map";
 
+        /**
+         * This block of code addresses build process issues.
+         *
+         * Minimize the bundle size to prevent Netlify from hanging at the "Sealing asset processing TerserPlugin" step.
+         * Also added performance optimization to ensure successful deployment to Chromatic.
+         */
         config.optimization = {
             ...config.optimization,
             minimize: false,
@@ -96,7 +102,6 @@ const storybookConfig: StorybookConfig = {
                 maxSize: 250000
             }
         };
-
         config.performance = {
             ...config.performance,
             hints: false,
