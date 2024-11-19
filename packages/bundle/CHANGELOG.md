@@ -1,5 +1,16 @@
 # @workleap/orbiter-ui
 
+## 5.6.0
+
+### Minor Changes
+
+- 7740d3c: The codebase has been converted to ESM from CommonJS. There should be no changes to codebases using Orbiter, but the treeshaking should be better.
+
+### Patch Changes
+
+- Updated dependencies [7740d3c]
+  - @orbit-ui/transition-components@5.6.0
+
 ## 5.5.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.6.0
+
+### Minor Changes
+
+- 7740d3c: The codebase has been converted to ESM from CommonJS. There should be no changes to codebases using Orbiter, but the treeshaking should be better.
+
 ## 5.5.0
 
 ### Minor Changes
