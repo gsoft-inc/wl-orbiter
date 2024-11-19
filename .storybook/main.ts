@@ -87,6 +87,21 @@ const storybookConfig: StorybookConfig = {
         };
         config.devtool = false;
 
+        config.optimization = {
+            ...config.optimization,
+            splitChunks: {
+                minSize: 10000,
+                maxSize: 250000
+            }
+        };
+
+        config.performance = {
+            ...config.performance,
+            hints: false,
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000
+        };
+
         config.plugins = [
             ...(config.plugins ?? []),
             configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
