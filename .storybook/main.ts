@@ -2,7 +2,7 @@ import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 import type { Options } from "@storybook/types";
 import type { Options as SwcOptions } from "@swc/core";
-import { includeDocs, includeChromatic } from "./env.ts";
+import { includeDocs, includeChromatic, isDocs } from "./env.ts";
 import { swcConfig as SwcBuildConfig } from "./swc.build.ts";
 import { swcConfig as SwcDevConfig } from "./swc.dev.ts";
 
@@ -84,6 +84,19 @@ const storybookConfig: StorybookConfig = {
                 })
             ]
         };
+
+        config.devtool = false;
+
+        /**
+         * This block of code addresses build process issues.
+         *
+         * Minimize the bundle size to prevent Netlify from hanging at the "Sealing asset processing TerserPlugin" step.
+         */
+        if (isDocs) {
+            config.optimization = {
+                minimize: false
+            };
+        }
 
         return config;
     }
