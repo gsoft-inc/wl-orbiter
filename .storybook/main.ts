@@ -1,11 +1,6 @@
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
-import type { Options } from "@storybook/types";
-import type { Options as SwcOptions } from "@swc/core";
 import { includeDocs, includeChromatic } from "./env.ts";
-import { swcConfig as SwcBuildConfig } from "./swc.build.ts";
-import { swcConfig as SwcDevConfig } from "./swc.dev.ts";
 
 // We sometimes need to disable the lazyCompilation to properly run the test runner on stories
 const isLazyCompilation = !(process.env.STORYBOOK_NO_LAZY === "true");
@@ -71,10 +66,16 @@ const storybookConfig: StorybookConfig = {
     docs: {
         autodocs: "tag"
     },
-    swc: (_: SwcOptions, { configType }: Options): SwcOptions => {
-        return configType === "PRODUCTION" ? SwcBuildConfig : SwcDevConfig;
-    },
-    webpackFinal(config, { configType }) {
+    swc: () => ({
+        jsc: {
+            transform: {
+                react: {
+                    runtime: "automatic"
+                }
+            }
+        }
+    }),
+    webpackFinal(config) {
         config.resolve = {
             ...config.resolve,
             plugins: [
@@ -92,31 +93,10 @@ const storybookConfig: StorybookConfig = {
          * This block of code addresses build process issues.
          *
          * Minimize the bundle size to prevent Netlify from hanging at the "Sealing asset processing TerserPlugin" step.
-         * Also added performance optimization to ensure successful deployment to Chromatic.
          */
         config.optimization = {
-            ...config.optimization,
-            minimize: false,
-            splitChunks: {
-                minSize: 10000,
-                maxSize: 250000
-            }
+            minimize: false
         };
-        config.performance = {
-            ...config.performance,
-            hints: false,
-            maxEntrypointSize: 512000,
-            maxAssetSize: 512000
-        };
-
-        config.plugins = [
-            ...(config.plugins ?? []),
-            configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
-                overlay: {
-                    sockIntegration: "whm"
-                }
-            })
-        ].filter(Boolean);
 
         return config;
     }
