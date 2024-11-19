@@ -1,5 +1,12 @@
 # @orbit-ui/transition-components
 
+## 5.6.1
+
+### Patch Changes
+
+- 5c289b4: Fix release pipelines
+- 023377e: Fix storybook config webpack
+
 ## 5.6.0
 
 ### Minor Changes
