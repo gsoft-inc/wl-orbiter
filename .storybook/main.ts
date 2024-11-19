@@ -86,7 +86,6 @@ const storybookConfig: StorybookConfig = {
             ]
         };
         config.devtool = false;
-        config.optimization.minimize = false;
 
         config.plugins = [
             ...(config.plugins ?? []),
