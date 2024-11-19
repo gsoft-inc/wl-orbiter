@@ -27,6 +27,7 @@ const storybookConfig: StorybookConfig = {
     stories: stories,
     addons: [
         "@storybook/addon-a11y",
+        "@storybook/addon-docs",
         "@storybook/addon-links",
         "@storybook/addon-essentials",
         "@storybook/addon-interactions",
