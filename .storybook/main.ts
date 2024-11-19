@@ -88,6 +88,8 @@ const storybookConfig: StorybookConfig = {
             ]
         };
 
+        config.devtool = false;
+
         /**
          * This block of code addresses build process issues.
          *
