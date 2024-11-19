@@ -120,8 +120,8 @@ importers:
         specifier: 4.1.2
         version: 4.1.2
       chromatic:
-        specifier: 6.3.4
-        version: 6.3.4
+        specifier: 11.18.1
+        version: 11.18.1
       copyfiles:
         specifier: 2.4.1
         version: 2.4.1
@@ -4121,8 +4121,8 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
-  chromatic@11.18.0:
-    resolution: {integrity: sha512-3o9Frn1oIS1hFLsJxVH9yVJ1O7+TCYoyL7OZzUorL/DCYduhXr5LDSBfpUsp7EdCPb64ufkbyFzSRNbt/xy9kg==}
+  chromatic@11.18.1:
+    resolution: {integrity: sha512-hkNT9vA6K9+PnE/khhZYBnRCOm8NonaQDs7RZ8YHFo7/lh1b/x/uFMkTjWjaj/mkM6QOR/evu5VcZMtcaauSlw==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -4132,10 +4132,6 @@ packages:
         optional: true
       '@chromatic-com/playwright':
         optional: true
-
-  chromatic@6.3.4:
-    resolution: {integrity: sha512-L3Pkz+fhl4v4dlmE2Nd6HdosoPHZ8iASKjcu3NW8sPBu9CVwq/EBOzaGrq8zEaF5sLjCOndJjaUFgHHlE1b8xQ==}
-    hasBin: true
 
   chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
@@ -10395,7 +10391,7 @@ snapshots:
 
   '@chromatic-com/storybook@3.2.2(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
-      chromatic: 11.18.0
+      chromatic: 11.18.1
       filesize: 10.1.6
       jsonfile: 6.1.0
       react-confetti: 6.1.0(react@18.3.1)
@@ -14691,9 +14687,7 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chromatic@11.18.0: {}
-
-  chromatic@6.3.4: {}
+  chromatic@11.18.1: {}
 
   chrome-trace-event@1.0.4: {}
 
