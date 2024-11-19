@@ -18,7 +18,6 @@ if (!isChromatic) {
 
 const preview: Preview = {
     parameters: {
-        selectedStory: "installation",
         backgrounds: {
             disable: true
         },
@@ -34,7 +33,7 @@ const preview: Preview = {
         docs: {
             theme: Themes.docs,
             container: ThemedDocsContainer,
-            inlineStories: true,
+            story: { inline: true },
             canvas: {
                 sourceState: "shown"
             },
