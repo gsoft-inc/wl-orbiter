@@ -1,11 +1,11 @@
-import { Item, Section } from "@components/collection";
+import { Item, Section } from "@components/collection/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Divider } from "@components/divider";
-import { Keys } from "@components/shared";
-import { Menu } from "@components/menu";
-import { Text } from "@components/typography";
+import { Divider } from "@components/divider/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Menu } from "@components/menu/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

@@ -1,9 +1,9 @@
-import { AnonymousAvatar } from "@components/avatar";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { AnonymousAvatar } from "@components/avatar/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: AnonymousAvatar,
     parameters: {
         a11y: {
@@ -18,12 +18,14 @@ export default {
         }
     },
     title: "Chromatic/Avatar - Anonymous"
-} as ComponentMeta<typeof AnonymousAvatar>;
+} as Meta<typeof AnonymousAvatar>;
 
-type AnonymousAvatarStory = ComponentStoryObj<typeof AnonymousAvatar>;
+export default meta;
+
+type AnonymousAvatarStory = StoryObj<typeof meta>;
 
 export const Default: AnonymousAvatarStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="center">
             <AnonymousAvatar size="xs" aria-label="Neil Armstrong" />
@@ -36,7 +38,7 @@ export const Default: AnonymousAvatarStory = {
 };
 
 export const Zoom: AnonymousAvatarStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -50,7 +52,7 @@ export const Zoom: AnonymousAvatarStory = {
 };
 
 export const Styling: AnonymousAvatarStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <AnonymousAvatar aria-label="Sally Ride" border="warning" />

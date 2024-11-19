@@ -1,18 +1,25 @@
-import { Div, LI, OL, UL } from "@components/html";
-import { ErrorMessage, HelpMessage, ValidMessage } from "@components/field";
+import { Div, LI, OL, UL } from "@components/html/index.ts";
+import { ErrorMessage, HelpMessage, ValidMessage } from "@components/field/index.ts";
 import { QuestionIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { Paragraph } from "@components/typography";
-import { TextLink } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Paragraph } from "@components/typography/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 import { ReactNode } from "react";
 
-export default {
+const meta = {
     title: "Chromatic/FieldMessage",
-    component: HelpMessage
-} as ComponentMeta<typeof HelpMessage>;
+    component: HelpMessage,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof HelpMessage>;
 
-type HelpMessageStory = ComponentStoryObj<typeof HelpMessage>;
+export default meta;
+
+type HelpMessageStory = StoryObj<typeof meta>;
 
 function Align({ children }: { children: ReactNode }) {
     return (
@@ -23,16 +30,16 @@ function Align({ children }: { children: ReactNode }) {
 }
 
 export const Default: HelpMessageStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <HelpMessage>
-        Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+            Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
         </HelpMessage>
     )
 };
 
 export const Icon: HelpMessageStory = {
-    storyName: "icon",
+    name: "icon",
     render: () => (
         <HelpMessage>
             <Align>
@@ -44,18 +51,18 @@ export const Icon: HelpMessageStory = {
 
 
 export const FieldMessageParagraph: HelpMessageStory = {
-    storyName: "paragraph",
+    name: "paragraph",
     render: () => (
         <HelpMessage>
             <Paragraph>
-            If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+                If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
             </Paragraph>
         </HelpMessage>
     )
 };
 
 export const List: HelpMessageStory = {
-    storyName: "list",
+    name: "list",
     render: () => (
         <Inline>
             <HelpMessage>
@@ -77,12 +84,12 @@ export const List: HelpMessageStory = {
 };
 
 export const Wrappers: HelpMessageStory = {
-    storyName: "wrappers",
+    name: "wrappers",
     render: () => (
         <HelpMessage>
             <Div>
                 <Div>
-                Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
                 </Div>
             </Div>
         </HelpMessage>
@@ -90,14 +97,14 @@ export const Wrappers: HelpMessageStory = {
 };
 
 export const Complex: HelpMessageStory = {
-    storyName: "complex",
+    name: "complex",
     render: () => (
         <HelpMessage>
             <Align>
                 <QuestionIcon /> Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
             </Align>
             <Paragraph>
-            If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+                If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
             </Paragraph>
             <UL>
                 <LI>Celestial</LI>
@@ -109,16 +116,16 @@ export const Complex: HelpMessageStory = {
 };
 
 export const Fluid: HelpMessageStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <HelpMessage fluid>
-        If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+            If two pieces of the same type of <TextLink href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
         </HelpMessage>
     )
 };
 
 export const Help: HelpMessageStory = {
-    storyName: "help",
+    name: "help",
     render: () => (
         <HelpMessage>
             <Align>
@@ -129,7 +136,7 @@ export const Help: HelpMessageStory = {
 };
 
 export const Error: HelpMessageStory = {
-    storyName: "error",
+    name: "error",
     render: () => (
         <ErrorMessage>
             <Align>
@@ -140,7 +147,7 @@ export const Error: HelpMessageStory = {
 };
 
 export const Valid: HelpMessageStory = {
-    storyName: "valid",
+    name: "valid",
     render: () => (
         <ValidMessage>
             <Align>
@@ -151,17 +158,17 @@ export const Valid: HelpMessageStory = {
 };
 
 export const Zoom: HelpMessageStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
                 <HelpMessage>
-                Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
                 </HelpMessage>
             </Div>
             <Div className="zoom-out">
                 <HelpMessage>
-                Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external>space map</TextLink>.
                 </HelpMessage>
             </Div>
         </Stack>
@@ -169,7 +176,7 @@ export const Zoom: HelpMessageStory = {
 };
 
 export const Styling: HelpMessageStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <ValidMessage border="warning">Thank you!</ValidMessage>

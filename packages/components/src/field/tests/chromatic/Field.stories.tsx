@@ -1,29 +1,36 @@
-import { DateInput, DateRangeInput } from "@components/date-input";
-import { ErrorMessage, Field, HelpMessage, Label, ValidMessage } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { PasswordInput, TextInput } from "@components/text-input";
+import { DateInput, DateRangeInput } from "@components/date-input/index.ts";
+import { ErrorMessage, Field, HelpMessage, Label, ValidMessage } from "@components/field/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { PasswordInput, TextInput } from "@components/text-input/index.ts";
 
-import { Autocomplete } from "@components/autocomplete";
-import { Checkbox } from "@components/checkbox";
-import { Div } from "@components/html";
-import { InputGroup } from "@components/input-group";
-import { Item } from "@components/collection";
-import { NumberInput } from "@components/number-input";
-import { Select } from "@components/select";
-import { Switch } from "@components/switch";
-import { Text } from "@components/typography";
-import { TextArea } from "@components/text-area";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Autocomplete } from "@components/autocomplete/index.ts";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { Div } from "@components/html/index.ts";
+import { InputGroup } from "@components/input-group/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { NumberInput } from "@components/number-input/index.ts";
+import { Select } from "@components/select/index.ts";
+import { Switch } from "@components/switch/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextArea } from "@components/text-area/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Field",
-    component: Field
-} as ComponentMeta<typeof Field>;
+    component: Field,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Field>;
 
-type FieldStory = ComponentStoryObj<typeof Field>;
+export default meta;
+
+type FieldStory = StoryObj<typeof meta>;
 
 export const Default: FieldStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Field>
             <TextInput placeholder="Where to?" />
@@ -32,7 +39,7 @@ export const Default: FieldStory = {
 };
 
 export const FieldLabel: FieldStory = {
-    storyName: "label",
+    name: "label",
     render: () => (
         <Field>
             <Label>Where to?</Label>
@@ -42,7 +49,7 @@ export const FieldLabel: FieldStory = {
 };
 
 export const Message: FieldStory = {
-    storyName: "message",
+    name: "message",
     render: () => (
         <Stack gap="3.5rem">
             <Field>
@@ -65,7 +72,7 @@ export const Message: FieldStory = {
 };
 
 export const Validation: FieldStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline>
             <Field>
@@ -95,7 +102,7 @@ export const Validation: FieldStory = {
 
 
 export const Fluid: FieldStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Stack>
             <Div>
@@ -117,7 +124,7 @@ export const Fluid: FieldStory = {
 };
 
 export const Required: FieldStory = {
-    storyName: "required",
+    name: "required",
     render: () => (
         <Field required>
             <Label>Where to?</Label>
@@ -128,7 +135,7 @@ export const Required: FieldStory = {
 };
 
 export const FieldTextInput: FieldStory = {
-    storyName: "text input",
+    name: "text input",
     render: () => (
         <Field>
             <Label>Where to?</Label>
@@ -139,7 +146,7 @@ export const FieldTextInput: FieldStory = {
 };
 
 export const FieldPasswordInput: FieldStory = {
-    storyName: "password input",
+    name: "password input",
     render: () => (
         <Field>
             <Label>Where to?</Label>
@@ -150,7 +157,7 @@ export const FieldPasswordInput: FieldStory = {
 };
 
 export const FieldNumberInput: FieldStory = {
-    storyName: "number input",
+    name: "number input",
     render: () => (
         <Field>
             <Label>Age</Label>
@@ -161,7 +168,7 @@ export const FieldNumberInput: FieldStory = {
 };
 
 export const FieldTextArea: FieldStory = {
-    storyName: "text area",
+    name: "text area",
     render: () => (
         <Field>
             <Label>Where to?</Label>
@@ -172,7 +179,7 @@ export const FieldTextArea: FieldStory = {
 };
 
 export const FieldDateInput: FieldStory = {
-    storyName: "date input",
+    name: "date input",
     render: () => (
         <Field>
             <Label>When?</Label>
@@ -183,7 +190,7 @@ export const FieldDateInput: FieldStory = {
 };
 
 export const FieldDateRangeInput: FieldStory = {
-    storyName: "date range input",
+    name: "date range input",
     render: () => (
         <Field>
             <Label>When?</Label>
@@ -194,7 +201,7 @@ export const FieldDateRangeInput: FieldStory = {
 };
 
 export const FieldCheckbox: FieldStory = {
-    storyName: "checkbox",
+    name: "checkbox",
     render: () => (
         <Field>
             <Checkbox>Milky Way</Checkbox>
@@ -204,7 +211,7 @@ export const FieldCheckbox: FieldStory = {
 };
 
 export const FieldSwitch: FieldStory = {
-    storyName: "switch",
+    name: "switch",
     render: () => (
         <Field>
             <Switch>Milky Way</Switch>
@@ -214,7 +221,7 @@ export const FieldSwitch: FieldStory = {
 };
 
 export const FieldSelect: FieldStory = {
-    storyName: "select",
+    name: "select",
     render: () => (
         <Field>
             <Label>Planet</Label>
@@ -229,7 +236,7 @@ export const FieldSelect: FieldStory = {
 };
 
 export const FieldAutocomplete: FieldStory = {
-    storyName: "autocomplete",
+    name: "autocomplete",
     render: () => (
         <Field>
             <Label>Planet</Label>
@@ -244,7 +251,7 @@ export const FieldAutocomplete: FieldStory = {
 };
 
 export const FieldInputGroup: FieldStory = {
-    storyName: "input group",
+    name: "input group",
     render: () => (
         <Stack>
             <Field>
@@ -270,7 +277,7 @@ export const FieldInputGroup: FieldStory = {
 };
 
 export const Zoom: FieldStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -290,7 +297,7 @@ export const Zoom: FieldStory = {
 };
 
 export const Styling: FieldStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Field border="warning">

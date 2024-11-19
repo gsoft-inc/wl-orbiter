@@ -1,4 +1,4 @@
-import { mergeRefs } from "@components/shared";
+import { mergeRefs } from "@components/shared/index.ts";
 
 test("can merge refs", () => {
     const func1 = jest.fn();

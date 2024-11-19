@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Transition } from "@components/transition";
+import { Transition } from "@components/transition/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

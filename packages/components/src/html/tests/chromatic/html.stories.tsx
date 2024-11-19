@@ -1,15 +1,22 @@
-import { A } from "@components/html";
-import { Inline } from "@components/layout";
-import { StyleProvider } from "@components/styling";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { A } from "@components/html/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { StyleProvider } from "@components/styling/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 import { PropsWithChildren } from "react";
 
-export default {
+const meta = {
     title: "Chromatic/Html",
-    component: StyleProvider
-} as ComponentMeta<typeof StyleProvider>;
+    component: StyleProvider,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof StyleProvider>;
 
-type StyleProviderStory = ComponentStoryObj<typeof StyleProvider>;
+export default meta;
+
+type StyleProviderStory = StoryObj<typeof meta>;
 
 const StyledAnchor = ({ children }: PropsWithChildren) => {
     return (
@@ -26,21 +33,21 @@ const StyledAnchor = ({ children }: PropsWithChildren) => {
 };
 
 export const Size: StyleProviderStory = {
-    storyName: "size",
+    name: "size",
     render: () => (
         <A href="#">Google</A>
     )
 };
 
 export const StyleContext: StyleProviderStory = {
-    storyName: "support style context",
+    name: "support style context",
     render: () => (
         <StyledAnchor>Google</StyledAnchor>
     )
 };
 
 export const Styling: StyleProviderStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <A border="warning" href="#">Google</A>

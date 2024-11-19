@@ -1,20 +1,27 @@
-import { Button } from "@components/button";
-import { Div } from "@components/html";
-import { Field, Label } from "@components/field";
-import { Fieldset, Form } from "@components/form";
-import { Inline, Stack } from "@components/layout";
-import { TextInput } from "@components/text-input";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Field, Label } from "@components/field/index.ts";
+import { Fieldset, Form } from "@components/form/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Fieldset",
-    component: Fieldset
-} as ComponentMeta<typeof Fieldset>;
+    component: Fieldset,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Fieldset>;
 
-type FieldsetStory = ComponentStoryObj<typeof Fieldset>;
+export default meta;
+
+type FieldsetStory = StoryObj<typeof meta>;
 
 export const Default: FieldsetStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Form>
             <Fieldset label="Shipping Address">
@@ -103,7 +110,7 @@ export const Default: FieldsetStory = {
 };
 
 export const Zoom: FieldsetStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -139,7 +146,7 @@ export const Zoom: FieldsetStory = {
 };
 
 export const Styling: FieldsetStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Fieldset border="warning" label="Shipping Address">

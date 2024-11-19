@@ -1,7 +1,7 @@
-import { Button } from "@components/button";
+import { Button } from "@components/button/index.ts";
 import { ComponentProps } from "react";
-import { Div } from "@components/html";
-import { as } from "@components/shared";
+import { Div } from "@components/html/index.ts";
+import { as } from "@components/shared/index.ts";
 import { expectAssignable } from "@test-utils";
 
 interface RouterLinkProps {

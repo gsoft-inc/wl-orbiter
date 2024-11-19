@@ -1,0 +1,73 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerToolbar } from "@components/toolbar/index.ts";
+
+import * as ToolbarStories from "./Toolbar.stories.tsx";
+
+<Meta of={ToolbarStories}/>
+
+# Toolbar
+
+<Tagline>A toolbar is a container for grouping a set of controls, such as buttons, menubuttons, or checkboxes.</Tagline>
+
+<ComponentInfo
+    usage={"import { Toolbar, ToolbarContext, useToolbarContext, useToolbarProps, ClearToolbar } from \"@workleap/orbiter-ui\";"}
+    ariaPath="toolbar"
+    githubPath="/packages/components/src/toolbar/src"
+/>
+
+## Usage
+
+### Default
+
+A default toolbar.
+
+<Canvas of={ToolbarStories.Default} />
+
+### Disabled
+
+A toolbar can have a few disabled controls.
+
+<Canvas of={ToolbarStories.Disabled} />
+
+Or disabled all the controls.
+
+<Canvas of={ToolbarStories.DisabledToolbar} />
+
+### Gap
+
+The gap between a toolbar controls is configurable.
+
+<Canvas of={ToolbarStories.Gap} />
+
+### Orientation
+
+A toolbar can change his orientation to `vertical` to render his controls horizontally.
+
+<Canvas of={ToolbarStories.Orientation} />
+
+### Wrapped
+
+Toolbar controls can wrap on multiple lines.
+
+<Canvas of={ToolbarStories.Wrap} />
+
+### Custom components
+
+Any component can be added to a toolbar. However to benefit from the toolbar behaviors, a component must implement the `ToolbarContext`. This is done by using the `useToolbarProps` hook.
+
+<Canvas of={ToolbarStories.CustomComponentStory} />
+
+## API
+
+### Toolbar
+
+<ComponentInfo
+    usage={"import { Toolbar } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerToolbar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerToolbar} sort="alpha" />
+
+

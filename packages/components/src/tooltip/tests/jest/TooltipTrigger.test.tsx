@@ -1,9 +1,9 @@
-import { Button } from "@components/button";
-import { Tooltip, TooltipTrigger } from "@components/tooltip";
-import { Transition } from "@components/transition";
+import { Button } from "@components/button/index.ts";
+import { Tooltip, TooltipTrigger } from "@components/tooltip/index.ts";
+import { Transition } from "@components/transition/index.ts";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore
@@ -68,7 +68,7 @@ test("when hovering the overlay arrow, close on overlay leave", async () => {
 
     await userEvent.unhover(getOverlayArrow(screen.getByTestId("overlay")));
 
-    expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
+    await waitFor(() => expect(screen.queryByRole("tooltip")).not.toBeInTheDocument());
 });
 
 test("when hovering the tooltip, do not close if hovering the trigger", async () => {
@@ -102,13 +102,12 @@ test("when unhovering the tooltip, close tooltip", async () => {
 
     await userEvent.hover(screen.getByTestId("trigger"), { });
 
-    expect(screen.getByRole("tooltip")).toBeInTheDocument();
+    await screen.findByRole("tooltip");
 
     await userEvent.unhover(screen.getByRole("tooltip"));
 
-    expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
+    await waitFor(() => expect(screen.queryByRole("tooltip")).not.toBeInTheDocument());
 });
-
 
 // ***** Aria *****
 

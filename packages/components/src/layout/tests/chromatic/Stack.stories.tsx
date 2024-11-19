@@ -1,16 +1,23 @@
-import { Div } from "@components/html";
-import { Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Stack",
-    component: Stack
-} as ComponentMeta<typeof Stack>;
+    component: Stack,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Stack>;
 
-type StackStory = ComponentStoryObj<typeof Stack>;
+export default meta;
+
+type StackStory = StoryObj<typeof meta>;
 
 export const Default: StackStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -21,7 +28,7 @@ export const Default: StackStory = {
 };
 
 export const Reverse: StackStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <Stack reverse>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -32,7 +39,7 @@ export const Reverse: StackStory = {
 };
 
 export const AlignXStart: StackStory = {
-    storyName: "align X start",
+    name: "align X start",
     render: () => (
         <Stack alignX="start">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -43,7 +50,7 @@ export const AlignXStart: StackStory = {
 };
 
 export const AlignXCenter: StackStory = {
-    storyName: "align X center",
+    name: "align X center",
     render: () => (
         <Stack alignX="center">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -54,7 +61,7 @@ export const AlignXCenter: StackStory = {
 };
 
 export const AlignXEnd: StackStory = {
-    storyName: "align X end",
+    name: "align X end",
     render: () => (
         <Stack alignX="end">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -65,7 +72,7 @@ export const AlignXEnd: StackStory = {
 };
 
 export const AlignYStart: StackStory = {
-    storyName: "align Y start",
+    name: "align Y start",
     render: () => (
         <Stack alignY="start" height={960}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -76,7 +83,7 @@ export const AlignYStart: StackStory = {
 };
 
 export const AlignYCenter: StackStory = {
-    storyName: "align Y center",
+    name: "align Y center",
     render: () => (
         <Stack alignY="center" height={960}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -87,7 +94,7 @@ export const AlignYCenter: StackStory = {
 };
 
 export const AlignYEnd: StackStory = {
-    storyName: "align Y end",
+    name: "align Y end",
     render: () => (
         <Stack alignY="end" height={960}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -98,7 +105,7 @@ export const AlignYEnd: StackStory = {
 };
 
 export const Wrap: StackStory = {
-    storyName: "wrap",
+    name: "wrap",
     render: () => (
         <Stack wrap height={240}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -109,7 +116,7 @@ export const Wrap: StackStory = {
 };
 
 export const Inline: StackStory = {
-    storyName: "inline",
+    name: "inline",
     render: () => (
         <>
             <Stack inline>
@@ -127,7 +134,7 @@ export const Inline: StackStory = {
 };
 
 export const Nested: StackStory = {
-    storyName: "nested",
+    name: "nested",
     render: () => (
         <Stack gap={400}>
             <Stack gap={40}>

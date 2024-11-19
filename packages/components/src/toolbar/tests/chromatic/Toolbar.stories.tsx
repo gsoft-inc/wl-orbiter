@@ -1,18 +1,18 @@
-import { Field, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-import { ToggleButton, ToggleIconButton } from "@components/button";
+import { Field, Label } from "@components/field/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { ToggleButton, ToggleIconButton } from "@components/button/index.ts";
 
-import { CheckboxGroup } from "@components/checkbox";
-import { Div } from "@components/html";
-import { InputGroup } from "@components/input-group";
+import { CheckboxGroup } from "@components/checkbox/index.ts";
+import { Div } from "@components/html/index.ts";
+import { InputGroup } from "@components/input-group/index.ts";
 import { NotificationIcon } from "@hopper-ui/icons";
-import { Text } from "@components/typography";
-import { TextInput } from "@components/text-input";
-import { Toolbar } from "@components/toolbar";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Text } from "@components/typography/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { Toolbar } from "@components/toolbar/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Toolbar",
     component: Toolbar,
     parameters: {
@@ -20,12 +20,14 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof Toolbar>;
+} as Meta<typeof Toolbar>;
 
-type ToolbarStory = ComponentStoryObj<typeof Toolbar>;
+export default meta;
+
+type ToolbarStory = StoryObj<typeof meta>;
 
 export const Default: ToolbarStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Toolbar>
             <CheckboxGroup>
@@ -46,7 +48,7 @@ export const Default: ToolbarStory = {
 };
 
 export const DisabledElement: ToolbarStory = {
-    storyName: "disabled element",
+    name: "disabled element",
     render: () => (
         <Toolbar>
             <CheckboxGroup disabled>
@@ -67,7 +69,7 @@ export const DisabledElement: ToolbarStory = {
 };
 
 export const Fluid: ToolbarStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Toolbar fluid>
             <CheckboxGroup>
@@ -86,7 +88,7 @@ export const Fluid: ToolbarStory = {
 };
 
 export const Disabled: ToolbarStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <Toolbar disabled>
             <CheckboxGroup>
@@ -105,7 +107,7 @@ export const Disabled: ToolbarStory = {
 };
 
 export const Gap: ToolbarStory = {
-    storyName: "gap",
+    name: "gap",
     render: () => (
         <Toolbar gap="8rem">
             <CheckboxGroup>
@@ -126,7 +128,7 @@ export const Gap: ToolbarStory = {
 };
 
 export const Align: ToolbarStory = {
-    storyName: "align",
+    name: "align",
     render: () => (
         <Stack>
             <Toolbar alignX="start">
@@ -164,7 +166,7 @@ export const Align: ToolbarStory = {
 };
 
 export const VerticalAlign: ToolbarStory = {
-    storyName: "vertical align",
+    name: "vertical align",
     render: () => (
         <Inline gap="5rem">
             <Toolbar alignY="start" height="4.5rem">
@@ -202,7 +204,7 @@ export const VerticalAlign: ToolbarStory = {
 };
 
 export const NoWrap: ToolbarStory = {
-    storyName: "no wrap",
+    name: "no wrap",
     render: () => (
         <Div width={960}>
             <Toolbar wrap={false}>
@@ -225,7 +227,7 @@ export const NoWrap: ToolbarStory = {
 };
 
 export const Complex: ToolbarStory = {
-    storyName: "complex",
+    name: "complex",
     render: () => (
         <Toolbar>
             <CheckboxGroup>
@@ -254,7 +256,7 @@ export const Complex: ToolbarStory = {
 };
 
 export const FieldsLabel: ToolbarStory = {
-    storyName: "fields + label",
+    name: "fields + label",
     render: () => (
         <Toolbar alignY="end">
             <Field>
@@ -275,7 +277,7 @@ export const FieldsLabel: ToolbarStory = {
 };
 
 export const Styling: ToolbarStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Toolbar border="warning">

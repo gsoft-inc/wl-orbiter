@@ -1,5 +1,5 @@
-import { Div } from "@components/html";
-import { Grid, GridProps } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Grid, GridProps } from "@components/layout/index.ts";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

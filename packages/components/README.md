@@ -69,38 +69,12 @@ Specific stories for Chromatic are written to validate the specifications of a c
 
 Storybook is a fantastic tool for visual testing because a story is essentially a test specification. When it does make sense, multiple specifications can be bundled together in a story to save on Chromatic snapshots (which are not cheap!).
 
-Specifications stories must be written with the [storiesOf API](https://storybook.js.org/docs/formats/storiesof-api/) in a `*.chroma.jsx` file.
-
 A specifications story must:
 
 - Be located in the `Chromatic` top level section of the Storybook navigation menu.
 - The second level segment must be the capitalized name of the component (same as the development stories).
 
-Here's an example:
-
-```javascript
-// Button.chroma.jsx
-
-import { paramsBuilder, storiesOfBuilder } from "@stories/utils";
-
-function stories(segment) {
-    return storiesOfBuilder(module, "Chromatic/Button")
-        .segment(segment)
-        .parameters(
-            paramsBuilder()
-                .build()
-            )
-        .build();
-}
-
-stories("/segment")
-    .add("story-name",
-         () =>
-            ...
-    )
-```
-
-The stories must be located in a `tests/chromatic` folder next to the `src` folder of your component. Storybook is configured to load the following tests specifications: `packages/components/src/*/tests/chromatic/**.chroma.[jsx|tsx]`.
+The stories must be located in a `tests/chromatic` folder next to the `src` folder of your component. Storybook is configured to load the following tests specifications: `packages/components/src/*/tests/chromatic/**.stories.tsx`.
 
 ```
 /packages
@@ -109,7 +83,7 @@ The stories must be located in a `tests/chromatic` folder next to the `src` fold
             /src
             /tests
                 /chromatic
-                    Button.chroma.jsx
+                    Button.stories.tsx
 ```
 
 Every component should have a test for "zoom" and "styling". Have a look at the existing tests to learn more.

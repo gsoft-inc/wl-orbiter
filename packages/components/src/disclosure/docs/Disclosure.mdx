@@ -1,0 +1,72 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerDisclosure } from "@components/disclosure/index.ts";
+import { InnerContent } from "@components/placeholders/index.ts";
+
+import * as DisclosureStories from "./Disclosure.stories.tsx";
+
+<Meta of={DisclosureStories} />
+
+# Disclosure
+
+<Tagline>The disclosure component is used to create regions of content that can expand/collapse with a simple animation.</Tagline>
+
+<ComponentInfo
+    usage={"import { Disclosure, Content, DisclosureContext, useDisclosureContext } from \"@workleap/orbiter-ui\";"}
+    ariaPath="disclosure"
+    githubPath="/packages/components/src/disclosure/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- The disclosure's trigger that shows and hides the content must be a [button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) or have the [role button](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
+
+## Usage
+
+### Default
+
+A default disclosure using a button.
+
+<Canvas of={DisclosureStories.Default} />
+
+### Disclosure Context
+
+A disclosure component can update his content based on the `isOpen` value of `useDisclosureContext` or access a `close` function.
+
+<Canvas of={DisclosureStories.Context} />
+
+### Disclosure arrow
+
+You can use a [disclosure arrow](?path=/docs/disclosure-arrow--context) component to hint that activating the button will display additional content.
+
+<Canvas of={DisclosureStories.DisclosureArrowStory} />
+
+### Controlled
+
+A disclosure component can handle `open` state in controlled mode.
+
+<Canvas of={DisclosureStories.Controlled} />
+
+## API
+
+### Disclosure
+
+<ComponentInfo
+    usage={"import { Disclosure } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerDisclosure.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerDisclosure} sort="alpha" />
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />

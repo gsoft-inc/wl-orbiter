@@ -1,31 +1,38 @@
-import { Div } from "@components/html";
-import { Dot } from "@components/dot";
-import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Dot",
-    component: Dot
-} as ComponentMeta<typeof Dot>;
+    component: Dot,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Dot>;
 
-type DotStory = ComponentStoryObj<typeof Dot>;
+export default meta;
+
+type DotStory = StoryObj<typeof meta>;
 
 export const Default: DotStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Dot color="neutral-weakest" />
     )
 };
 
 export const Label: DotStory = {
-    storyName: "label",
+    name: "label",
     render: () => (
         <Dot color="neutral-weakest">Habitable</Dot>
     )
 };
 
 export const Color: DotStory = {
-    storyName: "color",
+    name: "color",
     render: () => (
         <Stack>
             <Dot color="hsl(25, 69%, 41%)"></Dot>
@@ -41,7 +48,7 @@ export const Color: DotStory = {
 };
 
 export const Zoom: DotStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Inline>
             <Div className="zoom-in">
@@ -55,7 +62,7 @@ export const Zoom: DotStory = {
 };
 
 export const Styling: DotStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Inline>

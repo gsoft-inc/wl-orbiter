@@ -1,0 +1,20 @@
+import { Canvas, ComponentInfo, Link, Tagline } from "@stories/components";
+import { Meta } from "@storybook/addon-docs";
+import * as ArticleStories from "./article.stories.tsx";
+
+<Meta of={ArticleStories} />
+
+# Article
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML article element.</Tagline>
+
+<ComponentInfo
+    usage={"import { Article } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+An article component accepts all the [article HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={ArticleStories.Example} />

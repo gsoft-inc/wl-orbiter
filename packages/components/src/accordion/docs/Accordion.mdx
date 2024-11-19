@@ -1,0 +1,131 @@
+import { Accordion, InnerAccordion, InnerAccordionHeader, InnerAccordionPanel } from "@components/accordion/index.ts";
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { Content, InnerContent } from "@components/placeholders/index.ts";
+import { H3, Text } from "@components/typography/index.ts";
+import { SparklesIcon } from "@hopper-ui/icons";
+import { InnerItem, Item } from "@components/collection/index.ts";
+import * as AccordionStories from "./Accordion.stories.tsx";
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+<Tagline>Accordions are commonly used to reduce the need to scroll when presenting multiple sections of content on a single page.</Tagline>
+
+<ComponentInfo
+    usage={"import { Accordion, Item, Header, Content, AccordionContext, useAccordionContext } from \"@workleap/orbiter-ui\";"}
+    ariaPath="accordion"
+    githubPath="/packages/components/src/accordion/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- The accordion header that shows and hides the content must be an [heading element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements).
+- The heading element should have a level that is appropriate for the information architecture of the page. You can choose the appropriate level by selecting one of Orbiter [heading](?path=/docs/heading--default-story) accordingly.
+
+## Usage
+
+We recommend specifying a unique `key` prop for every `<Item>`. If you choose to omit the `key` prop, a key matching the `<Item>` position will be generated. For example, `"0"` would be the generated key for the first `<Item>` of an `<Accordion>` component without keys.
+
+### Default
+
+A default accordion.
+
+<Canvas of={AccordionStories.Default} />
+
+### Icon
+
+An accordion item can contain [icons](?path=/docs/icon-gallery--docs).
+
+<Canvas of={AccordionStories.Icon} />
+
+### Multiple
+
+An accordion can allow multiple items to be expanded at once.
+
+<Canvas of={AccordionStories.Multiple} />
+
+### Dynamic items
+
+Accordion items can be rendered dynamically.
+
+<Canvas of={AccordionStories.DynamicItems} />
+
+### Disabled
+
+An accordion item can be disabled.
+
+<Canvas of={AccordionStories.DisabledItems} />
+
+### Bordered
+
+An accordion can be contained by borders.
+
+<Canvas of={AccordionStories.Bordered} />
+
+### Accordion context
+
+The `expandedKeys` can be retrieved from `useAccordionContext`.
+
+<Canvas of={AccordionStories.AccordionContextStory} />
+
+### Controlled
+
+The `expandedKeys` state can be handled in controlled mode.
+
+<Canvas of={AccordionStories.ControlledAccordion} />
+
+## API
+
+### Accordion
+
+<ComponentInfo
+    usage={"import { Accordion } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAccordion.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAccordion} sort="alpha"/>
+
+### Item
+
+<ComponentInfo
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
+    compact
+/>
+
+<ArgTypes of={Item} sort="alpha" />
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />
+
+### AccordionHeader
+
+<ComponentInfo
+    usage={"import { AccordionHeader } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "text"]}
+    inherits={[InnerAccordionHeader.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAccordionHeader} sort="alpha" />
+
+### AccordionPanel
+
+<ComponentInfo
+    usage={"import { AccordionPanel } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAccordionPanel.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAccordionPanel} sort="alpha" />

@@ -1,0 +1,134 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { InnerCard } from "@components/card/index.ts";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerContent, InnerHeader } from "@components/placeholders/index.ts";
+import { InnerHeading } from "@components/typography/index.ts";
+import * as CardStories from "./Card.stories.tsx";
+
+<Meta of={CardStories} />
+
+# Card
+
+<Tagline>A card group information into a container to let users browse a group of related items and actions.</Tagline>
+
+<ComponentInfo
+    usage={"import { Card, Heading, Header, Content } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/card/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To restrain elements to a non-interactive container. Child elements can be interacted with.
+
+### Card vs Tile
+
+- If you need an interactive or navigable container, use a [tile](?path=/story/tile--default-story) component.
+
+## Usage
+
+### Default
+
+A card must have an heading and a content.
+
+<Canvas of={CardStories.Default} />
+
+### Elevated
+
+A card can use a different style.
+
+<Canvas of={CardStories.Elevated} />
+
+### Image
+
+A card can have an [image](?path=/story/chromatic-image--default):
+
+<Canvas of={CardStories.CardImage} />
+
+Or an [illustration](?path=/docs/illustration--horizontal):
+
+<Canvas of={CardStories.CardIllustration} />
+
+### Header
+
+A card can have an header.
+
+<Canvas of={CardStories.CardHeader} />
+
+### Buttons
+
+A card can have a single [button](?path=/docs/button--default-story):
+
+<Canvas of={CardStories.CardButton} />
+
+Or a [group of button](?path=/docs/button--default-story#button-group):
+
+<Canvas of={CardStories.Buttons} />
+
+### Orientation
+
+A card can render horizontally.
+
+<Canvas of={CardStories.Orientation} />
+
+### Size
+
+A card can vary in size.
+
+<Canvas of={CardStories.Size} />
+
+### Fluid
+
+A card can take the width of its container.
+
+<Canvas of={CardStories.Fluid} />
+
+### Tabs
+
+A card can render any components like [tabs](?path=/story/tabs--default-story).
+
+<Canvas of={CardStories.CardTabs} />
+
+## API
+
+### Card
+
+<ComponentInfo
+    usage={"import { Card } from \"@workleap/orbiter-ui\";"}
+    slots={["image", "illustration", "heading", "header", "content", "button", "button-group"]}
+    inherits={[InnerCard.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerCard} sort="alpha" />
+
+### Heading
+
+<ComponentInfo
+    usage={"import { Heading } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHeading.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHeading} sort="alpha" />
+
+### Header
+
+<ComponentInfo
+    usage={"import { Header } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHeader.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHeader} sort="alpha" />
+
+### Content
+
+<ComponentInfo
+    usage={"import { Content } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerContent.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerContent} sort="alpha" />

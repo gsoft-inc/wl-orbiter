@@ -1,45 +1,52 @@
-import { Inline } from "@components/layout";
-import { NoResults } from "./assets";
-import { SvgImage } from "@components/image";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Inline } from "@components/layout/index.ts";
+import { NoResults } from "./assets/index.ts";
+import { SvgImage } from "@components/image/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/SvgImage",
-    component: SvgImage
-} as ComponentMeta<typeof SvgImage>;
+    component: SvgImage,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof SvgImage>;
 
-type SvgImageStory = ComponentStoryObj<typeof SvgImage>;
+export default meta;
+
+type SvgImageStory = StoryObj<typeof meta>;
 
 export const Stroke: SvgImageStory = {
-    storyName: "stroke",
+    name: "stroke",
     render: () => (
         <SvgImage stroke="neutral" src={NoResults} aria-label="No Results" />
     )
 };
 
 export const Fill: SvgImageStory = {
-    storyName: "fill",
+    name: "fill",
     render: () => (
         <SvgImage fill="neutral" src={NoResults} aria-label="No Results" />
     )
 };
 
 export const Width: SvgImageStory = {
-    storyName: "width",
+    name: "width",
     render: () => (
         <SvgImage width="100px" src={NoResults} stroke="neutral" aria-label="No Results" />
     )
 };
 
 export const Height: SvgImageStory = {
-    storyName: "height",
+    name: "height",
     render: () => (
         <SvgImage height="100px" src={NoResults} stroke="neutral" aria-label="No Results" />
     )
 };
 
 export const Styling: SvgImageStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <SvgImage className="stroke-red" src={NoResults} aria-label="No Results" />

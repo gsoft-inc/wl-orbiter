@@ -1,5 +1,5 @@
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { GroupField, HelpMessage, Label } from "@components/field";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { GroupField, HelpMessage, Label } from "@components/field/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

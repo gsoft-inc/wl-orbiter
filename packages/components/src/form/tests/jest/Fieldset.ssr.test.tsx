@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { Field, Label } from "@components/field";
-import { Fieldset } from "@components/form";
-import { TextInput } from "@components/text-input";
+import { Field, Label } from "@components/field/index.ts";
+import { Fieldset } from "@components/form/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

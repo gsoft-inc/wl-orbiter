@@ -1,9 +1,9 @@
-import { Overlay, UsePopupOptions, usePopup } from "@components/overlay";
+import { Overlay, UsePopupOptions, usePopup } from "@components/overlay/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Keys } from "@components/shared";
-import { Transition } from "@components/transition";
-import userEvent from "@testing-library/user-event";
+import { Button } from "@components/button/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Transition } from "@components/transition/index.ts";
+import { userEvent } from "@testing-library/user-event";
 
 type PopupProps = UsePopupOptions & {
     "data-triggertestid"?: string;
@@ -204,9 +204,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         fireEvent.keyDown(screen.getByTestId("overlay"), { key: Keys.esc });
 
@@ -227,9 +225,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         fireEvent.keyDown(screen.getByTestId("overlay"), { key: Keys.esc });
 
@@ -304,9 +300,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         await userEvent.click(document.body);
 
@@ -327,9 +321,7 @@ describe("\"click\" trigger", () => {
 
         expect(await screen.findByTestId("overlay")).toBeInTheDocument();
 
-        act(() => {
-            screen.getByTestId("overlay").focus();
-        });
+        screen.getByTestId("overlay").click();
 
         await userEvent.click(document.body);
 
@@ -408,9 +400,7 @@ test("closing the popup with esc keypress return the focus to the trigger", asyn
 
     await userEvent.click(screen.getByTestId("trigger"));
 
-    act(() => {
-        screen.getByTestId("overlay").focus();
-    });
+    (await screen.findByTestId("overlay")).focus();
 
     await waitFor(() => expect(screen.getByTestId("trigger")).not.toHaveFocus());
 

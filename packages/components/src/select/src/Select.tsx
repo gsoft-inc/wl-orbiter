@@ -1,18 +1,18 @@
 import { ComponentProps, ReactElement, ReactNode, SyntheticEvent, forwardRef } from "react";
-import { OmitInternalProps, augmentElement, cssModule, isNil, mergeProps } from "../../shared";
-import { Overlay, OverlayProps, PopupAlignmentProp, PopupDirectionProp } from "../../overlay";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+import { OmitInternalProps, augmentElement, cssModule, isNil, mergeProps } from "../../shared/index.ts";
+import { Overlay, OverlayProps, PopupAlignmentProp, PopupDirectionProp } from "../../overlay/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
 
-import { AbstractInputProps } from "../../input";
-import { Box } from "../../box";
-import { DisclosureArrow } from "../../disclosure";
-import { HiddenSelect } from "./HiddenSelect";
-import { Listbox } from "../../listbox";
-import { Span } from "../../html";
-import { Text } from "../../typography";
-import { useFieldInputProps } from "../../field";
-import { useInputGroupSelectAddonProps } from "../../input-group";
-import { useSelect } from "./useSelect";
+import { AbstractInputProps } from "../../input/index.ts";
+import { Box } from "../../box/index.ts";
+import { DisclosureArrow } from "../../disclosure/index.ts";
+import { HiddenSelect } from "./HiddenSelect.tsx";
+import { Listbox } from "../../listbox/index.ts";
+import { Span } from "../../html/index.ts";
+import { Text } from "../../typography/index.ts";
+import { useFieldInputProps } from "../../field/index.ts";
+import { useInputGroupSelectAddonProps } from "../../input-group/index.ts";
+import { useSelect } from "./useSelect.tsx";
 
 const DefaultElement = "button";
 

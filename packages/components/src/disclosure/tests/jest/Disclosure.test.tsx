@@ -1,7 +1,7 @@
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Disclosure } from "@components/disclosure";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Disclosure } from "@components/disclosure/index.ts";
+import { Keys } from "@components/shared/index.ts";
 import { fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
 // ***** Behaviors *****

@@ -1,4 +1,4 @@
-import { IconList, IconListProps } from "@components/icons";
+import { IconList, IconListProps } from "@components/icons/index.ts";
 import { CheckmarkIcon } from "@hopper-ui/icons";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";

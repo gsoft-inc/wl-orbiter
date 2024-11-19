@@ -1,8 +1,8 @@
 import { Children, ElementType, ReactElement, ReactNode, Ref, RefAttributes, useMemo } from "react";
-import { Divider } from "../../divider";
-import { Item, Section } from "../../collection";
-import { TooltipTrigger, parseTooltipTrigger } from "../../tooltip";
-import { isNil, resolveChildren } from "../../shared";
+import { Divider } from "../../divider/index.ts";
+import { Item, Section } from "../../collection/index.ts";
+import { TooltipTrigger, parseTooltipTrigger } from "../../tooltip/index.ts";
+import { isNil, resolveChildren } from "../../shared/index.ts";
 
 export interface CollectionNode {
     elementType?: ElementType | string;
@@ -75,7 +75,7 @@ export class CollectionBuilder {
             index,
             key: !isNil(element.key) ? element.key.toString().replace(".", "").replace("$", "") : index.toString(),
             props,
-            ref: (element as RefAttributes<any>).ref,
+            ref: (element as RefAttributes<any>).ref as Ref<any>,
             type: NodeType.item
         };
     }
@@ -97,7 +97,7 @@ export class CollectionBuilder {
             items,
             key: index.toString(),
             props,
-            ref: (element as RefAttributes<any>).ref,
+            ref: (element as RefAttributes<any>).ref as Ref<any>,
             type: NodeType.section
         };
     }
@@ -113,7 +113,7 @@ export class CollectionBuilder {
             index,
             key: index.toString(),
             props,
-            ref: (element as RefAttributes<any>).ref,
+            ref: (element as RefAttributes<any>).ref as Ref<any>,
             type: NodeType.divider
         };
     }

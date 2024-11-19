@@ -1,0 +1,102 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { SparklesIcon } from "@hopper-ui/icons";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { Inline } from "@components/layout/index.ts";
+import { InnerLozenge, Lozenge } from "@components/lozenge/index.ts";
+import { Text } from "@components/typography/index.ts";
+
+import * as LozengeStories from "./Lozenge.stories.tsx";
+
+<Meta of={LozengeStories}/>
+
+# Lozenge
+
+<Tagline>Lozenges are used to highlight an item's status, for quick recognition or to give additional information such as highlighting a new item.</Tagline>
+
+<ComponentInfo
+    usage={"import { Lozenge } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/lozenge/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To highlight an element in a list.
+- To bring attention to a particular element that requires the user’s attention, such as an expiring license, something new or a problematic situation.
+
+### Content
+
+- Be concise, 1 or 2 short words is the optimal length.
+- Be descriptive enough to be understood without relying on a color or an icon.
+- Be non-interactive, this includes being clickable or triggering a tooltip on hover.
+- Refrain from using punctuation like `!` or `?`.
+
+### Lozenge vs Counter vs Badge
+
+- Lozenges are for text copy. If you want to display a quantity, use either a [counter](?path=/docs/counter--default-story) or a [badge](?path=/docs/badge--default-story).
+
+## Usage
+
+### Default
+
+This is the lozenge that should be used in most situations.
+
+<Canvas of={LozengeStories.Default} />
+
+### Icon
+
+An [icon](?path=/docs/icon-gallery--docs) is used to make it easier for the user to understand the intent of the Lozenge. It is strongly recommended to use a Minor Icon in this particular use case.
+
+<Canvas of={LozengeStories.IconStory} />
+
+### Size
+
+The lozenge can be used in small version to accommodate smaller spaces, such as a column row. When used in small format, the lozenge should not contain an icon, and text is automatically set to uppercase.
+
+<Canvas of={LozengeStories.Size} />
+
+### Highlight
+
+A lozenge can be highlighted to bring more attention to it when required. This version should be used sparingly to avoid overloading the user interface.
+
+<Canvas of={LozengeStories.Highlight} />
+
+### Fluid
+
+A lozenge can take all the available space.
+
+<Canvas of={LozengeStories.Fluid} />
+
+### Warning
+
+A lozenge can use a warning color. This version is useful when we need to warn the user of an action that need to be taken in the near future but not immediately.
+
+<Canvas of={LozengeStories.Warning} />
+
+### Positive
+
+This version can be used to highlight a positive message.
+
+<Canvas of={LozengeStories.Positive} />
+
+### Negative
+
+This version is used to represent a state or an element that is either in a negative or destructive state.
+
+As an example, it can be used to highlight a blocked user or an element that has been deleted but still visible. This should be used with caution as this color scheme can trigger a negative reaction from a user.
+
+<Canvas of={LozengeStories.Negative} />
+
+## API
+
+### Lozenge
+
+<ComponentInfo
+    usage={"import { Lozenge } from \"@workleap/orbiter-ui\";"}
+    slots={["text", "icon"]}
+    inherits={[InnerLozenge.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerLozenge} sort="alpha" />

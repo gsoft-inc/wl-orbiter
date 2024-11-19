@@ -1,12 +1,12 @@
-import { Box } from "../../box";
-import { ClearToolbar, useToolbarProps } from "../../toolbar";
+import { Box } from "../../box/index.ts";
+import { ClearToolbar, useToolbarProps } from "../../toolbar/index.ts";
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { FieldContext } from "./FieldContext";
-import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { ValidationState } from "../../input";
-import { useField } from "./useField";
-import { useFormField } from "../../form";
+import { FieldContext } from "./FieldContext.tsx";
+import { InternalProps, OmitInternalProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { ValidationState } from "../../input/index.ts";
+import { useField } from "./useField.ts";
+import { useFormField } from "../../form/index.ts";
 
 const DefaultElement = "div";
 
@@ -15,6 +15,10 @@ export interface InnerFieldProps extends InternalProps, StyledComponentProps<typ
      * React children.
      */
     children: ReactNode;
+    /**
+     * Whether or not the field is disabled.
+     */
+    disabled?: boolean;
     /**
      * Whether or not the field take up the width of its container.
      */

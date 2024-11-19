@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "../../box";
+import { Box, BoxProps } from "../../box/index.ts";
 import { forwardRef, useCallback, useRef, useState, ChangeEvent, ComponentProps, FocusEvent, KeyboardEvent, ReactElement, ReactNode, SyntheticEvent } from "react";
 import {
     Keys,
@@ -13,19 +13,19 @@ import {
     useId,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { Listbox, ListboxElement, OptionKeyProp } from "../../listbox";
-import { Overlay, OverlayProps, PopupPosition, PopupProps, isDevToolsBlurEvent, isTargetParent, usePopup, useTriggerWidth } from "../../overlay";
-import { ResponsiveProp, WidthProp } from "../../styling";
-import { UseFieldInputPropsReturn, useFieldInputProps } from "../../field";
-import { getItemText, useCollectionSearch, useOnlyCollectionItems } from "../../collection";
+} from "../../shared/index.ts";
+import { Listbox, ListboxElement, OptionKeyProp } from "../../listbox/index.ts";
+import { Overlay, OverlayProps, PopupPosition, PopupProps, isDevToolsBlurEvent, isTargetParent, usePopup, useTriggerWidth } from "../../overlay/index.ts";
+import { ResponsiveProp, WidthProp } from "../../styling/index.ts";
+import { UseFieldInputPropsReturn, useFieldInputProps } from "../../field/index.ts";
+import { getItemText, useCollectionSearch, useOnlyCollectionItems } from "../../collection/index.ts";
 
-import { AbstractInputProps } from "../../input";
-import { HiddenAutocomplete } from "./HiddenAutocomplete";
-import { SearchInput } from "../../text-input";
-import { useDebouncedCallback } from "./useDebouncedCallback";
-import { useDeferredValue } from "./useDeferredValue";
-import { useInputGroupTextInputProps } from "../../input-group";
+import { AbstractInputProps } from "../../input/index.ts";
+import { HiddenAutocomplete } from "./HiddenAutocomplete.tsx";
+import { SearchInput } from "../../text-input/index.ts";
+import { useDebouncedCallback } from "./useDebouncedCallback.ts";
+import { useDeferredValue } from "./useDeferredValue.ts";
+import { useInputGroupTextInputProps } from "../../input-group/index.ts";
 
 const DefaultElement = "input";
 

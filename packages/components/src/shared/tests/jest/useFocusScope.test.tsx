@@ -1,13 +1,13 @@
-import { FocusScope, FocusScopeContext, isFunction, useFocusScope, useMergedRefs } from "@components/shared";
+import { FocusScope, FocusScopeContext, isFunction, useFocusScope, useMergedRefs } from "@components/shared/index.ts";
 import { ReactNode, createRef, forwardRef } from "react";
 import { render, waitFor, renderWithTheme } from "@test-utils";
 
-import { Button } from "@components/button";
-import { Disclosure } from "@components/disclosure";
-import { Div } from "@components/html";
-import { Item } from "@components/collection";
-import { Select } from "@components/select";
-import { TextInput } from "@components/text-input";
+import { Button } from "@components/button/index.ts";
+import { Disclosure } from "@components/disclosure/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Select } from "@components/select/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
 
 interface FocusScopeProps {
     tabIndex?: number;
@@ -152,6 +152,7 @@ test("when the root element is focusable, the scope includes the root element", 
     const textInputRef = createRef<HTMLInputElement>();
 
     render(
+        // eslint-disable-next-line jsx-a11y/tabindex-no-positive
         <Container tabIndex={1} ref={rootRef} onInitialScope={scope => { focusScope = scope; }}>
             <Div>Decoy 1</Div>
             <Button ref={buttonRef}>Button</Button>

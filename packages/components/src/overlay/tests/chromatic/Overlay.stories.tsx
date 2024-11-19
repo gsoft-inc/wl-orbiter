@@ -1,11 +1,11 @@
-import { Box, BoxProps } from "@components/box";
-import { Overlay } from "@components/overlay";
-import { ThemeProvider } from "@components/styling";
-import { augmentElement, mergeProps, useMergedRefs } from "@components/shared";
+import { Box, BoxProps } from "@components/box/index.ts";
+import { Overlay } from "@components/overlay/index.ts";
+import { ThemeProvider } from "@components/styling/index.ts";
+import { augmentElement, mergeProps, useMergedRefs } from "@components/shared/index.ts";
 import { forwardRef, ReactElement, useState } from "react";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Overlay",
     component: Overlay,
     parameters: {
@@ -14,9 +14,11 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Overlay>;
+} as Meta<typeof Overlay>;
 
-type OverlayStory = ComponentStoryObj<typeof Overlay>;
+export default meta;
+
+type OverlayStory = StoryObj<typeof meta>;
 
 function PrimaryBox({ children, ...rest }: BoxProps) {
     return (
@@ -59,7 +61,7 @@ ref) => {
 });
 
 export const InheritTheme: OverlayStory = {
-    storyName: "inherit theme",
+    name: "inherit theme",
     render: () => (
         <ThemeProvider colorScheme="light">
             <Boundary>
@@ -72,7 +74,7 @@ export const InheritTheme: OverlayStory = {
 };
 
 export const StyledSystem: OverlayStory = {
-    storyName: "styled system",
+    name: "styled system",
     render: () => (
         <Boundary>
             <Overlay border="warning" show>
@@ -83,7 +85,7 @@ export const StyledSystem: OverlayStory = {
 };
 
 export const ClassName: OverlayStory = {
-    storyName: "className",
+    name: "className",
     render: () => (
         <Boundary>
             <Overlay className="border-red" show>
@@ -94,7 +96,7 @@ export const ClassName: OverlayStory = {
 };
 
 export const Style: OverlayStory = {
-    storyName: "style",
+    name: "style",
     render: () => (
         <Boundary>
             <Overlay style={{ border: "1px solid red" }} show>

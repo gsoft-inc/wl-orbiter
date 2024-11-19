@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { TextArea } from "@components/text-area";
+import { TextArea } from "@components/text-area/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

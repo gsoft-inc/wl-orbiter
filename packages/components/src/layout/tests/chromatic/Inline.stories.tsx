@@ -1,16 +1,23 @@
-import { Div } from "@components/html";
-import { Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Inline",
-    component: Inline
-} as ComponentMeta<typeof Inline>;
+    component: Inline,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Inline>;
 
-type InlineStory = ComponentStoryObj<typeof Inline>;
+export default meta;
+
+type InlineStory = StoryObj<typeof meta>;
 
 export const Default: InlineStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -21,7 +28,7 @@ export const Default: InlineStory = {
 };
 
 export const Reverse: InlineStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <Inline reverse>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -32,7 +39,7 @@ export const Reverse: InlineStory = {
 };
 
 export const AlignXStart: InlineStory = {
-    storyName: "align X start",
+    name: "align X start",
     render: () => (
         <Inline alignX="start">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -43,7 +50,7 @@ export const AlignXStart: InlineStory = {
 };
 
 export const AlignXCenter: InlineStory = {
-    storyName: "align X center",
+    name: "align X center",
     render: () => (
         <Inline alignX="center">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -54,7 +61,7 @@ export const AlignXCenter: InlineStory = {
 };
 
 export const AlignXEnd: InlineStory = {
-    storyName: "align X end",
+    name: "align X end",
     render: () => (
         <Inline alignX="end">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -65,7 +72,7 @@ export const AlignXEnd: InlineStory = {
 };
 
 export const AlignYStart: InlineStory = {
-    storyName: "align Y start",
+    name: "align Y start",
     render: () => (
         <Inline alignY="start" height={800}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -76,7 +83,7 @@ export const AlignYStart: InlineStory = {
 };
 
 export const AlignYCenter: InlineStory = {
-    storyName: "align Y center",
+    name: "align Y center",
     render: () => (
         <Inline alignY="center" height={800}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -87,7 +94,7 @@ export const AlignYCenter: InlineStory = {
 };
 
 export const AlignYEnd: InlineStory = {
-    storyName: "align Y end",
+    name: "align Y end",
     render: () => (
         <Inline alignY="end" height={800}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -98,7 +105,7 @@ export const AlignYEnd: InlineStory = {
 };
 
 export const Wrap: InlineStory = {
-    storyName: "wrap",
+    name: "wrap",
     render: () => (
         <Inline width={240}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -109,7 +116,7 @@ export const Wrap: InlineStory = {
 };
 
 export const Nowrap: InlineStory = {
-    storyName: "nowrap",
+    name: "nowrap",
     render: () => (
         <Inline wrap={false} width={240}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -120,7 +127,7 @@ export const Nowrap: InlineStory = {
 };
 
 export const DefaultInline: InlineStory = {
-    storyName: "inline",
+    name: "inline",
     render: () => (
         <>
             <Inline inline>
@@ -138,7 +145,7 @@ export const DefaultInline: InlineStory = {
 };
 
 export const Nested: InlineStory = {
-    storyName: "nested",
+    name: "nested",
     render: () => (
         <Inline gap={400}>
             <Inline gap={40}>

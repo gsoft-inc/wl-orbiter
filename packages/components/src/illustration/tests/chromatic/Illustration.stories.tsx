@@ -1,20 +1,27 @@
-import { Box } from "@components/box";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Nasa } from "./assets";
+import { Box } from "@components/box/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
+import { Nasa } from "./assets/index.ts";
 
-export default {
+const meta = {
     title: "Chromatic/Illustration",
-    component: Illustration
-} as ComponentMeta<typeof Illustration>;
+    component: Illustration,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Illustration>;
 
-type IllustrationStory = ComponentStoryObj<typeof Illustration>;
+export default meta;
+
+type IllustrationStory = StoryObj<typeof meta>;
 
 export const Default: IllustrationStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Illustration>
             <Image src={Nasa} alt="Nasa" width="150px" />
@@ -23,7 +30,7 @@ export const Default: IllustrationStory = {
 };
 
 export const Horizontal: IllustrationStory = {
-    storyName: "horizontal",
+    name: "horizontal",
     render: () => (
         <Stack>
             <Illustration orientation="horizontal" width="700px" height="200px" backgroundColor="sapphire-200">
@@ -39,7 +46,7 @@ export const Horizontal: IllustrationStory = {
 };
 
 export const Vertical: IllustrationStory = {
-    storyName: "vertical",
+    name: "vertical",
     render: () => (
         <Inline>
             <Illustration orientation="vertical" width="200px" height="500px" backgroundColor="sapphire-200">
@@ -55,7 +62,7 @@ export const Vertical: IllustrationStory = {
 };
 
 export const Straight: IllustrationStory = {
-    storyName: "straight",
+    name: "straight",
     render: () => (
         <Illustration shape="straight" width="700px" height="200px" backgroundColor="sapphire-200">
             <Image src={Nasa} alt="Nasa" />
@@ -64,7 +71,7 @@ export const Straight: IllustrationStory = {
 };
 
 export const Rounded: IllustrationStory = {
-    storyName: "rounded",
+    name: "rounded",
     render: () => (
         <Illustration shape="rounded" width="700px" height="200px" backgroundColor="sapphire-200">
             <Image src={Nasa} alt="Nasa" />
@@ -73,7 +80,7 @@ export const Rounded: IllustrationStory = {
 };
 
 export const Color: IllustrationStory = {
-    storyName: "color",
+    name: "color",
     render: () => (
         <Stack>
             <Inline>
@@ -97,7 +104,7 @@ export const Color: IllustrationStory = {
 };
 
 export const Zoom: IllustrationStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -115,7 +122,7 @@ export const Zoom: IllustrationStory = {
 };
 
 export const Styling: IllustrationStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Illustration border="warning" width="700px" height="200px">

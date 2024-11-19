@@ -1,19 +1,26 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { Button, ButtonGroup, IconButton } from "@components/button";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { TextLinkAsButton } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button, ButtonGroup, IconButton } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/ButtonGroup-hopper",
-    component: ButtonGroup
-} as ComponentMeta<typeof ButtonGroup>;
+    component: ButtonGroup,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof ButtonGroup>;
 
-type ButtonGroupStory = ComponentStoryObj<typeof ButtonGroup>;
+export default meta;
+
+type ButtonGroupStory = StoryObj<typeof meta>;
 
 export const Default: ButtonGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <ButtonGroup size="sm">
@@ -31,7 +38,7 @@ export const Default: ButtonGroupStory = {
 };
 
 export const ButtonGroupIconButton: ButtonGroupStory = {
-    storyName: "icon button",
+    name: "icon button",
     render: () => (
         <Inline gap={800}>
             <Stack>
@@ -63,7 +70,7 @@ export const ButtonGroupIconButton: ButtonGroupStory = {
 };
 
 export const Fluid: ButtonGroupStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <ButtonGroup fluid>
             <Button variant="secondary">Cutoff</Button>
@@ -74,7 +81,7 @@ export const Fluid: ButtonGroupStory = {
 };
 
 export const Disabled: ButtonGroupStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <ButtonGroup disabled>
             <Button variant="secondary">Cutoff</Button>
@@ -85,7 +92,7 @@ export const Disabled: ButtonGroupStory = {
 };
 
 export const Align: ButtonGroupStory = {
-    storyName: "align",
+    name: "align",
     render: () => (
         <Stack>
             <ButtonGroup align="start">
@@ -109,7 +116,7 @@ export const Align: ButtonGroupStory = {
 };
 
 export const Zoom: ButtonGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">

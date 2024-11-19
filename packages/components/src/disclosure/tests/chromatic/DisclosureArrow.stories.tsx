@@ -1,8 +1,8 @@
-import { DisclosureArrow, DisclosureContext } from "@components/disclosure";
-import { Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { DisclosureArrow, DisclosureContext } from "@components/disclosure/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/DisclosureArrow",
     component: DisclosureArrow,
     parameters: {
@@ -10,19 +10,21 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof DisclosureArrow>;
+} as Meta<typeof DisclosureArrow>;
 
-type DisclosureArrowStory = ComponentStoryObj<typeof DisclosureArrow>;
+export default meta;
+
+type DisclosureArrowStory = StoryObj<typeof meta>;
 
 export const Default:DisclosureArrowStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <DisclosureArrow open />
     )
 };
 
 export const Controlled:DisclosureArrowStory = {
-    storyName: "controlled",
+    name: "controlled",
     render: () => (
         <Inline>
             <DisclosureArrow open={false} />
@@ -32,7 +34,7 @@ export const Controlled:DisclosureArrowStory = {
 };
 
 export const Context:DisclosureArrowStory = {
-    storyName: "context",
+    name: "context",
     render: () => (
         <Inline>
             <DisclosureContext.Provider value={{ isOpen: false }}>
@@ -46,7 +48,7 @@ export const Context:DisclosureArrowStory = {
 };
 
 export const Styling:DisclosureArrowStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <DisclosureArrow open className="border-red" />

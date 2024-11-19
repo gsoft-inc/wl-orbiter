@@ -1,26 +1,33 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Stack } from "@components/layout";
-import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Divider",
-    component: Divider
-} as ComponentMeta<typeof Divider>;
+    component: Divider,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Divider>;
 
-type DividerStory = ComponentStoryObj<typeof Divider>;
+export default meta;
+
+type DividerStory = StoryObj<typeof meta>;
 
 export const Default: DividerStory = {
-    storyName: "default",
-    render:() => (
+    name: "default",
+    render: () => (
         <Divider />
     )
 };
 
 export const Surrounded: DividerStory = {
-    storyName: "surrounded",
-    render:() => (
+    name: "surrounded",
+    render: () => (
         <Div>
             <Text>Apollo 8 - 1968</Text>
             <Divider />
@@ -30,8 +37,8 @@ export const Surrounded: DividerStory = {
 };
 
 export const MultipleSeparators: DividerStory = {
-    storyName: "multiple separators",
-    render:() => (
+    name: "multiple separators",
+    render: () => (
         <Div>
             <Text>Apollo 8 - 1968</Text>
             <Divider />
@@ -45,22 +52,22 @@ export const MultipleSeparators: DividerStory = {
 };
 
 export const Labelled: DividerStory = {
-    storyName: "labelled",
-    render:() => (
+    name: "labelled",
+    render: () => (
         <Divider>Since 1978</Divider>
     )
 };
 
 export const LongLabel: DividerStory = {
-    storyName: "long label",
-    render:() => (
+    name: "long label",
+    render: () => (
         <Divider height="20rem">Since 1978 there have been more than 10 space exploration missions.</Divider>
     )
 };
 
 export const LabelledSurrounded: DividerStory = {
-    storyName: "labelled surrounded",
-    render:() => (
+    name: "labelled surrounded",
+    render: () => (
         <Div>
             <Text>Apollo 11 - 1969</Text>
             <Divider>Since 1978</Divider>
@@ -70,8 +77,8 @@ export const LabelledSurrounded: DividerStory = {
 };
 
 export const Zoom: DividerStory = {
-    storyName: "zoom",
-    render:() => (
+    name: "zoom",
+    render: () => (
         <Stack>
             <Div className="zoom-in">
                 <Divider>Since 1978</Divider>
@@ -84,8 +91,8 @@ export const Zoom: DividerStory = {
 };
 
 export const Styling: DividerStory = {
-    storyName: "styling",
-    render:() => (
+    name: "styling",
+    render: () => (
         <Stack>
             <Divider border="warning" />
             <Divider className="border-red" />

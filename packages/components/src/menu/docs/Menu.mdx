@@ -1,0 +1,196 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerDivider } from "@components/divider/index.ts";
+import { InnerItem, InnerSection } from "@components/collection/index.ts";
+import { InnerMenu, InnerMenuItem, InnerMenuSection, InnerMenuTrigger } from "@components/menu/index.ts";
+
+import * as MenuStories from "./Menu.stories.tsx";
+
+<Meta of={MenuStories}/>
+
+# Menu
+
+<Tagline>A menu offers a list of choices to the user, such as a set of actions or functions.</Tagline>
+
+<ComponentInfo
+    usage={"import { MenuTrigger, Menu, Item, Section, Divider, MenuTriggerContext, useMenuTriggerContext } from \"@workleap/orbiter-ui\";"}
+    ariaPath="menu"
+    githubPath="/packages/components/src/menu/src"
+/>
+
+## Usage
+
+A menu accepts exactly two children: the element which trigger the opening of the menu and the menu items. A trigger can be any component which accepts a `ref` and any other props passed from menu.
+
+### Default
+
+A default menu.
+
+<Canvas of={MenuStories.Default} />
+
+### Sections
+
+A menu items can be group by sections.
+
+<Canvas of={MenuStories.Sections} />
+
+### Dividers
+
+A menu items can be separated by dividers.
+
+<Canvas of={MenuStories.Dividers} />
+
+### Item icon
+
+A menu item can have [icons](?path=/docs/icon-gallery--docs).
+
+<Canvas of={MenuStories.ItemIcon} />
+
+### Item end icon
+
+A select item can have *non standard* end [icons](?path=/docs/icon-gallery--docs) can be provided to handle special cases like displaying a list of icons. However, think twice before adding *end* icons, *start* icons should be your go-to.
+
+<Canvas of={MenuStories.ItemEndIcon} />
+
+### Item description
+
+A menu item can have a **single line** description.
+
+<Canvas of={MenuStories.ItemDescription} />
+
+A description can be paired with an [icon](?path=/docs/icon-gallery--docs).
+
+<Canvas of={MenuStories.ItemDescriptionIcon} />
+
+A description can also be paired with an [avatar](?path=/docs/avatar--default-story)
+
+<Canvas of={MenuStories.ItemDescriptionAvatar} />
+
+### Item tooltip
+
+A menu item can have a basic tooltip.
+
+<Canvas of={MenuStories.ItemTooltip} />
+
+### Disabled item
+
+A menu item can be disabled.
+
+<Canvas of={MenuStories.DisabledItem} />
+
+### Validation
+
+A menu can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the menu via the `validationState` prop.
+
+<Canvas of={MenuStories.Validation} />
+
+### Selection
+
+A menu supports multiple selection modes. By default, selection is disabled, however this can be changed by settings the `selectionMode` property to `"single"` or `"multiple"`.
+
+> When using selection with a `<Menu>` component wraped inside a `<MenuTrigger>`, you must handled the selected keys in controlled mode with the `selectedKeys` property otherwise the selected keys won't be persisted through openings.
+
+<Canvas of={MenuStories.Selection} />
+
+### Custom trigger
+
+A menu trigger can update is appareance based on the `isOpen` value by using `useMenuTriggerContext`.
+
+Any trigger would work as long as it accepts a `ref` and any other props provided by the menu.
+
+<Canvas of={MenuStories.CustomTriggerStory} />
+
+### Disclosure arrow
+
+You can use a [disclosure arrow](?path=/docs/disclosure-arrow--context) component to hint that activating the button will display additional content.
+
+<Canvas of={MenuStories.DisclosureArrowStory} />
+
+### Dynamic items
+
+A menu items can be rendered dynamically.
+
+<Canvas of={MenuStories.DynamicItems} />
+
+### Controlled
+
+The `selectedKey` and `open` state can be handled in controlled mode.
+
+<Canvas of={MenuStories.Controlled} />
+
+### Opening a modal
+
+A `ModalTrigger` component won't work with a menu item. Still, it can be done with a [custom modal trigger](?path=/docs/modal--default-story#custom-trigger).
+
+<Canvas of={MenuStories.ModalStory} />
+
+## API
+
+### MenuTrigger
+
+<ComponentInfo
+    usage={"import { MenuTrigger } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerMenuTrigger.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerMenuTrigger} sort="alpha" />
+
+### Menu
+
+<ComponentInfo
+    usage={"import { Menu } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerMenu.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerMenu} sort="alpha" />
+
+### Item
+
+<ComponentInfo
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "text", "description", "end-icon"]}
+    compact
+/>
+
+<ArgTypes of={InnerItem} sort="alpha" />
+
+### Section
+
+<ComponentInfo
+    usage={"import { Section } from \"@workleap/orbiter-ui\";"}
+    compact
+/>
+
+<ArgTypes of={InnerSection} sort="alpha" />
+
+### Divider
+
+<ComponentInfo
+    usage={"import { Divider } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerDivider.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerDivider} sort="alpha" />
+
+### MenuItem
+
+<ComponentInfo
+    usage={"import { MenuItem } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerMenuItem.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerMenuItem} sort="alpha" />
+
+### MenuSection
+
+<ComponentInfo
+    usage={"import { MenuSection } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerMenuSection.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerMenuSection} sort="alpha" />

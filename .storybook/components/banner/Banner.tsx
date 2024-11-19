@@ -1,7 +1,7 @@
 import "./Banner.css";
 
-import { Div, DivProps } from "@components/html";
-import { mergeProps } from "@components/shared";
+import { Div, DivProps } from "@components/html/index.ts";
+import { mergeProps } from "@components/shared/index.ts";
 
 export function Banner({ children, ...rest }: DivProps) {
     return (

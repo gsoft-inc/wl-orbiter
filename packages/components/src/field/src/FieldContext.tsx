@@ -1,6 +1,6 @@
 import { ElementType, ReactNode, createContext, useContext } from "react";
-import { HtmlLabel, Span } from "../../html";
-import { isNil } from "../../shared";
+import { HtmlLabel, Span } from "../../html/index.ts";
+import { isNil } from "../../shared/index.ts";
 
 export interface FieldContextType {
     disabled?: boolean;

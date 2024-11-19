@@ -1,4 +1,4 @@
-import { Tooltip } from "@components/tooltip";
+import { Tooltip } from "@components/tooltip/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

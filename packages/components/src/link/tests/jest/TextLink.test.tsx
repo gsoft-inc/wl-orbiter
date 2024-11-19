@@ -1,4 +1,4 @@
-import { TextLink } from "@components/link";
+import { TextLink } from "@components/link/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

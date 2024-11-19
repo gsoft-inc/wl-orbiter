@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { ErrorMessage, ErrorMessageProps, HelpMessage, HelpMessageProps, ValidMessage, ValidMessageProps } from "@components/field";
+import { ErrorMessage, ErrorMessageProps, HelpMessage, HelpMessageProps, ValidMessage, ValidMessageProps } from "@components/field/index.ts";
 import { forwardRef } from "react";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";

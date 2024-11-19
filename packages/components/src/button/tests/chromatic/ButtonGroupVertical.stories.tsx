@@ -1,18 +1,20 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { TextLinkAsButton } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: ButtonGroup,
     title: "Chromatic/ButtonGroup/vertical"
-} as ComponentMeta<typeof ButtonGroup>;
+} as Meta<typeof ButtonGroup>;
 
-type ButtonGroupStory = ComponentStoryObj<typeof ButtonGroup>;
+export default meta;
+
+type ButtonGroupStory = StoryObj<typeof meta>;
 
 export const Default: ButtonGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <ButtonGroup orientation="vertical">
             <Button variant="secondary">Cutoff</Button>
@@ -24,7 +26,7 @@ export const Default: ButtonGroupStory = {
 
 
 export const Size: ButtonGroupStory = {
-    storyName: "size",
+    name: "size",
     render: () => (
         <Inline alignY="end">
             <ButtonGroup orientation="vertical" size="sm">
@@ -43,7 +45,7 @@ export const Size: ButtonGroupStory = {
 
 
 export const Align: ButtonGroupStory = {
-    storyName: "align",
+    name: "align",
     render: () => (
         <Stack>
             <Inline>
@@ -69,7 +71,7 @@ export const Align: ButtonGroupStory = {
 };
 
 export const Zoom: ButtonGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Inline>
             <Div className="zoom-in">

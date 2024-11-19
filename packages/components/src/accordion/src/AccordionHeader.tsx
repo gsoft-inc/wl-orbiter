@@ -1,8 +1,8 @@
 import { ComponentProps, ElementType, ReactNode, forwardRef, useMemo } from "react";
-import { DisclosureArrow } from "../../disclosure";
-import { Div, HtmlButton } from "../../html";
-import { H3, HeadingProps, Text } from "../../typography";
-import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, omitProps, useSlots } from "../../shared";
+import { DisclosureArrow } from "../../disclosure/index.ts";
+import { Div, HtmlButton } from "../../html/index.ts";
+import { H3, HeadingProps, Text } from "../../typography/index.ts";
+import { InteractionProps, InternalProps, OmitInternalProps, StyledComponentProps, cssModule, mergeProps, omitProps, useSlots } from "../../shared/index.ts";
 
 const DefaultElement = "button";
 
@@ -18,7 +18,7 @@ export interface InnerAccordionHeaderProps extends InternalProps, InteractionPro
     /**
      * The header item props.
      */
-    header: {
+    header?: {
         key: string;
     };
     /**

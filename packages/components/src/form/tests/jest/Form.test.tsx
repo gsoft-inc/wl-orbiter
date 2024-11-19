@@ -1,4 +1,4 @@
-import { Form, FormProps } from "@components/form";
+import { Form, FormProps } from "@components/form/index.ts";
 import { createRef, forwardRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

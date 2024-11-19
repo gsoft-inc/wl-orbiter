@@ -1,2 +1,1 @@
-export * from "./ThemedSnippet";
-export * from "./useThemedSnippet";
+export * from "./useThemedSnippet.ts";

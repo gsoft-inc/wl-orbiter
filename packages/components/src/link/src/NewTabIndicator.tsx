@@ -1,5 +1,5 @@
-import { Span } from "../../html";
-import { VisuallyHidden } from "../../visually-hidden";
+import { Span } from "../../html/index.ts";
+import { VisuallyHidden } from "../../visually-hidden/index.ts";
 
 export function NewTabIndicator() {
     return (

@@ -1,0 +1,165 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { InnerTag, InnerTagList } from "@components/tag/index.ts";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+
+import * as TagStories from "./Tag.stories.tsx";
+
+<Meta of={TagStories} />
+
+# Tag
+
+<Tagline>A tag represents a keyword that helps label, organize and categorize content.</Tagline>
+
+<ComponentInfo
+    usage={"import { Tag, TagList, Item } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/tag/src"
+/>
+
+## Guidelines
+
+### When to use
+
+- To categorize content allowing the user to quickly skim a list of items.
+- To group items together such as a filter list.
+
+### Content
+
+- To not rely on an icon to understand the intention of a tag.
+
+### Accessibility
+
+- Text should be descriptive enough to be understood without relying on the color.
+- Text should be descriptive and complete enough to be understood without relying on the icon. Using an icon to carry information will make it inaccessible.
+
+### Tag, Lozenge, Button and other alternatives
+
+- To highlight an item's status for quick recognition or to give additional fast short information such as highlighting a new item, use a [lozenge](?path=/docs/lozenge--default-story).
+- For interactivity, a clickable component, use a [button](?path=/docs/button--default-story). Tags shouldn't be used as Buttons. Buttons have a recognizable look throughout the app and should not use a different pattern.
+- To display a quantity, use either a [counter](?path=/docs/counter--default-story) or a [badge](?path=/docs/badge--default-story).
+
+## Usage
+
+### Default
+
+A default tag. Use in most situations.
+
+<Canvas of={TagStories.Default} />
+
+### Avatar
+
+A tag can contain [avatars](?path=/docs/avatar--default-story). An avatar is used when the tag represents a user.
+
+<Canvas of={TagStories.AvatarStory} />
+
+### Icon
+
+A tag can contain [icons](?path=/docs/icon-gallery--docs). An icon is used when it can make it easier for the user to understand the meaning.
+
+<Canvas of={TagStories.Icon} />
+
+### End icon
+
+*Non standard* end [icons](?path=/docs/icon-gallery--docs) can be provided *only if* you have to render a [list of icons](?path=/docs/icon--default-story#icon-list).
+
+<Canvas of={TagStories.EndIcon} />
+
+### Dot
+
+A tag can contain a [dot](?path=/docs/dot--default-story). Use it to allow the user to quickly skim through a lot of tags. The dot color must have a recognizable meaning.
+
+<Canvas of={TagStories.DotStory} />
+
+### Counter
+
+A tag can contain a [counter](?path=/docs/counter--default-story). Useful to indicate a number of matches in a filter list.
+
+<Canvas of={TagStories.CounterStory} />
+
+### Removable
+
+A tag can be removable by specifying an `onRemove` handler.
+
+<Canvas of={TagStories.Removable} />
+
+### Size
+
+A tag can vary in size. When a lot of tags can be seen side by side, prefer the small size. The tag can be used in small versions to accommodate smaller spaces, such as a column row. When used in a small format, the tag should not contain an icon.
+
+<Canvas of={TagStories.Size} />
+
+### Fluid
+
+A tag can take the width of its container.
+
+<Canvas of={TagStories.Fluid} />
+
+### Outline
+
+A tag can have a subtle appearance. Avoid using this variant next to an outline button.
+
+<Canvas of={TagStories.Outline} />
+
+### Validation
+
+A tag can display a validation state.
+
+<Canvas of={TagStories.Validation} />
+
+### Custom colors
+
+Custom colors can be applied to a tag. You will be responsible for ensuring that the color contrast is accessible.
+
+<Canvas of={TagStories.CustomColor} />
+
+## Tag list
+
+Related tags can be grouped.
+
+<Canvas of={TagStories.TagListStory} />
+
+### Clearable
+
+A tag list can have a clear button.
+
+<Canvas of={TagStories.TagListClearable} />
+
+### Size
+
+A tag list can vary in size. This will pass the size to its children.
+
+<Canvas of={TagStories.TagListSize} />
+
+### Dynamic items
+
+A list of tags can be rendered dynamically.
+
+<Canvas of={TagStories.TagListDynamicItems} />
+
+### Tags picker
+
+The following example shows how a tag list can be composed with one of Orbiter's pickers to build a basic tags picker.
+
+<Canvas of={TagStories.TagsPicker} />
+
+## API
+
+### Tag
+
+<ComponentInfo
+    usage={"import { Tag } from \"@workleap/orbiter-ui\";"}
+    slots={["text", "icon", "dot", "counter"]}
+    inherits={[InnerTag.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTag} sort="alpha" />
+
+### TagList
+
+<ComponentInfo
+    usage={"import { TagList } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTagList.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTagList} sort="alpha" />

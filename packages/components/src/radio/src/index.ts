@@ -1,2 +1,2 @@
-export * from "./Radio";
-export * from "./RadioGroup";
+export * from "./Radio.tsx";
+export * from "./RadioGroup.tsx";

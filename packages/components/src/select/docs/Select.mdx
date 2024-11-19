@@ -1,0 +1,177 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { InnerHiddenSelect, InnerSelect} from "@components/select/index.ts";
+import { InnerItem, InnerSection } from "@components/collection/index.ts";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+
+import * as SelectStories from "./Select.stories.tsx";
+
+<Meta of={SelectStories} />
+
+# Select
+
+<Tagline>A select allow users to choose a single option from a collapsible list of options.</Tagline>
+
+<ComponentInfo
+    usage={"import { Select, Item, Section, HiddenSelect, useSelect } from \"@workleap/orbiter-ui\";"}
+    ariaPath="listbox"
+    githubPath="/packages/components/src/select/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- If you provide an [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, make sure its value is in sync with the selected item, otherwise screen readers won't be able to anounce the new selected item.
+
+## Usage
+
+### Default
+
+A default select.
+
+<Canvas of={SelectStories.Default} />
+
+### Sections
+
+A select items can be group by sections.
+
+<Canvas of={SelectStories.Sections} />
+
+### Item icon
+
+A select item can have [icons](?path=/docs/icon-gallery--docs).
+
+<Canvas of={SelectStories.ItemIcon} />
+
+### Item end icon
+
+A select item can have *non standard* end [icons](?path=/docs/icon-gallery--docs) for special cases like displaying a list of icons. However, think twice before adding *end* icons, as *start* icons should be your go-to.
+
+<Canvas of={SelectStories.ItemEndIcon} />
+
+### Item description
+
+A select item can have a description.
+
+<Canvas of={SelectStories.ItemDescription} />
+
+A description can be paired with an [icon](?path=/docs/icon-gallery--docs).
+
+<Canvas of={SelectStories.ItemDescriptionIcon} />
+
+A description can be paired with an [avatar](?path=/docs/avatar--default-story).
+
+<Canvas of={SelectStories.ItemDescriptionAvatar} />
+
+### Item tooltip
+
+A select can have a basic tooltip.
+
+<Canvas of={SelectStories.ItemTooltip} />
+
+### Disabled item
+
+A select item can be disabled.
+
+<Canvas of={SelectStories.DisabledItem} />
+
+### Trigger icon
+
+A select trigger can have an icon.
+
+<Canvas of={SelectStories.TriggerIcon} />
+
+### Disabled
+
+<Canvas of={SelectStories.Disabled} />
+
+### Readonly
+
+<Canvas of={SelectStories.Readonly} />
+
+### Fluid
+
+A select can take the width of its container.
+
+<Canvas of={SelectStories.Fluid} />
+
+### Validation
+
+A select can display a validation state to communicate whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the select via the `validationState` prop.
+
+The example below illustrates how to validate that a specific value has been selected.
+
+<Canvas of={SelectStories.SelectedValueValidation} />
+
+### Form
+
+A select can be part of a form. To submit the value of a select, specify the `name` property.
+
+<Canvas of={SelectStories.Form} />
+
+### Dynamic items
+
+Select items can be rendered dynamically.
+
+<Canvas of={SelectStories.DynamicItems} />
+
+### Controlled
+
+The `selectedKey` and `open` state can be handled in controlled mode.
+
+<Canvas of={SelectStories.ControlledSelect} />
+
+### Ghost
+
+A select can be more discrete.
+
+<Canvas of={SelectStories.Ghost} />
+
+### Headless select
+
+For advanced customization use cases, Orbiter helps by providing an headless `useSelect` hook.
+
+Make sure your trigger accepts a `ref` and any other props returned by the hook.
+
+<Canvas of={SelectStories.CustomSelectStory} />
+
+## API
+
+### Select
+
+<ComponentInfo
+    usage={"import { Select } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerSelect.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerSelect} sort="alpha" />
+
+### Item
+
+<ComponentInfo
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "avatar", "text", "description", "end-icon"]}
+    compact
+/>
+
+<ArgTypes of={InnerItem} sort="alpha" />
+
+### Section
+
+<ComponentInfo
+    usage={"import { Section } from \"@workleap/orbiter-ui\";"}
+    compact
+/>
+
+<ArgTypes of={InnerSection} sort="alpha" />
+
+### HiddenSelect
+
+<ComponentInfo
+    usage={"import { HiddenSelect } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHiddenSelect.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHiddenSelect} sort="alpha" />

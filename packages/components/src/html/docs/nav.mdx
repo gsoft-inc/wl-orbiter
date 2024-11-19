@@ -1,0 +1,20 @@
+import { Canvas, ComponentInfo, Link, Tagline } from "@stories/components";
+import { Meta } from "@storybook/addon-docs";
+import * as NavStories from "./nav.stories.tsx";
+
+<Meta of={NavStories} />
+
+# Nav
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML nav element.</Tagline>
+
+<ComponentInfo
+    usage={"import { Nav } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+A nav component accepts all the [nav HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={NavStories.Example} />

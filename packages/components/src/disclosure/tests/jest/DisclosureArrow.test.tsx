@@ -1,4 +1,4 @@
-import { DisclosureArrow } from "@components/disclosure";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

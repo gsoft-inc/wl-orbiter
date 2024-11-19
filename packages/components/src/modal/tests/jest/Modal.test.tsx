@@ -1,6 +1,6 @@
-import { Content } from "@components/placeholders";
-import { Heading } from "@components/typography";
-import { Modal } from "@components/modal";
+import { Content } from "@components/placeholders/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Modal } from "@components/modal/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

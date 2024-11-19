@@ -1,10 +1,10 @@
-import { Avatar, AvatarGroup } from "@components/avatar";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { screen, userEvent } from "@storybook/testing-library";
+import { Avatar, AvatarGroup } from "@components/avatar/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
+import { screen, userEvent } from "@storybook/test";
 
-export default {
+const meta = {
     component: AvatarGroup,
     parameters: {
         a11y: {
@@ -19,12 +19,14 @@ export default {
         }
     },
     title: "Chromatic/AvatarGroup"
-} as ComponentMeta<typeof AvatarGroup>;
+} as Meta<typeof AvatarGroup>;
 
-type AvatarGroupStory = ComponentStoryObj<typeof AvatarGroup>;
+export default meta;
+
+type AvatarGroupStory = StoryObj<typeof meta>;
 
 export const Default: AvatarGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline gap={800}>
             <Stack>
@@ -86,7 +88,7 @@ export const Default: AvatarGroupStory = {
 };
 
 export const NoWrap: AvatarGroupStory = {
-    storyName: "no wrap",
+    name: "no wrap",
     render: () => (
         <Div width={960}>
             <AvatarGroup wrap={false} size="xl">
@@ -101,7 +103,7 @@ export const NoWrap: AvatarGroupStory = {
 };
 
 export const WithRemainings: AvatarGroupStory = {
-    storyName: "with remainings",
+    name: "with remainings",
     render: () => (
         <Stack>
             <AvatarGroup size="xs">
@@ -144,7 +146,7 @@ export const WithRemainings: AvatarGroupStory = {
 };
 
 export const Overflow: AvatarGroupStory = {
-    storyName: "overflow",
+    name: "overflow",
     render: () => (
         <Div width="4.5rem">
             <AvatarGroup size="xl">
@@ -158,7 +160,7 @@ export const Overflow: AvatarGroupStory = {
 };
 
 export const Zoom: AvatarGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -178,7 +180,7 @@ export const Zoom: AvatarGroupStory = {
 };
 
 export const Styling: AvatarGroupStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <AvatarGroup border="warning">
@@ -198,7 +200,7 @@ export const Styling: AvatarGroupStory = {
 };
 
 export const WithRemainingsHover: AvatarGroupStory = {
-    storyName: "with remainings hover",
+    name: "with remainings hover",
     render: () => (
         <AvatarGroup data-testid="avatar-group">
             <Avatar name="Sally Ride" />

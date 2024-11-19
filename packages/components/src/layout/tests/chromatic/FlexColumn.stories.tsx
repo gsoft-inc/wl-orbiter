@@ -1,16 +1,23 @@
-import { Div } from "@components/html";
-import { Flex, Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Flex, Inline } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Flex/Column",
-    component: Flex
-} as ComponentMeta<typeof Flex>;
+    component: Flex,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Flex>;
 
-type FlexStory = ComponentStoryObj<typeof Flex>;
+export default meta;
+
+type FlexStory = StoryObj<typeof meta>;
 
 export const Default: FlexStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Flex direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -21,7 +28,7 @@ export const Default: FlexStory = {
 };
 
 export const Fluid: FlexStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Flex fluid direction="column">
             <Div backgroundColor="sapphire-500" height="100%">Alpha</Div>
@@ -32,7 +39,7 @@ export const Fluid: FlexStory = {
 };
 
 export const ContentStart: FlexStory = {
-    storyName: "content start",
+    name: "content start",
     render: () => (
         <Flex alignContent="start" width={960} direction="column" wrap="wrap">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -43,7 +50,7 @@ export const ContentStart: FlexStory = {
 };
 
 export const ContentCenter: FlexStory = {
-    storyName: "content center",
+    name: "content center",
     render: () => (
         <Flex alignContent="center" width={960} direction="column" wrap="wrap">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -54,7 +61,7 @@ export const ContentCenter: FlexStory = {
 };
 
 export const ContentSpaceBetween: FlexStory = {
-    storyName: "content space between",
+    name: "content space between",
     render: () => (
         <Flex alignContent="space-between" width={960} direction="column" wrap="wrap">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -65,7 +72,7 @@ export const ContentSpaceBetween: FlexStory = {
 };
 
 export const ContentSpaceAround: FlexStory = {
-    storyName: "content space around",
+    name: "content space around",
     render: () => (
         <Flex alignContent="space-around" width={960} direction="column" wrap="wrap">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -76,7 +83,7 @@ export const ContentSpaceAround: FlexStory = {
 };
 
 export const ItemsStart: FlexStory = {
-    storyName: "items start",
+    name: "items start",
     render: () => (
         <Flex alignItems="start" direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -87,7 +94,7 @@ export const ItemsStart: FlexStory = {
 };
 
 export const ItemsCenter: FlexStory = {
-    storyName: "items center",
+    name: "items center",
     render: () => (
         <Flex alignItems="center" direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -98,7 +105,7 @@ export const ItemsCenter: FlexStory = {
 };
 
 export const ItemsEnd: FlexStory = {
-    storyName: "items end",
+    name: "items end",
     render: () => (
         <Flex alignItems="end" direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -109,7 +116,7 @@ export const ItemsEnd: FlexStory = {
 };
 
 export const JustifyStart: FlexStory = {
-    storyName: "justify start",
+    name: "justify start",
     render: () => (
         <Flex justifyContent="start" direction="column" fluid>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -120,7 +127,7 @@ export const JustifyStart: FlexStory = {
 };
 
 export const JustifyCenter: FlexStory = {
-    storyName: "justify center",
+    name: "justify center",
     render: () => (
         <Flex justifyContent="center" direction="column" fluid>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -131,7 +138,7 @@ export const JustifyCenter: FlexStory = {
 };
 
 export const JustifyEnd: FlexStory = {
-    storyName: "justify end",
+    name: "justify end",
     render: () => (
         <Flex justifyContent="end" direction="column" fluid>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -142,7 +149,7 @@ export const JustifyEnd: FlexStory = {
 };
 
 export const Wrap: FlexStory = {
-    storyName: "wrap",
+    name: "wrap",
     render: () => (
         <Flex wrap="wrap" height={240} direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -153,7 +160,7 @@ export const Wrap: FlexStory = {
 };
 
 export const WrapReverse: FlexStory = {
-    storyName: "wrap reverse",
+    name: "wrap reverse",
     render: () => (
         <Flex wrap="wrap-reverse" height={240} direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -167,7 +174,7 @@ export const WrapReverse: FlexStory = {
 };
 
 export const Reverse: FlexStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <Flex reverse direction="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -178,7 +185,7 @@ export const Reverse: FlexStory = {
 };
 
 export const Styling: FlexStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Flex border="warning" direction="column">

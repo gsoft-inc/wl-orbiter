@@ -1,2 +1,2 @@
-export * from "./Toolbar";
-export * from "./ToolbarContext";
+export * from "./Toolbar.tsx";
+export * from "./ToolbarContext.tsx";

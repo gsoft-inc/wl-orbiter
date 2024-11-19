@@ -1,10 +1,10 @@
 /**
  * @jest-environment node
  */
-import { Field, Label } from "@components/field";
-import { InputGroup } from "@components/input-group";
-import { Text } from "@components/typography";
-import { TextInput } from "@components/text-input";
+import { Field, Label } from "@components/field/index.ts";
+import { InputGroup } from "@components/input-group/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

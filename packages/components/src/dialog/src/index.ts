@@ -1,3 +1,3 @@
-export * from "./Dialog";
-export * from "./DialogTrigger";
-export * from "./DialogTriggerContext";
+export * from "./Dialog.tsx";
+export * from "./DialogTrigger.tsx";
+export * from "./DialogTriggerContext.ts";

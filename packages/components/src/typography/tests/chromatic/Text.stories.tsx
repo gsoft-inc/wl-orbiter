@@ -1,17 +1,24 @@
-import { Div } from "@components/html";
-import { Stack } from "@components/layout";
-import { Text } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Stack } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Text",
-    component: Text
-} as ComponentMeta<typeof Text>;
+    component: Text,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Text>;
 
-type TextStory = ComponentStoryObj<typeof Text>;
+export default meta;
+
+type TextStory = StoryObj<typeof meta>;
 
 export const Default: TextStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack gap={0}>
             <Text size="2xl">There are no passengers on spaceship earth.</Text>
@@ -25,7 +32,7 @@ export const Default: TextStory = {
 };
 
 export const Inherit: TextStory = {
-    storyName: "inherit",
+    name: "inherit",
     render: () => (
         <Div fontSize="0.625rem">
             <Text size="inherit">There are no passengers on spaceship earth.</Text>
@@ -34,7 +41,7 @@ export const Inherit: TextStory = {
 };
 
 export const Styling: TextStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Stack>
             <Text border="warning">There are no passengers on spaceship earth.</Text>

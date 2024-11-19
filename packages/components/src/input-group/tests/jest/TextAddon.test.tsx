@@ -1,4 +1,4 @@
-import { TextAddon } from "@components/input-group";
+import { TextAddon } from "@components/input-group/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

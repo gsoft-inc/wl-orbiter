@@ -1,0 +1,155 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Preview, Tagline } from "@stories/components";
+import { InnerIconLink, InnerLink, InnerTextLink } from "@components/link/index.ts";
+import * as LinkStories from "./Link.stories.tsx";
+
+<Meta of={LinkStories} />
+
+# Link
+
+<Tagline>Links allow a user to navigate between pages, scroll to a have page section, access files, or even to handle email addresses.</Tagline>
+
+<ComponentInfo
+    usage={"import { TextLink, IconLink, Link, TextLinkAsButton, IconLinkAsButton } from \"@workleap/orbiter-ui\";"}
+    ariaPath="link"
+    githubPath="/packages/components/src/link/src"
+/>
+
+## TextLink
+
+A link style can optimized for text.
+
+<Canvas of={LinkStories.Default} />
+
+### Icon
+
+A text link can contain [icons](#).
+
+<Canvas of={LinkStories.Icon} />
+
+### Start icon
+
+*Non standard* start [icons](#) can be provided to handle special cases. However, think twice before adding *start* icons, *end* icons should be your go to.
+
+<Canvas of={LinkStories.StartIcon} />
+
+### External
+
+An external text link will render by default with `rel="noopener noreferrer"` attribute.
+
+You should avoid opening an external link in a new window or tab since it can be disorienting for people. Only do it when it's necessary. For more information, [see W3C recommendation](https://www.w3.org/TR/WCAG20-TECHS/G200.html).
+
+<Canvas of={LinkStories.External} />
+
+### Variants
+
+A link can use a different style.
+
+<Canvas of={LinkStories.Variants} />
+
+### Disabled
+
+A link can have *disabled* style, it's your responsability to make sure the link doesn't navigate anywhere when activated.
+
+<Canvas of={LinkStories.Disabled} />
+
+### Size
+
+A link can vary in size.
+
+<Canvas of={LinkStories.Size} />
+
+### Button
+
+A link can behave like a button by using the `TextLinkAsButton` component.
+
+<Canvas of={LinkStories.Button} />
+
+### React router
+
+To integrate with a third-party routing library like [React Router](https://reactrouter.com) any link component can be rendered as a [React Router Link](https://reactrouter.com/web/api/Link) or as any other custom component.
+
+<Canvas of={LinkStories.ReactRouter} />
+
+## Icon link
+
+A link content can be a single icon.
+
+> When using this variant, an accessible name must be provided through `aria-label` prop. See [WCAG practices](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html).
+
+<Canvas of={LinkStories.LinkIconLink} />
+
+### Button
+
+An icon link can behave like a button by using the `IconLinkAsButton` component.
+
+<Canvas of={LinkStories.IconLinkButton} />
+
+## Basic link
+
+A link can have a more subtle appareance and only be noticeable when focused.
+
+### Image
+
+A link content can be an image element.
+
+<Canvas of={LinkStories.BasicLinkImage} />
+
+### Shape
+
+A link can use a different shape to match his content shape on focus state.
+
+<Canvas of={LinkStories.BasicLinkShape} />
+
+## API
+
+### TextLink
+
+<ComponentInfo
+    usage={"import { TextLink } from \"@workleap/orbiter-ui\";"}
+    slots={["left-icon", "text", "icon"]}
+    inherits={[InnerTextLink.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTextLink} sort="alpha" />
+
+### IconLink
+
+<ComponentInfo
+    usage={"import { IconLink } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerIconLink.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerIconLink} sort="alpha" />
+
+### Link
+
+<ComponentInfo
+    usage={"import { Link } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerLink.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerLink} sort="alpha" />
+
+### TextLinkAsButton
+
+<ComponentInfo
+    usage={"import { TextLinkAsButton } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTextLink.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTextLink} sort="alpha" />
+
+### IconLinkAsButton
+
+<ComponentInfo
+    usage={"import { IconLinkAsButton } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerIconLink.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerIconLink} sort="alpha" />

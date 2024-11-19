@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { Content, Header } from "@components/placeholders";
-import { Item } from "@components/collection";
-import { Tabs } from "@components/tabs";
+import { Content, Header } from "@components/placeholders/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Tabs } from "@components/tabs/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

@@ -1,12 +1,12 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Select } from "@components/select";
-import { Transition } from "@components/transition";
+import { Button } from "@components/button/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Select } from "@components/select/index.ts";
+import { Transition } from "@components/transition/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // Using "beforeEach" instead of "beforeAll" because the restore focus tests currently need the fade out animation to works properly.
 beforeEach(() => {

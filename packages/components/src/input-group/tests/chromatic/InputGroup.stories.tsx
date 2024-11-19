@@ -1,29 +1,36 @@
-import { Autocomplete } from "@components/autocomplete";
-import { Button, IconButton } from "@components/button";
-import { DateInput, DateRangeInput } from "@components/date-input";
-import { DisclosureArrow } from "@components/disclosure";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { InputGroup } from "@components/input-group";
-import { Item } from "@components/collection";
+import { Autocomplete } from "@components/autocomplete/index.ts";
+import { Button, IconButton } from "@components/button/index.ts";
+import { DateInput, DateRangeInput } from "@components/date-input/index.ts";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { InputGroup } from "@components/input-group/index.ts";
+import { Item } from "@components/collection/index.ts";
 import { LightbulbIcon } from "@hopper-ui/icons";
-import { Menu, MenuTrigger } from "@components/menu";
-import { NumberInput } from "@components/number-input";
-import { PasswordInput, SearchInput, TextInput } from "@components/text-input";
-import { Select } from "@components/select";
-import { Text } from "@components/typography";
+import { Menu, MenuTrigger } from "@components/menu/index.ts";
+import { NumberInput } from "@components/number-input/index.ts";
+import { PasswordInput, SearchInput, TextInput } from "@components/text-input/index.ts";
+import { Select } from "@components/select/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { subMonths, subWeeks } from "date-fns";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/InputGroup",
-    component: InputGroup
-} as ComponentMeta<typeof InputGroup>;
+    component: InputGroup,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof InputGroup>;
 
-type InputGroupStory = ComponentStoryObj<typeof InputGroup>;
+export default meta;
+
+type InputGroupStory = StoryObj<typeof meta>;
 
 export const TextAddon: InputGroupStory = {
-    storyName: "text addon",
+    name: "text addon",
     render: () => (
         <Stack>
             <Inline>
@@ -66,7 +73,7 @@ export const TextAddon: InputGroupStory = {
 };
 
 export const ButtonAddon: InputGroupStory = {
-    storyName: "button addon",
+    name: "button addon",
     render: () => (
         <Stack>
             <Inline>
@@ -143,7 +150,7 @@ export const ButtonAddon: InputGroupStory = {
 };
 
 export const IconButtonAddon: InputGroupStory = {
-    storyName: "icon button addon",
+    name: "icon button addon",
     render: () => (
         <Stack>
             <Inline>
@@ -220,7 +227,7 @@ export const IconButtonAddon: InputGroupStory = {
 };
 
 export const MenuAddon: InputGroupStory = {
-    storyName: "menu addon",
+    name: "menu addon",
     render: () => (
         <Stack>
             <Inline>
@@ -389,7 +396,7 @@ export const MenuAddon: InputGroupStory = {
 };
 
 export const SelectAddon: InputGroupStory = {
-    storyName: "select addon",
+    name: "select addon",
     render: () => (
         <Stack>
             <Inline>
@@ -519,7 +526,7 @@ export const SelectAddon: InputGroupStory = {
 
 
 export const Placeholder: InputGroupStory = {
-    storyName: "placeholder",
+    name: "placeholder",
     render: () => (
         <InputGroup>
             <Text>Launching in</Text>
@@ -530,7 +537,7 @@ export const Placeholder: InputGroupStory = {
 };
 
 export const Fluid: InputGroupStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <InputGroup fluid>
             <Text>Launching in</Text>
@@ -541,7 +548,7 @@ export const Fluid: InputGroupStory = {
 };
 
 export const States: InputGroupStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Stack>
             <InputGroup disabled>
@@ -557,7 +564,7 @@ export const States: InputGroupStory = {
 };
 
 export const InputGroupTextInput: InputGroupStory = {
-    storyName: "text input",
+    name: "text input",
     render: () => (
         <Stack>
             <Inline>
@@ -600,7 +607,7 @@ export const InputGroupTextInput: InputGroupStory = {
 };
 
 export const InputGroupNumberInput: InputGroupStory = {
-    storyName: "number input",
+    name: "number input",
     render: () => (
         <Stack>
             <Inline>
@@ -643,7 +650,7 @@ export const InputGroupNumberInput: InputGroupStory = {
 };
 
 export const InputGroupPasswordInput: InputGroupStory = {
-    storyName: "password input",
+    name: "password input",
     render: () => (
         <Stack>
             <Inline>
@@ -686,7 +693,7 @@ export const InputGroupPasswordInput: InputGroupStory = {
 };
 
 export const InputGroupSearchInput: InputGroupStory = {
-    storyName: "search input",
+    name: "search input",
     render: () => (
         <Stack>
             <Inline>
@@ -729,7 +736,7 @@ export const InputGroupSearchInput: InputGroupStory = {
 };
 
 export const InputGroupDateInput: InputGroupStory = {
-    storyName: "date input",
+    name: "date input",
     render: () => (
         <Stack>
             <Inline>
@@ -772,7 +779,7 @@ export const InputGroupDateInput: InputGroupStory = {
 };
 
 export const InputGroupDateRangeInput: InputGroupStory = {
-    storyName: "date range input",
+    name: "date range input",
     render: () => (
         <Stack>
             <Inline>
@@ -829,7 +836,7 @@ export const InputGroupDateRangeInput: InputGroupStory = {
 };
 
 export const InputGroupAutocomplete: InputGroupStory = {
-    storyName: "autocomplete",
+    name: "autocomplete",
     render: () => (
         <Stack>
             <Inline>
@@ -898,7 +905,7 @@ export const InputGroupAutocomplete: InputGroupStory = {
 };
 
 export const Zoom: InputGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -976,7 +983,7 @@ export const Zoom: InputGroupStory = {
 };
 
 export const Styling: InputGroupStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <InputGroup border="warning">

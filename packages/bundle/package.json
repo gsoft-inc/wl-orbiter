@@ -7,11 +7,20 @@
         "url": "git+https://github.com/gsoft-inc/wl-orbiter.git",
         "directory": "packages/bundle"
     },
+    "type": "module",
     "author": "Groupe ShareGate inc.",
     "license": "Apache-2.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "style": "dist/index.css",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./index.css": "./dist/index.css"
+    },
     "files": [
         "/dist",
         "!/dist/**/docs/*",
@@ -23,19 +32,16 @@
         "provenance": true
     },
     "scripts": {
-        "prebuild": "yarn clean",
-        "build": "run-s build:* copy-files",
-        "build:js": "tsc --build ./tsconfig.build.json",
-        "copy-files": "copyfiles -u 1 \"src/**/*.css\" dist",
-        "clean": "rimraf dist tsconfig.build.tsbuildinfo"
+        "prebuild": "pnpm clean",
+        "build": "tsup --config ./tsup.build.ts",
+        "clean": "pnpm dlx rimraf dist"
     },
     "peerDependencies": {
         "react": "*",
         "react-dom": "*"
     },
     "dependencies": {
-        "@orbit-ui/transition-components": "5.5.0",
-        "@orbit-ui/transition-css": "2.4.0",
-        "@orbit-ui/transition-icons": "2.0.0"
+        "@orbit-ui/transition-components": "workspace:*",
+        "@orbit-ui/transition-css": "workspace:*"
     }
 }

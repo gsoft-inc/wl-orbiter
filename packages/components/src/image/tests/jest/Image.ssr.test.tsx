@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Image } from "@components/image";
+import { Image } from "@components/image/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

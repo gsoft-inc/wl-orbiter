@@ -1,13 +1,13 @@
-import { Field, Label } from "@components/field";
+import { Field, Label } from "@components/field/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 
-import { Autocomplete } from "@components/autocomplete";
-import { Button } from "@components/button";
-import { Item } from "@components/collection";
-import { Keys } from "@components/shared";
-import { Transition } from "@components/transition";
+import { Autocomplete } from "@components/autocomplete/index.ts";
+import { Button } from "@components/button/index.ts";
+import { Item } from "@components/collection/index.ts";
+import { Keys } from "@components/shared/index.ts";
+import { Transition } from "@components/transition/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 beforeAll(() => {
     // @ts-ignore
@@ -341,9 +341,7 @@ test("when a value is selected, leaving the autocomplete without selecting a val
 
     await waitFor(() => expect(screen.getByTestId("autocomplete")).toHaveValue("Earth"));
 
-    await userEvent.clear(screen.getByTestId("autocomplete"));
-
-    await userEvent.type(screen.getByTestId("autocomplete"), "m");
+    await userEvent.type(screen.getByTestId("autocomplete"), `${"{backspace}".repeat("Earth".length)}m`);
 
     await waitFor(() => expect(screen.getByTestId("autocomplete")).toHaveValue("m"));
 

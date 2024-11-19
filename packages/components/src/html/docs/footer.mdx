@@ -1,0 +1,20 @@
+import { Canvas, ComponentInfo, Link, Tagline } from "@stories/components";
+import { Meta } from "@storybook/addon-docs";
+import * as FooterStories from "./footer.stories.tsx";
+
+<Meta of={FooterStories} />
+
+# Footer
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML footer element.</Tagline>
+
+<ComponentInfo
+    usage={"import { HtmlFooter } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+A footer component accepts all the [footer HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={FooterStories.Example} />

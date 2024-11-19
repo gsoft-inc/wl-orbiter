@@ -1,11 +1,11 @@
-import { ThemeProvider, useColorSchemeContext } from "@components/styling";
+import { ThemeProvider, useColorSchemeContext } from "@components/styling/index.ts";
 
-import { Box } from "@components/box";
-import { Inline } from "@components/layout";
+import { Box } from "@components/box/index.ts";
+import { Inline } from "@components/layout/index.ts";
 import { useEffect } from "react";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/ThemeProvider",
     component: ThemeProvider,
     parameters: {
@@ -13,9 +13,11 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof ThemeProvider>;
+} as Meta<typeof ThemeProvider>;
 
-type ThemeProviderStory = ComponentStoryObj<typeof ThemeProvider>;
+export default meta;
+
+type ThemeProviderStory = StoryObj<typeof meta>;
 
 function PrimaryColors() {
     return (
@@ -35,7 +37,7 @@ function PrimaryColors() {
 }
 
 export const Sharegate: ThemeProviderStory = {
-    storyName: "sharegate",
+    name: "sharegate",
     render: () => (
         <ThemeProvider colorScheme="light">
             <PrimaryColors />
@@ -44,7 +46,7 @@ export const Sharegate: ThemeProviderStory = {
 };
 
 export const Light: ThemeProviderStory = {
-    storyName: "light",
+    name: "light",
     render: () => (
         <ThemeProvider colorScheme="light">
             <Box padding={160} backgroundColor="neutral" />
@@ -53,7 +55,7 @@ export const Light: ThemeProviderStory = {
 };
 
 export const Dark: ThemeProviderStory = {
-    storyName: "dark",
+    name: "dark",
     render: () => (
         <ThemeProvider colorScheme="dark">
             <Box padding={160} backgroundColor="neutral" />
@@ -72,7 +74,7 @@ const SwitchColorScheme = () => {
 };
 
 export const SetColorSchemeWithApi: ThemeProviderStory = {
-    storyName: "set color scheme with api",
+    name: "set color scheme with api",
     render: () => (
         <ThemeProvider colorScheme="light">
             <SwitchColorScheme />

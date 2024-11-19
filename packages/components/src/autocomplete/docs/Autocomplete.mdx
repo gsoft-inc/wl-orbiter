@@ -1,0 +1,156 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { InnerAutocomplete } from "@components/autocomplete/index.ts";
+import { Canvas, ComponentInfo, Preview, Tagline } from "@stories/components";
+import { InnerItem, InnerSection } from "@components/collection/index.ts";
+import * as AutocompleteStories from "./Autocomplete.stories.tsx";
+
+<Meta of={AutocompleteStories} />
+
+# Autocomplete
+
+<Tagline>An autocomplete is a normal text input enhanced by a panel of suggested options.</Tagline>
+
+<ComponentInfo
+    usage={"import { Autocomplete, Item, Section } from \"@workleap/orbiter-ui\";"}
+    ariaPath="combobox"
+    githubPath="/packages/components/src/autocomplete/src"
+/>
+
+## Usage
+
+### Default
+
+A default autocomplete
+
+<Canvas of={AutocompleteStories.Default} />
+
+### Sections
+
+An autocomplete items can be group by sections.
+
+<Canvas of={AutocompleteStories.Sections} />
+
+### Item icon
+
+An autocomplete item can have [icons](?path=/docs/icon-gallery--docs).
+
+<Canvas of={AutocompleteStories.ItemIcon} />
+
+### Item end icon
+
+An autocomplete item can have *non standard* end [icons](?path=/docs/icon-gallery--docs) can be provided to handle special cases like displaying a list of icons. However, think twice before adding *end* icons, *start* icons should be your go to.
+
+<Canvas of={AutocompleteStories.ItemEndIcon} />
+
+### Item description
+
+An autocomplete item can have a description.
+
+<Canvas of={AutocompleteStories.ItemDescription} />
+
+A description can be paired with an [icon](?path=/docs/icon-gallery--docs).
+
+<Canvas of={AutocompleteStories.ItemDescriptionIcon} />
+
+A description can be paired with an [avatar](?path=/docs/avatar--default-story).
+
+<Canvas of={AutocompleteStories.ItemDescriptionAvatar} />
+
+### Trigger icon
+
+An autocomplete trigger can have an icon.
+
+<Canvas of={AutocompleteStories.TriggerIcon} />
+
+### Size
+
+An autocomplete trigger can have different sizes.
+
+<Canvas of={AutocompleteStories.Size} />
+
+### Disabled
+
+<Canvas of={AutocompleteStories.Disabled} />
+
+### Readonly
+
+<Canvas of={AutocompleteStories.Readonly} />
+
+### Fluid
+
+An autocomplete can take the width of it's container.
+
+<Canvas of={AutocompleteStories.Fluid} />
+
+### Validation
+
+An autocomplete can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate that a specific value have been selected.
+
+<Canvas of={AutocompleteStories.Validation} />
+
+### Form
+
+An autocomplete can be part of a form. To submit the value of a select, make sure you specify the `name` property.
+
+<Canvas of={AutocompleteStories.Form} />
+
+### Dynamic items
+
+An autocomplete items can be rendered dynamically.
+
+<Canvas of={AutocompleteStories.DynamicItems} />
+
+### Remote items
+
+An autocomplete items can be fetch from a remote source.
+
+We provide an utility hook called `useAsyncSearch` which accept an *async* function responsible of fetching the data. You could roll your own utility hook as long as it returns a *loading indicator* and provide a function to handle *search* requests.
+
+> In most cases, you should pass the [`signal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) arg to your `fetch` request.
+
+<Canvas of={AutocompleteStories.RemoteItems} />
+
+### Custom search
+
+An autocomplete search strategy can be customized by providing an `onSearch` handler.
+
+<Canvas of={AutocompleteStories.CustomSearch} />
+
+### Controlled
+
+The `selectedKey` and `open` state can be handled in controlled mode.
+
+<Canvas of={AutocompleteStories.Controlled} />
+
+## API
+
+### Autocomplete
+
+<ComponentInfo
+    usage={"import { Autocomplete } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAutocomplete.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAutocomplete} sort="alpha" />
+
+### Item
+
+<ComponentInfo
+    usage={"import { Item } from \"@workleap/orbiter-ui\";"}
+    slots={["icon", "avatar", "text", "description", "end-icon"]}
+    compact
+/>
+
+<ArgTypes of={InnerItem} sort="alpha" />
+
+### Section
+
+<ComponentInfo
+    usage={"import { Section } from \"@workleap/orbiter-ui\";"}
+    compact
+/>
+
+<ArgTypes of={InnerSection} sort="alpha" />

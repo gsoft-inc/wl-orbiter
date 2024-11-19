@@ -1,23 +1,27 @@
 import { act, fireEvent, screen, waitFor, within, renderWithTheme } from "@test-utils";
-import { Button } from "@components/button";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField } from "@components/field";
-import { Keys } from "@components/shared";
+import { Button } from "@components/button/index.ts";
+import { DateRangeInput } from "@components/date-input/index.ts";
+import { GroupField } from "@components/field/index.ts";
+import { Keys } from "@components/shared/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // Using userEvent.type with a string having multiple characters doesn't work because of the mask. Only the last character ends up being typed.
 // Providing an option.delay fix the problem but we get the following warning: "You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one."
 function type(element: HTMLElement, text: string) {
-    [...text].forEach(x => {
-        userEvent.type(element, x);
-    });
+    return Promise.all([...text].map(x => {
+        return userEvent.type(element, x);
+    }));
 }
 
 function backspace(element: HTMLElement, times = 1) {
+    const promises: Promise<void>[] = [];
     for (let x = 0; x < times; x += 1) {
-        userEvent.type(element, "{backspace}");
+        // eslint-disable-next-line testing-library/await-async-events
+        promises.push(userEvent.type(element, "{backspace}"));
     }
+
+    return Promise.all(promises);
 }
 
 function getStartDateInput(container: HTMLElement, name = "date-range") {
@@ -43,7 +47,7 @@ test("when a valid date has been entered in the start date input, move focus to 
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "01012020");
+    await type(getStartDateInput(container), "01012020");
 
     await waitFor(() => expect(getEndDateInput(container)).toHaveFocus());
 });
@@ -57,7 +61,7 @@ test("when the focus is in the end date input and the end date input value is em
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "01012020");
+    await type(getStartDateInput(container), "01012020");
 
     act(() => {
         getEndDateInput(container).focus();
@@ -65,7 +69,7 @@ test("when the focus is in the end date input and the end date input value is em
 
     await waitFor(() => expect(getEndDateInput(container)).toHaveFocus());
 
-    backspace(getEndDateInput(container));
+    await backspace(getEndDateInput(container));
 
     await waitFor(() => expect(getStartDateInput(container)).toHaveFocus());
 });
@@ -79,7 +83,7 @@ test("when the focus is in the end date input and the end date input value is em
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "01012020");
+    await type(getStartDateInput(container), "01012020");
 
     act(() => {
         getEndDateInput(container).focus();
@@ -87,7 +91,7 @@ test("when the focus is in the end date input and the end date input value is em
 
     await waitFor(() => expect(getEndDateInput(container)).toHaveFocus());
 
-    type(getEndDateInput(container), "ab");
+    await type(getEndDateInput(container), "ab");
 
     await waitFor(() => expect(getEndDateInput(container)).toHaveFocus());
 });
@@ -101,11 +105,11 @@ test("when the focus is in the end date input and the end date input value is no
         getEndDateInput(container).focus();
     });
 
-    type(getEndDateInput(container), "01012020");
+    await type(getEndDateInput(container), "01012020");
 
     await waitFor(() => expect(getEndDateInput(container)).toHaveFocus());
 
-    backspace(getEndDateInput(container), 9);
+    await backspace(getEndDateInput(container), 9);
 
     await waitFor(() => expect(getStartDateInput(container)).toHaveFocus());
 });
@@ -150,7 +154,7 @@ test("when the start date is greater than the end date, reset the start date to 
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "02022021");
+    await type(getStartDateInput(container), "02022021");
 
     await userEvent.click(document.body);
 
@@ -175,7 +179,7 @@ test("when the end date is lower than the start date, reset the end date to the 
         getEndDateInput(container).focus();
     });
 
-    type(getEndDateInput(container), "02022019");
+    await type(getEndDateInput(container), "02022019");
 
     await userEvent.click(document.body);
 
@@ -200,7 +204,7 @@ test("when the start date is lower than the min date, reset the start date to th
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "02022019");
+    await type(getStartDateInput(container), "02022019");
 
     await userEvent.click(document.body);
 
@@ -225,7 +229,7 @@ test("when the start date is greater than the max date, reset the start date to 
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "02022021");
+    await type(getStartDateInput(container), "02022021");
 
     await userEvent.click(document.body);
 
@@ -250,7 +254,7 @@ test("when the end date is lower than the min date, reset the end date to the mi
         getEndDateInput(container).focus();
     });
 
-    type(getEndDateInput(container), "02022019");
+    await type(getEndDateInput(container), "02022019");
 
     await userEvent.click(document.body);
 
@@ -275,7 +279,7 @@ test("when the end date is greater than the max date, reset the end date to the 
         getEndDateInput(container).focus();
     });
 
-    type(getEndDateInput(container), "02022021");
+    await type(getEndDateInput(container), "02022021");
 
     await userEvent.click(document.body);
 
@@ -607,7 +611,7 @@ test("when a start date is applied, call onDatesChange with the new start date",
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "01012020");
+    await type(getStartDateInput(container), "01012020");
 
     await userEvent.click(document.body);
 
@@ -629,7 +633,7 @@ test("when an end date is applied, call onDatesChange with the new end date", as
         getEndDateInput(container).focus();
     });
 
-    type(getEndDateInput(container), "01012020");
+    await type(getEndDateInput(container), "01012020");
 
     await userEvent.click(document.body);
 
@@ -647,19 +651,19 @@ test("when the start date and the end date are applied, call onDatesChange with 
         />
     );
 
-    act(() => {
+    await act(async () => {
         getStartDateInput(container).focus();
     });
 
-    type(getStartDateInput(container), "01012020");
+    await type(getStartDateInput(container), "01012020");
 
-    act(() => {
+    await act(async () => {
         getEndDateInput(container).focus();
     });
 
     await waitFor(() => expect(handler).toHaveBeenLastCalledWith(expect.anything(), new Date(2020, 0, 1), null));
 
-    type(getEndDateInput(container), "01012021");
+    await type(getEndDateInput(container), "01012021");
 
     await userEvent.click(document.body);
 

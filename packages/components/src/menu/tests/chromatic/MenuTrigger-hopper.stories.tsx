@@ -1,15 +1,15 @@
-import { Button, IconButton } from "@components/button";
-import { Item, Section } from "@components/collection";
-import { Menu, MenuProps, MenuTrigger } from "@components/menu";
-import { DisclosureArrow } from "@components/disclosure";
-import { Divider } from "@components/divider";
-import { HtmlButton, HtmlButtonProps } from "@components/html";
+import { Button, IconButton } from "@components/button/index.ts";
+import { Item, Section } from "@components/collection/index.ts";
+import { Menu, MenuProps, MenuTrigger } from "@components/menu/index.ts";
+import { DisclosureArrow } from "@components/disclosure/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { HtmlButton, HtmlButtonProps } from "@components/html/index.ts";
 import { Text } from "@hopper-ui/components";
 import { KebabIcon } from "@hopper-ui/icons";
 import { forwardRef } from "react";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/MenuTrigger-hopper",
     component: MenuTrigger,
     parameters: {
@@ -18,12 +18,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof MenuTrigger>;
+} as Meta<typeof MenuTrigger>;
 
-type MenuTriggerStory = ComponentStoryObj<typeof MenuTrigger>;
+export default meta;
+
+type MenuTriggerStory = StoryObj<typeof meta>;
 
 export const Default: MenuTriggerStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <MenuTrigger>
             <Button variant="secondary">Trigger</Button>
@@ -37,7 +39,7 @@ export const Default: MenuTriggerStory = {
 };
 
 export const OpenWithItemsOnly: MenuTriggerStory = {
-    storyName: "open with items only",
+    name: "open with items only",
     render: () => (
         <MenuTrigger defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -51,7 +53,7 @@ export const OpenWithItemsOnly: MenuTriggerStory = {
 };
 
 export const OpenWithSections: MenuTriggerStory = {
-    storyName: "open with sections",
+    name: "open with sections",
     render: () => (
         <MenuTrigger defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -73,7 +75,7 @@ export const OpenWithSections: MenuTriggerStory = {
 };
 
 export const OpenWithDividers: MenuTriggerStory = {
-    storyName: "open with dividers",
+    name: "open with dividers",
     render: () => (
         <MenuTrigger defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -92,7 +94,7 @@ export const OpenWithDividers: MenuTriggerStory = {
 };
 
 export const OpenWithASelectedItem: MenuTriggerStory = {
-    storyName: "open with a selected item",
+    name: "open with a selected item",
     render: () => (
         <MenuTrigger defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -106,7 +108,7 @@ export const OpenWithASelectedItem: MenuTriggerStory = {
 };
 
 export const OpenWithMultipleSelectedItems: MenuTriggerStory = {
-    storyName: "open with multiple selected items",
+    name: "open with multiple selected items",
     render: () => (
         <MenuTrigger defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -120,7 +122,7 @@ export const OpenWithMultipleSelectedItems: MenuTriggerStory = {
 };
 
 export const DirectionBottom: MenuTriggerStory = {
-    storyName: "direction bottom",
+    name: "direction bottom",
     render: () => (
         <MenuTrigger direction="bottom" defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -134,7 +136,7 @@ export const DirectionBottom: MenuTriggerStory = {
 };
 
 export const DirectionTop: MenuTriggerStory = {
-    storyName: "direction top",
+    name: "direction top",
     decorators: [Story => <div style={{ marginTop: "100px" }}><Story /></div>],
     render: () => (
         <MenuTrigger direction="top" defaultOpen>
@@ -149,7 +151,7 @@ export const DirectionTop: MenuTriggerStory = {
 };
 
 export const AlignStart: MenuTriggerStory = {
-    storyName: "align start",
+    name: "align start",
     decorators: [Story => <div style={{ paddingLeft: "200px" }}><Story /></div>],
     render: () => (
         <MenuTrigger align="start" allowFlip={false} allowPreventOverflow={false} defaultOpen>
@@ -164,7 +166,7 @@ export const AlignStart: MenuTriggerStory = {
 };
 
 export const AlignEnd: MenuTriggerStory = {
-    storyName: "align end",
+    name: "align end",
     decorators: [Story => <div style={{ paddingLeft: "200px" }}><Story /></div>],
     render: () => (
         <MenuTrigger align="end" allowFlip={false} allowPreventOverflow={false} defaultOpen>
@@ -179,7 +181,7 @@ export const AlignEnd: MenuTriggerStory = {
 };
 
 export const IconButtonTrigger: MenuTriggerStory = {
-    storyName: "icon button trigger",
+    name: "icon button trigger",
     render: () => (
         <MenuTrigger defaultOpen>
             <IconButton variant="secondary" aria-label="Open menu">
@@ -210,7 +212,7 @@ const CustomTrigger = forwardRef<any, Partial<HtmlButtonProps>>((props, ref) => 
 });
 
 export const CustomTriggerWithDisclosureArrow: MenuTriggerStory = {
-    storyName: "custom trigger with disclosure arrow",
+    name: "custom trigger with disclosure arrow",
     render: () => (
         <MenuTrigger defaultOpen>
             <CustomTrigger />
@@ -237,7 +239,7 @@ const CustomMenu = forwardRef<any, MenuProps>(({ children, ...props }, ref) => {
 
 
 export const MenuTriggerCustomMenu: MenuTriggerStory = {
-    storyName: "custom menu",
+    name: "custom menu",
     render: () => (
         <MenuTrigger defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -251,7 +253,7 @@ export const MenuTriggerCustomMenu: MenuTriggerStory = {
 };
 
 export const FunctionalContent: MenuTriggerStory = {
-    storyName: "functional content",
+    name: "functional content",
     render: () => (
         <MenuTrigger defaultOpen>
             {(() => {
@@ -271,7 +273,7 @@ export const FunctionalContent: MenuTriggerStory = {
 };
 
 export const StyledSystem: MenuTriggerStory = {
-    storyName: "styled system",
+    name: "styled system",
     render: () => (
         <MenuTrigger border="warning" defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -285,7 +287,7 @@ export const StyledSystem: MenuTriggerStory = {
 };
 
 export const ClassName: MenuTriggerStory = {
-    storyName: "className",
+    name: "className",
     render:  () => (
         <MenuTrigger className="border-red" defaultOpen>
             <Button variant="secondary">Trigger</Button>
@@ -299,7 +301,7 @@ export const ClassName: MenuTriggerStory = {
 };
 
 export const Style: MenuTriggerStory = {
-    storyName: "style",
+    name: "style",
     render:  () => (
         <MenuTrigger style={{ border: "1px solid red" }} defaultOpen>
             <Button variant="secondary">Trigger</Button>

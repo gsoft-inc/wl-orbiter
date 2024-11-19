@@ -1,10 +1,10 @@
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { Dialog, DialogTrigger } from "@components/dialog";
-import { Heading, Paragraph } from "@components/typography";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Dialog, DialogTrigger } from "@components/dialog/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/DialogTrigger",
     component: DialogTrigger,
     parameters: {
@@ -13,12 +13,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof DialogTrigger>;
+} as Meta<typeof DialogTrigger>;
 
-type DialogTriggerStory = ComponentStoryObj<typeof DialogTrigger>;
+export default meta;
+
+type DialogTriggerStory = StoryObj<typeof meta>;
 
 export const Default: DialogTriggerStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <DialogTrigger>
             <Button variant="secondary">Open</Button>
@@ -35,7 +37,7 @@ export const Default: DialogTriggerStory = {
 };
 
 export const DefaultOpen: DialogTriggerStory = {
-    storyName: "default open",
+    name: "default open",
     render: () => (
         <DialogTrigger defaultOpen>
             <Button variant="secondary">Open</Button>
@@ -53,7 +55,7 @@ export const DefaultOpen: DialogTriggerStory = {
 
 
 export const NotDismissable: DialogTriggerStory = {
-    storyName: "not dismissable",
+    name: "not dismissable",
     render: () => (
         <DialogTrigger dismissable={false} defaultOpen>
             <Button variant="secondary">Open</Button>
@@ -70,7 +72,7 @@ export const NotDismissable: DialogTriggerStory = {
 };
 
 export const FunctionalContent: DialogTriggerStory = {
-    storyName: "functional content",
+    name: "functional content",
     render: () => (
         <DialogTrigger defaultOpen>
             {(() => {

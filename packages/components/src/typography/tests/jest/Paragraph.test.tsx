@@ -1,4 +1,4 @@
-import { Paragraph } from "@components/typography";
+import { Paragraph } from "@components/typography/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, waitFor } from "@test-utils";
 

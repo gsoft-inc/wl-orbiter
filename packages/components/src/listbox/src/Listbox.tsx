@@ -1,4 +1,4 @@
-import { CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useOnlyCollectionItems, useScrollableCollection } from "../../collection";
+import { CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useOnlyCollectionItems, useScrollableCollection } from "../../collection/index.ts";
 import { ComponentProps, KeyboardEvent, ReactNode, SyntheticEvent, forwardRef, useImperativeHandle, useMemo } from "react";
 import {
     FocusManager,
@@ -23,14 +23,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
 
-import { Box } from "../../box";
-import { ListboxContext } from "./ListboxContext";
-import { ListboxOption } from "./ListboxOption";
-import { ListboxSection } from "./ListboxSection";
-import { ValidationState } from "../../input";
+import { Box } from "../../box/index.ts";
+import { ListboxContext } from "./ListboxContext.ts";
+import { ListboxOption } from "./ListboxOption.tsx";
+import { ListboxSection } from "./ListboxSection.tsx";
+import { ValidationState } from "../../input/index.ts";
 
 export const OptionKeyProp = "data-o-ui-key";
 
@@ -38,7 +38,7 @@ export type ListboxSelectionMode = "none" | "single" | "multiple";
 
 const DefaultElement = "div";
 
-export interface InnerListboxProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerListboxProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     /**
      * Whether or not the listbox should autofocus on render.
      */
@@ -390,12 +390,12 @@ export function InnerListbox({
         tooltip
     }: CollectionItem) => (
         <As
+            key={key}
             {...mergeProps(
                 props,
                 {
                     id: `${rootId}-option-${index + 1}`,
                     item: { key: key, tooltip },
-                    key,
                     ref
                 }
             )}

@@ -1,4 +1,4 @@
-import { CollectionDivider, CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useScrollableCollection } from "../../collection";
+import { CollectionDivider, CollectionItem, CollectionNode, CollectionSection, NodeType, useCollection, useScrollableCollection } from "../../collection/index.ts";
 import { ComponentProps, KeyboardEvent, ReactNode, SyntheticEvent, forwardRef } from "react";
 import {
     InternalProps,
@@ -21,14 +21,14 @@ import {
     useKeyedRovingFocus,
     useMergedRefs,
     useRefState
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
 
-import { Box } from "../../box";
-import { MenuContext } from "./MenuContext";
-import { MenuItem } from "./MenuItem";
-import { MenuSection } from "./MenuSection";
-import { ValidationState } from "../../input";
+import { Box } from "../../box/index.ts";
+import { MenuContext } from "./MenuContext.ts";
+import { MenuItem } from "./MenuItem.tsx";
+import { MenuSection } from "./MenuSection.tsx";
+import { ValidationState } from "../../input/index.ts";
 
 export type MenuSelectionMode = "none" | "single" | "multiple";
 
@@ -36,7 +36,7 @@ export const ItemKeyProp = "data-o-ui-key";
 
 const DefaultElement = "ul";
 
-export interface InnerMenuProps extends InternalProps, StyledComponentProps<typeof DefaultElement> {
+export interface InnerMenuProps extends InternalProps, Omit<StyledComponentProps<typeof DefaultElement>, "autoFocus"> {
     /**
      * Whether or not the menu should autofocus on render.
      */

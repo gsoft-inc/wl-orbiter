@@ -13,11 +13,11 @@ import {
     useEventCallback,
     useId,
     useMergedRefs
-} from "../../shared";
+} from "../../shared/index.ts";
 
-import { DisclosureContext } from "./DisclosureContext";
-import { Text } from "../../typography";
-import { useSlidingTransition } from "./useSlidingTransition";
+import { DisclosureContext } from "./DisclosureContext.ts";
+import { Text } from "../../typography/index.ts";
+import { useSlidingTransition } from "./useSlidingTransition.ts";
 
 const DefaultElement = "div";
 

@@ -1,0 +1,96 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerInputGroup, InnerTextAddon, InputGroup } from "@components/input-group/index.ts";
+
+import * as InputGroupStories from "./InputGroup.stories.tsx";
+
+<Meta of={InputGroupStories} />
+
+# InputGroup
+
+<Tagline>An input group combines an input component with addons.</Tagline>
+
+<ComponentInfo
+    usage={"import { InputGroup, TextAddon, InputGroupContext, useInputGroupProps, useInputGroupAddonProps } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/input-group/src"
+/>
+
+## Usage
+
+An input group can combine an input with a *start* addon, an *end* addon or *both*. All Orbiter's input can be combined, you can even make it work with a [custom input](#custom-input).
+
+### Default
+
+A default input group.
+
+<Canvas of={InputGroupStories.Default} />
+
+### Inputs
+
+An input group can use any Orbiter's input component.
+
+<Canvas of={InputGroupStories.Inputs} />
+
+### Text addon
+
+An input group can have a textual addon to offer additional hints. A text addon shouldn't replace a [field label](?path=/docs/field--input#label) or a [field description](?path=/docs/field--input#helpmessage).
+
+<Canvas of={InputGroupStories.TextAddon} />
+
+### Select addon
+
+An input group can have a select addon.
+
+<Canvas of={InputGroupStories.SelectAddon} />
+
+### Disabled
+
+An input group can set as disabled the input and the addon(s).
+
+<Canvas of={InputGroupStories.Disabled} />
+
+### Readonly
+
+An input group can set as readonly the input and the addon(s).
+
+<Canvas of={InputGroupStories.ReadOnly} />
+
+### Fluid
+
+An input group can take the width of its container.
+
+<Canvas of={InputGroupStories.Fluid} />
+
+### Custom input
+
+Any input implementing the `InputGroupContext` can integrate with an input group component. This is usually done by using the `useInputGroupProps` hook.
+
+<Canvas of={InputGroupStories.CustomInputStory} />
+
+### Custom addon
+
+Any addon implementing the `InputGroupContext` can integrate with an input group component. This is usually done by using the `useInputGroupAddonProps` hook.
+
+<Canvas of={InputGroupStories.CustomAddonStory} />
+
+## API
+
+### InputGroup
+
+<ComponentInfo
+    usage={"import { InputGroup } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerInputGroup.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerInputGroup} sort="alpha" />
+
+### TextAddon
+
+<ComponentInfo
+    usage={"import { TextAddon } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTextAddon.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTextAddon} sort="alpha" />

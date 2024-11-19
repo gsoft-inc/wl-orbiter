@@ -1,5 +1,5 @@
 import { AddIcon } from "@hopper-ui/icons";
-import { Link } from "@components/link";
+import { Link } from "@components/link/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

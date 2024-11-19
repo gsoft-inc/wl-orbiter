@@ -1,18 +1,25 @@
-import { Heading, Paragraph } from "@components/typography";
-import { Modal, ModalTrigger } from "@components/modal";
-import { Button } from "@components/button";
-import { Content } from "@components/placeholders";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { Modal, ModalTrigger } from "@components/modal/index.ts";
+import { Button } from "@components/button/index.ts";
+import { Content } from "@components/placeholders/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/ModalTrigger",
-    component: ModalTrigger
-} as ComponentMeta<typeof ModalTrigger>;
+    component: ModalTrigger,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof ModalTrigger>;
 
-type ModalTriggerStory = ComponentStoryObj<typeof ModalTrigger>;
+export default meta;
+
+type ModalTriggerStory = StoryObj<typeof meta>;
 
 export const Default: ModalTriggerStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <ModalTrigger>
             <Button variant="secondary">Open</Button>
@@ -29,7 +36,7 @@ export const Default: ModalTriggerStory = {
 };
 
 export const DefaultOpen: ModalTriggerStory = {
-    storyName: "default open",
+    name: "default open",
     render: () => (
         <ModalTrigger defaultOpen>
             <Button variant="secondary">Open</Button>
@@ -47,7 +54,7 @@ export const DefaultOpen: ModalTriggerStory = {
 };
 
 export const NotDismissable: ModalTriggerStory = {
-    storyName: "not dismissable",
+    name: "not dismissable",
     render: () => (
         <ModalTrigger dismissable={false} defaultOpen>
             <Button variant="secondary">Open</Button>

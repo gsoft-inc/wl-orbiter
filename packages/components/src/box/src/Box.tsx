@@ -1,7 +1,7 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { InternalProps, OmitInternalProps, SlotProps, StyledHtmlAttributes, omitProps } from "../../shared";
-import { getHtmlElementType } from "../../html";
-import { useStyledSystem } from "../../styling";
+import { InternalProps, OmitInternalProps, SlotProps, StyledHtmlAttributes, omitProps } from "../../shared/index.ts";
+import { getHtmlElementType } from "../../html/index.ts";
+import { useStyledSystem } from "../../styling/index.ts";
 
 const DefaultElement = "div";
 

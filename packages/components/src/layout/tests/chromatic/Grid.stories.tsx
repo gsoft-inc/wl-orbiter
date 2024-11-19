@@ -1,18 +1,25 @@
-import { Div } from "@components/html";
-import { Grid, Inline, Stack, fitContent, minmax, repeat } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Grid, Inline, Stack, fitContent, minmax, repeat } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
 const viewports = [640, 768, 1024, 1280, 1440];
 
-export default {
+const meta = {
     title: "Chromatic/Grid",
-    component: Grid
-} as ComponentMeta<typeof Grid>;
+    component: Grid,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Grid>;
 
-type GridStory = ComponentStoryObj<typeof Grid>;
+export default meta;
+
+type GridStory = StoryObj<typeof meta>;
 
 export const Default: GridStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Grid>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -26,7 +33,7 @@ export const Default: GridStory = {
 };
 
 export const GridInline: GridStory = {
-    storyName: "inline",
+    name: "inline",
     render: () => (
         <>
             <Grid inline>
@@ -44,7 +51,7 @@ export const GridInline: GridStory = {
 };
 
 export const Nesting: GridStory = {
-    storyName: "nesting",
+    name: "nesting",
     render: () => (
         <Grid templateColumns={["1fr", "1fr"]} gap={160}>
             <Grid templateColumns={["8rem", "auto"]}>
@@ -60,7 +67,7 @@ export const Nesting: GridStory = {
 };
 
 export const Gap: GridStory = {
-    storyName: "gap",
+    name: "gap",
     render: () => (
         <Grid gap={160}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -74,7 +81,7 @@ export const Gap: GridStory = {
 };
 
 export const ColumnGap: GridStory = {
-    storyName: "column gap",
+    name: "column gap",
     render: () => (
         <Grid columnGap={160} autoFlow="column">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -88,7 +95,7 @@ export const ColumnGap: GridStory = {
 };
 
 export const RowGap: GridStory = {
-    storyName: "row gap",
+    name: "row gap",
     render: () => (
         <Grid rowGap={160}>
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -102,7 +109,7 @@ export const RowGap: GridStory = {
 };
 
 export const TemplateColumns: GridStory = {
-    storyName: "template columns",
+    name: "template columns",
     render: () => (
         <Stack>
             <Grid templateColumns="65px 50px 65px" gap={160}>
@@ -134,7 +141,7 @@ export const TemplateColumns: GridStory = {
 };
 
 export const TemplateRows: GridStory = {
-    storyName: "template rows",
+    name: "template rows",
     render: () => (
         <Inline>
             <Grid templateRows="200px 100px 200px" gap={160}>
@@ -157,7 +164,7 @@ export const TemplateRows: GridStory = {
 };
 
 export const Areas: GridStory = {
-    storyName: "areas",
+    name: "areas",
     render: () => (
         <Stack>
             <Grid areas={["a a", "b c", "d e"]} gap={160}>
@@ -179,7 +186,7 @@ export const Areas: GridStory = {
 };
 
 export const AutoFlow: GridStory = {
-    storyName: "auto flow",
+    name: "auto flow",
     render: () => (
         <Stack>
             <Grid autoFlow="column" gap={160}>
@@ -208,7 +215,7 @@ export const AutoFlow: GridStory = {
 };
 
 export const AutoColumns: GridStory = {
-    storyName: "auto columns",
+    name: "auto columns",
     render: () => (
         <Stack>
             <Grid autoColumns="8rem" gap={160}>
@@ -237,7 +244,7 @@ export const AutoColumns: GridStory = {
 };
 
 export const AutoRows: GridStory = {
-    storyName: "auto rows",
+    name: "auto rows",
     render: () => (
         <Stack>
             <Grid autoRows="3.5rem" gap={160}>
@@ -266,7 +273,7 @@ export const AutoRows: GridStory = {
 };
 
 export const ColumnSpan: GridStory = {
-    storyName: "column span",
+    name: "column span",
     render: () => (
         <Stack>
             <Grid templateColumns={["1fr", "1fr", "1fr"]} gap={160}>
@@ -290,7 +297,7 @@ export const ColumnSpan: GridStory = {
 };
 
 export const AlignContentStart: GridStory = {
-    storyName: "align content start",
+    name: "align content start",
     render: () => (
         <Grid alignContent="start" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -301,7 +308,7 @@ export const AlignContentStart: GridStory = {
 };
 
 export const AlignContentCenter: GridStory = {
-    storyName: "align content center",
+    name: "align content center",
     render: () => (
         <Grid alignContent="center" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -312,7 +319,7 @@ export const AlignContentCenter: GridStory = {
 };
 
 export const AlignContentSpaceBetween: GridStory = {
-    storyName: "align content space-between",
+    name: "align content space-between",
     render: () => (
         <Grid alignContent="space-between" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -323,7 +330,7 @@ export const AlignContentSpaceBetween: GridStory = {
 };
 
 export const AlignContentSpaceAround: GridStory = {
-    storyName: "align content space-around",
+    name: "align content space-around",
     render: () => (
         <Grid alignContent="space-around" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -334,7 +341,7 @@ export const AlignContentSpaceAround: GridStory = {
 };
 
 export const AlignItemsStart: GridStory = {
-    storyName: "align items start",
+    name: "align items start",
     render: () => (
         <Grid alignItems="start" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -345,7 +352,7 @@ export const AlignItemsStart: GridStory = {
 };
 
 export const AlignItemsCenter: GridStory = {
-    storyName: "align items center",
+    name: "align items center",
     render: () => (
         <Grid alignItems="center" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -356,7 +363,7 @@ export const AlignItemsCenter: GridStory = {
 };
 
 export const AlignItemsEnd: GridStory = {
-    storyName: "align items end",
+    name: "align items end",
     render: () => (
         <Grid alignItems="end" gap={160} height="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -367,7 +374,7 @@ export const AlignItemsEnd: GridStory = {
 };
 
 export const JustifyContentStart: GridStory = {
-    storyName: "justify content start",
+    name: "justify content start",
     render: () => (
         <Grid justifyContent="start" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -378,7 +385,7 @@ export const JustifyContentStart: GridStory = {
 };
 
 export const JustifyContentCenter: GridStory = {
-    storyName: "justify content center",
+    name: "justify content center",
     render: () => (
         <Grid justifyContent="center" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -389,7 +396,7 @@ export const JustifyContentCenter: GridStory = {
 };
 
 export const JustifyContentEnd: GridStory = {
-    storyName: "justify content end",
+    name: "justify content end",
     render: () => (
         <Grid justifyContent="end" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -400,7 +407,7 @@ export const JustifyContentEnd: GridStory = {
 };
 
 export const JustifyContentLeft: GridStory = {
-    storyName: "justify content left",
+    name: "justify content left",
     render: () => (
         <Grid justifyContent="left" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -411,7 +418,7 @@ export const JustifyContentLeft: GridStory = {
 };
 
 export const JustifyContentRight: GridStory = {
-    storyName: "justify content right",
+    name: "justify content right",
     render: () => (
         <Grid justifyContent="right" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -422,7 +429,7 @@ export const JustifyContentRight: GridStory = {
 };
 
 export const JustifyContentSpaceBetween: GridStory = {
-    storyName: "justify content space between",
+    name: "justify content space between",
     render: () => (
         <Grid justifyContent="space-between" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -433,7 +440,7 @@ export const JustifyContentSpaceBetween: GridStory = {
 };
 
 export const JustifyContentSpaceAround: GridStory = {
-    storyName: "justify content space around",
+    name: "justify content space around",
     render: () => (
         <Grid justifyContent="space-around" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -444,7 +451,7 @@ export const JustifyContentSpaceAround: GridStory = {
 };
 
 export const JustifyContentSpaceEvenly: GridStory = {
-    storyName: "justify content space evenly",
+    name: "justify content space evenly",
     render: () => (
         <Grid justifyContent="space-evenly" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -455,7 +462,7 @@ export const JustifyContentSpaceEvenly: GridStory = {
 };
 
 export const JustifyItemsStart: GridStory = {
-    storyName: "justify items start",
+    name: "justify items start",
     render: () => (
         <Grid justifyItems="start" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -466,7 +473,7 @@ export const JustifyItemsStart: GridStory = {
 };
 
 export const JustifyItemsCenter: GridStory = {
-    storyName: "justify items center",
+    name: "justify items center",
     render: () => (
         <Grid justifyItems="center" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -477,7 +484,7 @@ export const JustifyItemsCenter: GridStory = {
 };
 
 export const JustifyItemsEnd: GridStory = {
-    storyName: "justify items end",
+    name: "justify items end",
     render: () => (
         <Grid justifyItems="end" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -488,7 +495,7 @@ export const JustifyItemsEnd: GridStory = {
 };
 
 export const JustifyItemsLeft: GridStory = {
-    storyName: "justify items left",
+    name: "justify items left",
     render: () => (
         <Grid justifyItems="left" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -499,7 +506,7 @@ export const JustifyItemsLeft: GridStory = {
 };
 
 export const JustifyItemsRight: GridStory = {
-    storyName: "justify items right",
+    name: "justify items right",
     render: () => (
         <Grid justifyItems="right" gap={160} width="300px">
             <Div backgroundColor="sapphire-500">Alpha</Div>
@@ -510,7 +517,7 @@ export const JustifyItemsRight: GridStory = {
 };
 
 export const RowSpan: GridStory = {
-    storyName: "row span",
+    name: "row span",
     render: () => (
         <Stack>
             <Grid templateColumns={["1fr", "1fr", "1fr"]} gap={160}>
@@ -534,7 +541,7 @@ export const RowSpan: GridStory = {
 };
 
 export const Repeat: GridStory = {
-    storyName: "repeat",
+    name: "repeat",
     render: () => (
         <Stack>
             <Grid templateColumns={repeat("auto-fit", "4.5rem")} gap={160}>
@@ -558,7 +565,7 @@ export const Repeat: GridStory = {
 };
 
 export const Minmax: GridStory = {
-    storyName: "minmax",
+    name: "minmax",
     render: () => (
         <Stack>
             <Grid templateColumns={[minmax("8rem", "auto"), "4.5rem", "4.5rem"]} gap={160}>
@@ -582,7 +589,7 @@ export const Minmax: GridStory = {
 };
 
 export const FitContent: GridStory = {
-    storyName: "fit-content",
+    name: "fit-content",
     render: () => (
         <Stack>
             <Grid templateColumns={[fitContent("8rem"), "4.5rem", "4.5rem"]} gap={160}>

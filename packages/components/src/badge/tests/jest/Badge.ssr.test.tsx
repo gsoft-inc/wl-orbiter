@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { Badge, BadgeProps } from "@components/badge";
-import { Div } from "@components/html";
-import { Text } from "@components/typography";
+import { Badge, BadgeProps } from "@components/badge/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Text } from "@components/typography/index.ts";
 import { forwardRef } from "react";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";

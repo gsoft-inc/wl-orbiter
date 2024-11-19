@@ -1,2 +1,1 @@
-export * from "./Snippet";
-export * from "./useFormattedCode";
+export * from "./formatCode.ts";

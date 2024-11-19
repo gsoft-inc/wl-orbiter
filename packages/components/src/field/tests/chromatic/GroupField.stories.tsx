@@ -1,20 +1,27 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { DateRangeInput } from "@components/date-input";
-import { GroupField, HelpMessage, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { DateRangeInput } from "@components/date-input/index.ts";
+import { GroupField, HelpMessage, Label } from "@components/field/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/GroupField",
-    component: GroupField
-} as ComponentMeta<typeof GroupField>;
+    component: GroupField,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof GroupField>;
 
-type GroupFieldStory = ComponentStoryObj<typeof GroupField>;
+export default meta;
+
+type GroupFieldStory = StoryObj<typeof meta>;
 
 export const GroupFieldCheckboxGroup: GroupFieldStory = {
-    storyName: "checkbox group",
+    name: "checkbox group",
     render: () => (
         <Stack gap={800}>
             <GroupField>
@@ -40,7 +47,7 @@ export const GroupFieldCheckboxGroup: GroupFieldStory = {
 };
 
 export const GroupFieldRadioGroup: GroupFieldStory = {
-    storyName: "radio group",
+    name: "radio group",
     render: () => (
         <Inline gap={800} alignY="end">
             <GroupField>
@@ -66,7 +73,7 @@ export const GroupFieldRadioGroup: GroupFieldStory = {
 };
 
 export const GroupFieldButtonGroup: GroupFieldStory = {
-    storyName: "button group",
+    name: "button group",
     render: () => (
         <Stack gap={800}>
             <GroupField>
@@ -92,7 +99,7 @@ export const GroupFieldButtonGroup: GroupFieldStory = {
 };
 
 export const GroupFieldDateRangeInput: GroupFieldStory = {
-    storyName: "date range input",
+    name: "date range input",
     render: () => (
         <GroupField>
             <Label>When?</Label>
@@ -103,7 +110,7 @@ export const GroupFieldDateRangeInput: GroupFieldStory = {
 };
 
 export const Styling: GroupFieldStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <GroupField border="warning">

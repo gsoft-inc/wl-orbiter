@@ -1,5 +1,5 @@
 import { ComponentProps, ReactNode, forwardRef } from "react";
-import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout";
+import { Flex, FlexAlignmentProp, FlexOrientationProp, useFlexAlignment } from "../../layout/index.ts";
 import {
     InternalProps,
     Keys,
@@ -14,15 +14,15 @@ import {
     useMergedRefs,
     useRovingFocus,
     slot
-} from "../../shared";
-import { ResponsiveProp, useResponsiveValue } from "../../styling";
-import { ToolbarContext } from "./ToolbarContext";
+} from "../../shared/index.ts";
+import { ResponsiveProp, useResponsiveValue } from "../../styling/index.ts";
+import { ToolbarContext } from "./ToolbarContext.tsx";
 
 const DefaultElement = "div";
 
 export interface InnerToolbarProps extends
     InternalProps,
-    Omit<StyledComponentProps<typeof DefaultElement>, "display" | "alignItems" | "flex" | "flexDirection" | "flexWrap" | "justifyContent"> {
+    Omit<StyledComponentProps<typeof DefaultElement>, "display" | "alignItems" | "flex" | "flexDirection" | "flexWrap" | "justifyContent" | "autoFocus"> {
     /**
      * The horizontal alignment of the elements.
      */

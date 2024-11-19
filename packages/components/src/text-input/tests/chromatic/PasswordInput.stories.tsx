@@ -1,17 +1,24 @@
-import { Inline, Stack } from "@components/layout";
-import { Div } from "@components/html";
-import { PasswordInput } from "@components/text-input";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Div } from "@components/html/index.ts";
+import { PasswordInput } from "@components/text-input/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/PasswordInput",
-    component: PasswordInput
-} as ComponentMeta<typeof PasswordInput>;
+    component: PasswordInput,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof PasswordInput>;
 
-type PasswordInputStory = ComponentStoryObj<typeof PasswordInput>;
+export default meta;
+
+type PasswordInputStory = StoryObj<typeof meta>;
 
 export const Default: PasswordInputStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -29,7 +36,7 @@ export const Default: PasswordInputStory = {
 };
 
 export const Placeholder: PasswordInputStory = {
-    storyName: "placeholder",
+    name: "placeholder",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -47,7 +54,7 @@ export const Placeholder: PasswordInputStory = {
 };
 
 export const Value: PasswordInputStory = {
-    storyName: "value",
+    name: "value",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -69,7 +76,7 @@ export const Value: PasswordInputStory = {
 };
 
 export const States: PasswordInputStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Stack>
             <PasswordInput active placeholder="What's your secret?" />
@@ -92,7 +99,7 @@ export const States: PasswordInputStory = {
 };
 
 export const Zoom: PasswordInputStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -112,7 +119,7 @@ export const Zoom: PasswordInputStory = {
 };
 
 export const Styling: PasswordInputStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <PasswordInput border="amanita-600" aria-label="Label" />

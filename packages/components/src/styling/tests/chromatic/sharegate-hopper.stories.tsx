@@ -9,19 +9,26 @@ import {
     SizingMapping,
     SpacingMapping,
     ThemeProvider
-} from "@components/styling";
-import { Box, BoxProps } from "@components/box";
+} from "@components/styling/index.ts";
+import { Box, BoxProps } from "@components/box/index.ts";
 import { IconColorMapping } from "@hopper-ui/styled-system";
 import { NoteIcon } from "@hopper-ui/icons";
-import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
+
+const meta = {
+    title: "Chromatic/Sharegate-hopper",
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<any>;
 
 // eslint-disable-next-line storybook/csf-component
-export default {
-    title: "Chromatic/Sharegate-hopper"
-} as ComponentMeta<any>;
+export default meta;
 
-type ShareGateStory = ComponentStoryObj<any>;
+type ShareGateStory = StoryObj<any>;
 
 function SmallSquare(props: BoxProps) {
     return (
@@ -44,7 +51,7 @@ function LargeSquare(props: BoxProps) {
 }
 
 export const BackgroundColor: ShareGateStory = {
-    storyName: "background color",
+    name: "background color",
     render: () => (
         <Stack>
             <Inline gap={0} wrap>
@@ -60,7 +67,7 @@ export const BackgroundColor: ShareGateStory = {
 };
 
 export const Border: ShareGateStory = {
-    storyName: "border",
+    name: "border",
     render: () => (
         <Stack>
             <Inline gap={40} wrap>
@@ -76,7 +83,7 @@ export const Border: ShareGateStory = {
 };
 
 export const BoxShadow: ShareGateStory = {
-    storyName: "box shadow",
+    name: "box shadow",
     render: () => (
         <Inline>
             {Object.keys(BoxShadowMapping).map(x => <LargeSquare boxShadow={x} key={x} />)}
@@ -85,7 +92,7 @@ export const BoxShadow: ShareGateStory = {
 };
 
 export const Color: ShareGateStory = {
-    storyName: "color",
+    name: "color",
     render: () => (
         <Stack>
             <Inline gap={0} wrap>
@@ -101,7 +108,7 @@ export const Color: ShareGateStory = {
 };
 
 export const IconColors: ShareGateStory = {
-    storyName: "icon colors",
+    name: "icon colors",
     render: () => (
         <Stack>
             <Inline gap={0} wrap>
@@ -117,21 +124,21 @@ export const IconColors: ShareGateStory = {
 };
 
 export const FontSize: ShareGateStory = {
-    storyName: "font size",
+    name: "font size",
     render: () => (
         <>{Object.keys(FontSizeMapping).map(x => <Box fontSize={x} key={x}>Space exploration</Box>)}</>
     )
 };
 
 export const FontWeight: ShareGateStory = {
-    storyName: "font weight",
+    name: "font weight",
     render: () => (
         <>{Object.keys(FontWeightMapping).map(x => <Box fontWeight={x as keyof typeof FontWeightMapping} key={x}>Space exploration</Box>)}</>
     )
 };
 
 export const LineHeight: ShareGateStory = {
-    storyName: "line height",
+    name: "line height",
     render: () => (
         <Inline>
             {Object.keys(LineHeightMapping).map(x => <Box lineHeight={x} key={x}>That's one small step for man, one giant leap for mankind.</Box>)}
@@ -140,7 +147,7 @@ export const LineHeight: ShareGateStory = {
 };
 
 export const Spacing: ShareGateStory = {
-    storyName: "spacing",
+    name: "spacing",
     render: () => (
         <Stack>
             {Object.keys(SpacingMapping).map(x => <Box width={x} height="1.25rem" backgroundColor="#000" key={x} />)}
@@ -149,7 +156,7 @@ export const Spacing: ShareGateStory = {
 };
 
 export const Sizing: ShareGateStory = {
-    storyName: "sizing",
+    name: "sizing",
     render: () => (
         <Stack>
             {Object.keys(SizingMapping).map(x => <Box width={x} height="1.25rem" backgroundColor="#000" key={x} />)}

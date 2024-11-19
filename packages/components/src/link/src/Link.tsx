@@ -1,9 +1,9 @@
-import { Box } from "../../box";
+import { Box } from "../../box/index.ts";
 import { ComponentProps, ElementType, ReactNode, forwardRef } from "react";
-import { InteractionProps, InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, mergeProps } from "../../shared";
-import { NewTabIndicator } from "./NewTabIndicator";
-import { useLink } from "./useLink";
-import { useStyleProps } from "../../styling";
+import { InteractionProps, InternalProps, OmitInternalProps, SlotProps, StyledComponentProps, mergeProps } from "../../shared/index.ts";
+import { NewTabIndicator } from "./NewTabIndicator.tsx";
+import { useLink } from "./useLink.ts";
+import { useStyleProps } from "../../styling/index.ts";
 
 export type AbstractLinkProps<T extends ElementType> =
     // Keep it so it could be used with dynamic slots.

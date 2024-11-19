@@ -1,19 +1,26 @@
-import { Inline, Stack } from "@components/layout";
+import { Inline, Stack } from "@components/layout/index.ts";
 
-import { Div } from "@components/html";
+import { Div } from "@components/html/index.ts";
 import { MailIcon } from "@hopper-ui/icons";
-import { SearchInput } from "@components/text-input";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { SearchInput } from "@components/text-input/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/SearchInput",
-    component: SearchInput
-} as ComponentMeta<typeof SearchInput>;
+    component: SearchInput,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof SearchInput>;
 
-type SearchInputStory = ComponentStoryObj<typeof SearchInput>;
+export default meta;
+
+type SearchInputStory = StoryObj<typeof meta>;
 
 export const Default: SearchInputStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -36,7 +43,7 @@ export const Default: SearchInputStory = {
 };
 
 export const Placeholder: SearchInputStory = {
-    storyName: "placeholder",
+    name: "placeholder",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -56,7 +63,7 @@ export const Placeholder: SearchInputStory = {
 };
 
 export const Value: SearchInputStory = {
-    storyName: "value",
+    name: "value",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -80,7 +87,7 @@ export const Value: SearchInputStory = {
 };
 
 export const CustomIcon: SearchInputStory = {
-    storyName: "custom icon",
+    name: "custom icon",
     render: () => (
         <Stack>
             <Inline alignY="center">
@@ -100,7 +107,7 @@ export const CustomIcon: SearchInputStory = {
 };
 
 export const NoIcon: SearchInputStory = {
-    storyName: "no icon",
+    name: "no icon",
     render: () => (
         <Stack>
             <SearchInput icon={null} placeholder="Where to?" />
@@ -117,7 +124,7 @@ export const NoIcon: SearchInputStory = {
 };
 
 export const States: SearchInputStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Stack>
             <SearchInput active placeholder="Where to?" />
@@ -143,7 +150,7 @@ export const States: SearchInputStory = {
 };
 
 export const Zoom: SearchInputStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -163,7 +170,7 @@ export const Zoom: SearchInputStory = {
 };
 
 export const Styling: SearchInputStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <SearchInput border="amanita-600" aria-label="Label" />

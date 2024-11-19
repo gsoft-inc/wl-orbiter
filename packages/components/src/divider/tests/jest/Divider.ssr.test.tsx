@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { Divider } from "@components/divider";
+import { Divider } from "@components/divider/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

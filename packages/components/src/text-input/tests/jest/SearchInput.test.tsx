@@ -1,8 +1,8 @@
-import { Keys } from "@components/shared";
-import { SearchInput } from "@components/text-input";
+import { Keys } from "@components/shared/index.ts";
+import { SearchInput } from "@components/text-input/index.ts";
 import { act, fireEvent, screen, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 function getInput(element: Element) {

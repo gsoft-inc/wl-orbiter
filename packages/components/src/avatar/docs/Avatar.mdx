@@ -1,0 +1,109 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { InnerAvatar, InnerAvatarGroup, InnerDeletedAvatar, InnerAnonymousAvatar } from "@components/avatar/index.ts";
+import { Canvas, ComponentInfo, Preview, Tagline } from "@stories/components";
+import * as AvatarStories from "./Avatar.stories.tsx";
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+<Tagline>An avatar is a graphical representation of a user and typically appears in list and card views, alongside a user's information and/or content that they have created.</Tagline>
+
+<ComponentInfo
+    usage={"import { Avatar, AvatarGroup } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/avatar/src"
+/>
+
+## Usage
+
+Since ShareGate's applications are closely tied to [Microsoft Office 365](https://www.office.com/), our avatar aims to be similar to O365 personas.
+
+### Default
+
+By default, an avatar displays the initials of a user.
+
+<Canvas of={AvatarStories.Default} />
+
+### Local image
+
+An avatar can accept a local image.
+
+<Canvas of={AvatarStories.LocalImage} />
+
+### Remote image
+
+An avatar can accept a remote image URL. If the remote image loading is *delayed* or *fails to load*, the user initials will be displayed.
+
+<Canvas of={AvatarStories.RemoteImage} />
+
+### Size
+
+An avatar component can vary in size.
+
+<Canvas of={AvatarStories.Size} />
+
+## DeletedAvatar
+
+In some cases, you might want to display a deleted avatar.
+
+<Canvas of={AvatarStories.DeletedAvatarStory} />
+
+## AnonymousAvatar
+
+In some cases, you might want to display an anonymous avatar.
+
+<Canvas of={AvatarStories.AnonymousAvatarStory} />
+
+## AvatarGroup
+
+In some cases, you might want to stack avatars as a group.
+
+<Canvas of={AvatarStories.AvatarGroupStory} />
+
+### Remainings
+
+An avatar group has a maximum of 4 slots. Once this threshold is exceeded, the remaining avatar count is indicated as the fourth slot.
+
+<Canvas of={AvatarStories.AvatarGroupRemainings} />
+
+## API
+
+### Avatar
+
+<ComponentInfo
+    usage={"import { Avatar } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAvatar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAvatar} sort="alpha" />
+
+### Deleted Avatar
+
+<ComponentInfo
+    usage={"import { DeletedAvatar } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAvatar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerDeletedAvatar} sort="alpha" />
+
+### Anonymous Avatar
+
+<ComponentInfo
+    usage={"import { AnonymousAvatar } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAvatar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAnonymousAvatar} sort="alpha" />
+
+### AvatarGroup
+
+<ComponentInfo
+    usage={"import { AvatarGroup } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerAvatar.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerAvatarGroup} sort="alpha" />

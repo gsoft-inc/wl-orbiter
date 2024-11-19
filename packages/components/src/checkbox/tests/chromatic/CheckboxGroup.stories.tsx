@@ -1,13 +1,14 @@
-import { Checkbox, CheckboxGroup } from "@components/checkbox";
-import { Div } from "@components/html";
-import { Inline, Stack } from "@components/layout";
-import { Tag, TagProps } from "@components/tag";
-import { ToggleButton } from "@components/button";
+import { Checkbox, CheckboxGroup } from "@components/checkbox/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Tag, TagProps } from "@components/tag/index.ts";
+import { ToggleButton } from "@components/button/index.ts";
 import { useCallback } from "react";
-import { useCheckableProps } from "@components/shared";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { useCheckableProps } from "@components/shared/index.ts";
 
-export default {
+import { Meta, StoryObj } from "@storybook/react";
+
+const meta = {
     title: "Chromatic/CheckboxGroup",
     component: CheckboxGroup,
     parameters: {
@@ -15,9 +16,11 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof CheckboxGroup>;
+} as Meta<typeof CheckboxGroup>;
 
-type CheckboxGroupStory = ComponentStoryObj<typeof CheckboxGroup>;
+export default meta;
+
+type CheckboxGroupStory = StoryObj<typeof meta>;
 
 function CustomComponent({
     value,
@@ -46,7 +49,7 @@ function CustomComponent({
 }
 
 export const Default: CheckboxGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Stack>
             <CheckboxGroup size="sm">
@@ -64,7 +67,7 @@ export const Default: CheckboxGroupStory = {
 };
 
 export const Selection: CheckboxGroupStory = {
-    storyName: "selection",
+    name: "selection",
     render: () => (
         <Stack>
             <CheckboxGroup value={[]}>
@@ -87,7 +90,7 @@ export const Selection: CheckboxGroupStory = {
 };
 
 export const Number: CheckboxGroupStory = {
-    storyName: "number",
+    name: "number",
     render: () => (
         <CheckboxGroup defaultValue={["2"]}>
             <Checkbox value="1">1</Checkbox>
@@ -99,7 +102,7 @@ export const Number: CheckboxGroupStory = {
 
 
 export const Disabled: CheckboxGroupStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <CheckboxGroup disabled>
             <Checkbox value="1">1</Checkbox>
@@ -110,7 +113,7 @@ export const Disabled: CheckboxGroupStory = {
 };
 
 export const Gap: CheckboxGroupStory = {
-    storyName: "gap",
+    name: "gap",
     render: () => (
         <CheckboxGroup gap={800}>
             <Checkbox value="1">1</Checkbox>
@@ -121,7 +124,7 @@ export const Gap: CheckboxGroupStory = {
 };
 
 export const Wrap: CheckboxGroupStory = {
-    storyName: "wrap",
+    name: "wrap",
     render: () => (
         <Div width={800}>
             <CheckboxGroup wrap>
@@ -136,7 +139,7 @@ export const Wrap: CheckboxGroupStory = {
 };
 
 export const NoWrap: CheckboxGroupStory = {
-    storyName: "no wrap",
+    name: "no wrap",
     render: () => (
         <Div width={800}>
             <CheckboxGroup wrap={false}>
@@ -152,7 +155,7 @@ export const NoWrap: CheckboxGroupStory = {
 
 
 export const WrapOverflow: CheckboxGroupStory = {
-    storyName: "wrap overflow",
+    name: "wrap overflow",
     render: () => (
         <Div width={960}>
             <CheckboxGroup wrap>
@@ -167,7 +170,7 @@ export const WrapOverflow: CheckboxGroupStory = {
 };
 
 export const ToggleButtons: CheckboxGroupStory = {
-    storyName: "toggle buttons",
+    name: "toggle buttons",
     render: () => (
         <CheckboxGroup gap={80} defaultValue={["2"]}>
             <ToggleButton variant="secondary" value="1">1</ToggleButton>
@@ -178,7 +181,7 @@ export const ToggleButtons: CheckboxGroupStory = {
 };
 
 export const CustomComponents: CheckboxGroupStory = {
-    storyName: "custom components",
+    name: "custom components",
     render: () => (
         <CheckboxGroup gap={80} defaultValue={["2"]}>
             <CustomComponent value="1">1</CustomComponent>
@@ -189,7 +192,7 @@ export const CustomComponents: CheckboxGroupStory = {
 };
 
 export const Validation: CheckboxGroupStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline gap={800}>
             <CheckboxGroup validationState="invalid">
@@ -207,7 +210,7 @@ export const Validation: CheckboxGroupStory = {
 };
 
 export const Styling: CheckboxGroupStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <CheckboxGroup border="warning">
@@ -231,7 +234,7 @@ export const Styling: CheckboxGroupStory = {
 
 
 export const Reverse: CheckboxGroupStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <Stack inline>
             <CheckboxGroup reverse aria-label="Select your packages">
@@ -249,7 +252,7 @@ export const Reverse: CheckboxGroupStory = {
 };
 
 export const Zoom: CheckboxGroupStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">

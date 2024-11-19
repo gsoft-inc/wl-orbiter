@@ -1,4 +1,4 @@
-import { isArray, isNil } from "./assertions";
+import { isArray, isNil } from "./assertions.ts";
 
 export function arrayify<T>(value: T | T[]) {
     if (isNil(value)) {

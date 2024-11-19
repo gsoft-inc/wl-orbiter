@@ -1,6 +1,9 @@
 /.vscode
+storybook-static
 node_modules
 dist
 *.svg
 package.json
 *.css
+!/.storybook
+!/**/.storybook

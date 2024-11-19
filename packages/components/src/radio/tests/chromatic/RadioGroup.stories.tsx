@@ -1,17 +1,17 @@
-import { Field, HelpMessage, Label } from "@components/field";
-import { Inline, Stack } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-
-import { Counter } from "@components/counter";
-import { Div } from "@components/html";
-import { Tag } from "@components/tag";
-import { Text } from "@components/typography";
-import { ToggleButton } from "@components/button";
+import { Field, HelpMessage, Label } from "@components/field/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { Counter } from "@components/counter/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Tag } from "@components/tag/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { ToggleButton } from "@components/button/index.ts";
 import { ComponentProps, useCallback } from "react";
-import { as, useCheckableProps } from "@components/shared";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { as, useCheckableProps } from "@components/shared/index.ts";
 
-export default {
+import { Meta, StoryObj } from "@storybook/react";
+
+const meta = {
     title: "Chromatic/RadioGroup",
     component: RadioGroup,
     parameters: {
@@ -19,9 +19,11 @@ export default {
             delay: 100
         }
     }
-} as ComponentMeta<typeof RadioGroup>;
+} as Meta<typeof RadioGroup>;
 
-type RadioGroupStory = ComponentStoryObj<typeof RadioGroup>;
+export default meta;
+
+type RadioGroupStory = StoryObj<typeof meta>;
 
 const TagAsButton = as(Tag, "button");
 type TagAsButtonProps = ComponentProps<typeof TagAsButton>;
@@ -52,7 +54,7 @@ function CustomComponent({
 }
 
 export const Default: RadioGroupStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="start">
             <RadioGroup size="sm">
@@ -70,7 +72,7 @@ export const Default: RadioGroupStory = {
 };
 
 export const Selection: RadioGroupStory = {
-    storyName: "selection",
+    name: "selection",
     render: () => (
         <Inline alignY="start">
             <RadioGroup value="2" size="sm">
@@ -93,7 +95,7 @@ export const Selection: RadioGroupStory = {
 };
 
 export const Number: RadioGroupStory = {
-    storyName: "number",
+    name: "number",
     render: () => (
         <Inline alignY="start">
             <RadioGroup defaultValue="2" size="sm">
@@ -111,7 +113,7 @@ export const Number: RadioGroupStory = {
 };
 
 export const Disabled: RadioGroupStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <Inline alignY="start">
             <RadioGroup disabled size="sm">
@@ -129,7 +131,7 @@ export const Disabled: RadioGroupStory = {
 };
 
 export const DisabledRadio: RadioGroupStory = {
-    storyName: "disabled radio",
+    name: "disabled radio",
     render: () => (
         <Inline alignY="start">
             <RadioGroup size="sm">
@@ -147,7 +149,7 @@ export const DisabledRadio: RadioGroupStory = {
 };
 
 export const Gap: RadioGroupStory = {
-    storyName: "gap",
+    name: "gap",
     render: () => (
         <Inline alignY="start">
             <RadioGroup gap={800} size="sm">
@@ -165,7 +167,7 @@ export const Gap: RadioGroupStory = {
 };
 
 export const Wrap: RadioGroupStory = {
-    storyName: "wrap",
+    name: "wrap",
     render: () => (
         <Div width={800}>
             <RadioGroup wrap orientation="horizontal">
@@ -178,7 +180,7 @@ export const Wrap: RadioGroupStory = {
 };
 
 export const NoWrap: RadioGroupStory = {
-    storyName: "no wrap",
+    name: "no wrap",
     render: () => (
         <Div width={800}>
             <RadioGroup wrap={false} orientation="horizontal">
@@ -191,7 +193,7 @@ export const NoWrap: RadioGroupStory = {
 };
 
 export const OverflowWrapped: RadioGroupStory = {
-    storyName: "overflow wrapped",
+    name: "overflow wrapped",
     render: () => (
         <Div width={800}>
             <RadioGroup wrap orientation="horizontal">
@@ -204,7 +206,7 @@ export const OverflowWrapped: RadioGroupStory = {
 };
 
 export const ToggleButtons: RadioGroupStory = {
-    storyName: "toggle buttons",
+    name: "toggle buttons",
     render: () => (
         <Stack>
             <RadioGroup gap={80} orientation="horizontal" defaultValue="2" size="sm">
@@ -222,7 +224,7 @@ export const ToggleButtons: RadioGroupStory = {
 };
 
 export const CustomComponents: RadioGroupStory = {
-    storyName: "custom components",
+    name: "custom components",
     render: () => (
         <Stack>
             <RadioGroup gap={80} orientation="horizontal" defaultValue="2" size="sm">
@@ -240,7 +242,7 @@ export const CustomComponents: RadioGroupStory = {
 };
 
 export const Validation: RadioGroupStory = {
-    storyName: "validation",
+    name: "validation",
     render: () => (
         <Inline gap={800} alignY="start">
             <RadioGroup validationState="invalid" size="sm">
@@ -263,7 +265,7 @@ export const Validation: RadioGroupStory = {
 };
 
 export const Styling: RadioGroupStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <RadioGroup border="warning">
@@ -286,7 +288,7 @@ export const Styling: RadioGroupStory = {
 };
 
 export const Reverse: RadioGroupStory = {
-    storyName: "reverse",
+    name: "reverse",
     render: () => (
         <Stack inline>
             <Field>

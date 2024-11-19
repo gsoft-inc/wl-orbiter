@@ -1,5 +1,5 @@
 import { renderHook, fireEvent } from "@test-utils";
-import { useEventListener } from "@components/shared";
+import { useEventListener } from "@components/shared/index.ts";
 
 function createButton() {
     const element = document.createElement("button");

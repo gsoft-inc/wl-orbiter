@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Button } from "@components/button";
-import { Toolbar } from "@components/toolbar";
+import { Button } from "@components/button/index.ts";
+import { Toolbar } from "@components/toolbar/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

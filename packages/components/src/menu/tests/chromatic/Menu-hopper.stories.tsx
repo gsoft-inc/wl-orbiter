@@ -1,13 +1,13 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Inline, Stack } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
 import { Avatar, IconList, Text } from "@hopper-ui/components";
 import { LightbulbIcon, NotificationIcon } from "@hopper-ui/icons";
-import { Item, Section, NodeType } from "@components/collection";
-import { Menu, MenuItem, MenuItemProps } from "@components/menu";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Item, Section, NodeType } from "@components/collection/index.ts";
+import { Menu, MenuItem, MenuItemProps } from "@components/menu/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Menu-hopper",
     component: Menu,
     parameters: {
@@ -16,12 +16,14 @@ export default {
             chromaticPauseAnimationAtEnd: true
         }
     }
-} as ComponentMeta<typeof Menu>;
+} as Meta<typeof Menu>;
 
-type MenuStory = ComponentStoryObj<typeof Menu>;
+export default meta;
+
+type MenuStory = StoryObj<typeof meta>;
 
 export const OnlyItems: MenuStory = {
-    storyName: "only items",
+    name: "only items",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -32,7 +34,7 @@ export const OnlyItems: MenuStory = {
 };
 
 export const GeneratedKeys: MenuStory = {
-    storyName: "generated keys",
+    name: "generated keys",
     render: () => (
         <Menu aria-label="Planets">
             <Item>Earth</Item>
@@ -43,7 +45,7 @@ export const GeneratedKeys: MenuStory = {
 };
 
 export const Sections: MenuStory = {
-    storyName: "sections",
+    name: "sections",
     render: () => (
         <Menu aria-label="Planets">
             <Section title="Visited">
@@ -62,7 +64,7 @@ export const Sections: MenuStory = {
 };
 
 export const Dividers: MenuStory = {
-    storyName: "dividers",
+    name: "dividers",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -79,7 +81,7 @@ export const Dividers: MenuStory = {
 };
 
 export const MixedSectionsItemsAndDividers: MenuStory = {
-    storyName: "mixed sections, items and dividers",
+    name: "mixed sections, items and dividers",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -97,7 +99,7 @@ export const MixedSectionsItemsAndDividers: MenuStory = {
 };
 
 export const SelectedKeys: MenuStory = {
-    storyName: "selected keys",
+    name: "selected keys",
     render: () => (
         <Inline>
             <Menu defaultSelectedKeys={["mars"]} selectionMode="single" aria-label="Planets">
@@ -123,7 +125,7 @@ export const SelectedKeys: MenuStory = {
 };
 
 export const ItemWithStartIcon: MenuStory = {
-    storyName: "item with start icon",
+    name: "item with start icon",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">
@@ -147,7 +149,7 @@ export const ItemWithStartIcon: MenuStory = {
 };
 
 export const ItemWithStartIconAndDescription: MenuStory = {
-    storyName: "item with start icon and description",
+    name: "item with start icon and description",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">
@@ -170,7 +172,7 @@ export const ItemWithStartIconAndDescription: MenuStory = {
 };
 
 export const ItemWithEndIcon: MenuStory = {
-    storyName: "item with end icon",
+    name: "item with end icon",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">
@@ -194,7 +196,7 @@ export const ItemWithEndIcon: MenuStory = {
 };
 
 export const ItemWithAvatar: MenuStory = {
-    storyName: "item with avatar",
+    name: "item with avatar",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">
@@ -214,7 +216,7 @@ export const ItemWithAvatar: MenuStory = {
 };
 
 export const ItemWithAvatarAndDescription: MenuStory = {
-    storyName: "item with avatar and description",
+    name: "item with avatar and description",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">
@@ -237,7 +239,7 @@ export const ItemWithAvatarAndDescription: MenuStory = {
 };
 
 export const ItemWithDescription: MenuStory = {
-    storyName: "item with description",
+    name: "item with description",
     render: () => (
         <Menu aria-label="Planets">
             <Item key="earth">
@@ -258,7 +260,7 @@ export const ItemWithDescription: MenuStory = {
 };
 
 export const ItemOverflow: MenuStory = {
-    storyName: "item overflow",
+    name: "item overflow",
     render: () => (
         <Inline>
             <Menu width={960} aria-label="Planets">
@@ -276,7 +278,7 @@ export const ItemOverflow: MenuStory = {
 };
 
 export const ItemWithDescriptionOverflow: MenuStory = {
-    storyName: "item with description overflow",
+    name: "item with description overflow",
     render: () => (
         <Inline>
             <Menu aria-label="Planets">
@@ -322,7 +324,7 @@ export const ItemWithDescriptionOverflow: MenuStory = {
 };
 
 export const ItemWithDescriptionOverflowWhenFluid: MenuStory = {
-    storyName: "item with description overflow when fluid",
+    name: "item with description overflow when fluid",
     render: () => (
         <Inline>
             <Menu fluid width="16rem" aria-label="Planets">
@@ -360,7 +362,7 @@ export const ItemWithDescriptionOverflowWhenFluid: MenuStory = {
 };
 
 export const Fluid: MenuStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Menu fluid aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -371,7 +373,7 @@ export const Fluid: MenuStory = {
 };
 
 export const ValidationState: MenuStory = {
-    storyName: "validation state",
+    name: "validation state",
     render: () => (
         <Stack>
             <Inline>
@@ -435,7 +437,7 @@ export const ValidationState: MenuStory = {
 };
 
 export const States: MenuStory = {
-    storyName: "states",
+    name: "states",
     render: () => (
         <Stack>
             <Inline>
@@ -487,7 +489,7 @@ export const States: MenuStory = {
 };
 
 export const DynamicItems: MenuStory = {
-    storyName: "dynamic items",
+    name: "dynamic items",
     render: () => (
         <Menu aria-label="Planets">
             {["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus"].map(x => (
@@ -517,7 +519,7 @@ const RedItem = ({ children, ...rest }: Omit<MenuItemProps, "item">) => {
 };
 
 export const CustomItemComponent: MenuStory = {
-    storyName: "custom item component",
+    name: "custom item component",
     render: () => (
         <Menu aria-label="Planets">
             <RedItem key="earth">Earth</RedItem>
@@ -537,7 +539,7 @@ export const CustomItemComponent: MenuStory = {
 };
 
 export const AdaptWidthToLargestItem: MenuStory = {
-    storyName: "adapt width to largest item",
+    name: "adapt width to largest item",
     render: () => (
         <Menu aria-label="Planets">
             <Item>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Item>
@@ -548,7 +550,7 @@ export const AdaptWidthToLargestItem: MenuStory = {
 };
 
 export const CustomMenuWidth: MenuStory = {
-    storyName: "custom menu width",
+    name: "custom menu width",
     render: () => (
         <Menu width="20rem" aria-label="Planets">
             <Item key="earth">Earth</Item>
@@ -559,7 +561,7 @@ export const CustomMenuWidth: MenuStory = {
 };
 
 export const ConditionalRendering: MenuStory = {
-    storyName: "conditional rendering",
+    name: "conditional rendering",
     render: () => (
         <Menu aria-label="Planets">
             {false && <Item key="earth">Earth</Item>}
@@ -570,7 +572,7 @@ export const ConditionalRendering: MenuStory = {
 };
 
 export const ScrollingWithTooManyItems: MenuStory = {
-    storyName: "scrolling with too many items",
+    name: "scrolling with too many items",
     render: () => (
         <Menu selectionMode="single" aria-label="Planets">
             <Item key="ceres">Ceres</Item>
@@ -592,7 +594,7 @@ export const ScrollingWithTooManyItems: MenuStory = {
 };
 
 export const ScrollingWithSections: MenuStory = {
-    storyName: "scrolling with sections",
+    name: "scrolling with sections",
     render: () => (
         <Menu selectionMode="single" aria-label="Planets">
             <Section title="Visited">
@@ -628,7 +630,7 @@ export const ScrollingWithSections: MenuStory = {
 };
 
 export const ScrollingWithDividers: MenuStory = {
-    storyName: "scrolling with dividers",
+    name: "scrolling with dividers",
     render: () => (
         <Menu selectionMode="single" aria-label="Planets">
             <Item key="ceres">Ceres</Item>
@@ -652,7 +654,7 @@ export const ScrollingWithDividers: MenuStory = {
 };
 
 export const ScrollingWithDescriptions: MenuStory = {
-    storyName: "scrolling with descriptions",
+    name: "scrolling with descriptions",
     render: () => (
         <Menu selectionMode="single" aria-label="Planets">
             <Item key="earth">
@@ -696,7 +698,7 @@ export const ScrollingWithDescriptions: MenuStory = {
 };
 
 export const ScrollingMixMatch: MenuStory = {
-    storyName: "scrolling mix & match",
+    name: "scrolling mix & match",
     render: () => (
         <Menu selectionMode="single" aria-label="Planets">
             <Section title="Visited">
@@ -729,7 +731,7 @@ export const ScrollingMixMatch: MenuStory = {
 };
 
 export const ScrollingWithCustomStyleHeight: MenuStory = {
-    storyName: "scrolling with custom style height",
+    name: "scrolling with custom style height",
     render: () => (
         <Menu selectionMode="single" height={960} aria-label="Planets">
             <Item key="ceres">Ceres</Item>
@@ -751,7 +753,7 @@ export const ScrollingWithCustomStyleHeight: MenuStory = {
 };
 
 export const Zoom: MenuStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -773,7 +775,7 @@ export const Zoom: MenuStory = {
 };
 
 export const Styling: MenuStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Menu border="warning" aria-label="Planets">

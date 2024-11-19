@@ -1,6 +1,7 @@
-import { isFunction, isNil } from "../../shared/src/assertions";
+import { isFunction, isNil } from "../../shared/src/assertions.ts";
 
 // Took from https://github.com/tailwindlabs/headlessui/blob/develop/packages/%40headlessui-react/src/utils/match.ts
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function match<TValue extends string | number = string, TReturnValue = unknown>(value: TValue, lookup: Record<TValue, TReturnValue | ((...arg: any[]) => TReturnValue)>, ...args: any[]): TReturnValue {
     const handler = lookup[value];
 
@@ -13,10 +14,6 @@ export function match<TValue extends string | number = string, TReturnValue = un
             .map(key => `"${key}"`)
             .join(", ")}.`
     );
-
-    if (Error.captureStackTrace) {
-        Error.captureStackTrace(error, match);
-    }
 
     throw error;
 }

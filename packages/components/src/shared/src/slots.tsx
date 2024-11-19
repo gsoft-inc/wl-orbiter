@@ -1,7 +1,7 @@
 import { Children, ComponentType, ReactElement, ReactNode, useMemo } from "react";
-import { augmentElement } from "./augmentElement";
-import { isEmptyArray, isFunction, isNil, isString, isUndefined } from "./assertions";
-import { resolveChildren } from "./resolveChildren";
+import { augmentElement } from "./augmentElement.tsx";
+import { isEmptyArray, isFunction, isNil, isString, isUndefined } from "./assertions.ts";
+import { resolveChildren } from "./resolveChildren.ts";
 
 const SlotKey = "__slot__";
 
@@ -66,9 +66,8 @@ export interface SlotOptions {
     };
 }
 
-type GetSlotsReturn<T extends SlotOptions> = {
-    [key in keyof Omit<T, "_">]?: ReactElement;
-};
+type GetSlotsReturn<T extends SlotOptions> = Partial<Record<keyof Omit<T, "_">, ReactElement>>;
+
 
 export function getSlots<T extends SlotOptions>(children: ReactNode, { _ = {}, ...slots }: T): GetSlotsReturn<T> {
     if (isNil(children)) {

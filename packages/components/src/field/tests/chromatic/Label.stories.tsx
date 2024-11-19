@@ -1,25 +1,32 @@
-import { Inline } from "@components/layout";
-import { Label } from "@components/field";
-import { Span } from "@components/html";
-import { TextLink } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Inline } from "@components/layout/index.ts";
+import { Label } from "@components/field/index.ts";
+import { Span } from "@components/html/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Label",
-    component: Label
-} as ComponentMeta<typeof Label>;
+    component: Label,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Label>;
 
-type GroupFieldStory = ComponentStoryObj<typeof Label>;
+export default meta;
+
+type GroupFieldStory = StoryObj<typeof meta>;
 
 export const Default: GroupFieldStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Label>Where to?</Label>
     )
 };
 
 export const Complex: GroupFieldStory = {
-    storyName: "complex",
+    name: "complex",
     render: () => (
         <Label>
             <Span>Where to? (<TextLink variant="primary" size="inherit" href="https://www.google.com/sky">view destinations</TextLink>)</Span>
@@ -28,14 +35,14 @@ export const Complex: GroupFieldStory = {
 };
 
 export const AsSpan: GroupFieldStory = {
-    storyName: "as span",
+    name: "as span",
     render: () => (
         <Label as="span">Where to?</Label>
     )
 };
 
 export const Styling: GroupFieldStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Label border="warning">Where to?</Label>

@@ -1,12 +1,7 @@
 /* eslint-disable react/no-array-index-key */
-import { isPlainObject, isString, mergeClasses } from "@components/shared";
-
-import { components } from "@storybook/components";
+import { isPlainObject, isString, mergeClasses } from "@components/shared/index.ts";
 import { isElement } from "react-is";
 import { ComponentProps } from "react";
-
-const MdxTable = components.table;
-type MdxTableProps = ComponentProps<typeof MdxTable>;
 
 interface Column {
     title: string;
@@ -22,7 +17,7 @@ interface Row {
     style?: object;
 }
 
-interface TableProps {
+export interface TableProps extends TableRawProps {
     columns: string[] | Column[];
     rows: any[] | Row[];
     headerClassName?: string;
@@ -30,8 +25,7 @@ interface TableProps {
     fluid?: boolean;
 }
 
-
-function ensureRowsValuesMatchColumns(columns, rows) {
+function ensureRowsValuesMatchColumns(columns: TableProps["columns"], rows: TableProps["rows"]) {
     const columnsCount = columns.length;
 
     rows.forEach((x, index) => {
@@ -41,20 +35,21 @@ function ensureRowsValuesMatchColumns(columns, rows) {
     });
 }
 
-interface TableRawProps extends MdxTableProps {
+interface TableRawProps extends ComponentProps<"table"> {
     fluid?: boolean;
 }
 
 function TableRaw({ fluid, className, children, ...rest }: TableRawProps) {
     const classes = mergeClasses(
+        "orbiter-doc-table",
         fluid && "w-100",
         className
     );
 
     return (
-        <MdxTable className={classes} {...rest}>
+        <table className={classes} {...rest}>
             {children}
-        </MdxTable>
+        </table>
     );
 }
 

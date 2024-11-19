@@ -1,26 +1,33 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Content, Footer } from "@components/placeholders";
-import { Field, Label } from "@components/field";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Content, Footer } from "@components/placeholders/index.ts";
+import { Field, Label } from "@components/field/index.ts";
 
-import { Div } from "@components/html";
-import { Form } from "@components/form";
-import { Heading } from "@components/typography";
-import { Image } from "@components/image";
-import { Launch } from "./assets";
-import { Popover } from "@components/popover";
-import { TextInput } from "@components/text-input";
-import { TextLink } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Form } from "@components/form/index.ts";
+import { Heading } from "@components/typography/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Launch } from "./assets/index.ts";
+import { Popover } from "@components/popover/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Popover",
-    component: Popover
-} as ComponentMeta<typeof Popover>;
+    component: Popover,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Popover>;
 
-type PopoverStory = ComponentStoryObj<typeof Popover>;
+export default meta;
+
+type PopoverStory = StoryObj<typeof meta>;
 
 export const Default: PopoverStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -30,7 +37,7 @@ export const Default: PopoverStory = {
 };
 
 export const TextFooter: PopoverStory = {
-    storyName: "text footer",
+    name: "text footer",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -41,7 +48,7 @@ export const TextFooter: PopoverStory = {
 };
 
 export const LinkFooter: PopoverStory = {
-    storyName: "link footer",
+    name: "link footer",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -54,7 +61,7 @@ export const LinkFooter: PopoverStory = {
 };
 
 export const PopoverButton: PopoverStory = {
-    storyName: "button",
+    name: "button",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -65,7 +72,7 @@ export const PopoverButton: PopoverStory = {
 };
 
 export const PopoverButtonGroup: PopoverStory = {
-    storyName: "button group",
+    name: "button group",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -79,7 +86,7 @@ export const PopoverButtonGroup: PopoverStory = {
 };
 
 export const AllSlots: PopoverStory = {
-    storyName: "all slots",
+    name: "all slots",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -94,7 +101,7 @@ export const AllSlots: PopoverStory = {
 };
 
 export const PopoverForm: PopoverStory = {
-    storyName: "form",
+    name: "form",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -119,7 +126,7 @@ export const PopoverForm: PopoverStory = {
 };
 
 export const PopoverImage: PopoverStory = {
-    storyName: "image",
+    name: "image",
     render: () => (
         <Popover>
             <Heading>Space News</Heading>
@@ -135,7 +142,7 @@ export const PopoverImage: PopoverStory = {
 };
 
 export const Focused: PopoverStory = {
-    storyName: "focused",
+    name: "focused",
     render: () => (
         <Popover focus>
             <Heading>Space News</Heading>
@@ -145,7 +152,7 @@ export const Focused: PopoverStory = {
 };
 
 export const NotDismissable: PopoverStory = {
-    storyName: "not dismissable",
+    name: "not dismissable",
     render: () => (
         <Popover dismissable={false}>
             <Heading>Space News</Heading>
@@ -155,7 +162,7 @@ export const NotDismissable: PopoverStory = {
 };
 
 export const StyledSystem: PopoverStory = {
-    storyName: "styled system",
+    name: "styled system",
     render: () => (
         <Popover border="warning">
             <Heading>Space News</Heading>
@@ -165,7 +172,7 @@ export const StyledSystem: PopoverStory = {
 };
 
 export const ClassName: PopoverStory = {
-    storyName: "className",
+    name: "className",
     render: () => (
         <Popover className="border-red">
             <Heading>Space News</Heading>
@@ -175,7 +182,7 @@ export const ClassName: PopoverStory = {
 };
 
 export const ZoomIn: PopoverStory = {
-    storyName: "zoom in",
+    name: "zoom in",
     render: () => (
         <Div className="zoom-in">
             <Popover>
@@ -187,7 +194,7 @@ export const ZoomIn: PopoverStory = {
 };
 
 export const ZoomOut: PopoverStory = {
-    storyName: "zoom out",
+    name: "zoom out",
     render: () => (
         <Div className="zoom-out">
             <Popover>
@@ -199,7 +206,7 @@ export const ZoomOut: PopoverStory = {
 };
 
 export const Style: PopoverStory = {
-    storyName: "style",
+    name: "style",
     render: () => (
         <Popover style={{ border: "1px solid red" }}>
             <Heading>Space News</Heading>
@@ -209,7 +216,7 @@ export const Style: PopoverStory = {
 };
 
 export const NoHeading: PopoverStory = {
-    storyName: "no heading",
+    name: "no heading",
     render: () => (
         <Popover>
             <Content>SpaceX designs, manufactures, and launches the world's most advanced rockets and spacecraft.</Content>

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { DomFocusManager, FocusScope, VirtualFocusManager } from "@components/shared";
+import { DomFocusManager, FocusScope, VirtualFocusManager } from "@components/shared/index.ts";
 import { MutableRefObject, createRef } from "react";
 
 class Scope extends FocusScope {

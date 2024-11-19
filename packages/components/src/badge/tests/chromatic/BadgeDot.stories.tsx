@@ -1,24 +1,26 @@
-import { Badge } from "@components/badge";
-import { CircleBadge, IconBadge, SquareBadge, TextBadge } from "./BadgeUtils";
-import { Inline } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Badge } from "@components/badge/index.ts";
+import { CircleBadge, IconBadge, SquareBadge, TextBadge } from "./BadgeUtils.tsx";
+import { Inline } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     component: Badge,
     title: "Chromatic/Badge/dot"
-} as ComponentMeta<typeof Badge>;
+} as Meta<typeof Badge>;
 
-type BadgeStory = ComponentStoryObj<typeof Badge>;
+export default meta;
+
+type BadgeStory = StoryObj<typeof meta>;
 
 export const Default: BadgeStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <SquareBadge variant="dot" />
     )
 };
 
 export const Overlap: BadgeStory = {
-    storyName: "overlap",
+    name: "overlap",
     render: () => (
         <Inline gap={400}>
             <SquareBadge variant="dot" />
@@ -30,7 +32,7 @@ export const Overlap: BadgeStory = {
 };
 
 export const Styling: BadgeStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <SquareBadge variant="dot" border="warning" />

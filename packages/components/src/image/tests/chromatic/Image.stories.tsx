@@ -1,25 +1,32 @@
-import { Div } from "@components/html";
-import { Image } from "@components/image";
-import { Inline, Stack } from "@components/layout";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { Launch, Mars } from "./assets";
+import { Div } from "@components/html/index.ts";
+import { Image } from "@components/image/index.ts";
+import { Inline, Stack } from "@components/layout/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
+import { Launch, Mars } from "./assets/index.ts";
 
-export default {
+const meta = {
     title: "Chromatic/Image",
-    component: Image
-} as ComponentMeta<typeof Image>;
+    component: Image,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Image>;
 
-type ImageStory = ComponentStoryObj<typeof Image>;
+export default meta;
+
+type ImageStory = StoryObj<typeof meta>;
 
 export const Default: ImageStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Image src={Launch} alt="SpaceX launch" />
     )
 };
 
 export const Contained: ImageStory = {
-    storyName: "contained",
+    name: "contained",
     render: () => (
         <Div width="200px" height="200px">
             <Image src={Launch} alt="SpaceX launch" />
@@ -28,7 +35,7 @@ export const Contained: ImageStory = {
 };
 
 export const Size: ImageStory = {
-    storyName: "size",
+    name: "size",
     render: () => (
         <Stack>
             <Image width="200px" src={Launch} alt="SpaceX launch" />
@@ -38,7 +45,7 @@ export const Size: ImageStory = {
 };
 
 export const Straight: ImageStory = {
-    storyName: "straight",
+    name: "straight",
     render: () => (
         <Inline alignY="end">
             <Image shape="straight" width="50px" height="50px" src={Launch} alt="SpaceX launch" />
@@ -51,7 +58,7 @@ export const Straight: ImageStory = {
 };
 
 export const Rounded: ImageStory = {
-    storyName: "rounded",
+    name: "rounded",
     render: () => (
         <Inline alignY="end">
             <Image shape="rounded" width="50px" height="50px" src={Launch} alt="SpaceX launch" />
@@ -64,7 +71,7 @@ export const Rounded: ImageStory = {
 };
 
 export const Circular: ImageStory = {
-    storyName: "circular",
+    name: "circular",
     render: () => (
         <Inline alignY="end">
             <Image shape="circular" width="50px" height="50px" src={Launch} alt="SpaceX launch" />
@@ -77,7 +84,7 @@ export const Circular: ImageStory = {
 };
 
 export const ObjectFit: ImageStory = {
-    storyName: "object fit",
+    name: "object fit",
     render: () => (
         <Inline>
             <Div width="200px" height="200px">
@@ -100,7 +107,7 @@ export const ObjectFit: ImageStory = {
 };
 
 export const ObjectPosition: ImageStory = {
-    storyName: "object position",
+    name: "object position",
     render: () => (
         <Inline>
             <Image objectPosition="50% 50%" objectFit="none" width="200px" height="200px" src={Mars} alt="SpaceX launch" />
@@ -112,7 +119,7 @@ export const ObjectPosition: ImageStory = {
 };
 
 export const Zoom: ImageStory = {
-    storyName: "zoom",
+    name: "zoom",
     render: () => (
         <Stack>
             <Div className="zoom-in">
@@ -126,7 +133,7 @@ export const Zoom: ImageStory = {
 };
 
 export const Styling: ImageStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Image border="warning" src={Mars} alt="SpaceX launch" />

@@ -1,23 +1,30 @@
-import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets";
-import { Content, Footer, Header } from "@components/placeholders";
-import { Heading, Paragraph } from "@components/typography";
-import { ButtonGroup, Button } from "@components/button";
-import { Dialog } from "@components/dialog";
-import { Div } from "@components/html";
-import { Illustration } from "@components/illustration";
-import { Image } from "@components/image";
-import { TextLink } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Apollo11Poster, Nasa, TheMartianPoster } from "./assets/index.tsx";
+import { Content, Footer, Header } from "@components/placeholders/index.ts";
+import { Heading, Paragraph } from "@components/typography/index.ts";
+import { ButtonGroup, Button } from "@components/button/index.ts";
+import { Dialog } from "@components/dialog/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Illustration } from "@components/illustration/index.ts";
+import { Image } from "@components/image/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Dialog",
-    component: Dialog
-} as ComponentMeta<typeof Dialog>;
+    component: Dialog,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Dialog>;
 
-type DialogStory = ComponentStoryObj<typeof Dialog>;
+export default meta;
+
+type DialogStory = StoryObj<typeof meta>;
 
 export const Default: DialogStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -31,7 +38,7 @@ export const Default: DialogStory = {
 };
 
 export const TextHeader: DialogStory = {
-    storyName: "text header",
+    name: "text header",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -46,7 +53,7 @@ export const TextHeader: DialogStory = {
 };
 
 export const LinkHeader: DialogStory = {
-    storyName: "link header",
+    name: "link header",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -63,7 +70,7 @@ export const LinkHeader: DialogStory = {
 };
 
 export const TextFooter: DialogStory = {
-    storyName: "text footer",
+    name: "text footer",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -78,7 +85,7 @@ export const TextFooter: DialogStory = {
 };
 
 export const LinkFooter: DialogStory = {
-    storyName: "link footer",
+    name: "link footer",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -95,7 +102,7 @@ export const LinkFooter: DialogStory = {
 };
 
 export const DialogButton: DialogStory = {
-    storyName: "button",
+    name: "button",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -111,7 +118,7 @@ export const DialogButton: DialogStory = {
 
 
 export const DialogButtonGroup: DialogStory = {
-    storyName: "button group",
+    name: "button group",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -129,7 +136,7 @@ export const DialogButtonGroup: DialogStory = {
 };
 
 export const FooterButtonGroup: DialogStory = {
-    storyName: "footer & button group",
+    name: "footer & button group",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -148,7 +155,7 @@ export const FooterButtonGroup: DialogStory = {
 };
 
 export const ImageTooSmall: DialogStory = {
-    storyName: "image too small",
+    name: "image too small",
     render: () => (
         <Dialog>
             <Image src={Apollo11Poster} alt="Apollo 11" />
@@ -163,7 +170,7 @@ export const ImageTooSmall: DialogStory = {
 };
 
 export const ImageTooBig: DialogStory = {
-    storyName: "image too big",
+    name: "image too big",
     render: () => (
         <Dialog>
             <Image src={TheMartianPoster} alt="The Martian" />
@@ -178,7 +185,7 @@ export const ImageTooBig: DialogStory = {
 };
 
 export const DialogIllustration: DialogStory = {
-    storyName: "illustration",
+    name: "illustration",
     render: () => (
         <Dialog>
             <Illustration color="sunken-treasure-100">
@@ -195,7 +202,7 @@ export const DialogIllustration: DialogStory = {
 };
 
 export const AllSections: DialogStory = {
-    storyName: "all sections",
+    name: "all sections",
     render: () => (
         <Dialog>
             <Illustration color="sunken-treasure-100">
@@ -220,7 +227,7 @@ export const AllSections: DialogStory = {
 };
 
 export const HeadingOverflow: DialogStory = {
-    storyName: "heading overflow",
+    name: "heading overflow",
     render: () => (
         <Dialog>
             <Heading>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Heading>
@@ -234,7 +241,7 @@ export const HeadingOverflow: DialogStory = {
 };
 
 export const HeaderOverflow: DialogStory = {
-    storyName: "header overflow",
+    name: "header overflow",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -249,7 +256,7 @@ export const HeaderOverflow: DialogStory = {
 };
 
 export const FooterOverflow: DialogStory = {
-    storyName: "footer overflow",
+    name: "footer overflow",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -268,7 +275,7 @@ export const FooterOverflow: DialogStory = {
 };
 
 export const ButtonOverflow: DialogStory = {
-    storyName: "button overflow",
+    name: "button overflow",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -287,7 +294,7 @@ export const ButtonOverflow: DialogStory = {
 };
 
 export const EverythingOverflow: DialogStory = {
-    storyName: "everything overflow",
+    name: "everything overflow",
     render: () => (
         <Dialog>
             <Heading>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus a purus sit amet volutpat. Ut ac mauris sit amet elit rhoncus dictum. Morbi vehicula, tortor eget congue porta, mi ipsum interdum lectus, non lobortis dui nulla sed nisi.</Heading>
@@ -308,7 +315,7 @@ export const EverythingOverflow: DialogStory = {
 };
 
 export const NotDismissable: DialogStory = {
-    storyName: "not dismissable",
+    name: "not dismissable",
     render: () => (
         <Dialog dismissable={false}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -322,7 +329,7 @@ export const NotDismissable: DialogStory = {
 };
 
 export const Small: DialogStory = {
-    storyName: "small",
+    name: "small",
     render: () => (
         <Dialog size="sm">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -340,7 +347,7 @@ export const Small: DialogStory = {
 };
 
 export const Medium: DialogStory = {
-    storyName: "medium",
+    name: "medium",
     render: () => (
         <Dialog size="md">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -358,7 +365,7 @@ export const Medium: DialogStory = {
 };
 
 export const Large: DialogStory = {
-    storyName: "large",
+    name: "large",
     render: () => (
         <Dialog size="lg">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -376,7 +383,7 @@ export const Large: DialogStory = {
 };
 
 export const NoAutofocus: DialogStory = {
-    storyName: "do not autofocus an element which is not in the initial viewport",
+    name: "do not autofocus an element which is not in the initial viewport",
     render: () => (
         <Dialog>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -402,7 +409,7 @@ export const NoAutofocus: DialogStory = {
 };
 
 export const Focused: DialogStory = {
-    storyName: "focused",
+    name: "focused",
     render: () => (
         <Dialog focus>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -416,7 +423,7 @@ export const Focused: DialogStory = {
 };
 
 export const WrapperStyledSystem: DialogStory = {
-    storyName: "wrapper styled system",
+    name: "wrapper styled system",
     render: () => (
         <Dialog wrapperProps={{ border: "sunken-treasure-700" }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -430,7 +437,7 @@ export const WrapperStyledSystem: DialogStory = {
 };
 
 export const WrapperClassName: DialogStory = {
-    storyName: "wrapper className",
+    name: "wrapper className",
     render: () => (
         <Dialog wrapperProps={{ className: "border-red" }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -444,7 +451,7 @@ export const WrapperClassName: DialogStory = {
 };
 
 export const WrapperStyle: DialogStory = {
-    storyName: "wrapper style",
+    name: "wrapper style",
     render: () => (
         <Dialog wrapperProps={{ style: { border: "1px solid red" } }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -458,7 +465,7 @@ export const WrapperStyle: DialogStory = {
 };
 
 export const StyledSystem: DialogStory = {
-    storyName: "styled system",
+    name: "styled system",
     render: () => (
         <Dialog border="warning">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -472,7 +479,7 @@ export const StyledSystem: DialogStory = {
 };
 
 export const ClassName: DialogStory = {
-    storyName: "className",
+    name: "className",
     render: () => (
         <Dialog className="border-red">
             <Heading>Iconic Arecibo Observatory collapses</Heading>
@@ -486,7 +493,7 @@ export const ClassName: DialogStory = {
 };
 
 export const ZoomIn: DialogStory = {
-    storyName: "zoom in",
+    name: "zoom in",
     render: () => (
         <Div className="zoom-in">
             <Dialog>
@@ -502,7 +509,7 @@ export const ZoomIn: DialogStory = {
 };
 
 export const ZoomOut: DialogStory = {
-    storyName: "zoom out",
+    name: "zoom out",
     render: () => (
         <Div className="zoom-out">
             <Dialog>
@@ -518,7 +525,7 @@ export const ZoomOut: DialogStory = {
 };
 
 export const Style: DialogStory = {
-    storyName: "style",
+    name: "style",
     render: () => (
         <Dialog style={{ border: "1px solid red" }}>
             <Heading>Iconic Arecibo Observatory collapses</Heading>

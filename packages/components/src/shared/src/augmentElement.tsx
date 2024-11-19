@@ -1,6 +1,6 @@
 import { ReactElement, RefAttributes, cloneElement } from "react";
-import { Size, SizeAdapter, normalizeSize } from "./size";
-import { mergeProps } from "./mergeProps";
+import { Size, SizeAdapter, normalizeSize } from "./size.ts";
+import { mergeProps } from "./mergeProps.ts";
 
 export function augmentElement(element: ReactElement & RefAttributes<any>, newProps: Record<string, any>) {
     const augmentedProps = mergeProps({ ...element.props, ref: element.ref }, newProps);

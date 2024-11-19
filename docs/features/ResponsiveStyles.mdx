@@ -1,0 +1,53 @@
+import { Meta,  } from "@storybook/addon-docs";
+import { Canvas, Table, Preview, Source } from "@stories/components";
+import * as ResponsiveStylesStories from "./ResponsiveStyles.stories.tsx";
+
+<Meta of={ResponsiveStylesStories} />
+
+# Responsive styles
+
+Orbiter [style props](?path=/docs/style-props--docs) accepts a specialized syntax to support responsive breakpoints.
+
+## Usage
+
+By passing an object to any style props, you can specify which style will be applied at different breakpoints. These rules are on a [`min-width` basis](https://nikitahl.com/difference-between-min-width-vs-max-width) meaning that a `sm` value will apply from `768px` and up until another higher breakpoint matches.
+
+<Canvas of={ResponsiveStylesStories.Usage} />
+
+## Mobile first
+
+Not all breakpoints must be explicitly defined. In the following example, `base` and `lg` breakpoints are explicitly declared. When match, the `xl` breakpoint will implicitly take the value set by the `lg` breakpoint since it is wider than `lg`. Everything below `lg` inherits the `base` color.
+
+<Canvas of={ResponsiveStylesStories.MobileFirst} />
+
+## useResponsiveValue
+
+To resolve a responsive value within a React component, Orbiter provides the `useResponsiveValue` hook.
+
+<Source code={`
+import { useResponsiveValue } from "@workleap/orbiter-ui";
+
+const fluidValue = useResponsiveValue({ base: true, lg: false });
+`} />
+
+## Breakpoints
+
+The following responsive breakpoints are supported by Orbiter [style props](?path=/docs/style-props--docs) and acts as their [CSS media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) counterparts:
+
+<Table
+    columns={[
+        { title: "Size", headerStyle: { width: "75px" }, rowClassName: "code" },
+        { title: "Media query", headerStyle: { width: "200px" }, rowClassName: "code" }
+    ]}
+    rows={[
+        ["xs", "min-width: 640px"],
+        ["sm", "min-width: 768px"],
+        ["md", "min-width: 1024px"],
+        ["lg", "min-width: 1280px"],
+        ["xl", "min-width: 1440px"]
+    ]}
+    style={{
+        marginTop: "24px",
+        marginBottom: "24px"
+    }}
+/>

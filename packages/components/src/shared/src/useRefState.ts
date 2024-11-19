@@ -1,5 +1,5 @@
 import { RefObject, useCallback, useRef } from "react";
-import { useForceRender } from "./useForceRender";
+import { useForceRender } from "./useForceRender.ts";
 
 export function useRefState<T>(initialValue?: T): [RefObject<T>, (newValue: T, rerender?: boolean) => void] {
     const forceRender = useForceRender();

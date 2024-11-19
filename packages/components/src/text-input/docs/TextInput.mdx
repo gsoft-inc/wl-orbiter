@@ -1,0 +1,130 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerPasswordInput, InnerSearchInput, InnerTextInput } from "@components/text-input/index.ts";
+
+import * as TextInputStories from "./TextInput.stories.tsx";
+
+<Meta of={TextInputStories} />
+
+# TextInput
+
+<Tagline>A text input allow a user to enter and edit a text.</Tagline>
+
+<ComponentInfo
+    usage={"import { TextInput, SearchInput, PasswordInput } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/text-input/src"
+/>
+
+## Usage
+
+### Default
+
+A default text input.
+
+<Canvas of={TextInputStories.Default} />
+
+### Value
+
+A text input can have a value.
+
+<Canvas of={TextInputStories.Value} />
+
+### Icon
+
+A text input can contain an [icon](?path=/docs/icon-gallery--docs).
+
+<Canvas of={TextInputStories.IconStory} />
+
+### Button
+
+A text input can contain a [button](?path=/docs/button--default-story).
+
+<Canvas of={TextInputStories.ButtonStory} />
+
+### Disabled
+
+A text input can be disabled.
+
+<Canvas of={TextInputStories.Disabled} />
+
+### Readonly
+
+A text input can be readonly.
+
+<Canvas of={TextInputStories.Readonly} />
+
+### Loading
+
+A text input can show that it is currently loading data.
+
+<Canvas of={TextInputStories.Loading} />
+
+### Size
+
+A text input can vary in size.
+
+<Canvas of={TextInputStories.Size} />
+
+### Fluid
+
+A text input can take the width of its container.
+
+<Canvas of={TextInputStories.Fluid} />
+
+### Validation
+
+A text input can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the input via the `validationState` prop.
+
+The example below illustrates how one would validate if the user has entered a valid email.
+
+<Canvas of={TextInputStories.EmailValidation} />
+
+### Controlled
+
+A text input `value` can be handled in controlled mode.
+
+<Canvas of={TextInputStories.Controlled} />
+
+## SearchInput
+
+A specialized text input for [search input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search).
+
+<Canvas of={TextInputStories.Search} />
+
+## PasswordInput
+
+A specialized text input which show / hide a password.
+
+<Canvas of={TextInputStories.Password} />
+
+## API
+
+### TextInput
+
+<ComponentInfo
+    usage={"import { TextInput } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerTextInput.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerTextInput} sort="alpha" />
+
+### SearchInput
+
+<ComponentInfo
+    usage={"import { SearchInput } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerSearchInput.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerSearchInput} sort="alpha" />
+
+### PasswordInput
+
+<ComponentInfo
+    usage={"import { PasswordInput } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerPasswordInput.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerPasswordInput} sort="alpha" />

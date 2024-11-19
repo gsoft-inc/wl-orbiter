@@ -1,6 +1,6 @@
-import { FocusManager } from "../../shared";
+import { FocusManager } from "../../shared/index.ts";
 import { SyntheticEvent, createContext, useContext } from "react";
-import type { ListboxSelectionMode } from "./Listbox";
+import type { ListboxSelectionMode } from "./Listbox.tsx";
 
 export interface ListboxContextType {
     focusManager?: FocusManager;

@@ -1,0 +1,48 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Tagline } from "@stories/components";
+import { InnerHeading } from "@components/typography/index.ts";
+
+import * as HeadingStories from "./Heading.stories.tsx";
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+<Tagline>Heading is used to create various levels of typographic hierarchies.</Tagline>
+
+<ComponentInfo
+    usage={"import { Heading, H1, H2, H3, H4, H5, H6 } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/heading/src"
+/>
+
+## Usage
+
+### Default
+
+A default heading will render as a `<div>` element.
+
+<Canvas of={HeadingStories.Default} />
+
+### Heading elements
+
+For most cases, we recommend using HTML content sectionning heading elements instead of a `<div>`. Orbiter help by offering specialized heading components `<H1>`, `<H2>`, `<H3>`, `<H4>`, `<H5>`, `<H6>`.
+
+<Canvas of={HeadingStories.HeadingElements} />
+
+### Size
+
+You can alter the size of an heading component by specifying a `size` prop.
+
+<Canvas of={HeadingStories.Size} />
+
+## API
+
+### Heading, H1, H2, H3, H4, H5, H6
+
+<ComponentInfo
+    usage={"import { Heading, H1, H2, H3, H4, H5, H6 } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHeading.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHeading} sort="alpha" />

@@ -1,9 +1,12 @@
 import fs from "fs";
-import path from "path";
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
 
-const indexJs = fs.readFileSync(path.resolve(__dirname, "../../src/index.ts"), "utf-8");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const indexJs = fs.readFileSync(resolve(__dirname, "../../src/index.ts"), "utf-8");
 
-const directories = fs.readdirSync(path.resolve(__dirname, "../../src"), { withFileTypes: true })
+const directories = fs.readdirSync(resolve(__dirname, "../../src"), { withFileTypes: true })
     .filter(x => x.isDirectory())
     .map(x => x.name);
 

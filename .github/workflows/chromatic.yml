@@ -5,30 +5,51 @@ name: Chromatic
 
 on:
     pull_request:
+        # Opened, synchronize, or reopened are the default types
+        # We added ready_for_review to trigger the workflow is passed from draft to ready_for_review
+        types: ["opened", "synchronize", "reopened", "ready_for_review"]
         branches-ignore:
           - changeset-release/*
 
 jobs:
     chromatic:
+        if: github.event.pull_request.draft == false
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Commit
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                   fetch-depth: 0
+
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version-file: ".nvmrc"
-                  cache: "yarn"
+
+            - name: Cache pnpm store
+              uses: actions/cache@v4
+              with:
+                  path: |
+                    node_modules
+                    ~/.pnpm-store
+                  key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                    ${{ runner.os }}-pnpm-
+
             - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+              run: |
+                corepack enable
+                pnpm install --frozen-lockfile
+
             - name: Build Packages
-              run: yarn build
+              run: pnpm run build
+
             - name: Publish to Chromatic
-              uses: chromaui/action@v11.4.0
+              uses: chromaui/action@v1
+              id: chromatic
               with:
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   buildScriptName: build-sb-chroma
-
-
+                  traceChanged: true
+                  onlyChanged: true # TurboSnap
+                  exitOnceUploaded: true # The PRs will be marked as success/failure based on the Chromatic build status

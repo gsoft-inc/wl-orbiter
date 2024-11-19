@@ -1,7 +1,7 @@
-import { isNil, mergeProps } from "../../shared";
+import { isNil, mergeProps } from "../../shared/index.ts";
 
 import { CSSProperties } from "react";
-import { StyledSystemProps } from "../../styling";
+import { StyledSystemProps } from "../../styling/index.ts";
 
 interface CssProps {
     className?: string;

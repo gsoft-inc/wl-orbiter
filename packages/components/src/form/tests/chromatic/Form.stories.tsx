@@ -1,24 +1,31 @@
-import { Button, ButtonGroup } from "@components/button";
-import { DateInput } from "@components/date-input";
-import { Div } from "@components/html";
-import { Field, GroupField, HelpMessage, Label } from "@components/field";
-import { Form } from "@components/form";
-import { Inline } from "@components/layout";
-import { Radio, RadioGroup } from "@components/radio";
-import { TextArea } from "@components/text-area";
-import { TextInput } from "@components/text-input";
-import { TextLinkAsButton } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { DateInput } from "@components/date-input/index.ts";
+import { Div } from "@components/html/index.ts";
+import { Field, GroupField, HelpMessage, Label } from "@components/field/index.ts";
+import { Form } from "@components/form/index.ts";
+import { Inline } from "@components/layout/index.ts";
+import { Radio, RadioGroup } from "@components/radio/index.ts";
+import { TextArea } from "@components/text-area/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Form",
-    component: Form
-} as ComponentMeta<typeof Form>;
+    component: Form,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Form>;
 
-type FormStory = ComponentStoryObj<typeof Form>;
+export default meta;
+
+type FormStory = StoryObj<typeof meta>;
 
 export const Default: FormStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Inline alignY="end" gap={800}>
             <Form>
@@ -50,7 +57,7 @@ export const Default: FormStory = {
 };
 
 export const Fluid: FormStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Inline gap={800}>
             <Form fluid>
@@ -83,7 +90,7 @@ export const Fluid: FormStory = {
 
 
 export const Disabled: FormStory = {
-    storyName: "disabled",
+    name: "disabled",
     render: () => (
         <Inline alignY="end" gap={800}>
             <Form disabled>
@@ -115,7 +122,7 @@ export const Disabled: FormStory = {
 };
 
 export const NestedDiv: FormStory = {
-    storyName: "nested div",
+    name: "nested div",
     render: () => (
         <Form>
             <Field>
@@ -141,7 +148,7 @@ export const NestedDiv: FormStory = {
 };
 
 export const FormGroupField: FormStory = {
-    storyName: "group field",
+    name: "group field",
     render: () => (
         <Form>
             <Field>
@@ -171,7 +178,7 @@ export const FormGroupField: FormStory = {
 };
 
 export const ButtonAlignment: FormStory = {
-    storyName: "button alignment",
+    name: "button alignment",
     render: () => (
         <Inline>
             <Form>
@@ -209,7 +216,7 @@ export const ButtonAlignment: FormStory = {
 };
 
 export const Styling: FormStory = {
-    storyName: "styling",
+    name: "styling",
     render: () => (
         <Inline>
             <Form border="warning">

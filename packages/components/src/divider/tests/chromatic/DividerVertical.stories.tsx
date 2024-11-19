@@ -1,21 +1,28 @@
-import { Div } from "@components/html";
-import { Divider } from "@components/divider";
-import { Dot } from "@components/dot";
-import { Flex, Inline } from "@components/layout";
-import { Text } from "@components/typography";
-import { TextLink } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Div } from "@components/html/index.ts";
+import { Divider } from "@components/divider/index.ts";
+import { Dot } from "@components/dot/index.ts";
+import { Flex, Inline } from "@components/layout/index.ts";
+import { Text } from "@components/typography/index.ts";
+import { TextLink } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Divider/vertical",
-    component: Divider
-} as ComponentMeta<typeof Divider>;
+    component: Divider,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Divider>;
 
-type DividerStory = ComponentStoryObj<typeof Divider>;
+export default meta;
+
+type DividerStory = StoryObj<typeof meta>;
 
 export const Default: DividerStory = {
-    storyName: "default",
-    render:() => (
+    name: "default",
+    render: () => (
         <Div height="20rem">
             <Divider orientation="vertical" />
         </Div>
@@ -23,8 +30,8 @@ export const Default: DividerStory = {
 };
 
 export const DividerDot: DividerStory = {
-    storyName: "dot",
-    render:() => (
+    name: "dot",
+    render: () => (
         <Flex>
             <Dot color="primary">Engines ready</Dot>
             <Divider orientation="vertical" />
@@ -34,8 +41,8 @@ export const DividerDot: DividerStory = {
 };
 
 export const MultipleSeparators: DividerStory = {
-    storyName: "multiple separators",
-    render:() => (
+    name: "multiple separators",
+    render: () => (
         <Flex>
             <Dot color="primary">Starlink</Dot>
             <Divider orientation="vertical" />
@@ -47,8 +54,8 @@ export const MultipleSeparators: DividerStory = {
 };
 
 export const Labelled: DividerStory = {
-    storyName: "labelled",
-    render:() => (
+    name: "labelled",
+    render: () => (
         <Div height="20rem">
             <Divider orientation="vertical">Since 1978</Divider>
         </Div>
@@ -56,8 +63,8 @@ export const Labelled: DividerStory = {
 };
 
 export const LongLabel: DividerStory = {
-    storyName: "long label",
-    render:() => (
+    name: "long label",
+    render: () => (
         <Div height="20rem">
             <Divider orientation="vertical">Since 1978 there have been more than 10 space exploration missions.</Divider>
         </Div>
@@ -65,8 +72,8 @@ export const LongLabel: DividerStory = {
 };
 
 export const LabelledSurrounded: DividerStory = {
-    storyName: "labelled surrounded",
-    render:() => (
+    name: "labelled surrounded",
+    render: () => (
         <Flex height="20rem">
             <Text>Mission goals</Text>
             <Divider orientation="vertical">Since 1978</Divider>
@@ -76,8 +83,8 @@ export const LabelledSurrounded: DividerStory = {
 };
 
 export const AlignItems: DividerStory = {
-    storyName: "align items",
-    render:() => (
+    name: "align items",
+    render: () => (
         <Flex alignItems="center">
             <Text>Mission goals</Text>
             <Divider orientation="vertical" />
@@ -87,8 +94,8 @@ export const AlignItems: DividerStory = {
 };
 
 export const Zoom: DividerStory = {
-    storyName: "zoom",
-    render:() => (
+    name: "zoom",
+    render: () => (
         <Inline height="20rem">
             <Div className="zoom-in">
                 <Divider orientation="vertical">Since 1978</Divider>
@@ -101,8 +108,8 @@ export const Zoom: DividerStory = {
 };
 
 export const Styling: DividerStory = {
-    storyName: "styling",
-    render:() => (
+    name: "styling",
+    render: () => (
         <Inline height="20rem">
             <Divider border="warning" orientation="vertical" />
             <Divider className="border-red" orientation="vertical" />

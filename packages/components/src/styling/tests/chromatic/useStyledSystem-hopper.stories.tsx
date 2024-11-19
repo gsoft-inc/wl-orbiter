@@ -1,10 +1,9 @@
-import { Box } from "@components/box";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Box } from "@components/box/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
 const viewports = [640, 768, 1024, 1280, 1440];
 
-// eslint-disable-next-line storybook/csf-component
-export default {
+const meta = {
     title: "Chromatic/UseStyledSystem-hopper",
     parameters: {
         chromatic: {
@@ -12,12 +11,15 @@ export default {
             viewports: viewports
         }
     }
-} as ComponentMeta<never>;
+} as Meta<never>;
 
-type UseStyledSystemStory = ComponentStoryObj<never>;
+// eslint-disable-next-line storybook/csf-component
+export default meta;
+
+type UseStyledSystemStory = StoryObj<any>;
 
 export const EverySingleBreakpoints: UseStyledSystemStory = {
-    storyName: "every single breakpoints",
+    name: "every single breakpoints",
     render: () => (
         <Box
             backgroundColor={{ base: "sapphire-500", xs: "moss-500", sm: "amanita-500", md: "sapphire-500", lg: "rock-500", xl: "moss-500" }}
@@ -30,7 +32,7 @@ export const EverySingleBreakpoints: UseStyledSystemStory = {
 };
 
 export const MatchHigherBreakpoint: UseStyledSystemStory = {
-    storyName: "match higher breakpoint",
+    name: "match higher breakpoint",
     render: () => (
         <Box
             backgroundColor={{ base: "sapphire-300", sm: "amanita-300" }}
@@ -43,7 +45,7 @@ export const MatchHigherBreakpoint: UseStyledSystemStory = {
 };
 
 export const MatchBase: UseStyledSystemStory = {
-    storyName: "match base",
+    name: "match base",
     render: () => (
         <Box
             backgroundColor={{ base: "sapphire-800" }}

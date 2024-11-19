@@ -1,0 +1,133 @@
+import { ArgTypes, Meta } from "@storybook/addon-docs";
+import { Canvas, ComponentInfo, Preview, Tagline } from "@stories/components";
+import { InnerErrorMessage, InnerField, InnerGroupField, InnerHelpMessage, InnerLabel, InnerValidMessage } from "@components/field/index.ts";
+import * as FieldStories from "./Field.stories.tsx";
+
+<Meta of={FieldStories} />
+
+# Field
+
+<Tagline>A field add a label and a message to an input. They are typically used in forms and dialogs.</Tagline>
+
+<ComponentInfo
+    usage={"import { Field, GroupField, Label, HelpMessage, ErrorMessage, ValidMessage, FieldContext, useFieldInputProps } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/field/src"
+/>
+
+## Guidelines
+
+### Accessibility
+
+- When combined with a [form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) element, a field component follows the [WAI specifications for forms](https://www.w3.org/WAI/tutorials/forms/).
+
+## Usage
+
+A field can be composed of Orbiter input components or integrate with custom inputs from your app.
+
+### Input
+
+For *non-group* input use a `Field` component.
+
+<Canvas of={FieldStories.Input} />
+
+### Group input
+
+When the input is a *group*, use a `GroupField` instead of a `Field`.
+
+<Canvas of={FieldStories.Group} />
+
+### Required
+
+A field can show a required state.
+
+<Canvas of={FieldStories.Required} />
+
+### Disabled
+
+A field can be disabled.
+
+<Canvas of={FieldStories.Disabled} />
+
+### Fluid
+
+A field can take the width of its container.
+
+<Canvas of={FieldStories.Fluid} />
+
+### Validation
+
+A field can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the field via the `validationState` prop.
+
+When valid or invalid, a field can display a specific message by declaring either a `ValidMessage` or an `ErrorMessage` component.
+
+The example below illustrates how one would validate if the user has entered a valid email and display a message matching the current validation state.
+
+<Canvas of={FieldStories.Validation} />
+
+### Custom input
+
+Any input implementing the `FieldContext` can integrate with a field component. This is usually done by using the `useFieldInputProps` hook.
+
+<Canvas of={FieldStories.CustomInput} />
+
+## API
+
+### Field
+
+<ComponentInfo
+    usage={"import { Field } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerField.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerField} sort="alpha" />
+
+### GroupField
+
+<ComponentInfo
+    usage={"import { GroupField } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerGroupField.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerGroupField} sort="alpha" />
+
+### Label
+
+<ComponentInfo
+    usage={"import { Label } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerLabel.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerLabel} sort="alpha" />
+
+### HelpMessage
+
+<ComponentInfo
+    usage={"import { HelpMessage } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerHelpMessage.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerHelpMessage} sort="alpha" />
+
+### ErrorMessage
+
+<ComponentInfo
+    usage={"import { ErrorMessage } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerErrorMessage.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerErrorMessage} sort="alpha" />
+
+### ValidMessage
+
+<ComponentInfo
+    usage={"import { ValidMessage } from \"@workleap/orbiter-ui\";"}
+    inherits={[InnerValidMessage.defaultElement, "styled-component"]}
+    compact
+/>
+
+<ArgTypes of={InnerValidMessage} sort="alpha" />

@@ -1,2 +1,2 @@
-export * from "./ThemeProvider";
-export * from "./useThemeComputedStyle";
+export * from "./ThemeProvider.tsx";
+export * from "./useThemeComputedStyle.ts";

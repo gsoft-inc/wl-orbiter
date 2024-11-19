@@ -1,4 +1,4 @@
-import { CrossButton } from "@components/button";
+import { CrossButton } from "@components/button/index.ts";
 import { act, waitFor, renderWithTheme } from "@test-utils";
 import { createRef } from "react";
 

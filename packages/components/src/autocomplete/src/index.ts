@@ -1,2 +1,2 @@
-export * from "./Autocomplete";
-export * from "./HiddenAutocomplete";
+export * from "./Autocomplete.tsx";
+export * from "./HiddenAutocomplete.tsx";

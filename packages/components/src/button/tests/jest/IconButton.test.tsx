@@ -1,8 +1,8 @@
 import { act, screen, waitFor, renderWithTheme } from "@test-utils";
 import { AddIcon } from "@hopper-ui/icons";
-import { IconButton } from "@components/button";
+import { IconButton } from "@components/button/index.ts";
 import { createRef } from "react";
-import userEvent from "@testing-library/user-event";
+import { userEvent } from "@testing-library/user-event";
 
 // ***** Behaviors *****
 

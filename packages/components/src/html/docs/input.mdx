@@ -1,0 +1,20 @@
+import { Canvas, ComponentInfo, Link, Tagline } from "@stories/components";
+import { Meta } from "@storybook/addon-docs";
+import * as InputStories from "./input.stories.tsx";
+
+<Meta of={InputStories} />
+
+# Input
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML input element.</Tagline>
+
+<ComponentInfo
+    usage={"import { HtmlInput } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+An input component accepts all the [input HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={InputStories.Example} />

@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { Div } from "@components/html";
-import { Flex } from "@components/layout";
+import { Div } from "@components/html/index.ts";
+import { Flex } from "@components/layout/index.ts";
 import { renderToString } from "react-dom/server";
 import { throwOnConsoleLogs } from "@test-utils";
 

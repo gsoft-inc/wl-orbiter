@@ -1,21 +1,28 @@
-import { Button, ButtonGroup } from "@components/button";
-import { Checkbox } from "@components/checkbox";
-import { ErrorMessage, Field, HelpMessage, Label } from "@components/field";
-import { Form } from "@components/form";
-import { Grid, repeat } from "@components/layout";
-import { TextInput } from "@components/text-input";
-import { TextLinkAsButton } from "@components/link";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Button, ButtonGroup } from "@components/button/index.ts";
+import { Checkbox } from "@components/checkbox/index.ts";
+import { ErrorMessage, Field, HelpMessage, Label } from "@components/field/index.ts";
+import { Form } from "@components/form/index.ts";
+import { Grid, repeat } from "@components/layout/index.ts";
+import { TextInput } from "@components/text-input/index.ts";
+import { TextLinkAsButton } from "@components/link/index.ts";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta = {
     title: "Chromatic/Form/grid inline",
-    component: Form
-} as ComponentMeta<typeof Form>;
+    component: Form,
+    parameters: {
+        chromatic: {
+            delay: 100
+        }
+    }
+} as Meta<typeof Form>;
 
-type FormStory = ComponentStoryObj<typeof Form>;
+export default meta;
+
+type FormStory = StoryObj<typeof meta>;
 
 export const Default: FormStory = {
-    storyName: "default",
+    name: "default",
     render: () => (
         <Form>
             <Field>
@@ -62,7 +69,7 @@ export const Default: FormStory = {
 };
 
 export const Fluid: FormStory = {
-    storyName: "fluid",
+    name: "fluid",
     render: () => (
         <Form>
             <Field>
@@ -109,7 +116,7 @@ export const Fluid: FormStory = {
 };
 
 export const Messages: FormStory = {
-    storyName: "messages",
+    name: "messages",
     render: () => (
         <Form>
             <Grid templateColumns={repeat(3, "1fr")}>

@@ -1,4 +1,4 @@
-import { DeletedAvatar } from "@components/avatar";
+import { DeletedAvatar } from "@components/avatar/index.ts";
 import { createRef } from "react";
 import { renderWithTheme, screen, waitFor } from "@test-utils";
 

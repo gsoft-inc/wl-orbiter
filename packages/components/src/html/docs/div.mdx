@@ -1,0 +1,20 @@
+import { Canvas, ComponentInfo, Link, Tagline } from "@stories/components";
+import { Meta } from "@storybook/addon-docs";
+import * as DivStories from "./div.stories.tsx";
+
+<Meta of={DivStories} />
+
+# Div
+
+<Tagline>A specialized <Link href="?path=/docs/box--default-story">box</Link> component for HTML div element.</Tagline>
+
+<ComponentInfo
+    usage={"import { Div } from \"@workleap/orbiter-ui\";"}
+    githubPath="/packages/components/src/html/src"
+/>
+
+## Usage
+
+A div component accepts all the [div HTML element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) and [Orbiter styled component props](?path=/docs/styling--docs).
+
+<Canvas of={DivStories.Example} />
