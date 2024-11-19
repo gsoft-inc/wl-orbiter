@@ -1,4 +1,3 @@
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 import { includeDocs, includeChromatic } from "./env.ts";
@@ -76,7 +75,7 @@ const storybookConfig: StorybookConfig = {
             }
         }
     }),
-    webpackFinal(config, { configType }) {
+    webpackFinal(config) {
         config.resolve = {
             ...config.resolve,
             plugins: [
@@ -98,15 +97,6 @@ const storybookConfig: StorybookConfig = {
         config.optimization = {
             minimize: false
         };
-
-        config.plugins = [
-            ...(config.plugins ?? []),
-            configType !== "PRODUCTION" && new ReactRefreshWebpackPlugin({
-                overlay: {
-                    sockIntegration: "whm"
-                }
-            })
-        ].filter(Boolean);
 
         return config;
     }
