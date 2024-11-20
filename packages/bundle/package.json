@@ -8,6 +8,9 @@
         "directory": "packages/bundle"
     },
     "type": "module",
+    "sideEffects": [
+        "*.css"
+    ],
     "author": "Groupe ShareGate inc.",
     "license": "Apache-2.0",
     "main": "dist/index.js",
