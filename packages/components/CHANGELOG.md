@@ -1,5 +1,11 @@
 # @orbit-ui/transition-components
 
+## 5.6.2
+
+### Patch Changes
+
+- 618eb39: Added sideEffects field to projects
+
 ## 5.6.1
 
 ### Patch Changes

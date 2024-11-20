@@ -1,5 +1,11 @@
 # @orbit-ui/transition-css
 
+## 2.4.1
+
+### Patch Changes
+
+- 618eb39: Added sideEffects field to projects
+
 ## 2.4.0
 
 ### Minor Changes
