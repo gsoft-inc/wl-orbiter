@@ -99,6 +99,18 @@ const storybookConfig: StorybookConfig = {
             minimize: false
         };
 
+        /**
+         * This block of code addresses build process issues.
+         *
+         * Fixes chromatic failing.
+         */
+        config.performance = {
+            ...config.performance,
+            hints: false,
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000
+        };
+
         return config;
     }
 };
