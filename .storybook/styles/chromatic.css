@@ -1,9 +1,0 @@
-/* https://www.chromatic.com/docs/resource-loading/#solution-a-preload-fonts */
-/* Given that loading fonts and making sure that these loads before Chromatic takes a snapshot, and given that the proposed solutions */
-/* are currently not working. We needed a way to ensure that every snapshot uses the same font. The current approach is to force Arial for all Chromatic Snaphots */
-/* While not ideal this at least solves the issue at hand. */
-*,
-*::before,
-*::after {
-    font-family: Arial !important;
-}
