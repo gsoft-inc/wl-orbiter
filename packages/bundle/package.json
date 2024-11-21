@@ -41,10 +41,11 @@
     },
     "peerDependencies": {
         "react": "*",
-        "react-dom": "*"
-    },
-    "dependencies": {
+        "react-dom": "*",
         "@orbit-ui/transition-components": "workspace:*",
-        "@orbit-ui/transition-css": "workspace:*"
+        "@orbit-ui/transition-css": "workspace:*",
+        "@hopper-ui/components": "*",
+        "@hopper-ui/styled-system": "*",
+        "react-aria-components": "*"
     }
 }
