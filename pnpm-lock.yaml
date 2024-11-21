@@ -218,6 +218,12 @@ importers:
 
   packages/bundle:
     dependencies:
+      '@hopper-ui/components':
+        specifier: '*'
+        version: 1.3.33(@hopper-ui/styled-system@2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-aria-components@1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-aria@3.35.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@hopper-ui/styled-system':
+        specifier: '*'
+        version: 2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@orbit-ui/transition-components':
         specifier: workspace:*
         version: link:../components
@@ -227,6 +233,9 @@ importers:
       react:
         specifier: '*'
         version: 18.3.1
+      react-aria-components:
+        specifier: '*'
+        version: 1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-dom:
         specifier: '*'
         version: 18.3.1(react@18.3.1)
