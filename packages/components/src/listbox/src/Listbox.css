@@ -95,13 +95,13 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 .o-ui-listbox-option svg.o-ui-listbox-option-end-icon:not(.o-ui-listbox-option-checkmark) {
     width: var(--o-ui-listbox-option-icon-size);
     height: var(--o-ui-listbox-option-icon-size);
-    flex-shrink: 0;
 }
 
 /* OPTION | ICONS | START ICON */
 .o-ui-listbox-option-start-icon {
     margin-right: var(--hop-space-inline-sm);
     grid-area: aside;
+    flex-shrink: 0;
 }
 
 /* OPTION | WITH DESCRIPTION | ICONS | START ICON */
@@ -112,6 +112,7 @@ IMPORTANT: The Listbox component hardcoded a few CSS values to enable dynamic sc
 /* OPTION | ICONS | END ICON */
 .o-ui-listbox-option-end-icon {
     margin-left: var(--hop-space-inline-sm);
+    flex-shrink: 0;
 }
 
 /* SECTION */
