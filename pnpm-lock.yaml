@@ -24,8 +24,8 @@ importers:
         specifier: 8.4.2
         version: 8.4.2(storybook@8.4.2(prettier@3.3.3))
       '@storybook/addon-docs':
-        specifier: ^8.4.4
-        version: 8.4.4(@types/react@18.3.11)(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)
+        specifier: 8.4.2
+        version: 8.4.2(@types/react@18.3.11)(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)
       '@storybook/addon-essentials':
         specifier: 8.4.2
         version: 8.4.2(@types/react@18.3.11)(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)
@@ -2557,11 +2557,6 @@ packages:
     peerDependencies:
       storybook: ^8.4.2
 
-  '@storybook/addon-docs@8.4.4':
-    resolution: {integrity: sha512-wuHaStfpd2rkAN5Lf0qmvE3JKTHTEDbnAMTvfs9inzGBL0iAwBLjW48/ll7lLkJ2E3k/FQtaevNpuc7C52u1Bw==}
-    peerDependencies:
-      storybook: ^8.4.4
-
   '@storybook/addon-essentials@8.4.2':
     resolution: {integrity: sha512-+/vfPrXM/GWU3Kbrg92PepwAZr7lOeulTTYF4THK0CL3DfUUlkGNpBPLP5PtjCuIkVrTCjXiIEdVWk47d5m2+w==}
     peerDependencies:
@@ -2627,18 +2622,6 @@ packages:
       react-dom:
         optional: true
 
-  '@storybook/blocks@8.4.4':
-    resolution: {integrity: sha512-LwM3guL7uWpYR1a/SY0KZjCUskTKEaS22eF7GK8iXAV5BY4KpKr6ArW4O9orK29KtFwKhDZQLcMcECsOJBVk/A==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.4.4
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-
   '@storybook/builder-webpack5@8.4.2':
     resolution: {integrity: sha512-Pqa0/sqqEujzcvs+/Cwf/5qRLC+atmceROCFokMOgpIaorTXlbmiQdJ2dBhMFNugLvXfL7dVQBjBfiuzhsQ57g==}
     peerDependencies:
@@ -2675,11 +2658,6 @@ packages:
     resolution: {integrity: sha512-1f0t6W5xbC1sSAHHs3uXYPIQs2NXAEtIGqn6X9i3xbbub6hDS8PF8BIm7dOjQ8dZOPp7d9ltR64V5CoLlsOigA==}
     peerDependencies:
       storybook: ^8.4.2
-
-  '@storybook/csf-plugin@8.4.4':
-    resolution: {integrity: sha512-4+6SUhp5sEJN9BY5RuxcFKvJbOqCzIUp9oHSSz36hkP07a4QH+SwxfEd0U7JRfmPpB63L+izywTzWhdADiAMOQ==}
-    peerDependencies:
-      storybook: ^8.4.4
 
   '@storybook/csf-tools@8.4.2':
     resolution: {integrity: sha512-zBIwzc3Anj2jW5dE900dLOMDJrMb1tz3Hcea9rsB/zJKOhyAKz2H0wEsoC97sge7ga90FJAHDM6Q0UBVnBRWcQ==}
@@ -2741,13 +2719,6 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^8.4.2
-
-  '@storybook/react-dom-shim@8.4.4':
-    resolution: {integrity: sha512-kufv2FDK3kjADBo+/aKHsUn9T5E4p9IBAmCoIvXBGRDumPRds7Pt3MB4ODKlg+IumR7LMEq0jTJkn27ZRTuUmw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.4.4
 
   '@storybook/react-webpack5@8.4.2':
     resolution: {integrity: sha512-d2/kA7X7bFYnf3WI/aVKfg6ICMHiBIheSmgeY43R1E4K3KUjsJIVJDIliT+UKVZkEo0ie+rglZu0la1DO5Kl+Q==}
@@ -12800,20 +12771,6 @@ snapshots:
       - '@types/react'
       - webpack-sources
 
-  '@storybook/addon-docs@8.4.4(@types/react@18.3.11)(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)':
-    dependencies:
-      '@mdx-js/react': 3.1.0(@types/react@18.3.11)(react@18.3.1)
-      '@storybook/blocks': 8.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
-      '@storybook/csf-plugin': 8.4.4(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)
-      '@storybook/react-dom-shim': 8.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      storybook: 8.4.2(prettier@3.3.3)
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - webpack-sources
-
   '@storybook/addon-essentials@8.4.2(@types/react@18.3.11)(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)':
     dependencies:
       '@storybook/addon-actions': 8.4.2(storybook@8.4.2(prettier@3.3.3))
@@ -12901,16 +12858,6 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/blocks@8.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))':
-    dependencies:
-      '@storybook/csf': 0.1.11
-      '@storybook/icons': 1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      storybook: 8.4.2(prettier@3.3.3)
-      ts-dedent: 2.2.0
-    optionalDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
   '@storybook/builder-webpack5@8.4.2(@swc/core@1.7.36(@swc/helpers@0.5.13))(esbuild@0.24.0)(storybook@8.4.2(prettier@3.3.3))(typescript@5.4.5)':
     dependencies:
       '@storybook/core-webpack': 8.4.2(storybook@8.4.2(prettier@3.3.3))
@@ -12983,13 +12930,6 @@ snapshots:
       - utf-8-validate
 
   '@storybook/csf-plugin@8.4.2(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)':
-    dependencies:
-      storybook: 8.4.2(prettier@3.3.3)
-      unplugin: 1.15.0(webpack-sources@3.2.3)
-    transitivePeerDependencies:
-      - webpack-sources
-
-  '@storybook/csf-plugin@8.4.4(storybook@8.4.2(prettier@3.3.3))(webpack-sources@3.2.3)':
     dependencies:
       storybook: 8.4.2(prettier@3.3.3)
       unplugin: 1.15.0(webpack-sources@3.2.3)
@@ -13071,12 +13011,6 @@ snapshots:
       - supports-color
 
   '@storybook/react-dom-shim@8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))':
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      storybook: 8.4.2(prettier@3.3.3)
-
-  '@storybook/react-dom-shim@8.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)

@@ -104,13 +104,6 @@ const storybookConfig: StorybookConfig = {
             minimize: false
         };
 
-        config.performance = {
-            ...config.performance,
-            hints: false,
-            maxEntrypointSize: 512000,
-            maxAssetSize: 512000
-        };
-
         return config;
     }
 };
