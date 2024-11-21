@@ -51,7 +51,7 @@
     "@hopper-ui/icons": "2.8.4",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.15",
     "@storybook/addon-a11y": "8.4.2",
-    "@storybook/addon-docs": "^8.4.4",
+    "@storybook/addon-docs": "8.4.2",
     "@storybook/addon-essentials": "8.4.2",
     "@storybook/addon-interactions": "8.4.2",
     "@storybook/addon-links": "8.4.2",
