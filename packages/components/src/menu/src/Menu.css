@@ -72,6 +72,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 /* ITEM | ICON | START  */
 .o-ui-menu-item-start-icon {
+    flex-shrink: 0;
     margin-right: var(--hop-space-inline-sm);
     grid-row-start: 1;
     grid-row-end: 3;
@@ -83,6 +84,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 
 /* ITEM | ICON | END  */
 .o-ui-menu-item-end-icon {
+    flex-shrink: 0;
     margin-left: var(--hop-space-inline-sm);
 }
 
@@ -194,6 +196,7 @@ IMPORTANT: The Menu component hardcoded a few CSS values to enable dynamic scrol
 .o-ui-menu-item-option-avatar {
     margin-right: var(--hop-space-inline-sm);
     grid-area: aside;
+    flex-shrink: 0;
     align-self: center;
 }
 
