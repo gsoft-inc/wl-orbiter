@@ -6,13 +6,15 @@ import { Banner, ExternalLink, Source } from "@stories/components";
     id="AdvancedCSSImports"
 />
 
+# Advanced CSS Imports
+
 <Banner>If you are working with Sharegate, you should use <ExternalLink href="https://orbit.sharegate.design/">Orbit</ExternalLink>.</Banner>
 
-This guide explains how to customize CSS imports. By replacing the default CSS import with granular imports, you can optimize your application’s performance and reduce its CSS footprint by including only the styles you need.
+This guide outlines how to customize CSS imports in your project to improve performance and reduce the overall CSS footprint. By replacing the default global import with targeted, granular imports, you can include only the styles you actually need.
 
 ## Custom CSS Installation
 
-To replace the default CSS import, skip importing `@workleap/orbiter-ui/index.css` and instead include the necessary subpackage imports directly.
+Instead of importing the entire stylesheet via `@workleap/orbiter-ui/index.css`, selectively include only the required subpackage imports.
 
 Start with the essential imports:
 
@@ -23,7 +25,6 @@ Start with the essential imports:
 @import "@orbit-ui/transition-css/index.css"; /* CSS reset + fonts */
 @import "@orbit-ui/transition-components/core.css"; /* Base component styles */
 `} />
-
 
 Then, add styles for only the components you use. For example:
 
