@@ -88,6 +88,11 @@ const storybookConfig: StorybookConfig = {
             ]
         };
 
+        config.output = {
+            ...config.output,
+            chunkFormat: false
+        };
+
         config.devtool = false;
 
         /**
