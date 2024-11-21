@@ -216,35 +216,14 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
 
-  packages/bundle:
-    dependencies:
-      '@hopper-ui/components':
-        specifier: '*'
-        version: 1.3.33(@hopper-ui/styled-system@2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-aria-components@1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-aria@3.35.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@hopper-ui/styled-system':
-        specifier: '*'
-        version: 2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@orbit-ui/transition-components':
-        specifier: workspace:*
-        version: link:../components
-      '@orbit-ui/transition-css':
-        specifier: workspace:*
-        version: link:../css
-      react:
-        specifier: '*'
-        version: 18.3.1
-      react-aria-components:
-        specifier: '*'
-        version: 1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-dom:
-        specifier: '*'
-        version: 18.3.1(react@18.3.1)
-
   packages/components:
     dependencies:
       '@hopper-ui/icons':
         specifier: ^2.8.2
         version: 2.8.4(@hopper-ui/styled-system@2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-aria-components@1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@hopper-ui/tokens':
+        specifier: ^4.2.0
+        version: 4.4.1
       '@popperjs/core':
         specifier: 2.11.8
         version: 2.11.8
@@ -363,12 +342,6 @@ importers:
       typescript:
         specifier: 5.4.5
         version: 5.4.5
-
-  packages/css:
-    dependencies:
-      '@hopper-ui/tokens':
-        specifier: ^4.2.0
-        version: 4.4.1
 
 packages:
 
