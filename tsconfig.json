@@ -8,7 +8,6 @@
         "baseUrl": ".",
         "paths": {
             "@test-utils": ["../../tooling/test-utils/index.ts"],
-            "@css/*": ["packages/css/src/*"],
             "@components": ["packages/components/src/index.ts"],
             "@components/*": ["packages/components/src/*"],
             "@stories/components": [".storybook/components/index.ts"],

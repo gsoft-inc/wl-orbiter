@@ -9,10 +9,7 @@ import "./styles/index.ts";
 import "@components/index.css";
 import "@hopper-ui/tokens/fonts.css";
 
-if (!isChromatic) {
-    // Custom font makes chromatic inconsistent and cause "false positive". View https://www.chromatic.com/docs/resource-loading#loading-custom-fonts.
-    import("@css/fonts.css");
-} else {
+if (isChromatic) {
     import("./styles/chromatic.css");
 }
 
