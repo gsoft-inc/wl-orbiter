@@ -60,7 +60,6 @@
     "@storybook/blocks": "8.4.5",
     "@storybook/react": "8.4.5",
     "@storybook/react-webpack5": "8.4.5",
-    "@storybook/test": "8.4.5",
     "@storybook/types": "8.4.5",
     "@svgr/core": "6.5.1",
     "@swc/core": "1.7.36",
