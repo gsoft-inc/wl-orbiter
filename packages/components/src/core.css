@@ -1,3 +1,5 @@
+@import "./normalize.css";
+@import "./fonts.css";
 @import "./styling/index.css";
 
 /* ~ is temporary as it's not ideal, see: https://github.com/gsoft-inc/sg-orbit/issues/1024 */

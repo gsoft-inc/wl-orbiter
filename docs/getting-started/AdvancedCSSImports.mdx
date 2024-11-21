@@ -22,8 +22,7 @@ Start with the essential imports:
 /* index.css */
 
 /* @workleap/orbiter-ui/index.css */ /* Skip this import */
-@import "@orbit-ui/transition-css/index.css"; /* CSS reset + fonts */
-@import "@orbit-ui/transition-components/core.css"; /* Base component styles */
+@import "@workleap/orbiter-ui/core.css"; /* Base component styles */
 `} />
 
 Then, add styles for only the components you use. For example:
@@ -31,45 +30,45 @@ Then, add styles for only the components you use. For example:
 <Source language="css" code={`
 /* index.css */
 
-@import "@orbit-ui/transition-components/accordion/index.css"; /* For Accordions */
-@import "@orbit-ui/transition-components/alert/index.css"; /* For Alerts */
-@import "@orbit-ui/transition-components/autocomplete/index.css"; /* For Autocomplete */
-@import "@orbit-ui/transition-components/avatar/index.css"; /* For Avatars */
-@import "@orbit-ui/transition-components/badge/index.css"; /* For Badges */
-@import "@orbit-ui/transition-components/button/index.css"; /* For Buttons */
-@import "@orbit-ui/transition-components/card/index.css"; /* For Cards */
-@import "@orbit-ui/transition-components/checkbox/index.css"; /* For Checkboxes */
-@import "@orbit-ui/transition-components/counter/index.css"; /* For Counters */
-@import "@orbit-ui/transition-components/date-input/index.css"; /* For Date Inputs */
-@import "@orbit-ui/transition-components/dialog/index.css"; /* For Dialogs */
-@import "@orbit-ui/transition-components/disclosure/index.css"; /* For Disclosures */
-@import "@orbit-ui/transition-components/divider/index.css"; /* For Dividers */
-@import "@orbit-ui/transition-components/dot/index.css"; /* For Dots */
-@import "@orbit-ui/transition-components/field/index.css"; /* For Fields */
-@import "@orbit-ui/transition-components/form/index.css"; /* For Forms */
-@import "@orbit-ui/transition-components/illustrated-message/index.css"; /* For Illustrated Messages */
-@import "@orbit-ui/transition-components/illustration/index.css"; /* For Illustrations */
-@import "@orbit-ui/transition-components/image/index.css"; /* For Images */
-@import "@orbit-ui/transition-components/input-group/index.css"; /* For Input Groups */
-@import "@orbit-ui/transition-components/link/index.css"; /* For Links */
-@import "@orbit-ui/transition-components/listbox/index.css"; /* For Listboxes */
-@import "@orbit-ui/transition-components/loader/index.css"; /* For Loaders */
-@import "@orbit-ui/transition-components/lozenge/index.css"; /* For Lozenges */
-@import "@orbit-ui/transition-components/menu/index.css"; /* For Menus */
-@import "@orbit-ui/transition-components/modal/index.css"; /* For Modals */
-@import "@orbit-ui/transition-components/number-input/index.css"; /* For Number Inputs */
-@import "@orbit-ui/transition-components/overlay/index.css"; /* For Overlays */
-@import "@orbit-ui/transition-components/popover/index.css"; /* For Popovers */
-@import "@orbit-ui/transition-components/radio/index.css"; /* For Radios */
-@import "@orbit-ui/transition-components/select/index.css"; /* For Selects */
-@import "@orbit-ui/transition-components/spinner/index.css"; /* For Spinners */
-@import "@orbit-ui/transition-components/switch/index.css"; /* For Switches */
-@import "@orbit-ui/transition-components/tabs/index.css"; /* For Tabs */
-@import "@orbit-ui/transition-components/tag/index.css"; /* For Tags */
-@import "@orbit-ui/transition-components/text-area/index.css"; /* For Text Areas */
-@import "@orbit-ui/transition-components/text-input/index.css"; /* For Text Inputs */
-@import "@orbit-ui/transition-components/tile/index.css"; /* For Tiles */
-@import "@orbit-ui/transition-components/tooltip/index.css"; /* For Tooltips */
+@import "@workleap/orbiter-ui/accordion/index.css"; /* For Accordions */
+@import "@workleap/orbiter-ui/alert/index.css"; /* For Alerts */
+@import "@workleap/orbiter-ui/autocomplete/index.css"; /* For Autocomplete */
+@import "@workleap/orbiter-ui/avatar/index.css"; /* For Avatars */
+@import "@workleap/orbiter-ui/badge/index.css"; /* For Badges */
+@import "@workleap/orbiter-ui/button/index.css"; /* For Buttons */
+@import "@workleap/orbiter-ui/card/index.css"; /* For Cards */
+@import "@workleap/orbiter-ui/checkbox/index.css"; /* For Checkboxes */
+@import "@workleap/orbiter-ui/counter/index.css"; /* For Counters */
+@import "@workleap/orbiter-ui/date-input/index.css"; /* For Date Inputs */
+@import "@workleap/orbiter-ui/dialog/index.css"; /* For Dialogs */
+@import "@workleap/orbiter-ui/disclosure/index.css"; /* For Disclosures */
+@import "@workleap/orbiter-ui/divider/index.css"; /* For Dividers */
+@import "@workleap/orbiter-ui/dot/index.css"; /* For Dots */
+@import "@workleap/orbiter-ui/field/index.css"; /* For Fields */
+@import "@workleap/orbiter-ui/form/index.css"; /* For Forms */
+@import "@workleap/orbiter-ui/illustrated-message/index.css"; /* For Illustrated Messages */
+@import "@workleap/orbiter-ui/illustration/index.css"; /* For Illustrations */
+@import "@workleap/orbiter-ui/image/index.css"; /* For Images */
+@import "@workleap/orbiter-ui/input-group/index.css"; /* For Input Groups */
+@import "@workleap/orbiter-ui/link/index.css"; /* For Links */
+@import "@workleap/orbiter-ui/listbox/index.css"; /* For Listboxes */
+@import "@workleap/orbiter-ui/loader/index.css"; /* For Loaders */
+@import "@workleap/orbiter-ui/lozenge/index.css"; /* For Lozenges */
+@import "@workleap/orbiter-ui/menu/index.css"; /* For Menus */
+@import "@workleap/orbiter-ui/modal/index.css"; /* For Modals */
+@import "@workleap/orbiter-ui/number-input/index.css"; /* For Number Inputs */
+@import "@workleap/orbiter-ui/overlay/index.css"; /* For Overlays */
+@import "@workleap/orbiter-ui/popover/index.css"; /* For Popovers */
+@import "@workleap/orbiter-ui/radio/index.css"; /* For Radios */
+@import "@workleap/orbiter-ui/select/index.css"; /* For Selects */
+@import "@workleap/orbiter-ui/spinner/index.css"; /* For Spinners */
+@import "@workleap/orbiter-ui/switch/index.css"; /* For Switches */
+@import "@workleap/orbiter-ui/tabs/index.css"; /* For Tabs */
+@import "@workleap/orbiter-ui/tag/index.css"; /* For Tags */
+@import "@workleap/orbiter-ui/text-area/index.css"; /* For Text Areas */
+@import "@workleap/orbiter-ui/text-input/index.css"; /* For Text Inputs */
+@import "@workleap/orbiter-ui/tile/index.css"; /* For Tiles */
+@import "@workleap/orbiter-ui/tooltip/index.css"; /* For Tooltips */
 `} />
 
 By selectively importing only the CSS you need, you maintain full control over the styles in your project, improving performance and reducing unnecessary CSS.

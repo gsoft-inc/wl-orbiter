@@ -1,4 +1,4 @@
-# @orbit-ui/transition-components
+# @workleap/orbiter-ui
 
 ## 5.6.2
 

@@ -1,4 +1,4 @@
-# @orbit-ui/transition-components
+# @workleap/orbiter-ui
 
 Full documentation available at: https://wl-orbiter-website.netlify.app/
 
@@ -127,7 +127,7 @@ Usually, interaction tests are split into 4 distinct regions: *Behaviors*, *Aria
 
 Every Orbiter custom components must share a consistent API and a similar design. Please read carefully the following guidelines before you develop a new component or update an existing one.
 
-### Common functionnalities
+### Common functionalities
 
 All components should:
 - Use Orbiter's [tokens](https://wl-orbiter-website.netlify.app/?path=/docs/tokens--page)
