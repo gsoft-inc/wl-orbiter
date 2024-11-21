@@ -1,5 +1,14 @@
 # @workleap/orbiter-ui
 
+## 5.6.2
+
+### Patch Changes
+
+- 618eb39: Added sideEffects field to projects
+- Updated dependencies [618eb39]
+  - @orbit-ui/transition-components@5.6.2
+  - @orbit-ui/transition-css@2.4.1
+
 ## 5.6.1
 
 ### Patch Changes

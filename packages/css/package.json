@@ -1,6 +1,6 @@
 {
     "name": "@orbit-ui/transition-css",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "description": "Orbiter CSS bootstrap",
     "repository": {
         "type": "git",
@@ -8,6 +8,9 @@
         "directory": "packages/css"
     },
     "type": "module",
+    "sideEffects": [
+        "*.css"
+    ],
     "author": "Groupe ShareGate inc.",
     "license": "Apache-2.0",
     "main": "src/index.css",
