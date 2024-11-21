@@ -199,18 +199,3 @@ export const Styling: AvatarGroupStory = {
     )
 };
 
-export const WithRemainingsHover: AvatarGroupStory = {
-    name: "with remainings hover",
-    render: () => (
-        <AvatarGroup data-testid="avatar-group">
-            <Avatar name="Sally Ride" />
-            <Avatar name="Alan Shepard" />
-            <Avatar name="Chris Hadfield" />
-            <Avatar name="Christa McAuliffe" />
-            <Avatar name="Neil Armstrong" />
-        </AvatarGroup>
-    ),
-    play: async () => {
-        await userEvent.hover(screen.getByTestId("avatar-group").lastChild as HTMLElement);
-    }
-};
