@@ -2,7 +2,7 @@
 @import "./core.css";
 
 /*
-NOTE: Importing all the components CSS files in a root file is not our preferred solution. Ideally, every components would import is own CSS file.
+NOTE: Importing all the component CSS files in a root file is not our preferred solution. Ideally, each component should import its own CSS file.
 Sadly, we encountered CSS ordering issues when the components are bundled in our apps.
 */
 @import "./accordion/index.css";

@@ -125,7 +125,7 @@ Usually, interaction tests are split into 4 distinct regions: *Behaviors*, *Aria
 
 ## Component guidelines
 
-Every Orbiter custom components must share a consistent API and a similar design. Please read carefully the following guidelines before you develop a new component or update an existing one.
+Every Orbiter custom component must share a consistent API and a similar design. Please read the following guidelines carefully before you develop a new component or update an existing one.
 
 ### Common functionalities
 
