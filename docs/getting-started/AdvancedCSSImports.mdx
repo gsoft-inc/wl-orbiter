@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/addon-docs";
+import { Banner, ExternalLink, Source } from "@stories/components";
+
+<Meta
+    title="Advanced CSS Imports"
+    id="AdvancedCSSImports"
+/>
+
+# Advanced CSS Imports
+
+<Banner>If you are working with Sharegate, you should use <ExternalLink href="https://orbit.sharegate.design/">Orbit</ExternalLink>.</Banner>
+
+This guide outlines how to customize CSS imports in your project to improve performance and reduce the overall CSS footprint. By replacing the default global import with targeted, granular imports, you can include only the styles you actually need.
+
+## Custom CSS Installation
+
+Instead of importing the entire stylesheet via `@workleap/orbiter-ui/index.css`, selectively include only the required subpackage imports.
+
+Start with the essential imports:
+
+<Source language="css" code={`
+/* index.css */
+
+/* @workleap/orbiter-ui/index.css */ /* Skip this import */
+@import "@workleap/orbiter-ui/core.css"; /* Base component styles */
+`} />
+
+Then, add styles for only the components you use. For example:
+
+<Source language="css" code={`
+/* index.css */
+
+@import "@workleap/orbiter-ui/accordion/index.css"; /* For Accordions */
+@import "@workleap/orbiter-ui/alert/index.css"; /* For Alerts */
+@import "@workleap/orbiter-ui/autocomplete/index.css"; /* For Autocomplete */
+@import "@workleap/orbiter-ui/avatar/index.css"; /* For Avatars */
+@import "@workleap/orbiter-ui/badge/index.css"; /* For Badges */
+@import "@workleap/orbiter-ui/button/index.css"; /* For Buttons */
+@import "@workleap/orbiter-ui/card/index.css"; /* For Cards */
+@import "@workleap/orbiter-ui/checkbox/index.css"; /* For Checkboxes */
+@import "@workleap/orbiter-ui/counter/index.css"; /* For Counters */
+@import "@workleap/orbiter-ui/date-input/index.css"; /* For Date Inputs */
+@import "@workleap/orbiter-ui/dialog/index.css"; /* For Dialogs */
+@import "@workleap/orbiter-ui/disclosure/index.css"; /* For Disclosures */
+@import "@workleap/orbiter-ui/divider/index.css"; /* For Dividers */
+@import "@workleap/orbiter-ui/dot/index.css"; /* For Dots */
+@import "@workleap/orbiter-ui/field/index.css"; /* For Fields */
+@import "@workleap/orbiter-ui/form/index.css"; /* For Forms */
+@import "@workleap/orbiter-ui/illustrated-message/index.css"; /* For Illustrated Messages */
+@import "@workleap/orbiter-ui/illustration/index.css"; /* For Illustrations */
+@import "@workleap/orbiter-ui/image/index.css"; /* For Images */
+@import "@workleap/orbiter-ui/input-group/index.css"; /* For Input Groups */
+@import "@workleap/orbiter-ui/link/index.css"; /* For Links */
+@import "@workleap/orbiter-ui/listbox/index.css"; /* For Listboxes */
+@import "@workleap/orbiter-ui/loader/index.css"; /* For Loaders */
+@import "@workleap/orbiter-ui/lozenge/index.css"; /* For Lozenges */
+@import "@workleap/orbiter-ui/menu/index.css"; /* For Menus */
+@import "@workleap/orbiter-ui/modal/index.css"; /* For Modals */
+@import "@workleap/orbiter-ui/number-input/index.css"; /* For Number Inputs */
+@import "@workleap/orbiter-ui/overlay/index.css"; /* For Overlays */
+@import "@workleap/orbiter-ui/popover/index.css"; /* For Popovers */
+@import "@workleap/orbiter-ui/radio/index.css"; /* For Radios */
+@import "@workleap/orbiter-ui/select/index.css"; /* For Selects */
+@import "@workleap/orbiter-ui/spinner/index.css"; /* For Spinners */
+@import "@workleap/orbiter-ui/switch/index.css"; /* For Switches */
+@import "@workleap/orbiter-ui/tabs/index.css"; /* For Tabs */
+@import "@workleap/orbiter-ui/tag/index.css"; /* For Tags */
+@import "@workleap/orbiter-ui/text-area/index.css"; /* For Text Areas */
+@import "@workleap/orbiter-ui/text-input/index.css"; /* For Text Inputs */
+@import "@workleap/orbiter-ui/tile/index.css"; /* For Tiles */
+@import "@workleap/orbiter-ui/tooltip/index.css"; /* For Tooltips */
+`} />
+
+By selectively importing only the CSS you need, you maintain full control over the styles in your project, improving performance and reducing unnecessary CSS.
+

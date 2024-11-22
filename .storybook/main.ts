@@ -9,6 +9,7 @@ let stories: string[] = [];
 
 if (includeDocs) {
     stories = [
+        ...stories,
         "../docs/**/!(*.stories).mdx",
         "../docs/**/*.stories.tsx",
         "../packages/**/docs/*.mdx",
@@ -30,9 +31,7 @@ const storybookConfig: StorybookConfig = {
         "@storybook/addon-docs",
         "@storybook/addon-links",
         "@storybook/addon-essentials",
-        "@storybook/addon-interactions",
-        "@storybook/addon-webpack5-compiler-swc",
-        "@chromatic-com/storybook"
+        "@storybook/addon-webpack5-compiler-swc"
     ],
     framework: "@storybook/react-webpack5",
     core: {

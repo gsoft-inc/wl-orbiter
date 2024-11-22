@@ -2,7 +2,6 @@ import { Avatar, AvatarGroup } from "@components/avatar/index.ts";
 import { Div } from "@components/html/index.ts";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Meta, StoryObj } from "@storybook/react";
-import { screen, userEvent } from "@storybook/test";
 
 const meta = {
     component: AvatarGroup,
@@ -199,18 +198,3 @@ export const Styling: AvatarGroupStory = {
     )
 };
 
-export const WithRemainingsHover: AvatarGroupStory = {
-    name: "with remainings hover",
-    render: () => (
-        <AvatarGroup data-testid="avatar-group">
-            <Avatar name="Sally Ride" />
-            <Avatar name="Alan Shepard" />
-            <Avatar name="Chris Hadfield" />
-            <Avatar name="Christa McAuliffe" />
-            <Avatar name="Neil Armstrong" />
-        </AvatarGroup>
-    ),
-    play: async () => {
-        await userEvent.hover(screen.getByTestId("avatar-group").lastChild as HTMLElement);
-    }
-};
