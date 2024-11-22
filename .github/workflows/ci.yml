@@ -5,9 +5,9 @@ name: CI
 
 on:
     push:
-        branches: ["master", "master-esm"]
+        branches: ["master"]
     pull_request:
-        branches: ["master", "master-esm"]
+        branches: ["master"]
 
 concurrency:
     group: ${{ github.ref }}

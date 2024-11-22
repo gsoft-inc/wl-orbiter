@@ -2,7 +2,7 @@ name: Changeset
 
 on:
   push:
-    branches: ["master", "master-esm"]
+    branches: ["master"]
 
 jobs:
   release:
