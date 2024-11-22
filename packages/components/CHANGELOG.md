@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.5
+
+### Patch Changes
+
+- e27d26a: Hopper UI and react aria components are now properly put as peer dependencies.
+
 ## 5.6.4
 
 ### Patch Changes
