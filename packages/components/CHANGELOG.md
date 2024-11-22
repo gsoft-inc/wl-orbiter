@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.3
+
+### Patch Changes
+
+- 2bab529: Prevent listbox and menu icon/avatar from shrinking
+
 ## 5.6.2
 
 ### Patch Changes
