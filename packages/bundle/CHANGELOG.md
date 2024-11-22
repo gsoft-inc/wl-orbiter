@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.4
+
+### Patch Changes
+
+- ed2772e: Small change to css imports
+
 ## 5.6.3
 
 ### Patch Changes
