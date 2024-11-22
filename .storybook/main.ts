@@ -9,6 +9,7 @@ let stories: string[] = [];
 
 if (includeDocs) {
     stories = [
+        ...stories,
         "../docs/**/!(*.stories).mdx",
         "../docs/**/*.stories.tsx",
         "../packages/**/docs/*.mdx",
