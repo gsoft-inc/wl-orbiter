@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.6
+
+### Patch Changes
+
+- e223174: properly export core.css file
+
 ## 5.6.5
 
 ### Patch Changes
