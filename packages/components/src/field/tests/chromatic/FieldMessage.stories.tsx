@@ -33,7 +33,7 @@ export const Default: HelpMessageStory = {
     name: "default",
     render: () => (
         <HelpMessage>
-            Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+            Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
         </HelpMessage>
     )
 };
@@ -43,7 +43,7 @@ export const Icon: HelpMessageStory = {
     render: () => (
         <HelpMessage>
             <Align>
-                <QuestionIcon /> Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                <QuestionIcon /> Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
             </Align>
         </HelpMessage>
     )
@@ -55,7 +55,7 @@ export const FieldMessageParagraph: HelpMessageStory = {
     render: () => (
         <HelpMessage>
             <Paragraph>
-                If two pieces of the same type of <TextLink size="inherit" href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+                If two pieces of the same type of <TextLink href="#" size="inherit">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external size="inherit">will permanently</TextLink> bond.
             </Paragraph>
         </HelpMessage>
     )
@@ -89,7 +89,7 @@ export const Wrappers: HelpMessageStory = {
         <HelpMessage>
             <Div>
                 <Div>
-                    Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
                 </Div>
             </Div>
         </HelpMessage>
@@ -101,10 +101,10 @@ export const Complex: HelpMessageStory = {
     render: () => (
         <HelpMessage>
             <Align>
-                <QuestionIcon /> Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                <QuestionIcon /> Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
             </Align>
             <Paragraph>
-                If two pieces of the same type of <TextLink size="inherit" href="#">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+                If two pieces of the same type of <TextLink href="#" size="inherit">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external size="inherit">will permanently</TextLink> bond.
             </Paragraph>
             <UL>
                 <LI>Celestial</LI>
@@ -119,7 +119,7 @@ export const Fluid: HelpMessageStory = {
     name: "fluid",
     render: () => (
         <HelpMessage fluid>
-            If two pieces of the same type of <TextLink size="inherit" href="#">metal touch</TextLink> in space they <TextLink size="inherit" href="https://www.sharegate.com" external>will permanently</TextLink> bond.
+            If two pieces of the same type of <TextLink href="#" size="inherit">metal touch</TextLink> in space they <TextLink href="https://www.sharegate.com" external size="inherit">will permanently</TextLink> bond.
         </HelpMessage>
     )
 };
@@ -129,7 +129,7 @@ export const Help: HelpMessageStory = {
     render: () => (
         <HelpMessage>
             <Align>
-                <QuestionIcon /> Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                <QuestionIcon /> Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
             </Align>
         </HelpMessage>
     )
@@ -140,7 +140,7 @@ export const Error: HelpMessageStory = {
     render: () => (
         <ErrorMessage>
             <Align>
-                <WarningIcon /> This is not a valid destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                <WarningIcon /> This is not a valid destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
             </Align>
         </ErrorMessage>
     )
@@ -151,7 +151,7 @@ export const Valid: HelpMessageStory = {
     render: () => (
         <ValidMessage>
             <Align>
-                <InfoIcon /> Thank you! Here's your <TextLink size="inherit" href="https://www.sharegate.com" external>receipt</TextLink>.
+                <InfoIcon /> Thank you! Here's your <TextLink href="https://www.sharegate.com" external size="inherit">receipt</TextLink>.
             </Align>
         </ValidMessage>
     )
@@ -163,12 +163,12 @@ export const Zoom: HelpMessageStory = {
         <Stack>
             <Div className="zoom-in">
                 <HelpMessage>
-                    Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
                 </HelpMessage>
             </Div>
             <Div className="zoom-out">
                 <HelpMessage>
-                    Enter your final destination. Here's a <TextLink size="inherit" href="https://www.google.com/sky" external>space map</TextLink>.
+                    Enter your final destination. Here's a <TextLink href="https://www.google.com/sky" external size="inherit">space map</TextLink>.
                 </HelpMessage>
             </Div>
         </Stack>
