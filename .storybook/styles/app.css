@@ -1,3 +1,6 @@
+@import "@hopper-ui/components/index.css"; /* We use some components in chromatic stories, so we want to make sure the styles are present */
+
+
 html,
 body {
     font-family: "Inter", Arial, Helvetica, serif !important;
