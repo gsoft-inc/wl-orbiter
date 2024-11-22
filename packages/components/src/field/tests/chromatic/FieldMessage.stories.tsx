@@ -1,5 +1,5 @@
 import { Div, LI, OL, UL } from "@components/html/index.ts";
-import { ErrorMessage, HelpMessage, ValidMessage } from "@components/field/index.ts";
+import { ErrorMessage, HelpMessage, ValidMessage, FieldMessage } from "@components/field/index.ts";
 import { QuestionIcon, InfoIcon, WarningIcon } from "@hopper-ui/icons";
 import { Inline, Stack } from "@components/layout/index.ts";
 import { Paragraph } from "@components/typography/index.ts";
@@ -9,19 +9,23 @@ import { ReactNode } from "react";
 
 const meta = {
     title: "Chromatic/FieldMessage",
-    component: HelpMessage,
+    component: FieldMessage,
     parameters: {
         chromatic: {
             delay: 100
         }
     }
-} as Meta<typeof HelpMessage>;
+} as Meta<typeof FieldMessage>;
 
 export default meta;
 
 type HelpMessageStory = StoryObj<typeof meta>;
 
-function Align({ children }: { children: ReactNode }) {
+interface AlignProps {
+    children?: ReactNode;
+}
+
+function Align({ children }: AlignProps) {
     return (
         <Inline alignY="center" gap={0} whiteSpace="pre-wrap">
             {children}
