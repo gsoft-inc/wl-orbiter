@@ -56,9 +56,11 @@ A field can take the width of its container.
 
 ### Validation
 
-A field can display a validation state to communicate to the user whether the current value is valid or invalid. Implement your own validation logic in your app and pass either `"valid"` or `"invalid"` to the field via the `validationState` prop.
+Use the `validationState` prop to communicate whether a field's value is "valid", "invalid", or undefined. Implement your own validation logic and pass the appropriate state. The field renders:
 
-When valid or invalid, a field can display a specific message by declaring either a `ValidMessage` or an `ErrorMessage` component.
+- `ValidMessage` for "valid".
+- `ErrorMessage` for "invalid".
+- `HelpMessage` or nothing if `validationState` is undefined.
 
 The example below illustrates how one would validate if the user has entered a valid email and display a message matching the current validation state.
 
