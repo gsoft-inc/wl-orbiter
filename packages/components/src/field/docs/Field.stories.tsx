@@ -105,6 +105,7 @@ export const Validation: Story = {
                     placeholder="a@a.com"
                     value={value}
                 />
+                <HelpMessage>Please enter an email address.</HelpMessage>
                 <ErrorMessage>This is an invalid email address.</ErrorMessage>
                 <ValidMessage>A confirmation email is on it's way!</ValidMessage>
             </Field>
