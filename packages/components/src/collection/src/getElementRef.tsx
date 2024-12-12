@@ -6,5 +6,5 @@ import { ReactElement, Ref } from "react";
  * cases
  */
 export function getElementRef(element: ReactElement): Ref<any> {
-  return element.props.propertyIsEnumerable("ref") ? element.props.ref : (element as any).ref;
+    return element.props.propertyIsEnumerable("ref") ? element.props.ref : (element as any).ref;
 }
