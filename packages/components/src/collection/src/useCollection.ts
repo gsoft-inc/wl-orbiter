@@ -1,6 +1,7 @@
 import { Children, ElementType, ReactElement, ReactNode, Ref, useMemo } from "react";
 import { Divider } from "../../divider/index.ts";
-import { getElementRef, Item, Section } from "../../collection/index.ts";
+import { Item, Section } from "../../collection/index.ts";
+import { getElementRef } from "../../shared/src/getElementRef.tsx";
 import { TooltipTrigger, parseTooltipTrigger } from "../../tooltip/index.ts";
 import { isNil, resolveChildren } from "../../shared/index.ts";
 

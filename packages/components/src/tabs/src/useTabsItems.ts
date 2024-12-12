@@ -1,7 +1,7 @@
 import { Children, ReactElement, ReactNode, Ref, RefAttributes, useMemo } from "react";
 import { Content, Header } from "../../placeholders/index.ts";
 import { isNil, mergeProps, resolveChildren } from "../../shared/index.ts";
-import { getElementRef } from "@components/collection/index.ts";
+import { getElementRef } from "../../shared/src/getElementRef.tsx";
 
 export interface PanelType {
     disabled?: boolean;
