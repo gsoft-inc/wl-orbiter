@@ -7,3 +7,4 @@ export * from "./getItemText.tsx";
 export * from "./reduceCollection.ts";
 export * from "./Item.tsx";
 export * from "./Section.tsx";
+export * from "./getElementRef.tsx";
