@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.7
+
+### Patch Changes
+
+- 98511b7: Replace element.ref with element.props.ref for React 19 compatibility
+
 ## 5.6.6
 
 ### Patch Changes
