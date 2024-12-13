@@ -1,6 +1,7 @@
 import { Children, ReactElement, ReactNode, Ref, RefAttributes, useMemo } from "react";
 import { Content, Header } from "../../placeholders/index.ts";
 import { isNil, mergeProps, resolveChildren } from "../../shared/index.ts";
+import { getElementRef } from "../../shared/src/getElementRef.tsx";
 
 export interface PanelType {
     disabled?: boolean;
@@ -56,7 +57,7 @@ export class TabsBuilder {
                 key,
                 panelId,
                 props: mergeProps(header.props, element.props),
-                ref: header.ref as Ref<any>,
+                ref: getElementRef(header),
                 tabId
             });
 
@@ -69,7 +70,7 @@ export class TabsBuilder {
                 key,
                 panelId,
                 props: content.props,
-                ref: content.ref as Ref<any>,
+                ref: getElementRef(content),
                 tabId
             });
         });

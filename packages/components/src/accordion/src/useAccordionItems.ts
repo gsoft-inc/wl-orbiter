@@ -1,6 +1,7 @@
-import { Children, ReactElement, ReactNode, Ref, RefAttributes, useMemo } from "react";
+import { Children, ReactElement, ReactNode, Ref, useMemo } from "react";
 import { Content, Header } from "../../placeholders/index.ts";
 import { isNil, mergeProps } from "../../shared/index.ts";
+import { getElementRef } from "../../shared/src/getElementRef.tsx";
 
 export interface AccordionBuilderItem {
     header: AccordionBuilderHeader;
@@ -47,14 +48,14 @@ export class AccordionBuilder {
                 // elementType: isHeading(header.type) ? undefined : header.type,
                 elementType: header.type,
                 props: mergeProps(header.props, element.props),
-                ref: (header as RefAttributes<any>).ref as Ref<any>
+                ref: getElementRef(header)
             };
 
             const panelProps: AccordionBuilderItem["header"] = {
                 // Use a custom type if available otherwise let the AccordionPanel component choose his default type.
                 elementType: content.type !== Content ? content.type : undefined,
                 props: content.props,
-                ref: (content as RefAttributes<any>).ref as Ref<any>
+                ref: getElementRef(content)
             };
 
             return {
