@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.8
+
+### Patch Changes
+
+- 862f504: Fix a bug where a small checkbox would have the wrong size when unchecked
+
 ## 5.6.7
 
 ### Patch Changes
