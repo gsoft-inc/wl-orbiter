@@ -220,8 +220,8 @@
     margin-top: calc((var(--_checkbox-size) - (var(--hop-body-sm-line-height) * var(--hop-body-sm-font-size))) / 2);
 }
 
-/* SIZING | SMALL | BOX | CHECKED */
-.o-ui-checkbox-checked.o-ui-checkbox-sm .o-ui-checkbox-box .o-ui-checkbox-checkmark {
+/* SIZING | SMALL | BOX */
+.o-ui-checkbox.o-ui-checkbox-sm .o-ui-checkbox-box .o-ui-checkbox-checkmark {
     width: var(--_checkbox-size);
     height: var(--_checkbox-size);
 }
