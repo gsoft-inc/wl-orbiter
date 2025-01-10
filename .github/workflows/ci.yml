@@ -62,8 +62,24 @@ jobs:
             - name: Lint Stylelint
               run: pnpm run lint-ci-typecheck
 
-    build_and_tests:
-        name: "Build and Tests"
+    tests:
+        name: "Tests"
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node and PNPM
+              uses: ./.github/composite-actions/setup
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
+            - name: Lint Stylelint
+              run: pnpm run test
+
+    build:
+        name: "Build"
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
@@ -77,6 +93,3 @@ jobs:
 
             - name: Build Packages
               run: pnpm run build
-
-            - name: Run Jest
-              run: pnpm run test
