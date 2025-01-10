@@ -18,24 +18,15 @@ jobs:
         name: "Eslint"
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version-file: ".nvmrc"
-            - name: Cache pnpm store
-              uses: actions/cache@v4
-              with:
-                  path: |
-                    node_modules
-                    ~/.pnpm-store
-                  key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-                  restore-keys: |
-                    ${{ runner.os }}-pnpm-
-            - name: Install Dependencies
-              run: |
-                corepack enable
-                pnpm install --frozen-lockfile
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node and PNPM
+              uses: ./.github/composite-actions/setup
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
             - name: Lint Eslint
               run: pnpm run lint-ci-eslint
 
@@ -43,52 +34,62 @@ jobs:
         name: "Stylelint"
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version-file: ".nvmrc"
-            - name: Cache pnpm store
-              uses: actions/cache@v4
-              with:
-                  path: |
-                    node_modules
-                    ~/.pnpm-store
-                  key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-                  restore-keys: |
-                    ${{ runner.os }}-pnpm-
-            - name: Install Dependencies
-              run: |
-                corepack enable
-                pnpm install --frozen-lockfile
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node and PNPM
+              uses: ./.github/composite-actions/setup
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
             - name: Lint Stylelint
               run: pnpm run lint-ci-style
 
-    build_and_tests:
-        name: "Build and Tests"
+    typecheck:
+        name: "Typecheck"
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version-file: ".nvmrc"
-            - name: Cache pnpm store
-              uses: actions/cache@v4
-              with:
-                  path: |
-                    node_modules
-                    ~/.pnpm-store
-                  key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-                  restore-keys: |
-                    ${{ runner.os }}-pnpm-
-            - name: Install Dependencies
-              run: |
-                corepack enable
-                pnpm install --frozen-lockfile
-            - name: Typecheck
-              run: pnpm run lint-ci-eslint
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node and PNPM
+              uses: ./.github/composite-actions/setup
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
+            - name: Lint Stylelint
+              run: pnpm run lint-ci-typecheck
+
+    tests:
+        name: "Tests"
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node and PNPM
+              uses: ./.github/composite-actions/setup
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
+            - name: Lint Stylelint
+              run: pnpm run test
+
+    build:
+        name: "Build"
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node and PNPM
+              uses: ./.github/composite-actions/setup
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
             - name: Build Packages
               run: pnpm run build
-            - name: Run Jest
-              run: pnpm run test
