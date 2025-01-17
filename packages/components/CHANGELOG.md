@@ -1,5 +1,11 @@
 # @workleap/orbiter-ui
 
+## 5.6.9
+
+### Patch Changes
+
+- bb38001: Add missing value to --o-ui-focus-ring-outset-outer-offset
+
 ## 5.6.8
 
 ### Patch Changes
