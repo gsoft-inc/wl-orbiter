@@ -5,7 +5,7 @@ export const Themes = {
         base: "light",
         brandTitle: "ShareGate Orbiter",
         brandUrl: "https://sharegate.com",
-        brandImage: "https://raw.githubusercontent.com/gsoft-inc/wl-orbiter/master/assets/orbiter-full.svg?sanitize=true"
+        brandImage: "https://raw.githubusercontent.com/workleap/wl-orbiter/master/assets/orbiter-full.svg?sanitize=true"
     }),
     docs: create({
         base: "light",
