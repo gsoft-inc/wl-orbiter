@@ -5,7 +5,7 @@
 
     Before submitting your pull request, please:
 
-    1. Read our contributing documentation: https://github.com/gsoft-inc/wl-orbiter/blob/master/CONTRIBUTING.md
+    1. Read our contributing documentation: https://github.com/workleap/wl-orbiter/blob/master/CONTRIBUTING.md
     2. Ensure there are no linting or TypeScript errors: `pnpm lint`
     3. Verify that tests pass: `pnpm jest`
 -->
