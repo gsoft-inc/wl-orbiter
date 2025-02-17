@@ -4,7 +4,7 @@
     "description": "Orbiter design system",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gsoft-inc/wl-orbiter.git",
+        "url": "git+https://github.com/workleap/wl-orbiter.git",
         "directory": "packages/components"
     },
     "type": "module",
