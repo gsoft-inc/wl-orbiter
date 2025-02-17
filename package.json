@@ -2,7 +2,7 @@
   "name": "sg-orbiter",
   "version": "0.0.0",
   "private": true,
-  "repository": "https://github.com/gsoft-inc/wl-orbiter.git",
+  "repository": "https://github.com/workleap/wl-orbiter.git",
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {
