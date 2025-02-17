@@ -2,7 +2,7 @@
 @import "./fonts.css";
 @import "./styling/index.css";
 
-/* ~ is temporary as it's not ideal, see: https://github.com/gsoft-inc/sg-orbit/issues/1024 */
+/* ~ is temporary as it's not ideal, see: https://github.com/workleap/sg-orbit/issues/1024 */
 @import "@hopper-ui/icons/index.css";
 @import "@hopper-ui/styled-system/index.css";
 
