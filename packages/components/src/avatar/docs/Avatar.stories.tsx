@@ -36,7 +36,7 @@ export const LocalImage: Story = {
 
 export const RemoteImage: Story = {
     render: () => (
-        <Avatar name="Chris Hadfield" src="https://raw.githubusercontent.com/gsoft-inc/wl-orbiter/master/packages/components/src/avatar/docs/assets/hadfield.png" />
+        <Avatar name="Chris Hadfield" src="https://raw.githubusercontent.com/workleap/wl-orbiter/master/packages/components/src/avatar/docs/assets/hadfield.png" />
     )
 };
 
